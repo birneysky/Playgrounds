@@ -7,8 +7,8 @@ var str = "Hello, playground"
 let filterNames = CIFilter.filterNames(inCategory: kCICategoryBuiltIn)
 let lvc = FilterListViewController(style: .plain)
 let rootNav = UINavigationController(rootViewController: lvc)
+rootNav.view.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: 320, height: 640))
 PlaygroundPage.current.liveView = rootNav.view
-
 
 //let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 400, height: 600))
 //
