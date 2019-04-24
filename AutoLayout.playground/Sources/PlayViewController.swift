@@ -12,13 +12,11 @@ public class PlayViewController : UIViewController {
         self.view.addSubview(self.viewB)
         self.view.addSubview(self.viewC)
         self.view.addSubview(self.viewD)
-        print(self.label)
         setupConstraints()
     }
     
     // MARK: -  Helpers
     func setupConstraints() {
-        print(self.label)
         let mGuide = self.view.layoutMarginsGuide
         self.label.translatesAutoresizingMaskIntoConstraints = false
         self.label.widthAnchor.constraint(equalToConstant: 100).isActive = true
