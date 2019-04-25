@@ -88,10 +88,17 @@ class FilterPresentationController: UIPresentationController, UIViewControllerAn
         }
     }
     
+    
+    override func containerViewWillLayoutSubviews() {
+        super.containerViewWillLayoutSubviews()
+        self.dummyView.frame = self.containerView!.bounds
+        self.presentationWrappingView.frame = self.frameOfPresentedViewInContainerView
+    }
+    
     override var frameOfPresentedViewInContainerView: CGRect {
         let containerViewBounds = self.containerView!.bounds;
         let presentedViewContentSize = self.size(forChildContentContainer: self.presentedViewController, withParentContainerSize: containerViewBounds.size)
-//        CGSize presentedViewContentSize = [self sizeForChildContentContainer:self.presentedViewController withParentContainerSize:containerViewBounds.size];
+        //        CGSize presentedViewContentSize = [self sizeForChildContentContainer:self.presentedViewController withParentContainerSize:containerViewBounds.size];
         
         var presentedViewControllerFrame = containerViewBounds;
         presentedViewControllerFrame.size.height = presentedViewContentSize.height;
@@ -99,10 +106,8 @@ class FilterPresentationController: UIPresentationController, UIViewControllerAn
         return presentedViewControllerFrame;
     }
     
-    override func containerViewWillLayoutSubviews() {
-        super.containerViewWillLayoutSubviews()
-        self.dummyView.frame = self.containerView!.bounds
-         self.presentationWrappingView.frame = self.frameOfPresentedViewInContainerView
+    override var shouldRemovePresentersView: Bool {
+        return false
     }
     
     // MARK: - UIViewControllerAnimatedTransitioning
@@ -121,13 +126,11 @@ class FilterPresentationController: UIPresentationController, UIViewControllerAn
         guard let toViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) else {
             fatalError("toViewController is nil")
         }
+        /// 当 shouldRemovePresentersView 返回 NO 时 fromview 为nil
+        let fromView = transitionContext.view(forKey: UITransitionContextViewKey.from)
         
-        guard let toView = transitionContext.view(forKey: UITransitionContextViewKey.to) else {
-            fatalError("toView is nil")
-        }
-        guard let fromView = transitionContext.view(forKey: UITransitionContextViewKey.from) else {
-            fatalError("fromView is nil")
-        }
+        let toView = transitionContext.view(forKey: UITransitionContextViewKey.to)
+        
         
         let isPresenting = fromViewController === self.presentingViewController
         
@@ -136,21 +139,24 @@ class FilterPresentationController: UIPresentationController, UIViewControllerAn
         let toViewFinalFrame = transitionContext.finalFrame(for: toViewController)
         
         let containerView = transitionContext.containerView
-        containerView.addSubview(toView)
+        if toView != nil {
+            containerView.addSubview(toView!)
+        }
         
         if isPresenting {
-            toViewInitialFrame.origin = CGPoint(x: containerView.bounds.minX, y: containerView.bounds.midY)
+            toViewInitialFrame.origin = CGPoint(x: containerView.bounds.minX, y: containerView.bounds.maxY)
             toViewInitialFrame.size = toViewFinalFrame.size
-            toView.frame = toViewInitialFrame
+            toView?.frame = toViewInitialFrame
         } else {
-            fromViewFinalFrame = fromView.frame.offsetBy(dx: 0, dy: fromView.frame.height)
+            let fromFrame = fromView?.frame ?? CGRect.zero
+            fromViewFinalFrame = fromFrame.offsetBy(dx: 0, dy: fromFrame.height)
         }
         let animateDuration = self.transitionDuration(using: transitionContext)
         UIView.animate(withDuration: animateDuration, animations: {
             if isPresenting {
-                toView.frame = toViewFinalFrame
+                toView?.frame = toViewFinalFrame
             } else {
-                fromView.frame = fromViewFinalFrame
+                fromView?.frame = fromViewFinalFrame
             }
         }) { (_) in
             let wasCancelled = transitionContext.transitionWasCancelled
@@ -174,7 +180,7 @@ class FilterPresentationController: UIPresentationController, UIViewControllerAn
     
     
     // MARK: - Action selector
-     @objc private func dimmingViewTapped() {
+    @objc private func dimmingViewTapped() {
         self.presentingViewController.dismiss(animated: true, completion: nil)
     }
     // MARK: - Properties
