@@ -22,7 +22,22 @@ public class FilterListViewController: UITableViewController {
         ("CIVibrance", "Vibrance"),
         ("CIVignette", "Vignette")
     ]
+
+    override public func loadView() {
+        super.loadView()
+        self.navigationItem.backBarButtonItem =
+            UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
     
+    override public func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "Core Image Filter"
+    }
+    
+    override public func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.title = nil
+    }
     
     override  public func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -45,7 +60,8 @@ public class FilterListViewController: UITableViewController {
     
     override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+        let fdvc =  FilterDetailViewController()
+        self.navigationController?.pushViewController(fdvc, animated: true)
     }
     
     
