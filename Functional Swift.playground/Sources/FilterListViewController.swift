@@ -59,8 +59,8 @@ public class FilterListViewController: UITableViewController {
     
     
     override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        let fdvc =  FilterDetailViewController()
+        tableView.deselectRow(at: indexPath, animated: true)        
+        let fdvc =  FilterDetailViewController(filterName: self.filters[indexPath.row].filterName)
         self.navigationController?.pushViewController(fdvc, animated: true)
     }
     
