@@ -73,16 +73,16 @@ class FilterDetailViewController: UIViewController {
                 return nil
             }
         }
-//        let aParameters = parameters.filter { (param) -> Bool in
-//            if let aparam = param {
-//                return true;
-//            } else {
-//                return false
-//            }
-//        }
+        let aParameters = parameters.filter { (param) -> Bool in
+            if param != nil {
+                return true;
+            } else {
+                return false
+            }
+        }
         print(parameters)
         
-        let fppvc =  FilterParamPannelViewController()
+        let fppvc =  FilterParamPannelViewController(params:aParameters as! [FilterParameter])
         let fpc = FilterPresentationController(presentedViewController: fppvc, presenting: self)
         fppvc.transitioningDelegate = fpc
         self.present(fppvc, animated: true, completion: nil)
