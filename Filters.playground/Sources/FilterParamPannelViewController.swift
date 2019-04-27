@@ -21,15 +21,18 @@ class FilterParamPannelViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let height: CGFloat = max(screenHeight / 2, CGFloat(20 * self.parameters.count))
+        let height: CGFloat = max(screenHeight / 2, CGFloat(54 * self.parameters.count))
         self.preferredContentSize = CGSize(width: self.view.frame.width, height: height)
-        for _ in self.parameters {
-            let slider =  FilterSliderView(frame: CGRect.zero)
-            slider.backgroundColor = UIColor.lightGray
+        for item in self.parameters {
+            let slider =  FilterSliderView(parameter: item)
+            if let navvc = self.presentingViewController as? UINavigationController {
+                slider.deletate = navvc.topViewController as? FilterSliderViewDelegate
+            }
+            //slider.backgroundColor = UIColor.lightGray
             self.stackView.addArrangedSubview(slider)
             
             slider.translatesAutoresizingMaskIntoConstraints = false
-            slider.heightAnchor.constraint(equalToConstant: 44).isActive = true
+            slider.heightAnchor.constraint(equalToConstant: 54).isActive = true
             guard let superview = slider.superview else {
                 fatalError("the superview of slider is nil")
             }
@@ -53,9 +56,9 @@ class FilterParamPannelViewController: UIViewController {
         self.stackView.leadingAnchor.constraint(equalTo: mGuide.leadingAnchor).isActive = true
         self.stackView.trailingAnchor.constraint(equalTo: mGuide.trailingAnchor).isActive = true
         self.stackView.topAnchor.constraint(equalTo: mGuide.topAnchor,constant: 16).isActive = true
-        self.stackView.heightAnchor.constraint(equalToConstant: CGFloat(self.parameters.count*44+(self.parameters.count-1)*spacing)).isActive = true
+        self.stackView.heightAnchor.constraint(equalToConstant: CGFloat(self.parameters.count*54+(self.parameters.count-1)*spacing)).isActive = true
     }
-    
+ 
     // MARK: - Properties
     lazy var effectView: UIVisualEffectView = {
         let visualeffect = UIBlurEffect.init(style: .light)
