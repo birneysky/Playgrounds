@@ -32,6 +32,9 @@ class FilterPresentationController: UIPresentationController, UIViewControllerAn
         let wrapperRect = presentationRoundedCornerView.bounds.inset(by: wrapperInset)
         let presentedViewControllerWrapperView = UIView(frame: wrapperRect)
         
+        presentedViewControllerView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        presentedViewControllerView.frame = presentedViewControllerWrapperView.bounds
+        
         presentedViewControllerWrapperView.addSubview(presentedViewControllerView)
         presentationRoundedCornerView.addSubview(presentedViewControllerWrapperView)
         self.presentationWrappingView.addSubview(presentationRoundedCornerView)

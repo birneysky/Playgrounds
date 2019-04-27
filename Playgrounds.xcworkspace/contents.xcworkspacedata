@@ -2,12 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Filters.playground">
+   </FileRef>
+   <FileRef
       location = "group:UIStackView.playground">
    </FileRef>
    <FileRef
       location = "group:AutoLayout.playground">
-   </FileRef>
-   <FileRef
-      location = "group:Functional Swift.playground">
    </FileRef>
 </Workspace>

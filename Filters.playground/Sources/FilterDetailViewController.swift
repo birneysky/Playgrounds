@@ -6,7 +6,7 @@ class FilterDetailViewController: UIViewController {
         let imgv = UIImageView(frame: CGRect.zero)
         imgv.contentMode = .scaleAspectFit
         imgv.clipsToBounds = true
-        imgv.backgroundColor = UIColor.blue
+        imgv.backgroundColor = UIColor.lightGray
         return imgv
     }()
     
@@ -25,16 +25,28 @@ class FilterDetailViewController: UIViewController {
     override func loadView() {
         super.loadView()
         addSubViews()
+        setupConstraints()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         self.filter = CIFilter(name: filterName)
         self.title = self.filter.attributes[kCIAttributeFilterDisplayName] as? String
-//        print(self.filter.inputKeys)
-//        print(self.filter.attributes)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(composeAction))
-        setupConstraints()
+        
+        let path = Bundle.main.path(forResource: "img_010", ofType: "png")
+        let url = URL(fileURLWithPath: path!);
+        let img = CIImage(contentsOf: url)
+        DispatchQueue.global().async {
+            self.filter.setValue(img, forKey: "inputImage")
+            DispatchQueue.main.async {
+                guard let outImg = self.filter.outputImage else {
+                    fatalError("outImg is nil")
+                }
+                
+                self.imageView.image = UIImage(ciImage: outImg)
+            }
+        }
     }
     
     func addSubViews() {
@@ -80,7 +92,10 @@ class FilterDetailViewController: UIViewController {
                 return false
             }
         }
-        print(parameters)
+        if aParameters.count == 0 {
+            self.navigationItem.rightBarButtonItem?.isEnabled = false
+            return
+        }
         
         let fppvc =  FilterParamPannelViewController(params:aParameters as! [FilterParameter])
         let fpc = FilterPresentationController(presentedViewController: fppvc, presenting: self)

@@ -5,7 +5,7 @@ import PlaygroundSupport
 
 /// https://my.oschina.net/u/2340880/blog/531545
 
-class MyViewController : UIViewController {
+class StackViewController : UIViewController {
     override func loadView() {
         super.loadView()
         self.view.backgroundColor = UIColor.lightGray
@@ -19,6 +19,9 @@ class MyViewController : UIViewController {
         for _ in 0...n {
             let view = UIView(frame: CGRect.zero)
             view.frame.size.height = 30
+            view.translatesAutoresizingMaskIntoConstraints = false
+            view.widthAnchor.constraint(equalToConstant: 100/*CGFloat(arc4random() % 100)*/ ).isActive = true
+            view.heightAnchor.constraint(equalToConstant: 70).isActive = true
             view.backgroundColor = randomColor ?? UIColor.yellow
             self.stackView.addArrangedSubview(view)
         }
@@ -49,7 +52,8 @@ class MyViewController : UIViewController {
        let stackView = UIStackView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
         stackView.axis = NSLayoutConstraint.Axis.vertical
         stackView.spacing = 10
-        stackView.distribution = UIStackView.Distribution.fillEqually
+        stackView.alignment = UIStackView.Alignment.center
+        stackView.distribution = UIStackView.Distribution.equalCentering
         return stackView
     }()
     
@@ -64,5 +68,9 @@ class MyViewController : UIViewController {
 
     
 }
+
+let svc = StackViewController()
+
+svc.view.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: 320, height: 480))
 // Present the view controller in the Live View window
-PlaygroundPage.current.liveView = MyViewController()
+PlaygroundPage.current.liveView = svc.view
