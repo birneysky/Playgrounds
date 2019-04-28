@@ -11,7 +11,7 @@ rootNav.view.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: screenWidt
 /// 375 * 667
 PlaygroundPage.current.liveView = rootNav.view
 
-
+let filternames = CIFilter.filterNames(inCategory: kCICategoryBuiltIn)
 
 //let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 400, height: 600))
 //
