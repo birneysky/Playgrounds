@@ -8,11 +8,12 @@
 
 import UIKit
 
-class FilterDetailViewController: UIViewController {
+class FilterDetailViewController: UIViewController, FilterSliderViewDelegate {
 
     var filterName: String!
     private var filter: CIFilter!
     private var filterParameters: [FilterParameter] = []
+    private let serialQueue = DispatchQueue(label: "cn.cool.filter.processing")
     
     init(filterName:String) {
         self.filterName = filterName
@@ -58,6 +59,9 @@ class FilterDetailViewController: UIViewController {
     }
     
     func filterProcessingImage(img: CIImage?,param: FilterParameter?) {
+        guard self.filter.inputKeys.contains(kCIInputImageKey) else {
+            return
+        }
         let indicator =  UIActivityIndicatorView(style: .whiteLarge)
         indicator.color = UIColor.lightGray
         self.view.addSubview(indicator)
@@ -65,8 +69,8 @@ class FilterDetailViewController: UIViewController {
         indicator.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         indicator.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         indicator.startAnimating()
-        DispatchQueue.global().async {
-            self.filter.setValue(img, forKey: "inputImage")
+        serialQueue.async {
+            self.filter.setValue(img, forKey: kCIInputImageKey)
             if let aparam = param {
                 self.filter.setValue(aparam.currentValue, forKey: aparam.key)
             }
@@ -87,9 +91,15 @@ class FilterDetailViewController: UIViewController {
     }
     
     func setupParameterDescriptors() {
+        guard self.filter.inputKeys.contains(kCIInputImageKey) else {
+            print("📛📛📛📛 inputkey not constains inputImge")
+            return
+        }
+        
         let inputKeyNames = self.filter.inputKeys.filter { (keyName) -> Bool in
             return keyName != kCIInputImageKey
         }
+
         let attributes = self.filter.attributes;
         let parameters = inputKeyNames.map { (keyName) -> FilterParameter? in
             guard  let attribute = attributes[keyName] else {
