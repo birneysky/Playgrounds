@@ -101,11 +101,11 @@
 			children = (
 				74E6D8B9228325CC005DF5EC /* AppDelegate.swift */,
 				74E6D8BB228325CC005DF5EC /* ViewController.swift */,
+				74E6D8E822832B28005DF5EC /* SceneryCapturer.swift */,
 				74E6D8BD228325CC005DF5EC /* Main.storyboard */,
 				74E6D8C0228325CD005DF5EC /* Assets.xcassets */,
 				74E6D8C2228325CD005DF5EC /* LaunchScreen.storyboard */,
 				74E6D8C5228325CD005DF5EC /* Info.plist */,
-				74E6D8E822832B28005DF5EC /* SceneryCapturer.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
