@@ -74,18 +74,23 @@ class FilterDetailViewController: UIViewController, FilterSliderViewDelegate {
             if let aparam = param {
                 self.filter.setValue(aparam.currentValue, forKey: aparam.key)
             }
+            guard let outImg = self.filter.outputImage else {
+                //fatalError("outImg is nil")
+                print("📛📛📛📛  outImge is nil")
+                return
+            }
+            
+            guard let cgImage = self.context.createCGImage(outImg, from: outImg.extent) else {
+                return
+            }
+            
             DispatchQueue.main.async {
                 indicator.stopAnimating();
                 indicator.removeConstraints(indicator.constraints)
                 indicator.removeFromSuperview()
 
-                guard let outImg = self.filter.outputImage else {
-                    //fatalError("outImg is nil")
-                    print("📛📛📛📛  outImge is nil")
-                    return
-                }
                 
-                self.imageView.image = UIImage(ciImage: outImg)
+                self.imageView.image = UIImage(cgImage: cgImage)
             }
         }
     }
@@ -166,14 +171,9 @@ class FilterDetailViewController: UIViewController, FilterSliderViewDelegate {
         imgv.backgroundColor = UIColor.white
         return imgv
     }()
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    private lazy var context: CIContext = {
+       let context = CIContext(options: nil)
+        return context
+    }()
 }
