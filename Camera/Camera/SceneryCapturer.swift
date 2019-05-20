@@ -8,12 +8,18 @@
 
 import AVFoundation
 
+protocol SceneryCapturerOutputDelegate: class {
+    func didOutputSampleBuffer(_ buffer: CMSampleBuffer)
+}
+
 final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     public override init() {
         super.init()
         setupCaptureSession()
     }
+    
+    weak var delegate: SceneryCapturerOutputDelegate?
     
     public func startRunning() {
         if !self.captureSession.isRunning {
@@ -33,7 +39,7 @@ final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDele
         }
     }
     
-    public func focusAtPosition(_ point:CGPoint) {
+    public func focus(at point:CGPoint) {
         
     }
     
@@ -73,7 +79,7 @@ final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDele
     }
     // MARK: - AVCaptureVideoDataOutputSampleBufferDelegate
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        
+        self.delegate?.didOutputSampleBuffer(sampleBuffer)
     }
     // MARK: - Notification selector
     @objc func sessionWasInterrupted(_ notification: Notification) {

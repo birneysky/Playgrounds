@@ -15,6 +15,7 @@
 		74E6D8CF228325CD005DF5EC /* CameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E6D8CE228325CD005DF5EC /* CameraTests.swift */; };
 		74E6D8DA228325CD005DF5EC /* CameraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E6D8D9228325CD005DF5EC /* CameraUITests.swift */; };
 		74E6D8E922832B29005DF5EC /* SceneryCapturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E6D8E822832B28005DF5EC /* SceneryCapturer.swift */; };
+		B21E391F2292598900375486 /* SceneryPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21E391E2292598900375486 /* SceneryPreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		74E6D8D9228325CD005DF5EC /* CameraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraUITests.swift; sourceTree = "<group>"; };
 		74E6D8DB228325CD005DF5EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74E6D8E822832B28005DF5EC /* SceneryCapturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneryCapturer.swift; sourceTree = "<group>"; };
+		B21E391E2292598900375486 /* SceneryPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneryPreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				74E6D8B9228325CC005DF5EC /* AppDelegate.swift */,
 				74E6D8BB228325CC005DF5EC /* ViewController.swift */,
 				74E6D8E822832B28005DF5EC /* SceneryCapturer.swift */,
+				B21E391E2292598900375486 /* SceneryPreviewView.swift */,
 				74E6D8BD228325CC005DF5EC /* Main.storyboard */,
 				74E6D8C0228325CD005DF5EC /* Assets.xcassets */,
 				74E6D8C2228325CD005DF5EC /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74E6D8BC228325CC005DF5EC /* ViewController.swift in Sources */,
+				B21E391F2292598900375486 /* SceneryPreviewView.swift in Sources */,
 				74E6D8E922832B29005DF5EC /* SceneryCapturer.swift in Sources */,
 				74E6D8BA228325CC005DF5EC /* AppDelegate.swift in Sources */,
 			);
@@ -437,7 +441,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9CVMN4UZK4;
 				INFOPLIST_FILE = Camera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -445,7 +451,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = grocery.tech.cn.Camera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -454,7 +460,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9CVMN4UZK4;
 				INFOPLIST_FILE = Camera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,7 +470,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = grocery.tech.cn.Camera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
