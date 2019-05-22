@@ -1,0 +1,10 @@
+
+
+
+kernel vec2 mirrorX ( float imageWidth )
+{
+    // 获取待处理点的位置
+    vec2 currentVec = destCoord();
+    // 返回最终显示位置
+    return vec2 ( imageWidth - currentVec.x , currentVec.y );
+}
