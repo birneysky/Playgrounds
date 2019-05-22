@@ -10,7 +10,7 @@ import UIKit
 
 class MirrorXFilter: CIFilter {
     
-    static var kernel: CIKernel?  {
+    static var kernel: CIKernel? =  {
         let bundle = Bundle.main
         guard let url =  bundle.url(forResource: "MirrorX", withExtension: "cikernel") else {
             fatalError("file not found")
@@ -26,7 +26,7 @@ class MirrorXFilter: CIFilter {
             
         }
         return nil
-    }
+    }()
     
     override init() {
         super.init()
