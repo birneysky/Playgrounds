@@ -45,53 +45,73 @@ class ViewController: UIViewController,SceneryCapturerOutputDelegate {
             return
         }
         
-        let aDuration = CMSampleBufferGetDuration(buffer)
-        let aPts = CMSampleBufferGetPresentationTimeStamp(buffer)
-        let aDts = CMSampleBufferGetDecodeTimeStamp(buffer)
-        var timingInfo = CMSampleTimingInfo(duration: aDuration, presentationTimeStamp: aPts, decodeTimeStamp: aDts)
-        var videoFormat: CMVideoFormatDescription?
-        CMVideoFormatDescriptionCreateForImageBuffer(allocator: kCFAllocatorDefault, imageBuffer: imageBuffer, formatDescriptionOut: &videoFormat)
-        guard let videoFormatDescription = videoFormat else {
-            return
-        }
+
+ 
         
-        if self.pixelBufferPool == nil {
-            let poolAttributes: [CFString:Any]  = [kCVPixelBufferPoolMinimumBufferCountKey:2]
-            let inputMediaSubType = CMFormatDescriptionGetMediaSubType(videoFormatDescription)
-            
-            let inputDimensions = CMVideoFormatDescriptionGetDimensions(videoFormatDescription)
-            
-            let pixelBufferAttributes: [CFString: Any]  = [
-                kCVPixelBufferPixelFormatTypeKey : inputMediaSubType,
-                kCVPixelBufferWidthKey : inputDimensions.width,
-                kCVPixelBufferHeightKey : inputDimensions.height
-            ]
-            
-            CVPixelBufferPoolCreate(kCFAllocatorDefault, poolAttributes as CFDictionary, pixelBufferAttributes as CFDictionary, &self.pixelBufferPool)
-        }
+//        if self.pixelBufferPool == nil {
+//            let poolAttributes: [CFString:Any]  = [kCVPixelBufferPoolMinimumBufferCountKey:2]
+//            let inputMediaSubType = CMFormatDescriptionGetMediaSubType(videoFormatDescription)
+//
+//            let inputDimensions = CMVideoFormatDescriptionGetDimensions(videoFormatDescription)
+//
+//            let pixelBufferAttributes: [CFString: Any]  = [
+//                kCVPixelBufferPixelFormatTypeKey : inputMediaSubType,
+//                kCVPixelBufferWidthKey : inputDimensions.width,
+//                kCVPixelBufferHeightKey : inputDimensions.height,
+//                kCVPixelBufferIOSurfacePropertiesKey:[:]
+//            ]
+//
+//            CVPixelBufferPoolCreate(kCFAllocatorDefault, poolAttributes as CFDictionary, pixelBufferAttributes as CFDictionary, &self.pixelBufferPool)
+//        }
         
+        let pixelBufferAttributes: [CFString: Any]  = [
+            kCVPixelBufferWidthKey : CVPixelBufferGetWidth(imageBuffer),
+            kCVPixelBufferHeightKey : CVPixelBufferGetHeight(imageBuffer)]
         var pbuf: CVPixelBuffer?
-        CVPixelBufferPoolCreatePixelBuffer(kCFAllocatorDefault, self.pixelBufferPool, &pbuf)
+        
+        CVPixelBufferCreate(kCFAllocatorDefault, CVPixelBufferGetWidth(imageBuffer), CVPixelBufferGetHeight(imageBuffer), CVPixelBufferGetPixelFormatType(imageBuffer), pixelBufferAttributes as CFDictionary, &pbuf)
+//        CVPixelBufferPoolCreatePixelBuffer(kCFAllocatorDefault, self.pixelBufferPool, &pbuf)
         guard let outputPixelBuffer = pbuf else {
             print("Allocation failure")
             return
         }
         
-
-        self.context.render(outputImg, to: outputPixelBuffer ,bounds: outputImg.extent, colorSpace: CGColorSpaceCreateDeviceRGB())
+        //CVPixelBufferLockBaseAddress(outputPixelBuffer, [0])
+        //self.context.render(outputImg, to: outputPixelBuffer ,bounds: outputImg.extent, colorSpace: CGColorSpaceCreateDeviceRGB())
+        self.context.render(outputImg, to: imageBuffer)
+        //CVPixelBufferUnlockBaseAddress(outputPixelBuffer, [0])
 //        var outputVideoFormat: CMVideoFormatDescription?
 //        CMVideoFormatDescriptionCreateForImageBuffer(allocator: kCFAllocatorDefault, imageBuffer: outputPixelBuffer, formatDescriptionOut: &outputVideoFormat)
 //        guard let ovfd = videoFormat else {
 //            return
 //        }
+        var videoFormat: CMVideoFormatDescription? = CMSampleBufferGetFormatDescription(buffer)
+        guard let videoFormatDescription = videoFormat else {
+            return
+        }
+        
+        let aDuration = CMSampleBufferGetDuration(buffer)
+        let aPts = CMTime.invalid //CMSampleBufferGetPresentationTimeStamp(buffer)
+        let aDts = CMTime.invalid //CMSampleBufferGetDecodeTimeStamp(buffer)
+        var timingInfo =  CMSampleTimingInfo(duration: aDuration, presentationTimeStamp: aPts, decodeTimeStamp: aDts)
+        
         var finalSampleBuffer: CMSampleBuffer?
-        CMSampleBufferCreateForImageBuffer(allocator: kCFAllocatorDefault, imageBuffer: outputPixelBuffer, dataReady: true, makeDataReadyCallback: nil, refcon: nil, formatDescription: videoFormatDescription, sampleTiming: &timingInfo, sampleBufferOut: &finalSampleBuffer)
+//        CMSampleBufferCreateForImageBuffer(allocator: kCFAllocatorDefault, imageBuffer: outputPixelBuffer, dataReady: false, makeDataReadyCallback: nil, refcon: nil, formatDescription: videoFormatDescription, sampleTiming: &timingInfo, sampleBufferOut: &finalSampleBuffer)
+        CMSampleBufferCreateReadyWithImageBuffer(allocator: kCFAllocatorDefault, imageBuffer: imageBuffer, formatDescription: videoFormatDescription, sampleTiming: &timingInfo, sampleBufferOut: &finalSampleBuffer)
         //print(img.autoAdjustmentFilters())
         //DispatchQueue.main.async {
         guard let fsb = finalSampleBuffer else {
             return
         }
-        self.displayLayer.enqueue(fsb)
+        if CMSampleBufferInvalidate(fsb) == kCMSampleBufferError_Invalidated {
+            
+        }
+        if self.displayLayer.isReadyForMoreMediaData {
+            self.displayLayer.enqueue(fsb)
+        }
+        if self.displayLayer.status ==  .failed {
+            print(self.displayLayer.error)
+        }
         //}
     }
     

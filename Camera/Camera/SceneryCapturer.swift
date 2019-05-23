@@ -85,7 +85,7 @@ final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDele
         }
         self.videoConnection = videoDataOutput.connection(with: .video)
         
-        self.captureSession.sessionPreset = .high
+        self.captureSession.sessionPreset = .cif352x288
         
         
         do {
