@@ -23,7 +23,8 @@ class ViewController: UIViewController {
     }()
     
     lazy var context: CIContext = {
-        let context = CIContext(options: nil)
+        let egaContext = EAGLContext(api: .openGLES2)
+        let context = CIContext(eaglContext: egaContext!)
         return context
     }()
     
@@ -42,11 +43,16 @@ class ViewController: UIViewController {
         guard let outputImg = self.mirrorFilter.outputImage else {
             return
         }
-        self.ciImg = outputImg
+        let startTime = clock()
         guard let cgImg = self.context.createCGImage(outputImg, from: outputImg.extent) else {
             return
         }
+        let endTime = clock()
+        let duration: Double = Double(endTime - startTime) / Double(CLOCKS_PER_SEC)
+        print("😇😇😇😇😇 duration:\(duration*1000) ms")
         self.imgView.image = UIImage(cgImage: cgImg)
+        self.ciImg = CIImage(cgImage: cgImg)
+        self.context.clearCaches()
     }
 }
 
