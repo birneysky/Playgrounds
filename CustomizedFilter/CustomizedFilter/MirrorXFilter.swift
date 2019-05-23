@@ -10,14 +10,14 @@ import UIKit
 
 class MirrorXFilter: CIFilter {
     
-    static var kernel: CIKernel? =  {
+    fileprivate static var kernel: CIWarpKernel?  =  {
         let bundle = Bundle.main
         guard let url =  bundle.url(forResource: "MirrorX", withExtension: "cikernel") else {
             fatalError("file not found")
         }
         do {
             let kernelCode = try String(contentsOf: url)
-            guard let kernel = CIKernel(source: kernelCode) else {
+            guard let kernel = CIWarpKernel(source: kernelCode) else {
                 fatalError("file not found")
                 
             }
@@ -28,11 +28,20 @@ class MirrorXFilter: CIFilter {
         return nil
     }()
     
+    public var inputImage: CIImage?
+    
+    override var outputImage: CIImage? {
+        guard let inputimg = inputImage else {
+            return nil
+        }
+        let inputWidth = inputimg.extent.width
+        return MirrorXFilter.kernel?.apply(extent: inputimg.extent, roiCallback: { (index, rect) -> CGRect in
+            return rect
+        }, image: inputimg, arguments: [inputWidth]);
+    }
+    
     override init() {
         super.init()
-
-        
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
