@@ -36,6 +36,7 @@ class MirrorXFilter: CIFilter {
         }
         let inputWidth = inputimg.extent.width
         return MirrorXFilter.kernel?.apply(extent: inputimg.extent, roiCallback: { (index, rect) -> CGRect in
+            print("index:\(index),rect:\(rect)")
             return rect
         }, image: inputimg, arguments: [inputWidth]);
     }
