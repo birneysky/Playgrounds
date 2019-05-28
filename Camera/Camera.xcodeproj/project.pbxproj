@@ -16,6 +16,9 @@
 		74E6D8DA228325CD005DF5EC /* CameraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E6D8D9228325CD005DF5EC /* CameraUITests.swift */; };
 		74E6D8E922832B29005DF5EC /* SceneryCapturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E6D8E822832B28005DF5EC /* SceneryCapturer.swift */; };
 		B21E391F2292598900375486 /* SceneryPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21E391E2292598900375486 /* SceneryPreviewView.swift */; };
+		B2F81455229CE9340059CE48 /* OpenGLPixelBufferView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F81453229CE9330059CE48 /* OpenGLPixelBufferView.m */; };
+		B2F8145B229CE98C0059CE48 /* ShaderUtilities.c in Sources */ = {isa = PBXBuildFile; fileRef = B2F81457229CE98C0059CE48 /* ShaderUtilities.c */; };
+		B2F8145C229CE98C0059CE48 /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = B2F81459229CE98C0059CE48 /* matrix.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,13 @@
 		74E6D8DB228325CD005DF5EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74E6D8E822832B28005DF5EC /* SceneryCapturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneryCapturer.swift; sourceTree = "<group>"; };
 		B21E391E2292598900375486 /* SceneryPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneryPreviewView.swift; sourceTree = "<group>"; };
+		B2F81452229CE9330059CE48 /* Camera-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Camera-Bridging-Header.h"; sourceTree = "<group>"; };
+		B2F81453229CE9330059CE48 /* OpenGLPixelBufferView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLPixelBufferView.m; sourceTree = "<group>"; };
+		B2F81454229CE9340059CE48 /* OpenGLPixelBufferView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLPixelBufferView.h; sourceTree = "<group>"; };
+		B2F81457229CE98C0059CE48 /* ShaderUtilities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ShaderUtilities.c; sourceTree = "<group>"; };
+		B2F81458229CE98C0059CE48 /* matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrix.h; sourceTree = "<group>"; };
+		B2F81459229CE98C0059CE48 /* matrix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = matrix.c; sourceTree = "<group>"; };
+		B2F8145A229CE98C0059CE48 /* ShaderUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderUtilities.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +115,14 @@
 				74E6D8BB228325CC005DF5EC /* ViewController.swift */,
 				74E6D8E822832B28005DF5EC /* SceneryCapturer.swift */,
 				B21E391E2292598900375486 /* SceneryPreviewView.swift */,
+				B2F81454229CE9340059CE48 /* OpenGLPixelBufferView.h */,
+				B2F81453229CE9330059CE48 /* OpenGLPixelBufferView.m */,
+				B2F81456229CE98C0059CE48 /* GL */,
 				74E6D8BD228325CC005DF5EC /* Main.storyboard */,
 				74E6D8C0228325CD005DF5EC /* Assets.xcassets */,
 				74E6D8C2228325CD005DF5EC /* LaunchScreen.storyboard */,
 				74E6D8C5228325CD005DF5EC /* Info.plist */,
+				B2F81452229CE9330059CE48 /* Camera-Bridging-Header.h */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -129,6 +143,17 @@
 				74E6D8DB228325CD005DF5EC /* Info.plist */,
 			);
 			path = CameraUITests;
+			sourceTree = "<group>";
+		};
+		B2F81456229CE98C0059CE48 /* GL */ = {
+			isa = PBXGroup;
+			children = (
+				B2F81457229CE98C0059CE48 /* ShaderUtilities.c */,
+				B2F81458229CE98C0059CE48 /* matrix.h */,
+				B2F81459229CE98C0059CE48 /* matrix.c */,
+				B2F8145A229CE98C0059CE48 /* ShaderUtilities.h */,
+			);
+			path = GL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +224,7 @@
 				TargetAttributes = {
 					74E6D8B5228325CC005DF5EC = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					74E6D8C9228325CD005DF5EC = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -263,9 +289,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				74E6D8BC228325CC005DF5EC /* ViewController.swift in Sources */,
+				B2F8145C229CE98C0059CE48 /* matrix.c in Sources */,
 				B21E391F2292598900375486 /* SceneryPreviewView.swift in Sources */,
 				74E6D8E922832B29005DF5EC /* SceneryCapturer.swift in Sources */,
 				74E6D8BA228325CC005DF5EC /* AppDelegate.swift in Sources */,
+				B2F81455229CE9340059CE48 /* OpenGLPixelBufferView.m in Sources */,
+				B2F8145B229CE98C0059CE48 /* ShaderUtilities.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9CVMN4UZK4;
 				INFOPLIST_FILE = Camera/Info.plist;
@@ -450,6 +480,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = grocery.tech.cn.Camera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Camera/Camera-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -459,6 +491,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9CVMN4UZK4;
 				INFOPLIST_FILE = Camera/Info.plist;
@@ -469,6 +502,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = grocery.tech.cn.Camera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Camera/Camera-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
