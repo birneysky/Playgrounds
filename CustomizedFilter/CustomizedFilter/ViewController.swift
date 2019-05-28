@@ -23,8 +23,8 @@ class ViewController: UIViewController {
     }()
     
     lazy var context: CIContext = {
-        let egaContext = EAGLContext(api: .openGLES2)
-        let context = CIContext(eaglContext: egaContext!)
+        //let egaContext = EAGLContext(api: .openGLES2)
+        let context = CIContext(options: nil)
         return context
     }()
     
