@@ -18,6 +18,7 @@ class ViewController: UIViewController,SceneryCapturerOutputDelegate {
     
     weak var displayLayer: AVSampleBufferDisplayLayer!
     fileprivate var pixelBufferPool: CVPixelBufferPool!
+    fileprivate var videoFmtDesc:CMVideoFormatDescription!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +62,7 @@ class ViewController: UIViewController,SceneryCapturerOutputDelegate {
     }
     
     func didOutputSampleBuffer(_ buffer: CMSampleBuffer) {
+          let startTime = clock()
         guard let imageBuffer = CMSampleBufferGetImageBuffer(buffer) else {
             return;
         }
@@ -95,12 +97,25 @@ class ViewController: UIViewController,SceneryCapturerOutputDelegate {
         self.context.render(outputImg, to: outputPixelBuffer, bounds: outputImg.extent, colorSpace: self.rgbColorSpace)
         CVPixelBufferUnlockBaseAddress(outputPixelBuffer, [])
         
-        self.glview.display(outputPixelBuffer)
+        //self.glview.display(outputPixelBuffer)
         
+        if self.videoFmtDesc == nil {
+            CMVideoFormatDescriptionCreateForImageBuffer(allocator: kCFAllocatorDefault, imageBuffer: outputPixelBuffer, formatDescriptionOut: &videoFmtDesc)
+        }
 
-//        if self.displayLayer.isReadyForMoreMediaData {
-//            self.displayLayer.enqueue(buffer)
-//        }
+        let pstTime = CMSampleBufferGetPresentationTimeStamp(buffer);
+        var timingInfo = CMSampleTimingInfo(duration: pstTime, presentationTimeStamp: pstTime, decodeTimeStamp: CMTime.invalid)
+        var finalBuffer: CMSampleBuffer? = nil
+//        CMSampleBufferCreateForImageBuffer(allocator: kCFAllocatorDefault, imageBuffer: outputPixelBuffer, dataReady: true, makeDataReadyCallback: nil, refcon: nil, formatDescription: videoFmtDesc, sampleTiming: &timingInfo, sampleBufferOut: &finalBuffer)
+        CMSampleBufferCreateReadyWithImageBuffer(allocator: kCFAllocatorDefault, imageBuffer: outputPixelBuffer, formatDescription: videoFmtDesc, sampleTiming: &timingInfo, sampleBufferOut: &finalBuffer)
+        
+        if self.displayLayer.isReadyForMoreMediaData {
+            self.displayLayer.enqueue(finalBuffer!)
+        }
+        
+        let endTime = clock()
+        let duration: Double = Double(endTime - startTime) / Double(CLOCKS_PER_SEC)
+        print("😇😇😇😇😇 duration:\(duration*1000) ms")
     }
     
     fileprivate lazy var capturer:  SceneryCapturer = {
