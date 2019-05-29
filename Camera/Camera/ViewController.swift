@@ -31,92 +31,76 @@ class ViewController: UIViewController,SceneryCapturerOutputDelegate {
         super.viewDidAppear(animated)
     }
 
-
-    func didOutputSampleBuffer(_ buffer: CMSampleBuffer) {
-//        guard let imageBuffer = CMSampleBufferGetImageBuffer(buffer) else {
-//            return;
-//        }
-//        let img = CIImage(cvImageBuffer: imageBuffer)
-//        guard let filer = CIFilter.init(name: "CIFaceBalance") else {
-//            print("filter  is nil")
-//            return;
-//        }
-//        filer.setValue(img, forKey: "inputImage")
-//        guard let outputImg = filer.outputImage else {
-//            print("filter outputimage is nil")
-//            return
-//        }
+    func setupBuffersPool(with formatDescription: CMFormatDescription, capacity: Int) {
+        let dimensions =  CMVideoFormatDescriptionGetDimensions(formatDescription)
+        let pixelBufferAttributes = [
+            kCVPixelBufferPixelFormatTypeKey:kCVPixelFormatType_32BGRA,
+            kCVPixelBufferWidthKey:dimensions.width,
+            kCVPixelBufferHeightKey:dimensions.height,
+            kCVPixelBufferOpenGLCompatibilityKey:true,
+            kCVPixelBufferIOSurfacePropertiesKey:[:]
+        ] as CFDictionary
+        let poolAttributes = [
+            kCVPixelBufferPoolMinimumBufferCountKey:capacity
+        ] as CFDictionary
+        CVPixelBufferPoolCreate(kCFAllocatorDefault, poolAttributes, pixelBufferAttributes, &self.pixelBufferPool)
         
-
- 
-        
-//        if self.pixelBufferPool == nil {
-//            let poolAttributes: [CFString:Any]  = [kCVPixelBufferPoolMinimumBufferCountKey:2]
-//            let inputMediaSubType = CMFormatDescriptionGetMediaSubType(videoFormatDescription)
-//
-//            let inputDimensions = CMVideoFormatDescriptionGetDimensions(videoFormatDescription)
-//
-//            let pixelBufferAttributes: [CFString: Any]  = [
-//                kCVPixelBufferPixelFormatTypeKey : inputMediaSubType,
-//                kCVPixelBufferWidthKey : inputDimensions.width,
-//                kCVPixelBufferHeightKey : inputDimensions.height,
-//                kCVPixelBufferIOSurfacePropertiesKey:[:]
-//            ]
-//
-//            CVPixelBufferPoolCreate(kCFAllocatorDefault, poolAttributes as CFDictionary, pixelBufferAttributes as CFDictionary, &self.pixelBufferPool)
-//        }
-        
-//        let pixelBufferAttributes: [CFString: Any]  = [
-//            kCVPixelBufferWidthKey : CVPixelBufferGetWidth(imageBuffer),
-//            kCVPixelBufferHeightKey : CVPixelBufferGetHeight(imageBuffer)]
-//        var pbuf: CVPixelBuffer?
-//
-//        CVPixelBufferCreate(kCFAllocatorDefault, CVPixelBufferGetWidth(imageBuffer), CVPixelBufferGetHeight(imageBuffer), CVPixelBufferGetPixelFormatType(imageBuffer), pixelBufferAttributes as CFDictionary, &pbuf)
-////        CVPixelBufferPoolCreatePixelBuffer(kCFAllocatorDefault, self.pixelBufferPool, &pbuf)
-//        guard let outputPixelBuffer = pbuf else {
-//            print("Allocation failure")
-//            return
-//        }
-        
-        //CVPixelBufferLockBaseAddress(outputPixelBuffer, [0])
-        //self.context.render(outputImg, to: outputPixelBuffer ,bounds: outputImg.extent, colorSpace: CGColorSpaceCreateDeviceRGB())
-//        self.context.render(outputImg, to: outputPixelBuffer)
-        //CVPixelBufferUnlockBaseAddress(outputPixelBuffer, [0])
-//        var outputVideoFormat: CMVideoFormatDescription?
-//        CMVideoFormatDescriptionCreateForImageBuffer(allocator: kCFAllocatorDefault, imageBuffer: outputPixelBuffer, formatDescriptionOut: &outputVideoFormat)
-//        guard let ovfd = videoFormat else {
-//            return
-//        }
-//        var videoFormat: CMVideoFormatDescription? = CMSampleBufferGetFormatDescription(buffer)
-//        guard let videoFormatDescription = videoFormat else {
-//            return
-//        }
-        
-//        self.glview.display(imageBuffer)
-//
-//        let aDuration = CMSampleBufferGetDuration(buffer)
-//        let aPts = CMTime.invalid //CMSampleBufferGetPresentationTimeStamp(buffer)
-//        let aDts = CMTime.invalid //CMSampleBufferGetDecodeTimeStamp(buffer)
-//        var timingInfo =  CMSampleTimingInfo(duration: aDuration, presentationTimeStamp: aPts, decodeTimeStamp: aDts)
-//
-//        var finalSampleBuffer: CMSampleBuffer?
-//        CMSampleBufferCreateForImageBuffer(allocator: kCFAllocatorDefault, imageBuffer: outputPixelBuffer, dataReady: false, makeDataReadyCallback: nil, refcon: nil, formatDescription: videoFormatDescription, sampleTiming: &timingInfo, sampleBufferOut: &finalSampleBuffer)
-//        CMSampleBufferCreateReadyWithImageBuffer(allocator: kCFAllocatorDefault, imageBuffer: imageBuffer, formatDescription: videoFormatDescription, sampleTiming: &timingInfo, sampleBufferOut: &finalSampleBuffer)
-        //print(img.autoAdjustmentFilters())
-        //DispatchQueue.main.async {
-//        guard let fsb = finalSampleBuffer else {
-//            return
-//        }
-//        if CMSampleBufferInvalidate(fsb) == kCMSampleBufferError_Invalidated {
-//
-//        }
-        if self.displayLayer.isReadyForMoreMediaData {
-            self.displayLayer.enqueue(buffer)
+        var pixelBuffers = [CVPixelBuffer?]()
+        while true {
+            var cvpixelBuffer: CVPixelBuffer? = nil
+            let auxAttribute = [
+                kCVPixelBufferPoolAllocationThresholdKey:capacity
+            ] as CFDictionary
+            let err = CVPixelBufferPoolCreatePixelBufferWithAuxAttributes(kCFAllocatorDefault, self.pixelBufferPool, auxAttribute, &cvpixelBuffer)
+            if err == kCVReturnWouldExceedAllocationThreshold {
+                break
+            }
+            pixelBuffers.append(cvpixelBuffer)
         }
-//        if self.displayLayer.status ==  .failed {
-//            print(self.displayLayer.error)
+        pixelBuffers.removeAll()
+    }
+    
+    func didOutputSampleBuffer(_ buffer: CMSampleBuffer) {
+        guard let imageBuffer = CMSampleBufferGetImageBuffer(buffer) else {
+            return;
+        }
+        let img = CIImage(cvImageBuffer: imageBuffer)
+        guard let filer = CIFilter.init(name: "CIFaceBalance") else {
+            print("filter  is nil")
+            return;
+        }
+        filer.setValue(img, forKey: "inputImage")
+        guard let outputImg = filer.outputImage else {
+            print("filter outputimage is nil")
+            return
+        }
+        
+        if self.pixelBufferPool == nil {
+            let description =  CMSampleBufferGetFormatDescription(buffer)
+            setupBuffersPool(with: description!, capacity: 6)
+        }
+        
+        var renderedOutputPixelBuffer: CVPixelBuffer? = nil
+        let err = CVPixelBufferPoolCreatePixelBuffer(kCFAllocatorDefault, self.pixelBufferPool, &renderedOutputPixelBuffer)
+        if err != 0 {
+            print("Cannot obtain a pixel buffer from the buffer pool")
+            return
+        }
+        
+        guard let outputPixelBuffer = renderedOutputPixelBuffer else {
+            return
+        }
+        
+        CVPixelBufferLockBaseAddress(outputPixelBuffer, [])
+        self.context.render(outputImg, to: outputPixelBuffer, bounds: outputImg.extent, colorSpace: self.rgbColorSpace)
+        CVPixelBufferUnlockBaseAddress(outputPixelBuffer, [])
+        
+        self.glview.display(outputPixelBuffer)
+        
+
+//        if self.displayLayer.isReadyForMoreMediaData {
+//            self.displayLayer.enqueue(buffer)
 //        }
-        //}
     }
     
     fileprivate lazy var capturer:  SceneryCapturer = {
@@ -126,9 +110,14 @@ class ViewController: UIViewController,SceneryCapturerOutputDelegate {
     }()
     
     fileprivate lazy var context: CIContext = {
-        let eaglContext = EAGLContext(api: EAGLRenderingAPI.openGLES2)
-        let context = CIContext(eaglContext: eaglContext!)
+        //let eaglContext = EAGLContext(api: EAGLRenderingAPI.openGLES2)
+        let context = CIContext(options: [.workingColorSpace:NSNull()])
         return context
+    }()
+    
+    fileprivate lazy var rgbColorSpace: CGColorSpace  = {
+        let space = CGColorSpaceCreateDeviceRGB()
+        return space
     }()
     
     
