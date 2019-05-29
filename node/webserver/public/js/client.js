@@ -3,6 +3,7 @@ var audioSource = document.querySelector('select#audioSource')
 var audioOutput = document.querySelector('select#audioOutput')
 var videoSource = document.querySelector('select#videoSource')
 
+
 if (!navigator.mediaDevices ||
     !navigator.mediaDevices.enumerateDevices) {
     console.log('enumerateDevices is not supported!')   
