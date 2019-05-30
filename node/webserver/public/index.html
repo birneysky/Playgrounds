@@ -1,6 +1,7 @@
 <html>
     <head>
         <title> WebRTC get audio and video devices </title>
+        <link rel="stylesheet" href="css/main.css"/>
         <style>
             .none {
                 -webkit-filter: none;
@@ -10,8 +11,8 @@
                 -webkit-filter: blur(3px);
             }
 
-            .garyscale {
-                -webkit-filter: garyscale(1);
+            .grayscale {
+                -webkit-filter: grayscale(1);
             }
 
             .invert {
@@ -19,7 +20,7 @@
             }
 
             .sepia {
-                -webkit-filter: speia(1);
+                -webkit-filter: sepia(1);
             }
         </style>
     </head>
@@ -41,9 +42,9 @@
             <select id="filter">
                 <option value="none">None</option>
                 <option value="blur">Blur</option>
-                <option value="garyscale">GaryScale</option>
+                <option value="grayscale">GaryScale</option>
                 <option value="invert">Invert</option>
-                <option value="speia">Speia</option>
+                <option value="sepia">Speia</option>
             </select>
         </div>
         <section>

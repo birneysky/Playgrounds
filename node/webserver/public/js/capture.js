@@ -9,6 +9,8 @@ var picture = document.querySelector('canvas#picture')
 picture.width = 320
 picture.height = 240
 
+var divConstraints = document.querySelector('div#constraints')
+
 function start() {
     if (!navigator.mediaDevices ||
         !navigator.mediaDevices.enumerateDevices) {
@@ -45,6 +47,9 @@ function start() {
 
 function gotMediaStream(stream) {
     //audioplayer.strobject = stream
+    var videoTrack = stream.getVideoTracks()[0]
+    var videoConstraints = videoTrack.getSettings()
+    divConstraints.textContent = JSON.stringify(videoConstraints, null, 2)
     videoPlayer.srcObject = stream
 }
 
