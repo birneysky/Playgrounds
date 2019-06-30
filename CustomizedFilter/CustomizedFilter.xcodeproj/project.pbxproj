@@ -51,6 +51,7 @@
 		7454999E2295ABF3003497B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		745499AA2295AC45003497B6 /* MirrorX.cikernel */ = {isa = PBXFileReference; lastKnownFileType = text; path = MirrorX.cikernel; sourceTree = "<group>"; };
 		745499AC2295AC99003497B6 /* MirrorXFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirrorXFilter.swift; sourceTree = "<group>"; };
+		74D9537522B515CF00548287 /* CustomizedFilter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CustomizedFilter.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +102,7 @@
 		7454997B2295ABF1003497B6 /* CustomizedFilter */ = {
 			isa = PBXGroup;
 			children = (
+				74D9537522B515CF00548287 /* CustomizedFilter.entitlements */,
 				7454997C2295ABF1003497B6 /* AppDelegate.swift */,
 				7454997E2295ABF1003497B6 /* ViewController.swift */,
 				745499AA2295AC45003497B6 /* MirrorX.cikernel */,
@@ -440,7 +442,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CustomizedFilter/CustomizedFilter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_UIKITFORMAC_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 9CVMN4UZK4;
 				INFOPLIST_FILE = CustomizedFilter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -450,6 +454,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = grocery.tech.cn.CustomizedFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_UIKITFORMAC = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -459,7 +464,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CustomizedFilter/CustomizedFilter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_UIKITFORMAC_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 9CVMN4UZK4;
 				INFOPLIST_FILE = CustomizedFilter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -469,6 +476,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = grocery.tech.cn.CustomizedFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_UIKITFORMAC = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

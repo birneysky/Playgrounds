@@ -14,7 +14,6 @@ import CoreImage
 class ViewController: UIViewController,SceneryCapturerOutputDelegate {
 
     @IBOutlet weak var previewView: SceneryPreviewView!
-    @IBOutlet weak var glview: OpenGLPixelBufferView!
     
     weak var displayLayer: AVSampleBufferDisplayLayer!
     fileprivate var pixelBufferPool: CVPixelBufferPool!
