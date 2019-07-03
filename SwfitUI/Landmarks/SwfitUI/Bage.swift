@@ -58,10 +58,65 @@ struct Bage : View {
     static let gradientEnd = Color(red: 239.0 / 255, green: 172.0 / 255, blue: 120.0 / 255)
 }
 
+struct Triangle : View {
+    var body: some View {
+        GeometryReader { geometry in
+            //let scale: CGFloat = min(geometry.size.width, geometry.size.height)
+            Path { path in
+                path.move(to: .init(x: 0.5, y: 0))
+                path.addLine(to: .init(x: 0, y: 0.5))
+                path.addLine(to: .init(x: 1, y: 0.5))
+                path.addLine(to: .init(x: 0.5, y: 0))
+            }
+            .applying(.init(scaleX: geometry.size.width, y: geometry.size.width))
+            .fill(LinearGradient(
+                    gradient: .init(colors: [Self.gradientStart, Self.gradientEnd]),
+                    startPoint: .init(x: 0.5, y: 0),
+                    endPoint: .init(x: 0.5, y: 0.6)
+                )
+            )
+            .aspectRatio(1, contentMode: .fit)
+        }
+    }
+    
+    static let gradientStart = Color(red: 239.0 / 255, green: 120.0 / 255, blue: 221.0 / 255)
+    static let gradientEnd = Color(red: 239.0 / 255, green: 172.0 / 255, blue: 120.0 / 255)
+}
+
+struct Square: View {
+    var body: some View {
+        GeometryReader { geometry in
+            Path { path in
+                path.move(to: .init(x: 0.5, y: 0))
+                path.addLine(to: .init(x: 0, y: 0.5))
+                path.addLine(to: .init(x: 0.5, y: 1))
+                path.addLine(to: .init(x: 1, y:0.5))
+                path.addLine(to: .init(x: 0.5, y:0))
+            }
+            .applying(.init(scaleX: geometry.size.width, y: geometry.size.width))
+            .fill(LinearGradient(
+                    gradient: .init(colors: [Self.gradientStart, Self.gradientEnd]),
+                    startPoint: .init(x: 0.5, y: 0),
+                    endPoint: .init(x: 0.5, y: 0.6)
+                )
+            )
+            .aspectRatio(1, contentMode: .fit)
+        }
+    }
+    
+    static let gradientStart = Color(red: 239.0 / 255, green: 120.0 / 255, blue: 221.0 / 255)
+    static let gradientEnd = Color(red: 239.0 / 255, green: 172.0 / 255, blue: 120.0 / 255)
+}
+
 #if DEBUG
 struct Bage_Previews : PreviewProvider {
     static var previews: some View {
-        Bage()
+        Group {
+            Bage()
+            Triangle()
+            Square()
+        }
+        .previewLayout(.fixed(width: 300, height: 300))
     }
 }
 #endif
