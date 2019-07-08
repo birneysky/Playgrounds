@@ -39,6 +39,7 @@
 		B2131E2B22CE062A00AF20BD /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2131E2A22CE062A00AF20BD /* Shapes.swift */; };
 		B2131E2D22CE0D3800AF20BD /* BadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2131E2C22CE0D3800AF20BD /* BadgeSymbol.swift */; };
 		B2214C2B22B8F16E00C20102 /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2214C2A22B8F16E00C20102 /* LandmarkDetail.swift */; };
+		B25038F322CEF76600BC57A3 /* RotatedBadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25038F222CEF76600BC57A3 /* RotatedBadgeSymbol.swift */; };
 		B27950CA22CB502C0090C260 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27950C922CB502C0090C260 /* UserData.swift */; };
 		B2A6EBD522B8DC4C001A93EC /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A6EBD422B8DC4C001A93EC /* CircleImage.swift */; };
 		B2A6EBD722B8DE9A001A93EC /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A6EBD622B8DE9A001A93EC /* MapView.swift */; };
@@ -102,6 +103,7 @@
 		B2131E2A22CE062A00AF20BD /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		B2131E2C22CE0D3800AF20BD /* BadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSymbol.swift; sourceTree = "<group>"; };
 		B2214C2A22B8F16E00C20102 /* LandmarkDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
+		B25038F222CEF76600BC57A3 /* RotatedBadgeSymbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotatedBadgeSymbol.swift; sourceTree = "<group>"; };
 		B27950C922CB502C0090C260 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		B2A6EBD422B8DC4C001A93EC /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		B2A6EBD622B8DE9A001A93EC /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				748CF2FE22C870AE00D6F46F /* LandmarkRow.swift */,
 				743584DE22C8C15500A84003 /* LandmarkList.swift */,
 				749F2DA022CBB4CD00A1DD05 /* Bage.swift */,
+				B25038F222CEF76600BC57A3 /* RotatedBadgeSymbol.swift */,
 				B2131E2C22CE0D3800AF20BD /* BadgeSymbol.swift */,
 				B2131E2A22CE062A00AF20BD /* Shapes.swift */,
 				B2131E2822CE05A400AF20BD /* BadgeBackground.swift */,
@@ -402,6 +405,7 @@
 				B2214C2B22B8F16E00C20102 /* LandmarkDetail.swift in Sources */,
 				B27950CA22CB502C0090C260 /* UserData.swift in Sources */,
 				748CF32122C8751000D6F46F /* Data.swift in Sources */,
+				B25038F322CEF76600BC57A3 /* RotatedBadgeSymbol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

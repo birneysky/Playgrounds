@@ -1,0 +1,212 @@
+2019-07-05 06:30:37 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7fb4e5bd21f0; archive(resolved)='<IDEArchive: 0x7fb4e057fdf0>', distributionTask(resolved)='2', distributionDestination(resolved)='1', distributionMethod(resolved)='<IDEDistributionMethodiOSEnterprise: 0x7fb4f4edf190>', team(resolved)='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb4f94a0750; teamID='9CVMN4UZK4', teamName='Beijing Rong Cloud Network Technology CO., LTD', teamType='Enterprise', username='zhaobingdong@rongcloud.cn', isFreeProvisioningTeam='0'>'>
+	Chain (13, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7fb4e5bd21f0; archive = '<IDEArchive: 0x7fb4e057fdf0>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7fb4f4edf190>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb4f94a0750; teamID='9CVMN4UZK4', teamName='Beijing Rong Cloud Network Technology CO., LTD', teamType='Enterprise', username='zhaobingdong@rongcloud.cn', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionProcessingPipelineContext: 0x7fb4e3918c90; archive = '<IDEArchive: 0x7fb4e057fdf0>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7fb4f4edf190>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb4f94a0750; teamID='9CVMN4UZK4', teamName='Beijing Rong Cloud Network Technology CO., LTD', teamType='Enterprise', username='zhaobingdong@rongcloud.cn', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fb4e650c600; archive = '<IDEArchive: 0x7fb4e057fdf0>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7fb4f4edf190>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb4f94a0750; teamID='9CVMN4UZK4', teamName='Beijing Rong Cloud Network Technology CO., LTD', teamType='Enterprise', username='zhaobingdong@rongcloud.cn', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fb4e35a5a10; archive = '<IDEArchive: 0x7fb4e057fdf0>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7fb4f4edf190>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb4f94a0750; teamID='9CVMN4UZK4', teamName='Beijing Rong Cloud Network Technology CO., LTD', teamType='Enterprise', username='zhaobingdong@rongcloud.cn', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fb4e6525df0; archive = '<IDEArchive: 0x7fb4e057fdf0>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7fb4f4edf190>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb4f94a0750; teamID='9CVMN4UZK4', teamName='Beijing Rong Cloud Network Technology CO., LTD', teamType='Enterprise', username='zhaobingdong@rongcloud.cn', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fb4e6525c70; archive = '<IDEArchive: 0x7fb4e057fdf0>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7fb4f4edf190>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb4f94a0750; teamID='9CVMN4UZK4', teamName='Beijing Rong Cloud Network Technology CO., LTD', teamType='Enterprise', username='zhaobingdong@rongcloud.cn', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fb4fe230c80; archive = '<IDEArchive: 0x7fb4e057fdf0>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7fb4f4edf190>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb4f94a0750; teamID='9CVMN4UZK4', teamName='Beijing Rong Cloud Network Technology CO., LTD', teamType='Enterprise', username='zhaobingdong@rongcloud.cn', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fb4faa4fc90; archive = '<IDEArchive: 0x7fb4e057fdf0>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7fb4f4edf190>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb4f94a0750; teamID='9CVMN4UZK4', teamName='Beijing Rong Cloud Network Technology CO., LTD', teamType='Enterprise', username='zhaobingdong@rongcloud.cn', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fb4e31b5650; archive = '<IDEArchive: 0x7fb4e057fdf0>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7fb4f4edf190>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fb4f94a0750; teamID='9CVMN4UZK4', teamName='Beijing Rong Cloud Network Technology CO., LTD', teamType='Enterprise', username='zhaobingdong@rongcloud.cn', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fb4e5c46290; archive = '<IDEArchive: 0x7fb4e057fdf0>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7fb4f4edf190>', team='(null)'>
+	<IDEDistributionContext: 0x7fb4e3af3870; archive = '<IDEArchive: 0x7fb4e057fdf0>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7fb4f4edf190>', team='(null)'>
+	<IDEDistributionContext: 0x7fb4e6609800; archive = '<IDEArchive: 0x7fb4e057fdf0>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7fb4f4edf190>', team='(null)'>
+	<IDEDistributionContext: 0x7fb4e37a6650; archive = '<IDEArchive: 0x7fb4e057fdf0>', distributionMethod='(null)', team='(null)'>
+</IDEDistributionProcessingPipelineContext: 0x7fb4e5bd21f0>
+2019-07-05 06:30:37 +0000  Processing step: IDEDistributionCreateDestRootStep
+2019-07-05 06:30:37 +0000  Processing step: IDEDistributionCopyItemStep
+2019-07-05 06:30:37 +0000  Running /usr/bin/ditto '-V' '/Users/birney/Library/Developer/Xcode/Archives/2019-07-05/RTCTester 2019-7-5, 2.29 PM.xcarchive/Products/Applications/RTCTester.app' '/var/folders/k5/dt76vxpx5zxf6mq27zvy72500000gn/T/XcodeDistPipeline.~~~uB0CNA/Root/Payload/RTCTester.app'
+2019-07-05 06:30:37 +0000  >>> Copying /Users/birney/Library/Developer/Xcode/Archives/2019-07-05/RTCTester 2019-7-5, 2.29 PM.xcarchive/Products/Applications/RTCTester.app 
+2019-07-05 06:30:37 +0000  copying file ./_CodeSignature/CodeResources ... 
+2019-07-05 06:30:37 +0000  9945 bytes for ./_CodeSignature/CodeResources
+2019-07-05 06:30:37 +0000  copying file ./RTCTester ... 
+2019-07-05 06:30:37 +0000  16419696 bytes for ./RTCTester
+2019-07-05 06:30:37 +0000  copying file ./Base.lproj/Main.storyboardc/VRc-A7-iDw-view-zi0-bM-lNi.nib/objects-11.0+.nib ... 
+2019-07-05 06:30:37 +0000  9349 bytes for ./Base.lproj/Main.storyboardc/VRc-A7-iDw-view-zi0-bM-lNi.nib/objects-11.0+.nib
+2019-07-05 06:30:37 +0000  copying file ./Base.lproj/Main.storyboardc/VRc-A7-iDw-view-zi0-bM-lNi.nib/runtime.nib ... 
+2019-07-05 06:30:37 +0000  9496 bytes for ./Base.lproj/Main.storyboardc/VRc-A7-iDw-view-zi0-bM-lNi.nib/runtime.nib
+2019-07-05 06:30:37 +0000  copying file ./Base.lproj/Main.storyboardc/cx0-BG-Mv1-view-F23-JC-cWV.nib/objects-11.0+.nib ... 
+2019-07-05 06:30:37 +0000  4077 bytes for ./Base.lproj/Main.storyboardc/cx0-BG-Mv1-view-F23-JC-cWV.nib/objects-11.0+.nib
+2019-07-05 06:30:37 +0000  copying file ./Base.lproj/Main.storyboardc/cx0-BG-Mv1-view-F23-JC-cWV.nib/runtime.nib ... 
+2019-07-05 06:30:37 +0000  4068 bytes for ./Base.lproj/Main.storyboardc/cx0-BG-Mv1-view-F23-JC-cWV.nib/runtime.nib
+2019-07-05 06:30:37 +0000  copying file ./Base.lproj/Main.storyboardc/UINavigationController-u48-UW-ZAT.nib/objects-11.0+.nib ... 
+2019-07-05 06:30:37 +0000  3642 bytes for ./Base.lproj/Main.storyboardc/UINavigationController-u48-UW-ZAT.nib/objects-11.0+.nib
+2019-07-05 06:30:37 +0000  copying file ./Base.lproj/Main.storyboardc/UINavigationController-u48-UW-ZAT.nib/runtime.nib ... 
+2019-07-05 06:30:37 +0000  3640 bytes for ./Base.lproj/Main.storyboardc/UINavigationController-u48-UW-ZAT.nib/runtime.nib
+2019-07-05 06:30:37 +0000  copying file ./Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib/objects-11.0+.nib ... 
+2019-07-05 06:30:37 +0000  2389 bytes for ./Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib/objects-11.0+.nib
+2019-07-05 06:30:37 +0000  copying file ./Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib/runtime.nib ... 
+2019-07-05 06:30:37 +0000  2381 bytes for ./Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib/runtime.nib
+2019-07-05 06:30:37 +0000  copying file ./Base.lproj/Main.storyboardc/UINavigationController-iLW-Dy-9Mi.nib/objects-11.0+.nib ... 
+2019-07-05 06:30:37 +0000  2121 bytes for ./Base.lproj/Main.storyboardc/UINavigationController-iLW-Dy-9Mi.nib/objects-11.0+.nib
+copying file ./Base.lproj/Main.storyboardc/UINavigationController-iLW-Dy-9Mi.nib/runtime.nib ... 
+2019-07-05 06:30:37 +0000  2121 bytes for ./Base.lproj/Main.storyboardc/UINavigationController-iLW-Dy-9Mi.nib/runtime.nib
+2019-07-05 06:30:37 +0000  copying file ./Base.lproj/Main.storyboardc/Info.plist ... 
+2019-07-05 06:30:37 +0000  441 bytes for ./Base.lproj/Main.storyboardc/Info.plist
+2019-07-05 06:30:37 +0000  copying file ./Base.lproj/Main.storyboardc/UINavigationController-ruK-f1-33d.nib/objects-11.0+.nib ... 
+2019-07-05 06:30:37 +0000  2498 bytes for ./Base.lproj/Main.storyboardc/UINavigationController-ruK-f1-33d.nib/objects-11.0+.nib
+2019-07-05 06:30:37 +0000  copying file ./Base.lproj/Main.storyboardc/UINavigationController-ruK-f1-33d.nib/runtime.nib ... 
+2019-07-05 06:30:37 +0000  2495 bytes for ./Base.lproj/Main.storyboardc/UINavigationController-ruK-f1-33d.nib/runtime.nib
+2019-07-05 06:30:37 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2019-07-05 06:30:37 +0000  1833 bytes for ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+2019-07-05 06:30:37 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+2019-07-05 06:30:37 +0000  896 bytes for ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+2019-07-05 06:30:37 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+2019-07-05 06:30:37 +0000  258 bytes for ./Base.lproj/LaunchScreen.storyboardc/Info.plist
+2019-07-05 06:30:37 +0000  copying file ./Frameworks/AFNetworking.framework/_CodeSignature/CodeResources ... 
+2019-07-05 06:30:37 +0000  1798 bytes for ./Frameworks/AFNetworking.framework/_CodeSignature/CodeResources
+2019-07-05 06:30:37 +0000  copying file ./Frameworks/AFNetworking.framework/AFNetworking ... 
+2019-07-05 06:30:37 +0000  2040192 bytes for ./Frameworks/AFNetworking.framework/AFNetworking
+2019-07-05 06:30:37 +0000  copying file ./Frameworks/AFNetworking.framework/Info.plist ... 
+2019-07-05 06:30:37 +0000  762 bytes for ./Frameworks/AFNetworking.framework/Info.plist
+2019-07-05 06:30:37 +0000  copying file ./embedded.mobileprovision ... 
+2019-07-05 06:30:37 +0000  106077 bytes for ./embedded.mobileprovision
+2019-07-05 06:30:37 +0000  copying file ./Info.plist ... 
+2019-07-05 06:30:37 +0000  1345 bytes for ./Info.plist
+2019-07-05 06:30:37 +0000  copying file ./PkgInfo ... 
+2019-07-05 06:30:37 +0000  8 bytes for ./PkgInfo
+2019-07-05 06:30:37 +0000  copying file ./RCConfig.plist ... 
+2019-07-05 06:30:37 +0000  278 bytes for ./RCConfig.plist
+2019-07-05 06:30:37 +0000  /usr/bin/ditto exited with 0
+2019-07-05 06:30:37 +0000  Processing step: IDEDistributionEmbedProfileStep
+2019-07-05 06:30:37 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fb4e39f6590; bundleID='com.alamofire.AFNetworking', path='<DVTFilePath:0x7fb4e62dba60:'/Users/birney/Library/Developer/Xcode/Archives/2019-07-05/RTCTester 2019-7-5, 2.29 PM.xcarchive/Products/Applications/RTCTester.app/Frameworks/AFNetworking.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fb4fbbb1dd0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fb4f66ed640; name='Apple Development: Toney zhao (2BKKHDND5M)', hash='6AAE88850C042E7A8452CABCD1D6D92C79420727', serialNumber='4CC5294AC292DBF2', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2019-06-18 06:55:26 +0000''>', entitlements='(null)', teamID='9CVMN4UZK4', identifier='com.alamofire.AFNetworking', executablePath='<DVTFilePath:0x7fb4e6452430:'/Users/birney/Library/Developer/Xcode/Archives/2019-07-05/RTCTester 2019-7-5, 2.29 PM.xcarchive/Products/Applications/RTCTester.app/Frameworks/AFNetworking.framework/AFNetworking'>', hardenedRuntime='0'>'>
+2019-07-05 06:30:37 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2019-07-05 06:30:37 +0000  Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2019-07-05 06:30:37 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2019-07-05 06:30:37 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2019-07-05 06:30:37 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2019-07-05 06:30:37 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2019-07-05 06:30:37 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2019-07-05 06:30:37 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2019-07-05 06:30:37 +0000  Processing step: IDEDistributionSymbolsStep
+2019-07-05 06:30:37 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2019-07-05 06:30:37 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2019-07-05 06:30:37 +0000  Processing step: IDEDistributionAppThinningStep
+2019-07-05 06:30:37 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2019-07-05 06:30:37 +0000  Processing step: IDEDistributionArchThinningStep
+2019-07-05 06:30:37 +0000  Running /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/k5/dt76vxpx5zxf6mq27zvy72500000gn/T/XcodeDistPipeline.~~~uB0CNA/Root/Payload/RTCTester.app/Frameworks/AFNetworking.framework/AFNetworking' '-verify_arch' 'arm64e'
+2019-07-05 06:30:37 +0000  /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2019-07-05 06:30:37 +0000  Skipping architecture thinning for item "AFNetworking" because arch "arm64e" wasn't found
+2019-07-05 06:30:37 +0000  Running /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/k5/dt76vxpx5zxf6mq27zvy72500000gn/T/XcodeDistPipeline.~~~uB0CNA/Root/Payload/RTCTester.app/RTCTester' '-verify_arch' 'arm64e'
+2019-07-05 06:30:37 +0000  /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2019-07-05 06:30:37 +0000  Skipping architecture thinning for item "RTCTester" because arch "arm64e" wasn't found
+2019-07-05 06:30:37 +0000  Processing step: IDEDistributionODRStep
+2019-07-05 06:30:37 +0000  Processing step: IDEDistributionStripXattrsStep
+2019-07-05 06:30:37 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fb4e39f6590; bundleID='com.alamofire.AFNetworking', path='<DVTFilePath:0x7fb4e62dba60:'/Users/birney/Library/Developer/Xcode/Archives/2019-07-05/RTCTester 2019-7-5, 2.29 PM.xcarchive/Products/Applications/RTCTester.app/Frameworks/AFNetworking.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fb4fbbb1dd0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fb4e3d47b20; name='Apple Development: Toney zhao (2BKKHDND5M)', hash='6AAE88850C042E7A8452CABCD1D6D92C79420727', serialNumber='4CC5294AC292DBF2', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2019-06-18 06:55:26 +0000''>', entitlements='(null)', teamID='9CVMN4UZK4', identifier='com.alamofire.AFNetworking', executablePath='<DVTFilePath:0x7fb4e6452430:'/Users/birney/Library/Developer/Xcode/Archives/2019-07-05/RTCTester 2019-7-5, 2.29 PM.xcarchive/Products/Applications/RTCTester.app/Frameworks/AFNetworking.framework/AFNetworking'>', hardenedRuntime='0'>'>
+2019-07-05 06:30:37 +0000  Running /usr/bin/xattr '-crs' '/var/folders/k5/dt76vxpx5zxf6mq27zvy72500000gn/T/XcodeDistPipeline.~~~uB0CNA/Root/Payload/RTCTester.app'
+2019-07-05 06:30:37 +0000  /usr/bin/xattr exited with 0
+2019-07-05 06:30:37 +0000  Processing step: IDEDistributionCodesignStep
+2019-07-05 06:30:37 +0000  Entitlements for <IDEDistributionItem: 0x7fb4e39f6590; bundleID='com.alamofire.AFNetworking', path='<DVTFilePath:0x7fb4e62dba60:'/Users/birney/Library/Developer/Xcode/Archives/2019-07-05/RTCTester 2019-7-5, 2.29 PM.xcarchive/Products/Applications/RTCTester.app/Frameworks/AFNetworking.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fb4fbbb1dd0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fb4e5f93190; name='Apple Development: Toney zhao (2BKKHDND5M)', hash='6AAE88850C042E7A8452CABCD1D6D92C79420727', serialNumber='4CC5294AC292DBF2', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2019-06-18 06:55:26 +0000''>', entitlements='(null)', teamID='9CVMN4UZK4', identifier='com.alamofire.AFNetworking', executablePath='<DVTFilePath:0x7fb4e6452430:'/Users/birney/Library/Developer/Xcode/Archives/2019-07-05/RTCTester 2019-7-5, 2.29 PM.xcarchive/Products/Applications/RTCTester.app/Frameworks/AFNetworking.framework/AFNetworking'>', hardenedRuntime='0'>'>: {
+}
+2019-07-05 06:30:37 +0000  Writing entitlements for <IDEDistributionItem: 0x7fb4e39f6590; bundleID='com.alamofire.AFNetworking', path='<DVTFilePath:0x7fb4e62dba60:'/Users/birney/Library/Developer/Xcode/Archives/2019-07-05/RTCTester 2019-7-5, 2.29 PM.xcarchive/Products/Applications/RTCTester.app/Frameworks/AFNetworking.framework'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fb4fbbb1dd0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fb4e5c713f0; name='Apple Development: Toney zhao (2BKKHDND5M)', hash='6AAE88850C042E7A8452CABCD1D6D92C79420727', serialNumber='4CC5294AC292DBF2', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2019-06-18 06:55:26 +0000''>', entitlements='(null)', teamID='9CVMN4UZK4', identifier='com.alamofire.AFNetworking', executablePath='<DVTFilePath:0x7fb4e6452430:'/Users/birney/Library/Developer/Xcode/Archives/2019-07-05/RTCTester 2019-7-5, 2.29 PM.xcarchive/Products/Applications/RTCTester.app/Frameworks/AFNetworking.framework/AFNetworking'>', hardenedRuntime='0'>'> to: /var/folders/k5/dt76vxpx5zxf6mq27zvy72500000gn/T/XcodeDistPipeline.~~~uB0CNA/entitlements~~~7uHpmZ
+2019-07-05 06:30:37 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '1CA8F520920B222D86F7E469ECB6F8A51C26B21C' '--entitlements' '/var/folders/k5/dt76vxpx5zxf6mq27zvy72500000gn/T/XcodeDistPipeline.~~~uB0CNA/entitlements~~~7uHpmZ' '--preserve-metadata=identifier,flags,runtime' '/var/folders/k5/dt76vxpx5zxf6mq27zvy72500000gn/T/XcodeDistPipeline.~~~uB0CNA/Root/Payload/RTCTester.app/Frameworks/AFNetworking.framework'
+2019-07-05 06:30:37 +0000  /var/folders/k5/dt76vxpx5zxf6mq27zvy72500000gn/T/XcodeDistPipeline.~~~uB0CNA/Root/Payload/RTCTester.app/Frameworks/AFNetworking.framework: replacing existing signature
+2019-07-05 06:30:37 +0000  /var/folders/k5/dt76vxpx5zxf6mq27zvy72500000gn/T/XcodeDistPipeline.~~~uB0CNA/Root/Payload/RTCTester.app/Frameworks/AFNetworking.framework: signed bundle with Mach-O universal (i386 armv7 x86_64 arm64) [com.alamofire.AFNetworking]
+2019-07-05 06:30:37 +0000  /usr/bin/codesign exited with 0
+2019-07-05 06:30:37 +0000  Entitlements for <IDEDistributionItem: 0x7fb4e055b7b0; bundleID='cn.rongcloud.RTCTester', path='<DVTFilePath:0x7fb4e5894ea0:'/Users/birney/Library/Developer/Xcode/Archives/2019-07-05/RTCTester 2019-7-5, 2.29 PM.xcarchive/Products/Applications/RTCTester.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fb4e3a2ba40; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fb4e393bd50; name='Apple Development: Toney zhao (2BKKHDND5M)', hash='6AAE88850C042E7A8452CABCD1D6D92C79420727', serialNumber='4CC5294AC292DBF2', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2019-06-18 06:55:26 +0000''>', entitlements='{
+    "application-identifier" = "9CVMN4UZK4.cn.rongcloud.RTCTester";
+    "com.apple.developer.team-identifier" = 9CVMN4UZK4;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "9CVMN4UZK4.cn.rongcloud.RTCTester"
+    );
+}', teamID='9CVMN4UZK4', identifier='cn.rongcloud.RTCTester', executablePath='<DVTFilePath:0x7fb4e5cf4be0:'/Users/birney/Library/Developer/Xcode/Archives/2019-07-05/RTCTester 2019-7-5, 2.29 PM.xcarchive/Products/Applications/RTCTester.app/RTCTester'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "9CVMN4UZK4.cn.rongcloud.RTCTester";
+    "com.apple.developer.team-identifier" = 9CVMN4UZK4;
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "9CVMN4UZK4.cn.rongcloud.RTCTester"
+    );
+}
+2019-07-05 06:30:37 +0000  Writing entitlements for <IDEDistributionItem: 0x7fb4e055b7b0; bundleID='cn.rongcloud.RTCTester', path='<DVTFilePath:0x7fb4e5894ea0:'/Users/birney/Library/Developer/Xcode/Archives/2019-07-05/RTCTester 2019-7-5, 2.29 PM.xcarchive/Products/Applications/RTCTester.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fb4e3a2ba40; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fb4e5fde520; name='Apple Development: Toney zhao (2BKKHDND5M)', hash='6AAE88850C042E7A8452CABCD1D6D92C79420727', serialNumber='4CC5294AC292DBF2', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2019-06-18 06:55:26 +0000''>', entitlements='{
+    "application-identifier" = "9CVMN4UZK4.cn.rongcloud.RTCTester";
+    "com.apple.developer.team-identifier" = 9CVMN4UZK4;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "9CVMN4UZK4.cn.rongcloud.RTCTester"
+    );
+}', teamID='9CVMN4UZK4', identifier='cn.rongcloud.RTCTester', executablePath='<DVTFilePath:0x7fb4e5cf4be0:'/Users/birney/Library/Developer/Xcode/Archives/2019-07-05/RTCTester 2019-7-5, 2.29 PM.xcarchive/Products/Applications/RTCTester.app/RTCTester'>', hardenedRuntime='0'>'> to: /var/folders/k5/dt76vxpx5zxf6mq27zvy72500000gn/T/XcodeDistPipeline.~~~uB0CNA/entitlements~~~VLeY2s
+2019-07-05 06:30:37 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '1CA8F520920B222D86F7E469ECB6F8A51C26B21C' '--entitlements' '/var/folders/k5/dt76vxpx5zxf6mq27zvy72500000gn/T/XcodeDistPipeline.~~~uB0CNA/entitlements~~~VLeY2s' '--preserve-metadata=identifier,flags,runtime' '/var/folders/k5/dt76vxpx5zxf6mq27zvy72500000gn/T/XcodeDistPipeline.~~~uB0CNA/Root/Payload/RTCTester.app'
+2019-07-05 06:30:37 +0000  /var/folders/k5/dt76vxpx5zxf6mq27zvy72500000gn/T/XcodeDistPipeline.~~~uB0CNA/Root/Payload/RTCTester.app: replacing existing signature
+2019-07-05 06:30:37 +0000  /var/folders/k5/dt76vxpx5zxf6mq27zvy72500000gn/T/XcodeDistPipeline.~~~uB0CNA/Root/Payload/RTCTester.app: signed app bundle with Mach-O universal (armv7 arm64) [cn.rongcloud.RTCTester]
+2019-07-05 06:30:37 +0000  /usr/bin/codesign exited with 0
+2019-07-05 06:30:37 +0000  Processing step: IDEDistributionZipODRItemStep
+2019-07-05 06:30:37 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2019-07-05 06:30:37 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2019-07-05 06:30:37 +0000  Processing step: IDEDistributionCreateIPAStep
+2019-07-05 06:30:37 +0000  Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/k5/dt76vxpx5zxf6mq27zvy72500000gn/T/XcodeDistPipeline.~~~uB0CNA/Root' '/var/folders/k5/dt76vxpx5zxf6mq27zvy72500000gn/T/XcodeDistPipeline.~~~uB0CNA/Packages/RTCTester.ipa'
+2019-07-05 06:30:37 +0000  >>> Copying /var/folders/k5/dt76vxpx5zxf6mq27zvy72500000gn/T/XcodeDistPipeline.~~~uB0CNA/Root 
+2019-07-05 06:30:37 +0000  copying file ./Payload/RTCTester.app/_CodeSignature/CodeResources ... 
+2019-07-05 06:30:37 +0000  9945 bytes for ./Payload/RTCTester.app/_CodeSignature/CodeResources
+2019-07-05 06:30:37 +0000  copying file ./Payload/RTCTester.app/RTCTester ... 
+2019-07-05 06:30:38 +0000  16419728 bytes for ./Payload/RTCTester.app/RTCTester
+2019-07-05 06:30:38 +0000  copying file ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/VRc-A7-iDw-view-zi0-bM-lNi.nib/objects-11.0+.nib ... 
+9349 bytes for ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/VRc-A7-iDw-view-zi0-bM-lNi.nib/objects-11.0+.nib
+copying file ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/VRc-A7-iDw-view-zi0-bM-lNi.nib/runtime.nib ... 
+9496 bytes for ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/VRc-A7-iDw-view-zi0-bM-lNi.nib/runtime.nib
+copying file ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/cx0-BG-Mv1-view-F23-JC-cWV.nib/objects-11.0+.nib ... 
+2019-07-05 06:30:38 +0000  4077 bytes for ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/cx0-BG-Mv1-view-F23-JC-cWV.nib/objects-11.0+.nib
+copying file ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/cx0-BG-Mv1-view-F23-JC-cWV.nib/runtime.nib ... 
+2019-07-05 06:30:38 +0000  4068 bytes for ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/cx0-BG-Mv1-view-F23-JC-cWV.nib/runtime.nib
+2019-07-05 06:30:38 +0000  copying file ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/UINavigationController-u48-UW-ZAT.nib/objects-11.0+.nib ... 
+2019-07-05 06:30:38 +0000  3642 bytes for ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/UINavigationController-u48-UW-ZAT.nib/objects-11.0+.nib
+copying file ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/UINavigationController-u48-UW-ZAT.nib/runtime.nib ... 
+2019-07-05 06:30:38 +0000  3640 bytes for ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/UINavigationController-u48-UW-ZAT.nib/runtime.nib
+2019-07-05 06:30:38 +0000  copying file ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib/objects-11.0+.nib ... 
+2019-07-05 06:30:38 +0000  2389 bytes for ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib/objects-11.0+.nib
+2019-07-05 06:30:38 +0000  copying file ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib/runtime.nib ... 
+2381 bytes for ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib/runtime.nib
+2019-07-05 06:30:38 +0000  copying file ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/UINavigationController-iLW-Dy-9Mi.nib/objects-11.0+.nib ... 
+2019-07-05 06:30:38 +0000  2121 bytes for ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/UINavigationController-iLW-Dy-9Mi.nib/objects-11.0+.nib
+copying file ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/UINavigationController-iLW-Dy-9Mi.nib/runtime.nib ... 
+2019-07-05 06:30:38 +0000  2121 bytes for ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/UINavigationController-iLW-Dy-9Mi.nib/runtime.nib
+2019-07-05 06:30:38 +0000  copying file ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/Info.plist ... 
+441 bytes for ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/Info.plist
+2019-07-05 06:30:38 +0000  copying file ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/UINavigationController-ruK-f1-33d.nib/objects-11.0+.nib ... 
+2019-07-05 06:30:38 +0000  2498 bytes for ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/UINavigationController-ruK-f1-33d.nib/objects-11.0+.nib
+2019-07-05 06:30:38 +0000  copying file ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/UINavigationController-ruK-f1-33d.nib/runtime.nib ... 
+2019-07-05 06:30:38 +0000  2495 bytes for ./Payload/RTCTester.app/Base.lproj/Main.storyboardc/UINavigationController-ruK-f1-33d.nib/runtime.nib
+copying file ./Payload/RTCTester.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2019-07-05 06:30:38 +0000  1833 bytes for ./Payload/RTCTester.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+copying file ./Payload/RTCTester.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+2019-07-05 06:30:38 +0000  896 bytes for ./Payload/RTCTester.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+copying file ./Payload/RTCTester.app/Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+2019-07-05 06:30:38 +0000  258 bytes for ./Payload/RTCTester.app/Base.lproj/LaunchScreen.storyboardc/Info.plist
+2019-07-05 06:30:38 +0000  copying file ./Payload/RTCTester.app/Frameworks/AFNetworking.framework/_CodeSignature/CodeResources ... 
+2019-07-05 06:30:38 +0000  1798 bytes for ./Payload/RTCTester.app/Frameworks/AFNetworking.framework/_CodeSignature/CodeResources
+2019-07-05 06:30:38 +0000  copying file ./Payload/RTCTester.app/Frameworks/AFNetworking.framework/AFNetworking ... 
+2019-07-05 06:30:38 +0000  2040528 bytes for ./Payload/RTCTester.app/Frameworks/AFNetworking.framework/AFNetworking
+2019-07-05 06:30:38 +0000  copying file ./Payload/RTCTester.app/Frameworks/AFNetworking.framework/Info.plist ... 
+762 bytes for ./Payload/RTCTester.app/Frameworks/AFNetworking.framework/Info.plist
+copying file ./Payload/RTCTester.app/embedded.mobileprovision ... 
+2019-07-05 06:30:38 +0000  9663 bytes for ./Payload/RTCTester.app/embedded.mobileprovision
+2019-07-05 06:30:38 +0000  copying file ./Payload/RTCTester.app/Info.plist ... 
+1345 bytes for ./Payload/RTCTester.app/Info.plist
+copying file ./Payload/RTCTester.app/PkgInfo ... 
+2019-07-05 06:30:38 +0000  8 bytes for ./Payload/RTCTester.app/PkgInfo
+copying file ./Payload/RTCTester.app/RCConfig.plist ... 
+2019-07-05 06:30:38 +0000  278 bytes for ./Payload/RTCTester.app/RCConfig.plist
+2019-07-05 06:30:38 +0000  /usr/bin/ditto exited with 0
+2019-07-05 06:30:38 +0000  Processing step: IDEDistributionAppStoreInformationStep
+2019-07-05 06:30:38 +0000  Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2019-07-05 06:30:38 +0000  Processing step: IDEDistributionGenerateProcessedDistributionItems
+2019-07-05 06:30:38 +0000  Processing step: IDEDistributionCreateManifestStep
