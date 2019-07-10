@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct HikeView : View {
+    @State private var showDetail = false
     var body: some View {
         VStack {
             HStack {
@@ -17,15 +18,18 @@ struct HikeView : View {
                     Text("4.5 km")
                 }
                 Button(action: {
-                    
+                    self.showDetail.toggle()
                 }) {
                     Image(systemName: "chevron.right.circle")
                         .imageScale(.large)
-                        .rotationEffect(.degrees(90))
-                        .scaleEffect(1.5)
+                        .rotationEffect(.degrees(showDetail ? 90 : 0))
+                        .scaleEffect(showDetail ? 1.5 : 1)
                         .padding()
-                        .animation(.basic())
+                        .animation(.spring())
                 }
+            }
+            if showDetail {
+                HikeDetail()
             }
         }
     }
