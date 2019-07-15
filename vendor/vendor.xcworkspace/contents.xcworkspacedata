@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:GroceryKit/GroceryKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:PromiseKitDemo/PromiseKitDemo.xcodeproj">
    </FileRef>
 </Workspace>

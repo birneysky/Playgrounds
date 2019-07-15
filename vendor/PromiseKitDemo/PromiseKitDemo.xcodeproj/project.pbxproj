@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74CE346B22DCD02C00C185EF /* GroceryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CE346A22DCD02C00C185EF /* GroceryKit.framework */; };
 		B2600AEE22DC307F00613583 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2600AED22DC307F00613583 /* AppDelegate.swift */; };
 		B2600AF022DC307F00613583 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2600AEF22DC307F00613583 /* SceneDelegate.swift */; };
 		B2600AF222DC307F00613583 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2600AF122DC307F00613583 /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74CE346A22DCD02C00C185EF /* GroceryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GroceryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2600AEA22DC307F00613583 /* PromiseKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PromiseKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2600AED22DC307F00613583 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2600AEF22DC307F00613583 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,18 +71,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74CE346B22DCD02C00C185EF /* GroceryKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74CE346922DCD02C00C185EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74CE346A22DCD02C00C185EF /* GroceryKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B2600AE122DC307F00613583 = {
 			isa = PBXGroup;
 			children = (
 				B26D1C8222DC56F8000B04EF /* PromiseKit */,
 				B2600AEC22DC307F00613583 /* PromiseKitDemo */,
 				B2600AEB22DC307F00613583 /* Products */,
+				74CE346922DCD02C00C185EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -379,6 +391,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../output";
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = PromiseKitDemo/Info.plist;
@@ -402,6 +415,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../output";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = PromiseKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
