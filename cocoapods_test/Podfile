@@ -1,0 +1,12 @@
+platform:ios, '8.0'
+
+install! 'cocoapods',
+    :integrate_targets => false
+
+pod 'Bugly'
+pod 'RongCloudIM/IMLib','~>2.9.19'
+pod 'RongRTCLib','~>3.0.7'
+pod 'AFNetworking'
+pod 'PromiseKit','~>6.10.0'
+target '' do
+end
