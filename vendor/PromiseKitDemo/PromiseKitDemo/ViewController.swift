@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import GroceryKit
 
 struct User {
     var name: String

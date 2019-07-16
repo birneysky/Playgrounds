@@ -7,35 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		74CE346B22DCD02C00C185EF /* GroceryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CE346A22DCD02C00C185EF /* GroceryKit.framework */; };
+		B254080E22DD7A12006FE9F6 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25407FE22DD7A12006FE9F6 /* Error.swift */; };
+		B254080F22DD7A12006FE9F6 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25407FF22DD7A12006FE9F6 /* Resolver.swift */; };
+		B254081022DD7A12006FE9F6 /* when.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080022DD7A12006FE9F6 /* when.swift */; };
+		B254081122DD7A12006FE9F6 /* after.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080122DD7A12006FE9F6 /* after.swift */; };
+		B254081222DD7A12006FE9F6 /* AnyPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080222DD7A12006FE9F6 /* AnyPromise.swift */; };
+		B254081322DD7A12006FE9F6 /* CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080322DD7A12006FE9F6 /* CustomStringConvertible.swift */; };
+		B254081422DD7A12006FE9F6 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080422DD7A12006FE9F6 /* Configuration.swift */; };
+		B254081522DD7A12006FE9F6 /* LogEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080522DD7A12006FE9F6 /* LogEvent.swift */; };
+		B254081622DD7A12006FE9F6 /* race.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080622DD7A12006FE9F6 /* race.swift */; };
+		B254081722DD7A12006FE9F6 /* Guarantee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080722DD7A12006FE9F6 /* Guarantee.swift */; };
+		B254081822DD7A12006FE9F6 /* Catchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080822DD7A12006FE9F6 /* Catchable.swift */; };
+		B254081922DD7A12006FE9F6 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080922DD7A12006FE9F6 /* Box.swift */; };
+		B254081A22DD7A12006FE9F6 /* firstly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080A22DD7A12006FE9F6 /* firstly.swift */; };
+		B254081B22DD7A12006FE9F6 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080B22DD7A12006FE9F6 /* Promise.swift */; };
+		B254081C22DD7A12006FE9F6 /* hang.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080C22DD7A12006FE9F6 /* hang.swift */; };
+		B254081D22DD7A12006FE9F6 /* Thenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080D22DD7A12006FE9F6 /* Thenable.swift */; };
+		B254082022DD7A94006FE9F6 /* AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = B254081F22DD7A94006FE9F6 /* AnyPromise.m */; };
 		B2600AEE22DC307F00613583 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2600AED22DC307F00613583 /* AppDelegate.swift */; };
 		B2600AF022DC307F00613583 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2600AEF22DC307F00613583 /* SceneDelegate.swift */; };
 		B2600AF222DC307F00613583 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2600AF122DC307F00613583 /* ViewController.swift */; };
 		B2600AF522DC307F00613583 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2600AF322DC307F00613583 /* Main.storyboard */; };
 		B2600AF722DC308200613583 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2600AF622DC308200613583 /* Assets.xcassets */; };
 		B2600AFA22DC308200613583 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2600AF822DC308200613583 /* LaunchScreen.storyboard */; };
-		B26D1CD122DC5731000B04EF /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D1CC022DC5730000B04EF /* Error.swift */; };
-		B26D1CD222DC5731000B04EF /* Deprecations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D1CC122DC5730000B04EF /* Deprecations.swift */; };
-		B26D1CD322DC5731000B04EF /* Catchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D1CC222DC5730000B04EF /* Catchable.swift */; };
-		B26D1CD422DC5731000B04EF /* LogEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D1CC322DC5730000B04EF /* LogEvent.swift */; };
-		B26D1CD522DC5731000B04EF /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D1CC422DC5730000B04EF /* Box.swift */; };
-		B26D1CD622DC5731000B04EF /* AnyPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D1CC522DC5730000B04EF /* AnyPromise.swift */; };
-		B26D1CD722DC5731000B04EF /* race.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D1CC622DC5730000B04EF /* race.swift */; };
-		B26D1CD822DC5731000B04EF /* hang.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D1CC722DC5730000B04EF /* hang.swift */; };
-		B26D1CD922DC5731000B04EF /* firstly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D1CC822DC5730000B04EF /* firstly.swift */; };
-		B26D1CDA22DC5731000B04EF /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D1CC922DC5731000B04EF /* Promise.swift */; };
-		B26D1CDB22DC5731000B04EF /* when.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D1CCA22DC5731000B04EF /* when.swift */; };
-		B26D1CDC22DC5731000B04EF /* CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D1CCB22DC5731000B04EF /* CustomStringConvertible.swift */; };
-		B26D1CDD22DC5731000B04EF /* Guarantee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D1CCC22DC5731000B04EF /* Guarantee.swift */; };
-		B26D1CDE22DC5731000B04EF /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D1CCD22DC5731000B04EF /* Configuration.swift */; };
-		B26D1CDF22DC5731000B04EF /* Thenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D1CCE22DC5731000B04EF /* Thenable.swift */; };
-		B26D1CE022DC5731000B04EF /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D1CCF22DC5731000B04EF /* Resolver.swift */; };
-		B26D1CE122DC5731000B04EF /* after.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D1CD022DC5731000B04EF /* after.swift */; };
-		B26D1CE422DC575A000B04EF /* AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = B26D1CE322DC575A000B04EF /* AnyPromise.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		74CE346A22DCD02C00C185EF /* GroceryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GroceryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B25407FE22DD7A12006FE9F6 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		B25407FF22DD7A12006FE9F6 /* Resolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
+		B254080022DD7A12006FE9F6 /* when.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = when.swift; sourceTree = "<group>"; };
+		B254080122DD7A12006FE9F6 /* after.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = after.swift; sourceTree = "<group>"; };
+		B254080222DD7A12006FE9F6 /* AnyPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyPromise.swift; sourceTree = "<group>"; };
+		B254080322DD7A12006FE9F6 /* CustomStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStringConvertible.swift; sourceTree = "<group>"; };
+		B254080422DD7A12006FE9F6 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		B254080522DD7A12006FE9F6 /* LogEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogEvent.swift; sourceTree = "<group>"; };
+		B254080622DD7A12006FE9F6 /* race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = race.swift; sourceTree = "<group>"; };
+		B254080722DD7A12006FE9F6 /* Guarantee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guarantee.swift; sourceTree = "<group>"; };
+		B254080822DD7A12006FE9F6 /* Catchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Catchable.swift; sourceTree = "<group>"; };
+		B254080922DD7A12006FE9F6 /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		B254080A22DD7A12006FE9F6 /* firstly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = firstly.swift; sourceTree = "<group>"; };
+		B254080B22DD7A12006FE9F6 /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
+		B254080C22DD7A12006FE9F6 /* hang.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hang.swift; sourceTree = "<group>"; };
+		B254080D22DD7A12006FE9F6 /* Thenable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thenable.swift; sourceTree = "<group>"; };
+		B254081E22DD7A2C006FE9F6 /* AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnyPromise.h; sourceTree = "<group>"; };
+		B254081F22DD7A94006FE9F6 /* AnyPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyPromise.m; sourceTree = "<group>"; };
+		B254082122DD7D9E006FE9F6 /* GroceryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GroceryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2600AEA22DC307F00613583 /* PromiseKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PromiseKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2600AED22DC307F00613583 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2600AEF22DC307F00613583 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,25 +62,6 @@
 		B2600AF922DC308200613583 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2600AFB22DC308200613583 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B26D1C2322DC5211000B04EF /* PromiseKitDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PromiseKitDemo-Bridging-Header.h"; sourceTree = "<group>"; };
-		B26D1CC022DC5730000B04EF /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
-		B26D1CC122DC5730000B04EF /* Deprecations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deprecations.swift; sourceTree = "<group>"; };
-		B26D1CC222DC5730000B04EF /* Catchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Catchable.swift; sourceTree = "<group>"; };
-		B26D1CC322DC5730000B04EF /* LogEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogEvent.swift; sourceTree = "<group>"; };
-		B26D1CC422DC5730000B04EF /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
-		B26D1CC522DC5730000B04EF /* AnyPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyPromise.swift; sourceTree = "<group>"; };
-		B26D1CC622DC5730000B04EF /* race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = race.swift; sourceTree = "<group>"; };
-		B26D1CC722DC5730000B04EF /* hang.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hang.swift; sourceTree = "<group>"; };
-		B26D1CC822DC5730000B04EF /* firstly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = firstly.swift; sourceTree = "<group>"; };
-		B26D1CC922DC5731000B04EF /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
-		B26D1CCA22DC5731000B04EF /* when.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = when.swift; sourceTree = "<group>"; };
-		B26D1CCB22DC5731000B04EF /* CustomStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStringConvertible.swift; sourceTree = "<group>"; };
-		B26D1CCC22DC5731000B04EF /* Guarantee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guarantee.swift; sourceTree = "<group>"; };
-		B26D1CCD22DC5731000B04EF /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		B26D1CCE22DC5731000B04EF /* Thenable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thenable.swift; sourceTree = "<group>"; };
-		B26D1CCF22DC5731000B04EF /* Resolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
-		B26D1CD022DC5731000B04EF /* after.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = after.swift; sourceTree = "<group>"; };
-		B26D1CE222DC5746000B04EF /* AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnyPromise.h; sourceTree = "<group>"; };
-		B26D1CE322DC575A000B04EF /* AnyPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyPromise.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74CE346B22DCD02C00C185EF /* GroceryKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +78,7 @@
 		74CE346922DCD02C00C185EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B254082122DD7D9E006FE9F6 /* GroceryKit.framework */,
 				74CE346A22DCD02C00C185EF /* GroceryKit.framework */,
 			);
 			name = Frameworks;
@@ -130,25 +128,24 @@
 		B26D1C8522DC56F8000B04EF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B26D1CE222DC5746000B04EF /* AnyPromise.h */,
-				B26D1CE322DC575A000B04EF /* AnyPromise.m */,
-				B26D1CD022DC5731000B04EF /* after.swift */,
-				B26D1CC522DC5730000B04EF /* AnyPromise.swift */,
-				B26D1CC422DC5730000B04EF /* Box.swift */,
-				B26D1CC222DC5730000B04EF /* Catchable.swift */,
-				B26D1CCD22DC5731000B04EF /* Configuration.swift */,
-				B26D1CCB22DC5731000B04EF /* CustomStringConvertible.swift */,
-				B26D1CC122DC5730000B04EF /* Deprecations.swift */,
-				B26D1CC022DC5730000B04EF /* Error.swift */,
-				B26D1CC822DC5730000B04EF /* firstly.swift */,
-				B26D1CCC22DC5731000B04EF /* Guarantee.swift */,
-				B26D1CC722DC5730000B04EF /* hang.swift */,
-				B26D1CC322DC5730000B04EF /* LogEvent.swift */,
-				B26D1CC922DC5731000B04EF /* Promise.swift */,
-				B26D1CC622DC5730000B04EF /* race.swift */,
-				B26D1CCF22DC5731000B04EF /* Resolver.swift */,
-				B26D1CCE22DC5731000B04EF /* Thenable.swift */,
-				B26D1CCA22DC5731000B04EF /* when.swift */,
+				B254080122DD7A12006FE9F6 /* after.swift */,
+				B254080222DD7A12006FE9F6 /* AnyPromise.swift */,
+				B254081F22DD7A94006FE9F6 /* AnyPromise.m */,
+				B254081E22DD7A2C006FE9F6 /* AnyPromise.h */,
+				B254080922DD7A12006FE9F6 /* Box.swift */,
+				B254080822DD7A12006FE9F6 /* Catchable.swift */,
+				B254080422DD7A12006FE9F6 /* Configuration.swift */,
+				B254080322DD7A12006FE9F6 /* CustomStringConvertible.swift */,
+				B25407FE22DD7A12006FE9F6 /* Error.swift */,
+				B254080A22DD7A12006FE9F6 /* firstly.swift */,
+				B254080722DD7A12006FE9F6 /* Guarantee.swift */,
+				B254080C22DD7A12006FE9F6 /* hang.swift */,
+				B254080522DD7A12006FE9F6 /* LogEvent.swift */,
+				B254080B22DD7A12006FE9F6 /* Promise.swift */,
+				B254080622DD7A12006FE9F6 /* race.swift */,
+				B25407FF22DD7A12006FE9F6 /* Resolver.swift */,
+				B254080D22DD7A12006FE9F6 /* Thenable.swift */,
+				B254080022DD7A12006FE9F6 /* when.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -225,27 +222,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B26D1CE122DC5731000B04EF /* after.swift in Sources */,
-				B26D1CDF22DC5731000B04EF /* Thenable.swift in Sources */,
-				B26D1CD822DC5731000B04EF /* hang.swift in Sources */,
-				B26D1CD722DC5731000B04EF /* race.swift in Sources */,
-				B26D1CDC22DC5731000B04EF /* CustomStringConvertible.swift in Sources */,
-				B26D1CE022DC5731000B04EF /* Resolver.swift in Sources */,
-				B26D1CD622DC5731000B04EF /* AnyPromise.swift in Sources */,
-				B26D1CE422DC575A000B04EF /* AnyPromise.m in Sources */,
-				B26D1CD422DC5731000B04EF /* LogEvent.swift in Sources */,
-				B26D1CD122DC5731000B04EF /* Error.swift in Sources */,
-				B26D1CDD22DC5731000B04EF /* Guarantee.swift in Sources */,
-				B26D1CD322DC5731000B04EF /* Catchable.swift in Sources */,
+				B254081622DD7A12006FE9F6 /* race.swift in Sources */,
+				B254081822DD7A12006FE9F6 /* Catchable.swift in Sources */,
+				B254080F22DD7A12006FE9F6 /* Resolver.swift in Sources */,
+				B254081722DD7A12006FE9F6 /* Guarantee.swift in Sources */,
+				B254080E22DD7A12006FE9F6 /* Error.swift in Sources */,
+				B254081A22DD7A12006FE9F6 /* firstly.swift in Sources */,
+				B254081222DD7A12006FE9F6 /* AnyPromise.swift in Sources */,
+				B254081D22DD7A12006FE9F6 /* Thenable.swift in Sources */,
+				B254081C22DD7A12006FE9F6 /* hang.swift in Sources */,
 				B2600AF222DC307F00613583 /* ViewController.swift in Sources */,
-				B26D1CDA22DC5731000B04EF /* Promise.swift in Sources */,
-				B26D1CDE22DC5731000B04EF /* Configuration.swift in Sources */,
-				B26D1CD222DC5731000B04EF /* Deprecations.swift in Sources */,
-				B26D1CDB22DC5731000B04EF /* when.swift in Sources */,
-				B26D1CD522DC5731000B04EF /* Box.swift in Sources */,
-				B26D1CD922DC5731000B04EF /* firstly.swift in Sources */,
+				B254081022DD7A12006FE9F6 /* when.swift in Sources */,
+				B254081322DD7A12006FE9F6 /* CustomStringConvertible.swift in Sources */,
+				B254081922DD7A12006FE9F6 /* Box.swift in Sources */,
+				B254081422DD7A12006FE9F6 /* Configuration.swift in Sources */,
+				B254081122DD7A12006FE9F6 /* after.swift in Sources */,
 				B2600AEE22DC307F00613583 /* AppDelegate.swift in Sources */,
+				B254081522DD7A12006FE9F6 /* LogEvent.swift in Sources */,
 				B2600AF022DC307F00613583 /* SceneDelegate.swift in Sources */,
+				B254082022DD7A94006FE9F6 /* AnyPromise.m in Sources */,
+				B254081B22DD7A12006FE9F6 /* Promise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +387,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../output";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = PromiseKitDemo/Info.plist;
@@ -415,7 +411,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../output";
+				FRAMEWORK_SEARCH_PATHS = "";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = PromiseKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

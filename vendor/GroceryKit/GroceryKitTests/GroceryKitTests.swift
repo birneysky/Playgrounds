@@ -10,18 +10,27 @@ import XCTest
 @testable import GroceryKit
 
 class GroceryKitTests: XCTestCase {
-
+    var client: URLSessionClient!
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        client = URLSessionClient()
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        client = nil
     }
 
-    func testExample() {
+    func test_TokenRequest() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        guard let url = URL(string: "http://apiqa.cn.ronghub.com/user/getToken.json") else {
+            return
+        }
+        let req = TokenRequest()
+        client.send(req) { (token) in
+            print(token)
+        }
     }
 
     func testPerformanceExample() {

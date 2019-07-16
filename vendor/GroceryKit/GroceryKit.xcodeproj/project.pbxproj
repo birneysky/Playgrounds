@@ -29,6 +29,8 @@
 		74CE346422DCC80800C185EF /* AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 74CE346322DCC80800C185EF /* AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74CE346622DCC9FD00C185EF /* fwd.h in Headers */ = {isa = PBXBuildFile; fileRef = 74CE346522DCC9FD00C185EF /* fwd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74CE346822DCCAFC00C185EF /* AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CE346722DCCAFC00C185EF /* AnyPromise.m */; };
+		B254082422DD8042006FE9F6 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254082322DD8042006FE9F6 /* Request.swift */; };
+		B254082622DD80F6006FE9F6 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254082522DD80F6006FE9F6 /* Client.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		74CE346322DCC80800C185EF /* AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnyPromise.h; sourceTree = "<group>"; };
 		74CE346522DCC9FD00C185EF /* fwd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fwd.h; sourceTree = "<group>"; };
 		74CE346722DCCAFC00C185EF /* AnyPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyPromise.m; sourceTree = "<group>"; };
+		B254082322DD8042006FE9F6 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		B254082522DD80F6006FE9F6 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 		74CE33E922DCC72B00C185EF /* GroceryKit */ = {
 			isa = PBXGroup;
 			children = (
+				B254082322DD8042006FE9F6 /* Request.swift */,
+				B254082522DD80F6006FE9F6 /* Client.swift */,
 				74CE33EA22DCC72B00C185EF /* GroceryKit.h */,
 				74CE33EB22DCC72B00C185EF /* Info.plist */,
 			);
@@ -278,6 +284,7 @@
 				74CE345622DCC7EC00C185EF /* Box.swift in Sources */,
 				74CE345322DCC7EC00C185EF /* AnyPromise.swift in Sources */,
 				74CE346122DCC7EC00C185EF /* Configuration.swift in Sources */,
+				B254082422DD8042006FE9F6 /* Request.swift in Sources */,
 				74CE346222DCC7EC00C185EF /* Promise.swift in Sources */,
 				74CE345B22DCC7EC00C185EF /* LogEvent.swift in Sources */,
 				74CE345922DCC7EC00C185EF /* after.swift in Sources */,
@@ -286,6 +293,7 @@
 				74CE346822DCCAFC00C185EF /* AnyPromise.m in Sources */,
 				74CE345F22DCC7EC00C185EF /* Resolver.swift in Sources */,
 				74CE345722DCC7EC00C185EF /* Thenable.swift in Sources */,
+				B254082622DD80F6006FE9F6 /* Client.swift in Sources */,
 				74CE345C22DCC7EC00C185EF /* Error.swift in Sources */,
 				74CE345422DCC7EC00C185EF /* CustomStringConvertible.swift in Sources */,
 			);
@@ -488,6 +496,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../output";
 				INFOPLIST_FILE = GroceryKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -506,6 +515,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../output";
 				INFOPLIST_FILE = GroceryKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

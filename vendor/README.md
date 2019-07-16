@@ -9,3 +9,7 @@
 ```
 
 在 target 为 framework 时，上述方式不再适用
+会报如下错误：
+```
+using bridging headers with framework targets is unsupported
+```
