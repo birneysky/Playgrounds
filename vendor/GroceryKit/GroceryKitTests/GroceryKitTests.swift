@@ -11,9 +11,11 @@ import XCTest
 
 class GroceryKitTests: XCTestCase {
     var client: URLSessionClient!
+    var e: XCTestExpectation!
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         client = URLSessionClient()
+        e = self.expectation(description: "expectation")
     }
 
     override func tearDown() {
@@ -24,13 +26,25 @@ class GroceryKitTests: XCTestCase {
     func test_TokenRequest() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        guard let url = URL(string: "http://apiqa.cn.ronghub.com/user/getToken.json") else {
-            return
-        }
-        let req = TokenRequest()
+        let req = TokenRequest(userId: "44u32jfdsa32498320", name: "hello")
         client.send(req) { (token) in
-            print(token)
+                print(token)
+                self.e.fulfill()
         }
+        self.waitForExpectations(timeout: 30) { (error) in
+            print(error)
+        }
+    }
+    
+    func printPointer<T>(address p: UnsafeRawPointer, as type: T.Type) {
+        let value = p.load(fromByteOffset: 1,as: type)
+        Swift.print(value)
+    }
+    
+    func test_UnsafeRawPointer() {
+        let a: [UInt8] = [0,1,2,3,4,5]
+        let pointer = UnsafeRawPointer(a)
+        printPointer(address: pointer, as: UInt8.self)
     }
 
     func testPerformanceExample() {

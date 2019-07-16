@@ -32,6 +32,14 @@ extension Request {
     }
 }
 
+protocol Parseable {
+   static func parse(data: Data) -> Self?
+}
+
+struct TokenResponse: Decodable {
+    
+}
+
 struct TokenRequest: Request {
     typealias Token = String
     typealias Response = Token
@@ -40,31 +48,39 @@ struct TokenRequest: Request {
     let path = "/user/getToken.json"
     let method: HttpMethod = .POST
     let parameter: [String : Any] = [:]
-    let appKey: String = "c9kqb3rdkbb8j"
-    let appSecret: String = "OYjzdrxMmUOmq"
+    let appKey: String = "lmxuhwaglck9d"
+    let appSecret: String = "t6ZKDZnULwLuC"
     var headers: [String : String]  {
         let random = arc4random()
         let timeStamp = time(nil)
-        let digist = UnsafeMutablePointer<UInt8>.allocate(capacity: Int(CC_SHA1_DIGEST_LENGTH))
-        let sumString = String(format: "%@%u%ld", appSecret,random,timeStamp)
+        var bytes: [UInt8] = Array<UInt8>(repeating: 0, count: Int(CC_SHA1_DIGEST_LENGTH))
+//        let digist = UnsafeMutablePointer<UInt8>.allocate(capacity: Int(CC_SHA1_DIGEST_LENGTH))
+//        digist.initialize(from: &bytes, count: Int(CC_SHA1_DIGEST_LENGTH))
+        let digist = UnsafeMutablePointer<UInt8>(&bytes)
+        let sumString = "\(appSecret)\(random)\(timeStamp)"
         guard let cChars = sumString.cString(using: .utf8) else {
             return [:]
         }
         var signature: String = ""
-        CC_SHA1(UnsafeRawPointer(cChars), CC_LONG(cChars.count), digist)
-        for i in 0...CC_SHA1_DIGEST_LENGTH {
+        CC_SHA1(cChars, CC_LONG(sumString.count), digist)
+        for i in 0..<CC_SHA1_DIGEST_LENGTH {
             signature.append(String(format: "%02x", digist[Int(i)] & 0xFF))
         }
+        //digist.deallocate()
         return ["App-Key":appKey,
                 "Nonce":"\(random)",
                 "Timestamp":"\(timeStamp)",
-                "Signature":signature]
+                "Signature":signature,
+                "Content-Type":"application/x-www-form-urlencoded"]
     }
     func parse(data: Data) -> Token? {
+        guard let obj  = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
+            return nil
+        }
         return nil
     }
     
     func encode() -> Data? {
-        return "userId=\(userId)&name=\(name)".data(using: .utf8)
+        return "userId=\(userId)&name=\(name)".data(using: .utf8, allowLossyConversion: false)
     }
 }

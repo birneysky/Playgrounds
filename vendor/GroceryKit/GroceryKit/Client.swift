@@ -15,7 +15,7 @@ protocol Client {
 }
 
 struct URLSessionClient: Client {
-    let host: String = "http://apiqa.cn.ronghub.com"
+    let host: String = "https://api.cn.ronghub.com"
     
     func send<T: Request>(_ r: T, handler: @escaping (T.Response?) -> Void) {
         let url = URL(string: host + r.path)
