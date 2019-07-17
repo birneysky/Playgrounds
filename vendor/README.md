@@ -1,4 +1,4 @@
-在 target 为应用时，
+在 target 为应用时，例如: PromiseKitDemo
 
 1. swift 中调用 oc 需要建立 targetName-Bridging-Header.h 文件
 在文件中引入 需要调用的 oc 的头文件即可
@@ -8,7 +8,7 @@
 ./PromiseKitDemo/PromiseKitDemo-Bridging-Header.h
 ```
 
-在 target 为 framework 时，上述方式不再适用
+在 target 为 framework 时(例如GroceryKit)，上述方式不再适用
 会报如下错误：
 ```
 using bridging headers with framework targets is unsupported

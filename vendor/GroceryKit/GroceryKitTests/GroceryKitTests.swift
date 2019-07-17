@@ -11,28 +11,78 @@ import XCTest
 
 class GroceryKitTests: XCTestCase {
     var client: URLSessionClient!
+    var hc: HtppClient!
     var e: XCTestExpectation!
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         client = URLSessionClient()
+        hc = HtppClient()
         e = self.expectation(description: "expectation")
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         client = nil
+        hc = nil
     }
 
     func test_TokenRequest() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let req = TokenRequest(userId: "44u32jfdsa32498320", name: "hello")
-        client.send(req) { (token) in
-                print(token)
-                self.e.fulfill()
+        client.send(req) { response, error in
+            if let repo = response {
+                print(repo)
+            } else {
+                XCTAssert(true)
+            }
+            self.e.fulfill()
         }
         self.waitForExpectations(timeout: 30) { (error) in
-            print(error)
+            if let err = error {
+                XCTAssert(false)
+                print(err)
+            } else {
+                
+            }
+            
+        }
+    }
+    
+    func test_fetchToken() {
+        let name = "name"
+        firstly {
+             return self.hc.fetchToken(uid: "123", name: name)
+        }.then { (token) in
+             self.hc.fetchToken(uid: "xfdas", name: "are you ok")
+        }.done { token in
+            print("2 \(token)")
+        }.catch { err in
+            print(err)
+            XCTAssert(false)
+        }
+        
+        firstly {
+            self.hc.fetchToken(uid: "123", name: "456")
+        }.then { (token) in
+            //print("3\(token)")
+            self.hc.fetchToken(uid: "xfdas", name: "are you ok")
+        }.done { token in
+            print("4 \(token)")
+            self.e.fulfill()
+        }.catch { err in
+                print(err)
+                XCTAssert(false)
+        }
+
+        self.waitForExpectations(timeout: 30) { (error) in
+            if let err = error {
+                XCTAssert(false)
+                print(err)
+            } else {
+                
+            }
+            
         }
     }
     
