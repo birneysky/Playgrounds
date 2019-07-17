@@ -16,10 +16,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         let name = "name"
         let hc = HtppClient()
+        
         firstly {
             hc.fetchToken(uid: "123", name: name)
         }.then { (token) in
-            hc.fetchToken(uid: "xfdas", name: "are you ok")
+            return hc.fetchToken(uid: "xfdas", name: "are you ok")
         }.done { token in
             print("2 \(token)")
         }.catch { err in
