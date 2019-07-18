@@ -17,16 +17,26 @@ class ViewController: UIViewController {
         let name = "name"
         let hc = HtppClient()
         
+        //// firstly  then 块中只能包含一行代码
         firstly {
             hc.fetchToken(uid: "123", name: name)
         }.then { (token) in
-            return hc.fetchToken(uid: "xfdas", name: "are you ok")
+            hc.fetchToken(uid: "xfdas", name: "are you ok")
         }.done { token in
             print("2 \(token)")
         }.catch { err in
             print(err)
         }
         
+        secondly {
+            print("secondly")
+        }
+        
+    }
+    
+    
+    func secondly(execute body: ()->Void) {
+        body()
     }
 
 

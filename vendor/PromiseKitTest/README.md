@@ -1,9 +1,9 @@
-Carthage 的使用
+##### Carthage 的使用
 
 1 touch Cartfile
 2 编辑 Cartfile 文件，写入
 ```
-
+github "mxcl/PromiseKit"           "6.10.0"
 ```
 3 运行 Carthage
 ```
@@ -16,4 +16,10 @@ carthage update --platform iOS
 
 /// 升级指定 framework
 carthage update SVProgressHUD --platform iOS
+```
+##### Promise
+
+```
+    Promise 
+        |____ box: EmptyBox
 ```
