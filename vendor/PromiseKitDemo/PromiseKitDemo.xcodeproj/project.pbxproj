@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		748855FA22E5F79100F82948 /* AnyPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748855F722E5F79100F82948 /* AnyPromise.swift */; };
+		748855FB22E5F79100F82948 /* AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 748855F822E5F79100F82948 /* AnyPromise.m */; };
 		B254080E22DD7A12006FE9F6 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25407FE22DD7A12006FE9F6 /* Error.swift */; };
 		B254080F22DD7A12006FE9F6 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25407FF22DD7A12006FE9F6 /* Resolver.swift */; };
 		B254081022DD7A12006FE9F6 /* when.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080022DD7A12006FE9F6 /* when.swift */; };
 		B254081122DD7A12006FE9F6 /* after.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080122DD7A12006FE9F6 /* after.swift */; };
-		B254081222DD7A12006FE9F6 /* AnyPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080222DD7A12006FE9F6 /* AnyPromise.swift */; };
 		B254081322DD7A12006FE9F6 /* CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080322DD7A12006FE9F6 /* CustomStringConvertible.swift */; };
 		B254081422DD7A12006FE9F6 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080422DD7A12006FE9F6 /* Configuration.swift */; };
 		B254081522DD7A12006FE9F6 /* LogEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080522DD7A12006FE9F6 /* LogEvent.swift */; };
@@ -23,7 +24,6 @@
 		B254081B22DD7A12006FE9F6 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080B22DD7A12006FE9F6 /* Promise.swift */; };
 		B254081C22DD7A12006FE9F6 /* hang.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080C22DD7A12006FE9F6 /* hang.swift */; };
 		B254081D22DD7A12006FE9F6 /* Thenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254080D22DD7A12006FE9F6 /* Thenable.swift */; };
-		B254082022DD7A94006FE9F6 /* AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = B254081F22DD7A94006FE9F6 /* AnyPromise.m */; };
 		B2600AEE22DC307F00613583 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2600AED22DC307F00613583 /* AppDelegate.swift */; };
 		B2600AF022DC307F00613583 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2600AEF22DC307F00613583 /* SceneDelegate.swift */; };
 		B2600AF222DC307F00613583 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2600AF122DC307F00613583 /* ViewController.swift */; };
@@ -33,12 +33,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		748855F722E5F79100F82948 /* AnyPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyPromise.swift; sourceTree = "<group>"; };
+		748855F822E5F79100F82948 /* AnyPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyPromise.m; sourceTree = "<group>"; };
+		748855F922E5F79100F82948 /* AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnyPromise.h; sourceTree = "<group>"; };
 		74CE346A22DCD02C00C185EF /* GroceryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GroceryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B25407FE22DD7A12006FE9F6 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		B25407FF22DD7A12006FE9F6 /* Resolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
 		B254080022DD7A12006FE9F6 /* when.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = when.swift; sourceTree = "<group>"; };
 		B254080122DD7A12006FE9F6 /* after.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = after.swift; sourceTree = "<group>"; };
-		B254080222DD7A12006FE9F6 /* AnyPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyPromise.swift; sourceTree = "<group>"; };
 		B254080322DD7A12006FE9F6 /* CustomStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStringConvertible.swift; sourceTree = "<group>"; };
 		B254080422DD7A12006FE9F6 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		B254080522DD7A12006FE9F6 /* LogEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogEvent.swift; sourceTree = "<group>"; };
@@ -50,8 +52,6 @@
 		B254080B22DD7A12006FE9F6 /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 		B254080C22DD7A12006FE9F6 /* hang.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hang.swift; sourceTree = "<group>"; };
 		B254080D22DD7A12006FE9F6 /* Thenable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thenable.swift; sourceTree = "<group>"; };
-		B254081E22DD7A2C006FE9F6 /* AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnyPromise.h; sourceTree = "<group>"; };
-		B254081F22DD7A94006FE9F6 /* AnyPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyPromise.m; sourceTree = "<group>"; };
 		B254082122DD7D9E006FE9F6 /* GroceryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GroceryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2600AEA22DC307F00613583 /* PromiseKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PromiseKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2600AED22DC307F00613583 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,10 +128,10 @@
 		B26D1C8522DC56F8000B04EF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				748855F922E5F79100F82948 /* AnyPromise.h */,
+				748855F822E5F79100F82948 /* AnyPromise.m */,
+				748855F722E5F79100F82948 /* AnyPromise.swift */,
 				B254080122DD7A12006FE9F6 /* after.swift */,
-				B254080222DD7A12006FE9F6 /* AnyPromise.swift */,
-				B254081F22DD7A94006FE9F6 /* AnyPromise.m */,
-				B254081E22DD7A2C006FE9F6 /* AnyPromise.h */,
 				B254080922DD7A12006FE9F6 /* Box.swift */,
 				B254080822DD7A12006FE9F6 /* Catchable.swift */,
 				B254080422DD7A12006FE9F6 /* Configuration.swift */,
@@ -228,11 +228,11 @@
 				B254081722DD7A12006FE9F6 /* Guarantee.swift in Sources */,
 				B254080E22DD7A12006FE9F6 /* Error.swift in Sources */,
 				B254081A22DD7A12006FE9F6 /* firstly.swift in Sources */,
-				B254081222DD7A12006FE9F6 /* AnyPromise.swift in Sources */,
 				B254081D22DD7A12006FE9F6 /* Thenable.swift in Sources */,
 				B254081C22DD7A12006FE9F6 /* hang.swift in Sources */,
 				B2600AF222DC307F00613583 /* ViewController.swift in Sources */,
 				B254081022DD7A12006FE9F6 /* when.swift in Sources */,
+				748855FA22E5F79100F82948 /* AnyPromise.swift in Sources */,
 				B254081322DD7A12006FE9F6 /* CustomStringConvertible.swift in Sources */,
 				B254081922DD7A12006FE9F6 /* Box.swift in Sources */,
 				B254081422DD7A12006FE9F6 /* Configuration.swift in Sources */,
@@ -240,7 +240,7 @@
 				B2600AEE22DC307F00613583 /* AppDelegate.swift in Sources */,
 				B254081522DD7A12006FE9F6 /* LogEvent.swift in Sources */,
 				B2600AF022DC307F00613583 /* SceneDelegate.swift in Sources */,
-				B254082022DD7A94006FE9F6 /* AnyPromise.m in Sources */,
+				748855FB22E5F79100F82948 /* AnyPromise.m in Sources */,
 				B254081B22DD7A12006FE9F6 /* Promise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

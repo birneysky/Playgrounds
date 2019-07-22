@@ -20,6 +20,17 @@ carthage update SVProgressHUD --platform iOS
 ##### Promise
 
 ```
-    Promise 
-        |____ box: EmptyBox
+    let body = {
+        return Promise<String> { resolver in
+            resolver.fulfill("abc")
+        }
+    }
+    
+    let abcpromise = body()
+    
+    abcpromise: Promise<String>
+        |
+        |____ box: EmptyBox<Result<String>>
+                |
+                |_____ sealant: Sealant<Result<String>>.resolved
 ```
