@@ -7,11 +7,8 @@
 //
 
 #import "BasicViewController.h"
+#import "SceneVertex.h"
 #import <GLKit/GLKit.h>
-
-typedef struct {
-    GLKVector3 postionCoords; /// x,y,z
-} SceneVertex;
 
 /**
  
@@ -70,7 +67,7 @@ static const SceneVertex vertices[] = {
     self.baseEffect.useConstantColor = GL_TRUE;
     self.baseEffect.constantColor = GLKVector4Make(1.0f, /// red
                                                    1.0f, /// green
-                                                   1.0f, /// blue
+                                                   0.5f, /// blue
                                                    1.0f); /// alpha
     /// 设置背景色 当当前上下文中
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);

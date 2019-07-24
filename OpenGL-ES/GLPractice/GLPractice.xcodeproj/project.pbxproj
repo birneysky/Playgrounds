@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7489397422E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7489397322E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.m */; };
+		74EAC2AE22E8927F000D379A /* AGLKView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EAC2AA22E8927E000D379A /* AGLKView.m */; };
+		74EAC2AF22E8927F000D379A /* AGLKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EAC2AD22E8927F000D379A /* AGLKViewController.m */; };
+		74EAC2B322E89863000D379A /* AGLKContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EAC2B222E89863000D379A /* AGLKContext.m */; };
+		74EAC2B622E898D5000D379A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EAC2B522E898D5000D379A /* OpenGLES.framework */; };
+		74EAC2B822E898E0000D379A /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EAC2B722E898E0000D379A /* GLKit.framework */; };
 		74FDC19222E74B2000E3D6EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC19122E74B2000E3D6EF /* AppDelegate.m */; };
 		74FDC19522E74B2000E3D6EF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC19422E74B2000E3D6EF /* SceneDelegate.m */; };
 		74FDC19822E74B2000E3D6EF /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC19722E74B2000E3D6EF /* BasicViewController.m */; };
@@ -16,8 +22,6 @@
 		74FDC1A322E74B2100E3D6EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC1A222E74B2100E3D6EF /* main.m */; };
 		74FDC1AD22E74B2100E3D6EF /* GLPracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC1AC22E74B2100E3D6EF /* GLPracticeTests.m */; };
 		74FDC1B822E74B2100E3D6EF /* GLPracticeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC1B722E74B2100E3D6EF /* GLPracticeUITests.m */; };
-		B28C4F8822E83E8C000B6746 /* AGLKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B28C4F8722E83E8C000B6746 /* AGLKViewController.m */; };
-		B28C4F8B22E83EF2000B6746 /* AGLKView.m in Sources */ = {isa = PBXBuildFile; fileRef = B28C4F8A22E83EF2000B6746 /* AGLKView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7489397222E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKVertexAttributeArrayBuffer.h; sourceTree = "<group>"; };
+		7489397322E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKVertexAttributeArrayBuffer.m; sourceTree = "<group>"; };
+		74EAC2AA22E8927E000D379A /* AGLKView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLKView.m; sourceTree = "<group>"; };
+		74EAC2AB22E8927F000D379A /* AGLKView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLKView.h; sourceTree = "<group>"; };
+		74EAC2AC22E8927F000D379A /* AGLKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLKViewController.h; sourceTree = "<group>"; };
+		74EAC2AD22E8927F000D379A /* AGLKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLKViewController.m; sourceTree = "<group>"; };
+		74EAC2B022E89419000D379A /* SceneVertex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneVertex.h; sourceTree = "<group>"; };
+		74EAC2B122E89863000D379A /* AGLKContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKContext.h; sourceTree = "<group>"; };
+		74EAC2B222E89863000D379A /* AGLKContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKContext.m; sourceTree = "<group>"; };
+		74EAC2B522E898D5000D379A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		74EAC2B722E898E0000D379A /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		74FDC18D22E74B2000E3D6EF /* GLPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74FDC19022E74B2000E3D6EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		74FDC19122E74B2000E3D6EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,10 +71,6 @@
 		74FDC1B322E74B2100E3D6EF /* GLPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GLPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74FDC1B722E74B2100E3D6EF /* GLPracticeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLPracticeUITests.m; sourceTree = "<group>"; };
 		74FDC1B922E74B2100E3D6EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B28C4F8622E83E8C000B6746 /* AGLKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AGLKViewController.h; path = "../../../../../../../../System/Volumes/Data/Users/birney/source/source_git/Playgrounds/OpenGL-ES/GLPractice/GLPractice/AGLKViewController.h"; sourceTree = "<group>"; };
-		B28C4F8722E83E8C000B6746 /* AGLKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AGLKViewController.m; path = "../../../../../../../../System/Volumes/Data/Users/birney/source/source_git/Playgrounds/OpenGL-ES/GLPractice/GLPractice/AGLKViewController.m"; sourceTree = "<group>"; };
-		B28C4F8922E83EF2000B6746 /* AGLKView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AGLKView.h; path = "../../../../../../../../System/Volumes/Data/Users/birney/source/source_git/Playgrounds/OpenGL-ES/GLPractice/GLPractice/AGLKView.h"; sourceTree = "<group>"; };
-		B28C4F8A22E83EF2000B6746 /* AGLKView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AGLKView.m; path = "../../../../../../../../System/Volumes/Data/Users/birney/source/source_git/Playgrounds/OpenGL-ES/GLPractice/GLPractice/AGLKView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74EAC2B822E898E0000D379A /* GLKit.framework in Frameworks */,
+				74EAC2B622E898D5000D379A /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74EAC2B422E898D4000D379A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74EAC2B722E898E0000D379A /* GLKit.framework */,
+				74EAC2B522E898D5000D379A /* OpenGLES.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		74FDC18422E74B2000E3D6EF = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +116,7 @@
 				74FDC1AB22E74B2100E3D6EF /* GLPracticeTests */,
 				74FDC1B622E74B2100E3D6EF /* GLPracticeUITests */,
 				74FDC18E22E74B2000E3D6EF /* Products */,
+				74EAC2B422E898D4000D379A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,12 +137,17 @@
 				74FDC19122E74B2000E3D6EF /* AppDelegate.m */,
 				74FDC19322E74B2000E3D6EF /* SceneDelegate.h */,
 				74FDC19422E74B2000E3D6EF /* SceneDelegate.m */,
-				B28C4F8922E83EF2000B6746 /* AGLKView.h */,
-				B28C4F8A22E83EF2000B6746 /* AGLKView.m */,
 				74FDC19622E74B2000E3D6EF /* BasicViewController.h */,
 				74FDC19722E74B2000E3D6EF /* BasicViewController.m */,
-				B28C4F8622E83E8C000B6746 /* AGLKViewController.h */,
-				B28C4F8722E83E8C000B6746 /* AGLKViewController.m */,
+				74EAC2B022E89419000D379A /* SceneVertex.h */,
+				74EAC2AB22E8927F000D379A /* AGLKView.h */,
+				74EAC2AA22E8927E000D379A /* AGLKView.m */,
+				74EAC2AC22E8927F000D379A /* AGLKViewController.h */,
+				74EAC2AD22E8927F000D379A /* AGLKViewController.m */,
+				74EAC2B122E89863000D379A /* AGLKContext.h */,
+				74EAC2B222E89863000D379A /* AGLKContext.m */,
+				7489397222E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.h */,
+				7489397322E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.m */,
 				74FDC19922E74B2000E3D6EF /* Main.storyboard */,
 				74FDC19C22E74B2100E3D6EF /* Assets.xcassets */,
 				74FDC19E22E74B2100E3D6EF /* LaunchScreen.storyboard */,
@@ -277,12 +305,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B28C4F8822E83E8C000B6746 /* AGLKViewController.m in Sources */,
+				74EAC2AE22E8927F000D379A /* AGLKView.m in Sources */,
 				74FDC19822E74B2000E3D6EF /* BasicViewController.m in Sources */,
+				7489397422E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.m in Sources */,
+				74EAC2B322E89863000D379A /* AGLKContext.m in Sources */,
 				74FDC19222E74B2000E3D6EF /* AppDelegate.m in Sources */,
-				B28C4F8B22E83EF2000B6746 /* AGLKView.m in Sources */,
 				74FDC1A322E74B2100E3D6EF /* main.m in Sources */,
 				74FDC19522E74B2000E3D6EF /* SceneDelegate.m in Sources */,
+				74EAC2AF22E8927F000D379A /* AGLKViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
