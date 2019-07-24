@@ -25,7 +25,8 @@ class ViewController: UIViewController {
         
         
         let rp = Promise<String>(.pending)
-        let body = {
+        let body = { () -> Promise<String> in
+            print("hello world")
             return Promise<String> { resolver in
                  resolver.fulfill("abc")
             }
@@ -38,6 +39,16 @@ class ViewController: UIViewController {
                 resolver.fulfill("def")
             }
         }
+        
+        let closure = { () -> Int in
+            let b = 4
+            let c = 5
+            print("abc")
+            return b+c
+        }
+        
+        let a = closure()
+        print(a)
     }
 
     func login() -> Promise<()> {

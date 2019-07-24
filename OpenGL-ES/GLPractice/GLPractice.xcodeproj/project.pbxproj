@@ -16,6 +16,8 @@
 		74FDC1A322E74B2100E3D6EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC1A222E74B2100E3D6EF /* main.m */; };
 		74FDC1AD22E74B2100E3D6EF /* GLPracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC1AC22E74B2100E3D6EF /* GLPracticeTests.m */; };
 		74FDC1B822E74B2100E3D6EF /* GLPracticeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC1B722E74B2100E3D6EF /* GLPracticeUITests.m */; };
+		B28C4F8822E83E8C000B6746 /* AGLKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B28C4F8722E83E8C000B6746 /* AGLKViewController.m */; };
+		B28C4F8B22E83EF2000B6746 /* AGLKView.m in Sources */ = {isa = PBXBuildFile; fileRef = B28C4F8A22E83EF2000B6746 /* AGLKView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		74FDC1B322E74B2100E3D6EF /* GLPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GLPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74FDC1B722E74B2100E3D6EF /* GLPracticeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLPracticeUITests.m; sourceTree = "<group>"; };
 		74FDC1B922E74B2100E3D6EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B28C4F8622E83E8C000B6746 /* AGLKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AGLKViewController.h; path = "../../../../../../../../System/Volumes/Data/Users/birney/source/source_git/Playgrounds/OpenGL-ES/GLPractice/GLPractice/AGLKViewController.h"; sourceTree = "<group>"; };
+		B28C4F8722E83E8C000B6746 /* AGLKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AGLKViewController.m; path = "../../../../../../../../System/Volumes/Data/Users/birney/source/source_git/Playgrounds/OpenGL-ES/GLPractice/GLPractice/AGLKViewController.m"; sourceTree = "<group>"; };
+		B28C4F8922E83EF2000B6746 /* AGLKView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AGLKView.h; path = "../../../../../../../../System/Volumes/Data/Users/birney/source/source_git/Playgrounds/OpenGL-ES/GLPractice/GLPractice/AGLKView.h"; sourceTree = "<group>"; };
+		B28C4F8A22E83EF2000B6746 /* AGLKView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AGLKView.m; path = "../../../../../../../../System/Volumes/Data/Users/birney/source/source_git/Playgrounds/OpenGL-ES/GLPractice/GLPractice/AGLKView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +114,12 @@
 				74FDC19122E74B2000E3D6EF /* AppDelegate.m */,
 				74FDC19322E74B2000E3D6EF /* SceneDelegate.h */,
 				74FDC19422E74B2000E3D6EF /* SceneDelegate.m */,
+				B28C4F8922E83EF2000B6746 /* AGLKView.h */,
+				B28C4F8A22E83EF2000B6746 /* AGLKView.m */,
 				74FDC19622E74B2000E3D6EF /* BasicViewController.h */,
 				74FDC19722E74B2000E3D6EF /* BasicViewController.m */,
+				B28C4F8622E83E8C000B6746 /* AGLKViewController.h */,
+				B28C4F8722E83E8C000B6746 /* AGLKViewController.m */,
 				74FDC19922E74B2000E3D6EF /* Main.storyboard */,
 				74FDC19C22E74B2100E3D6EF /* Assets.xcassets */,
 				74FDC19E22E74B2100E3D6EF /* LaunchScreen.storyboard */,
@@ -267,8 +277,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B28C4F8822E83E8C000B6746 /* AGLKViewController.m in Sources */,
 				74FDC19822E74B2000E3D6EF /* BasicViewController.m in Sources */,
 				74FDC19222E74B2000E3D6EF /* AppDelegate.m in Sources */,
+				B28C4F8B22E83EF2000B6746 /* AGLKView.m in Sources */,
 				74FDC1A322E74B2100E3D6EF /* main.m in Sources */,
 				74FDC19522E74B2000E3D6EF /* SceneDelegate.m in Sources */,
 			);
