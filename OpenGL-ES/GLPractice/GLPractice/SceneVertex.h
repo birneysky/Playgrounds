@@ -14,4 +14,10 @@ typedef struct {
     GLKVector3 postionCoords; /// x,y,z
 } SceneVertex;
 
+
+typedef struct {
+    GLKVector3 postionCoords;
+    GLKVector2 textureCoords;
+} Vertex;
+
 #endif /* SceneVertice_h */

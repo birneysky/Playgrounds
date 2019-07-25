@@ -37,8 +37,7 @@ static const SceneVertex vertices[] = {
 
 @interface BasicViewController ()<GLKViewDelegate>
 
-@property(nonatomic, strong) GLKBaseEffect* baseEffect;
-
+@property (nonatomic, strong) GLKBaseEffect* baseEffect;
 @end
 
 @implementation BasicViewController {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7489397422E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7489397322E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.m */; };
+		748FC32D22E9F58E004E56C9 /* ATextureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748FC32C22E9F58E004E56C9 /* ATextureViewController.m */; };
 		74EAC2AE22E8927F000D379A /* AGLKView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EAC2AA22E8927E000D379A /* AGLKView.m */; };
 		74EAC2AF22E8927F000D379A /* AGLKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EAC2AD22E8927F000D379A /* AGLKViewController.m */; };
 		74EAC2B322E89863000D379A /* AGLKContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EAC2B222E89863000D379A /* AGLKContext.m */; };
@@ -44,6 +45,8 @@
 /* Begin PBXFileReference section */
 		7489397222E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKVertexAttributeArrayBuffer.h; sourceTree = "<group>"; };
 		7489397322E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKVertexAttributeArrayBuffer.m; sourceTree = "<group>"; };
+		748FC32B22E9F58E004E56C9 /* ATextureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATextureViewController.h; sourceTree = "<group>"; };
+		748FC32C22E9F58E004E56C9 /* ATextureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATextureViewController.m; sourceTree = "<group>"; };
 		74EAC2AA22E8927E000D379A /* AGLKView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLKView.m; sourceTree = "<group>"; };
 		74EAC2AB22E8927F000D379A /* AGLKView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLKView.h; sourceTree = "<group>"; };
 		74EAC2AC22E8927F000D379A /* AGLKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLKViewController.h; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 				74EAC2AA22E8927E000D379A /* AGLKView.m */,
 				74EAC2AC22E8927F000D379A /* AGLKViewController.h */,
 				74EAC2AD22E8927F000D379A /* AGLKViewController.m */,
+				748FC32B22E9F58E004E56C9 /* ATextureViewController.h */,
+				748FC32C22E9F58E004E56C9 /* ATextureViewController.m */,
 				74EAC2B122E89863000D379A /* AGLKContext.h */,
 				74EAC2B222E89863000D379A /* AGLKContext.m */,
 				7489397222E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.h */,
@@ -311,6 +316,7 @@
 				74EAC2B322E89863000D379A /* AGLKContext.m in Sources */,
 				74FDC19222E74B2000E3D6EF /* AppDelegate.m in Sources */,
 				74FDC1A322E74B2100E3D6EF /* main.m in Sources */,
+				748FC32D22E9F58E004E56C9 /* ATextureViewController.m in Sources */,
 				74FDC19522E74B2000E3D6EF /* SceneDelegate.m in Sources */,
 				74EAC2AF22E8927F000D379A /* AGLKViewController.m in Sources */,
 			);

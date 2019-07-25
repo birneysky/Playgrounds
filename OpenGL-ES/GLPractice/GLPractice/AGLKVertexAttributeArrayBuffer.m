@@ -29,8 +29,10 @@
     if (self = [super init]) {
         _stride = stride;
         _bufferSizeBytes = stride * count;
-        glGenBuffers(1, &_glName); /// 1 生成buffer id
-        glBindBuffer(GL_ARRAY_BUFFER, _glName); /// 2 绑定buffer
+        /// 1 生成buffer id
+        glGenBuffers(1, &_glName);
+         /// 2 绑定buffer
+        glBindBuffer(GL_ARRAY_BUFFER, _glName);
         /// 3 初始化buffer内容
         glBufferData(GL_ARRAY_BUFFER,
                      _bufferSizeBytes,
@@ -42,22 +44,23 @@
 
 - (void)prepareToDrawWithAttrib:(GLKVertexAttrib)attrib
             numberOfCoordinates:(GLint)count
-                attributeOffset:(const GLvoid*)offset
+                attributeOffset:(GLsizeiptr)offset
                    shouldEnable:(BOOL)enable {
     NSParameterAssert(count > 0 && count < 4);
     NSAssert(0 != _glName, @"invalid glname");
     
     if (enable) {
-        glEnableVertexAttribArray(attrib); /// 4
+        /// 4 启动顶点缓存渲染操作
+        glEnableVertexAttribArray(attrib);
     }
     
-    /// 5 
-    glVertexAttribPointer(attrib,
-                          count,
-                          GL_FLOAT,
-                          GL_FALSE,
-                          _stride,
-                          offset);
+    /// 5  告诉 OPENGL 顶点数据在哪里，以及怎么解析每个顶点保存的数据
+    glVertexAttribPointer(attrib,/// 每个顶点数据的类型
+                          count, /// 每个顶点数据的分量个数
+                          GL_FLOAT, /// 每个顶点数据分量的类型
+                          GL_FALSE, /// 小数点固定数据是否可以被改变
+                          _stride, /// 每个顶点数据的字节长度
+                          NULL + offset);
 }
 
 - (void)drawArrayWithMode:(GLenum)mode
@@ -65,12 +68,15 @@
          numberOfVertices:(GLsizei)count {
     NSAssert(self.bufferSizeBytes >= (first + count) * self.stride,
              @"attempt to draw more vertex data than available");
-    
-    glDrawArrays(mode, first, count);
+    /// 6 执行绘图，
+    glDrawArrays(mode, /// 告诉GPU 怎么处理在绑定的顶点缓存内的顶点数据
+                 first, /// 首个顶点的位置
+                 count); /// 需要渲染的顶点数量
 }
 
 - (void)dealloc {
     if (0 != _glName) {
+        /// 7 删除顶点缓存
         glDeleteBuffers(1, &_glName);
         _glName = 0;
     }

@@ -27,7 +27,7 @@ static const SceneVertex vertices[] = {
 @property (nonatomic, strong) CADisplayLink* displayLink;
 @property (nonatomic, assign) NSInteger preferredFramesPerSecond;
 @property (nonatomic, assign, getter=isPaused) BOOL paused;
-@property(nonatomic, strong) GLKBaseEffect* baseEffect;
+@property (nonatomic, strong) GLKBaseEffect* baseEffect;
 @end
 
 @implementation AGLKViewController {

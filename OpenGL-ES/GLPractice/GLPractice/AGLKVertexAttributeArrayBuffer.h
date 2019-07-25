@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)prepareToDrawWithAttrib:(GLKVertexAttrib)attrib
             numberOfCoordinates:(GLint)count
-                attributeOffset:(const GLvoid*)offset /// 起始指针
+                attributeOffset:(GLsizeiptr)offset /// 起始指针
                    shouldEnable:(BOOL)enable;
 
 - (void)drawArrayWithMode:(GLenum)mode
