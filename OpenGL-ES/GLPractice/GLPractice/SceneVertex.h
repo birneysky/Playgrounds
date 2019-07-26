@@ -12,12 +12,12 @@
 
 typedef struct {
     GLKVector3 postionCoords; /// x,y,z
-} SceneVertex;
+} Vertex;
 
 
 typedef struct {
     GLKVector3 postionCoords;
     GLKVector2 textureCoords;
-} Vertex;
+} TextureVertex;
 
 #endif /* SceneVertice_h */

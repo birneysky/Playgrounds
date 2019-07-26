@@ -29,7 +29,7 @@
                  Y -1
  */
 
-static const SceneVertex vertices[] = {
+static const Vertex vertices[] = {
     {-0.5f, -0.5f, 0.0}, /// 左下角
     {0.5f, -0.5f, 0.0}, /// 右下角
     {-0.5f, 0.5f, 0.0}  /// 左上角
@@ -93,7 +93,7 @@ static const SceneVertex vertices[] = {
                           3,  /// 每个顶点有三个分量
                           GL_FLOAT,/// 每个分量是浮点类型的数
                           GL_FALSE, /// 小数点固定数据是否可以被改变
-                          sizeof(SceneVertex), ///每个顶点的字节数
+                          sizeof(Vertex), ///每个顶点的字节数
                           nil); /// nil 表示从绑定的顶点缓存的开始位置访问顶点数据
     
     /// 执行绘图

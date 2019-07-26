@@ -1,12 +1,12 @@
 //
-//  ATextureViewController.m
+//  ATexture2ViewController.m
 //  GLPractice
 //
-//  Created by birneysky on 2019/7/25.
+//  Created by birney on 2019/7/26.
 //  Copyright © 2019 Grocery. All rights reserved.
 //
 
-#import "ATextureViewController.h"
+#import "ATexture2ViewController.h"
 #import "SceneVertex.h"
 #import "AGLKContext.h"
 #import "AGLKVertexAttributeArrayBuffer.h"
@@ -44,27 +44,43 @@ T  |                                                             ● (1,1)
   (0,0)                                                         (1,0)
  */
 
-static const TextureVertex vertices[]  = {
+static  TextureVertex vertices[]  = {
     {{-0.5f, -0.5f, 0.0f},{0.0f, 0.0f}},
     {{0.5f, -0.5f, 0.0f},{1.0f, 0.0f}},
     {{-0.5f, 0.5f, 0.0f},{0.0f, 1.0f}}
 };
 
-@interface ATextureViewController ()
+
+static const TextureVertex defaultVertices[] = {
+   {{-0.5f, -0.5f, 0.0f}, {0.0f, 0.0f}},
+   {{ 0.5f, -0.5f, 0.0f}, {1.0f, 0.0f}},
+   {{-0.5f,  0.5f, 0.0f}, {0.0f, 1.0f}},
+};
+
+static GLKVector3 movementVectors[3] = {
+   {-0.02f,  -0.01f, 0.0f},
+   {0.01f,  -0.005f, 0.0f},
+   {-0.01f,   0.01f, 0.0f},
+};
+
+@interface ATexture2ViewController ()
 
 @property (nonatomic, strong) GLKBaseEffect* baseEffect;
 @property (nonatomic, strong) AGLKVertexAttributeArrayBuffer* vertexBuffer;
+@property (nonatomic, assign) BOOL shouldAnimate;
+@property (nonatomic, assign) float coordinateOffset;
 @end
 
-@implementation ATextureViewController
+@implementation ATexture2ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    // Do any additional setup after loading the view.
     GLKView* view = (GLKView*)self.view;
     NSAssert([view isKindOfClass:GLKView.class],
              @"view controller's view is not a GLKView");
     
+    self.shouldAnimate = YES;
     view.context = [[AGLKContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
     
     [AGLKContext setCurrentContext:view.context];
@@ -81,29 +97,32 @@ static const TextureVertex vertices[]  = {
                                                              1.0f); /// alpha
     
     self.vertexBuffer =
-        [[AGLKVertexAttributeArrayBuffer alloc]
-         initWithAttributeStride:sizeof(TextureVertex)
-                numberOfVertices:sizeof(vertices)/sizeof(TextureVertex)
-                            data:vertices
-                           usage:GL_STATIC_DRAW];
+    [[AGLKVertexAttributeArrayBuffer alloc]
+     initWithAttributeStride:sizeof(TextureVertex)
+     numberOfVertices:sizeof(vertices)/sizeof(TextureVertex)
+     data:vertices
+     usage:GL_STATIC_DRAW];
     
     
-    CGImageRef imgRef =  [UIImage imageNamed:@"leaves"].CGImage;
+    CGImageRef imgRef =  [UIImage imageNamed:@"grid"].CGImage;
     
     GLKTextureInfo* textureInfo =
-        [GLKTextureLoader textureWithCGImage:imgRef
-                                     options:nil
-                                       error:nil];
+    [GLKTextureLoader textureWithCGImage:imgRef
+                                 options:nil
+                                   error:nil];
     
     self.baseEffect.texture2d0.name = textureInfo.name;
     self.baseEffect.texture2d0.target = textureInfo.target;
+
+}
+
+- (void)update {
     
 }
 
 - (void)dealloc {
     [AGLKContext setCurrentContext:nil];
 }
-
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
     [self.baseEffect prepareToDraw];
@@ -124,5 +143,41 @@ static const TextureVertex vertices[]  = {
                         startVertexIndex:0
                         numberOfVertices:3];
 }
+
+#pragma mark - Helper
+- (void)updateAnimatedVertexPositions {
+    if (self.shouldAnimate) {
+        for (int i = 0; i < sizeof(vertices) / sizeof(TextureVertex); i++) {
+            vertices[i].postionCoords.x += movementVectors[i].x;
+            if (vertices[i].postionCoords.x >= 1.0f ||
+                vertices[i].postionCoords.x <= -1.0f) {
+                vertices[i].postionCoords.x -= movementVectors[i].x;
+            }
+            
+            vertices[i].postionCoords.y += movementVectors[i].y;
+            if (vertices[i].postionCoords.y >= 1.0f ||
+                vertices[i].postionCoords.y <= -1.0f) {
+                vertices[i].postionCoords.y -= movementVectors[i].y;
+            }
+            
+            vertices[i].postionCoords.z += movementVectors[i].z;
+            if (vertices[i].postionCoords.z >= 1.0f &&
+                vertices[i].postionCoords.z <= -1.0f) {
+                vertices[i].postionCoords.z -= movementVectors[i].z;
+            }
+        }
+    } else {
+        for (int i = 0; i < sizeof(vertices) / sizeof(TextureVertex); i++) {
+            vertices[i].postionCoords.x = defaultVertices[i].postionCoords.x;
+            vertices[i].postionCoords.y = defaultVertices[i].postionCoords.y;
+            vertices[i].postionCoords.z = defaultVertices[i].postionCoords.z;
+        }
+    }
+    
+    for (int i = 0; i < sizeof(vertices) / sizeof(TextureVertex); i++) {
+        vertices[i].textureCoords.s = defaultVertices[i].textureCoords.s + self.coordinateOffset;
+    }
+}
+
 
 @end

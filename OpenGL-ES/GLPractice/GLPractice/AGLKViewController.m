@@ -13,7 +13,7 @@
 
 const NSInteger kAGLKDefaultFramesPerSecond = 30;
 
-static const SceneVertex vertices[] = {
+static const Vertex vertices[] = {
     {-0.5f, -0.5f, 0.0},
     {0.5f, -0.5f, 0.0},
     {-0.5f, 0.5f, 0.0},
@@ -130,13 +130,13 @@ static const SceneVertex vertices[] = {
                           3,  /// 每个顶点有三个分量
                           GL_FLOAT,/// 每个分量是浮点类型的数
                           GL_FALSE, /// 小数点固定数据是否可以被改变
-                          sizeof(SceneVertex), ///每个顶点的字节数
+                          sizeof(Vertex), ///每个顶点的字节数
                           nil); /// nil 表示从绑定的顶点缓存的开始位置访问顶点数据
     
     /// 执行绘图
     glDrawArrays(GL_TRIANGLES, /// 告诉GPU怎么处理绑定的顶点缓存内的顶点数据
                  0, /// 第一个顶点的位置
-                 sizeof(vertices)/sizeof(SceneVertex)); /// 需要渲染的顶点数量
+                 sizeof(vertices)/sizeof(Vertex)); /// 需要渲染的顶点数量
 }
 
 /*
