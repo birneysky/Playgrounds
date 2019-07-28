@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7463889322ECA4EE00D44596 /* ATexture2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7463889122ECA4EE00D44596 /* ATexture2ViewController.m */; };
+		7463889622ECA5CA00D44596 /* AGLKTextureInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7463889522ECA5CA00D44596 /* AGLKTextureInfo.m */; };
+		7463889922ED9C0B00D44596 /* AGLKTextureInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7463889822ED9C0B00D44596 /* AGLKTextureInfoViewController.m */; };
 		7489397422E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7489397322E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.m */; };
 		748FC32D22E9F58E004E56C9 /* ATextureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748FC32C22E9F58E004E56C9 /* ATextureViewController.m */; };
 		74EAC2AE22E8927F000D379A /* AGLKView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EAC2AA22E8927E000D379A /* AGLKView.m */; };
@@ -23,7 +26,6 @@
 		74FDC1A322E74B2100E3D6EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC1A222E74B2100E3D6EF /* main.m */; };
 		74FDC1AD22E74B2100E3D6EF /* GLPracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC1AC22E74B2100E3D6EF /* GLPracticeTests.m */; };
 		74FDC1B822E74B2100E3D6EF /* GLPracticeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FDC1B722E74B2100E3D6EF /* GLPracticeUITests.m */; };
-		B26667C122EB05A40057262F /* ATexture2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B26667C022EB05A40057262F /* ATexture2ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7463889122ECA4EE00D44596 /* ATexture2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATexture2ViewController.m; sourceTree = "<group>"; };
+		7463889222ECA4EE00D44596 /* ATexture2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATexture2ViewController.h; sourceTree = "<group>"; };
+		7463889422ECA5CA00D44596 /* AGLKTextureInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKTextureInfo.h; sourceTree = "<group>"; };
+		7463889522ECA5CA00D44596 /* AGLKTextureInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKTextureInfo.m; sourceTree = "<group>"; };
+		7463889722ED9C0B00D44596 /* AGLKTextureInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKTextureInfoViewController.h; sourceTree = "<group>"; };
+		7463889822ED9C0B00D44596 /* AGLKTextureInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKTextureInfoViewController.m; sourceTree = "<group>"; };
 		7489397222E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKVertexAttributeArrayBuffer.h; sourceTree = "<group>"; };
 		7489397322E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKVertexAttributeArrayBuffer.m; sourceTree = "<group>"; };
 		748FC32B22E9F58E004E56C9 /* ATextureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATextureViewController.h; sourceTree = "<group>"; };
@@ -75,8 +83,6 @@
 		74FDC1B322E74B2100E3D6EF /* GLPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GLPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74FDC1B722E74B2100E3D6EF /* GLPracticeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLPracticeUITests.m; sourceTree = "<group>"; };
 		74FDC1B922E74B2100E3D6EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B26667BF22EB05A40057262F /* ATexture2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ATexture2ViewController.h; path = "../../../../../../../../System/Volumes/Data/Users/birney/source/source_git/Playgrounds/OpenGL-ES/GLPractice/GLPractice/ATexture2ViewController.h"; sourceTree = "<group>"; };
-		B26667C022EB05A40057262F /* ATexture2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ATexture2ViewController.m; path = "../../../../../../../../System/Volumes/Data/Users/birney/source/source_git/Playgrounds/OpenGL-ES/GLPractice/GLPractice/ATexture2ViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,8 +158,12 @@
 				74EAC2AD22E8927F000D379A /* AGLKViewController.m */,
 				748FC32B22E9F58E004E56C9 /* ATextureViewController.h */,
 				748FC32C22E9F58E004E56C9 /* ATextureViewController.m */,
-				B26667BF22EB05A40057262F /* ATexture2ViewController.h */,
-				B26667C022EB05A40057262F /* ATexture2ViewController.m */,
+				7463889422ECA5CA00D44596 /* AGLKTextureInfo.h */,
+				7463889522ECA5CA00D44596 /* AGLKTextureInfo.m */,
+				7463889222ECA4EE00D44596 /* ATexture2ViewController.h */,
+				7463889122ECA4EE00D44596 /* ATexture2ViewController.m */,
+				7463889722ED9C0B00D44596 /* AGLKTextureInfoViewController.h */,
+				7463889822ED9C0B00D44596 /* AGLKTextureInfoViewController.m */,
 				74EAC2B122E89863000D379A /* AGLKContext.h */,
 				74EAC2B222E89863000D379A /* AGLKContext.m */,
 				7489397222E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.h */,
@@ -315,14 +325,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7463889622ECA5CA00D44596 /* AGLKTextureInfo.m in Sources */,
 				74EAC2AE22E8927F000D379A /* AGLKView.m in Sources */,
 				74FDC19822E74B2000E3D6EF /* BasicViewController.m in Sources */,
 				7489397422E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.m in Sources */,
 				74EAC2B322E89863000D379A /* AGLKContext.m in Sources */,
 				74FDC19222E74B2000E3D6EF /* AppDelegate.m in Sources */,
-				B26667C122EB05A40057262F /* ATexture2ViewController.m in Sources */,
+				7463889322ECA4EE00D44596 /* ATexture2ViewController.m in Sources */,
 				74FDC1A322E74B2100E3D6EF /* main.m in Sources */,
 				748FC32D22E9F58E004E56C9 /* ATextureViewController.m in Sources */,
+				7463889922ED9C0B00D44596 /* AGLKTextureInfoViewController.m in Sources */,
 				74FDC19522E74B2000E3D6EF /* SceneDelegate.m in Sources */,
 				74EAC2AF22E8927F000D379A /* AGLKViewController.m in Sources */,
 			);

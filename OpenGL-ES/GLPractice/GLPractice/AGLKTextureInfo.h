@@ -7,10 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <GLKit/GLKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AGLKTextureInfo : NSObject
+
+@property (nonatomic, readonly) GLuint name;
+@property (nonatomic, readonly) GLenum target;
+@property (nonatomic, readonly) GLuint width;
+@property (nonatomic, readonly) GLuint height;
+
++ (instancetype)textureWithCGImage:(CGImageRef)cgImage
+                           options:(NSDictionary*)options
+                             error:(NSError*)outErrors;
 
 @end
 
