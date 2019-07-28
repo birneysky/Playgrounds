@@ -63,11 +63,34 @@ static GLKVector3 movementVectors[3] = {
    {-0.01f,   0.01f, 0.0f},
 };
 
+@interface GLKEffectPropertyTexture (AGLKAdditions)
+
+- (void)aglkSetParameter:(GLenum)parameterID
+                   value:(GLint)value;
+
+@end
+
+@implementation GLKEffectPropertyTexture (AGLKAdditions)
+
+- (void)aglkSetParameter:(GLenum)parameterID
+                   value:(GLint)value {
+    glBindTexture(self.target, self.name);
+    
+    glTexParameteri(self.target,
+                    parameterID,
+                    value);
+}
+
+
+@end;
+
 @interface ATexture2ViewController ()
 
 @property (nonatomic, strong) GLKBaseEffect* baseEffect;
 @property (nonatomic, strong) AGLKVertexAttributeArrayBuffer* vertexBuffer;
 @property (nonatomic, assign) BOOL shouldAnimate;
+@property (nonatomic, assign) BOOL shouldRepeatTexture;
+@property (nonatomic, assign) BOOL shouldUseLinearFilter;
 @property (nonatomic, assign) float coordinateOffset;
 @end
 
@@ -117,7 +140,12 @@ static GLKVector3 movementVectors[3] = {
 }
 
 - (void)update {
+    [self updateAnimatedVertexPositions];
+    [self updateTextureParameters];
     
+    [self.vertexBuffer reinitWithAttribStride:sizeof(TextureVertex)
+                        numberOfVertices:sizeof(vertices) / sizeof(TextureVertex)
+                                   bytes:vertices];
 }
 
 - (void)dealloc {
@@ -179,5 +207,32 @@ static GLKVector3 movementVectors[3] = {
     }
 }
 
+- (void)updateTextureParameters
+{
+    [self.baseEffect.texture2d0
+     aglkSetParameter:GL_TEXTURE_WRAP_S
+     value:(self.shouldRepeatTexture ?
+            GL_REPEAT : GL_CLAMP_TO_EDGE)];
+    
+    [self.baseEffect.texture2d0
+     aglkSetParameter:GL_TEXTURE_MAG_FILTER
+     value:(self.shouldUseLinearFilter ?
+            GL_LINEAR : GL_NEAREST)];
+}
+
+
+#pragma mark - Target action
+
+- (IBAction)coordinateDidChange:(UISlider *)sender {
+    self.coordinateOffset = sender.value;
+}
+
+- (IBAction)repeatTextureAction:(UISwitch *)sender {
+    self.shouldRepeatTexture = sender.isOn;
+}
+
+- (IBAction)userLinearFilterAction:(UISwitch*)sender {
+    self.shouldUseLinearFilter = sender.isOn;
+}
 
 @end

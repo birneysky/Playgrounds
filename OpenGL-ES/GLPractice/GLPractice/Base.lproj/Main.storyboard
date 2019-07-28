@@ -191,11 +191,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gsF-oT-pGq">
-                                <rect key="frame" x="14" y="598" width="347" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iNP-PF-g6d">
+                                <rect key="frame" x="16" y="524" width="343" height="100"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gsF-oT-pGq">
+                                        <rect key="frame" x="-2" y="0.0" width="347" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="3gM-GZ-sAs"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="coordinateDidChange:" destination="T9R-2j-ahx" eventType="valueChanged" id="hkF-dV-bLx"/>
+                                        </connections>
+                                    </slider>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HRr-dj-KPD">
+                                        <rect key="frame" x="0.0" y="30" width="343" height="70"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QWl-gR-l6q">
+                                                <rect key="frame" x="0.0" y="0.0" width="171.5" height="70"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Repeat Texture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CW-U7-vS7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="39"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ptx-wi-dVS">
+                                                        <rect key="frame" x="0.0" y="39" width="173.5" height="31"/>
+                                                        <color key="thumbTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <connections>
+                                                            <action selector="repeatTextureAction:" destination="T9R-2j-ahx" eventType="valueChanged" id="EGh-G9-hlu"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nqO-mG-O15">
+                                                <rect key="frame" x="171.5" y="0.0" width="171.5" height="70"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Use Linear Filter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vE-Rp-qqu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="39"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BGH-R7-aUW">
+                                                        <rect key="frame" x="0.0" y="39" width="173.5" height="31"/>
+                                                        <color key="thumbTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <connections>
+                                                            <action selector="userLinearFilterAction:" destination="T9R-2j-ahx" eventType="valueChanged" id="Pmd-sg-ylG"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="nqO-mG-O15" firstAttribute="width" secondItem="QWl-gR-l6q" secondAttribute="width" id="LIF-Q9-6WH"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gsF-oT-pGq" secondAttribute="trailing" id="0kv-jH-Zca"/>
+                                    <constraint firstItem="HRr-dj-KPD" firstAttribute="top" secondItem="gsF-oT-pGq" secondAttribute="bottom" id="4Cd-Pr-Rf7"/>
+                                    <constraint firstAttribute="height" constant="100" id="dIm-Z8-K0i"/>
+                                    <constraint firstItem="gsF-oT-pGq" firstAttribute="top" secondItem="iNP-PF-g6d" secondAttribute="top" id="o9a-e6-uub"/>
+                                    <constraint firstItem="gsF-oT-pGq" firstAttribute="leading" secondItem="iNP-PF-g6d" secondAttribute="leading" id="yat-MP-94w"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iNP-PF-g6d" secondAttribute="trailing" constant="16" id="7ur-j3-kfK"/>
+                            <constraint firstItem="iNP-PF-g6d" firstAttribute="leading" secondItem="qoi-dx-aqC" secondAttribute="leading" constant="16" id="d1I-Jh-p8c"/>
+                            <constraint firstAttribute="bottom" secondItem="iNP-PF-g6d" secondAttribute="bottom" constant="43" id="rj5-NK-OZN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qoi-dx-aqC"/>
                         <connections>
                             <outlet property="delegate" destination="T9R-2j-ahx" id="w8g-kP-lO6"/>

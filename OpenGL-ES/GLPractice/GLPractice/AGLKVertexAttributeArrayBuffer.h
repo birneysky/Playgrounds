@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) GLuint glName;
 @property (nonatomic, readonly) GLsizeiptr bufferSizeBytes;
-@property (nonatomic, readonly) GLsizei stride; /// 每个顶点的数据长度
+@property (nonatomic, readonly) GLsizeiptr stride; /// 每个顶点的数据长度
 
 
 - (instancetype)initWithAttributeStride:(GLsizei)stride
@@ -23,6 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
                                    data:(const GLvoid*)dataPrt
                                   usage:(GLenum)usage;
 
+- (void)reinitWithAttribStride:(GLsizeiptr)aStride
+              numberOfVertices:(GLsizei)count
+                         bytes:(const GLvoid *)dataPtr;
 
 - (void)prepareToDrawWithAttrib:(GLKVertexAttrib)attrib
             numberOfCoordinates:(GLint)count

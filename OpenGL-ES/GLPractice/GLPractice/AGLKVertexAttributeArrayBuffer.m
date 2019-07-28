@@ -12,7 +12,7 @@
 
 @property (nonatomic, assign) GLuint glName;
 @property (nonatomic, assign) GLsizeiptr bufferSizeBytes;
-@property (nonatomic, assign) GLsizei stride;
+@property (nonatomic, assign) GLsizeiptr stride;
 
 @end
 
@@ -40,6 +40,26 @@
                      usage);
     }
     return self;
+}
+
+- (void)reinitWithAttribStride:(GLsizeiptr)aStride
+              numberOfVertices:(GLsizei)count
+                         bytes:(const GLvoid *)dataPtr {
+    NSParameterAssert(0 < aStride);
+    NSParameterAssert(0 < count);
+    NSParameterAssert(NULL != dataPtr);
+    NSAssert(0 != _glName, @"Invalid name");
+    
+    self.stride = aStride;
+    self.bufferSizeBytes = aStride * count;
+    
+    glBindBuffer(GL_ARRAY_BUFFER,  // STEP 2
+                 _glName);
+    glBufferData(                  // STEP 3
+                 GL_ARRAY_BUFFER,  // Initialize buffer contents
+                 _bufferSizeBytes,  // Number of bytes to copy
+                 dataPtr,          // Address of bytes to copy
+                 GL_DYNAMIC_DRAW);
 }
 
 - (void)prepareToDrawWithAttrib:(GLKVertexAttrib)attrib
