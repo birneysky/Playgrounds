@@ -55,8 +55,7 @@
     
     glBindBuffer(GL_ARRAY_BUFFER,  // STEP 2
                  _glName);
-    glBufferData(                  // STEP 3
-                 GL_ARRAY_BUFFER,  // Initialize buffer contents
+    glBufferData(GL_ARRAY_BUFFER,  // Initialize buffer contents
                  _bufferSizeBytes,  // Number of bytes to copy
                  dataPtr,          // Address of bytes to copy
                  GL_DYNAMIC_DRAW);

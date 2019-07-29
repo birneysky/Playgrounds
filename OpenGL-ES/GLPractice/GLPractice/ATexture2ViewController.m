@@ -103,7 +103,9 @@ static GLKVector3 movementVectors[3] = {
     NSAssert([view isKindOfClass:GLKView.class],
              @"view controller's view is not a GLKView");
     
+    self.preferredFramesPerSecond = 60;
     self.shouldAnimate = YES;
+    self.shouldRepeatTexture = YES;
     view.context = [[AGLKContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
     
     [AGLKContext setCurrentContext:view.context];
@@ -140,7 +142,7 @@ static GLKVector3 movementVectors[3] = {
 }
 
 - (void)update {
-    [self updateAnimatedVertexPositions];
+    [self updateAnimatedVertexPositions2];
     [self updateTextureParameters];
     
     [self.vertexBuffer reinitWithAttribStride:sizeof(TextureVertex)
@@ -204,6 +206,54 @@ static GLKVector3 movementVectors[3] = {
     
     for (int i = 0; i < sizeof(vertices) / sizeof(TextureVertex); i++) {
         vertices[i].textureCoords.s = defaultVertices[i].textureCoords.s + self.coordinateOffset;
+    }
+    
+    for (int i = 0; i < 1; i++) {
+        NSLog(@"i:%d x = %f, y= %f, z = %f",i,vertices[i].postionCoords.x, vertices[i].postionCoords.y,vertices[i].postionCoords.z);
+    }
+}
+
+
+
+- (void)updateAnimatedVertexPositions2 {
+    if (self.shouldAnimate) {
+        //// 让 x y z 的值在[-1,1]区间内滑动
+        for (int i = 0; i < sizeof(vertices) / sizeof(TextureVertex); i++) {
+            vertices[i].postionCoords.x += movementVectors[i].x;
+            if  (vertices[i].postionCoords.x >= 1.0f ||
+                vertices[i].postionCoords.x <= -1.0f) {
+                vertices[i].postionCoords.x -= movementVectors[i].x;
+                movementVectors[i].x = -movementVectors[i].x;
+            }
+            
+            vertices[i].postionCoords.y += movementVectors[i].y;
+            if (vertices[i].postionCoords.y >= 1.0f ||
+                vertices[i].postionCoords.y <= -1.0f) {
+                vertices[i].postionCoords.y -= movementVectors[i].y;
+                movementVectors[i].y = -movementVectors[i].y;
+            }
+        
+            vertices[i].postionCoords.z += movementVectors[i].z;
+            if (vertices[i].postionCoords.z >= 1.0f &&
+                vertices[i].postionCoords.z <= -1.0f) {
+                vertices[i].postionCoords.z -= movementVectors[i].z;
+                movementVectors[i].z = -movementVectors[i].z;
+            }
+        }
+    } else {
+        for (int i = 0; i < sizeof(vertices) / sizeof(TextureVertex); i++) {
+            vertices[i].postionCoords.x = defaultVertices[i].postionCoords.x;
+            vertices[i].postionCoords.y = defaultVertices[i].postionCoords.y;
+            vertices[i].postionCoords.z = defaultVertices[i].postionCoords.z;
+        }
+    }
+    
+    for (int i = 0; i < sizeof(vertices) / sizeof(TextureVertex); i++) {
+        vertices[i].textureCoords.s = defaultVertices[i].textureCoords.s + self.coordinateOffset;
+    }
+    
+    for (int i = 0; i < 3; i++) {
+        NSLog(@"i:%d x = %f, y= %f, z = %f",i,vertices[i].postionCoords.x, vertices[i].postionCoords.y,vertices[i].postionCoords.z);
     }
 }
 
