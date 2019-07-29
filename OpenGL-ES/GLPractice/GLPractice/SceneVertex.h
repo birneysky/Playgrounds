@@ -16,7 +16,7 @@ typedef struct {
 
 
 typedef struct {
-    GLKVector3 postionCoords;
+    GLKVector3 positionCoords;
     GLKVector2 textureCoords;
 } TextureVertex;
 

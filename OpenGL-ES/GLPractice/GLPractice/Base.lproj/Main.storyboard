@@ -119,6 +119,26 @@
                                             <segue destination="T9R-2j-ahx" kind="show" id="czc-fr-Zd7"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="lrI-sn-uDo" style="IBUITableViewCellStyleDefault" id="lgI-TM-Csh">
+                                        <rect key="frame" x="0.0" y="248" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lgI-TM-Csh" id="NMG-zY-2hM">
+                                            <rect key="frame" x="0.0" y="0.0" width="347.5" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Texture Blend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lrI-sn-uDo">
+                                                    <rect key="frame" x="16" y="0.0" width="323.5" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="67S-HS-t25" kind="show" id="RkW-UD-Vqu"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -147,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qxb-4b-dL4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="724" y="-627"/>
+            <point key="canvasLocation" x="724" y="-733"/>
         </scene>
         <!--AGLKView-->
         <scene sceneID="Ype-Hy-FsW">
@@ -163,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="umV-Li-AFB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1550" y="-636"/>
+            <point key="canvasLocation" x="1550" y="-734"/>
         </scene>
         <!--Texture-->
         <scene sceneID="9k6-OM-bHJ">
@@ -181,7 +201,7 @@
                 </glkViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wPO-NV-Bfy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1550" y="63"/>
+            <point key="canvasLocation" x="2481" y="-734"/>
         </scene>
         <!--Texture2-->
         <scene sceneID="TLh-Np-cl9">
@@ -271,7 +291,7 @@
                 </glkViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4u-Hn-xk6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="724" y="748.87556221889065"/>
+            <point key="canvasLocation" x="724" y="895"/>
         </scene>
         <!--AGLKTextureInfo-->
         <scene sceneID="Zcx-G6-yL8">
@@ -289,7 +309,25 @@
                 </glkViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZr-vN-hwx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1550" y="749"/>
+            <point key="canvasLocation" x="1657" y="895"/>
+        </scene>
+        <!--GLKit View Controller-->
+        <scene sceneID="gfx-j7-yfD">
+            <objects>
+                <glkViewController preferredFramesPerSecond="30" id="67S-HS-t25" customClass="ATextureBlendViewController" sceneMemberID="viewController">
+                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" id="cXF-jg-4Ph">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Vqg-pE-6f1"/>
+                        <connections>
+                            <outlet property="delegate" destination="67S-HS-t25" id="bMP-nT-dTG"/>
+                        </connections>
+                    </glkView>
+                    <navigationItem key="navigationItem" id="INq-Vu-XyB"/>
+                </glkViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sak-by-W10" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2481" y="895"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4RU-6g-LRF">

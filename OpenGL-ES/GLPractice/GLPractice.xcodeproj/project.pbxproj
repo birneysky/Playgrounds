@@ -10,6 +10,7 @@
 		7463889322ECA4EE00D44596 /* ATexture2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7463889122ECA4EE00D44596 /* ATexture2ViewController.m */; };
 		7463889622ECA5CA00D44596 /* AGLKTextureInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7463889522ECA5CA00D44596 /* AGLKTextureInfo.m */; };
 		7463889922ED9C0B00D44596 /* AGLKTextureInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7463889822ED9C0B00D44596 /* AGLKTextureInfoViewController.m */; };
+		746388AE22EF3DB000D44596 /* ATextureBlendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746388AD22EF3DB000D44596 /* ATextureBlendViewController.m */; };
 		7489397422E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7489397322E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.m */; };
 		748FC32D22E9F58E004E56C9 /* ATextureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748FC32C22E9F58E004E56C9 /* ATextureViewController.m */; };
 		74EAC2AE22E8927F000D379A /* AGLKView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EAC2AA22E8927E000D379A /* AGLKView.m */; };
@@ -52,6 +53,8 @@
 		7463889522ECA5CA00D44596 /* AGLKTextureInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKTextureInfo.m; sourceTree = "<group>"; };
 		7463889722ED9C0B00D44596 /* AGLKTextureInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKTextureInfoViewController.h; sourceTree = "<group>"; };
 		7463889822ED9C0B00D44596 /* AGLKTextureInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKTextureInfoViewController.m; sourceTree = "<group>"; };
+		746388AC22EF3DB000D44596 /* ATextureBlendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATextureBlendViewController.h; sourceTree = "<group>"; };
+		746388AD22EF3DB000D44596 /* ATextureBlendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATextureBlendViewController.m; sourceTree = "<group>"; };
 		7489397222E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKVertexAttributeArrayBuffer.h; sourceTree = "<group>"; };
 		7489397322E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGLKVertexAttributeArrayBuffer.m; sourceTree = "<group>"; };
 		748FC32B22E9F58E004E56C9 /* ATextureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATextureViewController.h; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 				7463889522ECA5CA00D44596 /* AGLKTextureInfo.m */,
 				7463889222ECA4EE00D44596 /* ATexture2ViewController.h */,
 				7463889122ECA4EE00D44596 /* ATexture2ViewController.m */,
+				746388AC22EF3DB000D44596 /* ATextureBlendViewController.h */,
+				746388AD22EF3DB000D44596 /* ATextureBlendViewController.m */,
 				7463889722ED9C0B00D44596 /* AGLKTextureInfoViewController.h */,
 				7463889822ED9C0B00D44596 /* AGLKTextureInfoViewController.m */,
 				74EAC2B122E89863000D379A /* AGLKContext.h */,
@@ -329,6 +334,7 @@
 				74EAC2AE22E8927F000D379A /* AGLKView.m in Sources */,
 				74FDC19822E74B2000E3D6EF /* BasicViewController.m in Sources */,
 				7489397422E89F4200CF21F9 /* AGLKVertexAttributeArrayBuffer.m in Sources */,
+				746388AE22EF3DB000D44596 /* ATextureBlendViewController.m in Sources */,
 				74EAC2B322E89863000D379A /* AGLKContext.m in Sources */,
 				74FDC19222E74B2000E3D6EF /* AppDelegate.m in Sources */,
 				7463889322ECA4EE00D44596 /* ATexture2ViewController.m in Sources */,

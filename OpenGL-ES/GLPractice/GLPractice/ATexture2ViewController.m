@@ -161,7 +161,7 @@ static GLKVector3 movementVectors[3] = {
     /// offsetof(Vertex, postionCoords) 意思是成员变量postionCoords距离Vertex首地址偏移的字节数
     [self.vertexBuffer prepareToDrawWithAttrib:GLKVertexAttribPosition
                            numberOfCoordinates:3
-                               attributeOffset:offsetof(TextureVertex, postionCoords)
+                               attributeOffset:offsetof(TextureVertex, positionCoords)
                                   shouldEnable:YES];
     
     [self.vertexBuffer prepareToDrawWithAttrib:GLKVertexAttribTexCoord0
@@ -178,29 +178,29 @@ static GLKVector3 movementVectors[3] = {
 - (void)updateAnimatedVertexPositions {
     if (self.shouldAnimate) {
         for (int i = 0; i < sizeof(vertices) / sizeof(TextureVertex); i++) {
-            vertices[i].postionCoords.x += movementVectors[i].x;
-            if (vertices[i].postionCoords.x >= 1.0f ||
-                vertices[i].postionCoords.x <= -1.0f) {
-                vertices[i].postionCoords.x -= movementVectors[i].x;
+            vertices[i].positionCoords.x += movementVectors[i].x;
+            if (vertices[i].positionCoords.x >= 1.0f ||
+                vertices[i].positionCoords.x <= -1.0f) {
+                vertices[i].positionCoords.x -= movementVectors[i].x;
             }
             
-            vertices[i].postionCoords.y += movementVectors[i].y;
-            if (vertices[i].postionCoords.y >= 1.0f ||
-                vertices[i].postionCoords.y <= -1.0f) {
-                vertices[i].postionCoords.y -= movementVectors[i].y;
+            vertices[i].positionCoords.y += movementVectors[i].y;
+            if (vertices[i].positionCoords.y >= 1.0f ||
+                vertices[i].positionCoords.y <= -1.0f) {
+                vertices[i].positionCoords.y -= movementVectors[i].y;
             }
             
-            vertices[i].postionCoords.z += movementVectors[i].z;
-            if (vertices[i].postionCoords.z >= 1.0f &&
-                vertices[i].postionCoords.z <= -1.0f) {
-                vertices[i].postionCoords.z -= movementVectors[i].z;
+            vertices[i].positionCoords.z += movementVectors[i].z;
+            if (vertices[i].positionCoords.z >= 1.0f &&
+                vertices[i].positionCoords.z <= -1.0f) {
+                vertices[i].positionCoords.z -= movementVectors[i].z;
             }
         }
     } else {
         for (int i = 0; i < sizeof(vertices) / sizeof(TextureVertex); i++) {
-            vertices[i].postionCoords.x = defaultVertices[i].postionCoords.x;
-            vertices[i].postionCoords.y = defaultVertices[i].postionCoords.y;
-            vertices[i].postionCoords.z = defaultVertices[i].postionCoords.z;
+            vertices[i].positionCoords.x = defaultVertices[i].positionCoords.x;
+            vertices[i].positionCoords.y = defaultVertices[i].positionCoords.y;
+            vertices[i].positionCoords.z = defaultVertices[i].positionCoords.z;
         }
     }
     
@@ -209,7 +209,7 @@ static GLKVector3 movementVectors[3] = {
     }
     
     for (int i = 0; i < 1; i++) {
-        NSLog(@"i:%d x = %f, y= %f, z = %f",i,vertices[i].postionCoords.x, vertices[i].postionCoords.y,vertices[i].postionCoords.z);
+        NSLog(@"i:%d x = %f, y= %f, z = %f",i,vertices[i].positionCoords.x, vertices[i].positionCoords.y,vertices[i].positionCoords.z);
     }
 }
 
@@ -219,32 +219,32 @@ static GLKVector3 movementVectors[3] = {
     if (self.shouldAnimate) {
         //// 让 x y z 的值在[-1,1]区间内滑动
         for (int i = 0; i < sizeof(vertices) / sizeof(TextureVertex); i++) {
-            vertices[i].postionCoords.x += movementVectors[i].x;
-            if  (vertices[i].postionCoords.x >= 1.0f ||
-                vertices[i].postionCoords.x <= -1.0f) {
-                vertices[i].postionCoords.x -= movementVectors[i].x;
+            vertices[i].positionCoords.x += movementVectors[i].x;
+            if  (vertices[i].positionCoords.x >= 1.0f ||
+                vertices[i].positionCoords.x <= -1.0f) {
+                vertices[i].positionCoords.x -= movementVectors[i].x;
                 movementVectors[i].x = -movementVectors[i].x;
             }
             
-            vertices[i].postionCoords.y += movementVectors[i].y;
-            if (vertices[i].postionCoords.y >= 1.0f ||
-                vertices[i].postionCoords.y <= -1.0f) {
-                vertices[i].postionCoords.y -= movementVectors[i].y;
+            vertices[i].positionCoords.y += movementVectors[i].y;
+            if (vertices[i].positionCoords.y >= 1.0f ||
+                vertices[i].positionCoords.y <= -1.0f) {
+                vertices[i].positionCoords.y -= movementVectors[i].y;
                 movementVectors[i].y = -movementVectors[i].y;
             }
         
-            vertices[i].postionCoords.z += movementVectors[i].z;
-            if (vertices[i].postionCoords.z >= 1.0f &&
-                vertices[i].postionCoords.z <= -1.0f) {
-                vertices[i].postionCoords.z -= movementVectors[i].z;
+            vertices[i].positionCoords.z += movementVectors[i].z;
+            if (vertices[i].positionCoords.z >= 1.0f &&
+                vertices[i].positionCoords.z <= -1.0f) {
+                vertices[i].positionCoords.z -= movementVectors[i].z;
                 movementVectors[i].z = -movementVectors[i].z;
             }
         }
     } else {
         for (int i = 0; i < sizeof(vertices) / sizeof(TextureVertex); i++) {
-            vertices[i].postionCoords.x = defaultVertices[i].postionCoords.x;
-            vertices[i].postionCoords.y = defaultVertices[i].postionCoords.y;
-            vertices[i].postionCoords.z = defaultVertices[i].postionCoords.z;
+            vertices[i].positionCoords.x = defaultVertices[i].positionCoords.x;
+            vertices[i].positionCoords.y = defaultVertices[i].positionCoords.y;
+            vertices[i].positionCoords.z = defaultVertices[i].positionCoords.z;
         }
     }
     
@@ -253,7 +253,7 @@ static GLKVector3 movementVectors[3] = {
     }
     
     for (int i = 0; i < 3; i++) {
-        NSLog(@"i:%d x = %f, y= %f, z = %f",i,vertices[i].postionCoords.x, vertices[i].postionCoords.y,vertices[i].postionCoords.z);
+        NSLog(@"i:%d x = %f, y= %f, z = %f",i,vertices[i].positionCoords.x, vertices[i].positionCoords.y,vertices[i].positionCoords.z);
     }
 }
 

@@ -114,7 +114,7 @@ static const TextureVertex vertices[]  = {
     /// offsetof(Vertex, postionCoords) 意思是成员变量postionCoords距离Vertex首地址偏移的字节数
     [self.vertexBuffer prepareToDrawWithAttrib:GLKVertexAttribPosition
                            numberOfCoordinates:3
-                               attributeOffset:offsetof(TextureVertex, postionCoords)
+                               attributeOffset:offsetof(TextureVertex, positionCoords)
                                   shouldEnable:YES];
     
     [self.vertexBuffer prepareToDrawWithAttrib:GLKVertexAttribTexCoord0
