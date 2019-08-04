@@ -10,7 +10,6 @@
 #import "AGLKVertexAttributeArrayBuffer.h"
 #import "SceneVertex.h"
 #import "AGLKContext.h"
-#import "AGLKTextureInfo.h"
 
 /**
  
@@ -59,8 +58,8 @@ static TextureVertex vertices[] =  {
 
 @property (nonatomic, strong) GLKBaseEffect* baseEffect;
 @property (nonatomic, strong) AGLKVertexAttributeArrayBuffer* vertexBuffer;
-@property (nonatomic, strong) AGLKTextureInfo* textureInfo0;
-@property (nonatomic, strong) AGLKTextureInfo* textureInfo1;
+@property (nonatomic, strong) GLKTextureInfo* textureInfo0;
+@property (nonatomic, strong) GLKTextureInfo* textureInfo1;
 @end
 
 @implementation ATextureBlendViewController
@@ -112,7 +111,7 @@ static TextureVertex vertices[] =  {
     return _vertexBuffer;
 }
 
-- (AGLKTextureInfo*)textureInfo0 {
+- (GLKTextureInfo*)textureInfo0 {
     if (!_textureInfo0) {
         CGImageRef beetleImg = [UIImage imageNamed:@"beetle"].CGImage;
         _textureInfo0 = [GLKTextureLoader textureWithCGImage:beetleImg
@@ -122,11 +121,11 @@ static TextureVertex vertices[] =  {
     return _textureInfo0;
 }
 
-- (AGLKTextureInfo*)textureInfo1 {
+- (GLKTextureInfo*)textureInfo1 {
     if (!_textureInfo1) {
         CGImageRef leaf = [UIImage imageNamed:@"leaf"].CGImage;
-        _textureInfo1 = [AGLKTextureInfo textureWithCGImage:leaf
-                                                     options:@{GLKTextureLoaderOriginBottomLeft:@(YES)}
+        _textureInfo1 = [GLKTextureLoader textureWithCGImage:leaf
+                                                     options:nil//@{GLKTextureLoaderOriginBottomLeft:@(YES)}
                                                        error:nil];
     }
     return _textureInfo1;
