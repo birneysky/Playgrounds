@@ -49,6 +49,7 @@ static const Vertex vertices[] = {
         glDeleteBuffers(1, &vertextBufferId);
         vertextBufferId = 0;
     }
+    
     [EAGLContext setCurrentContext:nil];
 }
 

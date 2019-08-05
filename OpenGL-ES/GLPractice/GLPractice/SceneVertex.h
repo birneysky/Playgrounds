@@ -20,4 +20,16 @@ typedef struct {
     GLKVector2 textureCoords;
 } TextureVertex;
 
+
+/// retrun the length of vector
+GLfloat AVector3Length(const GLKVector3 aVector) ;
+/// return a unit vector with the same direction as aVector
+///
+GLKVector3 AVector3Normalize(const GLKVector3 aVector);
+
+GLKVector3 AVector3CrossProduct(const GLKVector3 aVector, const GLKVector3 bVector);
+
+/// return a unit vector in the same direction as the cross product of aVector and bVector
+GLKVector3 AVector3UnitNormal(const GLKVector3 aVector, const GLKVector3 bVector);
+
 #endif /* SceneVertice_h */

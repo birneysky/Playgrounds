@@ -17,6 +17,8 @@
 		748FC32D22E9F58E004E56C9 /* ATextureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748FC32C22E9F58E004E56C9 /* ATextureViewController.m */; };
 		7498F21F22F72358006DE239 /* ASimpleShaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7498F21E22F72358006DE239 /* ASimpleShaderViewController.m */; };
 		7498F22322F72E55006DE239 /* bug.png in Resources */ = {isa = PBXBuildFile; fileRef = 7498F22222F72E55006DE239 /* bug.png */; };
+		7498F22422F87DCC006DE239 /* SceneVertex.h in Sources */ = {isa = PBXBuildFile; fileRef = 74EAC2B022E89419000D379A /* SceneVertex.h */; };
+		7498F22622F87E92006DE239 /* SceneVertex.m in Sources */ = {isa = PBXBuildFile; fileRef = 7498F22522F87E92006DE239 /* SceneVertex.m */; };
 		74EAC2AE22E8927F000D379A /* AGLKView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EAC2AA22E8927E000D379A /* AGLKView.m */; };
 		74EAC2AF22E8927F000D379A /* AGLKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EAC2AD22E8927F000D379A /* AGLKViewController.m */; };
 		74EAC2B322E89863000D379A /* AGLKContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EAC2B222E89863000D379A /* AGLKContext.m */; };
@@ -68,6 +70,7 @@
 		7498F21D22F72358006DE239 /* ASimpleShaderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASimpleShaderViewController.h; sourceTree = "<group>"; };
 		7498F21E22F72358006DE239 /* ASimpleShaderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASimpleShaderViewController.m; sourceTree = "<group>"; };
 		7498F22222F72E55006DE239 /* bug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bug.png; sourceTree = "<group>"; };
+		7498F22522F87E92006DE239 /* SceneVertex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneVertex.m; sourceTree = "<group>"; };
 		74EAC2AA22E8927E000D379A /* AGLKView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLKView.m; sourceTree = "<group>"; };
 		74EAC2AB22E8927F000D379A /* AGLKView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLKView.h; sourceTree = "<group>"; };
 		74EAC2AC22E8927F000D379A /* AGLKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLKViewController.h; sourceTree = "<group>"; };
@@ -185,6 +188,7 @@
 				74FDC19622E74B2000E3D6EF /* BasicViewController.h */,
 				74FDC19722E74B2000E3D6EF /* BasicViewController.m */,
 				74EAC2B022E89419000D379A /* SceneVertex.h */,
+				7498F22522F87E92006DE239 /* SceneVertex.m */,
 				74EAC2AB22E8927F000D379A /* AGLKView.h */,
 				74EAC2AA22E8927E000D379A /* AGLKView.m */,
 				74EAC2AC22E8927F000D379A /* AGLKViewController.h */,
@@ -376,6 +380,7 @@
 				748FC32D22E9F58E004E56C9 /* ATextureViewController.m in Sources */,
 				7463889922ED9C0B00D44596 /* AGLKTextureInfoViewController.m in Sources */,
 				74FDC19522E74B2000E3D6EF /* SceneDelegate.m in Sources */,
+				7498F22622F87E92006DE239 /* SceneVertex.m in Sources */,
 				74EAC2AF22E8927F000D379A /* AGLKViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7498F22422F87DCC006DE239 /* SceneVertex.h in Sources */,
 				74FDC1AD22E74B2100E3D6EF /* GLPracticeTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,6 +552,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9CVMN4UZK4;
 				INFOPLIST_FILE = GLPractice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -563,6 +570,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9CVMN4UZK4;
 				INFOPLIST_FILE = GLPractice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -580,6 +588,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9CVMN4UZK4;
 				INFOPLIST_FILE = GLPracticeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -598,6 +607,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9CVMN4UZK4;
 				INFOPLIST_FILE = GLPracticeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

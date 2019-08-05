@@ -50,7 +50,7 @@
     // Setup texture0
     CGImageRef imageRef0 =
     [[UIImage imageNamed:@"bug.png"] CGImage];
-    
+    GLfloat a =  FLT_EPSILON;
     GLKTextureInfo *textureInfo0 = [GLKTextureLoader
                                     textureWithCGImage:imageRef0
                                     options:[NSDictionary dictionaryWithObjectsAndKeys:
