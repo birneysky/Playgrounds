@@ -159,6 +159,26 @@
                                             <segue destination="e73-aZ-GHj" kind="show" id="P1c-tQ-tI7"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="6OS-pv-pYf" style="IBUITableViewCellStyleDefault" id="7AX-wv-T5g">
+                                        <rect key="frame" x="0.0" y="336" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7AX-wv-T5g" id="7EU-a9-ibQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="347.5" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Lighting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6OS-pv-pYf">
+                                                    <rect key="frame" x="16" y="0.0" width="323.5" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="scm-gq-KDa" kind="show" id="eNQ-EC-4nG"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -190,6 +210,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJQ-Kg-WJn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1882" y="63"/>
+        </scene>
+        <!--GLKit View Controller-->
+        <scene sceneID="JMD-Ab-aW2">
+            <objects>
+                <glkViewController preferredFramesPerSecond="30" id="scm-gq-KDa" customClass="ALightingViewController" sceneMemberID="viewController">
+                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" id="Y6p-xI-Vg9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mfJ-ch-5Rh"/>
+                        <connections>
+                            <outlet property="delegate" destination="scm-gq-KDa" id="2Em-gc-lEl"/>
+                        </connections>
+                    </glkView>
+                    <navigationItem key="navigationItem" id="ne9-6Z-mGZ"/>
+                </glkViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1az-8A-bnu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2697" y="63"/>
         </scene>
         <!--Basic-->
         <scene sceneID="WZh-O4-XnQ">

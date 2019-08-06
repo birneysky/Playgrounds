@@ -20,13 +20,18 @@ typedef struct {
     GLKVector2 textureCoords;
 } TextureVertex;
 
+typedef struct {
+    GLKVector3 position;
+    GLKVector3 normal;
+} NormalVertex;
 
 /// retrun the length of vector
-GLfloat AVector3Length(const GLKVector3 aVector) ;
+GLfloat AVector3Length(const GLKVector3 aVector);
+
 /// return a unit vector with the same direction as aVector
-///
 GLKVector3 AVector3Normalize(const GLKVector3 aVector);
 
+/// return the cross product aVector X bVector
 GLKVector3 AVector3CrossProduct(const GLKVector3 aVector, const GLKVector3 bVector);
 
 /// return a unit vector in the same direction as the cross product of aVector and bVector

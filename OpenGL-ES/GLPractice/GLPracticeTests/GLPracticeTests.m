@@ -43,7 +43,18 @@
     NSLog(@"input vector a1 {1.0f, 0.0f, 0.0f}");
     NSLog(@"input vector b1 {0.0f, 1.0f, 0.0f}");
     GLKVector3 result1 = AVector3CrossProduct(a1, b1);
+    NSLog(@"output a1 X b1 result1: x=%f,y=%f,z=%f",result1.x,result1.y,result1.z);
+    GLKVector3 result2 = AVector3CrossProduct(b1, a1);
+    NSLog(@"output b1 X a1 result1: x=%f,y=%f,z=%f",result2.x,result2.y,result2.z);
+}
+
+- (void)test_AVector3Normalize {
+    GLKVector3 a1 = {3.0f, 4.0f, 0.0f};
+    NSLog(@"input vector a1 {3.0f, 4.0f, 0.0f}");
+    /// 求单位向量
+    GLKVector3 result1 = AVector3Normalize(a1);
     NSLog(@"output result1: x=%f,y=%f,z=%f",result1.x,result1.y,result1.z);
+    NSLog(@"output result1 length %f",AVector3Length(result1));
 }
 
 - (void)testPerformanceExample {
