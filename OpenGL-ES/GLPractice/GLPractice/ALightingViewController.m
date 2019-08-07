@@ -8,7 +8,7 @@
 
 #import "ALightingViewController.h"
 #import "SceneVertex.h"
-
+#import "AGLKContext.h"
 
 /**
               Y  1
@@ -54,31 +54,76 @@ NormalVertex vertexG = {{ 0.5,  0.5,  -0.5}, {0.0, 0.0, 1.0}};
 NormalVertex vertexH = {{ 0.5,  0.0,  -0.5}, {0.0, 0.0, 1.0}};
 NormalVertex vertexI = {{ 0.5, -0.5,  -0.5}, {0.0, 0.0, 1.0}};
 
-typedef struct {
-    NormalVertex vertices[3];
-} Triangle;
+
 
 @interface ALightingViewController ()
 
 @property (nonatomic, strong) GLKBaseEffect* baseEffect;
+@property (nonatomic, strong) GLKBaseEffect* extraEffect;
 @end
 
+const int NUM_FACES = 8;
 
-@implementation ALightingViewController
+@implementation ALightingViewController {
+    NormalTriangle triangles[NUM_FACES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     GLKView* view = (GLKView*)self.view;
-    view.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
-    [EAGLContext setCurrentContext:view.context];
+    view.context = [[AGLKContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
+    [AGLKContext setCurrentContext:view.context];
+    ((AGLKContext*)view.context).clearColor =
+        GLKVector4Make(0.0f,
+                       0.0f,
+                       0.0f,
+                       1.0f);
     
     self.baseEffect = [[GLKBaseEffect alloc] init];
     self.baseEffect.light0.enabled = GL_TRUE;
-    self.baseEffect.light0.diffuseColor = GLKVector4Make(0.7f, /// red
-                                                         0.7f, /// gree
-                                                         0.7f, /// blue
-                                                         1.0f);/// alpha
-    self.baseEffect.light0.position = GLKVector4Make(1.0f, 1.0f, 0.5f, 0.0f);
+    self.baseEffect.light0.diffuseColor =
+        GLKVector4Make(0.7f, /// red
+                       0.7f, /// green
+                       0.7f, /// blue
+                       1.0f);/// alpha
+    self.baseEffect.light0.position =
+        GLKVector4Make(1.0f, 1.0f, 0.5f, 0.0f);
+    
+    
+    self.extraEffect = [[GLKBaseEffect alloc] init];
+    self.baseEffect.useConstantColor = GL_TRUE;
+    self.baseEffect.constantColor =
+        GLKVector4Make(0.0, /// red
+                       1.0f, /// green
+                       0.0f,
+                       1.0f);
+    
+    GLKMatrix4 modelViewMatrix =
+        GLKMatrix4MakeRotation(GLKMathDegreesToRadians(-60.0f),
+                               1.0f,
+                               0.0f,
+                               0.0f);
+    
+    modelViewMatrix =
+        GLKMatrix4Rotate(modelViewMatrix,
+                         GLKMathDegreesToRadians(-30.0f),
+                         0.0f,
+                         0.0f,
+                         1.0f);
+    
+    modelViewMatrix = GLKMatrix4Translate(modelViewMatrix, 0.0f, 0.0f, 0.25f);
+    
+    self.baseEffect.transform.modelviewMatrix = modelViewMatrix;
+    self.extraEffect.transform.modelviewMatrix = modelViewMatrix;
+    
+    triangles[0] = normalTriangleMake(vertexA, vertexB, vertexD);
+    triangles[1] = normalTriangleMake(vertexB, vertexC, vertexF);
+    triangles[2] = normalTriangleMake(vertexD, vertexB, vertexE);
+    triangles[3] = normalTriangleMake(vertexE, vertexB, vertexF);
+    triangles[4] = normalTriangleMake(vertexD, vertexE, vertexH);
+    triangles[5] = normalTriangleMake(vertexE, vertexF, vertexH);
+    triangles[6] = normalTriangleMake(vertexG, vertexD, vertexH);
+    triangles[7] = normalTriangleMake(vertexH, vertexF, vertexI);
 }
 
 /*

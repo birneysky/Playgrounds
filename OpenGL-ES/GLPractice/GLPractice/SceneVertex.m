@@ -47,7 +47,17 @@ GLKVector3 AVector3CrossProduct(const GLKVector3 aVector, const GLKVector3 bVect
     return result;
 }
 
-/// return a unit vector in the same direction as the cross product of aVector and bVector
+
 GLKVector3 AVector3UnitNormal(const GLKVector3 aVector, const GLKVector3 bVector) {
     return AVector3Normalize(AVector3CrossProduct(aVector, bVector));
+}
+
+NormalTriangle normalTriangleMake(const NormalVertex vertextA,
+                                  const NormalVertex vertextB,
+                                  const NormalVertex vertextC) {
+    NormalTriangle result;
+    result.vertices[0] = vertextA;
+    result.vertices[1] = vertextB;
+    result.vertices[2] = vertextC;
+    return result;
 }
