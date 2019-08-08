@@ -9,6 +9,7 @@
 #import "ALightingViewController.h"
 #import "SceneVertex.h"
 #import "AGLKContext.h"
+#import "AGLKVertexAttributeArrayBuffer.h"
 
 /**
               Y  1
@@ -60,6 +61,7 @@ NormalVertex vertexI = {{ 0.5, -0.5,  -0.5}, {0.0, 0.0, 1.0}};
 
 @property (nonatomic, strong) GLKBaseEffect* baseEffect;
 @property (nonatomic, strong) GLKBaseEffect* extraEffect;
+@property (nonatomic, strong) AGLKVertexAttributeArrayBuffer* vertexBuffer;
 @end
 
 const int NUM_FACES = 8;
@@ -124,8 +126,23 @@ const int NUM_FACES = 8;
     triangles[5] = normalTriangleMake(vertexE, vertexF, vertexH);
     triangles[6] = normalTriangleMake(vertexG, vertexD, vertexH);
     triangles[7] = normalTriangleMake(vertexH, vertexF, vertexI);
+    
+    self.vertexBuffer = [[AGLKVertexAttributeArrayBuffer alloc] initWithAttributeStride:sizeof(NormalVertex) numberOfVertices:sizeof(triangles)/sizeof(NormalVertex) data:triangles usage:GL_DYNAMIC_DRAW];
+    
+    
 }
 
+- (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
+    [self.baseEffect prepareToDraw];
+    
+    [((AGLKContext*)view.context) clear:GL_COLOR_BUFFER_BIT];
+    
+    [self.vertexBuffer prepareToDrawWithAttrib:GLKVertexAttribPosition numberOfCoordinates:3 attributeOffset:offsetof(NormalVertex, position) shouldEnable:YES];
+    [self.vertexBuffer prepareToDrawWithAttrib:GLKVertexAttribNormal numberOfCoordinates:3 attributeOffset:offsetof(NormalVertex, normal) shouldEnable:YES];
+    
+    [self.vertexBuffer drawArrayWithMode:GL_TRIANGLES startVertexIndex:0 numberOfVertices:sizeof(triangles)/sizeof(NormalVertex)];
+    
+}
 /*
 #pragma mark - Navigation
 
