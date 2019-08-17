@@ -11,6 +11,7 @@ import AVFoundation
 import CoreImage
 
 class SampleBufferGenerator {
+    // MARK: - Properties
     fileprivate var pixelBufferPool: CVPixelBufferPool!
     fileprivate var videoFmtDesc: CMVideoFormatDescription!
     fileprivate var capacity: Int
@@ -28,6 +29,7 @@ class SampleBufferGenerator {
         return space
     }()
     
+    // MARK: - Init
     init(width: Int32, height: Int32, capacity: Int) {
         self.capacity = capacity
         self.width = width
@@ -35,6 +37,7 @@ class SampleBufferGenerator {
         setupBuffersPool()
     }
     
+    // MARK: - Helper
     fileprivate func setupBuffersPool() {
         let pixelBufferAttributes = [
                 kCVPixelBufferPixelFormatTypeKey:kCVPixelFormatType_32BGRA,
@@ -74,6 +77,7 @@ class SampleBufferGenerator {
         pixelBuffers.removeAll()
     }
     
+    // MARK: - Api
     func generateSampleBuffer(from inputImage: CIImage, presentationTimeStamp: CMTime) -> CMSampleBuffer? {
         var renderedOutputPixelBuffer: CVPixelBuffer? = nil
         let err = CVPixelBufferPoolCreatePixelBuffer(kCFAllocatorDefault,

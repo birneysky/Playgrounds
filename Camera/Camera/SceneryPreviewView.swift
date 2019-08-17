@@ -10,14 +10,7 @@ import UIKit
 import AVFoundation
 
 @IBDesignable class SceneryPreviewView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -28,6 +21,12 @@ import AVFoundation
         setup()
     }
     
+    public func setBlurOverView(hidden: Bool, animated: Bool) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.overlayView.alpha = hidden ? 0 : 1
+        }) { (_) in
+        }
+    }
     
     fileprivate func setup() {
         self.addSubview(self.overlayView)
@@ -43,11 +42,12 @@ import AVFoundation
         self.overlayView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
     
+    
     var displayLayer: AVSampleBufferDisplayLayer  {
         return self.layer as! AVSampleBufferDisplayLayer
     }
     
-    lazy var overlayView: UIVisualEffectView = {
+    fileprivate lazy var overlayView: UIVisualEffectView = {
         let blurEffect = UIBlurEffect(style: .dark)
         let overlayView = UIVisualEffectView(effect: blurEffect)
         return overlayView

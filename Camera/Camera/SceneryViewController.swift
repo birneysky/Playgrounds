@@ -35,6 +35,11 @@ class SceneryViewController: UIViewController,SceneryCapturerOutputDelegate {
         super.viewDidAppear(animated)
     }
     
+    // MARK: - SceneryCapturerOutputDelegate
+    func focusDidfinish(at point:CGPoint) {
+        self.previewView.setBlurOverView(hidden: true, animated: true)
+    }
+    
     func didOutputSampleBuffer(_ buffer: CMSampleBuffer) {
           let startTime = clock()
         guard let imageBuffer = CMSampleBufferGetImageBuffer(buffer) else {

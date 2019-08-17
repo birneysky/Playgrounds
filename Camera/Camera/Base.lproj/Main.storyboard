@@ -18,18 +18,20 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J8Z-lK-zS6" customClass="SceneryPreviewView" customModule="Camera" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Yl-gw-JnU">
-                                <rect key="frame" x="20" y="792" width="50" height="50"/>
+                                <rect key="frame" x="20" y="798" width="44" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="0MK-v2-iEk"/>
-                                    <constraint firstAttribute="height" constant="50" id="Hoz-FM-qrF"/>
+                                    <constraint firstAttribute="width" constant="44" id="0MK-v2-iEk"/>
+                                    <constraint firstAttribute="height" constant="44" id="Hoz-FM-qrF"/>
                                 </constraints>
+                                <inset key="imageEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
                                 <state key="normal" image="switch_camera"/>
+                                <state key="highlighted" image="switch_camera_highlight"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="J8Z-lK-zS6" secondAttribute="trailing" id="8h2-7J-iVq"/>
                             <constraint firstItem="J8Z-lK-zS6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9Um-CR-zhB"/>
@@ -51,5 +53,6 @@
     </scenes>
     <resources>
         <image name="switch_camera" width="50" height="50"/>
+        <image name="switch_camera_highlight" width="50" height="50"/>
     </resources>
 </document>

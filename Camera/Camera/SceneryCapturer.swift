@@ -6,10 +6,13 @@
 //  Copyright © 2019 Grocery. All rights reserved.
 //
 
+import Foundation
 import AVFoundation
 
 protocol SceneryCapturerOutputDelegate: class {
     func didOutputSampleBuffer(_ buffer: CMSampleBuffer)
+    
+    func focusDidfinish(at point:CGPoint)
 }
 
 final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
@@ -17,6 +20,9 @@ final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDele
     // MARK: - Properties
     public weak var delegate: SceneryCapturerOutputDelegate?
     fileprivate var videoConnection: AVCaptureConnection!
+    fileprivate var activeVideoInput: AVCaptureDeviceInput!
+    fileprivate let focusKeyPath = "adjustingFocus"
+    
     fileprivate lazy var videoDevice: AVCaptureDevice = {
         guard let device = AVCaptureDevice.default(for: .video) else {
             fatalError("video device is nil")
@@ -34,6 +40,21 @@ final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDele
         return session
     }()
     
+    fileprivate var cameraCount: Int {
+        return AVCaptureDevice.devices(for: .video).count
+    }
+    
+    fileprivate var activeCamera: AVCaptureDevice  {
+        return self.activeVideoInput.device
+    }
+    
+    fileprivate var inactiveCamera: AVCaptureDevice? {
+        if activeCamera.position == .back {
+            return videoDevice(in: .front)
+        } else {
+            return videoDevice(in: .back)
+        }
+    }
     
     // MARK: - Init
     public override init() {
@@ -46,6 +67,7 @@ final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDele
             weak var weakSelf = self;
             self.sessionQueue.async {
                 weakSelf?.captureSession.startRunning()
+                weakSelf?.focus(at: .init(x: 0.5, y: 0.5))
             }
         }
     }
@@ -59,7 +81,32 @@ final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDele
         }
     }
     
+    public func swithCamera() -> Bool {
+        return true
+    }
+    
     public func focus(at point:CGPoint) {
+        let camera = self.activeCamera
+        guard !camera.isAdjustingFocus else {
+            return
+        }
+        
+        if  camera.isFocusPointOfInterestSupported,
+            camera.isFocusModeSupported(.autoFocus)  {
+            do {
+                try camera.lockForConfiguration()
+                camera.focusMode = .autoFocus
+                camera.focusPointOfInterest = point
+                camera.unlockForConfiguration()
+            } catch let error {
+                NSLog("%@", error.localizedDescription)
+            }
+            
+            camera .addObserver(self,
+                                forKeyPath: focusKeyPath,
+                                options: [.new,.old],
+                                context: nil)
+        }
         
     }
     
@@ -70,9 +117,10 @@ final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDele
             let videoDeviceInput = try AVCaptureDeviceInput(device: self.videoDevice)
             if self.captureSession.canAddInput(videoDeviceInput) {
                 self.captureSession.addInput(videoDeviceInput)
+                self.activeVideoInput = videoDeviceInput
             }
         } catch let error as NSError {
-            print(error)
+            NSLog("%@",error)
         }
         
         let videoDataOutput = AVCaptureVideoDataOutput()
@@ -100,13 +148,67 @@ final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDele
         self.videoConnection?.videoOrientation = .portrait
     }
     
+    
+    /// 根据位置 获取 捕捉设备
+    /// - Parameter position: 设备位置
+    fileprivate func videoDevice(in position: AVCaptureDevice.Position) -> AVCaptureDevice? {
+        let devices = AVCaptureDevice.devices(for: .video)
+        for device in devices {
+            if device.position == position {
+                return device
+            }
+        }
+        return nil
+    }
+    
+    fileprivate func canSwitchCamera() -> Bool {
+        return self.cameraCount > 1
+    }
+    
     // MARK: - AVCaptureVideoDataOutputSampleBufferDelegate
-    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+    func captureOutput(_ output: AVCaptureOutput,
+                       didOutput sampleBuffer: CMSampleBuffer,
+                       from connection: AVCaptureConnection) {
         self.delegate?.didOutputSampleBuffer(sampleBuffer)
     }
     
     // MARK: - Notification selector
     @objc func sessionWasInterrupted(_ notification: Notification) {
         print("Capture session was interrupted with reason: \(notification)")
+    }
+    
+    // MARK: - KVO
+    override func observeValue(forKeyPath keyPath: String?,
+                               of object: Any?,
+                               change: [NSKeyValueChangeKey : Any]?,
+                               context: UnsafeMutableRawPointer?) {
+        guard let keyPath = keyPath,
+              let change = change,
+              let obj = object as? AVCaptureDevice else {
+            return;
+        }
+        
+        if keyPath == focusKeyPath,
+           obj === self.activeCamera  {
+            let newValue = change[.newKey] as! Bool
+            let oldValue = change[.oldKey] as! Bool
+            if newValue == oldValue {
+                return
+            }
+            obj .removeObserver(self, forKeyPath: focusKeyPath)
+            self.delegate?.focusDidfinish(at: obj.focusPointOfInterest)
+            guard obj.isFocusModeSupported(.continuousAutoFocus) else {
+                return
+            }
+        
+            do {
+                try obj.lockForConfiguration()
+                obj.focusMode = .continuousAutoFocus
+                obj.unlockForConfiguration()
+            } catch let error {
+                NSLog("%@", error.localizedDescription)
+            }
+            
+        }
     }
 }
