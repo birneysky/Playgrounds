@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7460429E2307CBA400887041 /* SampleBufferGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7460429D2307CBA400887041 /* SampleBufferGenerator.swift */; };
 		74E6D8BA228325CC005DF5EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E6D8B9228325CC005DF5EC /* AppDelegate.swift */; };
-		74E6D8BC228325CC005DF5EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E6D8BB228325CC005DF5EC /* ViewController.swift */; };
+		74E6D8BC228325CC005DF5EC /* SceneryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E6D8BB228325CC005DF5EC /* SceneryViewController.swift */; };
 		74E6D8BF228325CC005DF5EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74E6D8BD228325CC005DF5EC /* Main.storyboard */; };
 		74E6D8C1228325CD005DF5EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74E6D8C0228325CD005DF5EC /* Assets.xcassets */; };
 		74E6D8C4228325CD005DF5EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74E6D8C2228325CD005DF5EC /* LaunchScreen.storyboard */; };
@@ -36,10 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7460429D2307CBA400887041 /* SampleBufferGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleBufferGenerator.swift; sourceTree = "<group>"; };
 		74D9537422B5115B00548287 /* Camera.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Camera.entitlements; sourceTree = "<group>"; };
 		74E6D8B6228325CC005DF5EC /* Camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Camera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E6D8B9228325CC005DF5EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		74E6D8BB228325CC005DF5EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		74E6D8BB228325CC005DF5EC /* SceneryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneryViewController.swift; sourceTree = "<group>"; };
 		74E6D8BE228325CC005DF5EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74E6D8C0228325CD005DF5EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74E6D8C3228325CD005DF5EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -105,7 +107,8 @@
 			children = (
 				74D9537422B5115B00548287 /* Camera.entitlements */,
 				74E6D8B9228325CC005DF5EC /* AppDelegate.swift */,
-				74E6D8BB228325CC005DF5EC /* ViewController.swift */,
+				74E6D8BB228325CC005DF5EC /* SceneryViewController.swift */,
+				7460429D2307CBA400887041 /* SampleBufferGenerator.swift */,
 				74E6D8E822832B28005DF5EC /* SceneryCapturer.swift */,
 				B21E391E2292598900375486 /* SceneryPreviewView.swift */,
 				74E6D8BD228325CC005DF5EC /* Main.storyboard */,
@@ -267,7 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74E6D8BC228325CC005DF5EC /* ViewController.swift in Sources */,
+				74E6D8BC228325CC005DF5EC /* SceneryViewController.swift in Sources */,
+				7460429E2307CBA400887041 /* SampleBufferGenerator.swift in Sources */,
 				B21E391F2292598900375486 /* SceneryPreviewView.swift in Sources */,
 				74E6D8E922832B29005DF5EC /* SceneryCapturer.swift in Sources */,
 				74E6D8BA228325CC005DF5EC /* AppDelegate.swift in Sources */,
@@ -456,7 +460,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = grocery.tech.cn.Camera;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.rongcloud.Camera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_UIKITFORMAC = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Camera/Camera-Bridging-Header.h";
@@ -481,7 +485,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = grocery.tech.cn.Camera;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.rongcloud.Camera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_UIKITFORMAC = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Camera/Camera-Bridging-Header.h";

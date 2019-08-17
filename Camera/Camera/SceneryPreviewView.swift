@@ -30,9 +30,9 @@ import AVFoundation
     
     
     fileprivate func setup() {
-//        self.addSubview(self.overlayView)
-//        
-//        setupConstraints()
+        self.addSubview(self.overlayView)
+        
+        setupConstraints()
     }
     
     fileprivate func setupConstraints() {

@@ -14,7 +14,6 @@ protocol SceneryCapturerOutputDelegate: class {
 
 final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     
-    
     // MARK: - Properties
     public weak var delegate: SceneryCapturerOutputDelegate?
     fileprivate var videoConnection: AVCaptureConnection!
@@ -100,10 +99,12 @@ final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDele
         
         self.videoConnection?.videoOrientation = .portrait
     }
+    
     // MARK: - AVCaptureVideoDataOutputSampleBufferDelegate
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         self.delegate?.didOutputSampleBuffer(sampleBuffer)
     }
+    
     // MARK: - Notification selector
     @objc func sessionWasInterrupted(_ notification: Notification) {
         print("Capture session was interrupted with reason: \(notification)")
