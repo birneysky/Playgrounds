@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 
 /// 当客户端更新 model 时，对于一个 BindableObject 来说，需要通知它的订阅者
-final class UserData: BindableObject {
+final class UserData: Combine.ObservableObject, Swift.Identifiable {
     let didChange = PassthroughSubject<UserData, Never>()
     var showFavoritesOnly = false {
         didSet {
