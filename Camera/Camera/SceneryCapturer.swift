@@ -82,6 +82,30 @@ final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDele
     }
     
     public func swithCamera() -> Bool {
+        guard self.canSwitchCamera() else {
+            NSLog("this device has only one camera");
+            return false;
+        }
+        guard let inactiveCamera = self.inactiveCamera else {
+            return false;
+        }
+        
+        do {
+           let videoInput = try AVCaptureDeviceInput(device: inactiveCamera)
+            self.captureSession.beginConfiguration()
+            self.captureSession.removeInput(self.activeVideoInput)
+            if self.captureSession.canAddInput(videoInput) {
+                self.captureSession.addInput(videoInput)
+                self.activeVideoInput = videoInput
+            } else {
+                NSLog("capture session can't add video input %@", videoInput)
+            }
+            self.captureSession.commitConfiguration()
+        } catch let error {
+            NSLog("\(error)")
+            return false
+        }
+        
         return true
     }
     

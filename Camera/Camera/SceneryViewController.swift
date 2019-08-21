@@ -82,7 +82,12 @@ class SceneryViewController: UIViewController,SceneryCapturerOutputDelegate {
         
     }
 
+    // MARK: - Target Action
     
-
+    @IBAction func switchCameraAction(_ sender: UIButton) {
+        let result = self.capturer.swithCamera()
+        NSLog("switch camera action result \(result)")
+    }
+    
 }
 
