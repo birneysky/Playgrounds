@@ -61,7 +61,9 @@ class SceneryViewController: UIViewController,SceneryCapturerOutputDelegate {
                 fatalError("buffer fmt description is not found")
             }
             let dimensions =  CMVideoFormatDescriptionGetDimensions(description)
-            self.generator = SampleBufferGenerator(width: dimensions.width, height: dimensions.height, capacity: 6)
+            self.generator = SampleBufferGenerator(width: dimensions.width,
+                                                   height: dimensions.height,
+                                                   capacity: 6)
         }
         
         let pstTime = CMSampleBufferGetPresentationTimeStamp(buffer);

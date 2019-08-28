@@ -21,6 +21,7 @@ final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDele
     public weak var delegate: SceneryCapturerOutputDelegate?
     fileprivate var videoConnection: AVCaptureConnection!
     fileprivate var activeVideoInput: AVCaptureDeviceInput!
+    fileprivate var activeVideoOutput: AVCaptureVideoDataOutput!
     fileprivate let focusKeyPath = "adjustingFocus"
     
     fileprivate lazy var videoDevice: AVCaptureDevice = {
@@ -92,7 +93,13 @@ final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDele
         
         do {
            let videoInput = try AVCaptureDeviceInput(device: inactiveCamera)
+            
+            let videoDataOutput = AVCaptureVideoDataOutput()
+            videoDataOutput.setSampleBufferDelegate(self, queue: self.sessionQueue)
+            videoDataOutput.alwaysDiscardsLateVideoFrames = false
+            
             self.captureSession.beginConfiguration()
+            
             self.captureSession.removeInput(self.activeVideoInput)
             if self.captureSession.canAddInput(videoInput) {
                 self.captureSession.addInput(videoInput)
@@ -100,6 +107,18 @@ final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDele
             } else {
                 NSLog("capture session can't add video input %@", videoInput)
             }
+            
+            self.captureSession.removeOutput(self.activeVideoOutput)
+            if self.captureSession.canAddOutput(self.activeVideoOutput) {
+                self.captureSession.addOutput(videoDataOutput)
+                self.activeVideoOutput = videoDataOutput
+            } else {
+                NSLog("capture session can't add video output %@", videoInput)
+            }
+            
+            self.videoConnection = videoDataOutput.connection(with: .video)
+            self.videoConnection?.videoOrientation = .portrait
+            
             self.captureSession.commitConfiguration()
         } catch let error {
             NSLog("\(error)")
@@ -153,6 +172,7 @@ final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDele
         
         if self.captureSession.canAddOutput(videoDataOutput) {
             self.captureSession.addOutput(videoDataOutput)
+            self.activeVideoOutput = videoDataOutput
         }
         self.videoConnection = videoDataOutput.connection(with: .video)
         
