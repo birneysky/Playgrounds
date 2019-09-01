@@ -1,5 +1,6 @@
 import XCTest
 import class Foundation.Bundle
+import Strategy 
 
 final class Design_PatternsTests: XCTestCase {
     func testExample() throws {
@@ -27,6 +28,19 @@ final class Design_PatternsTests: XCTestCase {
         let output = String(data: data, encoding: .utf8)
 
         XCTAssertEqual(output, "Hello, world!\n")
+    }
+
+    func test_Strategy() {
+        let duck = ModelDuck()
+        duck.display()
+        duck.performFly()
+        duck.performQuack()
+
+        print("\n")
+        let duck2 = MallardDuck()
+        duck2.display()
+        duck2.performFly()
+        duck2.performQuack()
     }
 
     /// Returns path to the built products directory.
