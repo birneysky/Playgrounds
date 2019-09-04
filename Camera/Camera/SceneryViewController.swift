@@ -47,7 +47,11 @@ class SceneryViewController: UIViewController,SceneryCapturerOutputDelegate {
         }
         
         let img = CIImage(cvImageBuffer: imageBuffer)
-        guard let filer = CIFilter.init(name: "CIFaceBalance") else {
+//        guard let filer = CIFilter.init(name: "CIFaceBalance") else {
+//            fatalError("Filter name is not exist")
+//        }
+        
+        guard let filer = CIFilter.init(name: "CIColorInvert") else {
             fatalError("Filter name is not exist")
         }
         
@@ -89,6 +93,16 @@ class SceneryViewController: UIViewController,SceneryCapturerOutputDelegate {
     @IBAction func switchCameraAction(_ sender: UIButton) {
         let result = self.capturer.swithCamera()
         NSLog("switch camera action result \(result)")
+        UIView.animate(withDuration: 0.5) {
+            self.previewView.transform =
+                CGAffineTransform(a: -1,
+                                  b: 0,
+                                  c: 0,
+                                  d: 1,
+                                  tx: 1,
+                                  ty: 0)
+        }
+        
     }
     
 }
