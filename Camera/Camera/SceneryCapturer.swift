@@ -57,6 +57,10 @@ final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDele
         }
     }
     
+    public var cameraPostion: AVCaptureDevice.Position {
+        return self.activeCamera.position
+    }
+    
     // MARK: - Init
     public override init() {
         super.init()

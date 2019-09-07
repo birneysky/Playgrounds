@@ -16,9 +16,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J8Z-lK-zS6" customClass="SceneryPreviewView" customModule="Camera" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E47-SK-WYB">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yke-Qk-cke" customClass="SceneryPreviewView" customModule="Camera" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J8Z-lK-zS6" customClass="SceneryPreviewView" customModule="Camera" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Yke-Qk-cke" secondAttribute="bottom" id="QH0-8n-E9W"/>
+                                    <constraint firstAttribute="bottom" secondItem="J8Z-lK-zS6" secondAttribute="bottom" id="QSk-gl-Sr2"/>
+                                    <constraint firstItem="Yke-Qk-cke" firstAttribute="top" secondItem="E47-SK-WYB" secondAttribute="top" id="alW-xl-Fg1"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yke-Qk-cke" secondAttribute="trailing" id="j2B-NC-Jzg"/>
+                                    <constraint firstItem="Yke-Qk-cke" firstAttribute="leading" secondItem="E47-SK-WYB" secondAttribute="leading" id="osU-4h-bM5"/>
+                                    <constraint firstItem="J8Z-lK-zS6" firstAttribute="top" secondItem="E47-SK-WYB" secondAttribute="top" id="tpA-A4-7MK"/>
+                                    <constraint firstAttribute="trailing" secondItem="J8Z-lK-zS6" secondAttribute="trailing" id="wV3-FE-GKx"/>
+                                    <constraint firstItem="J8Z-lK-zS6" firstAttribute="leading" secondItem="E47-SK-WYB" secondAttribute="leading" id="yLP-L3-GUl"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Yl-gw-JnU">
                                 <rect key="frame" x="20" y="798" width="44" height="44"/>
@@ -36,17 +56,18 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="J8Z-lK-zS6" secondAttribute="trailing" id="8h2-7J-iVq"/>
-                            <constraint firstItem="J8Z-lK-zS6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9Um-CR-zhB"/>
-                            <constraint firstItem="J8Z-lK-zS6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Dp9-9W-ZVC"/>
+                            <constraint firstAttribute="bottom" secondItem="E47-SK-WYB" secondAttribute="bottom" id="1F9-4D-L8v"/>
+                            <constraint firstItem="E47-SK-WYB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5TT-ns-GvQ"/>
                             <constraint firstItem="9Yl-gw-JnU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="PcG-x7-qWp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Yl-gw-JnU" secondAttribute="bottom" constant="20" id="SLM-qa-MO5"/>
-                            <constraint firstAttribute="bottom" secondItem="J8Z-lK-zS6" secondAttribute="bottom" id="bGx-IY-Sk4"/>
+                            <constraint firstItem="E47-SK-WYB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="baI-fR-y39"/>
+                            <constraint firstAttribute="trailing" secondItem="E47-SK-WYB" secondAttribute="trailing" id="mSm-8I-AwO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="previewView" destination="J8Z-lK-zS6" id="LKL-yE-Ixy"/>
+                        <outlet property="backPreview" destination="J8Z-lK-zS6" id="LKL-yE-Ixy"/>
+                        <outlet property="frontPreView" destination="Yke-Qk-cke" id="inR-OL-NMr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

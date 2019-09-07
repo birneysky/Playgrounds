@@ -22,6 +22,10 @@ import AVFoundation
     }
     
     public func setBlurOverView(hidden: Bool, animated: Bool) {
+        guard animated else {
+            self.overlayView.alpha = hidden ? 0 : 1
+            return
+        }
         UIView.animate(withDuration: 0.5, animations: {
             self.overlayView.alpha = hidden ? 0 : 1
         }) { (_) in

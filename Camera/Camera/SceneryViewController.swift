@@ -13,8 +13,9 @@ import CoreImage
 
 class SceneryViewController: UIViewController,SceneryCapturerOutputDelegate {
 
-    @IBOutlet weak var previewView: SceneryPreviewView!
-    weak var displayLayer: AVSampleBufferDisplayLayer!
+    @IBOutlet var backPreview: SceneryPreviewView!
+    @IBOutlet var frontPreView: SceneryPreviewView!
+    weak var displayLayer: AVSampleBufferDisplayLayer?
     var generator: SampleBufferGenerator!
     
     fileprivate lazy var capturer:  SceneryCapturer = {
@@ -25,9 +26,9 @@ class SceneryViewController: UIViewController,SceneryCapturerOutputDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.displayLayer = self.previewView.displayLayer
+        self.displayLayer = self.backPreview.displayLayer
         print(CIFilter.filterNames(inCategory: kCICategoryVideo))
-        // Do any additional setup after loading the view.
+
         self.capturer.startRunning()
     }
     
@@ -37,7 +38,8 @@ class SceneryViewController: UIViewController,SceneryCapturerOutputDelegate {
     
     // MARK: - SceneryCapturerOutputDelegate
     func focusDidfinish(at point:CGPoint) {
-        self.previewView.setBlurOverView(hidden: true, animated: true)
+        self.backPreview.setBlurOverView(hidden: true, animated: true)
+        self.frontPreView.setBlurOverView(hidden: true, animated: true)
     }
     
     func didOutputSampleBuffer(_ buffer: CMSampleBuffer) {
@@ -81,8 +83,8 @@ class SceneryViewController: UIViewController,SceneryCapturerOutputDelegate {
         print("😇😇😇😇😇 duration:\(duration*1000) ms")
 
         DispatchQueue.main.async {
-            if self.displayLayer.isReadyForMoreMediaData {
-                self.displayLayer.enqueue(finalBuffer)
+            if self.displayLayer?.isReadyForMoreMediaData ?? false {
+                self.displayLayer?.enqueue(finalBuffer)
             }
         }
         
@@ -91,18 +93,52 @@ class SceneryViewController: UIViewController,SceneryCapturerOutputDelegate {
     // MARK: - Target Action
     
     @IBAction func switchCameraAction(_ sender: UIButton) {
-        let result = self.capturer.swithCamera()
-        NSLog("switch camera action result \(result)")
-        UIView.animate(withDuration: 0.5) {
-            self.previewView.transform =
-                CGAffineTransform(a: -1,
-                                  b: 0,
-                                  c: 0,
-                                  d: 1,
-                                  tx: 1,
-                                  ty: 0)
+        var fromView: SceneryPreviewView! = nil
+        var toView: SceneryPreviewView! = nil
+        var aOptions: UIView.AnimationOptions = .transitionFlipFromLeft
+
+        switch self.capturer.cameraPostion {
+        case .back:
+            fromView = self.backPreview
+            toView = self.frontPreView
+        case .front:
+            fromView = self.frontPreView
+            toView = self.backPreview
+            aOptions = .transitionFlipFromRight
+        default:
+            fatalError()
         }
+      
         
+
+        
+        //UIView.beginAnimations("camera.rotate", context: nil)
+        toView.setBlurOverView(hidden: false, animated: false)
+        self.displayLayer = toView.displayLayer
+        UIView.transition(from: fromView,
+                          to: toView,
+                          duration: 0.35,
+                          options: aOptions)
+        { _ in
+            let result = self.capturer.swithCamera()
+            NSLog("switch camera action result \(result)")
+            //self.view.bringSubviewToFront(sender)
+            //toView.displayLayer.flushAndRemoveImage()
+            self.capturer.focus(at: .init(x: 0.5, y: 0.5))
+            //self.displayLayer?.flushAndRemoveImage()
+            //self.view.insertSubview(fromView, belowSubview: toView)
+            guard let superView = toView.superview else {
+                fatalError()
+            }
+            
+            superView.removeConstraints(toView.constraints)
+            toView.translatesAutoresizingMaskIntoConstraints = false
+            toView.leadingAnchor.constraint(equalTo: superView.leadingAnchor).isActive = true
+            toView.rightAnchor.constraint(equalTo: superView.rightAnchor).isActive = true
+            toView.topAnchor.constraint(equalTo: superView.topAnchor).isActive = true
+            toView.bottomAnchor.constraint(equalTo: superView.bottomAnchor).isActive = true
+        }
+        //UIView.commitAnimations()
     }
     
 }
