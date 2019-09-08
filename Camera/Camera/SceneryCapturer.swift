@@ -67,6 +67,7 @@ final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDele
         setupCaptureSession()
     }
     
+    // MARK: - API
     public func startRunning() {
         if !self.captureSession.isRunning {
             weak var weakSelf = self;

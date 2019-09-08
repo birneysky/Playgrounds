@@ -18,12 +18,14 @@ class SceneryViewController: UIViewController,SceneryCapturerOutputDelegate {
     weak var displayLayer: AVSampleBufferDisplayLayer?
     var generator: SampleBufferGenerator!
     
+    // MARK: - Lazy load
     fileprivate lazy var capturer:  SceneryCapturer = {
         let capturer = SceneryCapturer()
         capturer.delegate = self
         return capturer;
     }()
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.displayLayer = self.backPreview.displayLayer
