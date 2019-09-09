@@ -150,10 +150,10 @@ final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDele
                 NSLog("%@", error.localizedDescription)
             }
             
-            camera .addObserver(self,
-                                forKeyPath: focusKeyPath,
-                                options: [.new,.old],
-                                context: nil)
+            camera.addObserver(self,
+                               forKeyPath: focusKeyPath,
+                               options: [.new,.old],
+                               context: nil)
         }
         
     }
