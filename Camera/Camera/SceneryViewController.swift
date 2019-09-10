@@ -15,6 +15,7 @@ class SceneryViewController: UIViewController,SceneryCapturerOutputDelegate {
 
     @IBOutlet var backPreview: SceneryPreviewView!
     @IBOutlet var frontPreView: SceneryPreviewView!
+    @IBOutlet weak var sceneryView: UIView!
     weak var displayLayer: AVSampleBufferDisplayLayer?
     var generator: SampleBufferGenerator!
     
@@ -111,12 +112,14 @@ class SceneryViewController: UIViewController,SceneryCapturerOutputDelegate {
             fatalError()
         }
       
+        let snap = fromView.snapshotView(afterScreenUpdates: false)
+        if let asnap = snap {
+            self.sceneryView.insertSubview(asnap, at: 0)
+        }
         
-
-        
-        //UIView.beginAnimations("camera.rotate", context: nil)
         toView.setBlurOverView(hidden: false, animated: false)
         self.displayLayer = toView.displayLayer
+        
         UIView.transition(from: fromView,
                           to: toView,
                           duration: 0.35,
@@ -124,11 +127,8 @@ class SceneryViewController: UIViewController,SceneryCapturerOutputDelegate {
         { _ in
             let result = self.capturer.swithCamera()
             NSLog("switch camera action result \(result)")
-            //self.view.bringSubviewToFront(sender)
-            //toView.displayLayer.flushAndRemoveImage()
+            snap?.removeFromSuperview()
             self.capturer.focus(at: .init(x: 0.5, y: 0.5))
-            //self.displayLayer?.flushAndRemoveImage()
-            //self.view.insertSubview(fromView, belowSubview: toView)
             guard let superView = toView.superview else {
                 fatalError()
             }
@@ -140,7 +140,6 @@ class SceneryViewController: UIViewController,SceneryCapturerOutputDelegate {
             toView.topAnchor.constraint(equalTo: superView.topAnchor).isActive = true
             toView.bottomAnchor.constraint(equalTo: superView.bottomAnchor).isActive = true
         }
-        //UIView.commitAnimations()
     }
     
 }

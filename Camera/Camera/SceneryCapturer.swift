@@ -154,6 +154,8 @@ final class SceneryCapturer : NSObject, AVCaptureVideoDataOutputSampleBufferDele
                                forKeyPath: focusKeyPath,
                                options: [.new,.old],
                                context: nil)
+        } else {
+            self.delegate?.focusDidfinish(at: point)
         }
         
     }

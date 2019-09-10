@@ -68,6 +68,7 @@
                     <connections>
                         <outlet property="backPreview" destination="J8Z-lK-zS6" id="LKL-yE-Ixy"/>
                         <outlet property="frontPreView" destination="Yke-Qk-cke" id="inR-OL-NMr"/>
+                        <outlet property="sceneryView" destination="E47-SK-WYB" id="a5t-8X-9GO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -9,8 +9,7 @@
 import UIKit
 import AVFoundation
 
-@IBDesignable class SceneryPreviewView: UIView {
-    
+@IBDesignable class SceneryPreviewView: UIView {    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -32,9 +31,9 @@ import AVFoundation
         }
     }
     
+    
     fileprivate func setup() {
         self.addSubview(self.overlayView)
-        
         setupConstraints()
     }
     
