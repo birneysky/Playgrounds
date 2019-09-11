@@ -52,7 +52,7 @@ class GroceryKitTests: XCTestCase {
     func test_fetchToken() {
         let name = "name"
         firstly {
-             return self.hc.fetchToken(uid: "123", name: name)
+            self.hc.fetchToken(uid: "123", name: name)
         }.then { (token) in
              self.hc.fetchToken(uid: "xfdas", name: "are you ok")
         }.done { token in
@@ -64,7 +64,7 @@ class GroceryKitTests: XCTestCase {
         
         firstly {
             self.hc.fetchToken(uid: "123", name: "456")
-        }.then { (token) in
+        }.then { token in
             //print("3\(token)")
             self.hc.fetchToken(uid: "xfdas", name: "are you ok")
         }.done { token in
@@ -81,6 +81,61 @@ class GroceryKitTests: XCTestCase {
                 print(err)
             } else {
                 
+            }
+            
+        }
+    }
+    
+    func test_promisekit_mutileline () {
+        let name = "name"
+        
+        let start = CACurrentMediaTime()
+        firstly{ () -> Promise<String> in
+            print("firstly a")
+            return self.hc.fetchToken(uid: "123", name: name)
+        }.then { token -> Promise<String> in
+            print("then 1 \(token)")
+            return self.hc.fetchToken(uid: "xfdas", name: "are you ok")
+        }.then { token -> Promise<String> in
+            print("then 2 \(token)")
+            return self.hc.fetchToken(uid: "xfdasfjdklasjfld", name: "bulabulabula")
+        }.then { token -> Promise<String> in
+            print("then 3 \(token)")
+            return self.hc.fetchToken(uid: "43204802", name: "so what")
+        }.done { token in
+            print("done 4 \(token)")
+        }.catch { err in
+            print(err)
+            XCTAssert(false)
+        }
+        
+        firstly{ () -> Promise<String> in
+            print("firstly b")
+            return self.hc.fetchToken(uid: "123", name: name)
+        }.then { token -> Promise<String> in
+            print("then 5 \(token)")
+            return self.hc.fetchToken(uid: "xfdas", name: "are you ok")
+        }.then { token -> Promise<String> in
+            print("then 6 \(token)")
+            return self.hc.fetchToken(uid: "xfdasfjdklasjfld", name: "bulabulabula")
+        }.then { token -> Promise<String> in
+            print("then 7 \(token)")
+            return self.hc.fetchToken(uid: "43204802", name: "so what")
+        }.done { token in
+            print("done 8 \(token)")
+            self.e.fulfill()
+        }.catch { err in
+            print(err)
+            XCTAssert(false)
+        }
+
+        self.waitForExpectations(timeout: 30) { (error) in
+            if let err = error {
+                XCTAssert(false)
+                print(err)
+            } else {
+                let end = CACurrentMediaTime()
+                print("duration:\(end-start)")
             }
             
         }
