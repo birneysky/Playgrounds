@@ -1,0 +1,6 @@
+:w
+:q
+
+:vs vertical split
+:sp vertical split
+:% s/foo/bar/g 全局替换

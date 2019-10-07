@@ -1,0 +1,38 @@
+# 插入
+a append
+i insert
+o open a line below
+
+A appedn after line
+I insert before line
+O append a line above
+
+
+
+
+# 保存退出 
+:wq save and quit
+
+# 如何快速纠错
+
+ctrl + h 在插入模式下，删除上一个字符
+ctrl + w 在插入模式下，删除上一个单词
+ctrl + u 在插入模式下，删除当前行
+
+# 上面的快捷键在终端输入命令时，也是适用的
+
+另外还有一些：
+
+ctrl + a 快速移动到行首
+ctrl + e 快速移动到行位
+ctrl + b 光标快速向前移动
+ctrl + f 光标向后移
+
+# inert->norrmal 模式切换快捷键
+
+ctrl + c  # 可能会中断件工作
+ctrl + [
+
+# normal->insert 快捷键
+
+gi 快速调转到最后一次编辑的地方并进入插入模式
