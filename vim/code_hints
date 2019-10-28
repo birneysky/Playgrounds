@@ -1,9 +1,0 @@
-### vim 内置补全方式
-
-ctrl + n 和 ctrol +p 补全单词 
-ctrl +x 和 ctrl + f 补全文件名
-ctrl +x  ctrl +o 代码补全，需要开启文件类型检查，安装插件
-
-
-filetype on 文件类型开启
-
