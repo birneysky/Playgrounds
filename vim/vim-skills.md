@@ -1,42 +1,43 @@
 # Edit
 ### 插入
+```
 a append
 i insert
 o open a line below
 
-A appedn after line
+A append after line
 I insert before line
 O append a line above
 
-
+```
 
 
 #### 保存退出
-:wq save and quit
+- :wq save and quit
 
 #### 如何快速纠错
 
-ctrl + h 在插入模式下，删除上一个字符
-ctrl + w 在插入模式下，删除上一个单词
-ctrl + u 在插入模式下，删除当前行
+- ctrl + h 在插入模式下，删除上一个字符
+- ctrl + w 在插入模式下，删除上一个单词
+- ctrl + u 在插入模式下，删除当前行
 
 #### 上面的快捷键在终端输入命令时，也是适用的
 
 另外还有一些：
 
-ctrl + a 快速移动到行首
-ctrl + e 快速移动到行位
-ctrl + b 光标快速向前移动
-ctrl + f 光标向后移
+- ctrl + a 快速移动到行首 0 也快速移动到行首
+- ctrl + e 快速移动到行位
+- ctrl + b 光标快速向前移动
+- ctrl + f 光标向后移
 
 #### inert->norrmal 模式切换快捷键
 
-ctrl + c  # 可能会中断件工作
-ctrl + [
+- ctrl + c  # 可能会中断件工作
+- ctrl + [
 
 #### normal->insert 快捷键
 
-gi 快速调转到最后一次编辑的地方并进入插入模式
+- gi 快速调转到最后一次编辑的地方并进入插入模式
 
 #### 如何快速快速删除一个字符和单词呢
 
@@ -58,14 +59,14 @@ gi 快速调转到最后一次编辑的地方并进入插入模式
 - 使用 c 配合文本对象，我们可以快速修改
 
 ```
-r + a 将光标所在的字符修改成a  r+b r+c 以此类推
-s 删除光标所在的当前字符，并进入插入模式
-R 直接开始替换光标开始的字符
-S 会将整行删除并进入插入模式
-也同样可以配合数字来使用，比如 4s ，会删除4个字符并进入插入模式
+- r + a 将光标所在的字符修改成a  r+b r+c 以此类推
+- s 删除光标所在的当前字符，并进入插入模式
+- R 直接开始替换光标开始的字符
+- S 会将整行删除并进入插入模式
+- 也同样可以配合数字来使用，比如 4s ，会删除4个字符并进入插入模式
 
-c+w 删除当前单词并进入插入模式
-C 删除整行来进行插入操作
+- c+w 删除当前单词并进入插入模式
+- C 删除整行来进行插入操作
 
 例如修改双引号中的内容 c+t+"
 
@@ -73,12 +74,12 @@ C 删除整行来进行插入操作
 #### normal 下 删除行
 
 # Command
-:w
-:q
+- :w
+- :q
 
-:vs vertical split
-:sp vertical split
-:% s/foo/bar/g 全局替换，
+- :vs vertical split
+- :sp vertical split
+- :% s/foo/bar/g 全局替换，
 
 # Move quickly
 
@@ -155,3 +156,10 @@ ctrl +x  ctrl +o 代码补全，需要开启文件类型检查，安装插件
 
 
 filetype on 文件类型开启
+
+# Map 
+基本映射指的是 normal 模式下的映射
+
+- 使用map 实现基本映射 比如 :map - x   按 - 就会删除字符
+- :map <space> viw  按下空格的时候选中整个单词
+- :map <c-d> dd 可以使用 ctrl + d 执行dd 删除一行
