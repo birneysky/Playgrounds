@@ -163,3 +163,6 @@ filetype on 文件类型开启
 - 使用map 实现基本映射 比如 :map - x   按 - 就会删除字符
 - :map <space> viw  按下空格的时候选中整个单词
 - :map <c-d> dd 可以使用 ctrl + d 执行dd 删除一行
+
+- 用 nmap/vmap/imap 定义映射只在normal/visual/insert模式下分边有效
+- 
