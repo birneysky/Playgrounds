@@ -59,27 +59,30 @@ class SceneryViewController: UIViewController {
             fatalError()
         }
       
-        fromView.setBlurOverView(hidden: false, animated: false)
-        let snap = fromView.snapshotView(afterScreenUpdates: false)
-        let shotImg =  snap?.snapshot()
-        if let img = shotImg {
-            self.backgroundView.insertSubview(snap!, at: 0)
-            //self.sceneryView.backgroundColor = UIColor(patternImage: img)
-            //self.backgroundView.image = img
-            //self.backgroundView.backgroundColor = UIColor(patternImage: img)
-        }
+//        let snap = fromView.snapshotView(afterScreenUpdates: true)
+//        let shotImg =  snap?.snapshot()
+//        if let img = shotImg {
+//            //self.backgroundView.insertSubview(snap!, at: 0)
+//            //self.sceneryView.backgroundColor = UIColor(patternImage: img)
+//            //self.backgroundView.image = img
+//            //self.backgroundView.backgroundColor = UIColor(patternImage: img)
+//            toView.layer.backgroundColor = UIColor(patternImage: img).cgColor
+//        }
         
-        //toView.setBlurOverView(hidden: false, animated: false)
+        toView.displayLayer.flushAndRemoveImage()
+        toView.backgroundColor = .red
         self.displayLayer = toView.displayLayer
-        
+        fromView.setBlurOverView(hidden: false, animated: false)
+        toView.setBlurOverView(hidden: false, animated: false)
+        NSLog("video preview transition begin");
         UIView.transition(from: fromView,
                           to: toView,
-                          duration: 5,
+                          duration: 0.25,
                           options: aOptions)
         { _ in
             let result = self.capturer.swithCamera()
             NSLog("switch camera action result \(result)")
-            snap?.removeFromSuperview()
+            //snap?.removeFromSuperview()
             self.capturer.focus(at: .init(x: 0.5, y: 0.5))
             guard let superView = toView.superview else {
                 fatalError()
@@ -91,6 +94,7 @@ class SceneryViewController: UIViewController {
             toView.rightAnchor.constraint(equalTo: superView.rightAnchor).isActive = true
             toView.topAnchor.constraint(equalTo: superView.topAnchor).isActive = true
             toView.bottomAnchor.constraint(equalTo: superView.bottomAnchor).isActive = true
+            NSLog("video preview transition end");
         }
     }
     
@@ -140,13 +144,15 @@ extension SceneryViewController: SceneryCapturerOutputDelegate {
                 fatalError("finalBuffer is nil")
             }
             
-            let endTime = clock()
-            let duration: Double = Double(endTime - startTime) / Double(CLOCKS_PER_SEC)
-            print("😇😇😇😇😇 duration:\(duration*1000) ms")
+//            let endTime = clock()
+//            let duration: Double = Double(endTime - startTime) / Double(CLOCKS_PER_SEC)
+//            print("😇😇😇😇😇 duration:\(duration*1000) ms")
 
             DispatchQueue.main.async {
                 if self.displayLayer?.isReadyForMoreMediaData ?? false {
                     self.displayLayer?.enqueue(finalBuffer)
+                } else {
+                    NSLog("displayLayer is not ReadyForMoreMediaData %@", self.displayLayer!)
                 }
             }
             
