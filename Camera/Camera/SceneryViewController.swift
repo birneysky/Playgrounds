@@ -16,8 +16,9 @@ class SceneryViewController: UIViewController {
     @IBOutlet var backPreview: SceneryPreviewView!
     @IBOutlet var frontPreView: SceneryPreviewView!
     @IBOutlet weak var sceneryView: UIView!
-    @IBOutlet weak var backgroundView: UIImageView!
     weak var displayLayer: AVSampleBufferDisplayLayer?
+    weak var flipSnapView: UIView?
+    weak var curPreView: SceneryPreviewView?
     var generator: SampleBufferGenerator!
     
     // MARK: - Lazy load
@@ -31,6 +32,7 @@ class SceneryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.displayLayer = self.backPreview.displayLayer
+        self.curPreView = self.backPreview
         print(CIFilter.filterNames(inCategory: kCICategoryVideo))
 
         self.capturer.startRunning()
@@ -58,43 +60,37 @@ class SceneryViewController: UIViewController {
         default:
             fatalError()
         }
-      
-//        let snap = fromView.snapshotView(afterScreenUpdates: true)
-//        let shotImg =  snap?.snapshot()
-//        if let img = shotImg {
-//            //self.backgroundView.insertSubview(snap!, at: 0)
-//            //self.sceneryView.backgroundColor = UIColor(patternImage: img)
-//            //self.backgroundView.image = img
-//            //self.backgroundView.backgroundColor = UIColor(patternImage: img)
-//            toView.layer.backgroundColor = UIColor(patternImage: img).cgColor
-//        }
         
-        toView.displayLayer.flushAndRemoveImage()
-        toView.backgroundColor = .red
-        self.displayLayer = toView.displayLayer
         fromView.setBlurOverView(hidden: false, animated: false)
         toView.setBlurOverView(hidden: false, animated: false)
-        NSLog("video preview transition begin");
+        self.curPreView = toView
+        let snap = fromView.snapshotView(afterScreenUpdates: true)
+        if let aSnap = snap {
+            self.sceneryView.insertSubview(aSnap, at: 0)
+            self.flipSnapView = aSnap;
+        }
+        
         UIView.transition(from: fromView,
                           to: toView,
-                          duration: 0.25,
+                          duration: 0.35,
                           options: aOptions)
         { _ in
             let result = self.capturer.swithCamera()
             NSLog("switch camera action result \(result)")
-            //snap?.removeFromSuperview()
+            self.flipSnapView?.removeFromSuperview()
             self.capturer.focus(at: .init(x: 0.5, y: 0.5))
             guard let superView = toView.superview else {
                 fatalError()
             }
-            
+            toView.displayLayer.flushAndRemoveImage()
+            self.displayLayer = toView.displayLayer
+            toView.setBlurOverView(hidden: true, animated: false);
             superView.removeConstraints(toView.constraints)
             toView.translatesAutoresizingMaskIntoConstraints = false
             toView.leadingAnchor.constraint(equalTo: superView.leadingAnchor).isActive = true
             toView.rightAnchor.constraint(equalTo: superView.rightAnchor).isActive = true
             toView.topAnchor.constraint(equalTo: superView.topAnchor).isActive = true
             toView.bottomAnchor.constraint(equalTo: superView.bottomAnchor).isActive = true
-            NSLog("video preview transition end");
         }
     }
     
@@ -104,12 +100,11 @@ class SceneryViewController: UIViewController {
 extension SceneryViewController: SceneryCapturerOutputDelegate {
      
         func focusDidfinish(at point:CGPoint) {
-            self.backPreview.setBlurOverView(hidden: true, animated: true)
-            self.frontPreView.setBlurOverView(hidden: true, animated: true)
+            self.curPreView?.setBlurOverView(hidden: true, animated: true)
         }
         
         func didOutputSampleBuffer(_ buffer: CMSampleBuffer) {
-              let startTime = clock()
+              //let startTime = clock()
             guard let imageBuffer = CMSampleBufferGetImageBuffer(buffer) else {
                 return;
             }
@@ -152,7 +147,7 @@ extension SceneryViewController: SceneryCapturerOutputDelegate {
                 if self.displayLayer?.isReadyForMoreMediaData ?? false {
                     self.displayLayer?.enqueue(finalBuffer)
                 } else {
-                    NSLog("displayLayer is not ReadyForMoreMediaData %@", self.displayLayer!)
+                    NSLog("displayLayer is not ReadyForMoreMediaData")
                 }
             }
             

@@ -20,14 +20,18 @@ import AVFoundation
         setup()
     }
     
-    public func setBlurOverView(hidden: Bool, animated: Bool) {
+    public func setBlurOverView(hidden: Bool, animated: Bool, completion: ((Bool) -> Void)? = nil) {
         guard animated else {
             self.overlayView.alpha = hidden ? 0 : 1
             return
         }
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: 0.25, animations: {
             self.overlayView.alpha = hidden ? 0 : 1
-        }) { (_) in
+        }) { (complete) in
+            guard let aCompletion = completion else {
+                return
+            }
+            aCompletion(complete)
         }
     }
     
