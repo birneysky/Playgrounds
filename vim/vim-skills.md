@@ -178,4 +178,37 @@ n: normal mode
 v: visual mode
 i: insert mode
 ```
+任何时候都应该使用非递归映射，拯救自己和作者
+
+```
+"将leader映射为,
+let mapleader=','
+
+" jj 映射为 esc 键 ，`^ 表示回到上次编辑的地点, 可以使用:help `^ 查看帮助文档 
+inoremap jj <Esc>`^ 
+
+
+```
+### vim 进阶
+
+[<< 笨方法学 Vimscript >>](http://learnvimscriptthehardway.onefloweroneworld.com)
+
+### vim 插件集散地
+
+- 通过google 来搜索
+```
+keyword: vim file manager plugin
+```
+- [https://vimawesome.com](https://vimawesome.com])
+
+### 插件们
+
+```
+mhinz/vim-startify /// 修改vim 启动界面
+vim-aireline/vim-airline /// 状态栏美化
+yggdroot/indentline /// 正价代码缩进线条
+w0ng/vim-hybrid /// 配色方案
+altercation/vim-colors-solarized /// 配色方案传说对眼睛好
+morhetz/gruvbox /// 配色
+ctrlpvim/ctrlp.vim /// 文件模糊搜索
 ```
