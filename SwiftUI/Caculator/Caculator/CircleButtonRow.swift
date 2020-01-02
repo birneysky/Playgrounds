@@ -20,11 +20,14 @@ struct CircleButtonRow: View {
     }
 }
 
+#if DEBUG
 struct CircleButtonRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            CircleButtonRow()
+            CircleButtonRow().previewDevice("iPhone Xs")
+            .environment(\.colorScheme, .dark)
             CircleButtonRow().previewLayout(.fixed(width: 568, height: 320))
         }
     }
 }
+#endif

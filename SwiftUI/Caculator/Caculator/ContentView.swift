@@ -26,10 +26,11 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ContentView()
-            ContentView().previewDevice("iPhone SE")
-            ContentView().previewDevice("iPad Air 2")
-            ContentView().previewLayout(.fixed(width: 786, height: 414))
+            ContentView().previewDevice("iPhone Xs")
+            .environment(\.colorScheme, .dark)
+//            ContentView().previewDevice("iPhone SE").environment(\.colorScheme, .dark)
+//            ContentView().previewDevice("iPad Air 2")
+//            ContentView().previewLayout(.fixed(width: 786, height: 414)).environment(\.colorScheme, .dark)
         }
     }
 }
