@@ -17,6 +17,8 @@
 		749A2E7E23BA38EE00AF7355 /* ExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A2E7D23BA38EE00AF7355 /* ExamplesTests.swift */; };
 		749A2E8923BA38EE00AF7355 /* ExamplesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A2E8823BA38EE00AF7355 /* ExamplesUITests.swift */; };
 		749A2E9723BA571800AF7355 /* ButtonContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A2E9623BA571800AF7355 /* ButtonContentView.swift */; };
+		B2F2E05B23CC35FB0093EBAA /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F2E05A23CC35FB0093EBAA /* BarView.swift */; };
+		B2F2E05D23CC39430093EBAA /* BarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F2E05C23CC39430093EBAA /* BarContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		749A2E8823BA38EE00AF7355 /* ExamplesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesUITests.swift; sourceTree = "<group>"; };
 		749A2E8A23BA38EE00AF7355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		749A2E9623BA571800AF7355 /* ButtonContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonContentView.swift; sourceTree = "<group>"; };
+		B2F2E05A23CC35FB0093EBAA /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
+		B2F2E05C23CC39430093EBAA /* BarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 				749A2E6823BA38EC00AF7355 /* SceneDelegate.swift */,
 				749A2E6A23BA38EC00AF7355 /* ContentView.swift */,
 				7414F17523BCD27900A5D10C /* Hello.swift */,
+				B2F2E05C23CC39430093EBAA /* BarContentView.swift */,
+				B2F2E05A23CC35FB0093EBAA /* BarView.swift */,
 				749A2E9623BA571800AF7355 /* ButtonContentView.swift */,
 				749A2E6C23BA38ED00AF7355 /* Assets.xcassets */,
 				749A2E7123BA38ED00AF7355 /* LaunchScreen.storyboard */,
@@ -273,6 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2F2E05B23CC35FB0093EBAA /* BarView.swift in Sources */,
+				B2F2E05D23CC39430093EBAA /* BarContentView.swift in Sources */,
 				749A2E6723BA38EC00AF7355 /* AppDelegate.swift in Sources */,
 				749A2E6923BA38EC00AF7355 /* SceneDelegate.swift in Sources */,
 				749A2E9723BA571800AF7355 /* ButtonContentView.swift in Sources */,
