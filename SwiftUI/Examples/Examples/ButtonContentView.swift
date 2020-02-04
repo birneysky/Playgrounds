@@ -29,10 +29,10 @@ struct ButtonContentView: View {
         VStack{
         Image(systemName: systemImageName)
             .imageScale(.large)
-            .foregroundColor(titleColor)
+            //.foregroundColor(titleColor)
             Text(title)
-                .foregroundColor(titleColor)
-        }
+                //.foregroundColor(titleColor)
+        }.foregroundColor(titleColor)
     }
 }
 

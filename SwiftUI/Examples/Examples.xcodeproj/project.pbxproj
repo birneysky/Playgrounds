@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7414F17623BCD27900A5D10C /* Hello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7414F17523BCD27900A5D10C /* Hello.swift */; };
+		7414F17823BFAF0500A5D10C /* CaculatorPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7414F17723BFAF0500A5D10C /* CaculatorPanel.swift */; };
 		749A2E6723BA38EC00AF7355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A2E6623BA38EC00AF7355 /* AppDelegate.swift */; };
 		749A2E6923BA38EC00AF7355 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A2E6823BA38EC00AF7355 /* SceneDelegate.swift */; };
 		749A2E6B23BA38EC00AF7355 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A2E6A23BA38EC00AF7355 /* ContentView.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		7414F17523BCD27900A5D10C /* Hello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hello.swift; sourceTree = "<group>"; };
+		7414F17723BFAF0500A5D10C /* CaculatorPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaculatorPanel.swift; sourceTree = "<group>"; };
 		749A2E6323BA38EB00AF7355 /* Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Examples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		749A2E6623BA38EC00AF7355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		749A2E6823BA38EC00AF7355 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				749A2E6823BA38EC00AF7355 /* SceneDelegate.swift */,
 				749A2E6A23BA38EC00AF7355 /* ContentView.swift */,
 				7414F17523BCD27900A5D10C /* Hello.swift */,
+				7414F17723BFAF0500A5D10C /* CaculatorPanel.swift */,
 				749A2E9623BA571800AF7355 /* ButtonContentView.swift */,
 				749A2E6C23BA38ED00AF7355 /* Assets.xcassets */,
 				749A2E7123BA38ED00AF7355 /* LaunchScreen.storyboard */,
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7414F17823BFAF0500A5D10C /* CaculatorPanel.swift in Sources */,
 				749A2E6723BA38EC00AF7355 /* AppDelegate.swift in Sources */,
 				749A2E6923BA38EC00AF7355 /* SceneDelegate.swift in Sources */,
 				749A2E9723BA571800AF7355 /* ButtonContentView.swift in Sources */,
