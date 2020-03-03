@@ -8,6 +8,9 @@
 
 import SwiftUI
 
+class GlobalEnviroment: ObservableObject {
+    @Published var display = ""
+}
 
 enum CaculatorButtonItem: String {
     case zero, one, two, three, four, five, six, seven, eight, nine
@@ -52,6 +55,7 @@ enum CaculatorButtonItem: String {
 }
 
 struct CaculatorPanel: View {
+    @EnvironmentObject var env: GlobalEnviroment;
     
     let buttonTitles: [[CaculatorButtonItem]] = [
         [.ac, .plusMinus, .percent, .divide],
@@ -67,7 +71,7 @@ struct CaculatorPanel: View {
             VStack (spacing: 12){
                 HStack {
                     Spacer()
-                    Text("42")
+                    Text(env.display)
                         .foregroundColor(.white)
                         .font(.system(size: 64))
                 }.padding()
@@ -76,7 +80,7 @@ struct CaculatorPanel: View {
                     HStack(spacing: 12) {
                         ForEach(row, id: \.self) { item in
                             Button(action: {
-                                
+                                self.env.display = item.title
                             }) {
                                 Text(item.title)
                                 .font(.system(size: 32))
@@ -107,6 +111,6 @@ struct CaculatorPanel: View {
 
 struct TestView_Previews: PreviewProvider {
     static var previews: some View {
-        CaculatorPanel()
+        CaculatorPanel().environmentObject(GlobalEnviroment())
     }
 }
