@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		B20796C823D44A8F00557A9A /* BlockCaptureVarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B20796C723D44A8F00557A9A /* BlockCaptureVarTests.m */; };
 		B235BD3523C5B9FC00302672 /* AVFoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B235BD3423C5B9FC00302672 /* AVFoundationTests.swift */; };
+		B2557E75240E1EBC000F8DC3 /* OCInstanceVarAccessControlTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B2557E74240E1EBC000F8DC3 /* OCInstanceVarAccessControlTest.m */; };
+		B2557E7D240E1F68000F8DC3 /* Object.m in Sources */ = {isa = PBXBuildFile; fileRef = B2557E7B240E1F68000F8DC3 /* Object.m */; };
+		B2557E80240E1F92000F8DC3 /* ObjectA.m in Sources */ = {isa = PBXBuildFile; fileRef = B2557E7F240E1F92000F8DC3 /* ObjectA.m */; };
 		B2694DC32314DF7000A944E5 /* FoundationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2694DC22314DF7000A944E5 /* FoundationTest.swift */; };
 		B2694DC92314E09600A944E5 /* CMTimeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2694DC82314E09600A944E5 /* CMTimeTest.swift */; };
 		B29E225223A0CF5600076D92 /* NSArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B29E225123A0CF5600076D92 /* NSArrayTest.m */; };
@@ -19,6 +22,11 @@
 /* Begin PBXFileReference section */
 		B20796C723D44A8F00557A9A /* BlockCaptureVarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockCaptureVarTests.m; sourceTree = "<group>"; };
 		B235BD3423C5B9FC00302672 /* AVFoundationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationTests.swift; sourceTree = "<group>"; };
+		B2557E74240E1EBC000F8DC3 /* OCInstanceVarAccessControlTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCInstanceVarAccessControlTest.m; sourceTree = "<group>"; };
+		B2557E7B240E1F68000F8DC3 /* Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Object.m; sourceTree = "<group>"; };
+		B2557E7C240E1F68000F8DC3 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
+		B2557E7E240E1F92000F8DC3 /* ObjectA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectA.h; sourceTree = "<group>"; };
+		B2557E7F240E1F92000F8DC3 /* ObjectA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectA.m; sourceTree = "<group>"; };
 		B2694DBF2314DF6F00A944E5 /* FoundationTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoundationTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2694DC22314DF7000A944E5 /* FoundationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationTest.swift; sourceTree = "<group>"; };
 		B2694DC42314DF7000A944E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,6 +49,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B2557E7A240E1F68000F8DC3 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				B2557E7C240E1F68000F8DC3 /* Object.h */,
+				B2557E7B240E1F68000F8DC3 /* Object.m */,
+				B2557E7E240E1F92000F8DC3 /* ObjectA.h */,
+				B2557E7F240E1F92000F8DC3 /* ObjectA.m */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
 		B2694DB42314DEB300A944E5 = {
 			isa = PBXGroup;
 			children = (
@@ -60,12 +79,14 @@
 		B2694DC12314DF7000A944E5 /* FoundationTest */ = {
 			isa = PBXGroup;
 			children = (
+				B2557E7A240E1F68000F8DC3 /* classes */,
 				B2694DC22314DF7000A944E5 /* FoundationTest.swift */,
 				B235BD3423C5B9FC00302672 /* AVFoundationTests.swift */,
 				B2694DC82314E09600A944E5 /* CMTimeTest.swift */,
 				B2B0ED642362D3F100EF1117 /* EliminateWarningTest.m */,
 				B29E225123A0CF5600076D92 /* NSArrayTest.m */,
 				B20796C723D44A8F00557A9A /* BlockCaptureVarTests.m */,
+				B2557E74240E1EBC000F8DC3 /* OCInstanceVarAccessControlTest.m */,
 				B2B0ED662362D79C00EF1117 /* TestObject.h */,
 				B2B0ED672362D79C00EF1117 /* TestObject.m */,
 				B2694DC42314DF7000A944E5 /* Info.plist */,
@@ -146,7 +167,10 @@
 				B2694DC92314E09600A944E5 /* CMTimeTest.swift in Sources */,
 				B29E225223A0CF5600076D92 /* NSArrayTest.m in Sources */,
 				B20796C823D44A8F00557A9A /* BlockCaptureVarTests.m in Sources */,
+				B2557E75240E1EBC000F8DC3 /* OCInstanceVarAccessControlTest.m in Sources */,
 				B235BD3523C5B9FC00302672 /* AVFoundationTests.swift in Sources */,
+				B2557E80240E1F92000F8DC3 /* ObjectA.m in Sources */,
+				B2557E7D240E1F68000F8DC3 /* Object.m in Sources */,
 				B2B0ED682362D79D00EF1117 /* TestObject.m in Sources */,
 				B2694DC32314DF7000A944E5 /* FoundationTest.swift in Sources */,
 			);
