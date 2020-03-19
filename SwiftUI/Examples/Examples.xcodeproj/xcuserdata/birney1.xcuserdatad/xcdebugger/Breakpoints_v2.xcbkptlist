@@ -3,4 +3,150 @@
    uuid = "0411678B-40C9-4881-BC97-97FA6C6F9A25"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "482E6F88-13E7-4A95-9C7C-F2BDA2FE03E3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Examples/SignInWithAppleBtn.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "482E6F88-13E7-4A95-9C7C-F2BDA2FE03E3 - 4db311bab0502b9c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Examples.SignInWithAppleView.makeCoordinator() -&gt; Examples.SignInWithAppleView.Coordinator"
+                  moduleName = "Examples"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/birney1/mysource/source_git/Playgrounds/SwiftUI/Examples/Examples/SignInWithAppleBtn.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  uuid = "482E6F88-13E7-4A95-9C7C-F2BDA2FE03E3 - 7ace6d6ce4eaa171"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in Examples_PreviewReplacement_SignInWithAppleBtn_6):Examples.SignInWithAppleView.(__preview__makeCoordinator in _24E298524744D6FE38BE9D1CD8F38318)() -&gt; Examples.SignInWithAppleView.Coordinator"
+                  moduleName = "SignInWithAppleBtn.6.preview-thunk.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/birney1/mysource/source_git/Playgrounds/SwiftUI/Examples/Examples/SignInWithAppleBtn.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "11">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E1385515-4AF5-4DD9-A75E-856CE751C924"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Examples/SignInWithAppleBtn.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "E1385515-4AF5-4DD9-A75E-856CE751C924 - 7140071e22383556"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Examples.SignInWithAppleView.makeUIView(context: SwiftUI.UIViewRepresentableContext&lt;Examples.SignInWithAppleView&gt;) -&gt; __C.ASAuthorizationAppleIDButton"
+                  moduleName = "Examples"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/birney1/mysource/source_git/Playgrounds/SwiftUI/Examples/Examples/SignInWithAppleBtn.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "163">
+               </Location>
+               <Location
+                  uuid = "E1385515-4AF5-4DD9-A75E-856CE751C924 - 2521b30eaae9c9c5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in Examples_PreviewReplacement_SignInWithAppleBtn_6):Examples.SignInWithAppleView.(__preview__makeUIView in _24E298524744D6FE38BE9D1CD8F38318)(context: SwiftUI.UIViewRepresentableContext&lt;Examples.SignInWithAppleView&gt;) -&gt; __C.ASAuthorizationAppleIDButton"
+                  moduleName = "SignInWithAppleBtn.6.preview-thunk.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/birney1/mysource/source_git/Playgrounds/SwiftUI/Examples/Examples/SignInWithAppleBtn.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "91">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E2D414BD-E5A5-47CB-AD81-1819FA035170"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Examples/SignInWithAppleBtn.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "E2D414BD-E5A5-47CB-AD81-1819FA035170 - d8daec1739a19a92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Examples.SignInWithAppleView.Coordinator.didTapButton() -&gt; ()"
+                  moduleName = "Examples"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/birney1/mysource/source_git/Playgrounds/SwiftUI/Examples/Examples/SignInWithAppleBtn.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "E2D414BD-E5A5-47CB-AD81-1819FA035170 - 4f0c0e28b56654e3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static (extension in Examples_PreviewReplacement_SignInWithAppleBtn_6):Examples.SignInWithAppleBtn_Previews.(__preview__previews in _24E298524744D6FE38BE9D1CD8F38318).getter : some"
+                  moduleName = "SignInWithAppleBtn.6.preview-thunk.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/birney1/mysource/source_git/Playgrounds/SwiftUI/Examples/Examples/SignInWithAppleBtn.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -125,4 +125,43 @@ b.y
 
 
 
+struct User {
+    @UpperCased var name: String
+}
 
+let user = User(name: "alfianlo")
+print(user.name)
+
+struct Form {
+    @Ranged(min: 17, max: 65) var age: Int = 0
+}
+
+var form = Form()
+
+form.age = 200
+form.age = 2
+form.age = 20
+
+struct Form2 {
+    @Ranged var age: Int
+}
+
+let form2 = Form2(age: Ranged(wrappedValue: 3, min: 0, max: 10))
+
+let form2_1 = Form2(age: .init(wrappedValue: 3, min: 0, max: 90))
+
+struct Form3 {
+    @ISO8601DateFormatted var lastLoginAt: Date
+}
+
+let form3_0 = Form3(lastLoginAt: Date())
+print(form3_0.$lastLoginAt)
+
+struct HomeViewModel {
+    @Localizable var headerTitle: String
+    @Localizable var headerSubtitle: String
+}
+
+let homeModel = HomeViewModel(headerTitle: "a", headerSubtitle: "b")
+print(homeModel.headerTitle)
+print(homeModel.headerSubtitle)

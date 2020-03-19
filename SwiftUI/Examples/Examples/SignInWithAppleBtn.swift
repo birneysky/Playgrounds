@@ -12,15 +12,23 @@ import AuthenticationServices
 struct SignInWithAppleBtn: View {
     var body: some View {
         SignInWithAppleView()
-        .frame(width: 200, height: 50)
+        .frame(width: 200, height: 44)
     }
 }
 
 /// https://medium.com/better-programming/swiftui-sign-in-with-apple-c1e70ccb2a71
 struct SignInWithAppleView: UIViewRepresentable {
+    func makeCoordinator() -> Self.Coordinator {
+        Coordinator()
+    }
+    
     func makeUIView(context: UIViewRepresentableContext<SignInWithAppleView>) -> ASAuthorizationAppleIDButton {
-        let button = ASAuthorizationAppleIDButton(authorizationButtonType: .signIn, authorizationButtonStyle: .whiteOutline)
+        let button = ASAuthorizationAppleIDButton(authorizationButtonType: .signIn,
+                                                  authorizationButtonStyle: .whiteOutline)
         button.cornerRadius = 10
+        button.addTarget(context.coordinator,
+                         action: #selector(Coordinator.didTapButton),
+                         for: .touchUpInside);
         return button
     }
     
@@ -31,7 +39,11 @@ struct SignInWithAppleView: UIViewRepresentable {
     typealias UIViewType = ASAuthorizationAppleIDButton
     
     
-    
+    class Coordinator: NSObject {
+        @objc func didTapButton() {
+            
+        }
+    }
 }
 
 struct SignInWithAppleBtn_Previews: PreviewProvider {
