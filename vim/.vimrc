@@ -12,6 +12,10 @@ set ai
 set hlsearch
 "颜色主题
 "colorscheme hybrid
+"防止乱码
+ 16  set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+ 17  set termencoding=utf-8
+ 18  set encoding=utf-8
 
 " i 表示 insert 模式, nore 表示 no recursive map 表示映射
 
