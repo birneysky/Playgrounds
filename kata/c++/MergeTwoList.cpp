@@ -1,35 +1,4 @@
-#include<vector>
-#include<iostream>
-#include<sstream>
-
-class ListNode {
-public:
-	int val;
-	ListNode* next;
-	ListNode(int x): val(x), next(nullptr) {}
-	ListNode(): val(0), next(nullptr) {}
-	ListNode(const std::vector<int>& nums) {
-		ListNode* pHead = this;
-		for(int i = 0; i < nums.size(); ++ i) {
-			pHead->val = nums[i];
-			if ( i != nums.size() - 1 ) {
-				pHead->next = new ListNode();
-			}
-		}
-	}
-
-	friend std::ostream& operator << (std::ostream& os, const ListNode* head) {
-		std::stringstream sstream;
-		const ListNode* node = head;
-		while (node != nullptr) {
-			sstream << node->val << "-->";
-			node =node->next;
-		}
-		sstream << "nullptr" << std::endl;
-		os << sstream.str();
-		return os;
-	}
-};
+#include "ListNode.hpp"
 
 class Solution {
 public:
@@ -61,5 +30,15 @@ int main(int argc, char* argv[]) {
 	std::vector<int> nums1{1, 2, 4};
 	ListNode* l1 = new ListNode(nums1);
 	std::cout << l1;
+
+	std::vector<int> nums2{1, 3, 4};
+	ListNode* l2 = new ListNode(nums2);
+	std::cout << l2;
+
+	Solution s;
+	ListNode* head = s.MergeTwoLists(l1, l2);
+	std::cout << head;
+	delete l1;
+	delete l2;
 }
 
