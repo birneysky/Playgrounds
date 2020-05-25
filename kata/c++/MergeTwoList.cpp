@@ -1,5 +1,8 @@
 #include "ListNode.hpp"
 
+/// input: 1->2->4->null
+///        1->3->4->null
+/// output: 1->1->2->3->4->null
 class Solution {
 public:
 	ListNode* MergeTwoLists(ListNode* l1, ListNode* l2) {
