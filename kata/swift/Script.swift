@@ -41,3 +41,25 @@ guard status == 0, let msg = message else {
 	fatalError()
 }
 print("status:\(status), \(msg)")
+
+
+var version: String = "0.0.1 beta"
+var configuration = "Release"
+var arch = "arm64"
+
+let arguments = CommandLine.arguments
+let argc = Int(CommandLine.argc)
+for i in stride(from: 1, to: argc, by: 2) {
+	let option = arguments[i]
+	let parameter = arguments[i+1]
+	if option == "-version" {
+		version = parameter
+	} else if option == "-configuration" {
+		configuration = parameter
+	} else if option == "-arch" {
+		arch = parameter
+	} else {
+		fatalError("option \"\(option)\" not supported")
+	}
+}
+print("argv:\(arguments)")
