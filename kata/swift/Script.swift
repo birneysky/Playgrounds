@@ -2,6 +2,7 @@ import Foundation
 /// https://github.com/kareman/SwiftShell
 /// https://blog.csdn.net/u011865919/article/details/89415390
 /// swift -sdk $(xcrun --show-sdk-path --sdk macosx) Script.swift
+/// https://stackoverflow.com/questions/43331019/how-to-determine-configuration-in-swift-code-using-swift-package-manager
 
 @discardableResult
 func run(_ command:String, arguments:[String]? = nil) -> (Int32) {
