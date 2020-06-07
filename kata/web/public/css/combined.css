@@ -1,0 +1,24 @@
+@charset "UTF-8";
+@import "style.css";
+
+a {
+    color: white;
+    background: grey;
+    text-decoration: none;
+    padding: 2px;
+}
+a.myclass {
+    color: black;
+    background: cornflowerblue;
+}
+p {
+    color: white;
+    background: grey;
+    border: medium solid black;
+    width: 30cm;
+    font-size: 24pt;
+}
+span {
+    border: medium black dashed;
+    padding: 10px ;
+}
