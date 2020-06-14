@@ -1,0 +1,14 @@
+li {
+    list-style-type: square;  
+}
+
+.special {
+    color: orange;
+    font-weight: bold;
+}
+
+li.special,
+span.special {
+    color: orange;
+    font-weight: bold;
+}
