@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		746FFC1F24AE2F4A00988ED8 /* BinarySearchTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC1E24AE2F4A00988ED8 /* BinarySearchTest.mm */; };
+		746FFC2424AE2F9500988ED8 /* BinarySearch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC1224AE2CF700988ED8 /* BinarySearch.cpp */; };
+		746FFC2E24AE315F00988ED8 /* DuplicateTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC2D24AE315F00988ED8 /* DuplicateTest.mm */; };
+		746FFC3024AE326000988ED8 /* EmptyTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC2F24AE326000988ED8 /* EmptyTest.mm */; };
+		746FFC3224AE32D500988ED8 /* FindMatrixTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC3124AE32D500988ED8 /* FindMatrixTest.mm */; };
+		746FFC3424AE331F00988ED8 /* MergeTwoListsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC3324AE331F00988ED8 /* MergeTwoListsTest.mm */; };
+		746FFC3624AE33F900988ED8 /* MinStackTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC3524AE33F900988ED8 /* MinStackTest.mm */; };
+		746FFC3824AE34EB00988ED8 /* PrintListReverseinglyTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC3724AE34EB00988ED8 /* PrintListReverseinglyTest.mm */; };
+		746FFC3A24AE353A00988ED8 /* ReplaceBlankTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC3924AE353A00988ED8 /* ReplaceBlankTest.mm */; };
+		746FFC3C24AE356C00988ED8 /* ReverseListTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC3B24AE356C00988ED8 /* ReverseListTest.mm */; };
+		746FFC3E24AE358C00988ED8 /* ReverseSentenceTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC3D24AE358C00988ED8 /* ReverseSentenceTest.mm */; };
+		746FFC3F24AE383D00988ED8 /* Duplicate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC0124AE2C3000988ED8 /* Duplicate.cpp */; };
+		746FFC4024AE383D00988ED8 /* Empty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 746FFBFE24AE2C3000988ED8 /* Empty.cpp */; };
+		746FFC4124AE383D00988ED8 /* FindMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC0324AE2C3000988ED8 /* FindMatrix.cpp */; };
+		746FFC4224AE383D00988ED8 /* ListNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 746FFBFF24AE2C3000988ED8 /* ListNode.cpp */; };
+		746FFC4324AE383D00988ED8 /* MergeTwoList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC0424AE2C3000988ED8 /* MergeTwoList.cpp */; };
+		746FFC4424AE383D00988ED8 /* MinStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC0224AE2C3000988ED8 /* MinStack.cpp */; };
+		746FFC4524AE383D00988ED8 /* PrintListReversingly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 746FFBFB24AE2C3000988ED8 /* PrintListReversingly.cpp */; };
+		746FFC4624AE383D00988ED8 /* ReplaceBlank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC0624AE2C3000988ED8 /* ReplaceBlank.cpp */; };
+		746FFC4724AE383D00988ED8 /* ReverseList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC0524AE2C3000988ED8 /* ReverseList.cpp */; };
+		746FFC4824AE383D00988ED8 /* ReverseSentence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 746FFBFC24AE2C3000988ED8 /* ReverseSentence.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		746FFBFB24AE2C3000988ED8 /* PrintListReversingly.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PrintListReversingly.cpp; sourceTree = "<group>"; };
+		746FFBFC24AE2C3000988ED8 /* ReverseSentence.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReverseSentence.cpp; sourceTree = "<group>"; };
+		746FFBFE24AE2C3000988ED8 /* Empty.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Empty.cpp; sourceTree = "<group>"; };
+		746FFBFF24AE2C3000988ED8 /* ListNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ListNode.cpp; sourceTree = "<group>"; };
+		746FFC0024AE2C3000988ED8 /* ListNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ListNode.hpp; sourceTree = "<group>"; };
+		746FFC0124AE2C3000988ED8 /* Duplicate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Duplicate.cpp; sourceTree = "<group>"; };
+		746FFC0224AE2C3000988ED8 /* MinStack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MinStack.cpp; sourceTree = "<group>"; };
+		746FFC0324AE2C3000988ED8 /* FindMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FindMatrix.cpp; sourceTree = "<group>"; };
+		746FFC0424AE2C3000988ED8 /* MergeTwoList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MergeTwoList.cpp; sourceTree = "<group>"; };
+		746FFC0524AE2C3000988ED8 /* ReverseList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReverseList.cpp; sourceTree = "<group>"; };
+		746FFC0624AE2C3000988ED8 /* ReplaceBlank.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReplaceBlank.cpp; sourceTree = "<group>"; };
+		746FFC1224AE2CF700988ED8 /* BinarySearch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BinarySearch.cpp; sourceTree = "<group>"; };
+		746FFC1324AE2CF700988ED8 /* BinarySearch.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinarySearch.hpp; sourceTree = "<group>"; };
+		746FFC1724AE2F2300988ED8 /* Duplicate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Duplicate.hpp; sourceTree = "<group>"; };
+		746FFC1C24AE2F4A00988ED8 /* KataTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KataTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		746FFC1E24AE2F4A00988ED8 /* BinarySearchTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BinarySearchTest.mm; sourceTree = "<group>"; };
+		746FFC2024AE2F4A00988ED8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		746FFC2524AE2FFB00988ED8 /* Empty.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Empty.hpp; sourceTree = "<group>"; };
+		746FFC2624AE301100988ED8 /* FindMatrix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FindMatrix.hpp; sourceTree = "<group>"; };
+		746FFC2724AE303900988ED8 /* MergeTwoList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MergeTwoList.hpp; sourceTree = "<group>"; };
+		746FFC2824AE305900988ED8 /* MinStack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MinStack.hpp; sourceTree = "<group>"; };
+		746FFC2924AE306E00988ED8 /* PrintListReverseingly.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PrintListReverseingly.hpp; sourceTree = "<group>"; };
+		746FFC2A24AE308F00988ED8 /* ReplaceBlank.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ReplaceBlank.hpp; sourceTree = "<group>"; };
+		746FFC2B24AE30AE00988ED8 /* ReverseList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ReverseList.hpp; sourceTree = "<group>"; };
+		746FFC2C24AE30BF00988ED8 /* ReverseSentence.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ReverseSentence.hpp; sourceTree = "<group>"; };
+		746FFC2D24AE315F00988ED8 /* DuplicateTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DuplicateTest.mm; sourceTree = "<group>"; };
+		746FFC2F24AE326000988ED8 /* EmptyTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = EmptyTest.mm; sourceTree = "<group>"; };
+		746FFC3124AE32D500988ED8 /* FindMatrixTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FindMatrixTest.mm; sourceTree = "<group>"; };
+		746FFC3324AE331F00988ED8 /* MergeTwoListsTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MergeTwoListsTest.mm; sourceTree = "<group>"; };
+		746FFC3524AE33F900988ED8 /* MinStackTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MinStackTest.mm; sourceTree = "<group>"; };
+		746FFC3724AE34EB00988ED8 /* PrintListReverseinglyTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PrintListReverseinglyTest.mm; sourceTree = "<group>"; };
+		746FFC3924AE353A00988ED8 /* ReplaceBlankTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ReplaceBlankTest.mm; sourceTree = "<group>"; };
+		746FFC3B24AE356C00988ED8 /* ReverseListTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ReverseListTest.mm; sourceTree = "<group>"; };
+		746FFC3D24AE358C00988ED8 /* ReverseSentenceTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ReverseSentenceTest.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		746FFC1924AE2F4A00988ED8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		746FFBE524AE2B2100988ED8 = {
+			isa = PBXGroup;
+			children = (
+				746FFC1324AE2CF700988ED8 /* BinarySearch.hpp */,
+				746FFC1224AE2CF700988ED8 /* BinarySearch.cpp */,
+				746FFC0124AE2C3000988ED8 /* Duplicate.cpp */,
+				746FFC1724AE2F2300988ED8 /* Duplicate.hpp */,
+				746FFBFE24AE2C3000988ED8 /* Empty.cpp */,
+				746FFC2524AE2FFB00988ED8 /* Empty.hpp */,
+				746FFC0324AE2C3000988ED8 /* FindMatrix.cpp */,
+				746FFC2624AE301100988ED8 /* FindMatrix.hpp */,
+				746FFBFF24AE2C3000988ED8 /* ListNode.cpp */,
+				746FFC0024AE2C3000988ED8 /* ListNode.hpp */,
+				746FFC0424AE2C3000988ED8 /* MergeTwoList.cpp */,
+				746FFC2724AE303900988ED8 /* MergeTwoList.hpp */,
+				746FFC0224AE2C3000988ED8 /* MinStack.cpp */,
+				746FFC2824AE305900988ED8 /* MinStack.hpp */,
+				746FFBFB24AE2C3000988ED8 /* PrintListReversingly.cpp */,
+				746FFC2924AE306E00988ED8 /* PrintListReverseingly.hpp */,
+				746FFC0624AE2C3000988ED8 /* ReplaceBlank.cpp */,
+				746FFC2A24AE308F00988ED8 /* ReplaceBlank.hpp */,
+				746FFC2B24AE30AE00988ED8 /* ReverseList.hpp */,
+				746FFC0524AE2C3000988ED8 /* ReverseList.cpp */,
+				746FFC2C24AE30BF00988ED8 /* ReverseSentence.hpp */,
+				746FFBFC24AE2C3000988ED8 /* ReverseSentence.cpp */,
+				746FFC1D24AE2F4A00988ED8 /* KataTest */,
+				746FFBF124AE2BC600988ED8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		746FFBF124AE2BC600988ED8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				746FFC1C24AE2F4A00988ED8 /* KataTest.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		746FFC1D24AE2F4A00988ED8 /* KataTest */ = {
+			isa = PBXGroup;
+			children = (
+				746FFC1E24AE2F4A00988ED8 /* BinarySearchTest.mm */,
+				746FFC2D24AE315F00988ED8 /* DuplicateTest.mm */,
+				746FFC2F24AE326000988ED8 /* EmptyTest.mm */,
+				746FFC3124AE32D500988ED8 /* FindMatrixTest.mm */,
+				746FFC3324AE331F00988ED8 /* MergeTwoListsTest.mm */,
+				746FFC3524AE33F900988ED8 /* MinStackTest.mm */,
+				746FFC3724AE34EB00988ED8 /* PrintListReverseinglyTest.mm */,
+				746FFC3924AE353A00988ED8 /* ReplaceBlankTest.mm */,
+				746FFC3B24AE356C00988ED8 /* ReverseListTest.mm */,
+				746FFC3D24AE358C00988ED8 /* ReverseSentenceTest.mm */,
+				746FFC2024AE2F4A00988ED8 /* Info.plist */,
+			);
+			path = KataTest;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		746FFC1B24AE2F4A00988ED8 /* KataTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 746FFC2124AE2F4A00988ED8 /* Build configuration list for PBXNativeTarget "KataTest" */;
+			buildPhases = (
+				746FFC1824AE2F4A00988ED8 /* Sources */,
+				746FFC1924AE2F4A00988ED8 /* Frameworks */,
+				746FFC1A24AE2F4A00988ED8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KataTest;
+			productName = KataTest;
+			productReference = 746FFC1C24AE2F4A00988ED8 /* KataTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		746FFBE624AE2B2100988ED8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1150;
+				TargetAttributes = {
+					746FFC1B24AE2F4A00988ED8 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 746FFBE924AE2B2100988ED8 /* Build configuration list for PBXProject "kata" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 746FFBE524AE2B2100988ED8;
+			productRefGroup = 746FFBF124AE2BC600988ED8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				746FFC1B24AE2F4A00988ED8 /* KataTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		746FFC1A24AE2F4A00988ED8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		746FFC1824AE2F4A00988ED8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				746FFC3F24AE383D00988ED8 /* Duplicate.cpp in Sources */,
+				746FFC4024AE383D00988ED8 /* Empty.cpp in Sources */,
+				746FFC4124AE383D00988ED8 /* FindMatrix.cpp in Sources */,
+				746FFC4224AE383D00988ED8 /* ListNode.cpp in Sources */,
+				746FFC4324AE383D00988ED8 /* MergeTwoList.cpp in Sources */,
+				746FFC4424AE383D00988ED8 /* MinStack.cpp in Sources */,
+				746FFC4524AE383D00988ED8 /* PrintListReversingly.cpp in Sources */,
+				746FFC4624AE383D00988ED8 /* ReplaceBlank.cpp in Sources */,
+				746FFC4724AE383D00988ED8 /* ReverseList.cpp in Sources */,
+				746FFC4824AE383D00988ED8 /* ReverseSentence.cpp in Sources */,
+				746FFC3E24AE358C00988ED8 /* ReverseSentenceTest.mm in Sources */,
+				746FFC2424AE2F9500988ED8 /* BinarySearch.cpp in Sources */,
+				746FFC3024AE326000988ED8 /* EmptyTest.mm in Sources */,
+				746FFC3624AE33F900988ED8 /* MinStackTest.mm in Sources */,
+				746FFC3A24AE353A00988ED8 /* ReplaceBlankTest.mm in Sources */,
+				746FFC3C24AE356C00988ED8 /* ReverseListTest.mm in Sources */,
+				746FFC3224AE32D500988ED8 /* FindMatrixTest.mm in Sources */,
+				746FFC2E24AE315F00988ED8 /* DuplicateTest.mm in Sources */,
+				746FFC1F24AE2F4A00988ED8 /* BinarySearchTest.mm in Sources */,
+				746FFC3824AE34EB00988ED8 /* PrintListReverseinglyTest.mm in Sources */,
+				746FFC3424AE331F00988ED8 /* MergeTwoListsTest.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		746FFBEA24AE2B2100988ED8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		746FFBEB24AE2B2100988ED8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		746FFC2224AE2F4A00988ED8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 9CVMN4UZK4;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = KataTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = grocery.tech.cn.KataTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		746FFC2324AE2F4A00988ED8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9CVMN4UZK4;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = KataTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = grocery.tech.cn.KataTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		746FFBE924AE2B2100988ED8 /* Build configuration list for PBXProject "kata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				746FFBEA24AE2B2100988ED8 /* Debug */,
+				746FFBEB24AE2B2100988ED8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		746FFC2124AE2F4A00988ED8 /* Build configuration list for PBXNativeTarget "KataTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				746FFC2224AE2F4A00988ED8 /* Debug */,
+				746FFC2324AE2F4A00988ED8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 746FFBE624AE2B2100988ED8 /* Project object */;
+}

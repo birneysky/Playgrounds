@@ -15,12 +15,6 @@ ListNode* ReverseList(ListNode* pHead) {
 }
 
 
-int main(int argc, char* argv[]) {
-	std::vector<int> nums1{1, 2, 4, 5, 6, 7, 9};
-	ListNode* l1 = new ListNode(nums1);
-	std::cout << l1 << std::endl;
-	ListNode* l2 = ReverseList(l1);
-	std::cout << l2;
-}
+
 
 

@@ -42,12 +42,3 @@ char* ReverseSentence(char* pData) {
 }
 
 
-int main(int argc, char* argv[]) {
-//	ReverseSentence("abc");
-	char pBegin[] = "are you ok";
-	ReverseSentence(pBegin);
-	std::cout << pBegin << std::endl;
-	char pBegin2[] = "I have a very import annoucement to make";
-	ReverseSentence(pBegin2);
-	std::cout << pBegin2 << std::endl;
-}
