@@ -7,6 +7,7 @@
 
 #import <XCTest/XCTest.h>
 #include "ReplaceBlank.hpp"
+#include <iostream>
 
 @interface ReplaceBlankTest : XCTestCase
 
@@ -25,6 +26,10 @@
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    char string[100] = "we are happy";
+    ReplaceBlank(string, 100);
+    XCTAssertTrue(string, "we%20are%20happy");
+    std::cout << string << std::endl;
 }
 
 - (void)testPerformanceExample {
