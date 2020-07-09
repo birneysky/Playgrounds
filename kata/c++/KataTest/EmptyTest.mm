@@ -38,6 +38,14 @@
     XCTAssertEqual(sizeof(class VEmpty), 8);
 }
 
+- (void)testChordCount {
+    int result = ChordCount(12);
+    XCTAssertEqual(result, 10);
+    
+    result = ChordCount(1000);
+    XCTAssertEqual(result, 1986);
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
