@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		744F0FF524BE1FAF00D50740 /* ConstructTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 744F0FF324BE1FAF00D50740 /* ConstructTree.cpp */; };
+		744F0FF824BE1FD700D50740 /* TreeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 744F0FF624BE1FD700D50740 /* TreeNode.cpp */; };
 		746FFC1F24AE2F4A00988ED8 /* BinarySearchTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC1E24AE2F4A00988ED8 /* BinarySearchTest.mm */; };
 		746FFC2424AE2F9500988ED8 /* BinarySearch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC1224AE2CF700988ED8 /* BinarySearch.cpp */; };
 		746FFC2E24AE315F00988ED8 /* DuplicateTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC2D24AE315F00988ED8 /* DuplicateTest.mm */; };
@@ -31,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		744F0FF324BE1FAF00D50740 /* ConstructTree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ConstructTree.cpp; sourceTree = "<group>"; };
+		744F0FF424BE1FAF00D50740 /* ConstructTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ConstructTree.hpp; sourceTree = "<group>"; };
+		744F0FF624BE1FD700D50740 /* TreeNode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TreeNode.cpp; sourceTree = "<group>"; };
+		744F0FF724BE1FD700D50740 /* TreeNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TreeNode.hpp; sourceTree = "<group>"; };
 		746FFBFB24AE2C3000988ED8 /* PrintListReversingly.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PrintListReversingly.cpp; sourceTree = "<group>"; };
 		746FFBFC24AE2C3000988ED8 /* ReverseSentence.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReverseSentence.cpp; sourceTree = "<group>"; };
 		746FFBFE24AE2C3000988ED8 /* Empty.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Empty.cpp; sourceTree = "<group>"; };
@@ -90,6 +96,8 @@
 				746FFC0324AE2C3000988ED8 /* FindMatrix.cpp */,
 				746FFC2624AE301100988ED8 /* FindMatrix.hpp */,
 				746FFBFF24AE2C3000988ED8 /* ListNode.cpp */,
+				744F0FF624BE1FD700D50740 /* TreeNode.cpp */,
+				744F0FF724BE1FD700D50740 /* TreeNode.hpp */,
 				746FFC0024AE2C3000988ED8 /* ListNode.hpp */,
 				746FFC0424AE2C3000988ED8 /* MergeTwoList.cpp */,
 				746FFC2724AE303900988ED8 /* MergeTwoList.hpp */,
@@ -103,6 +111,8 @@
 				746FFC0524AE2C3000988ED8 /* ReverseList.cpp */,
 				746FFC2C24AE30BF00988ED8 /* ReverseSentence.hpp */,
 				746FFBFC24AE2C3000988ED8 /* ReverseSentence.cpp */,
+				744F0FF324BE1FAF00D50740 /* ConstructTree.cpp */,
+				744F0FF424BE1FAF00D50740 /* ConstructTree.hpp */,
 				746FFC1D24AE2F4A00988ED8 /* KataTest */,
 				746FFBF124AE2BC600988ED8 /* Products */,
 			);
@@ -201,7 +211,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				746FFC3F24AE383D00988ED8 /* Duplicate.cpp in Sources */,
+				744F0FF524BE1FAF00D50740 /* ConstructTree.cpp in Sources */,
 				746FFC4024AE383D00988ED8 /* Empty.cpp in Sources */,
+				744F0FF824BE1FD700D50740 /* TreeNode.cpp in Sources */,
 				746FFC4124AE383D00988ED8 /* FindMatrix.cpp in Sources */,
 				746FFC4224AE383D00988ED8 /* ListNode.cpp in Sources */,
 				746FFC4324AE383D00988ED8 /* MergeTwoList.cpp in Sources */,
