@@ -13,7 +13,7 @@ enum CalculatorButtonItem {
     enum Op: String {
         case plus = "+"
         case minus = "-"
-        case multipy = "×"
+        case multiply = "×"
         case divide = "÷"
         case equal = "="
     }

@@ -11,6 +11,7 @@ import SwiftUI
 struct CalculatorButtonRow: View {
     static let itemSpace: CGFloat = 12
     let row: [CalculatorButtonItem]
+    @Binding var brain: CalculatorBrain
     var body: some View {
         //GeometryReader { geometry in
             HStack(spacing: Self.itemSpace) {
@@ -29,6 +30,7 @@ struct CalculatorButtonRow: View {
                                             backgroundName: item.backgroundColorName)
                     {
                         print("button: \(item.title)")
+                        self.brain = self.brain.apply(item: item)
                     }
                 }
             }
@@ -38,6 +40,6 @@ struct CalculatorButtonRow: View {
 
 struct CalculatorButtonRow_Previews: PreviewProvider {
     static var previews: some View {
-        CalculatorButtonRow(row: [.digit(1), .digit(2), .digit(3), .op(.plus)])
+        CalculatorButtonRow(row: [.digit(1), .digit(2), .digit(3), .op(.plus)], brain: .constant(.left("123")))
     }
 }
