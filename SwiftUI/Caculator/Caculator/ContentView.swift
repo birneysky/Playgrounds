@@ -9,21 +9,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var brain: CalculatorBrain = .left("0")
+    //@State private var brain: CalculatorBrain = .left("0")
+    @ObservedObject var model = CaculatorModel()
     var body: some View {
         VStack(spacing: 8) {
             Spacer()
-            Text(brain.output)
-                .font(.system(size: 76))
+            Text(model.brain.output)
+                .font(.system(size: 48))
                 .minimumScaleFactor(0.5)
                 .padding([.leading, .trailing], 24)
                 .lineLimit(5)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                 .foregroundColor(.black)
-            Button("Test") {    // 2
-                self.brain = .left("1.23")
-            }
-            CalculatorButtonPad(brain: $brain)
+            CalculatorButtonPad(brain: $model.brain)
                 .padding(.bottom)
         }
     }
