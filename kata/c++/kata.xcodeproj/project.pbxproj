@@ -30,6 +30,12 @@
 		746FFC4624AE383D00988ED8 /* ReplaceBlank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC0624AE2C3000988ED8 /* ReplaceBlank.cpp */; };
 		746FFC4724AE383D00988ED8 /* ReverseList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC0524AE2C3000988ED8 /* ReverseList.cpp */; };
 		746FFC4824AE383D00988ED8 /* ReverseSentence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 746FFBFC24AE2C3000988ED8 /* ReverseSentence.cpp */; };
+		74717DF124E8301300C5417A /* MaxProfit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74717DEF24E8301300C5417A /* MaxProfit.cpp */; };
+		74717DF324E830C000C5417A /* MaxProfit.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74717DF224E830C000C5417A /* MaxProfit.mm */; };
+		74F4069824E839770070D3A3 /* LengthOfLongestSubstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74F4069624E839770070D3A3 /* LengthOfLongestSubstring.cpp */; };
+		74F4069A24E84A410070D3A3 /* LengthOfLongestSubstring.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74F4069924E84A410070D3A3 /* LengthOfLongestSubstring.mm */; };
+		74F406A024E84FFF0070D3A3 /* ClimbStairs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74F4069E24E84FFF0070D3A3 /* ClimbStairs.cpp */; };
+		74F406A224E851660070D3A3 /* ClimbStairs.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74F406A124E851660070D3A3 /* ClimbStairs.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +77,15 @@
 		746FFC3924AE353A00988ED8 /* ReplaceBlankTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ReplaceBlankTest.mm; sourceTree = "<group>"; };
 		746FFC3B24AE356C00988ED8 /* ReverseListTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ReverseListTest.mm; sourceTree = "<group>"; };
 		746FFC3D24AE358C00988ED8 /* ReverseSentenceTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ReverseSentenceTest.mm; sourceTree = "<group>"; };
+		74717DEF24E8301300C5417A /* MaxProfit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MaxProfit.cpp; sourceTree = "<group>"; };
+		74717DF024E8301300C5417A /* MaxProfit.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MaxProfit.hpp; sourceTree = "<group>"; };
+		74717DF224E830C000C5417A /* MaxProfit.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MaxProfit.mm; sourceTree = "<group>"; };
+		74F4069624E839770070D3A3 /* LengthOfLongestSubstring.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LengthOfLongestSubstring.cpp; sourceTree = "<group>"; };
+		74F4069724E839770070D3A3 /* LengthOfLongestSubstring.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LengthOfLongestSubstring.hpp; sourceTree = "<group>"; };
+		74F4069924E84A410070D3A3 /* LengthOfLongestSubstring.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LengthOfLongestSubstring.mm; sourceTree = "<group>"; };
+		74F4069E24E84FFF0070D3A3 /* ClimbStairs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ClimbStairs.cpp; sourceTree = "<group>"; };
+		74F4069F24E84FFF0070D3A3 /* ClimbStairs.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ClimbStairs.hpp; sourceTree = "<group>"; };
+		74F406A124E851660070D3A3 /* ClimbStairs.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ClimbStairs.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +126,12 @@
 				746FFC0524AE2C3000988ED8 /* ReverseList.cpp */,
 				746FFC2C24AE30BF00988ED8 /* ReverseSentence.hpp */,
 				746FFBFC24AE2C3000988ED8 /* ReverseSentence.cpp */,
+				74717DEF24E8301300C5417A /* MaxProfit.cpp */,
+				74717DF024E8301300C5417A /* MaxProfit.hpp */,
+				74F4069624E839770070D3A3 /* LengthOfLongestSubstring.cpp */,
+				74F4069724E839770070D3A3 /* LengthOfLongestSubstring.hpp */,
+				74F4069E24E84FFF0070D3A3 /* ClimbStairs.cpp */,
+				74F4069F24E84FFF0070D3A3 /* ClimbStairs.hpp */,
 				744F0FF324BE1FAF00D50740 /* ConstructTree.cpp */,
 				744F0FF424BE1FAF00D50740 /* ConstructTree.hpp */,
 				746FFC1D24AE2F4A00988ED8 /* KataTest */,
@@ -136,7 +157,10 @@
 				746FFC3324AE331F00988ED8 /* MergeTwoListsTest.mm */,
 				746FFC3524AE33F900988ED8 /* MinStackTest.mm */,
 				746FFC3724AE34EB00988ED8 /* PrintListReverseinglyTest.mm */,
+				74717DF224E830C000C5417A /* MaxProfit.mm */,
 				746FFC3924AE353A00988ED8 /* ReplaceBlankTest.mm */,
+				74F4069924E84A410070D3A3 /* LengthOfLongestSubstring.mm */,
+				74F406A124E851660070D3A3 /* ClimbStairs.mm */,
 				746FFC3B24AE356C00988ED8 /* ReverseListTest.mm */,
 				746FFC3D24AE358C00988ED8 /* ReverseSentenceTest.mm */,
 				746FFC2024AE2F4A00988ED8 /* Info.plist */,
@@ -211,19 +235,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				746FFC3F24AE383D00988ED8 /* Duplicate.cpp in Sources */,
+				74F406A224E851660070D3A3 /* ClimbStairs.mm in Sources */,
+				74F406A024E84FFF0070D3A3 /* ClimbStairs.cpp in Sources */,
+				74F4069824E839770070D3A3 /* LengthOfLongestSubstring.cpp in Sources */,
 				744F0FF524BE1FAF00D50740 /* ConstructTree.cpp in Sources */,
 				746FFC4024AE383D00988ED8 /* Empty.cpp in Sources */,
 				744F0FF824BE1FD700D50740 /* TreeNode.cpp in Sources */,
 				746FFC4124AE383D00988ED8 /* FindMatrix.cpp in Sources */,
 				746FFC4224AE383D00988ED8 /* ListNode.cpp in Sources */,
+				74F4069A24E84A410070D3A3 /* LengthOfLongestSubstring.mm in Sources */,
 				746FFC4324AE383D00988ED8 /* MergeTwoList.cpp in Sources */,
 				746FFC4424AE383D00988ED8 /* MinStack.cpp in Sources */,
+				74717DF124E8301300C5417A /* MaxProfit.cpp in Sources */,
 				746FFC4524AE383D00988ED8 /* PrintListReversingly.cpp in Sources */,
 				746FFC4624AE383D00988ED8 /* ReplaceBlank.cpp in Sources */,
 				746FFC4724AE383D00988ED8 /* ReverseList.cpp in Sources */,
 				746FFC4824AE383D00988ED8 /* ReverseSentence.cpp in Sources */,
 				746FFC3E24AE358C00988ED8 /* ReverseSentenceTest.mm in Sources */,
 				746FFC2424AE2F9500988ED8 /* BinarySearch.cpp in Sources */,
+				74717DF324E830C000C5417A /* MaxProfit.mm in Sources */,
 				746FFC3024AE326000988ED8 /* EmptyTest.mm in Sources */,
 				746FFC3624AE33F900988ED8 /* MinStackTest.mm in Sources */,
 				746FFC3A24AE353A00988ED8 /* ReplaceBlankTest.mm in Sources */,
