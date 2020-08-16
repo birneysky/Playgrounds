@@ -73,7 +73,3 @@ int MinimumTotal2::minimumTotal(std::vector<std::vector<int>>& triangle) {
     memo = std::vector<std::vector<int>>(triangle.size(), std::vector<int>(triangle.size(), -1));
     return minTotal(triangle, 0, 0);
 }
-
-
-
-

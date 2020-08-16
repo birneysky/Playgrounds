@@ -23,9 +23,28 @@
     // Put teardown code here. This method is called after the invocation of each test method in the class.
 }
 
-- (void)testExample {
+- (void)testMinPathSum1 {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    std::vector<std::vector<int> > matrix {
+        { 1, 3, 1 },
+        { 1, 5, 1 },
+        { 4, 2, 1 }
+    };
+    
+    MinPathSum s;
+    XCTAssertEqual(s.minPathSum(matrix), 7);
+}
+
+- (void)testMinPathSum2 {
+    std::vector<std::vector<int> > matrix {
+        {1,2,5},
+        {3,2,1}
+    };
+    
+    MinPathSum s;
+    XCTAssertEqual(s.minPathSum(matrix), 6);
 }
 
 - (void)testPerformanceExample {

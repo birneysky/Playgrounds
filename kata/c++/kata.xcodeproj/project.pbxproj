@@ -33,6 +33,7 @@
 		74717DF124E8301300C5417A /* MaxProfit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74717DEF24E8301300C5417A /* MaxProfit.cpp */; };
 		74717DF324E830C000C5417A /* MaxProfit.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74717DF224E830C000C5417A /* MaxProfit.mm */; };
 		74AE10C724E97827004BCBEC /* MinPathSum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74AE10C524E97827004BCBEC /* MinPathSum.cpp */; };
+		74AE10C924E97F83004BCBEC /* MinPathSumTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74AE10C824E97F83004BCBEC /* MinPathSumTest.mm */; };
 		74F4069824E839770070D3A3 /* LengthOfLongestSubstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74F4069624E839770070D3A3 /* LengthOfLongestSubstring.cpp */; };
 		74F4069A24E84A410070D3A3 /* LengthOfLongestSubstring.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74F4069924E84A410070D3A3 /* LengthOfLongestSubstring.mm */; };
 		74F406A024E84FFF0070D3A3 /* ClimbStairs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74F4069E24E84FFF0070D3A3 /* ClimbStairs.cpp */; };
@@ -86,6 +87,7 @@
 		74AA8C7F24E918CF00C78D73 /* TestData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestData.hpp; sourceTree = "<group>"; };
 		74AE10C524E97827004BCBEC /* MinPathSum.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MinPathSum.cpp; sourceTree = "<group>"; };
 		74AE10C624E97827004BCBEC /* MinPathSum.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MinPathSum.hpp; sourceTree = "<group>"; };
+		74AE10C824E97F83004BCBEC /* MinPathSumTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MinPathSumTest.mm; sourceTree = "<group>"; };
 		74F4069624E839770070D3A3 /* LengthOfLongestSubstring.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LengthOfLongestSubstring.cpp; sourceTree = "<group>"; };
 		74F4069724E839770070D3A3 /* LengthOfLongestSubstring.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LengthOfLongestSubstring.hpp; sourceTree = "<group>"; };
 		74F4069924E84A410070D3A3 /* LengthOfLongestSubstring.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LengthOfLongestSubstring.mm; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				74F406A124E851660070D3A3 /* ClimbStairs.mm */,
 				746FFC3B24AE356C00988ED8 /* ReverseListTest.mm */,
 				74F406A624E909E50070D3A3 /* MinimumTotalTest.mm */,
+				74AE10C824E97F83004BCBEC /* MinPathSumTest.mm */,
 				746FFC3D24AE358C00988ED8 /* ReverseSentenceTest.mm */,
 				746FFC2024AE2F4A00988ED8 /* Info.plist */,
 			);
@@ -252,6 +255,7 @@
 				746FFC3F24AE383D00988ED8 /* Duplicate.cpp in Sources */,
 				74F406A524E8E4FE0070D3A3 /* MinimumTotal.cpp in Sources */,
 				74F406A224E851660070D3A3 /* ClimbStairs.mm in Sources */,
+				74AE10C924E97F83004BCBEC /* MinPathSumTest.mm in Sources */,
 				74F406A024E84FFF0070D3A3 /* ClimbStairs.cpp in Sources */,
 				74F4069824E839770070D3A3 /* LengthOfLongestSubstring.cpp in Sources */,
 				74AE10C724E97827004BCBEC /* MinPathSum.cpp in Sources */,
