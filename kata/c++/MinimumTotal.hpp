@@ -38,4 +38,15 @@ public:
     int minimumTotal(std::vector<std::vector<int>>& triangle);
 };
 
+
+
+class MinimumTotal2 {
+private:
+    std::vector<std::vector<int>> memo;
+    /// 选择 triangle[rowIndex][colIndex]  时，最小路径和是多少
+    int minTotal(std::vector<std::vector<int>>& triangle, int rowIndex, int colIndex);
+public:
+    int minimumTotal(std::vector<std::vector<int>>& triangle);
+};
+
 #endif /* MinimumTotal_hpp */

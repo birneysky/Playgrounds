@@ -45,6 +45,7 @@ int Solution::climbStairs2(int n) {
     return result;
 }
 /// 动态规划解法
+/// f(n) = f(n-1) + f(n-2)
 int climbStairs3(int n) {
     std::vector<int> meno(n+1, 0);
     meno[0] = 1;

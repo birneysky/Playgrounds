@@ -26,7 +26,8 @@
     // Put teardown code here. This method is called after the invocation of each test method in the class.
 }
 
-- (void)testExample {
+/// 全部为正整数
+- (void)testMinimumTotal1 {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     std::vector<std::vector<int>> triangle{
@@ -38,9 +39,12 @@
     
     MinimumTotal s;
     XCTAssertEqual(s.minimumTotal(triangle), 11);
+    MinimumTotal2 s2;
+    XCTAssertEqual(s2.minimumTotal(triangle), 11);
 }
 
-- (void)testxxx {
+/// 含有负数
+- (void)testMinimumTotal2 {
     std::vector<std::vector<int>> triangle {
         {-1},
         {2,3},
@@ -48,12 +52,13 @@
     };
     MinimumTotal s;
     XCTAssertEqual(s.minimumTotal(triangle), -1);
+    MinimumTotal2 s2;
+    XCTAssertEqual(s2.minimumTotal(triangle), -1);
 }
 
 - (void)testMinimumTotalForBigTriangle {
-    MinimumTotal s;
-    std::cout << s.minimumTotal(bigTriangle) << std::endl;
-    XCTAssertEqual(s.minimumTotal(bigTriangle), -1);
+    MinimumTotal2 s;
+    XCTAssertEqual(s.minimumTotal(bigTriangle), -8717);
 }
 
 

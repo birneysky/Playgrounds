@@ -7,21 +7,6 @@
 
 #include "MinimumTotal.hpp"
 
-int MinimumTotal::minTotal(std::vector<std::vector<int>>& triangle, int rowIndex, int colIndex) {
-    if (rowIndex == triangle.size() -1) {
-        return triangle[rowIndex][colIndex];
-    }
-    
-    int lVal = triangle[rowIndex][colIndex] + minTotal(triangle, rowIndex + 1, colIndex);
-    int rVal = triangle[rowIndex][colIndex] + minTotal(triangle, rowIndex + 1, colIndex + 1);
-    return std::min(lVal, rVal);
-}
-
-
-int MinimumTotal::minimumTotal(std::vector<std::vector<int>>& triangle) {
-    return minTotal(triangle, 0, 0);
-}
-
 
 /*
  std::vector<std::vector<int>> triangle {
@@ -49,3 +34,46 @@ int minimumTotal(std::vector<std::vector<int>>& triangle) {
     }
     return res;
 }
+
+
+
+int MinimumTotal::minTotal(std::vector<std::vector<int>>& triangle, int rowIndex, int colIndex) {
+    if (rowIndex == triangle.size() -1) {
+        return triangle[rowIndex][colIndex];
+    }
+    
+    int lVal = triangle[rowIndex][colIndex] + minTotal(triangle, rowIndex + 1, colIndex);
+    int rVal = triangle[rowIndex][colIndex] + minTotal(triangle, rowIndex + 1, colIndex + 1);
+    return std::min(lVal, rVal);
+}
+
+
+int MinimumTotal::minimumTotal(std::vector<std::vector<int>>& triangle) {
+    return minTotal(triangle, 0, 0);
+}
+
+
+
+int MinimumTotal2::minTotal(std::vector<std::vector<int>>& triangle, int rowIndex, int colIndex) {
+    if (rowIndex == triangle.size() -1) {
+        return triangle[rowIndex][colIndex];
+    }
+    
+    if (memo[rowIndex][colIndex] != -1) {
+        return memo[rowIndex][colIndex];
+    }
+    
+    int lVal = triangle[rowIndex][colIndex] + minTotal(triangle, rowIndex + 1, colIndex);
+    int rVal = triangle[rowIndex][colIndex] + minTotal(triangle, rowIndex + 1, colIndex + 1);
+    return memo[rowIndex][colIndex] = std::min(lVal, rVal);
+}
+
+
+int MinimumTotal2::minimumTotal(std::vector<std::vector<int>>& triangle) {
+    memo = std::vector<std::vector<int>>(triangle.size(), std::vector<int>(triangle.size(), -1));
+    return minTotal(triangle, 0, 0);
+}
+
+
+
+
