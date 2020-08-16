@@ -36,6 +36,8 @@
 		74F4069A24E84A410070D3A3 /* LengthOfLongestSubstring.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74F4069924E84A410070D3A3 /* LengthOfLongestSubstring.mm */; };
 		74F406A024E84FFF0070D3A3 /* ClimbStairs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74F4069E24E84FFF0070D3A3 /* ClimbStairs.cpp */; };
 		74F406A224E851660070D3A3 /* ClimbStairs.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74F406A124E851660070D3A3 /* ClimbStairs.mm */; };
+		74F406A524E8E4FE0070D3A3 /* MinimumTotal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74F406A324E8E4FE0070D3A3 /* MinimumTotal.cpp */; };
+		74F406A724E909E50070D3A3 /* MinimumTotalTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74F406A624E909E50070D3A3 /* MinimumTotalTest.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,12 +82,16 @@
 		74717DEF24E8301300C5417A /* MaxProfit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MaxProfit.cpp; sourceTree = "<group>"; };
 		74717DF024E8301300C5417A /* MaxProfit.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MaxProfit.hpp; sourceTree = "<group>"; };
 		74717DF224E830C000C5417A /* MaxProfit.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MaxProfit.mm; sourceTree = "<group>"; };
+		74AA8C7F24E918CF00C78D73 /* TestData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestData.hpp; sourceTree = "<group>"; };
 		74F4069624E839770070D3A3 /* LengthOfLongestSubstring.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LengthOfLongestSubstring.cpp; sourceTree = "<group>"; };
 		74F4069724E839770070D3A3 /* LengthOfLongestSubstring.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LengthOfLongestSubstring.hpp; sourceTree = "<group>"; };
 		74F4069924E84A410070D3A3 /* LengthOfLongestSubstring.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LengthOfLongestSubstring.mm; sourceTree = "<group>"; };
 		74F4069E24E84FFF0070D3A3 /* ClimbStairs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ClimbStairs.cpp; sourceTree = "<group>"; };
 		74F4069F24E84FFF0070D3A3 /* ClimbStairs.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ClimbStairs.hpp; sourceTree = "<group>"; };
 		74F406A124E851660070D3A3 /* ClimbStairs.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ClimbStairs.mm; sourceTree = "<group>"; };
+		74F406A324E8E4FE0070D3A3 /* MinimumTotal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MinimumTotal.cpp; sourceTree = "<group>"; };
+		74F406A424E8E4FE0070D3A3 /* MinimumTotal.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MinimumTotal.hpp; sourceTree = "<group>"; };
+		74F406A624E909E50070D3A3 /* MinimumTotalTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MinimumTotalTest.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,8 @@
 				74F4069724E839770070D3A3 /* LengthOfLongestSubstring.hpp */,
 				74F4069E24E84FFF0070D3A3 /* ClimbStairs.cpp */,
 				74F4069F24E84FFF0070D3A3 /* ClimbStairs.hpp */,
+				74F406A324E8E4FE0070D3A3 /* MinimumTotal.cpp */,
+				74F406A424E8E4FE0070D3A3 /* MinimumTotal.hpp */,
 				744F0FF324BE1FAF00D50740 /* ConstructTree.cpp */,
 				744F0FF424BE1FAF00D50740 /* ConstructTree.hpp */,
 				746FFC1D24AE2F4A00988ED8 /* KataTest */,
@@ -150,6 +158,7 @@
 		746FFC1D24AE2F4A00988ED8 /* KataTest */ = {
 			isa = PBXGroup;
 			children = (
+				74AA8C7F24E918CF00C78D73 /* TestData.hpp */,
 				746FFC1E24AE2F4A00988ED8 /* BinarySearchTest.mm */,
 				746FFC2D24AE315F00988ED8 /* DuplicateTest.mm */,
 				746FFC2F24AE326000988ED8 /* EmptyTest.mm */,
@@ -162,6 +171,7 @@
 				74F4069924E84A410070D3A3 /* LengthOfLongestSubstring.mm */,
 				74F406A124E851660070D3A3 /* ClimbStairs.mm */,
 				746FFC3B24AE356C00988ED8 /* ReverseListTest.mm */,
+				74F406A624E909E50070D3A3 /* MinimumTotalTest.mm */,
 				746FFC3D24AE358C00988ED8 /* ReverseSentenceTest.mm */,
 				746FFC2024AE2F4A00988ED8 /* Info.plist */,
 			);
@@ -235,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				746FFC3F24AE383D00988ED8 /* Duplicate.cpp in Sources */,
+				74F406A524E8E4FE0070D3A3 /* MinimumTotal.cpp in Sources */,
 				74F406A224E851660070D3A3 /* ClimbStairs.mm in Sources */,
 				74F406A024E84FFF0070D3A3 /* ClimbStairs.cpp in Sources */,
 				74F4069824E839770070D3A3 /* LengthOfLongestSubstring.cpp in Sources */,
@@ -242,6 +253,7 @@
 				746FFC4024AE383D00988ED8 /* Empty.cpp in Sources */,
 				744F0FF824BE1FD700D50740 /* TreeNode.cpp in Sources */,
 				746FFC4124AE383D00988ED8 /* FindMatrix.cpp in Sources */,
+				74F406A724E909E50070D3A3 /* MinimumTotalTest.mm in Sources */,
 				746FFC4224AE383D00988ED8 /* ListNode.cpp in Sources */,
 				74F4069A24E84A410070D3A3 /* LengthOfLongestSubstring.mm in Sources */,
 				746FFC4324AE383D00988ED8 /* MergeTwoList.cpp in Sources */,
