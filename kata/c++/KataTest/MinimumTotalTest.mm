@@ -10,7 +10,7 @@
 #include <iostream>
 
 #include "MinimumTotal.hpp"
-#include "TestData.hpp"
+#include "MinimumTotalTestData.hpp"
 
 @interface MinimumTotalTest : XCTestCase
 

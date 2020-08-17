@@ -84,7 +84,6 @@
 		74717DEF24E8301300C5417A /* MaxProfit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MaxProfit.cpp; sourceTree = "<group>"; };
 		74717DF024E8301300C5417A /* MaxProfit.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MaxProfit.hpp; sourceTree = "<group>"; };
 		74717DF224E830C000C5417A /* MaxProfit.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MaxProfit.mm; sourceTree = "<group>"; };
-		74AA8C7F24E918CF00C78D73 /* TestData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestData.hpp; sourceTree = "<group>"; };
 		74AE10C524E97827004BCBEC /* MinPathSum.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MinPathSum.cpp; sourceTree = "<group>"; };
 		74AE10C624E97827004BCBEC /* MinPathSum.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MinPathSum.hpp; sourceTree = "<group>"; };
 		74AE10C824E97F83004BCBEC /* MinPathSumTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MinPathSumTest.mm; sourceTree = "<group>"; };
@@ -97,6 +96,8 @@
 		74F406A324E8E4FE0070D3A3 /* MinimumTotal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MinimumTotal.cpp; sourceTree = "<group>"; };
 		74F406A424E8E4FE0070D3A3 /* MinimumTotal.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MinimumTotal.hpp; sourceTree = "<group>"; };
 		74F406A624E909E50070D3A3 /* MinimumTotalTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MinimumTotalTest.mm; sourceTree = "<group>"; };
+		B26A456824EA4D8500B532B1 /* MinPathSumTestData.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MinPathSumTestData.hpp; sourceTree = "<group>"; };
+		B26A456A24EA4DCC00B532B1 /* MinimumTotalTestData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MinimumTotalTestData.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +166,6 @@
 		746FFC1D24AE2F4A00988ED8 /* KataTest */ = {
 			isa = PBXGroup;
 			children = (
-				74AA8C7F24E918CF00C78D73 /* TestData.hpp */,
 				746FFC1E24AE2F4A00988ED8 /* BinarySearchTest.mm */,
 				746FFC2D24AE315F00988ED8 /* DuplicateTest.mm */,
 				746FFC2F24AE326000988ED8 /* EmptyTest.mm */,
@@ -178,8 +178,10 @@
 				74F4069924E84A410070D3A3 /* LengthOfLongestSubstring.mm */,
 				74F406A124E851660070D3A3 /* ClimbStairs.mm */,
 				746FFC3B24AE356C00988ED8 /* ReverseListTest.mm */,
+				B26A456A24EA4DCC00B532B1 /* MinimumTotalTestData.hpp */,
 				74F406A624E909E50070D3A3 /* MinimumTotalTest.mm */,
 				74AE10C824E97F83004BCBEC /* MinPathSumTest.mm */,
+				B26A456824EA4D8500B532B1 /* MinPathSumTestData.hpp */,
 				746FFC3D24AE358C00988ED8 /* ReverseSentenceTest.mm */,
 				746FFC2024AE2F4A00988ED8 /* Info.plist */,
 			);

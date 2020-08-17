@@ -4,11 +4,11 @@ install! 'cocoapods',
     :integrate_targets => false
 
 pod 'Bugly'
-pod 'RongCloudIM/IMLib','~>2.9.19'
-#pod 'RongRTCLib','~>3.0.7'
-pod 'RongCloudRTC/RongCallLib','2.9.12'
-pod 'RongCloudRTC/RongCallKit','2.9.12'
-pod 'AFNetworking'
-pod 'PromiseKit','~>6.10.0'
+pod 'RongCloudIM/IMLib','4.0.1'
+#pod 'RongRTCLib','4.0.1'
+#pod 'RongCloudRTC/RongCallLib','2.9.12'
+#pod 'RongCloudRTC/RongCallKit','2.9.12'
+#pod 'AFNetworking'
+#pod 'PromiseKit','~>6.10.0'
 target '' do
 end

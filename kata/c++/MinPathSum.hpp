@@ -34,7 +34,15 @@ class MinPathSum {
 private:
     /// 返回从 grid[rowIndex][colIndex] 为起点的最小和
     int minSum(const std::vector < std::vector < int >>& grid, int rowIndex, int colIndex);
+    
+    int minSum2(const std::vector < std::vector < int >>& grid, int rowIndex, int colIndex);
+    
+    /// 记录从位置 i,j 开始到矩阵右下角的最短路径和
+    std::vector<std::vector<int>> memo;
+    int minSum3(const std::vector < std::vector < int >>& grid, int rowIndex, int colIndex);
 public:
     int minPathSum(std::vector < std::vector < int >>& grid);
+    int minPathSum2(std::vector < std::vector < int >>& grid);
+    int minPathSum3(std::vector < std::vector < int >>& grid);
 };
 #endif /* MinPathSum_hpp */

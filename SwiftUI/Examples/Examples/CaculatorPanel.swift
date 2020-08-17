@@ -83,11 +83,11 @@ struct CaculatorPanel: View {
                                 self.env.display = item.title
                             }) {
                                 Text(item.title)
-                                .font(.system(size: 32))
-                                .frame(width:self.buttonItemWidth(for: item), height:self.buttonItemHeight)
-                                .foregroundColor(.white)
-                                .background(item.backgroundColor)
-                                .cornerRadius(self.buttonItemHeight / 2)
+                                    .font(.system(size: 32))
+                                    .frame(width:self.buttonItemWidth(for: item), height:self.buttonItemHeight)
+                                    .foregroundColor(.white)
+                                    .background(item.backgroundColor)
+                                    .cornerRadius(self.buttonItemHeight / 2)
                             }
                         }
                     }
