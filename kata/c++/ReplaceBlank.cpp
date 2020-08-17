@@ -1,7 +1,6 @@
 #include "ReplaceBlank.hpp"
 
 void ReplaceBlank(char string[], int length) {
-    
     int originalLenth = 0;
     int blankCount = 0;
     while (string[originalLenth] != '\0') {
