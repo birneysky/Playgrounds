@@ -40,6 +40,8 @@
 		74F406A224E851660070D3A3 /* ClimbStairs.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74F406A124E851660070D3A3 /* ClimbStairs.mm */; };
 		74F406A524E8E4FE0070D3A3 /* MinimumTotal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74F406A324E8E4FE0070D3A3 /* MinimumTotal.cpp */; };
 		74F406A724E909E50070D3A3 /* MinimumTotalTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74F406A624E909E50070D3A3 /* MinimumTotalTest.mm */; };
+		B26A456E24EA8D5600B532B1 /* LongestPalindrome.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B26A456C24EA8D5600B532B1 /* LongestPalindrome.cpp */; };
+		B26A457024EA8E2700B532B1 /* LongestPalindromeTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = B26A456F24EA8E2700B532B1 /* LongestPalindromeTest.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +100,9 @@
 		74F406A624E909E50070D3A3 /* MinimumTotalTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MinimumTotalTest.mm; sourceTree = "<group>"; };
 		B26A456824EA4D8500B532B1 /* MinPathSumTestData.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MinPathSumTestData.hpp; sourceTree = "<group>"; };
 		B26A456A24EA4DCC00B532B1 /* MinimumTotalTestData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MinimumTotalTestData.hpp; sourceTree = "<group>"; };
+		B26A456C24EA8D5600B532B1 /* LongestPalindrome.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LongestPalindrome.cpp; sourceTree = "<group>"; };
+		B26A456D24EA8D5600B532B1 /* LongestPalindrome.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LongestPalindrome.hpp; sourceTree = "<group>"; };
+		B26A456F24EA8E2700B532B1 /* LongestPalindromeTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LongestPalindromeTest.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +147,8 @@
 				74717DF024E8301300C5417A /* MaxProfit.hpp */,
 				74F4069624E839770070D3A3 /* LengthOfLongestSubstring.cpp */,
 				74F4069724E839770070D3A3 /* LengthOfLongestSubstring.hpp */,
+				B26A456C24EA8D5600B532B1 /* LongestPalindrome.cpp */,
+				B26A456D24EA8D5600B532B1 /* LongestPalindrome.hpp */,
 				74F4069E24E84FFF0070D3A3 /* ClimbStairs.cpp */,
 				74F4069F24E84FFF0070D3A3 /* ClimbStairs.hpp */,
 				74F406A324E8E4FE0070D3A3 /* MinimumTotal.cpp */,
@@ -183,6 +190,7 @@
 				74AE10C824E97F83004BCBEC /* MinPathSumTest.mm */,
 				B26A456824EA4D8500B532B1 /* MinPathSumTestData.hpp */,
 				746FFC3D24AE358C00988ED8 /* ReverseSentenceTest.mm */,
+				B26A456F24EA8E2700B532B1 /* LongestPalindromeTest.mm */,
 				746FFC2024AE2F4A00988ED8 /* Info.plist */,
 			);
 			path = KataTest;
@@ -265,6 +273,7 @@
 				746FFC4024AE383D00988ED8 /* Empty.cpp in Sources */,
 				744F0FF824BE1FD700D50740 /* TreeNode.cpp in Sources */,
 				746FFC4124AE383D00988ED8 /* FindMatrix.cpp in Sources */,
+				B26A457024EA8E2700B532B1 /* LongestPalindromeTest.mm in Sources */,
 				74F406A724E909E50070D3A3 /* MinimumTotalTest.mm in Sources */,
 				746FFC4224AE383D00988ED8 /* ListNode.cpp in Sources */,
 				74F4069A24E84A410070D3A3 /* LengthOfLongestSubstring.mm in Sources */,
@@ -283,6 +292,7 @@
 				746FFC3A24AE353A00988ED8 /* ReplaceBlankTest.mm in Sources */,
 				746FFC3C24AE356C00988ED8 /* ReverseListTest.mm in Sources */,
 				746FFC3224AE32D500988ED8 /* FindMatrixTest.mm in Sources */,
+				B26A456E24EA8D5600B532B1 /* LongestPalindrome.cpp in Sources */,
 				746FFC2E24AE315F00988ED8 /* DuplicateTest.mm in Sources */,
 				746FFC1F24AE2F4A00988ED8 /* BinarySearchTest.mm in Sources */,
 				746FFC3824AE34EB00988ED8 /* PrintListReverseinglyTest.mm in Sources */,
