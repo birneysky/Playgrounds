@@ -1,20 +1,20 @@
 //
-//  LongestPalindromeTest.m
+//  IsPalindromeTest.m
 //  KataTest
 //
-//  Created by birney on 2020/8/17.
+//  Created by birneysky on 2020/8/18.
 //
 
 #import <XCTest/XCTest.h>
 #include <string>
 
-#include "LongestPalindrome.hpp"
+#include "IsPalindrome.hpp"
 
-@interface LongestPalindromeTest : XCTestCase
+@interface IsPalindromeTest : XCTestCase
 
 @end
 
-@implementation LongestPalindromeTest
+@implementation IsPalindromeTest
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -24,31 +24,23 @@
     // Put teardown code here. This method is called after the invocation of each test method in the class.
 }
 
-- (void)testLongestPalindrome1 {
+- (void)testIsPalindrome1 {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
-    LongestPalindrome s;
-    std::string plain = s.longestPalindrome("babad");
-    XCTAssertEqual(plain == "bab" || plain == "aba", true);
+    std::string s = "amanaplanacanalpanama";
+    IsPalindrome sol;
+    XCTAssertEqual(sol.isPalindrome(s), true);
+}
+
+- (void)testIsPalindrome2 {
+    // This is an example of a functional test case.
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    std::string s = "a";
+    IsPalindrome sol;
+    XCTAssertEqual(sol.isPalindrome(s), true);
 }
 
 
-- (void)testLongestPalindrome2 {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-    LongestPalindrome s;
-    std::string plain = s.longestPalindrome("babadab");
-    XCTAssertEqual(plain == "badab", true);
-}
-
-
-- (void)testLongestPalindrome3 {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-    LongestPalindrome s;
-    std::string plain = s.longestPalindrome("cbbd");
-    XCTAssertEqual(plain == "bb", true);
-}
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{

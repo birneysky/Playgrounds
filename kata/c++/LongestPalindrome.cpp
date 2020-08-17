@@ -10,11 +10,8 @@
 
 std::string LongestPalindrome::longestPalindrome(std::string s) {
     auto isPalindrome = [] (const std::string& str,int l, int r) {
-        if (l >= r) {
-            return false;
-        }
         bool ret = true;
-        while (l < r) {
+        while (l <= r) {
             if (str[l] != str[r]) {
                 ret = false;
                 break;
@@ -30,7 +27,7 @@ std::string LongestPalindrome::longestPalindrome(std::string s) {
     int r = -1;
     std::string result = "";
     while (l < s.size()) {
-        if (r + 1 < s.size() && !isPalindrome(s, l, r)) {
+        if (r + 1 < s.size() && !isPalindrome(s, l, r+1)) {
             r ++;
         } else  {
             std::string aPanlin = s.substr(l, r -l + 1);
