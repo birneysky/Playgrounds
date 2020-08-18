@@ -9,16 +9,22 @@
 
 
 bool IsPalindrome::isPalindrome(std::string s) {
-    int l = 0;
-    int r = s.size() -1;
-    bool result = true;
-    while (l <= r) {
-        if (s[l] != s[r]) {
-            result = false;
-            break;
+    /// 由于题目只考虑字母和数字，所以这里将其他字符，去掉其他字符
+    std::string cleanStr;
+    for (char c : s) {
+        if (isalnum(c)) {
+            /// 由于可以忽略字母的大小写。所以全部转化为小写
+            cleanStr += tolower(c);
+        }
+    }
+    size_t l = 0;
+    size_t r = cleanStr.size() -1;
+    while (l < r) {
+        if (cleanStr[l] != cleanStr[r]) {
+            return false;
         }
         l ++;
         r --;
     }
-    return result;
+    return true;
 }

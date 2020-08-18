@@ -44,6 +44,7 @@
 		74F406A724E909E50070D3A3 /* MinimumTotalTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74F406A624E909E50070D3A3 /* MinimumTotalTest.mm */; };
 		B26A456E24EA8D5600B532B1 /* LongestPalindrome.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B26A456C24EA8D5600B532B1 /* LongestPalindrome.cpp */; };
 		B26A457024EA8E2700B532B1 /* LongestPalindromeTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = B26A456F24EA8E2700B532B1 /* LongestPalindromeTest.mm */; };
+		B26A457324EB9D5300B532B1 /* WaysToChange.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B26A457124EB9D5300B532B1 /* WaysToChange.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,8 @@
 		B26A456C24EA8D5600B532B1 /* LongestPalindrome.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LongestPalindrome.cpp; sourceTree = "<group>"; };
 		B26A456D24EA8D5600B532B1 /* LongestPalindrome.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LongestPalindrome.hpp; sourceTree = "<group>"; };
 		B26A456F24EA8E2700B532B1 /* LongestPalindromeTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LongestPalindromeTest.mm; sourceTree = "<group>"; };
+		B26A457124EB9D5300B532B1 /* WaysToChange.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WaysToChange.cpp; sourceTree = "<group>"; };
+		B26A457224EB9D5300B532B1 /* WaysToChange.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WaysToChange.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +165,8 @@
 				74AE10C624E97827004BCBEC /* MinPathSum.hpp */,
 				74AE10CA24EAEE47004BCBEC /* IsPalindrome.cpp */,
 				74AE10CB24EAEE47004BCBEC /* IsPalindrome.hpp */,
+				B26A457124EB9D5300B532B1 /* WaysToChange.cpp */,
+				B26A457224EB9D5300B532B1 /* WaysToChange.hpp */,
 				744F0FF324BE1FAF00D50740 /* ConstructTree.cpp */,
 				744F0FF424BE1FAF00D50740 /* ConstructTree.hpp */,
 				746FFC1D24AE2F4A00988ED8 /* KataTest */,
@@ -304,6 +309,7 @@
 				746FFC3224AE32D500988ED8 /* FindMatrixTest.mm in Sources */,
 				B26A456E24EA8D5600B532B1 /* LongestPalindrome.cpp in Sources */,
 				746FFC2E24AE315F00988ED8 /* DuplicateTest.mm in Sources */,
+				B26A457324EB9D5300B532B1 /* WaysToChange.cpp in Sources */,
 				746FFC1F24AE2F4A00988ED8 /* BinarySearchTest.mm in Sources */,
 				746FFC3824AE34EB00988ED8 /* PrintListReverseinglyTest.mm in Sources */,
 				746FFC3424AE331F00988ED8 /* MergeTwoListsTest.mm in Sources */,

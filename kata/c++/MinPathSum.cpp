@@ -101,3 +101,27 @@ int MinPathSum::minPathSum3(std::vector < std::vector < int >>& grid) {
     memo = std::vector<std::vector<int>>(grid.size(), std::vector<int>(grid[0].size(), -1));
     return minSum3(grid, 0, 0);
 }
+
+int MinPathSum::minPathSum4(std::vector < std::vector < int >>& grid) {
+    size_t n = grid.size();
+    size_t m = grid[0].size();
+    std::vector<std::vector<int>> f(n, std::vector<int>(m));
+    f[0][0] = grid[0][0];
+    for (int rowIndex = 0; rowIndex < n; ++ rowIndex) {
+        for (int colIndex = 0; colIndex < m; ++ colIndex) {
+            /// 矩阵最左侧的一列
+            if (colIndex == 0 && rowIndex > 0) {
+                f[rowIndex][colIndex] = grid[rowIndex][colIndex] + f[rowIndex - 1][colIndex];
+            }
+            
+            if (rowIndex == 0 && colIndex > 0) {
+                f[rowIndex][colIndex] = grid[rowIndex][colIndex] + f[rowIndex][colIndex - 1];
+            }
+            
+            if (rowIndex > 0 && colIndex > 0) {
+                f[rowIndex][colIndex] = grid[rowIndex][colIndex] + std::min(f[rowIndex-1][colIndex], f[rowIndex][colIndex-1]);                
+            }
+        }
+    }
+    return f[n-1][m-1];
+}

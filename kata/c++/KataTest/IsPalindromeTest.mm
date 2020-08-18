@@ -40,6 +40,12 @@
     XCTAssertEqual(sol.isPalindrome(s), true);
 }
 
+- (void)testIsPalindrome3 {
+    std::string s = "A man, a plan, a canal: Panama";
+    IsPalindrome sol;
+    XCTAssertEqual(sol.isPalindrome(s), true);
+}
+
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.

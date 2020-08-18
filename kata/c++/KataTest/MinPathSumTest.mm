@@ -38,6 +38,7 @@
     MinPathSum s;
     XCTAssertEqual(s.minPathSum2(matrix), 7);
     XCTAssertEqual(s.minPathSum3(matrix), 7);
+    XCTAssertEqual(s.minPathSum4(matrix), 7);
 }
 
 - (void)testMinPathSum2 {
@@ -49,6 +50,8 @@
     MinPathSum s;
     XCTAssertEqual(s.minPathSum2(matrix), 6);
     XCTAssertEqual(s.minPathSum3(matrix), 6);
+    XCTAssertEqual(s.minPathSum4(matrix), 6);
+    
 }
 
 
@@ -56,6 +59,7 @@
     MinPathSum s;
     XCTAssertEqual(s.minPathSum2(grid), 83);
     XCTAssertEqual(s.minPathSum3(grid), 83);
+    XCTAssertEqual(s.minPathSum4(grid), 83);
 }
 
 
@@ -102,6 +106,29 @@
         };
         for (int i = 0; i < matrixs.size(); i++) {
             s.minPathSum3(matrixs[i]);
+        }
+    }];
+}
+
+- (void)testPerformanceMinPathSum4 {
+    // This is an example of a performance test case.
+    [self measureBlock:^{
+        // Put the code you want to measure the time of here.
+        MinPathSum s;
+        std::vector<std::vector<std::vector<int>>> matrixs{
+            {
+                { 1, 3, 1 },
+                { 1, 5, 1 },
+                { 4, 2, 1 }
+            },
+            {
+                {1,2,5},
+                {3,2,1}
+            },
+            grid
+        };
+        for (int i = 0; i < matrixs.size(); i++) {
+            s.minPathSum4(matrixs[i]);
         }
     }];
 }

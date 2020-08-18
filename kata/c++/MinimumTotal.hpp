@@ -47,6 +47,8 @@ private:
     int minTotal(std::vector<std::vector<int>>& triangle, int rowIndex, int colIndex);
 public:
     int minimumTotal(std::vector<std::vector<int>>& triangle);
+    
+    int minimumTotal2(std::vector<std::vector<int>>& triangle);
 };
 
 #endif /* MinimumTotal_hpp */

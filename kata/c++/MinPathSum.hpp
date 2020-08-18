@@ -44,5 +44,6 @@ public:
     int minPathSum(std::vector < std::vector < int >>& grid);
     int minPathSum2(std::vector < std::vector < int >>& grid);
     int minPathSum3(std::vector < std::vector < int >>& grid);
+    int minPathSum4(std::vector < std::vector < int >>& grid);
 };
 #endif /* MinPathSum_hpp */

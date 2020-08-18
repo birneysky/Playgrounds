@@ -73,3 +73,12 @@ int MinimumTotal2::minimumTotal(std::vector<std::vector<int>>& triangle) {
     memo = std::vector<std::vector<int>>(triangle.size(), std::vector<int>(triangle.size(), -1));
     return minTotal(triangle, 0, 0);
 }
+
+/// 动态规划法
+int MinimumTotal2::minimumTotal2(std::vector<std::vector<int>>& triangle) {
+    int result = INT_MIN;
+    for (int i = 0; i < triangle.size(); i++ ) {
+        
+    }
+    return result;
+}
