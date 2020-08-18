@@ -45,6 +45,7 @@
 		B26A456E24EA8D5600B532B1 /* LongestPalindrome.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B26A456C24EA8D5600B532B1 /* LongestPalindrome.cpp */; };
 		B26A457024EA8E2700B532B1 /* LongestPalindromeTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = B26A456F24EA8E2700B532B1 /* LongestPalindromeTest.mm */; };
 		B26A457324EB9D5300B532B1 /* WaysToChange.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B26A457124EB9D5300B532B1 /* WaysToChange.cpp */; };
+		B26A457524EBC7AF00B532B1 /* WaysToChangeTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = B26A457424EBC7AF00B532B1 /* WaysToChangeTest.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +112,7 @@
 		B26A456F24EA8E2700B532B1 /* LongestPalindromeTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LongestPalindromeTest.mm; sourceTree = "<group>"; };
 		B26A457124EB9D5300B532B1 /* WaysToChange.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WaysToChange.cpp; sourceTree = "<group>"; };
 		B26A457224EB9D5300B532B1 /* WaysToChange.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WaysToChange.hpp; sourceTree = "<group>"; };
+		B26A457424EBC7AF00B532B1 /* WaysToChangeTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = WaysToChangeTest.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 				B26A456824EA4D8500B532B1 /* MinPathSumTestData.hpp */,
 				746FFC3D24AE358C00988ED8 /* ReverseSentenceTest.mm */,
 				B26A456F24EA8E2700B532B1 /* LongestPalindromeTest.mm */,
+				B26A457424EBC7AF00B532B1 /* WaysToChangeTest.mm */,
 				74AE10CD24EAEF66004BCBEC /* IsPalindromeTest.mm */,
 				746FFC2024AE2F4A00988ED8 /* Info.plist */,
 			);
@@ -285,6 +288,7 @@
 				74AE10C724E97827004BCBEC /* MinPathSum.cpp in Sources */,
 				744F0FF524BE1FAF00D50740 /* ConstructTree.cpp in Sources */,
 				746FFC4024AE383D00988ED8 /* Empty.cpp in Sources */,
+				B26A457524EBC7AF00B532B1 /* WaysToChangeTest.mm in Sources */,
 				744F0FF824BE1FD700D50740 /* TreeNode.cpp in Sources */,
 				746FFC4124AE383D00988ED8 /* FindMatrix.cpp in Sources */,
 				B26A457024EA8E2700B532B1 /* LongestPalindromeTest.mm in Sources */,

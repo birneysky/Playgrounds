@@ -8,9 +8,7 @@
 #ifndef WaysToChange_hpp
 #define WaysToChange_hpp
 
-
-
-
+#include <vector>
 /// 硬币。给定数量不限的硬币，币值为25分、10分、5分和1分，编写代码计算n分有几种表示法。(结果可能会很大，你需要将结果模上1000000007)
 /// 示例1:
 /// 输入: n = 5
@@ -30,8 +28,14 @@
 
 /// 来源：力扣（LeetCode）
 /// 链接：https://leetcode-cn.com/problems/coin-lcci
-class WaysToChange {
-    
+
+class WaysToChange {    
+private:
+    const std::vector<int> coins{1, 5, 10, 25};
+    /// 从 coins 中的第 0 索引位置开始，计算 n 有几种表示法
+    int ways(int n);
+public:
+    int waysToChange(int n);
 };
 
 /// 分析
