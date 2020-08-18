@@ -36,6 +36,7 @@
 		74AE10C924E97F83004BCBEC /* MinPathSumTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74AE10C824E97F83004BCBEC /* MinPathSumTest.mm */; };
 		74AE10CC24EAEE47004BCBEC /* IsPalindrome.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74AE10CA24EAEE47004BCBEC /* IsPalindrome.cpp */; };
 		74AE10CE24EAEF66004BCBEC /* IsPalindromeTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74AE10CD24EAEF66004BCBEC /* IsPalindromeTest.mm */; };
+		74AE10D124EC267E004BCBEC /* KataHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74AE10CF24EC267E004BCBEC /* KataHelper.cpp */; };
 		74F4069824E839770070D3A3 /* LengthOfLongestSubstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74F4069624E839770070D3A3 /* LengthOfLongestSubstring.cpp */; };
 		74F4069A24E84A410070D3A3 /* LengthOfLongestSubstring.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74F4069924E84A410070D3A3 /* LengthOfLongestSubstring.mm */; };
 		74F406A024E84FFF0070D3A3 /* ClimbStairs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74F4069E24E84FFF0070D3A3 /* ClimbStairs.cpp */; };
@@ -96,6 +97,8 @@
 		74AE10CA24EAEE47004BCBEC /* IsPalindrome.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IsPalindrome.cpp; sourceTree = "<group>"; };
 		74AE10CB24EAEE47004BCBEC /* IsPalindrome.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IsPalindrome.hpp; sourceTree = "<group>"; };
 		74AE10CD24EAEF66004BCBEC /* IsPalindromeTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = IsPalindromeTest.mm; sourceTree = "<group>"; };
+		74AE10CF24EC267E004BCBEC /* KataHelper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KataHelper.cpp; sourceTree = "<group>"; };
+		74AE10D024EC267E004BCBEC /* KataHelper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = KataHelper.hpp; sourceTree = "<group>"; };
 		74F4069624E839770070D3A3 /* LengthOfLongestSubstring.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LengthOfLongestSubstring.cpp; sourceTree = "<group>"; };
 		74F4069724E839770070D3A3 /* LengthOfLongestSubstring.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LengthOfLongestSubstring.hpp; sourceTree = "<group>"; };
 		74F4069924E84A410070D3A3 /* LengthOfLongestSubstring.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LengthOfLongestSubstring.mm; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 				B26A457224EB9D5300B532B1 /* WaysToChange.hpp */,
 				744F0FF324BE1FAF00D50740 /* ConstructTree.cpp */,
 				744F0FF424BE1FAF00D50740 /* ConstructTree.hpp */,
+				74AE10CF24EC267E004BCBEC /* KataHelper.cpp */,
+				74AE10D024EC267E004BCBEC /* KataHelper.hpp */,
 				746FFC1D24AE2F4A00988ED8 /* KataTest */,
 				746FFBF124AE2BC600988ED8 /* Products */,
 			);
@@ -310,6 +315,7 @@
 				746FFC3624AE33F900988ED8 /* MinStackTest.mm in Sources */,
 				746FFC3A24AE353A00988ED8 /* ReplaceBlankTest.mm in Sources */,
 				746FFC3C24AE356C00988ED8 /* ReverseListTest.mm in Sources */,
+				74AE10D124EC267E004BCBEC /* KataHelper.cpp in Sources */,
 				746FFC3224AE32D500988ED8 /* FindMatrixTest.mm in Sources */,
 				B26A456E24EA8D5600B532B1 /* LongestPalindrome.cpp in Sources */,
 				746FFC2E24AE315F00988ED8 /* DuplicateTest.mm in Sources */,
