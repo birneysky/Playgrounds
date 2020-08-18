@@ -49,5 +49,10 @@ class WaysToChange {
 ///    /        |          \        /    |     \                       /     |    \                                         /       |        \
 ///   1        0         N/A  0   N/A  N/A               0     N/A   N/A                                0      N/A       N/A
 /// ```
-
+/*                                                  6
+                           5                        4                    1
+           4               3       0   3            2       N          0 N N
+   3       2   N    2      1   N    2  1   N     1  0   N
+ 2 1 N  1 0 N     1 0 N  0 N N    1 0 N  0 N N 0 N N
+ **/
 #endif /* WaysToChange_hpp */

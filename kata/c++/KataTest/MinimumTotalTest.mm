@@ -41,6 +41,7 @@
     XCTAssertEqual(s.minimumTotal(triangle), 11);
     MinimumTotal2 s2;
     XCTAssertEqual(s2.minimumTotal(triangle), 11);
+    XCTAssertEqual(s2.minimumTotal2(triangle), 11);
 }
 
 /// 含有负数
@@ -54,11 +55,13 @@
     XCTAssertEqual(s.minimumTotal(triangle), -1);
     MinimumTotal2 s2;
     XCTAssertEqual(s2.minimumTotal(triangle), -1);
+    XCTAssertEqual(s2.minimumTotal2(triangle), -1);
 }
 
 - (void)testMinimumTotalForBigTriangle {
     MinimumTotal2 s;
     XCTAssertEqual(s.minimumTotal(bigTriangle), -8717);
+    XCTAssertEqual(s.minimumTotal2(bigTriangle), -8717);
 }
 
 

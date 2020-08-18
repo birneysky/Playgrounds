@@ -102,6 +102,10 @@ int MinPathSum::minPathSum3(std::vector < std::vector < int >>& grid) {
     return minSum3(grid, 0, 0);
 }
 
+/// 动态规划法
+///  f(i,j) 表示从 0,0 位置 到位置 i, j 的最短路径，
+///  所以基于这种定义mxn 的矩阵的最短路径和就是 f(m-1,n-1)
+/// f(i,j) = c[i][j] + min(f(i,j-1), f(i-1, j))
 int MinPathSum::minPathSum4(std::vector < std::vector < int >>& grid) {
     size_t n = grid.size();
     size_t m = grid[0].size();
@@ -109,11 +113,12 @@ int MinPathSum::minPathSum4(std::vector < std::vector < int >>& grid) {
     f[0][0] = grid[0][0];
     for (int rowIndex = 0; rowIndex < n; ++ rowIndex) {
         for (int colIndex = 0; colIndex < m; ++ colIndex) {
-            /// 矩阵最左侧的一列
+            /// 矩阵最左侧第 0 列
             if (colIndex == 0 && rowIndex > 0) {
                 f[rowIndex][colIndex] = grid[rowIndex][colIndex] + f[rowIndex - 1][colIndex];
             }
-            
+
+            /// 矩阵顶部第 0 行
             if (rowIndex == 0 && colIndex > 0) {
                 f[rowIndex][colIndex] = grid[rowIndex][colIndex] + f[rowIndex][colIndex - 1];
             }
