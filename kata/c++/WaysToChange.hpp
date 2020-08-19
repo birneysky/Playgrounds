@@ -34,12 +34,21 @@ class WaysToChange {
 private:
     const std::vector<int> coins{1, 5, 10, 25};
     std::vector<int> oneResultSet;
-    /// 输出打印分解结果
+    std::vector<int> used;
+    /// 输出打印分解结果的所有排列
     void showWays(int n, int deep);
+    
+    
+    /// 打印分解结果的所有组合
+    /// @param n  硬币总数值
+    void showWays2(int n, int val);
     /// 从 coins 中的第 0 索引位置开始，计算 n 有几种表示法
     int ways1(int n);
 public:
+    /// 输出打印分解结果的所有排列
     void showWaysToChange(int n);
+    /// 打印分解结果的所有组合
+    void showWaysToChange2(int n);
     int waysToChange1(int n);
 };
 

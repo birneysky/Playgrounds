@@ -11,6 +11,7 @@
 #include <iostream>
 
 /// 该方法可以求解所有硬币的分解的组合，但是其中有重复，会导致一种组合计算了多次
+/// 这个方法是在答应出了所有排列情况，而题目要求是计算所有组合的个数
 void WaysToChange::showWays(int x, int deep) {
     if (x == 0) {
         std::cout << oneResultSet << std::endl;
@@ -18,11 +19,32 @@ void WaysToChange::showWays(int x, int deep) {
     }
     
     for (int i = 0; i < coins.size();  ++ i) {
-        if (x >= coins[i]) {
+        int diff = x - coins[i];
+        if (diff >= 0 && !used[diff]) {
             oneResultSet.push_back(coins[i]);
-            showWays(x - coins[i], deep + 1);
-            oneResultSet.erase(oneResultSet.begin() + deep, oneResultSet.end());
+            showWays(diff, deep + 1);
+            oneResultSet.pop_back();/// 等价于 oneResultSet.erase(oneResultSet.begin() + deep, oneResultSet.end());
         }
+    }
+}
+
+void WaysToChange::showWays2(int n, int val) {
+    if (val == n) {
+        std::cout << oneResultSet << std::endl;
+        oneResultSet.clear();
+        return;
+    }
+    
+    for (int i = 0; i < coins.size(); i ++) {
+        for (int j = 1; j <= n-val; j ++) {
+            if (coins[i] <= n) {
+                oneResultSet.push_back(coins[i]);
+                showWays2(n ,val + coins[i]);
+                //oneResultSet.pop_back();
+            }
+        }
+        
+        
     }
 }
 
@@ -48,7 +70,12 @@ int WaysToChange::ways1(int x) {
 }
 
 void WaysToChange::showWaysToChange(int n) {
+    used = std::vector<int>(n, false);
     showWays(n, 0);
+}
+
+void WaysToChange::showWaysToChange2(int n) {
+    showWays2(n, 0);
 }
 
 int WaysToChange::waysToChange1(int n) {

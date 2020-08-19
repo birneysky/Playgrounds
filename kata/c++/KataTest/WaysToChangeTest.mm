@@ -56,6 +56,40 @@
      s.showWaysToChange(15);
 }
 
+
+- (void)testShowWaysToChange52 {
+    // This is an example of a functional test case.
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    WaysToChange s;
+    //XCTAssertEqual(s.waysToChange(5), 2);
+    s.showWaysToChange2(5);
+    
+    //XCTAssertEqual(, 9);
+//    XCTAssertEqual(s.waysToChange1(10), 4);
+//    XCTAssertEqual(s.waysToChange1(15), 9);
+}
+
+
+- (void)testShowWaysToChange62 {
+    WaysToChange s;
+     s.showWaysToChange2(6);
+}
+
+- (void)testShowWaysToChange72 {
+    WaysToChange s;
+     s.showWaysToChange2(7);
+}
+
+- (void)testShowWaysToChange102 {
+    WaysToChange s;
+     s.showWaysToChange(10);
+}
+
+- (void)testShowWaysToChange152 {
+    WaysToChange s;
+     s.showWaysToChange(15);
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
