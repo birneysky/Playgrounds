@@ -41,7 +41,7 @@ private:
     
     /// 打印分解结果的所有组合
     /// @param n  硬币总数值
-    void showWays2(int n, int val);
+    void showWays2(int n, int val, int ci);
     /// 从 coins 中的第 0 索引位置开始，计算 n 有几种表示法
     int ways1(int n);
 public:

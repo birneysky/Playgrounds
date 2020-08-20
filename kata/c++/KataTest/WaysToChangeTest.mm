@@ -82,12 +82,17 @@
 
 - (void)testShowWaysToChange102 {
     WaysToChange s;
-     s.showWaysToChange(10);
+     s.showWaysToChange2(10);
 }
 
 - (void)testShowWaysToChange152 {
     WaysToChange s;
-     s.showWaysToChange(15);
+     s.showWaysToChange2(15);
+}
+
+- (void)testShowWaysToChange252 {
+    WaysToChange s;
+     s.showWaysToChange2(25);
 }
 
 - (void)testPerformanceExample {

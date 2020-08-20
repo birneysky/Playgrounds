@@ -28,23 +28,19 @@ void WaysToChange::showWays(int x, int deep) {
     }
 }
 
-void WaysToChange::showWays2(int n, int val) {
+void WaysToChange::showWays2(int n, int val, int ci) {
     if (val == n) {
         std::cout << oneResultSet << std::endl;
-        oneResultSet.clear();
+        //oneResultSet.clear();
         return;
     }
     
-    for (int i = 0; i < coins.size(); i ++) {
-        for (int j = 1; j <= n-val; j ++) {
-            if (coins[i] <= n) {
-                oneResultSet.push_back(coins[i]);
-                showWays2(n ,val + coins[i]);
-                //oneResultSet.pop_back();
-            }
+    for (int j = ci; j < coins.size(); j ++) {
+        if (coins[j] + val <= n) {
+            oneResultSet.push_back(coins[j]);
+            showWays2(n, val + coins[j], j);
+            oneResultSet.pop_back();
         }
-        
-        
     }
 }
 
@@ -75,7 +71,7 @@ void WaysToChange::showWaysToChange(int n) {
 }
 
 void WaysToChange::showWaysToChange2(int n) {
-    showWays2(n, 0);
+    showWays2(n, 0, 0);
 }
 
 int WaysToChange::waysToChange1(int n) {
