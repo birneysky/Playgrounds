@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74AE10DA24F1643D004BCBEC /* CPlusPlusSmartPointerTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74AE10D924F1643D004BCBEC /* CPlusPlusSmartPointerTest.mm */; };
+		74AE10DD24F164AE004BCBEC /* Empty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74AE10DB24F164AE004BCBEC /* Empty.cpp */; };
 		B20796C823D44A8F00557A9A /* BlockCaptureVarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B20796C723D44A8F00557A9A /* BlockCaptureVarTests.m */; };
 		B235BD3523C5B9FC00302672 /* AVFoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B235BD3423C5B9FC00302672 /* AVFoundationTests.swift */; };
 		B2557E75240E1EBC000F8DC3 /* OCInstanceVarAccessControlTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B2557E74240E1EBC000F8DC3 /* OCInstanceVarAccessControlTest.m */; };
@@ -20,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74AE10D924F1643D004BCBEC /* CPlusPlusSmartPointerTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CPlusPlusSmartPointerTest.mm; path = "../../kata/c++/KataTest/CPlusPlusSmartPointerTest.mm"; sourceTree = "<group>"; };
+		74AE10DB24F164AE004BCBEC /* Empty.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Empty.cpp; sourceTree = "<group>"; };
+		74AE10DC24F164AE004BCBEC /* Empty.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Empty.hpp; sourceTree = "<group>"; };
 		B20796C723D44A8F00557A9A /* BlockCaptureVarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockCaptureVarTests.m; sourceTree = "<group>"; };
 		B235BD3423C5B9FC00302672 /* AVFoundationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFoundationTests.swift; sourceTree = "<group>"; };
 		B2557E74240E1EBC000F8DC3 /* OCInstanceVarAccessControlTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCInstanceVarAccessControlTest.m; sourceTree = "<group>"; };
@@ -52,6 +57,8 @@
 		B2557E7A240E1F68000F8DC3 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				74AE10DB24F164AE004BCBEC /* Empty.cpp */,
+				74AE10DC24F164AE004BCBEC /* Empty.hpp */,
 				B2557E7C240E1F68000F8DC3 /* Object.h */,
 				B2557E7B240E1F68000F8DC3 /* Object.m */,
 				B2557E7E240E1F92000F8DC3 /* ObjectA.h */,
@@ -87,6 +94,7 @@
 				B29E225123A0CF5600076D92 /* NSArrayTest.m */,
 				B20796C723D44A8F00557A9A /* BlockCaptureVarTests.m */,
 				B2557E74240E1EBC000F8DC3 /* OCInstanceVarAccessControlTest.m */,
+				74AE10D924F1643D004BCBEC /* CPlusPlusSmartPointerTest.mm */,
 				B2B0ED662362D79C00EF1117 /* TestObject.h */,
 				B2B0ED672362D79C00EF1117 /* TestObject.m */,
 				B2694DC42314DF7000A944E5 /* Info.plist */,
@@ -170,7 +178,9 @@
 				B2557E75240E1EBC000F8DC3 /* OCInstanceVarAccessControlTest.m in Sources */,
 				B235BD3523C5B9FC00302672 /* AVFoundationTests.swift in Sources */,
 				B2557E80240E1F92000F8DC3 /* ObjectA.m in Sources */,
+				74AE10DA24F1643D004BCBEC /* CPlusPlusSmartPointerTest.mm in Sources */,
 				B2557E7D240E1F68000F8DC3 /* Object.m in Sources */,
+				74AE10DD24F164AE004BCBEC /* Empty.cpp in Sources */,
 				B2B0ED682362D79D00EF1117 /* TestObject.m in Sources */,
 				B2694DC32314DF7000A944E5 /* FoundationTest.swift in Sources */,
 			);

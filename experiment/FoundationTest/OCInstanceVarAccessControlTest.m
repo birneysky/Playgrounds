@@ -31,7 +31,7 @@
     
     /// instance variable '_var1' is protected
     //XCTAssertEqual(obj->_var1, 82);
-    XCTAssertEqual(obj->_var2, 82);
+    XCTAssertEqual(obj->_var2, 62);
      /// instance variable '_var3' is protected
     //XCTAssertEqual(obj->_var3, 82);
     //XCTAssertEqual(obj->_var4, 82);
