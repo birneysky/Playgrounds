@@ -30,11 +30,22 @@ void WaysToChange::showWays(int x, int deep) {
 
 void WaysToChange::showWays2(int n, int val, int ci) {
     if (val == n) {
-        std::cout << oneResultSet << std::endl;
+        //std::cout << oneResultSet << std::endl;
         //oneResultSet.clear();
+    #if 1
+        for (int i = 0; i < oneResultSet.size(); i++) {
+            std::cout << "-";
+        }
+        std::cout << "val:" << val << " " << "coins[" << ci << "]:"  << coins[ci] << " " <<  oneResultSet << std::endl;
+    #endif
         return;
     }
-    
+#if 1
+    for (int i = 0; i < oneResultSet.size(); i++) {
+        std::cout << "-";
+    }
+    std::cout << "val:" << val << " " << "coins[" << ci << "]:"  << coins[ci] << " " <<  oneResultSet << std::endl;
+#endif
     for (int j = ci; j < coins.size(); j ++) {
         if (coins[j] + val <= n) {
             oneResultSet.push_back(coins[j]);
