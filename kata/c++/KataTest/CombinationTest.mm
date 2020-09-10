@@ -6,6 +6,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#include "Combination.hpp"
+#include "KataHelper.hpp"
 
 @interface CombinationTest : XCTestCase
 
@@ -24,6 +26,9 @@
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    Combination c;
+    auto result = c.combine(10,3);
+    std::cout << result << std::endl;
 }
 
 - (void)testPerformanceExample {
