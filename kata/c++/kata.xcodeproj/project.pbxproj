@@ -50,6 +50,7 @@
 		B2965F1F25077066006FF2F2 /* CombinationTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2965F1E25077066006FF2F2 /* CombinationTest.mm */; };
 		B2965F2425077B36006FF2F2 /* SimplifyPathTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2965F2325077B36006FF2F2 /* SimplifyPathTest.mm */; };
 		B2965F2E250A2C8B006FF2F2 /* FindMedianSortedArraysTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2965F2D250A2C8B006FF2F2 /* FindMedianSortedArraysTest.mm */; };
+		B2965F3025109ED8006FF2F2 /* ListTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2965F2F25109ED8006FF2F2 /* ListTest.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +127,7 @@
 		B2965F26250A08AE006FF2F2 /* InorderTraversal.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InorderTraversal.hpp; sourceTree = "<group>"; };
 		B2965F29250A24EF006FF2F2 /* FindMedianSortedArrays.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FindMedianSortedArrays.hpp; sourceTree = "<group>"; };
 		B2965F2D250A2C8B006FF2F2 /* FindMedianSortedArraysTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FindMedianSortedArraysTest.mm; sourceTree = "<group>"; };
+		B2965F2F25109ED8006FF2F2 /* ListTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ListTest.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				B2965F1E25077066006FF2F2 /* CombinationTest.mm */,
 				B2965F2325077B36006FF2F2 /* SimplifyPathTest.mm */,
 				B2965F2D250A2C8B006FF2F2 /* FindMedianSortedArraysTest.mm */,
+				B2965F2F25109ED8006FF2F2 /* ListTest.mm */,
 				746FFC2024AE2F4A00988ED8 /* Info.plist */,
 			);
 			path = KataTest;
@@ -381,6 +384,7 @@
 				746FFC4624AE383D00988ED8 /* ReplaceBlank.cpp in Sources */,
 				74AE10CC24EAEE47004BCBEC /* IsPalindrome.cpp in Sources */,
 				746FFC4724AE383D00988ED8 /* ReverseList.cpp in Sources */,
+				B2965F3025109ED8006FF2F2 /* ListTest.mm in Sources */,
 				746FFC4824AE383D00988ED8 /* ReverseSentence.cpp in Sources */,
 				746FFC3E24AE358C00988ED8 /* ReverseSentenceTest.mm in Sources */,
 				B2965F1F25077066006FF2F2 /* CombinationTest.mm in Sources */,
