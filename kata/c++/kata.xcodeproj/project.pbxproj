@@ -101,6 +101,8 @@
 		74AE10CF24EC267E004BCBEC /* KataHelper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KataHelper.cpp; sourceTree = "<group>"; };
 		74AE10D024EC267E004BCBEC /* KataHelper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = KataHelper.hpp; sourceTree = "<group>"; };
 		74B07B8924F2B3C600818D68 /* CPlusPlusSmartPointerTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CPlusPlusSmartPointerTest.mm; sourceTree = "<group>"; };
+		74B07BA82503F02D00818D68 /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
+		74B07BAB2503F3BF00818D68 /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = "<group>"; };
 		74F4069624E839770070D3A3 /* LengthOfLongestSubstring.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LengthOfLongestSubstring.cpp; sourceTree = "<group>"; };
 		74F4069724E839770070D3A3 /* LengthOfLongestSubstring.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LengthOfLongestSubstring.hpp; sourceTree = "<group>"; };
 		74F4069924E84A410070D3A3 /* LengthOfLongestSubstring.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LengthOfLongestSubstring.mm; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		746FFBE524AE2B2100988ED8 = {
 			isa = PBXGroup;
 			children = (
+				74B07BA62503EF9A00818D68 /* data structures */,
 				74B07B8F24F2B70600818D68 /* queue */,
 				74B07B9124F2B70600818D68 /* stack */,
 				74B07B9024F2B70600818D68 /* tree */,
@@ -274,6 +277,15 @@
 				746FFC2824AE305900988ED8 /* MinStack.hpp */,
 			);
 			path = stack;
+			sourceTree = "<group>";
+		};
+		74B07BA62503EF9A00818D68 /* data structures */ = {
+			isa = PBXGroup;
+			children = (
+				74B07BA82503F02D00818D68 /* Stack.hpp */,
+				74B07BAB2503F3BF00818D68 /* Queue.hpp */,
+			);
+			path = "data structures";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
