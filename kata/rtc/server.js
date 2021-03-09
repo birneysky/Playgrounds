@@ -1,12 +1,8 @@
 'use strict'
 
-const http = require('http')
 const https = require('https')
 const fs = require('fs')
-const url = require ('url');
-const path = require ('path');
 const express = require('express')
-
 
 const options = {
 	key: fs.readFileSync ('server.key'),

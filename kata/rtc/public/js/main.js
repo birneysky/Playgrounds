@@ -69,9 +69,11 @@ function call() {
     pc1 = new RTCPeerConnection()
     pc2 = new RTCPeerConnection()
     pc1.onicecandidate = (e) => {
+        console.log("pc1 candidate:", e.candidate);
         pc2.addIceCandidate(e.candidate)
     }
     pc2.onicecandidate = (e) => {
+        console.log("pc2 candidate:", e.candidate);
         pc1.addIceCandidate(e.candidate)
     }
 
