@@ -10,10 +10,9 @@ const options = {
 };
 
 const PORT = 443;
-const base = 'public';
 
 var app = express()
-app.use(express.static('./public'))
+app.use(express.static('www'))
 
 https.createServer(options, app).listen(PORT, function () {
     console.log('Https server listening on port ' + PORT);
