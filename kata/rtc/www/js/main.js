@@ -11,10 +11,7 @@ var localStream;
 var pc1;
 var pc2;
 
-function getMediaStream(stream) {
-    localVideo.srcObject = stream
-    localStream = stream;
-}
+
 
 function getRemoteStream(e) {
     remoteVideo.srcObject = e.streams[0]
@@ -35,8 +32,13 @@ function start() {
             audio: false
         }
         navigator.mediaDevices.getUserMedia(constraints)
-                                .then(getMediaStream)
-                                .catch(handleError)
+                                .then((stream) => {
+                                    localVideo.srcObject = stream
+                                    localStream = stream
+                                })
+                                .catch((err) => {
+                                    console.error(err)
+                                })
     }
 }
 
@@ -69,27 +71,41 @@ function call() {
     pc1 = new RTCPeerConnection()
     pc2 = new RTCPeerConnection()
     pc1.onicecandidate = (e) => {
-        console.log("pc1 candidate:", e.candidate);
+        console.log("pc1 candidate:", e.candidate.candidate);
         pc2.addIceCandidate(e.candidate)
     }
     pc2.onicecandidate = (e) => {
-        console.log("pc2 candidate:", e.candidate);
+        console.log("pc2 candidate:", e.candidate.candidate);
         pc1.addIceCandidate(e.candidate)
     }
 
-    pc2.ontrack = getRemoteStream
+    pc2.ontrack = (e) => {
+        console.log("pc2 on track")
+        remoteVideo.srcObject = e.streams[0]
+    }
     
     localStream.getTracks().forEach((track) => {
-        pc1.addTrack(track, localStream);
+        pc1.addTrack(track, localStream)
     });
 
     var offerOptions = {
         offerToReceiveAudio:0,
         offerToReceiveVideo:1
     }
-    pc1.createOffer(offerOptions)
-        .then(getOffer)
-        .catch(handleOfferError)
+    pc1.createOffer(offerOptions).then((desc) => {
+            console.log('offer:',desc.sdp)
+            pc1.setLocalDescription(desc)
+            pc2.setRemoteDescription(desc)
+            pc2.createAnswer().then((desc) => {
+                console.log('answer:',desc.sdp)
+                pc2.setLocalDescription(desc)
+                pc1.setRemoteDescription(desc)
+            }).catch((err) => {
+                console.error("failed to create answer",err)
+            })
+        }).catch((err) => {
+            console.error("failed to create offer",err)
+        })
 }
 
 function hangup() {
