@@ -4,19 +4,32 @@
         <title>
             WebRTC PeerConnection
         </title>
+        <link href="css/main.css" rel="stylesheet" />
     </head>
     <body>
-        <div>
-            <video id = "localVideo" width="540" autoplay playsinline  ></video>
-            <video id = "remoteVideo" width="540" autoplay playsinline  ></video>
-        </div>
-
         <div>
             <button id = "start" > Start </button>
             <button id = "call" > Call </button>
             <button id = "hangup" > Hangup </button>
         </div>
-        <script src = "https://webrtc.github.io/adapter/adapter-latest.js"></script>
-        <script src = "js/main.js"></script>
+        <div id = "preview" >
+            <div>
+                <h2>Local:</h2>
+                <video id = "localVideo1" width="540" autoplay playsinline  ></video>
+                <video id = "remoteVideo1" width="540" autoplay playsinline  ></video>
+            </div>
+    
+            <div>
+                <h2>Remote:</h2>
+                <video id = "localVideo2" width="540" autoplay playsinline  ></video>
+                <video id = "remoteVideo2" width="540" autoplay playsinline  ></video>
+            </div>
+        </div>
+
+
+
+        <script src = "https://webrtc.github.io/adapter/adapter-latest.js" ></script>
+        <script src = "js/glfx.js" ></script>
+        <script src = "js/main.js" ></script>
     </body>
 </html>
