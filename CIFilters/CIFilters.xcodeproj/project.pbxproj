@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74DC296C2694AB8D0029DA20 /* TextImageGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DC296B2694AB8D0029DA20 /* TextImageGeneratorViewController.swift */; };
 		B2873B6D2275A0A0008BBF33 /* FilterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2873B6C2275A0A0008BBF33 /* FilterDetailViewController.swift */; };
 		B2873B742275A134008BBF33 /* FilterPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2873B6E2275A133008BBF33 /* FilterPresentationController.swift */; };
 		B2873B752275A134008BBF33 /* FilterParamPannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2873B6F2275A134008BBF33 /* FilterParamPannelViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74DC296B2694AB8D0029DA20 /* TextImageGeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextImageGeneratorViewController.swift; sourceTree = "<group>"; };
 		B2873B6C2275A0A0008BBF33 /* FilterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDetailViewController.swift; sourceTree = "<group>"; };
 		B2873B6E2275A133008BBF33 /* FilterPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterPresentationController.swift; sourceTree = "<group>"; };
 		B2873B6F2275A134008BBF33 /* FilterParamPannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterParamPannelViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				B2A91E6E22758BCF00D01E09 /* AppDelegate.swift */,
 				B2A91E9E22758C9200D01E09 /* FilterTableViewController.swift */,
 				B2873B6C2275A0A0008BBF33 /* FilterDetailViewController.swift */,
+				74DC296B2694AB8D0029DA20 /* TextImageGeneratorViewController.swift */,
 				B2A91E7222758BCF00D01E09 /* Main.storyboard */,
 				B2A91E7522758BD100D01E09 /* Assets.xcassets */,
 				B2A91E7722758BD100D01E09 /* LaunchScreen.storyboard */,
@@ -280,6 +283,7 @@
 				B2A91E6F22758BCF00D01E09 /* AppDelegate.swift in Sources */,
 				B2873B762275A134008BBF33 /* FilterParameter.swift in Sources */,
 				B2A91E9F22758C9200D01E09 /* FilterTableViewController.swift in Sources */,
+				74DC296C2694AB8D0029DA20 /* TextImageGeneratorViewController.swift in Sources */,
 				B2873B772275A134008BBF33 /* FilterColor.swift in Sources */,
 				B2873B742275A134008BBF33 /* FilterPresentationController.swift in Sources */,
 			);
@@ -459,7 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9CVMN4UZK4;
 				INFOPLIST_FILE = CIFilters/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,7 +482,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9CVMN4UZK4;
 				INFOPLIST_FILE = CIFilters/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
