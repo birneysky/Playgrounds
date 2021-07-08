@@ -1,6 +1,6 @@
 import UIKit
 
-protocol FilterSliderViewDelegate: class {
+protocol FilterSliderViewDelegate: AnyObject {
     func valueDidChange(_ value: Float, minimum: Float, maximum: Float, forKey key: String)
 }
 

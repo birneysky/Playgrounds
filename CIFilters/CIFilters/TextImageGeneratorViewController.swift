@@ -19,27 +19,36 @@ class TextImageGeneratorViewController: UIViewController {
             return;
         }
         
-        print(filter.attributes)
-  
+        //print(filter.attributes)
+        filter.setValue(50, forKey: "inputFontSize")
         guard let klara = UIImage(named: "klara")?.cgImage else {
             return
         }
         let bgImg = CIImage(cgImage: klara)
         
         var count: Int = 0;
-        self.time = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+        self.time = Timer.scheduledTimer(withTimeInterval: 0.033, repeats: true) { _ in
             filter.setValue(NSString.init(format: "%010d", count), forKey: "inputText")
             guard let outImg = filter.outputImage else {
                 return;
             }
-            //print(img.size)
-            let final = outImg.composited(over: bgImg)
+            
+            var extent = outImg.extent
+            extent.origin.x = 30
+            print(outImg.extent)
+           let textImg = outImg.transformed(by: CGAffineTransform(translationX: 0, y: 120))
+            print(textImg.extent)
+            let final = textImg.composited(over: bgImg)
             let img = UIImage(ciImage: final)
             self.imageView.image = img
             
             count += 1
         }
         self.time.fire()
+        guard let overFilter = CIFilter(name: "CISourceOverCompositing") else {
+            return;
+        }
+        print(overFilter.attributes)
         // Do any additional setup after loading the view.
     }
     
