@@ -21,16 +21,20 @@ class TextImageGeneratorViewController: UIViewController {
         
         print(filter.attributes)
   
+        guard let klara = UIImage(named: "klara")?.cgImage else {
+            return
+        }
+        let bgImg = CIImage(cgImage: klara)
         
         var count: Int = 0;
-        self.time = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { _ in
+        self.time = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
             filter.setValue(NSString.init(format: "%010d", count), forKey: "inputText")
             guard let outImg = filter.outputImage else {
                 return;
             }
-            let img = UIImage(ciImage: outImg)
             //print(img.size)
-            
+            let final = outImg.composited(over: bgImg)
+            let img = UIImage(ciImage: final)
             self.imageView.image = img
             
             count += 1
