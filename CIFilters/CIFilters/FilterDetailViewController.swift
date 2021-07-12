@@ -159,7 +159,7 @@ class FilterDetailViewController: UIViewController, FilterSliderViewDelegate {
         //let path = Bundle.main.path(forResource: "img_009", ofType: "png")
 //        let url = URL(fileURLWithPath: path!);
 //        let img = CIImage(contentsOf: url)
-        let imge = UIImage(named: "img_009")
+        let imge = UIImage(named: "klara")
         let img = CIImage(cgImage: (imge?.cgImage)!)
         return img
     }()

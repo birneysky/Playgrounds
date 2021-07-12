@@ -25,9 +25,7 @@ class FilterParamPannelViewController: UIViewController {
         self.preferredContentSize = CGSize(width: self.view.frame.width, height: height)
         for item in self.parameters {
             let slider =  FilterSliderView(parameter: item)
-            if let navvc = self.presentingViewController as? UINavigationController {
-                slider.deletate = navvc.topViewController as? FilterSliderViewDelegate
-            }
+            
             //slider.backgroundColor = UIColor.lightGray
             self.stackView.addArrangedSubview(slider)
             
@@ -38,6 +36,16 @@ class FilterParamPannelViewController: UIViewController {
             }
             slider.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 16).isActive = true
             slider.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -16).isActive = true
+            
+            guard let tabbarVC = self.presentingViewController as? UITabBarController else {
+                return;
+            }
+            
+            guard let navvc = tabbarVC.selectedViewController as? UINavigationController else {
+                return;
+            }
+            
+            slider.deletate = navvc.topViewController as? FilterSliderViewDelegate
         }
     }
 

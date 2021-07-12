@@ -26,7 +26,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELI-mE-Mrt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1713" y="163"/>
+            <point key="canvasLocation" x="1772" y="200"/>
         </scene>
         <!--Filter Table View Controller-->
         <scene sceneID="zZV-8t-Ugy">
@@ -116,6 +116,29 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="HZu-pv-pAs" kind="show" id="GHZ-NG-V13"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Idr-Ej-RTV" style="IBUITableViewCellStyleDefault" id="Mgx-X7-8qo">
+                                        <rect key="frame" x="0.0" y="111.66666984558105" width="375" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mgx-X7-8qo" id="lDN-pS-9yg">
+                                            <rect key="frame" x="0.0" y="0.0" width="349.33333333333331" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Mirror X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Idr-Ej-RTV">
+                                                    <rect key="frame" x="16" y="0.0" width="325.33333333333331" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="bnf-TP-TyP" kind="show" id="zI4-xy-bMq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -129,7 +152,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qVQ-jb-sV2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2518" y="171"/>
+            <point key="canvasLocation" x="2714" y="200"/>
         </scene>
         <!--Text Image Generator View Controller-->
         <scene sceneID="C3j-mP-JGx">
@@ -155,19 +178,101 @@
                             <constraint firstItem="iVm-S6-mzi" firstAttribute="centerX" secondItem="Np0-AB-S0g" secondAttribute="centerX" id="o4V-8L-4b3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="0JR-bf-bfw"/>
+                    <navigationItem key="navigationItem" id="0JR-bf-bfw">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="yWG-ng-AQ1">
+                            <connections>
+                                <segue destination="5Ux-Rc-41e" kind="show" id="xKg-lm-PIT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="iVm-S6-mzi" id="G30-H3-giI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xy8-v7-7tB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3282" y="218"/>
+            <point key="canvasLocation" x="3566" y="200"/>
+        </scene>
+        <!--MirrorX View Controller-->
+        <scene sceneID="7ne-se-6K4">
+            <objects>
+                <viewController id="bnf-TP-TyP" customClass="MirrorXViewController" customModule="CIFilters" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JyY-Ng-P77">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gdu-UD-jhG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lX0-TH-YOQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gdu-UD-jhG" firstAttribute="leading" secondItem="JyY-Ng-P77" secondAttribute="leading" id="Ipm-xA-Sqh"/>
+                            <constraint firstAttribute="trailing" secondItem="gdu-UD-jhG" secondAttribute="trailing" id="S7W-7U-8e3"/>
+                            <constraint firstItem="gdu-UD-jhG" firstAttribute="top" secondItem="JyY-Ng-P77" secondAttribute="top" id="TWS-hV-lre"/>
+                            <constraint firstAttribute="bottom" secondItem="gdu-UD-jhG" secondAttribute="bottom" id="gl9-WN-XNS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="e0s-dr-YdH"/>
+                    <connections>
+                        <outlet property="imageView" destination="gdu-UD-jhG" id="PVA-uL-b3P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h5Z-RJ-cCs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3257" y="978"/>
+        </scene>
+        <!--Image Compositing Over View Controller-->
+        <scene sceneID="iGn-ON-XNG">
+            <objects>
+                <viewController id="HZu-pv-pAs" customClass="ImageCompositingOverViewController" customModule="CIFilters" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pLQ-I9-qof">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Qj-00-wEW">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="q73-41-6AV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Qj-00-wEW" firstAttribute="leading" secondItem="pLQ-I9-qof" secondAttribute="leading" id="bfX-No-VLX"/>
+                            <constraint firstItem="4Qj-00-wEW" firstAttribute="bottom" secondItem="q73-41-6AV" secondAttribute="bottom" id="p9u-0g-cPL"/>
+                            <constraint firstItem="4Qj-00-wEW" firstAttribute="top" secondItem="q73-41-6AV" secondAttribute="top" id="sbI-lj-93J"/>
+                            <constraint firstAttribute="trailing" secondItem="4Qj-00-wEW" secondAttribute="trailing" id="uYz-nr-7Z1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KBB-r4-qpY"/>
+                    <connections>
+                        <outlet property="imageView" destination="4Qj-00-wEW" id="b6b-sr-Hcx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fHW-Ej-ty4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2593" y="978"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="OON-XO-hSx">
+            <objects>
+                <viewController id="5Ux-Rc-41e" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z4q-FH-5fn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="v5o-e5-CuR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pbz-8s-TZB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o2F-rx-SdH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4577" y="200"/>
         </scene>
         <!--Filter Detail View Controller-->
         <scene sceneID="4X0-kr-EDn">
             <objects>
-                <viewController id="TgM-vZ-CQX" customClass="FilterDetailViewController" customModule="CIFilters" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="TgM-vZ-CQX" customClass="FilterDetailViewController" customModule="CIFilters" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uto-cG-4eR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
