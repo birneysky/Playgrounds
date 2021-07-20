@@ -19,7 +19,7 @@
 		32AE0EB126A6C96500F04560 /* EAGLVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AE0EB026A6C96500F04560 /* EAGLVideoView.m */; };
 		32AE0EB426A6CB2500F04560 /* VideoCapturer.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AE0EB326A6CB2500F04560 /* VideoCapturer.m */; };
 		32AE0EB726A6D3D800F04560 /* NV12TextureCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AE0EB526A6D3D700F04560 /* NV12TextureCache.m */; };
-		32AE0EBB26A6F30300F04560 /* NV12Shader.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AE0EBA26A6F30300F04560 /* NV12Shader.m */; };
+		32AE0EBB26A6F30300F04560 /* NV12Shader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 32AE0EBA26A6F30300F04560 /* NV12Shader.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +67,7 @@
 		32AE0EB626A6D3D800F04560 /* NV12TextureCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NV12TextureCache.h; sourceTree = "<group>"; };
 		32AE0EB826A6EEBA00F04560 /* VideoViewShading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoViewShading.h; sourceTree = "<group>"; };
 		32AE0EB926A6F30300F04560 /* NV12Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NV12Shader.h; sourceTree = "<group>"; };
-		32AE0EBA26A6F30300F04560 /* NV12Shader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NV12Shader.m; sourceTree = "<group>"; };
+		32AE0EBA26A6F30300F04560 /* NV12Shader.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NV12Shader.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +127,7 @@
 				32AE0EAB26A6C8A300F04560 /* VideoRender.h */,
 				32AE0EB826A6EEBA00F04560 /* VideoViewShading.h */,
 				32AE0EB926A6F30300F04560 /* NV12Shader.h */,
-				32AE0EBA26A6F30300F04560 /* NV12Shader.m */,
+				32AE0EBA26A6F30300F04560 /* NV12Shader.mm */,
 				32AE0EAF26A6C96500F04560 /* EAGLVideoView.h */,
 				32AE0EB026A6C96500F04560 /* EAGLVideoView.m */,
 				32AE0EB626A6D3D800F04560 /* NV12TextureCache.h */,
@@ -295,7 +295,7 @@
 				32AE0E8626A6C68E00F04560 /* main.m in Sources */,
 				32AE0EB126A6C96500F04560 /* EAGLVideoView.m in Sources */,
 				32AE0EB726A6D3D800F04560 /* NV12TextureCache.m in Sources */,
-				32AE0EBB26A6F30300F04560 /* NV12Shader.m in Sources */,
+				32AE0EBB26A6F30300F04560 /* NV12Shader.mm in Sources */,
 				32AE0EB426A6CB2500F04560 /* VideoCapturer.m in Sources */,
 				32AE0E7826A6C68B00F04560 /* SceneDelegate.m in Sources */,
 			);

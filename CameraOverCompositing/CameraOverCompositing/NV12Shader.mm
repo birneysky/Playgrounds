@@ -8,7 +8,7 @@
 #import "NV12Shader.h"
 #import <OpenGLES/ES2/gl.h>
 #import <OpenGLES/ES2/glext.h>
-
+#import <OpenGLES/gltypes.h>
 
 #define STRINGIZE(x) #x
 #define STRINGIZE2(x) STRINGIZE(x)
@@ -107,6 +107,11 @@ static inline BOOL validateProgram(GLuint prog) {
     return YES;
 }
 
+static const int kYTextureUnit = 0;
+static const int kUTextureUnit = 1;
+static const int kVTextureUnit = 2;
+static const int kUvTextureUnit = 1;
+
 @implementation NV12Shader {
     GLuint _nv12Program;
     GLint  _position;
@@ -120,11 +125,10 @@ static inline BOOL validateProgram(GLuint prog) {
     GLuint vertShader = 0, fragShader = 0;
     _nv12Program = glCreateProgram();
     vertShader = compileShader(GL_VERTEX_SHADER, vertexShader);
-    if (!vertShader)
-        goto exit;
+    NSAssert(vertShader != 0, @"compile vertex shader failed");
+    
     fragShader = compileShader(GL_FRAGMENT_SHADER, fragmentShader);
-    if (!fragShader)
-        goto exit;
+    NSAssert(fragShader != 0, @"compile fragment shader failed");
     
     glAttachShader(_nv12Program, vertShader);
     glAttachShader(_nv12Program, fragShader);
@@ -134,25 +138,23 @@ static inline BOOL validateProgram(GLuint prog) {
     _position = glGetAttribLocation(_nv12Program, "position");
     _textureCoord = glGetAttribLocation(_nv12Program, "texcoord");
     
+    
     GLint status;
     glGetProgramiv(_nv12Program, GL_LINK_STATUS, &status);
-    if (status == GL_FALSE) {
-        NSLog(@"Failed to link program %d", _nv12Program);
-        goto exit;
-    }
-    result = validateProgram(_nv12Program);
-exit:
-    if (vertShader)
-        glDeleteShader(vertShader);
-    if (fragShader)
-        glDeleteShader(fragShader);
+    NSAssert(status == GL_TRUE, @"Failed to link program %d", _nv12Program);
     
-    if (result) {
-        NSLog(@"OK setup GL programm");
-    } else {
-        glDeleteProgram(_nv12Program);
-        _nv12Program = 0;
-    }
+    result = validateProgram(_nv12Program);
+    NSAssert(result, @"etup GL programm failed");
+    
+    GLint ySampler = glGetUniformLocation(_nv12Program, "s_textureY");
+    GLint uvSampler = glGetUniformLocation(_nv12Program, "s_textureUV");
+
+    NSAssert(ySampler >= 0, @"Failed to get uniform variable locations in NV12 shader");
+    NSAssert(uvSampler >= 0, @"Failed to get uniform variable locations in NV12 shader");
+
+    glUseProgram(_nv12Program);
+    glUniform1i(ySampler, kYTextureUnit);
+    glUniform1i(uvSampler, kUvTextureUnit);
     return result;
 }
 
@@ -160,6 +162,10 @@ exit:
                                height:(int)height
                                yPlane:(GLuint)yPlane
                               uvPlane:(GLuint)uvPlane {
+    if (!_nv12Program) {
+        [self buildProgramWithVertextShader:vertexShader fragmentShader:fragmentShader];
+    }
+    
     static const GLfloat imageVertices[] = {
         -1.0f, -1.0f,
         1.0f, -1.0f,
@@ -179,9 +185,22 @@ exit:
     glVertexAttribPointer(_textureCoord, 2, GL_FLOAT, 0, 0, noRotationTextureCoordinates);
     glEnableVertexAttribArray(_textureCoord);
     
-    if (!_nv12Program) {
-        [self buildProgramWithVertextShader:vertexShader fragmentShader:fragmentShader];
-    }
+    glUseProgram(_nv12Program);
+    
+    glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+    glActiveTexture(static_cast<GLenum>(GL_TEXTURE0 + kYTextureUnit));
+    glBindTexture(GL_TEXTURE_2D, yPlane);
+
+    glActiveTexture(static_cast<GLenum>(GL_TEXTURE0 + kUvTextureUnit));
+    glBindTexture(GL_TEXTURE_2D, uvPlane);
+
+    glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
+    
+
 }
 
 @end

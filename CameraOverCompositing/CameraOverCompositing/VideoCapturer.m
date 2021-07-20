@@ -115,7 +115,9 @@
     self.videoCompressionSettings =
         [[videoDeviceOutput recommendedVideoSettingsForAssetWriterWithOutputFileType:AVFileTypeMPEG4] copy];
 
+    self.videoConnection.videoOrientation = AVCaptureVideoOrientationPortrait;
     self.videoBufferOrientation = self.videoConnection.videoOrientation;
+    
 
     [self focusAtPoint:CGPointMake(0.5, 0.5)];
 }
