@@ -108,6 +108,7 @@
     if ([self.videoDevice lockForConfiguration:&error]) {
         self.videoDevice.activeVideoMaxFrameDuration = frameDuration;
         self.videoDevice.activeVideoMinFrameDuration = frameDuration;
+        self.videoDevice.videoZoomFactor = 1;
         [self.videoDevice unlockForConfiguration];
     }
 

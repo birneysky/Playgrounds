@@ -6,10 +6,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "VideoViewShading.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NV12VAOShader : NSObject
+@interface NV12VAOShader : NSObject <VideoViewShading>
 
 @end
 

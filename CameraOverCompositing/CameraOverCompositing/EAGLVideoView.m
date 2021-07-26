@@ -8,7 +8,10 @@
 #import "EAGLVideoView.h"
 #import "NV12TextureCache.h"
 #import "VideoViewShading.h"
+#import "NV12VAOShader.h"
 #import "NV12Shader.h"
+
+#import <AVFoundation/AVFoundation.h>
 
 @interface EAGLVideoView ()
 
@@ -41,29 +44,26 @@
     return [CAEAGLLayer class];
 }
 
-- (void)setup {
+- (void)setupContextAndBuffers {
     EAGLContext *glContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES3];
     if (!glContext) {
       glContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
     }
+    //glContext.multiThreaded = YES;
+    BOOL success = [EAGLContext setCurrentContext:glContext];
+    NSAssert(success == YES, @"EAGLContext setCurrentContext failed");
     
     NSAssert(glContext, @"EAGLContext alloc failed");
     _glContext = glContext;
     
-    BOOL success = [EAGLContext setCurrentContext:glContext];
-    NSAssert(success == YES, @"EAGLContext setCurrentContext failed");
-    CAEAGLLayer *eaglLayer = (CAEAGLLayer*) self.layer;
-    eaglLayer.opaque = YES;
-    eaglLayer.drawableProperties = @{
-        kEAGLDrawablePropertyRetainedBacking:@(NO),
-        kEAGLDrawablePropertyColorFormat:kEAGLColorFormatRGBA8
-    };
-    
     glGenFramebuffers(1, &_frameBuffer);
-    glGenRenderbuffers(1, &_renderBuffer);
     glBindFramebuffer(GL_FRAMEBUFFER, _frameBuffer);
+    glGenRenderbuffers(1, &_renderBuffer);
     glBindRenderbuffer(GL_RENDERBUFFER, _renderBuffer);
-    [glContext renderbufferStorage:GL_RENDERBUFFER fromDrawable:(CAEAGLLayer*)self.layer];
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        [glContext renderbufferStorage:GL_RENDERBUFFER fromDrawable:(CAEAGLLayer*)self.layer];
+       
+    });
     glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &_width);
     glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &_height);
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, _renderBuffer);
@@ -74,30 +74,50 @@
     
     GLenum glError = glGetError();
     NSAssert(glError == GL_NO_ERROR, @"failed to setup GL %x",glError);
-    _shader = [[NV12Shader alloc] init];
+    _shader = [[NV12VAOShader alloc] init];
+    [EAGLContext setCurrentContext:glContext];
+}
+
+- (void)setup {
+    self.contentScaleFactor = [[UIScreen mainScreen] scale]; /// 不设置该值，会出现锯齿
+    CAEAGLLayer *eaglLayer = (CAEAGLLayer*) self.layer;
+    eaglLayer.opaque = YES;
+    eaglLayer.drawableProperties = @{
+        kEAGLDrawablePropertyRetainedBacking:@(NO),
+        kEAGLDrawablePropertyColorFormat:kEAGLColorFormatRGBA8
+    };
+    
+    
+ 
 }
 
 - (void)renderVideoPixelBuffer:(CVPixelBufferRef)buffer {
-    OSType pixelFmt = CVPixelBufferGetPixelFormatType(buffer);
-    assert(pixelFmt == kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange);
+    NSLog(@"%@",[NSThread currentThread]);
+//    OSType pixelFmt = CVPixelBufferGetPixelFormatType(buffer);
+//    assert(pixelFmt == kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange);
     
-    size_t width = CVPixelBufferGetWidth(buffer);
-    size_t height = CVPixelBufferGetHeight(buffer);
-    
-    if ([EAGLContext currentContext] != _glContext) {
-      [EAGLContext setCurrentContext:_glContext];
+//    size_t width = CVPixelBufferGetWidth(buffer);
+//    size_t height = CVPixelBufferGetHeight(buffer);
+    if (!_glContext) {
+        [self setupContextAndBuffers];
     }
     
+    if ([EAGLContext currentContext] != _glContext) {
+        NSLog(@"EAGLContext currentContext is not _glContext");
+        [EAGLContext setCurrentContext:_glContext];
+    }
+
     glBindFramebuffer(GL_FRAMEBUFFER, _frameBuffer);
-    glViewport(0, 0, (GLsizei)width, (GLsizei)height);
     if (!_nv12TextureCache) {
         _nv12TextureCache = [[NV12TextureCache alloc] initWithContext:_glContext];
+        CGRect rect = AVMakeRectWithAspectRatioInsideRect(CGSizeMake(1080, 1920), (CGRect){0, 0, _width, _height});
+        glViewport(rect.origin.x, rect.origin.y, (GLsizei)rect.size.width, (GLsizei)rect.size.height);
     }
     
     [self.nv12TextureCache uploadTexturesDataWithPixelBuffer:buffer];
     /// applyShading vertext texture
-    [self.shader applyShadingForFrameWithWidth:(int)width
-                                        height:(int)height
+    [self.shader applyShadingForFrameWithWidth:(int)1080
+                                        height:(int)1920
                                         yPlane:self.nv12TextureCache.yTexture
                                        uvPlane:self.nv12TextureCache.uvTexture];
     

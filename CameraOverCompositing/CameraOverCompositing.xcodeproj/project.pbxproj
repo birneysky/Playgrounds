@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		322910E626A99D9400BE2CAD /* NV12VAOShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 322910E526A99D9400BE2CAD /* NV12VAOShader.m */; };
+		322910E626A99D9400BE2CAD /* NV12VAOShader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 322910E526A99D9400BE2CAD /* NV12VAOShader.mm */; };
 		322910EC26A9A32600BE2CAD /* ShadingHelper.c in Sources */ = {isa = PBXBuildFile; fileRef = 322910EA26A99FEB00BE2CAD /* ShadingHelper.c */; };
+		322910EE26AAE83800BE2CAD /* VideoViewShading.m in Sources */ = {isa = PBXBuildFile; fileRef = 322910ED26AAE83700BE2CAD /* VideoViewShading.m */; };
 		32AE0E7526A6C68A00F04560 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AE0E7426A6C68A00F04560 /* AppDelegate.m */; };
 		32AE0E7826A6C68B00F04560 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AE0E7726A6C68B00F04560 /* SceneDelegate.m */; };
 		32AE0E7B26A6C68B00F04560 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AE0E7A26A6C68B00F04560 /* ViewController.m */; };
@@ -43,9 +44,10 @@
 
 /* Begin PBXFileReference section */
 		322910E426A99D9400BE2CAD /* NV12VAOShader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NV12VAOShader.h; sourceTree = "<group>"; };
-		322910E526A99D9400BE2CAD /* NV12VAOShader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NV12VAOShader.m; sourceTree = "<group>"; };
+		322910E526A99D9400BE2CAD /* NV12VAOShader.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NV12VAOShader.mm; sourceTree = "<group>"; };
 		322910E926A99FEB00BE2CAD /* ShadingHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShadingHelper.h; sourceTree = "<group>"; };
 		322910EA26A99FEB00BE2CAD /* ShadingHelper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ShadingHelper.c; sourceTree = "<group>"; };
+		322910ED26AAE83700BE2CAD /* VideoViewShading.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoViewShading.m; sourceTree = "<group>"; };
 		32AE0E7026A6C68A00F04560 /* CameraOverCompositing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraOverCompositing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32AE0E7326A6C68A00F04560 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		32AE0E7426A6C68A00F04560 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -132,12 +134,13 @@
 				32AE0E7A26A6C68B00F04560 /* ViewController.m */,
 				32AE0EAB26A6C8A300F04560 /* VideoRender.h */,
 				32AE0EB826A6EEBA00F04560 /* VideoViewShading.h */,
+				322910ED26AAE83700BE2CAD /* VideoViewShading.m */,
 				322910E926A99FEB00BE2CAD /* ShadingHelper.h */,
 				322910EA26A99FEB00BE2CAD /* ShadingHelper.c */,
 				32AE0EB926A6F30300F04560 /* NV12Shader.h */,
 				32AE0EBA26A6F30300F04560 /* NV12Shader.mm */,
 				322910E426A99D9400BE2CAD /* NV12VAOShader.h */,
-				322910E526A99D9400BE2CAD /* NV12VAOShader.m */,
+				322910E526A99D9400BE2CAD /* NV12VAOShader.mm */,
 				32AE0EAF26A6C96500F04560 /* EAGLVideoView.h */,
 				32AE0EB026A6C96500F04560 /* EAGLVideoView.m */,
 				32AE0EB626A6D3D800F04560 /* NV12TextureCache.h */,
@@ -305,11 +308,12 @@
 				32AE0E7526A6C68A00F04560 /* AppDelegate.m in Sources */,
 				32AE0E8626A6C68E00F04560 /* main.m in Sources */,
 				32AE0EB126A6C96500F04560 /* EAGLVideoView.m in Sources */,
+				322910EE26AAE83800BE2CAD /* VideoViewShading.m in Sources */,
 				32AE0EB726A6D3D800F04560 /* NV12TextureCache.m in Sources */,
 				32AE0EBB26A6F30300F04560 /* NV12Shader.mm in Sources */,
 				32AE0EB426A6CB2500F04560 /* VideoCapturer.m in Sources */,
 				32AE0E7826A6C68B00F04560 /* SceneDelegate.m in Sources */,
-				322910E626A99D9400BE2CAD /* NV12VAOShader.m in Sources */,
+				322910E626A99D9400BE2CAD /* NV12VAOShader.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
