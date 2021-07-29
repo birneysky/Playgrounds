@@ -36,6 +36,7 @@
 - (instancetype)initWithCoder:(NSCoder *)coder {
     if (self = [super initWithCoder:coder]) {
         [self setup];
+        //[self setupContextAndBuffers];
     }
     return self;
 }
@@ -60,9 +61,8 @@
     glBindFramebuffer(GL_FRAMEBUFFER, _frameBuffer);
     glGenRenderbuffers(1, &_renderBuffer);
     glBindRenderbuffer(GL_RENDERBUFFER, _renderBuffer);
-    dispatch_sync(dispatch_get_main_queue(), ^{
-        [glContext renderbufferStorage:GL_RENDERBUFFER fromDrawable:(CAEAGLLayer*)self.layer];
-       
+   dispatch_sync(dispatch_get_main_queue(), ^{
+       [glContext renderbufferStorage:GL_RENDERBUFFER fromDrawable:(CAEAGLLayer*)self.layer];
     });
     glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &_width);
     glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &_height);
@@ -86,44 +86,42 @@
         kEAGLDrawablePropertyRetainedBacking:@(NO),
         kEAGLDrawablePropertyColorFormat:kEAGLColorFormatRGBA8
     };
-    
-    
- 
 }
 
 - (void)renderVideoPixelBuffer:(CVPixelBufferRef)buffer {
-    NSLog(@"%@",[NSThread currentThread]);
-//    OSType pixelFmt = CVPixelBufferGetPixelFormatType(buffer);
-//    assert(pixelFmt == kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange);
+ //   NSLog(@"%@",[NSThread currentThread]);
+    OSType pixelFmt = CVPixelBufferGetPixelFormatType(buffer);
+    assert(pixelFmt == kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange);
     
-//    size_t width = CVPixelBufferGetWidth(buffer);
-//    size_t height = CVPixelBufferGetHeight(buffer);
+    size_t width  = CVPixelBufferGetWidth(buffer);
+    size_t height = CVPixelBufferGetHeight(buffer);
+    
     if (!_glContext) {
         [self setupContextAndBuffers];
     }
     
     if ([EAGLContext currentContext] != _glContext) {
-        NSLog(@"EAGLContext currentContext is not _glContext");
+       NSLog(@"EAGLContext currentContext is not _glContext");
         [EAGLContext setCurrentContext:_glContext];
     }
 
     glBindFramebuffer(GL_FRAMEBUFFER, _frameBuffer);
     if (!_nv12TextureCache) {
         _nv12TextureCache = [[NV12TextureCache alloc] initWithContext:_glContext];
-        CGRect rect = AVMakeRectWithAspectRatioInsideRect(CGSizeMake(1080, 1920), (CGRect){0, 0, _width, _height});
+        CGRect rect = AVMakeRectWithAspectRatioInsideRect(CGSizeMake(width, height), (CGRect){0, 0, _width, _height});
         glViewport(rect.origin.x, rect.origin.y, (GLsizei)rect.size.width, (GLsizei)rect.size.height);
     }
     
     [self.nv12TextureCache uploadTexturesDataWithPixelBuffer:buffer];
     /// applyShading vertext texture
-    [self.shader applyShadingForFrameWithWidth:(int)1080
-                                        height:(int)1920
+    [self.shader applyShadingForFrameWithWidth:(int)width
+                                        height:(int)height
                                         yPlane:self.nv12TextureCache.yTexture
                                        uvPlane:self.nv12TextureCache.uvTexture];
-    
 
     glBindRenderbuffer(GL_RENDERBUFFER, _renderBuffer);
     [_glContext presentRenderbuffer:GL_RENDERBUFFER];
 }
+
 
 @end
