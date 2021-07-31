@@ -25,6 +25,10 @@ extern NSString *const fragmentShader1;
                                yPlane:(GLuint)yPlane
                               uvPlane:(GLuint)uvPlane;
 
+- (void)applyShadingForFrameWithWidth:(int)width
+                               height:(int)height
+                           textureIds:(GLuint*)tids
+                               length:(int)len;
 @end
 
 

@@ -114,10 +114,12 @@
     
     [self.nv12TextureCache uploadTexturesDataWithPixelBuffer:buffer];
     /// applyShading vertext texture
-    [self.shader applyShadingForFrameWithWidth:(int)width
-                                        height:(int)height
-                                        yPlane:self.nv12TextureCache.yTexture
-                                       uvPlane:self.nv12TextureCache.uvTexture];
+//    [self.shader applyShadingForFrameWithWidth:(int)width
+//                                        height:(int)height
+//                                        yPlane:self.nv12TextureCache.yTexture
+//                                       uvPlane:self.nv12TextureCache.uvTexture];
+    GLuint tids[] = {self.nv12TextureCache.yTexture, self.nv12TextureCache.uvTexture};
+    [self.shader applyShadingForFrameWithWidth:(int)width height:(int)height textureIds:tids length:2];
 
     glBindRenderbuffer(GL_RENDERBUFFER, _renderBuffer);
     [_glContext presentRenderbuffer:GL_RENDERBUFFER];

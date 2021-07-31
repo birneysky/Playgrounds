@@ -126,5 +126,28 @@ static const int kUvTextureUnit = 1;
 
 }
 
+- (void)applyShadingForFrameWithWidth:(int)width
+                               height:(int)height
+                           textureIds:(GLuint*)tids
+                               length:(int)len {
+    if (!_nv12Program) {
+        [self buildProgramWithVertextShader:vertexShader fragmentShader:fragmentShader];
+        glUseProgram(_nv12Program);
+        glBindVertexArray(_vao);
+    }
+    
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+    for (int i = 0; i < len; i++) {
+        glActiveTexture(static_cast<GLenum>(GL_TEXTURE0 + i));
+        glBindTexture(GL_TEXTURE_2D, tids[i]);
+    }
+    
+    glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
+}
+
 
 @end
