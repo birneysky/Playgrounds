@@ -19,6 +19,12 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="utR-JO-px9" customClass="EAGLVideoView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="poke_sticker.gif" translatesAutoresizingMaskIntoConstraints="NO" id="hi7-zP-Xgz">
+                                        <rect key="frame" x="118" y="80" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
@@ -32,15 +38,17 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="stickerImage" destination="hi7-zP-Xgz" id="mVQ-5T-sRC"/>
                         <outlet property="videoRender" destination="utR-JO-px9" id="Aa4-GM-Qtm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="119" y="59"/>
+            <point key="canvasLocation" x="118.84057971014494" y="58.928571428571423"/>
         </scene>
     </scenes>
     <resources>
+        <image name="poke_sticker.gif" width="240" height="240"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

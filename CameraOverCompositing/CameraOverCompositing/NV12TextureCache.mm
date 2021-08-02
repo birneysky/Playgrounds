@@ -6,11 +6,13 @@
 //
 
 #import "NV12TextureCache.h"
+#include <vector>
 
 @implementation NV12TextureCache {
     CVOpenGLESTextureCacheRef _textureCache;
     CVOpenGLESTextureRef _yTextureRef;
     CVOpenGLESTextureRef _uvTextureRef;
+    GLuint _textureIds[2];
 }
 
 
@@ -73,6 +75,16 @@
   return YES;
 }
 
+- (GLuint*)textureIds {
+    _textureIds[0] = self.yTexture;
+    _textureIds[1] = self.uvTexture;
+    return _textureIds;
+}
+
+- (int)textureCount {
+    return 2;
+}
+
 - (BOOL)uploadTexturesDataWithPixelBuffer:(CVPixelBufferRef)pixelBuffer {
     OSType pixelFmt = CVPixelBufferGetPixelFormatType(pixelBuffer);
     assert(pixelFmt == kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange);
@@ -85,6 +97,7 @@
                    planeIndex:1
                   pixelFormat:GL_LUMINANCE_ALPHA];
 }
+
 
 - (void)releaseTextures {
   if (_uvTextureRef) {

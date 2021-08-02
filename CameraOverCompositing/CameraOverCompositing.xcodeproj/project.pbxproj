@@ -21,7 +21,7 @@
 		32AE0E9B26A6C68E00F04560 /* CameraOverCompositingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AE0E9A26A6C68E00F04560 /* CameraOverCompositingUITests.m */; };
 		32AE0EB126A6C96500F04560 /* EAGLVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AE0EB026A6C96500F04560 /* EAGLVideoView.m */; };
 		32AE0EB426A6CB2500F04560 /* VideoCapturer.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AE0EB326A6CB2500F04560 /* VideoCapturer.m */; };
-		32AE0EB726A6D3D800F04560 /* NV12TextureCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AE0EB526A6D3D700F04560 /* NV12TextureCache.m */; };
+		32AE0EB726A6D3D800F04560 /* NV12TextureCache.mm in Sources */ = {isa = PBXBuildFile; fileRef = 32AE0EB526A6D3D700F04560 /* NV12TextureCache.mm */; };
 		32AE0EBB26A6F30300F04560 /* NV12Shader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 32AE0EBA26A6F30300F04560 /* NV12Shader.mm */; };
 		74DC298426B531BD0029DA20 /* comic_sticker.png in Resources */ = {isa = PBXBuildFile; fileRef = 74DC298226B531BD0029DA20 /* comic_sticker.png */; };
 		74DC298526B531BD0029DA20 /* poke_sticker.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74DC298326B531BD0029DA20 /* poke_sticker.gif */; };
@@ -73,13 +73,14 @@
 		32AE0EB026A6C96500F04560 /* EAGLVideoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EAGLVideoView.m; sourceTree = "<group>"; };
 		32AE0EB226A6CB2500F04560 /* VideoCapturer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCapturer.h; sourceTree = "<group>"; };
 		32AE0EB326A6CB2500F04560 /* VideoCapturer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCapturer.m; sourceTree = "<group>"; };
-		32AE0EB526A6D3D700F04560 /* NV12TextureCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NV12TextureCache.m; sourceTree = "<group>"; };
+		32AE0EB526A6D3D700F04560 /* NV12TextureCache.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NV12TextureCache.mm; sourceTree = "<group>"; };
 		32AE0EB626A6D3D800F04560 /* NV12TextureCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NV12TextureCache.h; sourceTree = "<group>"; };
 		32AE0EB826A6EEBA00F04560 /* VideoViewShading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoViewShading.h; sourceTree = "<group>"; };
 		32AE0EB926A6F30300F04560 /* NV12Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NV12Shader.h; sourceTree = "<group>"; };
 		32AE0EBA26A6F30300F04560 /* NV12Shader.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NV12Shader.mm; sourceTree = "<group>"; };
 		74DC298226B531BD0029DA20 /* comic_sticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comic_sticker.png; sourceTree = "<group>"; };
 		74DC298326B531BD0029DA20 /* poke_sticker.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = poke_sticker.gif; sourceTree = "<group>"; };
+		74DC298626B844D00029DA20 /* TextTureCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextTureCache.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +150,8 @@
 				32AE0EAF26A6C96500F04560 /* EAGLVideoView.h */,
 				32AE0EB026A6C96500F04560 /* EAGLVideoView.m */,
 				32AE0EB626A6D3D800F04560 /* NV12TextureCache.h */,
-				32AE0EB526A6D3D700F04560 /* NV12TextureCache.m */,
+				32AE0EB526A6D3D700F04560 /* NV12TextureCache.mm */,
+				74DC298626B844D00029DA20 /* TextTureCache.h */,
 				32AE0EB226A6CB2500F04560 /* VideoCapturer.h */,
 				32AE0EB326A6CB2500F04560 /* VideoCapturer.m */,
 				32AE0E7C26A6C68B00F04560 /* Main.storyboard */,
@@ -325,7 +327,7 @@
 				32AE0E8626A6C68E00F04560 /* main.m in Sources */,
 				32AE0EB126A6C96500F04560 /* EAGLVideoView.m in Sources */,
 				322910EE26AAE83800BE2CAD /* VideoViewShading.m in Sources */,
-				32AE0EB726A6D3D800F04560 /* NV12TextureCache.m in Sources */,
+				32AE0EB726A6D3D800F04560 /* NV12TextureCache.mm in Sources */,
 				32AE0EBB26A6F30300F04560 /* NV12Shader.mm in Sources */,
 				32AE0EB426A6CB2500F04560 /* VideoCapturer.m in Sources */,
 				32AE0E7826A6C68B00F04560 /* SceneDelegate.m in Sources */,

@@ -15,7 +15,7 @@
 
 @interface EAGLVideoView ()
 
-@property (nonatomic, readonly) NV12TextureCache* nv12TextureCache;
+@property (nonatomic, readonly) id<TextTureCache> textureCache;
 @property (nonatomic, assign)   GLuint frameBuffer;
 @property (nonatomic, assign)   GLuint renderBuffer;
 @property (nonatomic, assign)   GLint width;
@@ -25,7 +25,7 @@
 
 @implementation EAGLVideoView {
     EAGLContext* _glContext;
-    NV12TextureCache* _nv12TextureCache;
+    id<TextTureCache> _textureCache;
     id<VideoViewShading> _shader;
     GLuint _frameBuffer;
     GLuint _renderBuffer;
@@ -106,20 +106,18 @@
     }
 
     glBindFramebuffer(GL_FRAMEBUFFER, _frameBuffer);
-    if (!_nv12TextureCache) {
-        _nv12TextureCache = [[NV12TextureCache alloc] initWithContext:_glContext];
+    if (!_textureCache) {
+        _textureCache = [[NV12TextureCache alloc] initWithContext:_glContext];
         CGRect rect = AVMakeRectWithAspectRatioInsideRect(CGSizeMake(width, height), (CGRect){0, 0, _width, _height});
         glViewport(rect.origin.x, rect.origin.y, (GLsizei)rect.size.width, (GLsizei)rect.size.height);
     }
     
-    [self.nv12TextureCache uploadTexturesDataWithPixelBuffer:buffer];
+    [self.textureCache uploadTexturesDataWithPixelBuffer:buffer];
     /// applyShading vertext texture
-//    [self.shader applyShadingForFrameWithWidth:(int)width
-//                                        height:(int)height
-//                                        yPlane:self.nv12TextureCache.yTexture
-//                                       uvPlane:self.nv12TextureCache.uvTexture];
-    GLuint tids[] = {self.nv12TextureCache.yTexture, self.nv12TextureCache.uvTexture};
-    [self.shader applyShadingForFrameWithWidth:(int)width height:(int)height textureIds:tids length:2];
+    [self.shader applyShadingForFrameWithWidth:(int)width
+                                        height:(int)height
+                                    textureIds:self.textureCache.textureIds
+                                        length:self.textureCache.textureCount];
 
     glBindRenderbuffer(GL_RENDERBUFFER, _renderBuffer);
     [_glContext presentRenderbuffer:GL_RENDERBUFFER];

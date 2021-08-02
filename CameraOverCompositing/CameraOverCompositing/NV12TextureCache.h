@@ -7,10 +7,12 @@
 
 #import <Foundation/Foundation.h>
 #import <GLKit/GLKit.h>
+#import "TextTureCache.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NV12TextureCache : NSObject
+
+@interface NV12TextureCache : NSObject <TextTureCache>
 
 @property (nonatomic, readonly) GLuint yTexture;
 @property (nonatomic, readonly) GLuint uvTexture;
