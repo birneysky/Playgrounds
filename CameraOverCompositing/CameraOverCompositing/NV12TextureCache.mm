@@ -6,7 +6,13 @@
 //
 
 #import "NV12TextureCache.h"
-#include <vector>
+
+@interface NV12TextureCache ()
+
+@property (nonatomic, readonly) GLuint yTexture;
+@property (nonatomic, readonly) GLuint uvTexture;
+
+@end
 
 @implementation NV12TextureCache {
     CVOpenGLESTextureCacheRef _textureCache;
@@ -14,7 +20,6 @@
     CVOpenGLESTextureRef _uvTextureRef;
     GLuint _textureIds[2];
 }
-
 
 - (GLuint)yTexture {
   return CVOpenGLESTextureGetName(_yTextureRef);

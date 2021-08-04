@@ -10,6 +10,7 @@
 #import "VideoViewShading.h"
 #import "NV12VAOShader.h"
 #import "NV12Shader.h"
+#import "CompositingTextureCache.h"
 
 #import <AVFoundation/AVFoundation.h>
 
@@ -75,7 +76,6 @@
     GLenum glError = glGetError();
     NSAssert(glError == GL_NO_ERROR, @"failed to setup GL %x",glError);
     _shader = [[NV12VAOShader alloc] init];
-    [EAGLContext setCurrentContext:glContext];
 }
 
 - (void)setup {
@@ -107,7 +107,7 @@
 
     glBindFramebuffer(GL_FRAMEBUFFER, _frameBuffer);
     if (!_textureCache) {
-        _textureCache = [[NV12TextureCache alloc] initWithContext:_glContext];
+        _textureCache = [[CompositingTextureCache alloc] initWithContext:_glContext];
         CGRect rect = AVMakeRectWithAspectRatioInsideRect(CGSizeMake(width, height), (CGRect){0, 0, _width, _height});
         glViewport(rect.origin.x, rect.origin.y, (GLsizei)rect.size.width, (GLsizei)rect.size.height);
     }

@@ -1,8 +1,8 @@
 //
-//  NV12TextureCache.h
-//  LiveStreamDemo
+//  CompositingTextureCache.h
+//  CameraOverCompositing
 //
-//  Created by Bruce on 2021/7/17.
+//  Created by birneysky on 2021/8/4.
 //
 
 #import <Foundation/Foundation.h>
@@ -11,13 +11,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
-@interface NV12TextureCache : NSObject <TextTureCache>
+@interface CompositingTextureCache : NSObject <TextTureCache>
 
 - (instancetype)init NS_UNAVAILABLE;
 - (nullable instancetype)initWithContext:(EAGLContext *)context;
 
 - (BOOL)uploadTexturesDataWithPixelBuffer:(CVPixelBufferRef)pixelBuffer;
+
+
 @end
 
 NS_ASSUME_NONNULL_END
