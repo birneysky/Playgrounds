@@ -169,9 +169,9 @@ NSData* rbgaDataForImage(CGImageRef imgRef) {
     OSType pixelFmt = CVPixelBufferGetPixelFormatType(pixelBuffer);
     assert(pixelFmt == kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange);
     static NSUInteger count = 0;
-    
     [self loadTextureWithRGBAImageData:self.imageDatas[count% (self.imageDatas.count)]
                                   size:(CGSize){240,240}];
+    count++;
     return [self loadTexture:&_yTextureRef
                  pixelBuffer:pixelBuffer
                   planeIndex:0

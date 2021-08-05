@@ -10,6 +10,7 @@
 #import "VideoViewShading.h"
 #import "NV12VAOShader.h"
 #import "NV12Shader.h"
+#import "CompositingShader.h"
 #import "CompositingTextureCache.h"
 
 #import <AVFoundation/AVFoundation.h>
@@ -75,7 +76,7 @@
     
     GLenum glError = glGetError();
     NSAssert(glError == GL_NO_ERROR, @"failed to setup GL %x",glError);
-    _shader = [[NV12VAOShader alloc] init];
+    _shader = [[CompositingShader alloc] init];
 }
 
 - (void)setup {

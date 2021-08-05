@@ -18,6 +18,9 @@ extern NSString *const vertexShader;
 extern NSString *const fragmentShader;
 extern NSString *const fragmentShader1;
 
+extern NSString *const vertexShader2;
+extern NSString *const fragmentShader2;
+
 @protocol VideoViewShading <NSObject>
 
 - (void)applyShadingForFrameWithWidth:(int)width

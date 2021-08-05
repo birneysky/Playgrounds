@@ -32,10 +32,10 @@
     BOOL result = NO;
     GLuint vertShader = 0, fragShader = 0;
     _nv12Program = glCreateProgram();
-    vertShader = compileShader(GL_VERTEX_SHADER, (GLchar*)vertexShader.UTF8String);
+    vertShader = compileShader(GL_VERTEX_SHADER, (GLchar*)vertexShader2.UTF8String);
     NSAssert(vertShader != 0, @"compile vertex shader failed");
     
-    fragShader = compileShader(GL_FRAGMENT_SHADER, (GLchar*)fragmentShader1.UTF8String);
+    fragShader = compileShader(GL_FRAGMENT_SHADER, (GLchar*)fragmentShader2.UTF8String);
     NSAssert(fragShader != 0, @"compile fragment shader failed");
     
     glAttachShader(_nv12Program, vertShader);
@@ -57,6 +57,10 @@
     GLint ySampler = glGetUniformLocation(_nv12Program, "s_textureY");
     GLint uvSampler = glGetUniformLocation(_nv12Program, "s_textureUV");
     GLint rgbaSampler = glGetUniformLocation(_nv12Program, "s_textureRGBA");
+    
+    // left bottom
+    GLuint lbUniform = glGetUniformLocation(_nv12Program, "lb_position");
+    GLuint rtUniform = glGetUniformLocation(_nv12Program, "rt_position");
 
     NSAssert(ySampler >= 0, @"Failed to get uniform variable locations in NV12 shader");
     NSAssert(uvSampler >= 0, @"Failed to get uniform variable locations in NV12 shader");
@@ -65,6 +69,9 @@
     glUniform1i(ySampler, 0);
     glUniform1i(uvSampler, 1);
     glUniform1i(rgbaSampler, 2);
+    
+    glUniform2f(lbUniform, 0.15, 0.5);
+    glUniform2f(rtUniform, 0.9, 0.95);
     
     
     glGenBuffers(1, &_vbo);
@@ -113,6 +120,11 @@
     
     glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
 }
+
+- (void)applyShadingForFrameWithWidth:(int)width height:(int)height yPlane:(GLuint)yPlane uvPlane:(GLuint)uvPlane {
+    
+}
+
 
 
 @end
