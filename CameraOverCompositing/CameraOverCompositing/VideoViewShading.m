@@ -78,10 +78,14 @@ NSString *const fragmentShader2 = SHADER_STRING
     yuv.x = texture2D(s_textureY, v_texcoord).r;
     yuv.yz = texture2D(s_textureUV, v_texcoord).ra - vec2(0.5, 0.5);
     
-    mediump mat3 matrix = mat3( 1.164,  1.164, 1.164,
-                                0.0,   -0.213, 2.112,
-                                1.793, -0.533, 0.0 );
-    mediump vec3 rgb = matrix * yuv;
+//    mediump mat3 matrix = mat3( 1.164,  1.164, 1.164,
+//                                0.0,   -0.213, 2.112,
+//                                1.793, -0.533, 0.0 );
+    
+    mediump mat3 matrix_ITU_R_601_4 = mat3(1.0, 1.0, 1.0,
+                                           0.0, -0.344136 , 1.772000,
+                                           1.402000, -0.714136 , 0.0);
+    mediump vec3 rgb = matrix_ITU_R_601_4 * yuv;
     
     if (v_postion.x >= lb_position.x && v_postion.y >= lb_position.y &&
         v_postion.x <= rt_position.x && v_postion.y <= rt_position.y) {
