@@ -92,6 +92,11 @@
     AVCaptureVideoDataOutput *videoDeviceOutput = [[AVCaptureVideoDataOutput alloc] init];
     [videoDeviceOutput setSampleBufferDelegate:self queue:self.sessionQueue];
     videoDeviceOutput.alwaysDiscardsLateVideoFrames = NO;
+    
+//    [videoDeviceOutput setVideoSettings:@{
+//        (id)kCVPixelBufferPixelFormatTypeKey :
+//        @(kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange)
+//    }];
 
     if ([self.captureSession canAddOutput:videoDeviceOutput]) {
         [self.captureSession addOutput:videoDeviceOutput];

@@ -16,7 +16,6 @@
     GLuint _nv12Program;
     GLint  _position;
     GLint _textureCoord;
-    GLint _InputTextureUniform;
     GLuint _vao;
     GLuint _vbo;
 }

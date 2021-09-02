@@ -136,7 +136,8 @@ NSData* rbgaDataForImage(CGImageRef imgRef) {
   }
   CVReturn ret = CVOpenGLESTextureCacheCreateTextureFromImage(kCFAllocatorDefault,
                     _textureCache, pixelBuffer, NULL, GL_TEXTURE_2D, pixelFormat,
-                    (GLsizei)width, (GLsizei)height, pixelFormat, GL_UNSIGNED_BYTE, planeIndex, textureOut);
+                    (GLsizei)width, (GLsizei)height, pixelFormat, GL_UNSIGNED_BYTE,
+                    planeIndex, textureOut);
   if (ret != kCVReturnSuccess) {
     CFRelease(*textureOut);
     *textureOut = nil;
