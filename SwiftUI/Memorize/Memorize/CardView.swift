@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CardView: View {
+    var content: String
     @State var isFaceUp: Bool =  true 
     
     var body: some View {
@@ -16,7 +17,7 @@ struct CardView: View {
             if isFaceUp {
                 shape.fill().foregroundColor(.white)
                 shape.stroke()
-                Text("👻").font(.largeTitle)
+                Text(content).font(.largeTitle)
             } else {
                 shape.fill()
             }
@@ -31,9 +32,9 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView()
+        CardView(content: "🚕")
             .preferredColorScheme(.dark)
-        CardView()
+        CardView(content: "✈️")
             .preferredColorScheme(.light)
     }
 }
