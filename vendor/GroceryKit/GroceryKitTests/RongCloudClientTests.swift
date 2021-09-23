@@ -9,45 +9,21 @@
 import XCTest
 @testable import GroceryKit
 
-class GroceryKitTests: XCTestCase {
-    var client: URLSessionClient!
-    var hc: HtppClient!
+class RongCloudClientTests: XCTestCase {
+    
+    var hc: RongCloudClient!
     var e: XCTestExpectation!
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        client = URLSessionClient()
-        hc = HtppClient()
-        e = self.expectation(description: "expectation")
+        hc = RongCloudClient()
+        e = self.expectation(description: "GroceryKitTests exception")
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-        client = nil
         hc = nil
     }
 
-    func test_TokenRequest() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let req = TokenRequest(userId: "44u32jfdsa32498320", name: "hello")
-        client.send(req) { response, error in
-            if let repo = response {
-                print(repo)
-            } else {
-                XCTAssert(true)
-            }
-            self.e.fulfill()
-        }
-        self.waitForExpectations(timeout: 30) { (error) in
-            if let err = error {
-                XCTAssert(false)
-                print(err)
-            } else {
-                
-            }
-            
-        }
-    }
     
     func test_fetchToken() {
         let name = "name"
@@ -71,8 +47,8 @@ class GroceryKitTests: XCTestCase {
             print("4 \(token)")
             self.e.fulfill()
         }.catch { err in
-                print(err)
-                XCTAssert(false)
+            print(err)
+            XCTAssert(false)
         }
 
         self.waitForExpectations(timeout: 30) { (error) in
@@ -146,17 +122,17 @@ class GroceryKitTests: XCTestCase {
         Swift.print(value)
     }
     
-    func test_UnsafeRawPointer() {
-        let a: [UInt8] = [0,1,2,3,4,5]
-        let pointer = UnsafeRawPointer(a)
-        printPointer(address: pointer, as: UInt8.self)
-    }
+//    func test_UnsafeRawPointer() {
+//        let a: [UInt8] = [0,1,2,3,4,5]
+//        let pointer = UnsafeRawPointer(a)
+//        printPointer(address: pointer, as: UInt8.self)
+//    }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+//    func testPerformanceExample() {
+//        // This is an example of a performance test case.
+//        self.measure {
+//            // Put the code you want to measure the time of here.
+//        }
+//    }
 
 }

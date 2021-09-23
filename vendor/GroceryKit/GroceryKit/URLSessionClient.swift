@@ -15,20 +15,27 @@ protocol Client {
 }
 
 struct URLSessionClient: Client {
-    let host: String = "https://api.cn.ronghub.com"
+    var host: String
     
     func send<T: Request>(_ r: T, handler: @escaping (T.Response?, Error?) -> Void) {
         let url = URL(string: host + r.path)
         var request = URLRequest(url: url!)
         request.httpMethod = r.method.rawValue
         request.httpBody = r.encode()
-        for (key, value) in r.headers {
-            request.setValue(value, forHTTPHeaderField: key)
+        if let headers = r.headers {
+            for (key, value) in headers {
+                request.setValue(value, forHTTPHeaderField: key)
+            }
         }
         let task = URLSession.shared.dataTask(with: request) {
             (data, response, error) in
-            if let data = data, let res = T.Response.parse(data: data) {
-                DispatchQueue.main.async { handler(res,nil) }
+            if let data = data {
+                do {
+                    let res = try T.Response.parse(data: data)
+                    DispatchQueue.main.async { handler(res,nil) }
+                } catch  {
+                    print("Unexpected error: \(error).")
+                }
             } else {
                 DispatchQueue.main.async { handler(nil,error) }
             }

@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32A0347326FC53FC0068284B /* URLSessionClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A0347226FC53FC0068284B /* URLSessionClientTests.swift */; };
+		32A0347526FC56350068284B /* SnowballClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A0347426FC56350068284B /* SnowballClient.swift */; };
+		32A0347726FC600A0068284B /* SnowballClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A0347626FC600A0068284B /* SnowballClientTests.swift */; };
+		32A0347926FC760F0068284B /* JsonDecodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A0347826FC760F0068284B /* JsonDecodeTests.swift */; };
+		32A0347B26FC764E0068284B /* TopStockLists.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 32A0347A26FC764E0068284B /* TopStockLists.geojson */; };
+		32A0347D26FC7C050068284B /* StockItem.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 32A0347C26FC79B50068284B /* StockItem.geojson */; };
+		32A0347F26FC83160068284B /* StockItemLists.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 32A0347E26FC81710068284B /* StockItemLists.geojson */; };
 		74CE33F122DCC72B00C185EF /* GroceryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CE33E722DCC72B00C185EF /* GroceryKit.framework */; };
-		74CE33F622DCC72B00C185EF /* GroceryKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CE33F522DCC72B00C185EF /* GroceryKitTests.swift */; };
+		74CE33F622DCC72B00C185EF /* RongCloudClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CE33F522DCC72B00C185EF /* RongCloudClientTests.swift */; };
 		74CE33F822DCC72B00C185EF /* GroceryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 74CE33EA22DCC72B00C185EF /* GroceryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74CE345322DCC7EC00C185EF /* AnyPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CE344322DCC7EC00C185EF /* AnyPromise.swift */; };
 		74CE345422DCC7EC00C185EF /* CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CE344422DCC7EC00C185EF /* CustomStringConvertible.swift */; };
@@ -30,8 +37,8 @@
 		74CE346622DCC9FD00C185EF /* fwd.h in Headers */ = {isa = PBXBuildFile; fileRef = 74CE346522DCC9FD00C185EF /* fwd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74CE346822DCCAFC00C185EF /* AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 74CE346722DCCAFC00C185EF /* AnyPromise.m */; };
 		B254082422DD8042006FE9F6 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254082322DD8042006FE9F6 /* Request.swift */; };
-		B254082622DD80F6006FE9F6 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254082522DD80F6006FE9F6 /* Client.swift */; };
-		B2E49BA722DEF39B003AB8F0 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E49BA622DEF39B003AB8F0 /* HttpClient.swift */; };
+		B254082622DD80F6006FE9F6 /* URLSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254082522DD80F6006FE9F6 /* URLSessionClient.swift */; };
+		B2E49BA722DEF39B003AB8F0 /* RongCloudClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E49BA622DEF39B003AB8F0 /* RongCloudClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,11 +52,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32A0347226FC53FC0068284B /* URLSessionClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionClientTests.swift; sourceTree = "<group>"; };
+		32A0347426FC56350068284B /* SnowballClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowballClient.swift; sourceTree = "<group>"; };
+		32A0347626FC600A0068284B /* SnowballClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowballClientTests.swift; sourceTree = "<group>"; };
+		32A0347826FC760F0068284B /* JsonDecodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecodeTests.swift; sourceTree = "<group>"; };
+		32A0347A26FC764E0068284B /* TopStockLists.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = TopStockLists.geojson; sourceTree = "<group>"; };
+		32A0347C26FC79B50068284B /* StockItem.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = StockItem.geojson; sourceTree = "<group>"; };
+		32A0347E26FC81710068284B /* StockItemLists.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = StockItemLists.geojson; sourceTree = "<group>"; };
 		74CE33E722DCC72B00C185EF /* GroceryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GroceryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74CE33EA22DCC72B00C185EF /* GroceryKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroceryKit.h; sourceTree = "<group>"; };
 		74CE33EB22DCC72B00C185EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74CE33F022DCC72B00C185EF /* GroceryKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroceryKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		74CE33F522DCC72B00C185EF /* GroceryKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryKitTests.swift; sourceTree = "<group>"; };
+		74CE33F522DCC72B00C185EF /* RongCloudClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RongCloudClientTests.swift; sourceTree = "<group>"; };
 		74CE33F722DCC72B00C185EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74CE344322DCC7EC00C185EF /* AnyPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyPromise.swift; sourceTree = "<group>"; };
 		74CE344422DCC7EC00C185EF /* CustomStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStringConvertible.swift; sourceTree = "<group>"; };
@@ -71,8 +85,8 @@
 		74CE346522DCC9FD00C185EF /* fwd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fwd.h; sourceTree = "<group>"; };
 		74CE346722DCCAFC00C185EF /* AnyPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnyPromise.m; sourceTree = "<group>"; };
 		B254082322DD8042006FE9F6 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		B254082522DD80F6006FE9F6 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
-		B2E49BA622DEF39B003AB8F0 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		B254082522DD80F6006FE9F6 /* URLSessionClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionClient.swift; sourceTree = "<group>"; };
+		B2E49BA622DEF39B003AB8F0 /* RongCloudClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RongCloudClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +131,9 @@
 			isa = PBXGroup;
 			children = (
 				B254082322DD8042006FE9F6 /* Request.swift */,
-				B254082522DD80F6006FE9F6 /* Client.swift */,
-				B2E49BA622DEF39B003AB8F0 /* HttpClient.swift */,
+				B254082522DD80F6006FE9F6 /* URLSessionClient.swift */,
+				B2E49BA622DEF39B003AB8F0 /* RongCloudClient.swift */,
+				32A0347426FC56350068284B /* SnowballClient.swift */,
 				74CE33EA22DCC72B00C185EF /* GroceryKit.h */,
 				74CE33EB22DCC72B00C185EF /* Info.plist */,
 			);
@@ -128,7 +143,13 @@
 		74CE33F422DCC72B00C185EF /* GroceryKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				74CE33F522DCC72B00C185EF /* GroceryKitTests.swift */,
+				74CE33F522DCC72B00C185EF /* RongCloudClientTests.swift */,
+				32A0347226FC53FC0068284B /* URLSessionClientTests.swift */,
+				32A0347626FC600A0068284B /* SnowballClientTests.swift */,
+				32A0347826FC760F0068284B /* JsonDecodeTests.swift */,
+				32A0347A26FC764E0068284B /* TopStockLists.geojson */,
+				32A0347C26FC79B50068284B /* StockItem.geojson */,
+				32A0347E26FC81710068284B /* StockItemLists.geojson */,
 				74CE33F722DCC72B00C185EF /* Info.plist */,
 			);
 			path = GroceryKitTests;
@@ -270,6 +291,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32A0347F26FC83160068284B /* StockItemLists.geojson in Resources */,
+				32A0347D26FC7C050068284B /* StockItem.geojson in Resources */,
+				32A0347B26FC764E0068284B /* TopStockLists.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,19 +309,20 @@
 				74CE345522DCC7EC00C185EF /* when.swift in Sources */,
 				74CE345822DCC7EC00C185EF /* hang.swift in Sources */,
 				74CE345622DCC7EC00C185EF /* Box.swift in Sources */,
+				32A0347526FC56350068284B /* SnowballClient.swift in Sources */,
 				74CE345322DCC7EC00C185EF /* AnyPromise.swift in Sources */,
 				74CE346122DCC7EC00C185EF /* Configuration.swift in Sources */,
 				B254082422DD8042006FE9F6 /* Request.swift in Sources */,
 				74CE346222DCC7EC00C185EF /* Promise.swift in Sources */,
 				74CE345B22DCC7EC00C185EF /* LogEvent.swift in Sources */,
-				B2E49BA722DEF39B003AB8F0 /* HttpClient.swift in Sources */,
+				B2E49BA722DEF39B003AB8F0 /* RongCloudClient.swift in Sources */,
 				74CE345922DCC7EC00C185EF /* after.swift in Sources */,
 				74CE346022DCC7EC00C185EF /* Guarantee.swift in Sources */,
 				74CE345A22DCC7EC00C185EF /* firstly.swift in Sources */,
 				74CE346822DCCAFC00C185EF /* AnyPromise.m in Sources */,
 				74CE345F22DCC7EC00C185EF /* Resolver.swift in Sources */,
 				74CE345722DCC7EC00C185EF /* Thenable.swift in Sources */,
-				B254082622DD80F6006FE9F6 /* Client.swift in Sources */,
+				B254082622DD80F6006FE9F6 /* URLSessionClient.swift in Sources */,
 				74CE345C22DCC7EC00C185EF /* Error.swift in Sources */,
 				74CE345422DCC7EC00C185EF /* CustomStringConvertible.swift in Sources */,
 			);
@@ -307,7 +332,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74CE33F622DCC72B00C185EF /* GroceryKitTests.swift in Sources */,
+				74CE33F622DCC72B00C185EF /* RongCloudClientTests.swift in Sources */,
+				32A0347926FC760F0068284B /* JsonDecodeTests.swift in Sources */,
+				32A0347326FC53FC0068284B /* URLSessionClientTests.swift in Sources */,
+				32A0347726FC600A0068284B /* SnowballClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
