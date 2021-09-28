@@ -35,6 +35,7 @@ struct URLSessionClient: Client {
                     DispatchQueue.main.async { handler(res,nil) }
                 } catch  {
                     print("Unexpected error: \(error).")
+                    DispatchQueue.main.async { handler(nil,error) }
                 }
             } else {
                 DispatchQueue.main.async { handler(nil,error) }

@@ -30,8 +30,16 @@ protocol Request {
 
 
 extension Request {
-    var headers:[String: String]  {
-        [:]
+    var headers: [String: String]?  {
+        return nil
+    }
+    
+    var parameter: [String: Any]? {
+        return nil
+    }
+    
+    func encode() -> Data? {
+        nil
     }
 }
 

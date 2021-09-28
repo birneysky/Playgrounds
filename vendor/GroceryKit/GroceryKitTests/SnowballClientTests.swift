@@ -33,15 +33,14 @@ class SnowballClientTests: XCTestCase {
     }
 
     func testFetchTopAmountStocks() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
         firstly {
-            self.client.fetchTopAmountStocks(count: 5000)
+            self.client.fetchTopAmountStocks(count: 4000)
         }.done { list in
             //print("\(list)")
-            XCTAssertEqual(list.count, 4577)
             self.e.fulfill()
+            XCTAssertEqual(list.count, 4000)
         }.catch { err in
+            self.e.fulfill()
             XCTAssert(false)
             print(err)
         }
@@ -57,6 +56,33 @@ class SnowballClientTests: XCTestCase {
 
         }
     }
+    
+    func testFetchKline() throws {
+        firstly {
+            self.client.fetchKline(of: "8320138012")
+        }.done { list in
+            //print("\(list)")
+            self.e.fulfill()
+            XCTAssertEqual(list.count, 100)
+        }.catch { err in
+            self.e.fulfill()
+            XCTAssert(false)
+            print(err)
+        }
+        
+        self.waitForExpectations(timeout: 10) { (error) in
+            if let err = error {
+                print(err)
+                XCTAssert(false)
+            } else {
+
+            }
+
+        }
+
+    }
+    
+    
 
 //    func testPerformanceExample() throws {
 //        // This is an example of a performance test case.
