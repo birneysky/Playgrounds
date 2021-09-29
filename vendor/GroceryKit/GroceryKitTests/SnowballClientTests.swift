@@ -41,8 +41,8 @@ class SnowballClientTests: XCTestCase {
             XCTAssertEqual(list.count, 4000)
         }.catch { err in
             self.e.fulfill()
-            XCTAssert(false)
             print(err)
+            XCTAssert(false)
         }
 
         
@@ -63,7 +63,7 @@ class SnowballClientTests: XCTestCase {
         }.done { list in
             //print("\(list)")
             self.e.fulfill()
-            XCTAssertEqual(list.count, 100)
+            XCTAssertEqual(list.count, 284)
         }.catch { err in
             self.e.fulfill()
             XCTAssert(false)

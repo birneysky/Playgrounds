@@ -21,19 +21,20 @@ struct TokenResponse: Decodable , Parseable {
     let userId: String?
     let url: String?
     let errorMessage: String?
-    static func parse(data: Data) throws -> TokenResponse {
+    static func parse(data: Data) -> TokenResponse? {
+        var response: TokenResponse?
         do {
-            let response = try JSONDecoder().decode(TokenResponse.self, from: data)
-            return response
+            response = try JSONDecoder().decode(TokenResponse.self, from: data)
         } catch {
-            throw error
+            print("\(self.self) parase error: \(error).")
         }
+        return response
     }
 }
 
 
 struct TokenRequest: Request {
-    typealias Response = TokenResponse
+    typealias ResponseData = TokenResponse
     var userId: String
     var name: String
     let path = "/user/getToken.json"
@@ -76,16 +77,16 @@ public class RongCloudClient {
     func fetchToken(uid: String, name: String) -> Promise<String> {
         let req = TokenRequest(userId: uid, name: name)
         return Promise<String> { resolve in
-            client.send(req) { response, error in
-                if let token = response?.token {
+            client.send(req) { responseData, response, error in
+                if let token = responseData?.token {
                     resolve.fulfill(token)
                 } else if let err = error {
                     resolve.reject(err)
                 } else {
-                    guard let aresponse = response else {
+                    guard let aData = responseData else {
                         fatalError("token request no error message")
                     }
-                    let fail = FailedRequest(code: aresponse.code, errorMessage: aresponse.errorMessage)
+                    let fail = FailedRequest(code: aData.code, errorMessage: aData.errorMessage)
                     resolve.reject(fail)
                 }
             }

@@ -9,7 +9,7 @@
 import Foundation
 
 struct TopAmountRequest: Request {
-    typealias Response = TopAmountResponse
+    typealias ResponseData = TopAmountStockInfo
     var path: String {
         let aTime: Int = Int(NSDate().timeIntervalSince1970);
         let listPath = "/service/v5/stock/screener/quote/list?"
@@ -26,22 +26,22 @@ struct TopAmountRequest: Request {
     var pageSize: Int
 }
 
-struct TopAmountResponse: Decodable, Parseable {
-    var data: TopAmountData
+struct TopAmountStockInfo: Decodable, Parseable {
+    var data: TopAmountStocRank
     var error_code: Int
     var error_description: String
-    static func parse(data: Data) throws -> TopAmountResponse  {
+    static func parse(data: Data)  -> TopAmountStockInfo?  {
+        var response: TopAmountStockInfo?
         do {
-            let response = try JSONDecoder().decode(TopAmountResponse.self, from: data)
-            return response
+            response = try JSONDecoder().decode(TopAmountStockInfo.self, from: data)
         } catch  {
             print("Unexpected error: \(error).")
-            throw error
         }
+        return response
     }
 }
 
-struct StockItem: Decodable {
+struct StockTradingData: Decodable {
     var symbol: String /// 证券代码
     var net_profit_cagr: Double? /// 净利润复合年增长率
     var north_net_inflow: Double? /// 北上净流入
@@ -82,8 +82,8 @@ struct StockItem: Decodable {
     var limitup_days: Int?
 }
 
-struct TopAmountData: Decodable {
+struct TopAmountStocRank: Decodable {
     var count: Int
-    var list: [StockItem]
+    var list: [StockTradingData]
 }
 
