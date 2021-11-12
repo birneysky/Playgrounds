@@ -73,7 +73,7 @@ class JsonDecodeTests: XCTestCase {
             return;
         }
         
-        guard let stock = try? JSONDecoder().decode(StockItem.self, from: data) else {
+        guard let stock = try? JSONDecoder().decode(StockTradingData.self, from: data) else {
             XCTAssertTrue(false)
             return
         }
@@ -92,7 +92,7 @@ class JsonDecodeTests: XCTestCase {
             return;
         }
         do {
-          let top = try JSONDecoder().decode(TopAmountData.self, from: data)
+          let top = try JSONDecoder().decode(TopAmountStocRank.self, from: data)
             XCTAssertEqual(top.count, 3)
         } catch {
             XCTAssertTrue(false)
@@ -111,7 +111,7 @@ class JsonDecodeTests: XCTestCase {
             return;
         }
         do {
-          let response = try JSONDecoder().decode(TopAmountResponse.self, from: data)
+          let response = try JSONDecoder().decode(TopAmountStockInfo.self, from: data)
             XCTAssertEqual(response.data.count, 4574)
             XCTAssertEqual(response.error_code, 0);
             XCTAssertEqual(response.data.list.count, 30)

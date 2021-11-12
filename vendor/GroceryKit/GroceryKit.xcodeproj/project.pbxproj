@@ -14,6 +14,8 @@
 		32A0347B26FC764E0068284B /* TopStockLists.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 32A0347A26FC764E0068284B /* TopStockLists.geojson */; };
 		32A0347D26FC7C050068284B /* StockItem.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 32A0347C26FC79B50068284B /* StockItem.geojson */; };
 		32A0347F26FC83160068284B /* StockItemLists.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 32A0347E26FC81710068284B /* StockItemLists.geojson */; };
+		32A034832701AE7E0068284B /* TopAmountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A034822701AE7D0068284B /* TopAmountRequest.swift */; };
+		32A034852701AEEB0068284B /* KlineRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A034842701AEEB0068284B /* KlineRequest.swift */; };
 		74CE33F122DCC72B00C185EF /* GroceryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CE33E722DCC72B00C185EF /* GroceryKit.framework */; };
 		74CE33F622DCC72B00C185EF /* RongCloudClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CE33F522DCC72B00C185EF /* RongCloudClientTests.swift */; };
 		74CE33F822DCC72B00C185EF /* GroceryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 74CE33EA22DCC72B00C185EF /* GroceryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -59,6 +61,8 @@
 		32A0347A26FC764E0068284B /* TopStockLists.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = TopStockLists.geojson; sourceTree = "<group>"; };
 		32A0347C26FC79B50068284B /* StockItem.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = StockItem.geojson; sourceTree = "<group>"; };
 		32A0347E26FC81710068284B /* StockItemLists.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = StockItemLists.geojson; sourceTree = "<group>"; };
+		32A034822701AE7D0068284B /* TopAmountRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAmountRequest.swift; sourceTree = "<group>"; };
+		32A034842701AEEB0068284B /* KlineRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KlineRequest.swift; sourceTree = "<group>"; };
 		74CE33E722DCC72B00C185EF /* GroceryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GroceryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74CE33EA22DCC72B00C185EF /* GroceryKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroceryKit.h; sourceTree = "<group>"; };
 		74CE33EB22DCC72B00C185EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 				B254082522DD80F6006FE9F6 /* URLSessionClient.swift */,
 				B2E49BA622DEF39B003AB8F0 /* RongCloudClient.swift */,
 				32A0347426FC56350068284B /* SnowballClient.swift */,
+				32A034822701AE7D0068284B /* TopAmountRequest.swift */,
+				32A034842701AEEB0068284B /* KlineRequest.swift */,
 				74CE33EA22DCC72B00C185EF /* GroceryKit.h */,
 				74CE33EB22DCC72B00C185EF /* Info.plist */,
 			);
@@ -305,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74CE345E22DCC7EC00C185EF /* race.swift in Sources */,
+				32A034832701AE7E0068284B /* TopAmountRequest.swift in Sources */,
 				74CE345D22DCC7EC00C185EF /* Catchable.swift in Sources */,
 				74CE345522DCC7EC00C185EF /* when.swift in Sources */,
 				74CE345822DCC7EC00C185EF /* hang.swift in Sources */,
@@ -314,6 +321,7 @@
 				74CE346122DCC7EC00C185EF /* Configuration.swift in Sources */,
 				B254082422DD8042006FE9F6 /* Request.swift in Sources */,
 				74CE346222DCC7EC00C185EF /* Promise.swift in Sources */,
+				32A034852701AEEB0068284B /* KlineRequest.swift in Sources */,
 				74CE345B22DCC7EC00C185EF /* LogEvent.swift in Sources */,
 				B2E49BA722DEF39B003AB8F0 /* RongCloudClient.swift in Sources */,
 				74CE345922DCC7EC00C185EF /* after.swift in Sources */,

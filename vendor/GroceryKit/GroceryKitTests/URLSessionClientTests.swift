@@ -36,8 +36,8 @@ class URLSessionClientTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let req = TokenRequest(userId: "44u32jfdsa32498320", name: "hello")
-        client.send(req) { response, error in
-            if let repo = response {
+        client.send(req) { responseData, response, error in
+            if let repo = responseData {
                 print(repo)
             } else {
                 XCTAssert(true)
