@@ -13,15 +13,47 @@ struct ContentView: View {
                   "🚚", "🚛", "🚜", "🛵", "🏍", "🛺", "🚔",
                   "🚍", "🚘", "🚝", "🚄", "🚅", "🚤", "🛥",
                   "🛳", "⛴", "🚀", "🚁", "🛬", "🛩", "🎠"]
+    
+    @State var emojisCount = 4
+    
     var body: some View {
-        HStack{
-            ForEach(emojis[0...6], id: \.self) { emoji in
-                CardView(content: emoji)                
+        VStack{
+            HStack {
+                ForEach(emojis[0 ..< emojisCount], id: \.self) { emoji in
+                    CardView(content: emoji)
+                }
             }
+            Spacer(minLength: 20)
+            HStack {
+                addButton
+                Spacer()
+                removeButton
+            }
+            .font(.largeTitle)
         }
         .padding(.horizontal)
         .foregroundColor(.red)
-        
+    }
+    
+    
+    var removeButton: some View {
+        Button(action: {
+            if (emojisCount > 1) {
+                emojisCount -= 1
+            }
+        }, label: {
+            Image(systemName: "minus.circle")
+        })
+    }
+    
+    var addButton: some View {
+        Button {
+            if (emojisCount < self.emojis.count){
+                emojisCount += 1
+            }
+        } label: {
+            Image(systemName: "plus.circle")
+        }
     }
 }
 
