@@ -26,7 +26,9 @@ struct ContentView: View {
                 }
             }
             .foregroundColor(.red)
+            
             Spacer(minLength: 20)
+            
             HStack {
                 addButton
                 Spacer()
