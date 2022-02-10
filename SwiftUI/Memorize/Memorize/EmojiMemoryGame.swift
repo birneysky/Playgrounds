@@ -7,15 +7,16 @@
 
 import SwiftUI
 
-func makeCardContent(index: Int) -> String {
-    return "😅"
-}
-
 /// this is the ViewModel of game
 class EmojiMemoryGame {
+    static let emojis = ["🚒", "✈️", "⛱", "⛽️", "🚕", "🚙", "🚌",
+                         "🚎", "🏎", "🚓", "🚑", "🦯", "🚐", "🛻",
+                         "🚚", "🚛", "🚜", "🛵", "🏍", "🛺", "🚔",
+                         "🚍", "🚘", "🚝", "🚄", "🚅", "🚤", "🛥",
+                         "🛳", "⛴", "🚀", "🚁", "🛬", "🛩", "🎠"]
     /// private(set) 只可读，不可写
     private var model: MemoryGame<String> =
-        MemoryGame(numberOfPairsOfCards: 6, createCardContent: makeCardContent)
+    MemoryGame(numberOfPairsOfCards: emojis.count) { index in emojis[index] }
     
     var cards: [MemoryGame<String>.Card] {
         return model.cards
