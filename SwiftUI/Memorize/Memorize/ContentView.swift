@@ -8,10 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    var viewModel: EmojiMemoryGame
-
-    @State var emojisCount = 11
+    @ObservedObject var viewModel: EmojiMemoryGame
     
     var body: some View {
         VStack{
@@ -19,6 +16,9 @@ struct ContentView: View {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 64))]) {
                     ForEach(viewModel.cards) { card in
                         CardView(card: card).aspectRatio(2/3, contentMode: .fit)
+                            .onTapGesture {
+                                viewModel.choose(card)
+                            }
                     }
                 }
             }
@@ -34,7 +34,6 @@ struct ContentView: View {
             .font(.largeTitle)
         }
         .padding(.horizontal)
-        
     }
     
     

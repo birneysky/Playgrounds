@@ -13,16 +13,15 @@ struct CardView: View {
     var body: some View {
         ZStack {
             let shape = RoundedRectangle(cornerRadius: 8.0)
-            if !card.isFaceUp {
+            if card.isFaceUp {
                 shape.fill().foregroundColor(.white)
                 shape.strokeBorder(lineWidth: 0.5)
                 Text(card.content).font(.largeTitle)
+            } else if (card.isMatched) {
+                shape.opacity(0)
             } else {
                 shape.fill()
             }
-            
-        }
-        .onTapGesture {
             
         }
         
