@@ -14,20 +14,22 @@ import SwiftUI
 /// @Published 修饰的变量无论何时发生变化，任何时候任何人做任何改变模型的事情
 /// 都会自动发布改变，也就是调用  objectWillChange.send() 
 class EmojiMemoryGame: ObservableObject {
-    static let emojis = ["🚒", "✈️", "⛱", "⛽️", "🚕", "🚙", "🚌",
-                         "🚎", "🏎", "🚓", "🚑", "🦯", "🚐", "🛻",
-                         "🚚", "🚛", "🚜", "🛵", "🏍", "🛺", "🚔",
-                         "🚍", "🚘", "🚝", "🚄", "🚅", "🚤", "🛥",
-                         "🛳", "⛴", "🚀", "🚁", "🛬", "🛩", "🎠"]
+    typealias Card = MemoryGame<String>.Card
+    private static let emojis =
+        ["🚒", "✈️", "⛱", "⛽️", "🚕", "🚙", "🚌",
+         "🚎", "🏎", "🚓", "🚑", "🦯", "🚐", "🛻",
+         "🚚", "🚛", "🚜", "🛵", "🏍", "🛺", "🚔",
+         "🚍", "🚘", "🚝", "🚄", "🚅", "🚤", "🛥",
+         "🛳", "⛴", "🚀", "🚁", "🛬", "🛩", "🎠"]
     /// private(set) 只可读，不可写
-    @Published private var model: MemoryGame<String> =
+    @Published private var model =
         MemoryGame(numberOfPairsOfCards: 4) { index in emojis[index] }
     
-    var cards: [MemoryGame<String>.Card] {
+    var cards: [Card] {
         return model.cards
     }
     
-    func choose(_ card: MemoryGame<String>.Card) {
+    func choose(_ card: Card) {
         model.choose(card)
     }
 }

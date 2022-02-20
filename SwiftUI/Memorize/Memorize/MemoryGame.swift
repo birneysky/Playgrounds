@@ -12,7 +12,31 @@ struct MemoryGame <CardContent> where CardContent: Equatable {
     /// private(set) 只可读，不可写
     private(set) var cards: [Card]
     
-    private var indexOfTheOneAndOnlyFaceupCard: Int?
+    private var indexOfTheOneAndOnlyFaceupCard: Int? {
+        get {
+            var faceUpIndices = [Int]()
+            for index in cards.indices {
+                if cards[index].isFaceUp {
+                    faceUpIndices.append(index)
+                }
+            }
+        
+            if faceUpIndices.count == 1 {
+                return faceUpIndices.first
+            } else {
+                return nil
+            }
+        }
+        set {
+            for index in cards.indices {
+                if index != newValue {
+                    cards[index].isFaceUp = false
+                } else {
+                    cards[index].isFaceUp = true
+                }
+            }
+        }
+    }
     
     mutating func choose(_ card: Card) {
         /// if let chooseIndex = index(of: card)
@@ -25,14 +49,11 @@ struct MemoryGame <CardContent> where CardContent: Equatable {
                     cards[chooseIndex].isMatched = true
                     cards[potentialMatchIndex].isMatched = true
                 }
-                indexOfTheOneAndOnlyFaceupCard = nil
+                cards[chooseIndex].isFaceUp = true
             } else {
-                for index in cards.indices {
-                    cards[index].isFaceUp = false
-                }
                 indexOfTheOneAndOnlyFaceupCard = chooseIndex
             }
-            cards[chooseIndex].isFaceUp.toggle()
+            
         }
     }
     
@@ -46,7 +67,7 @@ struct MemoryGame <CardContent> where CardContent: Equatable {
     }
     
     init(numberOfPairsOfCards: Int, createCardContent: (Int) -> CardContent) {
-        cards = [Card]()
+        cards = []
         /// add numberOfPairsOfCards * 2 cards to cards array
         for pairIndex in 0 ..< numberOfPairsOfCards {
             let content = createCardContent(pairIndex)
@@ -56,9 +77,9 @@ struct MemoryGame <CardContent> where CardContent: Equatable {
     }
     
     struct Card: Identifiable {
-        var isFaceUp: Bool = false
-        var isMatched: Bool = false
-        var content: CardContent
-        var id: Int
+        var isFaceUp  = false
+        var isMatched = false
+        let content: CardContent
+        let id: Int
     }
 }

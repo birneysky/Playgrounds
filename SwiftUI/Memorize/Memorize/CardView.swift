@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct CardView: View {
-    let card: MemoryGame<String>.Card
+    private let card: EmojiMemoryGame.Card
 
+    init(_ card: EmojiMemoryGame.Card) {
+        self.card = card
+    }
     var body: some View {
         ZStack {
             let shape = RoundedRectangle(cornerRadius: 8.0)
@@ -30,9 +33,9 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(card: MemoryGame<String>.Card(content: "🚕", id: 0))
+        CardView(EmojiMemoryGame.Card(content: "🚕", id: 0))
             .preferredColorScheme(.dark)
-        CardView(card: MemoryGame<String>.Card(content: "✈️", id: 1))
+        CardView(EmojiMemoryGame.Card(content: "✈️", id: 1))
             .preferredColorScheme(.light)
     }
 }
