@@ -103,9 +103,12 @@ class SampleBufferGenerator {
             CMVideoFormatDescriptionCreateForImageBuffer(allocator: kCFAllocatorDefault,
                                                          imageBuffer: outputPixelBuffer,
                                                          formatDescriptionOut: &videoFmtDesc)
-        }
+        }   
         
         let pstTime = presentationTimeStamp
+        CMTimeShow(pstTime)
+        //print(CFAbsoluteTimeGetCurrent())
+        print(CACurrentMediaTime())
         var timingInfo = CMSampleTimingInfo(duration: pstTime,
                                             presentationTimeStamp: pstTime,
                                             decodeTimeStamp: CMTime.invalid)
