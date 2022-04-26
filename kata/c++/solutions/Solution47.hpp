@@ -37,7 +37,7 @@
 class Solution47 {
 public:
     vector<vector<int>> permute(vector<int>& nums) {
-
+        return {};
     }
 };
 

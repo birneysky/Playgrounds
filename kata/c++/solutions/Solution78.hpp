@@ -35,6 +35,7 @@
 class Solution78 {
 public:
     vector< vector<int> > subsets(vector<int>& nums) {
+        return {};
     }
 }
 

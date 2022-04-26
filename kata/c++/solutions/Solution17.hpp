@@ -46,9 +46,12 @@
  **/
 
 #include <vector>
+#include <string>
 class Solution17 {
+
 public:
     std::vector<std::string> letterCombinations(std::string digits) {
+        return {};
     }
 };
 

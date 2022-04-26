@@ -42,7 +42,7 @@
 class Solution77 {
 public:
     vector<vector<int>> combine(int n, int k) {
-    
+        return {};
     }
 }
 

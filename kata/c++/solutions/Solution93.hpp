@@ -96,7 +96,7 @@ using namespace std;
 class Solution93 {
 public:
     vector<string> restoreIpAddresses(string s) {
-
+        return {};
     }
 };
 
