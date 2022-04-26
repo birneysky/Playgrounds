@@ -55,6 +55,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		325DC30E281505EB00EE778A /* Solution17.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution17.hpp; sourceTree = "<group>"; };
+		325DC3102815071E00EE778A /* Solution47.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution47.hpp; sourceTree = "<group>"; };
+		325DC312281507C500EE778A /* Solution77.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution77.hpp; sourceTree = "<group>"; };
+		325DC3162815086000EE778A /* Solution78.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution78.hpp; sourceTree = "<group>"; };
 		32BDF58C2810328700F58629 /* Solution93.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution93.hpp; sourceTree = "<group>"; };
 		32BDF58E2810333C00F58629 /* Solution93Test.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Solution93Test.mm; sourceTree = "<group>"; };
 		744F0FF324BE1FAF00D50740 /* ConstructTree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ConstructTree.cpp; sourceTree = "<group>"; };
@@ -149,6 +153,10 @@
 		32BDF58A2810322A00F58629 /* solutions */ = {
 			isa = PBXGroup;
 			children = (
+				325DC30E281505EB00EE778A /* Solution17.hpp */,
+				325DC3102815071E00EE778A /* Solution47.hpp */,
+				325DC312281507C500EE778A /* Solution77.hpp */,
+				325DC3162815086000EE778A /* Solution78.hpp */,
 				32BDF58C2810328700F58629 /* Solution93.hpp */,
 			);
 			path = solutions;
