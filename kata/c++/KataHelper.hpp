@@ -14,20 +14,15 @@
 #include <list>
 
 template<typename T>
-std::ostream& operator<<(std::ostream& out,std::vector<T>& vec) {
+std::ostream& operator<<(std::ostream& out,const std::vector<T>& vec) {
     std::stringstream stream;
-    typename std::vector<T>::iterator begin = vec.begin();
-    typename std::vector<T>::iterator end = vec.end();
-    if (begin != end) {
-        stream << "[" << *begin;
-        begin ++;
-    } else {
-        stream << "[";
+    stream << "[";
+    for (int i = 0; i < vec.size(); i ++) {
+        stream << vec[i];
+        if (i != vec.size() -1) {
+            stream << ", ";
+        }
     }
-    
-    std::for_each(begin, end, [&stream](T& value) {
-        stream << "," << value;
-    });
     stream << "]";
     out << stream.str();
     return out;
@@ -61,6 +56,12 @@ bool operator==(const std::vector<T>& t1, const std::vector<T> t2) {
         }
     }
     return true;
+}
+
+template<class I, class C>
+void tlog(const I& input, const C& output) {
+    std::cout << "input" << ":" << input << std::endl;
+    std::cout << "output" << ":" << output << std::endl;
 }
 
 #endif /* KataHelper_hpp */

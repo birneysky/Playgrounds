@@ -31,12 +31,31 @@
  -10 <= nums[i] <= 10
  nums 中的所有元素 互不相同
  */
-
+#include <vector>
+using namespace std;
 class Solution78 {
 public:
-    vector< vector<int> > subsets(vector<int>& nums) {
-        return {};
+    vector<vector<int>> result;
+    void backtrack(const vector<int>& nums, int start, vector<int>& s) {
+        result.push_back(s);
+        for (int i = start; i < nums.size(); i++) {
+            s.push_back(nums[i]);
+            backtrack(nums, i + 1, s);
+            s.pop_back();
+        }
     }
-}
+    vector< vector<int> > subsets(vector<int>& nums) {
+        result.clear();
+        if (nums.size() <= 0) {
+            return {{}};
+        }
+        vector<int> subset;
+        backtrack(nums, 0, subset);
+        return result;
+#if 1
+        return {};
+#endif
+    }
+};
 
 #endif /* Solution78_hpp */

@@ -31,11 +31,41 @@
  -10 <= nums[i] <= 10
  nums 中的所有整数 互不相同
  **/
-
+#include <vector>
+using namespace std;
 class Solution47 {
+private:
+    vector<bool> used;
+    vector<vector<int>> result;
+    void backtrack(const vector<int>& nums, int index, vector<int>& p) {
+        if(index == nums.size()) {
+            result.push_back(p);
+            return;
+        }
+        
+        for (int i = 0; i < nums.size(); i++ ) {
+            if(!used[i]) {
+                p.push_back(nums[i]);
+                used[i] = true;
+                backtrack(nums, index + 1, p);
+                p.pop_back();
+                used[i] = false;
+            }
+        }
+    }
 public:
     vector<vector<int>> permute(vector<int>& nums) {
+        result.clear();
+        if (nums.size() <= 0) {
+            return result;
+        }
+        used = vector<bool>(nums.size(), false);
+        vector<int> permution;
+        backtrack(nums, 0, permution);
+        return result;
+#if 1
         return {};
+#endif
     }
 };
 

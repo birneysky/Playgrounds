@@ -38,12 +38,33 @@
  1 <= n <= 20
  1 <= k <= n
  */
-
+#include <vector>
+using namespace std;
 class Solution77 {
+private:
+    vector<vector<int>> result;
+    void backtrack(const int& n, const int& k, int start, vector<int> c) {
+        if (k == c.size()) {
+            result.push_back(c);
+            return;
+        }
+        
+        for (int i = start; i <= n; i++) {
+            c.push_back(i);
+            backtrack(n, k, i + 1, c);
+            c.pop_back();
+        }
+    }
 public:
     vector<vector<int>> combine(int n, int k) {
+        result.clear();
+        vector<int> combination;
+        backtrack(n, k, 1, combination);
+        return result;
+#if 1
         return {};
+#endif
     }
-}
+};
 
 #endif /* Solution77_hpp */

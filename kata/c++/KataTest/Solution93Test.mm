@@ -6,10 +6,12 @@
 //
 
 #import <XCTest/XCTest.h>
+#include "KataHelper.hpp"
 #include "Solution93.hpp"
 #include "Solution17.hpp"
 #include "Solution47.hpp"
-#include "KataHelper.hpp"
+#include "Solution77.hpp"
+#include "Solution78.hpp"
 
 @interface Solution93Test : XCTestCase
 
@@ -36,60 +38,97 @@
 
 - (void)testSolution17 {
     Solution17 s;
-    vector<string> v = s.letterCombinations("23");
-    vector<string> vs {"ad", "ae", "af", "bd", "be",
+    vector<string> output = s.letterCombinations("23");
+    vector<string> td {"ad", "ae", "af", "bd", "be",
                        "bf", "cd", "ce", "cf"};
-    XCTAssert(v == vs);
-    v = s.letterCombinations("234");
-    vs = {"adg", "adh", "adi", "aeg", "aeh", "aei", "afg",
+    XCTAssert(output == td);
+    tlog("23", output);
+    output = s.letterCombinations("234");
+    td = {"adg", "adh", "adi", "aeg", "aeh", "aei", "afg",
           "afh", "afi", "bdg", "bdh", "bdi", "beg", "beh",
           "bei", "bfg", "bfh", "bfi", "cdg", "cdh", "cdi",
           "ceg", "ceh", "cei", "cfg", "cfh", "cfi" };
-    XCTAssert(v == vs);
-    v = s.letterCombinations("2");
-    vs = {"a","b","c"};
-    XCTAssert(v == vs);
-    
-    v = s.letterCombinations("");
-    vs = {};
-    XCTAssert(v == vs);
+    XCTAssert(output == td);
+    tlog("234", output);
+    output = s.letterCombinations("2");
+    td = {"a","b","c"};
+    XCTAssert(output == td);
+    tlog("2", output);
+    output = s.letterCombinations("");
+    td = {};
+    XCTAssert(output == td);
+    tlog("", output);
 }
 
 - (void)testSolution47 {
     Solution47 s;
-    vector<int> nums {1, 2, 3};
-    vector<vector<int>> result = s.permute(nums);
-    vector<vector<int>> tr { {1, 2, 3}, {1, 3, 2}, {2, 1, 3},
+    vector<int> input {1, 2, 3};
+    vector<vector<int>> output = s.permute(input);
+    vector<vector<int>> td { {1, 2, 3}, {1, 3, 2}, {2, 1, 3},
                              {2, 3, 1}, {3, 1, 2}, {3, 2, 1}};
-    XCTAssert(result == tr);
-    nums = {0, 1};
-    result = s.permute(nums);
-    tr = { {0, 1}, {1, 0} };
-    XCTAssert(result == tr);
+    XCTAssert(output == td);
+    tlog(input, output);
+    input = {0, 1};
+    output = s.permute(input);
+    td = { {0, 1}, {1, 0} };
+    XCTAssert(output == td);
+    tlog(input, output);
+    input = {1};
+    output = s.permute(input);
+    td = {{1}};
+    XCTAssert(output == td);
+    tlog(input, output);
+}
+
+- (void)testSolution77 {
+    Solution77 s;
+    vector<vector<int>> output = s.combine(4, 2);
+    vector<vector<int>> td { {1, 2}, {1, 3}, {1, 4},
+                             {2, 3}, {2, 4}, {3, 4}};
+    XCTAssert(output == td);
+    tlog("n = 4, k = 2", output);
     
-    nums = {1};
-    result = s.permute(nums);
-    tr = { {1} };
-    XCTAssert(result == tr);
+    
+    output = s.combine(1, 1);
+    td =  { { 1 } };
+    XCTAssert(output == td);
+    tlog("n = 1, k = 1", output);
+}
+
+- (void)testSolution78 {
+    Solution78 s;
+    vector<int> input {1, 2, 3};
+    vector<vector<int>> output = s.subsets(input);
+    vector<vector<int>> td { { }, { 1 }, {1, 2}, {1, 2, 3}, {1, 3}, { 2 }, {2, 3}, {3}};
+    XCTAssert(output == td);
+    tlog(input, output);
+    
+    input = { 0 };
+    td = { { }, { 0 }};
+    output = s.subsets(input);
+    XCTAssert(output == td);
+    tlog(input, output);
 }
 
 - (void)testSolution93 {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     Solution93 s;
-    vector<string> v = s.restoreIpAddresses("1111");
+    vector<string> output = s.restoreIpAddresses("1111");
+    vector<string> td {  "1.1.1.1"  };
+    XCTAssert(output == td);
+    tlog("111", output);
+    
+    
+    output = s.restoreIpAddresses("101023");
+    td = { "1.0.10.23","1.0.102.3","10.1.0.23","10.10.2.3","101.0.2.3" };
+    XCTAssert(output == td);
+    tlog("101023", output);
 
-    XCTAssert(v.size() == 1);
-    std::cout << v << std::endl;
-    
-    
-    v = s.restoreIpAddresses("101023");
-    XCTAssert(v.size() == 5);
-    std::cout << v << std::endl;
-    
-    v = s.restoreIpAddresses("25525511135");
-    XCTAssert(v.size() == 2);
-    std::cout << v << std::endl;
+    output = s.restoreIpAddresses("25525511135");
+    td = {"255.255.11.135", "255.255.111.35"};
+    XCTAssert(output == td);
+    tlog("25525511135", output);
     
 }
 
