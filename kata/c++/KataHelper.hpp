@@ -44,19 +44,20 @@ std::ostream& operator<<(std::ostream& out, std::list<T>& list) {
     return out;
 }
 
-template<typename T>
-bool operator==(const std::vector<T>& t1, const std::vector<T> t2) {
-    if(t1.size() != t2.size()) {
-        return false;
-    }
-    
-    for (int i = 0; i < t1.size(); i ++) {
-        if( t1[i] != t2[i]) {
-            return false;
-        }
-    }
-    return true;
-}
+//template<typename T>
+//bool operator==(const std::vector<T>& t1, const std::vector<T> t2) {
+//    if(t1.size() != t2.size()) {
+//        return false;
+//    }
+//
+//    for (int i = 0; i < t1.size(); i ++) {
+//        if( t1[i] != t2[i]) {
+//            return false;
+//        }
+//    }
+//    return true;
+//}
+
 
 template<class I, class C>
 void tlog(const I& input, const C& output) {

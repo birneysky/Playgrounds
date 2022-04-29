@@ -12,12 +12,13 @@
 #include "Solution47.hpp"
 #include "Solution77.hpp"
 #include "Solution78.hpp"
+#include "Solution39.hpp"
 
-@interface Solution93Test : XCTestCase
+@interface SolutionTest : XCTestCase
 
 @end
 
-@implementation Solution93Test
+@implementation SolutionTest
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -132,6 +133,43 @@
     
 }
 
+/*
+ 
+ 输入：candidates = [2,3,6,7], target = 7
+ 输出：[[2,2,3],[7]]
+ 解释：
+ 2 和 3 可以形成一组候选，2 + 2 + 3 = 7 。注意 2 可以使用多次。
+ 7 也是一个候选， 7 = 7 。
+ 仅有这两种组合。
+ 示例 2：
 
+ 输入: candidates = [2,3,5], target = 8
+ 输出: [[2,2,2,2],[2,3,3],[3,5]]
+ 示例 3：
+
+ 输入: candidates = [2], target = 1
+ 输出: []
+ */
+
+- (void)testSolution39 {
+    Solution39 s;
+    vector<int> input {2, 3, 6, 7};
+    vector<vector<int>> output =  s.combinationSum(input, 7);
+    vector<vector<int>> ts { {2, 2, 3}, { 7 }};
+    XCTAssert(output == ts);
+    tlog("[2, 3, 6, 7], 7", output);
+    
+    input = {2,3,5};
+    ts =  { {2, 2, 2, 2}, {2, 3, 3}, {3, 5} };
+    output = s.combinationSum(input, 8);
+    XCTAssert(output == ts);
+    tlog("[2, 3, 5], 8", output);
+    
+    input = { 2 };
+    ts = {};
+    output = s.combinationSum(input, 1);
+    XCTAssert(output == ts);
+    tlog("[2], 1", output);
+}
 
 @end
