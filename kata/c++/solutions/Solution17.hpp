@@ -50,44 +50,8 @@
 #include <cassert>
 using namespace std;
 class Solution17 {
-private:
-    const vector<string> leeterMap {
-        " ",
-        "",
-        "abc",
-        "def",
-        "ghi",
-        "jkl",
-        "mno",
-        "pqrs",
-        "tuv",
-        "wxyz"
-    };
-    vector<string> result;
-    void backtrack(const string& digits, int index, string& p) {
-        if (index == digits.size()) {
-            result.push_back(p);
-            return;
-        }
-        
-        char ch = digits[index];
-        assert(ch >= '0' && ch <= '9');
-        string one = leeterMap[ch - '0'];
-        for (auto& character: one) {
-            p.push_back(character);
-            backtrack(digits, index + 1, p);
-            p.pop_back();
-        }
-    }
 public:
         vector<string> letterCombinations(string digits) {
-        result.clear();
-        if (digits.size() <= 0) {
-            return {};
-        }
-        std::string s;
-        backtrack(digits, 0, s);
-        return result;
 #if 1
         return {};
 #endif

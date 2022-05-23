@@ -94,41 +94,8 @@
 using namespace std;
 
 class Solution93 {
-private:
-    vector<string> result;
-    void backtrack(const string&s, int start, int num, string addr)   {
-        if (num == 4 && start == s.size()) {
-            addr.pop_back();
-            result.push_back(addr);
-            return;
-        }
-        
-        for(const auto& stride: {1, 2, 3}) {
-            if(start + stride > s.size()) {
-                break;
-            }
-            
-            string subStr = s.substr(start, stride);
-            if (subStr.front() == '0' && subStr.size() > 1) {
-                break;
-            }
-            
-            if (atoi(subStr.c_str()) > 255) {
-                break;
-            }
-            
-            backtrack(s, start + stride, num + 1, addr + subStr + ".");
-        }
-        
-    }
 public:
     vector<string> restoreIpAddresses(string s) {
-        result.clear();
-        if (s.size() < 4) {
-            return result;
-        }
-        backtrack(s, 0, 0, "");
-        return result;
 #if 1
         return {};
 #endif
