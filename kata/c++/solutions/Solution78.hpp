@@ -34,8 +34,22 @@
 #include <vector>
 using namespace std;
 class Solution78 {
+private:
+    vector<vector<int>> result;
+    void backTrace(const vector<int>& nums, int start, vector<int>& c) {
+        result.push_back(c);
+        for (int i = start; i < nums.size(); i++) {
+            c.push_back(nums[i]);
+            backTrace(nums, i + 1, c);
+            c.pop_back();
+        }
+    }
 public:
-    vector< vector<int> > subsets(vector<int>& nums) {
+    vector<vector<int>> subsets(vector<int>& nums) {
+        result.clear();
+        vector<int> c;
+        backTrace(nums, 0, c);
+        return result;
 #if 1
         return {};
 #endif
