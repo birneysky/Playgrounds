@@ -49,26 +49,7 @@
     /           |      |              /                |                     |
   023          23      3             23                3                     3
  
- 
- void backtrack(const std::string& s, int start, const int num, std::string p) {
-    if(num == 4) {
-        result.push_back(p);
-        return;
-    }
-    
-    for (auto stride: {1, 2, 3}) {
-        std::string onsub;
-        if (start + stride > s.size() ) {
-            onesub = s.substr(start);
-        } else {
-            onesub = s.substr(start, stride);
-        }
-        backtrack(s, start + stride, num + 1, p + onsub);
-    }
-    
- }
- 
- 
+
  1.0.10.23
  1.0.102.3
  10.1.0.23

@@ -131,6 +131,11 @@
     XCTAssert(output == td);
     tlog("25525511135", output);
     
+    output = s.restoreIpAddresses("111");
+    td = {};
+    XCTAssert(output == td);
+    tlog("111", output);
+    
 }
 
 /*
