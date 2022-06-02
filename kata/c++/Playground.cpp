@@ -1,23 +1,11 @@
-#include<iostream>
-#include "Empty.hpp"
+//
+//  Playground.cpp
+//  KataTest
+//
+//  Created by Bruce on 2022/6/2.
+//
 
-Empty::Empty() {
-    std::cout << "Empty" << std::endl;
-}
-
-Empty::~Empty() {
-    std::cout << "~Empty" << std::endl;
-}
-
-
-VEmpty::VEmpty() {
-    std::cout << "VEmpty" << std::endl;
-}
-
-VEmpty::~VEmpty() {
-    std::cout << "~VEmpty" << std::endl;
-}
-
+#include "Playground.hpp"
 
 int ChordCount(const int& keyCount) {
     int result = 0;

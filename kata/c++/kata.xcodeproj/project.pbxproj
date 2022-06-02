@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3223AF3B28487090008CB786 /* CPlusPlutMemoryLayout.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3223AF3A28487090008CB786 /* CPlusPlutMemoryLayout.mm */; };
+		3223AF3F28487264008CB786 /* Playground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3223AF3D28487264008CB786 /* Playground.cpp */; };
 		32BDF58F2810333C00F58629 /* SolutionTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 32BDF58E2810333C00F58629 /* SolutionTest.mm */; };
 		32D087AC283B97C500EFC906 /* OStreamTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 32D087AB283B97C500EFC906 /* OStreamTest.mm */; };
 		744F0FF524BE1FAF00D50740 /* ConstructTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 744F0FF324BE1FAF00D50740 /* ConstructTree.cpp */; };
 		746FFC1F24AE2F4A00988ED8 /* BinarySearchTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC1E24AE2F4A00988ED8 /* BinarySearchTest.mm */; };
 		746FFC2424AE2F9500988ED8 /* BinarySearch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC1224AE2CF700988ED8 /* BinarySearch.cpp */; };
 		746FFC2E24AE315F00988ED8 /* DuplicateTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC2D24AE315F00988ED8 /* DuplicateTest.mm */; };
-		746FFC3024AE326000988ED8 /* EmptyTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC2F24AE326000988ED8 /* EmptyTest.mm */; };
+		746FFC3024AE326000988ED8 /* PlaygroundTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC2F24AE326000988ED8 /* PlaygroundTest.mm */; };
 		746FFC3224AE32D500988ED8 /* FindMatrixTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC3124AE32D500988ED8 /* FindMatrixTest.mm */; };
 		746FFC3424AE331F00988ED8 /* MergeTwoListsTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC3324AE331F00988ED8 /* MergeTwoListsTest.mm */; };
 		746FFC3624AE33F900988ED8 /* MinStackTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 746FFC3524AE33F900988ED8 /* MinStackTest.mm */; };
@@ -57,6 +59,9 @@
 
 /* Begin PBXFileReference section */
 		320F8A0C281966140031F57E /* Solution39.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution39.hpp; sourceTree = "<group>"; };
+		3223AF3A28487090008CB786 /* CPlusPlutMemoryLayout.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CPlusPlutMemoryLayout.mm; sourceTree = "<group>"; };
+		3223AF3D28487264008CB786 /* Playground.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Playground.cpp; sourceTree = "<group>"; };
+		3223AF3E28487264008CB786 /* Playground.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Playground.hpp; sourceTree = "<group>"; };
 		325DC30E281505EB00EE778A /* Solution17.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution17.hpp; sourceTree = "<group>"; };
 		325DC3102815071E00EE778A /* Solution47.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution47.hpp; sourceTree = "<group>"; };
 		325DC312281507C500EE778A /* Solution77.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution77.hpp; sourceTree = "<group>"; };
@@ -92,7 +97,7 @@
 		746FFC2B24AE30AE00988ED8 /* ReverseList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ReverseList.hpp; sourceTree = "<group>"; };
 		746FFC2C24AE30BF00988ED8 /* ReverseSentence.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ReverseSentence.hpp; sourceTree = "<group>"; };
 		746FFC2D24AE315F00988ED8 /* DuplicateTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DuplicateTest.mm; sourceTree = "<group>"; };
-		746FFC2F24AE326000988ED8 /* EmptyTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = EmptyTest.mm; sourceTree = "<group>"; };
+		746FFC2F24AE326000988ED8 /* PlaygroundTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PlaygroundTest.mm; sourceTree = "<group>"; };
 		746FFC3124AE32D500988ED8 /* FindMatrixTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FindMatrixTest.mm; sourceTree = "<group>"; };
 		746FFC3324AE331F00988ED8 /* MergeTwoListsTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MergeTwoListsTest.mm; sourceTree = "<group>"; };
 		746FFC3524AE33F900988ED8 /* MinStackTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MinStackTest.mm; sourceTree = "<group>"; };
@@ -153,6 +158,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3223AF3C2848713B008CB786 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				746FFBFE24AE2C3000988ED8 /* Empty.cpp */,
+				746FFC2524AE2FFB00988ED8 /* Empty.hpp */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
 		32BDF58A2810322A00F58629 /* solutions */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,18 +183,13 @@
 		746FFBE524AE2B2100988ED8 = {
 			isa = PBXGroup;
 			children = (
+				3223AF3C2848713B008CB786 /* classes */,
 				32BDF58A2810322A00F58629 /* solutions */,
 				74B07BA62503EF9A00818D68 /* data structures */,
-				74B07B9124F2B70600818D68 /* stack */,
-				74B07B9024F2B70600818D68 /* tree */,
-				74B07B8C24F2B63900818D68 /* array */,
-				74B07B8D24F2B63900818D68 /* dynamic */,
-				74B07B8E24F2B63900818D68 /* list */,
-				74B07B8B24F2B63900818D68 /* string */,
-				746FFBFE24AE2C3000988ED8 /* Empty.cpp */,
-				746FFC2524AE2FFB00988ED8 /* Empty.hpp */,
 				74AE10CF24EC267E004BCBEC /* KataHelper.cpp */,
 				74AE10D024EC267E004BCBEC /* KataHelper.hpp */,
+				3223AF3D28487264008CB786 /* Playground.cpp */,
+				3223AF3E28487264008CB786 /* Playground.hpp */,
 				746FFC1D24AE2F4A00988ED8 /* KataTest */,
 				746FFBF124AE2BC600988ED8 /* Products */,
 			);
@@ -198,9 +207,10 @@
 			isa = PBXGroup;
 			children = (
 				74B07B8924F2B3C600818D68 /* CPlusPlusSmartPointerTest.mm */,
+				3223AF3A28487090008CB786 /* CPlusPlutMemoryLayout.mm */,
 				746FFC1E24AE2F4A00988ED8 /* BinarySearchTest.mm */,
 				746FFC2D24AE315F00988ED8 /* DuplicateTest.mm */,
-				746FFC2F24AE326000988ED8 /* EmptyTest.mm */,
+				746FFC2F24AE326000988ED8 /* PlaygroundTest.mm */,
 				746FFC3124AE32D500988ED8 /* FindMatrixTest.mm */,
 				746FFC3324AE331F00988ED8 /* MergeTwoListsTest.mm */,
 				746FFC3524AE33F900988ED8 /* MinStackTest.mm */,
@@ -317,6 +327,12 @@
 		74B07BA62503EF9A00818D68 /* data structures */ = {
 			isa = PBXGroup;
 			children = (
+				74B07B8B24F2B63900818D68 /* string */,
+				74B07B8E24F2B63900818D68 /* list */,
+				74B07B8D24F2B63900818D68 /* dynamic */,
+				74B07B8C24F2B63900818D68 /* array */,
+				74B07B9024F2B70600818D68 /* tree */,
+				74B07B9124F2B70600818D68 /* stack */,
 				74B07BA82503F02D00818D68 /* Stack.hpp */,
 				74B07BAB2503F3BF00818D68 /* Queue.hpp */,
 			);
@@ -423,8 +439,10 @@
 				746FFC2424AE2F9500988ED8 /* BinarySearch.cpp in Sources */,
 				B2965F2E250A2C8B006FF2F2 /* FindMedianSortedArraysTest.mm in Sources */,
 				74717DF324E830C000C5417A /* MaxProfit.mm in Sources */,
-				746FFC3024AE326000988ED8 /* EmptyTest.mm in Sources */,
+				746FFC3024AE326000988ED8 /* PlaygroundTest.mm in Sources */,
 				746FFC3624AE33F900988ED8 /* MinStackTest.mm in Sources */,
+				3223AF3F28487264008CB786 /* Playground.cpp in Sources */,
+				3223AF3B28487090008CB786 /* CPlusPlutMemoryLayout.mm in Sources */,
 				746FFC3A24AE353A00988ED8 /* ReplaceBlankTest.mm in Sources */,
 				746FFC3C24AE356C00988ED8 /* ReverseListTest.mm in Sources */,
 				74AE10D124EC267E004BCBEC /* KataHelper.cpp in Sources */,
