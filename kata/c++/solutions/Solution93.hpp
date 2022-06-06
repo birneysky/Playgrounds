@@ -75,8 +75,36 @@
 using namespace std;
 
 class Solution93 {
+private:
+    vector<string> result;
+    void backTrace(const string&s , int start, int index, string ip) {
+        if (index == 4 && start == s.size()) {
+            ip.pop_back();
+            result.push_back(ip);
+        }
+        
+        for (auto stride: {1, 2, 3}) {
+            if (start + stride > s.size()) {
+                break;
+            }
+            
+            string sub = s.substr(start, stride);
+            if (sub.size() > 1 && sub.front() == '0') {
+                break;
+            }
+            
+            if (atoi(sub.c_str()) > 255) {
+                break;
+            }
+            
+            backTrace(s, start + stride, index + 1, ip + sub + ".");
+        }
+    }
 public:
     vector<string> restoreIpAddresses(string s) {
+        result.clear();
+        backTrace(s, 0, 0, "");
+        return result;
 #if 1
         return {};
 #endif

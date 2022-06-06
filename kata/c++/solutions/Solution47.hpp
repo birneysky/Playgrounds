@@ -34,8 +34,32 @@
 #include <vector>
 using namespace std;
 class Solution47 {
+private:
+    vector<vector<int>> result;
+    vector<bool> used;
+    void backTrace(const vector<int>& nums, vector<int>& p) {
+        if(p.size() == nums.size()) {
+            result.push_back(p);
+            return;
+        }
+        
+        for (int i = 0; i < nums.size(); i ++) {
+            if(!used[i]) {
+                p.push_back(nums[i]);
+                used[i] = true;
+                backTrace(nums, p);
+                p.pop_back();
+                used[i] = false;
+            }
+        }
+    }
 public:
     vector<vector<int>> permute(vector<int>& nums) {
+        result.clear();
+        used = vector<bool>(nums.size(), false);
+        vector<int> p;
+        backTrace(nums,p);
+        return result;
 #if 1
         return {};
 #endif

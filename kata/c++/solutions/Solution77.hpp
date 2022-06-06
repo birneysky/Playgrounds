@@ -41,8 +41,26 @@
 #include <vector>
 using namespace std;
 class Solution77 {
+private:
+    vector<vector<int>> result;
+    void backTrace(const int& n, const int& k, int start, vector<int>& c) {
+        if (c.size() == k) {
+            result.push_back(c);
+            return;
+        }
+        
+        for (int i = start; i <= n; i++) {
+            c.push_back(i);
+            backTrace(n, k, i + 1, c);
+            c.pop_back();
+        }
+    }
 public:
     vector<vector<int>> combine(int n, int k) {
+        result.clear();
+        vector<int> c;
+        backTrace(n, k, 1, c);
+        return result;
 #if 1
         return {};
 #endif

@@ -48,10 +48,48 @@
 #include <vector>
 #include <string>
 #include <cassert>
+
 using namespace std;
 class Solution17 {
+private:
+    vector<string> result;
+    const vector<string> letterMap {
+        " ",
+        "",
+        "abc",
+        "def",
+        "ghi",
+        "jkl",
+        "mno",
+        "pqrs",
+        "tuv",
+        "wxyz"
+    };
+    
+    void backTrace(const string& digits, int index, string&c) {
+        if (index == digits.size()) {
+            result.push_back(c);
+            return;
+        }
+        
+        char ch = digits[index];
+        assert(ch >= '2' && ch <= '9');
+        string str = letterMap[ch - '0'];
+        for (int i = 0; i < str.size(); i++) {
+            c.push_back(str[i]);
+            backTrace(digits, index + 1, c);
+            c.pop_back();
+        }
+    }
 public:
-        vector<string> letterCombinations(string digits) {
+    vector<string> letterCombinations(string digits) {
+        if (digits.size() <= 0) {
+            return {};
+        }
+        result.clear();
+        string c;
+        backTrace(digits, 0, c);
+        return result;
 #if 1
         return {};
 #endif
