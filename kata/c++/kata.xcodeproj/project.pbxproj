@@ -56,6 +56,11 @@
 
 /* Begin PBXFileReference section */
 		320F8A0C281966140031F57E /* Solution39.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution39.hpp; sourceTree = "<group>"; };
+		3223AF41284DF59D008CB786 /* Solution79.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution79.hpp; sourceTree = "<group>"; };
+		3223AF44284DF7B2008CB786 /* Solution90.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution90.hpp; sourceTree = "<group>"; };
+		3223AF46284DF8E7008CB786 /* Solution40.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution40.hpp; sourceTree = "<group>"; };
+		3223AF48284DF940008CB786 /* Solution37.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution37.hpp; sourceTree = "<group>"; };
+		3223AF4A284DFB22008CB786 /* Solution51.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution51.hpp; sourceTree = "<group>"; };
 		325DC30E281505EB00EE778A /* Solution17.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution17.hpp; sourceTree = "<group>"; };
 		325DC3102815071E00EE778A /* Solution47.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution47.hpp; sourceTree = "<group>"; };
 		325DC312281507C500EE778A /* Solution77.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution77.hpp; sourceTree = "<group>"; };
@@ -151,7 +156,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		32BDF58A2810322A00F58629 /* solutions */ = {
+		3223AF42284DF680008CB786 /* back_trace */ = {
 			isa = PBXGroup;
 			children = (
 				325DC30E281505EB00EE778A /* Solution17.hpp */,
@@ -160,6 +165,19 @@
 				325DC3162815086000EE778A /* Solution78.hpp */,
 				32BDF58C2810328700F58629 /* Solution93.hpp */,
 				320F8A0C281966140031F57E /* Solution39.hpp */,
+				3223AF41284DF59D008CB786 /* Solution79.hpp */,
+				3223AF44284DF7B2008CB786 /* Solution90.hpp */,
+				3223AF46284DF8E7008CB786 /* Solution40.hpp */,
+				3223AF48284DF940008CB786 /* Solution37.hpp */,
+				3223AF4A284DFB22008CB786 /* Solution51.hpp */,
+			);
+			path = back_trace;
+			sourceTree = "<group>";
+		};
+		32BDF58A2810322A00F58629 /* solutions */ = {
+			isa = PBXGroup;
+			children = (
+				3223AF42284DF680008CB786 /* back_trace */,
 			);
 			path = solutions;
 			sourceTree = "<group>";

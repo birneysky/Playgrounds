@@ -49,29 +49,8 @@
 using namespace std;
 
 class Solution39 {
-private:
-    vector<vector<int>> result;
-    void backTrace(const vector<int>& candidates, int start, int remain, vector<int>& c) {
-        if (remain < 0) {
-            return;
-        }
-        if (remain == 0) {
-            result.push_back(c);
-            return;
-        }
-        
-        for (int i = start; i < candidates.size(); i ++) {
-            c.push_back(candidates[i]);
-            backTrace(candidates, i, remain - candidates[i], c);
-            c.pop_back();
-        }
-    }
 public:
     vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
-        result.clear();
-        vector<int> c;
-        backTrace(candidates, 0, target, c);
-        return result;
 #if 1
         return {};
 #endif

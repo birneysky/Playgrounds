@@ -13,6 +13,11 @@
 #include "Solution77.hpp"
 #include "Solution78.hpp"
 #include "Solution39.hpp"
+#include "Solution79.hpp"
+#include "Solution90.hpp"
+#include "Solution40.hpp"
+#include "Solution37.hpp"
+#include "Solution51.hpp"
 
 @interface SolutionTest : XCTestCase
 
@@ -138,24 +143,6 @@
     
 }
 
-/*
- 
- 输入：candidates = [2,3,6,7], target = 7
- 输出：[[2,2,3],[7]]
- 解释：
- 2 和 3 可以形成一组候选，2 + 2 + 3 = 7 。注意 2 可以使用多次。
- 7 也是一个候选， 7 = 7 。
- 仅有这两种组合。
- 示例 2：
-
- 输入: candidates = [2,3,5], target = 8
- 输出: [[2,2,2,2],[2,3,3],[3,5]]
- 示例 3：
-
- 输入: candidates = [2], target = 1
- 输出: []
- */
-
 - (void)testSolution39 {
     Solution39 s;
     vector<int> input {2, 3, 6, 7};
@@ -176,5 +163,27 @@
     XCTAssert(output == ts);
     tlog("[2], 1", output);
 }
+
+- (void)testSolution79 {
+    Solution79 s;
+}
+
+- (void)testSolution90 {
+    Solution90 s;
+}
+
+- (void)testSolution40 {
+    Solution40 s;
+}
+
+- (void)testSolution37 {
+    Solution37 s;
+}
+
+- (void)testSolution51 {
+    Solution51 s;
+}
+
+
 
 @end

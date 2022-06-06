@@ -50,45 +50,8 @@
 #include <cassert>
 using namespace std;
 class Solution17 {
-private:
-    vector<string> result;
-    const vector<string> letterMap {
-        " ",
-        "",
-        "abc",
-        "def",
-        "ghi",
-        "jkl",
-        "mno",
-        "pqrs",
-        "tuv",
-        "wxyz"
-    };
-    void backTrace(const string& digits, int index, string& s) {
-        if (index == digits.size()) {
-            result.push_back(s);
-            return;
-        }
-        char ch = digits.at(index);
-        assert(ch >= '2' && ch <='9');
-        string str = letterMap[ch - '0'];
-        for (int i = 0; i < str.size(); i++) {
-            s.push_back(str[i]);
-            backTrace(digits, index + 1, s);
-            s.pop_back();
-        }
-    }
 public:
     vector<string> letterCombinations(string digits) {
-        result.clear();
-        if (digits.size() <= 0) {
-            return result;
-        }
-        
-        string s;
-        backTrace(digits, 0, s);
-        return result;
-        
 #if 1
         return {};
 #endif
