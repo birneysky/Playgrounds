@@ -61,6 +61,7 @@
 		3223AF46284DF8E7008CB786 /* Solution40.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution40.hpp; sourceTree = "<group>"; };
 		3223AF48284DF940008CB786 /* Solution37.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution37.hpp; sourceTree = "<group>"; };
 		3223AF4A284DFB22008CB786 /* Solution51.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution51.hpp; sourceTree = "<group>"; };
+		3223AF4C284E2AC3008CB786 /* Solution22.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution22.hpp; sourceTree = "<group>"; };
 		325DC30E281505EB00EE778A /* Solution17.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution17.hpp; sourceTree = "<group>"; };
 		325DC3102815071E00EE778A /* Solution47.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution47.hpp; sourceTree = "<group>"; };
 		325DC312281507C500EE778A /* Solution77.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution77.hpp; sourceTree = "<group>"; };
@@ -170,6 +171,7 @@
 				3223AF46284DF8E7008CB786 /* Solution40.hpp */,
 				3223AF48284DF940008CB786 /* Solution37.hpp */,
 				3223AF4A284DFB22008CB786 /* Solution51.hpp */,
+				3223AF4C284E2AC3008CB786 /* Solution22.hpp */,
 			);
 			path = back_trace;
 			sourceTree = "<group>";

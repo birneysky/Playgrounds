@@ -18,6 +18,7 @@
 #include "Solution40.hpp"
 #include "Solution37.hpp"
 #include "Solution51.hpp"
+#include "Solution22.hpp"
 
 @interface SolutionTest : XCTestCase
 
@@ -184,6 +185,9 @@
     Solution51 s;
 }
 
+- (void)TestSolution22 {
+    Solution22 s;
+}
 
 
 @end
