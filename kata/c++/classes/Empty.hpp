@@ -31,4 +31,10 @@ public:
     T getA() { return a; }
 };
 
+
+class X {};
+class Y : public virtual X {};
+class Z : public virtual X {};
+class A : public Y, public Z {};
+
 #endif /* Empty_h */

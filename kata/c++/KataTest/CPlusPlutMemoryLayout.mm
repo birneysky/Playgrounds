@@ -77,6 +77,23 @@
     XCTAssert(sizeof(d) ==  8);
 }
 
+- (void)testObjectSize {
+    X x;
+    Y y;
+    Z z;
+    A a;
+    std::cout << "sizeof(x):" << sizeof(x) << std::endl;
+    std::cout << "sizeof(y):" << sizeof(y) << std::endl;
+    std::cout << "sizeof(z):" << sizeof(z) << std::endl;
+    std::cout << "sizeof(a):" << sizeof(a) << std::endl;
+    /// c++ 中对于一个空的对象（没有任何成员变量）占用一个字节，
+    /// 这是因为编译器向这个类中安插了一个 char 类型的变量进入
+    XCTAssertEqual(sizeof(x), 1);
+    XCTAssertEqual(sizeof(y), 8);
+    XCTAssertEqual(sizeof(z), 8);
+    XCTAssertEqual(sizeof(a), 16);
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
