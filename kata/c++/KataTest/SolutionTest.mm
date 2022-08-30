@@ -7,6 +7,7 @@
 
 #import <XCTest/XCTest.h>
 #include "KataHelper.hpp"
+
 #include "Solution93.hpp"
 #include "Solution17.hpp"
 #include "Solution47.hpp"
@@ -19,6 +20,13 @@
 #include "Solution37.hpp"
 #include "Solution51.hpp"
 #include "Solution22.hpp"
+#include "Solution322.hpp"
+#include "Solution70.hpp"
+#include "Solution121.hpp"
+#include "Solution300.hpp"
+#include "Solution120.hpp"
+#include "Solution64.hpp"
+#include "SolutionCoinLcci.hpp"
 
 @interface SolutionTest : XCTestCase
 
@@ -185,9 +193,44 @@
     Solution51 s;
 }
 
-- (void)TestSolution22 {
+- (void)testSolution22 {
     Solution22 s;
 }
 
+#pragma mark - dynamic
+- (void)testSolution322 {
+    Solution322 s;
+    vector<int> coins {1, 2, 5};
+    XCTAssert(s.coinChange(coins, 11) == -1);
+}
+
+- (void)testSolution70 {
+    Solution70 s;
+    XCTAssert(s.climbStairs(10) == -1);
+}
+
+- (void)testSolution121 {
+    Solution121 s;
+    vector<int> a {1, 2, 5};
+    XCTAssert(s.maxProfit(a) == -1);
+}
+
+- (void)testSolution300 {
+    Solution300 s;
+    vector<int> num {1, 2, 5};
+    XCTAssert(s.lengthOfLIS(num) == -1);
+}
+
+- (void)testSolution120 {
+    Solution120 s;
+}
+
+- (void)testSolution64 {
+    Solution64 s;
+}
+
+- (void)testSolutionCoinLcci {
+    SolutionCoinLcci s;
+}
 
 @end
