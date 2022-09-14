@@ -191,7 +191,7 @@ inoremap jj <Esc>`^
 ```
 ### vim 进阶
 
-[<< 笨方法学 Vimscript >>](http://learnvimscriptthehardway.onefloweroneworld.com)
+[<< 笨方法学 Vimscript >>](https://learnvimscriptthehardway.stevelosh.com/)
 
 ### vim 插件集散地
 
