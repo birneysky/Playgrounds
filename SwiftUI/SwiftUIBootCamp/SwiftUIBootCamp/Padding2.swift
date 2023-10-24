@@ -37,7 +37,7 @@ struct Padding2: View {
     }
 }
 
-struct PaddingSpacer2_Previews: PreviewProvider {
+struct Padding2_Previews: PreviewProvider {
     static var previews: some View {
         Padding2()
     }
