@@ -21,7 +21,7 @@ struct ScrollView2: View {
     }
 }
 
-struct ScrollView3_Previews: PreviewProvider {
+struct ScrollView2_Previews: PreviewProvider {
     static var previews: some View {
         ScrollView2()
     }

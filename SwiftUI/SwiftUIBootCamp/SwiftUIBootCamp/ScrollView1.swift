@@ -9,7 +9,14 @@ import SwiftUI
 
 struct ScrollView1: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            VStack {
+                ForEach(0..<100) { _ in
+                    Rectangle()
+                        .frame(height: 300)
+                }
+            }
+        }
     }
 }
 

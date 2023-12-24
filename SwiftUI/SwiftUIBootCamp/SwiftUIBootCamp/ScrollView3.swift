@@ -9,7 +9,23 @@ import SwiftUI
 
 struct ScrollView3: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            LazyVStack { /// 当数据量较大时，建议使用  Lazy Stack
+                ForEach(0..<100) { _ in
+                    ScrollView(.horizontal, showsIndicators: true) {
+                        HStack {
+                            ForEach(0 ..< 15) { _ in
+                                RoundedRectangle(cornerRadius: 25)
+                                    .fill(.white)
+                                    .frame(width: 200, height: 150)
+                                    .shadow(radius: 10)
+                                    .padding()
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
