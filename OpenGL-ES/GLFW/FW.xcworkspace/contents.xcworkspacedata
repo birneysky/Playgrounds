@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:Doc"
+      name = "Doc">
+      <FileRef
+         location = "group:README.docc">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:/Users/bruce/source/github/Playgrounds/OpenGL-ES/GLFW/FW-00/FW-00.xcodeproj">
+   </FileRef>
+</Workspace>

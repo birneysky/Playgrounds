@@ -57,6 +57,7 @@ class FilterDetailViewController: UIViewController, FilterSliderViewDelegate {
              self.filter.setValue(img, forKey: "inputImage")
             if let aparam = param {
                 self.filter.setValue(aparam.currentValue, forKey: aparam.key)
+                print("🤑🤑🤑🤑🤑 \(aparam.key):\(aparam.currentValue)")
             }
             DispatchQueue.main.async {
                 guard let outImg = self.filter.outputImage else {
