@@ -9,6 +9,9 @@
       </FileRef>
    </Group>
    <FileRef
+      location = "group:/Users/bruce/source/github/Playgrounds/OpenGL-ES/GLFW/FW-01/FW-01.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:/Users/bruce/source/github/Playgrounds/OpenGL-ES/GLFW/FW-00/FW-00.xcodeproj">
    </FileRef>
 </Workspace>

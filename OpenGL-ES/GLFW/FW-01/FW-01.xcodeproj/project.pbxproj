@@ -27,7 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		32A3EE3A2B441B410060A9D6 /* FW-00 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "FW-00"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32A3EE3A2B441B410060A9D6 /* FW-01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "FW-01"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32A3EE3D2B441B410060A9D6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		32A3EE452B441BFA0060A9D6 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = "glfw-3.3.9/libglfw3.a"; sourceTree = "<group>"; };
 		32A3EE462B441C390060A9D6 /* FW-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FW-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		32A3EE3B2B441B410060A9D6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				32A3EE3A2B441B410060A9D6 /* FW-00 */,
+				32A3EE3A2B441B410060A9D6 /* FW-01 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,9 +92,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		32A3EE392B441B410060A9D6 /* FW-00 */ = {
+		32A3EE392B441B410060A9D6 /* FW-01 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 32A3EE412B441B410060A9D6 /* Build configuration list for PBXNativeTarget "FW-00" */;
+			buildConfigurationList = 32A3EE412B441B410060A9D6 /* Build configuration list for PBXNativeTarget "FW-01" */;
 			buildPhases = (
 				32A3EE362B441B410060A9D6 /* Sources */,
 				32A3EE372B441B410060A9D6 /* Frameworks */,
@@ -104,9 +104,9 @@
 			);
 			dependencies = (
 			);
-			name = "FW-00";
+			name = "FW-01";
 			productName = FW;
-			productReference = 32A3EE3A2B441B410060A9D6 /* FW-00 */;
+			productReference = 32A3EE3A2B441B410060A9D6 /* FW-01 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -125,7 +125,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 32A3EE352B441B410060A9D6 /* Build configuration list for PBXProject "FW-00" */;
+			buildConfigurationList = 32A3EE352B441B410060A9D6 /* Build configuration list for PBXProject "FW-01" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -138,7 +138,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				32A3EE392B441B410060A9D6 /* FW-00 */,
+				32A3EE392B441B410060A9D6 /* FW-01 */,
 			);
 		};
 /* End PBXProject section */
@@ -317,7 +317,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		32A3EE352B441B410060A9D6 /* Build configuration list for PBXProject "FW-00" */ = {
+		32A3EE352B441B410060A9D6 /* Build configuration list for PBXProject "FW-01" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				32A3EE3F2B441B410060A9D6 /* Debug */,
@@ -326,7 +326,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		32A3EE412B441B410060A9D6 /* Build configuration list for PBXNativeTarget "FW-00" */ = {
+		32A3EE412B441B410060A9D6 /* Build configuration list for PBXNativeTarget "FW-01" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				32A3EE422B441B410060A9D6 /* Debug */,
