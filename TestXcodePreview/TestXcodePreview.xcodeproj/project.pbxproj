@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3202D4662BB66D76005C1FE3 /* GradientText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3202D4652BB66D76005C1FE3 /* GradientText.swift */; };
 		32038AD22B47F262000FE88B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32038AD12B47F262000FE88B /* AppDelegate.swift */; };
 		32038AD42B47F262000FE88B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32038AD32B47F262000FE88B /* SceneDelegate.swift */; };
 		32038AD62B47F262000FE88B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32038AD52B47F262000FE88B /* ViewController.swift */; };
@@ -17,6 +18,10 @@
 		32038AF32B47F265000FE88B /* TestXcodePreviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32038AF22B47F265000FE88B /* TestXcodePreviewUITests.swift */; };
 		32038AF52B47F265000FE88B /* TestXcodePreviewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32038AF42B47F265000FE88B /* TestXcodePreviewUITestsLaunchTests.swift */; };
 		32038B022B47F27E000FE88B /* MLTopLRRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32038B012B47F27E000FE88B /* MLTopLRRoundedView.swift */; };
+		321290D02BA82D8D006AEFA9 /* KTVSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321290CF2BA82D8D006AEFA9 /* KTVSegmentedControl.swift */; };
+		321290D52BA83E36006AEFA9 /* KTVRankTop3Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321290D32BA83E36006AEFA9 /* KTVRankTop3Cell.swift */; };
+		321290D62BA83E36006AEFA9 /* KTVRankTop3Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 321290D42BA83E36006AEFA9 /* KTVRankTop3Cell.xib */; };
+		321290D82BA83E96006AEFA9 /* Top3TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321290D72BA83E96006AEFA9 /* Top3TableViewController.swift */; };
 		321D8C512B9173C40029F8D9 /* KTVColorsGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D8C502B9173C40029F8D9 /* KTVColorsGradientView.swift */; };
 		321D8C532B917E960029F8D9 /* TestGradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D8C522B917E960029F8D9 /* TestGradientViewController.swift */; };
 		3282E3A92B6236140062E4C6 /* KTVGradientProgessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3282E3A82B6236140062E4C6 /* KTVGradientProgessView.swift */; };
@@ -41,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3202D4652BB66D76005C1FE3 /* GradientText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientText.swift; sourceTree = "<group>"; };
 		32038ACE2B47F262000FE88B /* TestXcodePreview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestXcodePreview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32038AD12B47F262000FE88B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32038AD32B47F262000FE88B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,10 +61,15 @@
 		32038AF22B47F265000FE88B /* TestXcodePreviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestXcodePreviewUITests.swift; sourceTree = "<group>"; };
 		32038AF42B47F265000FE88B /* TestXcodePreviewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestXcodePreviewUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		32038B012B47F27E000FE88B /* MLTopLRRoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLTopLRRoundedView.swift; sourceTree = "<group>"; };
+		321290CF2BA82D8D006AEFA9 /* KTVSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVSegmentedControl.swift; sourceTree = "<group>"; };
+		321290D32BA83E36006AEFA9 /* KTVRankTop3Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVRankTop3Cell.swift; sourceTree = "<group>"; };
+		321290D42BA83E36006AEFA9 /* KTVRankTop3Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVRankTop3Cell.xib; sourceTree = "<group>"; };
+		321290D72BA83E96006AEFA9 /* Top3TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top3TableViewController.swift; sourceTree = "<group>"; };
 		321D8C502B9173C40029F8D9 /* KTVColorsGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTVColorsGradientView.swift; sourceTree = "<group>"; };
 		321D8C522B917E960029F8D9 /* TestGradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGradientViewController.swift; sourceTree = "<group>"; };
 		3282E3A82B6236140062E4C6 /* KTVGradientProgessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTVGradientProgessView.swift; sourceTree = "<group>"; };
 		3282E3AA2B623A210062E4C6 /* StackViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewTest.swift; sourceTree = "<group>"; };
+		32D9D5652BB57BE60077370B /* TestXcodePreview-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestXcodePreview-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,11 +127,17 @@
 				3282E3A82B6236140062E4C6 /* KTVGradientProgessView.swift */,
 				321D8C502B9173C40029F8D9 /* KTVColorsGradientView.swift */,
 				321D8C522B917E960029F8D9 /* TestGradientViewController.swift */,
+				321290CF2BA82D8D006AEFA9 /* KTVSegmentedControl.swift */,
+				321290D32BA83E36006AEFA9 /* KTVRankTop3Cell.swift */,
+				321290D42BA83E36006AEFA9 /* KTVRankTop3Cell.xib */,
+				321290D72BA83E96006AEFA9 /* Top3TableViewController.swift */,
 				3282E3AA2B623A210062E4C6 /* StackViewTest.swift */,
+				3202D4652BB66D76005C1FE3 /* GradientText.swift */,
 				32038AD72B47F262000FE88B /* Main.storyboard */,
 				32038ADA2B47F264000FE88B /* Assets.xcassets */,
 				32038ADC2B47F264000FE88B /* LaunchScreen.storyboard */,
 				32038ADF2B47F264000FE88B /* Info.plist */,
+				32D9D5652BB57BE60077370B /* TestXcodePreview-Bridging-Header.h */,
 			);
 			path = TestXcodePreview;
 			sourceTree = "<group>";
@@ -210,6 +227,7 @@
 				TargetAttributes = {
 					32038ACD2B47F262000FE88B = {
 						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1510;
 					};
 					32038AE32B47F265000FE88B = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -249,6 +267,7 @@
 				32038ADE2B47F264000FE88B /* LaunchScreen.storyboard in Resources */,
 				32038ADB2B47F264000FE88B /* Assets.xcassets in Resources */,
 				32038AD92B47F262000FE88B /* Main.storyboard in Resources */,
+				321290D62BA83E36006AEFA9 /* KTVRankTop3Cell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,10 +293,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				321D8C532B917E960029F8D9 /* TestGradientViewController.swift in Sources */,
+				321290D52BA83E36006AEFA9 /* KTVRankTop3Cell.swift in Sources */,
 				32038AD62B47F262000FE88B /* ViewController.swift in Sources */,
 				3282E3AB2B623A210062E4C6 /* StackViewTest.swift in Sources */,
+				3202D4662BB66D76005C1FE3 /* GradientText.swift in Sources */,
 				3282E3A92B6236140062E4C6 /* KTVGradientProgessView.swift in Sources */,
+				321290D82BA83E96006AEFA9 /* Top3TableViewController.swift in Sources */,
 				321D8C512B9173C40029F8D9 /* KTVColorsGradientView.swift in Sources */,
+				321290D02BA82D8D006AEFA9 /* KTVSegmentedControl.swift in Sources */,
 				32038B022B47F27E000FE88B /* MLTopLRRoundedView.swift in Sources */,
 				32038AD22B47F262000FE88B /* AppDelegate.swift in Sources */,
 				32038AD42B47F262000FE88B /* SceneDelegate.swift in Sources */,
@@ -460,6 +483,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y4E69MK58Q;
@@ -478,6 +502,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ktv.tester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TestXcodePreview/TestXcodePreview-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -488,6 +514,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y4E69MK58Q;
@@ -506,6 +533,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ktv.tester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TestXcodePreview/TestXcodePreview-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
