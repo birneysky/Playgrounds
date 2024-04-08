@@ -62,11 +62,6 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bbb" translatesAutoresizingMaskIntoConstraints="NO" id="z8F-jf-BHR">
-                                <rect key="frame" x="54" y="59" width="240" height="188"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbarbg" translatesAutoresizingMaskIntoConstraints="NO" id="vBd-HK-5Zf">
                                 <rect key="frame" x="0.0" y="769" width="393" height="83"/>
                                 <constraints>
@@ -79,14 +74,34 @@
                                     <constraint firstAttribute="height" constant="49" id="XW3-ns-Fpe"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xmL-qq-eAo">
+                                <rect key="frame" x="0.0" y="116" width="393" height="104"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cI5-E1-nir">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="104"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="104" id="CDr-PI-dFd"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bbb" translatesAutoresizingMaskIntoConstraints="NO" id="z8F-jf-BHR">
+                                <rect key="frame" x="24" y="19" width="209" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gnh-tQ-FeI"/>
                         <color key="backgroundColor" systemColor="lightTextColor"/>
                         <constraints>
+                            <constraint firstItem="xmL-qq-eAo" firstAttribute="leading" secondItem="fSD-tJ-ILc" secondAttribute="leading" id="FrO-qJ-FYw"/>
                             <constraint firstAttribute="bottom" secondItem="vBd-HK-5Zf" secondAttribute="bottom" id="IkI-7X-ezg"/>
                             <constraint firstAttribute="trailing" secondItem="4sD-Lx-cSj" secondAttribute="trailing" id="Qsa-c0-qHc"/>
                             <constraint firstItem="5kv-To-BZE" firstAttribute="leading" secondItem="fSD-tJ-ILc" secondAttribute="leading" constant="8" id="SMU-nQ-gJo"/>
+                            <constraint firstAttribute="trailing" secondItem="xmL-qq-eAo" secondAttribute="trailing" id="Sgh-hX-AEg"/>
                             <constraint firstAttribute="trailing" secondItem="5kv-To-BZE" secondAttribute="trailing" constant="8" id="UPG-rF-PhO"/>
+                            <constraint firstItem="4sD-Lx-cSj" firstAttribute="top" secondItem="xmL-qq-eAo" secondAttribute="bottom" constant="168.33333333333331" id="cXt-Dh-TZM"/>
                             <constraint firstItem="5kv-To-BZE" firstAttribute="top" secondItem="na9-bn-LTy" secondAttribute="bottom" constant="55.333333333333371" id="cbJ-lt-mvl"/>
                             <constraint firstItem="4sD-Lx-cSj" firstAttribute="leading" secondItem="fSD-tJ-ILc" secondAttribute="leading" id="g9K-38-fXr"/>
                             <constraint firstItem="vBd-HK-5Zf" firstAttribute="top" secondItem="biq-Ah-vtZ" secondAttribute="bottom" constant="22" id="iZe-rG-bAT"/>
