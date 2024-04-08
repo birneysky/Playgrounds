@@ -11,59 +11,44 @@ class MyShapeView: UIView {
 
     // 形状缩放比例
       private var scale: CGFloat = 1.0
-      
+     private var shapeLayer = CAShapeLayer()
       // 初始化方法
       override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white
+        backgroundColor = .blue
+          layer.mask = shapeLayer
       }
       
       required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
       }
+
       
-      // 绘制形状
-      override func draw(_ rect: CGRect) {
-        let context = UIGraphicsGetCurrentContext()!
-        
-        // 将矩形按比例缩放
-          let scaledRect = CGRect(x: rect.origin.x , y: rect.origin.y, width: rect.size.width * scale, height: rect.size.height * scale)
-        
-        // 移动到起点
-        context.move(to: CGPoint(x: 3.98079 * scale, y: 7.03443 * scale))
-        
-        // 绘制第一条贝塞尔曲线
-        context.addCurve(to: CGPoint(x: 11.9223 * scale, y: 0 * scale),
-                         control1: CGPoint(x: 4.46898 * scale, y: 3.01916 * scale),
-                         control2: CGPoint(x: 7.87746 * scale, y: 0 * scale))
-        
-        // 绘制第二条贝塞尔曲线
-        context.addCurve(to: CGPoint(x: 177 * scale, y: 8 * scale),
-                         control1: CGPoint(x: 173.418 * scale, y: 0 * scale),
-                         control2: CGPoint(x: 177 * scale, y: 3.58172 * scale))
-        
-        // 绘制第三条贝塞尔曲线
-        context.addCurve(to: CGPoint(x: 169 * scale, y: 48 * scale),
-                         control1: CGPoint(x: 177 * scale, y: 44.4183 * scale),
-                         control2: CGPoint(x: 173.418 * scale, y: 48 * scale))
-        
-        // 绘制第四条贝塞尔曲线
-        context.addCurve(to: CGPoint(x: 0.0900758 * scale, y: 39.0344 * scale),
-                         control1: CGPoint(x: 3.23039 * scale, y: 48 * scale),
-                         control2: CGPoint(x: -0.489408 * scale, y: 43.8005 * scale))
-        
-        // 绘制回到起点的线
-        context.addLine(to: CGPoint(x: 3.98079 * scale, y: 7.03443 * scale))
-        
-        // 填充颜色
-        context.setFillColor(UIColor.blue.cgColor)
-        context.fillPath()
-      }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        updatePath()
+    }
     
-    // 更新缩放比例
-    func updateScale(to newScale: CGFloat) {
-      scale = newScale
-      setNeedsDisplay()
+    private func updatePath() {
+        let path = createBezierPath()
+        shapeLayer.path = path.cgPath
+    }
+    
+    
+    func createBezierPath() -> UIBezierPath {
+        let scaleFactor = min(bounds.width, bounds.height) / 70.0
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: scaleFactor * 3.98079, y: scaleFactor * 7.03443))
+        path.addCurve(to: CGPoint(x: scaleFactor *  11.9223, y: scaleFactor * 0), controlPoint1: CGPoint(x: scaleFactor *  4.46898, y: scaleFactor *  3.01916), controlPoint2: CGPoint(x: scaleFactor *  7.87746, y: 0))
+        path.addLine(to: CGPoint(x: scaleFactor * 169, y: 0))
+        path.addCurve(to: CGPoint(x: scaleFactor * 177, y:  scaleFactor * 8), controlPoint1: CGPoint(x: scaleFactor * 173.418, y: 0), controlPoint2: CGPoint(x: scaleFactor * 177, y: scaleFactor * 3.58172))
+        path.addLine(to: CGPoint(x: scaleFactor * 177, y: scaleFactor * 40))
+        path.addCurve(to: CGPoint(x: scaleFactor * 169, y: scaleFactor * 48), controlPoint1: CGPoint(x: scaleFactor * 177, y: scaleFactor * 44.4183), controlPoint2: CGPoint(x: scaleFactor * 173.418, y: scaleFactor * 48))
+        path.addLine(to: CGPoint(x: scaleFactor * 8.03158, y: scaleFactor * 48))
+        path.addCurve(to: CGPoint(x: scaleFactor * 0.0900758, y: scaleFactor * 39.0344), controlPoint1: CGPoint(x: scaleFactor * 3.23039, y: scaleFactor * 48), controlPoint2: CGPoint(x: scaleFactor * -0.489408, y: scaleFactor * 43.8005))
+        path.addLine(to: CGPoint(x: scaleFactor * 3.98079, y: scaleFactor * 7.03443))
+        path.close()
+        return path
     }
     
     override var intrinsicContentSize: CGSize {
@@ -74,7 +59,8 @@ class MyShapeView: UIView {
 
 
 #Preview("MCInfiniteScrollView", traits: .portrait) {
-    let shapeView = MyShapeView(frame: CGRect(x: 0, y: 0, width: 300, height: 200))
+    let shapeView = MyShapeView(frame: CGRect(x: 0, y: 0, width: 375, height: 200))
+    shapeView.backgroundColor = .red
     return shapeView
         
 }

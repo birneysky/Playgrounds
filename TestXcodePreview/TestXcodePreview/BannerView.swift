@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BannerView: UIView {
+class BannerView: UIView, UIScrollViewDelegate {
 
     // MARK: - Properties
 
@@ -82,21 +82,22 @@ class BannerView: UIView {
 
        @objc private func autoScroll() {
            currentPage = (currentPage + 1) % images.count
-           UIView.animate(withDuration: 2) {
-               self.scrollView.contentOffset = CGPoint(x: self.bounds.width * CGFloat(self.currentPage), y: 0)
-           }
-//           scrollView.setContentOffset(CGPoint(x: bounds.width * CGFloat(currentPage), y: 0), animated: true)
+//           UIView.animate(withDuration: 2) {
+//               self.scrollView.contentOffset = CGPoint(x: self.bounds.width * CGFloat(self.currentPage), y: 0)
+//           }
+           scrollView.setContentOffset(CGPoint(x: bounds.width * CGFloat(currentPage), y: 0), animated: true)
            
        }
     
-        override var intrinsicContentSize: CGSize {
-            return self.bounds.size
+    
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        let index = Int(scrollView.contentOffset.x / bounds.width)
+        currentPage = index % images.count
+        pageControl.currentPage = currentPage
+        if scrollView.contentOffset.x < bounds.width * CGFloat(images.count) {
+            scrollView.setContentOffset(CGPoint(x: bounds.width * CGFloat(images.count * 2), y: 0), animated: false)
         }
-}
-
-// MARK: - UIScrollViewDelegate
-extension BannerView: UIScrollViewDelegate {
-
+    }
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let index = Int(scrollView.contentOffset.x / bounds.width)
         currentPage = index % images.count
@@ -105,7 +106,16 @@ extension BannerView: UIScrollViewDelegate {
             scrollView.setContentOffset(CGPoint(x: bounds.width * CGFloat(images.count * 2), y: 0), animated: false)
         }
     }
+        override var intrinsicContentSize: CGSize {
+            return self.bounds.size
+        }
 }
+
+// MARK: - UIScrollViewDelegate
+//extension BannerView: UIScrollViewDelegate {
+//
+//    
+//}
 
 
 #Preview("BannerView", traits: .portrait) {

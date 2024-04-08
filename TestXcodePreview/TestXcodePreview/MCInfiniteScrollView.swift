@@ -7,10 +7,16 @@
 
 import UIKit
 
-class MCInfiniteScrollView: UIScrollView, UIScrollViewDelegate {
+class MCInfiniteScrollView: UIView, UIScrollViewDelegate {
 
+    private var scrollView = UIScrollView()
+    private var imageView1 = UIImageView()
+    private var imageView2 = UIImageView()
+    private var imageView3 = UIImageView()
+    private var imageViews:[UIImageView] = []
+    private var preContentOffse: CGPoint = .zero
     // 图片数组
-      private var images: [UIImage] = [UIImage(named: "image1")!, UIImage(named: "image2")!, UIImage(systemName: "square.and.arrow.up")!]
+      private var images: [UIImage] = [UIImage(systemName: "0.circle")!, UIImage(systemName: "1.circle")!, UIImage(systemName: "2.circle")!,  UIImage(systemName: "3.circle")!,  UIImage(systemName: "4.circle")!]
 
       // 当前显示的图片索引
       private var currentPageIndex: Int = 0
@@ -27,42 +33,89 @@ class MCInfiniteScrollView: UIScrollView, UIScrollViewDelegate {
 
       // 私有方法，用于设置 UIScrollView 的属性和添加子视图
       private func setup() {
-        // 设置 contentSize
-        contentSize = CGSize(width: frame.width * 3, height: frame.height)
-
-        // 添加子视图
-        for i in 0..<3 {
-          let imageView = UIImageView(frame: CGRect(x: CGFloat(i) * frame.width, y: 0, width: frame.width, height: frame.height))
-          imageView.image = images[currentPageIndex + i]
-          addSubview(imageView)
-        }
-
-        // 设置初始偏移量
-        contentOffset = CGPoint(x: frame.width, y: 0)
-
-        // 添加代理
-        delegate = self
+          let width = self.bounds.size.width
+          let height = self.bounds.size.height
+          scrollView.frame = self.bounds
+          scrollView.contentSize = CGSize(width: width * 3, height: height)
+          scrollView.delegate = self
+          scrollView.isPagingEnabled = true
+          scrollView.showsHorizontalScrollIndicator = false
+          addSubview(scrollView)
+          
+          
+          imageView1.image = images[0]
+          imageView1.frame =  CGRect(x: 0, y: 0, width:width , height: height)
+          imageView1.backgroundColor = .red
+          scrollView.addSubview(imageView1)
+          imageViews.append(imageView1)
+          
+          imageView2.image = images[1]
+          imageView2.frame =  CGRect(x: width, y: 0, width:width , height: height)
+          imageView2.backgroundColor = .green
+          scrollView.addSubview(imageView2)
+          imageViews.append(imageView2)
+          
+          imageView3.image = images[2]
+          imageView3.frame =  CGRect(x: width * 2, y: 0, width:width , height: height)
+          imageView3.backgroundColor = .blue
+          scrollView.addSubview(imageView3)
+          imageViews.append(imageView3)
+        
       }
 
       // UIScrollViewDelegate 方法
-      func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        // 判断是否滑动到最后一张图片
-        if contentOffset.x == contentSize.width - frame.width {
-          // 将第一个 UIImageView 的 frame 设置为 x = 屏幕宽度 * 2
-          let imageView1 = subviews[0] as! UIImageView
-          imageView1.frame = CGRect(x: frame.width * 2, y: 0, width: frame.width, height: frame.height)
-
-          // 将第二个 UIImageView 的 frame 设置为 x = 0
-          let imageView2 = subviews[1] as! UIImageView
-          imageView2.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
-
-          // 更新 currentPageIndex
-          currentPageIndex = (currentPageIndex + 1) % images.count
-
-          // 将 contentOffset 设置为 x = 屏幕宽度
-          contentOffset = CGPoint(x: frame.width, y: 0)
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let width = self.bounds.size.width
+        let height = self.bounds.size.height
+        
+        
+        if abs(scrollView.contentOffset.x - preContentOffse.x) != width {
+            return
         }
-      }
+        if scrollView.contentOffset.x - preContentOffse.x > 0 {
+            currentPageIndex = (currentPageIndex + 1) % images.count
+        } else {
+            if currentPageIndex - 1 < 0 {
+                currentPageIndex = images.count - 1
+            } else {
+                currentPageIndex = (currentPageIndex - 1) % images.count
+            }
+        }
+        NSLog("############# \(currentPageIndex) offset :\(scrollView.contentOffset.x), previous:\(preContentOffse.x)")
+
+        if scrollView.contentOffset.x == scrollView.contentSize.width -  width  {
+            let first =  imageViews.removeFirst()
+            imageViews.append(first)
+            //currentPageIndex = 0
+        }
+        
+        if scrollView.contentOffset.x == 0 {
+            let last =  imageViews.removeLast()
+            imageViews.insert(last, at: 0)
+        }
+        
+        for i in 0 ..< 3 {
+            imageViews[i].frame = CGRect(x: width * CGFloat(i), y: 0, width: width, height: height)
+        }
+        
+        if currentPageIndex - 1 < 0 {
+            imageViews[0].image = images.last
+        } else {
+            imageViews[0].image = images[currentPageIndex - 1]
+        }
+        
+        imageViews[1].image = images[currentPageIndex]
+        if currentPageIndex + 1 >= images.count {
+            imageViews[2].image = images[0]
+        } else {
+            imageViews[2].image = images[currentPageIndex + 1]
+        }
+       
+        
+        
+      scrollView.contentOffset = CGPoint(x: width, y: 0)
+        preContentOffse = scrollView.contentOffset
+    }
     
     override var intrinsicContentSize: CGSize {
         return self.bounds.size
@@ -71,6 +124,6 @@ class MCInfiniteScrollView: UIScrollView, UIScrollViewDelegate {
 }
 
 #Preview("MCInfiniteScrollView", traits: .portrait) {
-    let scrollView = MCInfiniteScrollView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200))
+    let scrollView = MCInfiniteScrollView(frame: CGRect(x: 0, y: 0, width: 300, height: 100))
     return scrollView
 }
