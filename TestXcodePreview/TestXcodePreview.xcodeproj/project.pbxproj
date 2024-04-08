@@ -29,6 +29,7 @@
 		32EC65592BC3D8B800D388DB /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EC65582BC3D8B800D388DB /* BannerView.swift */; };
 		32EC655F2BC4020D00D388DB /* MCInfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EC655E2BC4020D00D388DB /* MCInfiniteScrollView.swift */; };
 		32EC65612BC4063F00D388DB /* CustomAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EC65602BC4063F00D388DB /* CustomAvatarView.swift */; };
+		32EC65632BC4096E00D388DB /* MyShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EC65622BC4096E00D388DB /* MyShapeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		32EC65582BC3D8B800D388DB /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		32EC655E2BC4020D00D388DB /* MCInfiniteScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCInfiniteScrollView.swift; sourceTree = "<group>"; };
 		32EC65602BC4063F00D388DB /* CustomAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAvatarView.swift; sourceTree = "<group>"; };
+		32EC65622BC4096E00D388DB /* MyShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShapeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				32EC65582BC3D8B800D388DB /* BannerView.swift */,
 				32EC655E2BC4020D00D388DB /* MCInfiniteScrollView.swift */,
 				32EC65602BC4063F00D388DB /* CustomAvatarView.swift */,
+				32EC65622BC4096E00D388DB /* MyShapeView.swift */,
 				32038AD72B47F262000FE88B /* Main.storyboard */,
 				32038ADA2B47F264000FE88B /* Assets.xcassets */,
 				32038ADC2B47F264000FE88B /* LaunchScreen.storyboard */,
@@ -315,6 +318,7 @@
 				32038B022B47F27E000FE88B /* MLTopLRRoundedView.swift in Sources */,
 				32038AD22B47F262000FE88B /* AppDelegate.swift in Sources */,
 				32EC65592BC3D8B800D388DB /* BannerView.swift in Sources */,
+				32EC65632BC4096E00D388DB /* MyShapeView.swift in Sources */,
 				32038AD42B47F262000FE88B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
