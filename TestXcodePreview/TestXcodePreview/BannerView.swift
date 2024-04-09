@@ -81,12 +81,7 @@ class BannerView: UIView, UIScrollViewDelegate {
        }
 
        @objc private func autoScroll() {
-           currentPage = (currentPage + 1) % images.count
-//           UIView.animate(withDuration: 2) {
-//               self.scrollView.contentOffset = CGPoint(x: self.bounds.width * CGFloat(self.currentPage), y: 0)
-//           }
            scrollView.setContentOffset(CGPoint(x: bounds.width * CGFloat(currentPage), y: 0), animated: true)
-           
        }
     
     

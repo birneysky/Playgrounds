@@ -1,5 +1,5 @@
 //
-//  MyShapeView.swift
+//  KTVSingHeaderTShapeView.swift
 //  TestXcodePreview
 //
 //  Created by Bruce on 2024/4/8.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyShapeView: UIView {
+class KTVSingHeaderTShapeView: UIView {
 
     // 形状缩放比例
       private var scale: CGFloat = 1.0
@@ -36,7 +36,7 @@ class MyShapeView: UIView {
     
     
     func createBezierPath() -> UIBezierPath {
-        let scaleFactor = min(bounds.width, bounds.height) / 70.0
+        let scaleFactor = min(bounds.width, bounds.height) / 48.0
         let path = UIBezierPath()
         path.move(to: CGPoint(x: scaleFactor * 3.98079, y: scaleFactor * 7.03443))
         path.addCurve(to: CGPoint(x: scaleFactor *  11.9223, y: scaleFactor * 0), controlPoint1: CGPoint(x: scaleFactor *  4.46898, y: scaleFactor *  3.01916), controlPoint2: CGPoint(x: scaleFactor *  7.87746, y: 0))
@@ -59,7 +59,19 @@ class MyShapeView: UIView {
 
 
 #Preview("MCInfiniteScrollView", traits: .portrait) {
-    let shapeView = MyShapeView(frame: CGRect(x: 0, y: 0, width: 375, height: 200))
+    let shapeView = KTVSingHeaderTShapeView(frame: CGRect(x: 0, y: 0, width: 193, height: 54))
+    var frame = shapeView.bounds
+    frame.origin.x = frame.origin.x - 8
+    frame.origin.y = frame.origin.y - 8
+    frame.size.width = frame.size.width + 16
+    frame.size.height = frame.size.height + 16
+    let scrollView = KTVSingHeaderBannerScrollView(frame: frame)
+    scrollView.setItems([
+            KTVSingBannerItem(backgroundImageName: "ktv_sing_with_past_self", iconImageName: "ktv_past_self_icon", titleText: "0001", subTitleLabel: "0001sub"),
+            KTVSingBannerItem(backgroundImageName: "ktv_annual_celebration_report", iconImageName: "ktv_past_self_icon", titleText: "0002", subTitleLabel: "0002sub"),
+            KTVSingBannerItem(backgroundImageName: "ktv_annual_celebration_report", iconImageName: "ktv_past_self_icon", titleText: "0003", subTitleLabel: "0003sub"),
+        ])
+    shapeView.addSubview(scrollView)
     shapeView.backgroundColor = .red
     return shapeView
         

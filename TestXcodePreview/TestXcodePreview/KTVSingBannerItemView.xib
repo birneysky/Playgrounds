@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KTVSingBannerItemView" customModule="TestXcodePreview" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="KTVSingBannerItemView" customModule="TestXcodePreview" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="178" height="48"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ktv_sing_with_past_self" translatesAutoresizingMaskIntoConstraints="NO" id="3JX-gW-Hpu">
+                    <rect key="frame" x="0.0" y="0.0" width="178" height="48"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ktv_past_self_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ITG-Pp-Ckq">
+                    <rect key="frame" x="24" y="8" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="5e3-Te-A3f"/>
+                        <constraint firstAttribute="width" constant="32" id="6Od-LQ-wVO"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="与过去合唱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQ7-26-f13">
+                    <rect key="frame" x="64" y="5" width="82" height="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" red="0.92941176470588238" green="0.48627450980392156" blue="0.23529411764705882" alpha="0.63" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <size key="shadowOffset" width="0.0" height="1"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="和从前的自己合唱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVU-BY-7bI">
+                    <rect key="frame" x="64" y="31" width="82" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="3JX-gW-Hpu" secondAttribute="bottom" id="1N4-Hd-h2S"/>
+                <constraint firstItem="DQ7-26-f13" firstAttribute="leading" secondItem="ITG-Pp-Ckq" secondAttribute="trailing" constant="8" id="1WS-Vc-5CQ"/>
+                <constraint firstItem="3JX-gW-Hpu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4l8-cU-Pdg"/>
+                <constraint firstItem="yVU-BY-7bI" firstAttribute="bottom" secondItem="ITG-Pp-Ckq" secondAttribute="bottom" constant="3" id="Ff8-zb-otT"/>
+                <constraint firstAttribute="trailing" secondItem="3JX-gW-Hpu" secondAttribute="trailing" id="JFu-Ty-Dyd"/>
+                <constraint firstItem="DQ7-26-f13" firstAttribute="top" secondItem="ITG-Pp-Ckq" secondAttribute="top" constant="-3" id="SlQ-ZZ-sls"/>
+                <constraint firstItem="ITG-Pp-Ckq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="YhT-mn-NB1"/>
+                <constraint firstItem="ITG-Pp-Ckq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="elN-1z-xYB"/>
+                <constraint firstItem="3JX-gW-Hpu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hvD-T1-L3m"/>
+                <constraint firstItem="yVU-BY-7bI" firstAttribute="leading" secondItem="ITG-Pp-Ckq" secondAttribute="trailing" constant="8" id="njH-c5-Ms7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backgroundImageView" destination="3JX-gW-Hpu" id="aUl-dN-3U0"/>
+                <outlet property="iconImageView" destination="ITG-Pp-Ckq" id="gnf-1M-mrv"/>
+                <outlet property="subTitleLabel" destination="yVU-BY-7bI" id="e9z-ly-3fd"/>
+                <outlet property="titleLabel" destination="DQ7-26-f13" id="h4d-0s-k9D"/>
+            </connections>
+            <point key="canvasLocation" x="137.40458015267174" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ktv_past_self_icon" width="32.333332061767578" height="32.333332061767578"/>
+        <image name="ktv_sing_with_past_self" width="178.33332824707031" height="48.333332061767578"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
