@@ -91,6 +91,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxq-Fx-9MY">
+                                <rect key="frame" x="135" y="298" width="70" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="送礼" image="ktv_past_self_icon"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gnh-tQ-FeI"/>
                         <color key="backgroundColor" systemColor="lightTextColor"/>
@@ -120,6 +126,7 @@
     </scenes>
     <resources>
         <image name="bbb" width="375" height="429"/>
+        <image name="ktv_past_self_icon" width="32.333332061767578" height="32.333332061767578"/>
         <image name="tabbarbg" width="375" height="83"/>
         <image name="tabbargb49" width="375" height="49"/>
         <systemColor name="lightTextColor">
@@ -129,7 +136,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
