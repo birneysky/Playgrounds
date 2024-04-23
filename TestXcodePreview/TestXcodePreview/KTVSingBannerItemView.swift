@@ -45,3 +45,9 @@ class KTVSingBannerItemView: UIView {
     
     
 }
+
+
+#Preview("KTVSingBannerItemView", traits: .portrait) {
+    let view = KTVSingBannerItemView.view()
+    return view
+}
