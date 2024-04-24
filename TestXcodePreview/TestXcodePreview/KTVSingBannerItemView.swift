@@ -29,11 +29,11 @@ class KTVSingBannerItemView: UIView {
     @IBOutlet weak var subTitleLabel: UILabel!
     
     
-    class func view() -> KTVSingBannerItemView {
-        let nib = UINib(nibName: "KTVSingBannerItemView", bundle: nil)
-        let view = nib.instantiate(withOwner: self, options: nil)[0] as! KTVSingBannerItemView
-        return view
-    }
+//    class func view() -> KTVSingBannerItemView {
+//        let nib = UINib(nibName: "KTVSingBannerItemView", bundle: nil)
+//        let view = nib.instantiate(withOwner: self, options: nil)[0] as! KTVSingBannerItemView
+//        return view
+//    }
 
     func setData(_ item: KTVSingBannerItem? ) {
         guard let aItem = item else { return }

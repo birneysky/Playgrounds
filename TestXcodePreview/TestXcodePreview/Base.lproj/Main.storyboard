@@ -156,6 +156,11 @@
             <point key="canvasLocation" x="930.53435114503816" y="4.9295774647887329"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="NZZ-XY-COb">
+            <size key="intrinsicContentSize" width="240" height="37"/>
+        </designable>
+    </designables>
     <resources>
         <image name="avatar1" width="31.666666030883789" height="31.666666030883789"/>
         <image name="avatar2" width="29" height="29.333333969116211"/>

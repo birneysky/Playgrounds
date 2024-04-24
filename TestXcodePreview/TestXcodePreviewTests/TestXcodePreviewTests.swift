@@ -21,6 +21,8 @@ final class TestXcodePreviewTests: XCTestCase {
 
     func testExample() throws {
         XCTAssert(UIColor.clear == UIColor.clear)
+        let a = KTVAchievementEntranceViewController.controller()
+        XCTAssert(a.isKind(of: KTVAchievementEntranceViewController.self))
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         // Any test you write for XCTest can be annotated as throws and async.

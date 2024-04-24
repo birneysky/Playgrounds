@@ -85,7 +85,7 @@ class ViewController: UIViewController {
         ])
         
     
-        let controller = KTVAchievementEntranceViewController(nibName: "KTVAchievementEntranceViewController", bundle: nil)
+        let controller = KTVAchievementEntranceViewController.controller()
         self.addChild(controller)
         self.view.addSubview(controller.view)
         controller.view.backgroundColor = .blue

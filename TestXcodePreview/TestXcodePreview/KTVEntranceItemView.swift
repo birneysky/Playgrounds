@@ -36,10 +36,11 @@ class KTVEntranceItemView: UIView {
     @IBOutlet weak var container: KTVHEqualSpacingContainer!
     @IBOutlet weak var subTitle: UILabel!
     @IBOutlet weak var title: UILabel!
-    class func view() -> KTVEntranceItemView {
-        let nib = UINib(nibName: "KTVEntranceItemView", bundle: nil)
-        let view = nib.instantiate(withOwner: self, options: nil)[0] as! KTVEntranceItemView
-        return view
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tap))
+        addGestureRecognizer(tapGesture)
     }
 
     func setData(_ item: KTVEntranceItem? ) {
@@ -65,8 +66,14 @@ class KTVEntranceItemView: UIView {
     override var intrinsicContentSize: CGSize {
         let containerSize = container.intrinsicContentSize
         let titleSize = self.title.intrinsicContentSize
-        let width = 6 + titleSize.width + 6 + containerSize.width + 6
+        let subTitleSize = self.subTitle.intrinsicContentSize
+        let titleMaxWidth = max(titleSize.width, subTitleSize.width)
+        let width = 6 + titleMaxWidth + 4 + containerSize.width + 6
         return CGSize(width: width, height: 40)
+    }
+    
+    @objc func tap() {
+        print("xxxx")
     }
 
 }
@@ -87,7 +94,7 @@ class KTVEntranceItemView: UIView {
 
 #Preview("KTVEntranceItemView3", traits: .portrait) {
     let view = KTVEntranceItemView.view()
-    let item = KTVAEntranceItem(title: "超级粉丝", subTitle: "9999 位", icons: ["avatar1", "avatar2", "avatar3"], URL: "", type: 2)
+    let item = KTVAEntranceItem(title: "超级粉丝", subTitle: "9999.99 w 位", icons: ["avatar1", "avatar2", "avatar3"], URL: "", type: 2)
     view.setData(item)
     return view
 }

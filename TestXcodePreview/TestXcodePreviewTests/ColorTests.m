@@ -6,6 +6,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "TestXcodePreview-Swift.h"
 
 @interface ColorTests : XCTestCase
 
@@ -23,8 +24,14 @@
 
 - (void)testExample {
     XCTAssert([UIColor.clearColor isEqual:UIColor.clearColor]);
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    UnitTestClass* testClas =  [[UnitTestClass alloc] init];
+    XCTAssert([testClas isKindOfClass:UnitTestClass.class]);
+    //[[KTVAchievementEntranceViewController alloc] init];
+    KTVAchievementEntranceViewController* a = [KTVAchievementEntranceViewController controller];
+    XCTAssert([a isKindOfClass: KTVAchievementEntranceViewController.class]);
+    
+    KTVEntranceItemView* itemView = [KTVEntranceItemView view];
+    XCTAssert([itemView isKindOfClass: KTVEntranceItemView.class]);
 }
 
 - (void)testPerformanceExample {
