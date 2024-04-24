@@ -85,15 +85,50 @@
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxq-Fx-9MY">
-                                <rect key="frame" x="135" y="298" width="70" height="33"/>
+                                <rect key="frame" x="16" y="329" width="70" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="送礼" image="ktv_past_self_icon"/>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillProportionally" alignment="center" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="bkd-xU-V7P">
+                                <rect key="frame" x="103" y="273" width="64" height="28"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar1" translatesAutoresizingMaskIntoConstraints="NO" id="6BX-9Y-9Am">
+                                        <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="28" id="UcN-Ff-Qsr"/>
+                                            <constraint firstAttribute="height" constant="28" id="hwR-iP-4jp"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar2" translatesAutoresizingMaskIntoConstraints="NO" id="H48-YL-crq">
+                                        <rect key="frame" x="18" y="0.0" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="28" id="Zk5-6P-Az4"/>
+                                            <constraint firstAttribute="height" constant="28" id="rAJ-gD-OBO"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar3" translatesAutoresizingMaskIntoConstraints="NO" id="Bbb-Np-jmv">
+                                        <rect key="frame" x="36" y="0.0" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="wB4-Mw-ddq"/>
+                                            <constraint firstAttribute="width" constant="28" id="wUU-lK-dwl"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZZ-XY-COb" customClass="KTVColorsGradientView" customModule="TestXcodePreview" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="648" width="240" height="37"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="txd-m1-zzv"/>
+                                    <constraint firstAttribute="height" constant="37" id="zVE-r6-Z1k"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gnh-tQ-FeI"/>
                         <color key="backgroundColor" systemColor="lightTextColor"/>
                         <constraints>
+                            <constraint firstItem="biq-Ah-vtZ" firstAttribute="top" secondItem="NZZ-XY-COb" secondAttribute="bottom" constant="13" id="3GD-5T-FZo"/>
                             <constraint firstItem="xmL-qq-eAo" firstAttribute="leading" secondItem="fSD-tJ-ILc" secondAttribute="leading" id="FrO-qJ-FYw"/>
                             <constraint firstAttribute="bottom" secondItem="vBd-HK-5Zf" secondAttribute="bottom" id="IkI-7X-ezg"/>
                             <constraint firstAttribute="trailing" secondItem="4sD-Lx-cSj" secondAttribute="trailing" id="Qsa-c0-qHc"/>
@@ -104,6 +139,7 @@
                             <constraint firstItem="5kv-To-BZE" firstAttribute="top" secondItem="na9-bn-LTy" secondAttribute="bottom" constant="55.333333333333371" id="cbJ-lt-mvl"/>
                             <constraint firstItem="4sD-Lx-cSj" firstAttribute="leading" secondItem="fSD-tJ-ILc" secondAttribute="leading" id="g9K-38-fXr"/>
                             <constraint firstItem="vBd-HK-5Zf" firstAttribute="top" secondItem="biq-Ah-vtZ" secondAttribute="bottom" constant="22" id="iZe-rG-bAT"/>
+                            <constraint firstItem="NZZ-XY-COb" firstAttribute="leading" secondItem="fSD-tJ-ILc" secondAttribute="leading" id="jjv-B1-ftU"/>
                             <constraint firstItem="4sD-Lx-cSj" firstAttribute="centerY" secondItem="fSD-tJ-ILc" secondAttribute="centerY" id="nOY-qm-Vfm"/>
                             <constraint firstItem="vBd-HK-5Zf" firstAttribute="leading" secondItem="fSD-tJ-ILc" secondAttribute="leading" id="rZT-DA-bmy"/>
                             <constraint firstAttribute="trailing" secondItem="biq-Ah-vtZ" secondAttribute="trailing" id="tXE-n6-tSD"/>
@@ -111,6 +147,9 @@
                             <constraint firstItem="biq-Ah-vtZ" firstAttribute="leading" secondItem="fSD-tJ-ILc" secondAttribute="leading" id="ypy-R0-nw7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gradientView1" destination="NZZ-XY-COb" id="FGn-lV-Nqy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inm-J7-xw7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -118,6 +157,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="avatar1" width="31.666666030883789" height="31.666666030883789"/>
+        <image name="avatar2" width="29" height="29.333333969116211"/>
+        <image name="avatar3" width="30" height="30.333333969116211"/>
         <image name="bbb" width="375" height="429"/>
         <image name="ktv_past_self_icon" width="32.333332061767578" height="32.333332061767578"/>
         <image name="tabbarbg" width="375" height="83"/>

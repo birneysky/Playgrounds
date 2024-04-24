@@ -83,6 +83,19 @@ class ViewController: UIViewController {
             tview.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             tview.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
         ])
+        
+    
+        let controller = KTVAchievementEntranceViewController(nibName: "KTVAchievementEntranceViewController", bundle: nil)
+        self.addChild(controller)
+        self.view.addSubview(controller.view)
+        controller.view.backgroundColor = .blue
+        controller.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            controller.view.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            controller.view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            controller.view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            controller.view.heightAnchor.constraint(equalToConstant: 40),
+        ])
     }
 
 

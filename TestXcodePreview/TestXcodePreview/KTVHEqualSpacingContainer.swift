@@ -12,7 +12,7 @@ class KTVHEqualSpacingContainer: UIView {
     private lazy var stackView: UIStackView = {
         let s = UIStackView()
         s.axis = .horizontal
-        s.distribution = .equalSpacing
+        s.distribution = .fillProportionally
         s.alignment = .center
         s.spacing = 8
         return s
@@ -67,11 +67,11 @@ class KTVHEqualSpacingContainer: UIView {
 
 #Preview("KTVHEqualSpacingContainer", traits: .portrait) {
     let view = KTVHEqualSpacingContainer()
-    view.backgroundColor = .blue
-    for _ in 0 ..< 8 {
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 28, height:28))
-        imageView.contentMode = .scaleAspectFit
-        imageView.backgroundColor = .red
+    let icons = ["avatar1", "avatar2", "avatar3"]
+    icons.forEach { iconName in
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleToFill
+        imageView.image = UIImage(named: iconName)
         view.appendView(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -79,5 +79,25 @@ class KTVHEqualSpacingContainer: UIView {
             imageView.heightAnchor.constraint(equalToConstant: 28)
         ])
     }
+    view.spaceing = -6
+    return view
+}
+
+
+#Preview("KTVHEqualSpacingContainer2", traits: .portrait) {
+    let view = KTVHEqualSpacingContainer()
+    let icons = ["cup","like_test", "cup"]
+    icons.forEach { iconName in
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleToFill
+        imageView.image = UIImage(named: iconName)
+        view.appendView(imageView)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            imageView.widthAnchor.constraint(equalToConstant: 28),
+            imageView.heightAnchor.constraint(equalToConstant: 28)
+        ])
+    }
+    view.spaceing = 2
     return view
 }

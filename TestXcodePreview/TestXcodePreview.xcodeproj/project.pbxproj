@@ -27,6 +27,8 @@
 		323B2FBC2BD7AF0B0018E190 /* KTVEntranceItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323B2FBB2BD7AF0B0018E190 /* KTVEntranceItemView.swift */; };
 		323B2FBE2BD7AF6E0018E190 /* KTVEntranceItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323B2FBD2BD7AF6E0018E190 /* KTVEntranceItemView.xib */; };
 		323B2FC02BD7BCA20018E190 /* KTVHEqualSpacingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323B2FBF2BD7BCA20018E190 /* KTVHEqualSpacingContainer.swift */; };
+		323B2FC32BD8A9660018E190 /* KTVAchievementEntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323B2FC12BD8A9660018E190 /* KTVAchievementEntranceViewController.swift */; };
+		323B2FC42BD8A9660018E190 /* KTVAchievementEntranceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323B2FC22BD8A9660018E190 /* KTVAchievementEntranceViewController.xib */; };
 		326089522BC517B100442446 /* ColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 326089512BC517B100442446 /* ColorTests.m */; };
 		326089542BC51DB600442446 /* KTVSingBannerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326089532BC51DB600442446 /* KTVSingBannerItemView.swift */; };
 		326089562BC51DCC00442446 /* KTVSingBannerItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 326089552BC51DCC00442446 /* KTVSingBannerItemView.xib */; };
@@ -80,6 +82,8 @@
 		323B2FBB2BD7AF0B0018E190 /* KTVEntranceItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVEntranceItemView.swift; sourceTree = "<group>"; };
 		323B2FBD2BD7AF6E0018E190 /* KTVEntranceItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVEntranceItemView.xib; sourceTree = "<group>"; };
 		323B2FBF2BD7BCA20018E190 /* KTVHEqualSpacingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVHEqualSpacingContainer.swift; sourceTree = "<group>"; };
+		323B2FC12BD8A9660018E190 /* KTVAchievementEntranceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTVAchievementEntranceViewController.swift; sourceTree = "<group>"; };
+		323B2FC22BD8A9660018E190 /* KTVAchievementEntranceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KTVAchievementEntranceViewController.xib; sourceTree = "<group>"; };
 		326089502BC517B000442446 /* TestXcodePreviewTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestXcodePreviewTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		326089512BC517B100442446 /* ColorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorTests.m; sourceTree = "<group>"; };
 		326089532BC51DB600442446 /* KTVSingBannerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVSingBannerItemView.swift; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 				323B2FBF2BD7BCA20018E190 /* KTVHEqualSpacingContainer.swift */,
 				323B2FBB2BD7AF0B0018E190 /* KTVEntranceItemView.swift */,
 				323B2FBD2BD7AF6E0018E190 /* KTVEntranceItemView.xib */,
+				323B2FC12BD8A9660018E190 /* KTVAchievementEntranceViewController.swift */,
+				323B2FC22BD8A9660018E190 /* KTVAchievementEntranceViewController.xib */,
 				32038AD72B47F262000FE88B /* Main.storyboard */,
 				32038ADA2B47F264000FE88B /* Assets.xcassets */,
 				32038ADC2B47F264000FE88B /* LaunchScreen.storyboard */,
@@ -300,6 +306,7 @@
 				32038ADE2B47F264000FE88B /* LaunchScreen.storyboard in Resources */,
 				323B2FBE2BD7AF6E0018E190 /* KTVEntranceItemView.xib in Resources */,
 				326089562BC51DCC00442446 /* KTVSingBannerItemView.xib in Resources */,
+				323B2FC42BD8A9660018E190 /* KTVAchievementEntranceViewController.xib in Resources */,
 				32038ADB2B47F264000FE88B /* Assets.xcassets in Resources */,
 				32038AD92B47F262000FE88B /* Main.storyboard in Resources */,
 				321290D62BA83E36006AEFA9 /* KTVRankTop3Cell.xib in Resources */,
@@ -341,6 +348,7 @@
 				321D8C512B9173C40029F8D9 /* KTVColorsGradientView.swift in Sources */,
 				323B2FBC2BD7AF0B0018E190 /* KTVEntranceItemView.swift in Sources */,
 				321290D02BA82D8D006AEFA9 /* KTVSegmentedControl.swift in Sources */,
+				323B2FC32BD8A9660018E190 /* KTVAchievementEntranceViewController.swift in Sources */,
 				32038B022B47F27E000FE88B /* KTVPartialRoundedView.swift in Sources */,
 				32038AD22B47F262000FE88B /* AppDelegate.swift in Sources */,
 				32EC65592BC3D8B800D388DB /* BannerView.swift in Sources */,

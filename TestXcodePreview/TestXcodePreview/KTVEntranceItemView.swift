@@ -55,6 +55,11 @@ class KTVEntranceItemView: UIView {
             ])
             container.appendView(imageView)
         }
+        if aItem.type == 2 {
+            container.spaceing = -6
+        } else {
+            container.spaceing = 2
+        }
     }
     
     override var intrinsicContentSize: CGSize {
@@ -75,14 +80,14 @@ class KTVEntranceItemView: UIView {
 
 #Preview("KTVEntranceItemView2", traits: .portrait) {
     let view = KTVEntranceItemView.view()
-    let item = KTVAEntranceItem(title: "成就榜", subTitle: "xxxx", icons: ["like_test", "cup"], URL: "", type: 1)
+    let item = KTVAEntranceItem(title: "礼物墙", subTitle: "9999 个", icons: ["like_test", "cup"], URL: "", type: 1)
     view.setData(item)
     return view
 }
 
 #Preview("KTVEntranceItemView3", traits: .portrait) {
     let view = KTVEntranceItemView.view()
-    let item = KTVAEntranceItem(title: "成就榜", subTitle: "xxxx", icons: ["avatar1", "avatar2", "avatar3"], URL: "", type: 1)
+    let item = KTVAEntranceItem(title: "超级粉丝", subTitle: "9999 位", icons: ["avatar1", "avatar2", "avatar3"], URL: "", type: 2)
     view.setData(item)
     return view
 }
