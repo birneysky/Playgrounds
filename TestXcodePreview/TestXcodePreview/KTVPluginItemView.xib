@@ -27,7 +27,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAs-Fx-xYw">
-                    <rect key="frame" x="31" y="0.0" width="41" height="12"/>
+                    <rect key="frame" x="27" y="0.0" width="41" height="12"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Iy-6F-Hj8">
                             <rect key="frame" x="-4" y="0.0" width="49" height="12"/>
@@ -58,7 +58,7 @@
                 <constraint firstItem="WVx-sC-Bx5" firstAttribute="top" secondItem="LAs-Fx-xYw" secondAttribute="top" id="Ap9-QD-Vg3"/>
                 <constraint firstAttribute="bottom" secondItem="W3s-rQ-zZW" secondAttribute="bottom" id="D0G-cf-0wd"/>
                 <constraint firstItem="W3s-rQ-zZW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="OP2-Sl-Qz5"/>
-                <constraint firstItem="LAs-Fx-xYw" firstAttribute="leading" secondItem="WVx-sC-Bx5" secondAttribute="centerX" constant="4" id="Twm-NM-Urk"/>
+                <constraint firstItem="LAs-Fx-xYw" firstAttribute="leading" secondItem="WVx-sC-Bx5" secondAttribute="centerX" id="Twm-NM-Urk"/>
                 <constraint firstItem="WVx-sC-Bx5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Wcr-AS-zg2"/>
                 <constraint firstItem="WVx-sC-Bx5" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="XqA-zd-uIi"/>
             </constraints>

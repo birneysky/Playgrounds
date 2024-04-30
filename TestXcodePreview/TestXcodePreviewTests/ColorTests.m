@@ -48,8 +48,8 @@
     UnitTestClass* testClas =  [[UnitTestClass alloc] init];
     XCTAssert([testClas isKindOfClass:UnitTestClass.class]);
     //[[KTVAchievementEntranceViewController alloc] init];
-    KTVAchievementEntranceViewController* a = [KTVAchievementEntranceViewController controller];
-    XCTAssert([a isKindOfClass: KTVAchievementEntranceViewController.class]);
+    KTVRankItemViewController* a = [KTVRankItemViewController controller];
+    XCTAssert([a isKindOfClass: KTVRankItemViewController.class]);
     
     KTVEntranceItemView* itemView = [KTVEntranceItemView view];
     XCTAssert([itemView isKindOfClass: KTVEntranceItemView.class]);

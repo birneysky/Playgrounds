@@ -42,7 +42,8 @@ class KTVPluginItemView: UIView {
     @IBOutlet weak var bageBackgroundImageView: UIImageView!
     var data: KTVPluginItem?
     override var intrinsicContentSize: CGSize {
-        return CGSize(width: 54, height: 54)
+        let width = self.titleLabel.intrinsicContentSize.width
+        return CGSize(width: width, height: 54)
     }
   
     override func awakeFromNib() {

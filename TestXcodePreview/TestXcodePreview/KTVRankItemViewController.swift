@@ -8,7 +8,7 @@
 import UIKit
 
 
-@objc class KTVAchievementEntranceViewController: UIViewController {
+@objc class KTVRankItemViewController: UIViewController {
 
     @IBOutlet weak var itemContainer: UIStackView!
     var items: [KTVEntranceItem] = [
@@ -52,7 +52,7 @@ import UIKit
 
 #Preview {
     let parentController = UIViewController()
-    let controller = KTVAchievementEntranceViewController.controller()
+    let controller = KTVRankItemViewController.controller()
     parentController.addChild(controller)
     parentController.view.addSubview(controller.view)
     controller.view.translatesAutoresizingMaskIntoConstraints = false
