@@ -14,14 +14,24 @@ class KTVSingHeaderBannerScrollView: UIView, UIScrollViewDelegate {
     private var timer: Timer?
     private var currentPageIndex: Int = 0
     
-    private var items: [KTVSingBannerItem] = []
+    var items: [KTVSingBannerItem] = [] {
+        didSet {
+            stopTimer()
+            itemViews.forEach { $0.removeFromSuperview() }
+            scrollView.removeFromSuperview()
+            itemViews.removeAll()
+            setup()
+        }
+    }
     
     private func setup() {
+        guard  items.count > 0 else { return }
         let width = self.bounds.size.width
         let height = self.bounds.size.height
         scrollView.frame = self.bounds
         scrollView.contentSize = CGSize(width: width * 3, height: height)
         scrollView.delegate = self
+        scrollView.bounces = false
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
         addSubview(scrollView)
@@ -47,6 +57,22 @@ class KTVSingHeaderBannerScrollView: UIView, UIScrollViewDelegate {
         }
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let width = self.bounds.size.width
+        let height = self.bounds.size.height
+        scrollView.frame = self.bounds
+        scrollView.contentSize = CGSize(width: width * 3, height: height)
+        scrollView.contentOffset = CGPoint(x: width, y: 0)
+        if itemViews.count < 3 { return }
+        for i in 0 ..< 3 {
+            let imageView = itemViews[i]
+            imageView.frame =  CGRect(x: width * CGFloat(i), y: 0, width:width , height: height)
+        }
+        preContentOffse = scrollView.contentOffset
+        
+    }
+    
     private func startTimer() {
         stopTimer()
         timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(autoScroll), userInfo: nil, repeats: true)
@@ -59,11 +85,6 @@ class KTVSingHeaderBannerScrollView: UIView, UIScrollViewDelegate {
             timer?.invalidate()
             timer = nil
         }
-    }
-    
-    func setItems(_ items: [KTVSingBannerItem]) {
-        self.items = items
-        setup()
     }
     
     @objc private  func autoScroll() {
@@ -128,7 +149,11 @@ class KTVSingHeaderBannerScrollView: UIView, UIScrollViewDelegate {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-
+    
+    // MARK: - Auto layout
+    override var intrinsicContentSize: CGSize {
+        return self.bounds.size
+    }
       
     // MARK: - UIScrollViewDelegate
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
@@ -144,18 +169,25 @@ class KTVSingHeaderBannerScrollView: UIView, UIScrollViewDelegate {
         resetCotentOffsetAndContent(scrollView)
     }
     
-    override var intrinsicContentSize: CGSize {
-        return self.bounds.size
+
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let width = self.bounds.size.width
+        if scrollView.contentOffset.x == scrollView.contentSize.width -  width ||
+            scrollView.contentOffset.x == 0 {
+            resetCotentOffsetAndContent(scrollView)
+        }
+        
     }
 
 }
 
 #Preview("MCInfiniteScrollView", traits: .portrait) {
     let scrollView = KTVSingHeaderBannerScrollView(frame: CGRect(x: 0, y: 0, width: 178, height: 48))
-    scrollView.setItems([
+    scrollView.items = [
         KTVSingBannerItem(backgroundImageName: "ktv_sing_with_past_self", iconImageName: "ktv_past_self_icon", titleText: "0001", subTitleLabel: "0001sub"),
-//        KTVSingBannerItem(backgroundImageName: "ktv_annual_celebration_report", iconImageName: "ktv_past_self_icon", titleText: "0002", subTitleLabel: "0002sub"),
-//        KTVSingBannerItem(backgroundImageName: "ktv_annual_celebration_report", iconImageName: "ktv_past_self_icon", titleText: "0003", subTitleLabel: "0003sub"),
-    ])
+        KTVSingBannerItem(backgroundImageName: "ktv_annual_celebration_report", iconImageName: "ktv_past_self_icon", titleText: "0002", subTitleLabel: "0002sub"),
+        KTVSingBannerItem(backgroundImageName: "ktv_annual_celebration_report", iconImageName: "ktv_past_self_icon", titleText: "0003", subTitleLabel: "0003sub"),
+    ]
     return scrollView
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -124,6 +124,29 @@
                                     <constraint firstAttribute="height" constant="37" id="zVE-r6-Z1k"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="G6d-9c-gXP">
+                                <rect key="frame" x="175" y="263" width="129" height="62"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X27-oB-bpD">
+                                        <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="62" id="ccn-bP-tnd"/>
+                                            <constraint firstAttribute="height" constant="62" id="lpO-9V-ebE"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="photo_button_liked"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yc7-VC-oyD">
+                                        <rect key="frame" x="67" y="0.0" width="62" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="62" id="Ktt-Cg-IZr"/>
+                                            <constraint firstAttribute="width" constant="62" id="dAb-RS-o6K"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="RecordCompleteSave"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gnh-tQ-FeI"/>
                         <color key="backgroundColor" systemColor="lightTextColor"/>
@@ -156,17 +179,14 @@
             <point key="canvasLocation" x="930.53435114503816" y="4.9295774647887329"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="NZZ-XY-COb">
-            <size key="intrinsicContentSize" width="240" height="37"/>
-        </designable>
-    </designables>
     <resources>
+        <image name="RecordCompleteSave" width="24" height="24"/>
         <image name="avatar1" width="31.666666030883789" height="31.666666030883789"/>
         <image name="avatar2" width="29" height="29.333333969116211"/>
         <image name="avatar3" width="30" height="30.333333969116211"/>
         <image name="bbb" width="375" height="429"/>
         <image name="ktv_past_self_icon" width="32.333332061767578" height="32.333332061767578"/>
+        <image name="photo_button_liked" width="22" height="22"/>
         <image name="tabbarbg" width="375" height="83"/>
         <image name="tabbargb49" width="375" height="49"/>
         <systemColor name="lightTextColor">

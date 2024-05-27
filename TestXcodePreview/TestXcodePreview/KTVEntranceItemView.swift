@@ -63,13 +63,17 @@ class KTVEntranceItemView: UIView {
         }
     }
     
+//    override var intrinsicContentSize: CGSize {
+//        let containerSize = container.intrinsicContentSize
+//        let titleSize = self.title.intrinsicContentSize
+//        let subTitleSize = self.subTitle.intrinsicContentSize
+//        let titleMaxWidth = max(titleSize.width, subTitleSize.width)
+//        let width = 6 + titleMaxWidth + 4 + containerSize.width + 6
+//        return CGSize(width: width, height: 40)
+//    }
+    
     override var intrinsicContentSize: CGSize {
-        let containerSize = container.intrinsicContentSize
-        let titleSize = self.title.intrinsicContentSize
-        let subTitleSize = self.subTitle.intrinsicContentSize
-        let titleMaxWidth = max(titleSize.width, subTitleSize.width)
-        let width = 6 + titleMaxWidth + 4 + containerSize.width + 6
-        return CGSize(width: width, height: 40)
+        return self.bounds.size
     }
     
     @objc func tap() {
@@ -80,6 +84,7 @@ class KTVEntranceItemView: UIView {
 
 #Preview("KTVEntranceItemView1", traits: .portrait) {
     let view = KTVEntranceItemView.view()
+    view.frame = CGRect(x: 0, y: 0, width: 90, height: 40)
     let item = KTVAEntranceItem(title: "成就榜", subTitle: "No.9999", icons: ["cup"], URL: "", type: 1)
     view.setData(item)
     return view

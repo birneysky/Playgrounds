@@ -12,10 +12,10 @@ import UIKit
 
     @IBOutlet weak var itemContainer: UIStackView!
     var items: [KTVEntranceItem] = [
-        KTVAEntranceItem(title: "成就榜", subTitle: "No.999999", icons: ["cup"], URL: "", type: 1),
+        KTVAEntranceItem(title: "成就榜", subTitle: "No.9999", icons: ["cup"], URL: "", type: 1),
         KTVAEntranceItem(title: "礼物墙", subTitle: "9999 个", icons: ["like_test", "cup"], URL: "", type: 1),
         KTVAEntranceItem(title: "超级粉丝", subTitle: "9999 位", icons: ["avatar1", "avatar2", "avatar3"], URL: "", type: 2),
-        KTVAEntranceItem(title: "超级粉丝", subTitle: "9999 位", icons: ["avatar1", "avatar2", "avatar3"], URL: "", type: 2),
+//        KTVAEntranceItem(title: "超级粉丝", subTitle: "9999 位", icons: ["avatar1", "avatar2", "avatar3"], URL: "", type: 2),
     ]
    
     var totalWithOfFirstThreeItems: CGFloat = 0
@@ -24,7 +24,9 @@ import UIKit
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        for i in 0 ..< items.count {
+        let maxcount = min(items.count, 3)
+        
+        for i in 0 ..< maxcount {
             let view = KTVEntranceItemView.view()
             view.layer.cornerRadius = 8
             view.layer.masksToBounds = true
@@ -39,13 +41,26 @@ import UIKit
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        if items.count >= 3 {
-            let width = self.view.bounds.size.width -  CGFloat(totalWithOfFirstThreeItems + 16 * 2)
-            let spacing =  max(width /  CGFloat(items.count - 1),4.0)
-            itemContainer.spacing = spacing
-        } else {
-            itemContainer.spacing = 16
+        
+        let width = self.view.bounds.size.width -  CGFloat(16 * 2 + 6 * 2)
+        let rations = [0.248, 0.35, 0.402]
+        for i in 0 ..< itemContainer.arrangedSubviews.count {
+            let view = itemContainer.arrangedSubviews[i]
+            view.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                view.heightAnchor.constraint(equalToConstant: 40),
+                view.widthAnchor.constraint(equalToConstant: width * rations[i])
+            ])
         }
+        itemContainer.spacing = 6
+//        if items.count >= 3 {
+//            let width = self.view.bounds.size.width -  CGFloat(totalWithOfFirstThreeItems + 16 * 2)
+//            let spacing =  max(width /  CGFloat(items.count - 1),4.0)
+//            itemContainer.spacing = spacing
+//            print("spacing: \(spacing)")
+//        } else {
+//            itemContainer.spacing = 6
+//        }
     }
 }
 

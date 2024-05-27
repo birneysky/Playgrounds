@@ -24,13 +24,21 @@ class ViewController: UIViewController {
         frame.size.width = frame.size.width + 16
         frame.size.height = frame.size.height + 16
         
-        let scrollView = KTVSingHeaderBannerScrollView(frame: frame)
-        scrollView.setItems([
-                KTVSingBannerItem(backgroundImageName: "ktv_sing_with_past_self", iconImageName: "ktv_past_self_icon", titleText: "0001", subTitleLabel: "0001sub"),
-                KTVSingBannerItem(backgroundImageName: "ktv_annual_celebration_report", iconImageName: "ktv_past_self_icon", titleText: "0002", subTitleLabel: "0002sub"),
-                KTVSingBannerItem(backgroundImageName: "ktv_annual_celebration_report", iconImageName: "ktv_past_self_icon", titleText: "0003", subTitleLabel: "0003sub"),
-            ])
-        shapeView.addSubview(scrollView)
+//        let scrollView = KTVSingHeaderBannerScrollView(frame: frame)
+//        scrollView.items = [
+//                KTVSingBannerItem(backgroundImageName: "ktv_sing_with_past_self", iconImageName: "ktv_past_self_icon", titleText: "0001", subTitleLabel: "0001sub"),
+//                KTVSingBannerItem(backgroundImageName: "ktv_annual_celebration_report", iconImageName: "ktv_past_self_icon", titleText: "0002", subTitleLabel: "0002sub"),
+//                KTVSingBannerItem(backgroundImageName: "ktv_annual_celebration_report", iconImageName: "ktv_past_self_icon", titleText: "0003", subTitleLabel: "0003sub"),
+//        ]
+        
+        let banner = KTVHorizontalScrollingBanner<ItemA, KTVBannerItemViewA>(frame: frame)
+        banner.backgroundColor = .green
+        banner.items = [
+            ItemA(backgroundImageName: "ktv_sing_with_past_self", iconImageName: "ktv_past_self_icon", titleText: "0001", subTitleLabel: "0001sub"),
+            ItemA(backgroundImageName: "ktv_annual_celebration_report", iconImageName: "ktv_past_self_icon", titleText: "0002", subTitleLabel: "0002sub"),
+            ItemA(backgroundImageName: "ktv_annual_celebration_report", iconImageName: "ktv_past_self_icon", titleText: "0003", subTitleLabel: "0003sub"),
+        ]
+        shapeView.addSubview(banner)
         shapeView.backgroundColor = .red
         
         self.view.addSubview(shapeView)
@@ -97,6 +105,16 @@ class ViewController: UIViewController {
             controller.view.heightAnchor.constraint(equalToConstant: 40),
         ])
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        
+//        let layout = UICollectionViewFlowLayout()
+//            layout.sectionInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+//            layout.estimatedItemSize = CGSizeMake(44, 44)
+//        let controller = TestCollectionViewController(collectionViewLayout: layout)
+//        self.present(controller, animated: true)
+//    }
 
 
 }
