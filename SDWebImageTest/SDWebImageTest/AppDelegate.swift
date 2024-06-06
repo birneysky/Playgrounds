@@ -6,14 +6,35 @@
 //
 
 import UIKit
-
+import SDWebImage
+import SDWebImageWebPCoder
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//        let cacheConfig = SDImageCacheConfig()
+//        cacheConfig.maxMemoryCost = 50 * 1024 * 1024 // 最大内存使用限制为50MB
+//        cacheConfig.maxMemoryCount = 100 // 最大缓存图片数量
+//
+//        let imageCache = SDImageCache(namespace: "your_namespace", config: cacheConfig)
+//        SDImageCache.shared.config = cacheConfig
         // Override point for customization after application launch.
+        SDImageCache.shared.config.maxMemoryCost = 50 * 1024 * 1024
+        SDImageCache.shared.config.maxMemoryCount = 100
+//        if #available(iOS 14, tvOS 14, macOS 11, watchOS 7, *) {
+//        // iOS 14 supports WebP built-in
+//            SDImageCodersManager.shared.addCoder(SDImageAWebPCoder.shared)
+//        } else {
+        // iOS 13 does not support WebP, use third-party codec
+            SDImageCodersManager.shared.addCoder(SDImageWebPCoder.shared)
+//        }
+
+        if #available(iOS 13, tvOS 13, macOS 10.15, watchOS 6, *) {
+        // For HEIC animated image. Animated image is newly introduced in iOS 13, but it contains performance issues for now.
+            SDImageCodersManager.shared.addCoder(SDImageHEICCoder.shared)
+        }
         return true
     }
 

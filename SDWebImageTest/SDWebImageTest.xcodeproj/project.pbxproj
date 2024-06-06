@@ -16,6 +16,8 @@
 		3292002F2C118B6500DB0D08 /* SDWebImageTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3292002E2C118B6500DB0D08 /* SDWebImageTestTests.swift */; };
 		329200392C118B6500DB0D08 /* SDWebImageTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329200382C118B6500DB0D08 /* SDWebImageTestUITests.swift */; };
 		3292003B2C118B6500DB0D08 /* SDWebImageTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3292003A2C118B6500DB0D08 /* SDWebImageTestUITestsLaunchTests.swift */; };
+		329200482C118E3800DB0D08 /* SDCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329200472C118E3800DB0D08 /* SDCollectionViewController.swift */; };
+		3292004A2C118EF600DB0D08 /* SDCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329200492C118EF600DB0D08 /* SDCollectionViewCell.swift */; };
 		757D3477BEAEA8F26C030C71 /* Pods_SDWebImageTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D988A405EB97A02DDAEF2133 /* Pods_SDWebImageTestTests.framework */; };
 		A20EBB46EC3F8D100D6D4F85 /* Pods_SDWebImageTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC1A4B18AEA1B93E1C0F585 /* Pods_SDWebImageTest.framework */; };
 		F6364F773F3D5475CB387424 /* Pods_SDWebImageTest_SDWebImageTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23379ED7143BF692B7FDB8D8 /* Pods_SDWebImageTest_SDWebImageTestUITests.framework */; };
@@ -54,6 +56,8 @@
 		329200342C118B6500DB0D08 /* SDWebImageTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDWebImageTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		329200382C118B6500DB0D08 /* SDWebImageTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDWebImageTestUITests.swift; sourceTree = "<group>"; };
 		3292003A2C118B6500DB0D08 /* SDWebImageTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDWebImageTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		329200472C118E3800DB0D08 /* SDCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDCollectionViewController.swift; sourceTree = "<group>"; };
+		329200492C118EF600DB0D08 /* SDCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDCollectionViewCell.swift; sourceTree = "<group>"; };
 		356F53C38D6C24950BC0435B /* Pods-SDWebImageTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDWebImageTestTests.release.xcconfig"; path = "Target Support Files/Pods-SDWebImageTestTests/Pods-SDWebImageTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		4FC1A4B18AEA1B93E1C0F585 /* Pods_SDWebImageTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDWebImageTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		611F5645B267043C8480C709 /* Pods-SDWebImageTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDWebImageTest.release.xcconfig"; path = "Target Support Files/Pods-SDWebImageTest/Pods-SDWebImageTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				329200172C118B6300DB0D08 /* AppDelegate.swift */,
 				329200192C118B6300DB0D08 /* SceneDelegate.swift */,
 				3292001B2C118B6300DB0D08 /* ViewController.swift */,
+				329200472C118E3800DB0D08 /* SDCollectionViewController.swift */,
+				329200492C118EF600DB0D08 /* SDCollectionViewCell.swift */,
 				3292001D2C118B6300DB0D08 /* Main.storyboard */,
 				329200202C118B6400DB0D08 /* Assets.xcassets */,
 				329200222C118B6400DB0D08 /* LaunchScreen.storyboard */,
@@ -164,7 +170,6 @@
 				310F5A371989A18AA969E466 /* Pods-SDWebImageTestTests.debug.xcconfig */,
 				356F53C38D6C24950BC0435B /* Pods-SDWebImageTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -407,8 +412,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3292004A2C118EF600DB0D08 /* SDCollectionViewCell.swift in Sources */,
 				3292001C2C118B6300DB0D08 /* ViewController.swift in Sources */,
 				329200182C118B6300DB0D08 /* AppDelegate.swift in Sources */,
+				329200482C118E3800DB0D08 /* SDCollectionViewController.swift in Sources */,
 				3292001A2C118B6300DB0D08 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,6 +600,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2EN49MUBLA;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SDWebImageTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -623,6 +631,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2EN49MUBLA;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SDWebImageTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
