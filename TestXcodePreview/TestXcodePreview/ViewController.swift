@@ -104,17 +104,28 @@ class ViewController: UIViewController {
             controller.view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
             controller.view.heightAnchor.constraint(equalToConstant: 40),
         ])
+        
+        
+        
+        let f = CGRect(x: 0, y: 300, width: 60, height: 76)
+        let bannerx = KTVHorizontalScrollingBanner<KTVBannerItem, KTVBannerItemView>(frame: f)
+        bannerx.backgroundColor = .green
+        
+        bannerx.items = [
+            KTVBannerItem(KTVBannerModel(imageURL: "", time: 8999, redirectURL: "xxx"))
+        ]
+        self.view.addSubview(bannerx)
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
 //        let layout = UICollectionViewFlowLayout()
 //            layout.sectionInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
 //            layout.estimatedItemSize = CGSizeMake(44, 44)
 //        let controller = TestCollectionViewController(collectionViewLayout: layout)
 //        self.present(controller, animated: true)
-//    }
+    }
 
 
 }

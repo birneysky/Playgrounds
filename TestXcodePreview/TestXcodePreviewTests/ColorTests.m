@@ -53,6 +53,9 @@
     
     KTVEntranceItemView* itemView = [KTVEntranceItemView view];
     XCTAssert([itemView isKindOfClass: KTVEntranceItemView.class]);
+    
+    KTVADScrollingBubblesViewController* b = [KTVADScrollingBubblesViewController controller];
+    XCTAssert([b isKindOfClass: KTVADScrollingBubblesViewController.class]);
 }
 
 - (void)testPerformanceExample {

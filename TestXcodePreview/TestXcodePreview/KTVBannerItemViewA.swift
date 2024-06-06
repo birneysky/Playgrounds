@@ -24,13 +24,9 @@ struct ItemA: KTVBannerItemData {
     }
 }
 
-class KTVBannerItemViewA: UIView, KTVBannerDataConfigurable {
+class KTVBannerItemViewA: UIView, KTVBannerDisplayable {
     @IBOutlet weak var label: UILabel!
     typealias T = ItemA
-    static func createView() -> Self {
-        let view = KTVBannerItemViewA.view()
-        return view as! Self
-    }
     func setData(_ data: ItemA?) {
         guard let item = data else { return }
         label.text = item.titleText

@@ -8,10 +8,9 @@
 import UIKit
 
 
-protocol KTVBannerDataConfigurable {
+protocol KTVBannerDisplayable {
     associatedtype T
     func setData(_ data: T?)
-    static func createView() -> Self
 }
 
 protocol KTVBannerItemData {
@@ -20,7 +19,7 @@ protocol KTVBannerItemData {
     
 }
 
-class KTVHorizontalScrollingBanner <Item: KTVBannerItemData, ItemView: KTVBannerDataConfigurable>
+class KTVHorizontalScrollingBanner <Item: KTVBannerItemData, ItemView: KTVBannerDisplayable>
 : UIView, UIScrollViewDelegate where ItemView: UIView, ItemView.T == Item.T {
     private var scrollView = UIScrollView()
     private var itemViews:[ItemView] = []
@@ -59,7 +58,7 @@ class KTVHorizontalScrollingBanner <Item: KTVBannerItemData, ItemView: KTVBanner
         addSubview(scrollView)
         
         for i in 0 ..< 3 {
-            let itemView = ItemView.createView()
+            let itemView = ItemView.view()
             itemView.frame =  CGRect(x: width * CGFloat(i), y: 0, width:width , height: height)
             scrollView.addSubview(itemView)
             //contentViews.append(contentView)
