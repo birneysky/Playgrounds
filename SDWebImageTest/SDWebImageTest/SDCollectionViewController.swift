@@ -17,7 +17,7 @@ class SDCollectionViewController: UICollectionViewController {
         "https://aliimg.changba.com/cache/photo/default_dynamic_photo/10004.webp",
         "https://aliimg.changba.com/cache/photo/default_dynamic_photo/10005.webp",
         "https://aliimg.changba.com/cache/photo/default_dynamic_photo/10006.webp",
-        /* "https://aliimg.changba.com/cache/photo/default_dynamic_photo/10001.gif",
+         "https://aliimg.changba.com/cache/photo/default_dynamic_photo/10001.gif",
         "https://aliimg.changba.com/cache/photo/default_dynamic_photo/10002.gif",
         "https://aliimg.changba.com/cache/photo/default_dynamic_photo/10003.gif",
         "https://aliimg.changba.com/cache/photo/default_dynamic_photo/10004.gif",
@@ -1265,7 +1265,7 @@ class SDCollectionViewController: UICollectionViewController {
         "https://aliimg.changba.com/promote/aef7b546b9340f00957b6fcc4d41ecce.webp",
         "https://aliimg.changba.com/import/85eca4c19344ccef6e603f8db61dd266.webp",
         "https://aliimg.changba.com/promote/b5effda5e4d6d6ef7d92b5d55d56389e.webp",
-        "https://aliimg.changba.com/import/f148cc904d58ad8bfa27d8c8c2421f91.webp",*/
+        "https://aliimg.changba.com/import/f148cc904d58ad8bfa27d8c8c2421f91.webp",
     ]
     
 

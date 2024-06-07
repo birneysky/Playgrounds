@@ -23,13 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         SDImageCache.shared.config.maxMemoryCost = 50 * 1024 * 1024
         SDImageCache.shared.config.maxMemoryCount = 100
-//        if #available(iOS 14, tvOS 14, macOS 11, watchOS 7, *) {
-//        // iOS 14 supports WebP built-in
-//            SDImageCodersManager.shared.addCoder(SDImageAWebPCoder.shared)
-//        } else {
+        SDWebImageDownloader.shared.config.executionOrder = .lifoExecutionOrder
+//        [SDWebImageDownloader sharedDownloader].config.executionOrder = SDWebImageDownloaderLIFOExecutionOrder;
+        if #available(iOS 14, tvOS 14, macOS 11, watchOS 7, *) {
+        // iOS 14 supports WebP built-in
+            SDImageCodersManager.shared.addCoder(SDImageAWebPCoder.shared)
+        } else {
         // iOS 13 does not support WebP, use third-party codec
             SDImageCodersManager.shared.addCoder(SDImageWebPCoder.shared)
-//        }
+        }
 
         if #available(iOS 13, tvOS 13, macOS 10.15, watchOS 6, *) {
         // For HEIC animated image. Animated image is newly introduced in iOS 13, but it contains performance issues for now.
