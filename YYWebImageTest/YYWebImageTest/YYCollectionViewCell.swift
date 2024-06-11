@@ -45,7 +45,8 @@ class YYCollectionViewCell: UICollectionViewCell {
 //        }
 
         let b = CFAbsoluteTimeGetCurrent()
-        imageView.yy_setImage(with: URL(string: url), placeholder: nil, options: [.showNetworkActivity, .setImageWithFadeAnimation, .progressiveBlur]) { image, url, type, stage, err in
+        // .avoidSetImage
+        imageView.yy_setImage(with: URL(string: url), placeholder: nil, options: [.showNetworkActivity, .setImageWithFadeAnimation, .progressiveBlur,]) { image, url, type, stage, err in
             let e = CFAbsoluteTimeGetCurrent()
             NSLog("################# \(e-b) \(url) ");
         }
