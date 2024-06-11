@@ -365,10 +365,10 @@ typedef NS_ENUM(NSUInteger, YYAnimatedImageType) {
         [self setContentsRect:rect forImage:newVisibleImage];
     }
     
+    _curFrame = newVisibleImage;
     if (newImageFrameCount > 1) {
         [self resetAnimated];
         _curAnimatedImage = newVisibleImage;
-        _curFrame = newVisibleImage;
         _totalLoop = _curAnimatedImage.animatedImageLoopCount;
         _totalFrameCount = _curAnimatedImage.animatedImageFrameCount;
         [self calcMaxBufferCount];
