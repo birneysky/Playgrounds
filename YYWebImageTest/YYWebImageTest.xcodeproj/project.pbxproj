@@ -16,6 +16,8 @@
 		32AC8F032C12E5D100FEAA6B /* YYWebImageTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC8F022C12E5D100FEAA6B /* YYWebImageTestTests.swift */; };
 		32AC8F0D2C12E5D100FEAA6B /* YYWebImageTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC8F0C2C12E5D100FEAA6B /* YYWebImageTestUITests.swift */; };
 		32AC8F0F2C12E5D100FEAA6B /* YYWebImageTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC8F0E2C12E5D100FEAA6B /* YYWebImageTestUITestsLaunchTests.swift */; };
+		32AC8F1D2C12E8F900FEAA6B /* YYCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC8F1B2C12E8F900FEAA6B /* YYCollectionViewController.swift */; };
+		32AC8F1E2C12E8F900FEAA6B /* YYCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC8F1C2C12E8F900FEAA6B /* YYCollectionViewCell.swift */; };
 		6919F70266B078A8B29FE3C9 /* Pods_YYWebImageTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6431864B1F7563987F88E4B /* Pods_YYWebImageTestTests.framework */; };
 		8FB39A21D7BEF02A5FBE763C /* Pods_YYWebImageTest_YYWebImageTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2774DCAC347E7E373BE0C630 /* Pods_YYWebImageTest_YYWebImageTestUITests.framework */; };
 		D0488A5C5308CE9079D77B35 /* Pods_YYWebImageTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9D8A7907A4383D6CD776F3 /* Pods_YYWebImageTest.framework */; };
@@ -54,6 +56,9 @@
 		32AC8F082C12E5D100FEAA6B /* YYWebImageTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYWebImageTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32AC8F0C2C12E5D100FEAA6B /* YYWebImageTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYWebImageTestUITests.swift; sourceTree = "<group>"; };
 		32AC8F0E2C12E5D100FEAA6B /* YYWebImageTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYWebImageTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		32AC8F1B2C12E8F900FEAA6B /* YYCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYCollectionViewController.swift; sourceTree = "<group>"; };
+		32AC8F1C2C12E8F900FEAA6B /* YYCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYCollectionViewCell.swift; sourceTree = "<group>"; };
+		32AC8F1F2C12EB3A00FEAA6B /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebP.framework; sourceTree = "<group>"; };
 		4CB78111D88EF3A9DB8278F2 /* Pods-YYWebImageTest-YYWebImageTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYWebImageTest-YYWebImageTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-YYWebImageTest-YYWebImageTestUITests/Pods-YYWebImageTest-YYWebImageTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4F1F22174DF6C0159D73800D /* Pods-YYWebImageTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYWebImageTest.debug.xcconfig"; path = "Target Support Files/Pods-YYWebImageTest/Pods-YYWebImageTest.debug.xcconfig"; sourceTree = "<group>"; };
 		5C6A325F396A2DC63ECC6887 /* Pods-YYWebImageTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYWebImageTestTests.debug.xcconfig"; path = "Target Support Files/Pods-YYWebImageTestTests/Pods-YYWebImageTestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +124,8 @@
 				32AC8EEB2C12E5CF00FEAA6B /* AppDelegate.swift */,
 				32AC8EED2C12E5CF00FEAA6B /* SceneDelegate.swift */,
 				32AC8EEF2C12E5CF00FEAA6B /* ViewController.swift */,
+				32AC8F1C2C12E8F900FEAA6B /* YYCollectionViewCell.swift */,
+				32AC8F1B2C12E8F900FEAA6B /* YYCollectionViewController.swift */,
 				32AC8EF12C12E5CF00FEAA6B /* Main.storyboard */,
 				32AC8EF42C12E5D100FEAA6B /* Assets.xcassets */,
 				32AC8EF62C12E5D100FEAA6B /* LaunchScreen.storyboard */,
@@ -160,6 +167,7 @@
 		EA688E1FEF64131E7CD49E9C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				32AC8F1F2C12EB3A00FEAA6B /* WebP.framework */,
 				0F9D8A7907A4383D6CD776F3 /* Pods_YYWebImageTest.framework */,
 				2774DCAC347E7E373BE0C630 /* Pods_YYWebImageTest_YYWebImageTestUITests.framework */,
 				F6431864B1F7563987F88E4B /* Pods_YYWebImageTestTests.framework */,
@@ -406,8 +414,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32AC8F1E2C12E8F900FEAA6B /* YYCollectionViewCell.swift in Sources */,
 				32AC8EF02C12E5CF00FEAA6B /* ViewController.swift in Sources */,
 				32AC8EEC2C12E5CF00FEAA6B /* AppDelegate.swift in Sources */,
+				32AC8F1D2C12E8F900FEAA6B /* YYCollectionViewController.swift in Sources */,
 				32AC8EEE2C12E5CF00FEAA6B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,6 +603,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2EN49MUBLA;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YYWebImageTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -624,6 +638,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2EN49MUBLA;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = YYWebImageTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

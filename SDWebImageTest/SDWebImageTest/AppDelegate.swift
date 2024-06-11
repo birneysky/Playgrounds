@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let imageCache = SDImageCache(namespace: "your_namespace", config: cacheConfig)
 //        SDImageCache.shared.config = cacheConfig
         // Override point for customization after application launch.
-        SDImageCache.shared.config.maxMemoryCost = 50 * 1024 * 1024
-        SDImageCache.shared.config.maxMemoryCount = 100
+        SDImageCache.shared.config.maxMemoryCost = 80 * 1024 * 1024
+        SDImageCache.shared.config.maxMemoryCount = 120
         SDWebImageDownloader.shared.config.executionOrder = .lifoExecutionOrder
 //        [SDWebImageDownloader sharedDownloader].config.executionOrder = SDWebImageDownloaderLIFOExecutionOrder;
         if #available(iOS 14, tvOS 14, macOS 11, watchOS 7, *) {

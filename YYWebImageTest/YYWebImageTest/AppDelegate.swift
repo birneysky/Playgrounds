@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import YYWebImage
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -14,6 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let cache = YYWebImageManager.shared().cache
+//        cache?.memoryCache.removeAllObjects()
+//        cache?.diskCache.removeAllObjects()
+        cache?.memoryCache.costLimit = 50 * 1024 * 1024
+        cache?.memoryCache.countLimit = 50
+        cache?.diskCache.costLimit = 500 * 1024 * 1024
+        cache?.diskCache.countLimit = 1500
+        cache?.diskCache.ageLimit = 60 * 60 * 24 * 7
         return true
     }
 

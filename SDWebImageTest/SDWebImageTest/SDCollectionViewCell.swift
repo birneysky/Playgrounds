@@ -36,11 +36,12 @@ class SDCollectionViewCell: UICollectionViewCell {
 //        }
         
         //imageView.sd_setImage(with: URL(string: url), placeholderImage: nil )
-        let b = CFAbsoluteTime()
+        
+        let b = CFAbsoluteTimeGetCurrent()
         imageView.sd_setImage(with: URL(string: url), placeholderImage: nil,options:[.progressiveLoad], context: [SDWebImageContextOption.imageThumbnailPixelSize : CGSize(width: 160, height: 160)]) {receivedSize, exceptedSize, url in
             NSLog("url:\(String(describing: url)), receivedSize:\(receivedSize), exceptedSize:\(exceptedSize)")
         } completed: { image, err, cacheType, url in
-            let e = CFAbsoluteTime()
+            let e = CFAbsoluteTimeGetCurrent()
             NSLog("#################### \(String(describing: url)), \(e - b)")
         }
 

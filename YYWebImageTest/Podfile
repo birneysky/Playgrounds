@@ -5,6 +5,7 @@ target 'YYWebImageTest' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 	pod 'YYWebImage'
+  pod 'YYImage/WebP'
   # Pods for YYWebImageTest
 
   target 'YYWebImageTestTests' do
