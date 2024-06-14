@@ -49,9 +49,16 @@
 		326089562BC51DCC00442446 /* KTVSingBannerItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 326089552BC51DCC00442446 /* KTVSingBannerItemView.xib */; };
 		3282E3A92B6236140062E4C6 /* KTVGradientProgessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3282E3A82B6236140062E4C6 /* KTVGradientProgessView.swift */; };
 		3282E3AB2B623A210062E4C6 /* StackViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3282E3AA2B623A210062E4C6 /* StackViewTest.swift */; };
+		32B2F94D2C1B16A200286F0F /* KTVLRSendRedPacketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32B2F94A2C1B16A200286F0F /* KTVLRSendRedPacketViewController.xib */; };
+		32B2F94E2C1B16A200286F0F /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B2F94B2C1B16A200286F0F /* Observable.swift */; };
+		32B2F94F2C1B16A200286F0F /* KTVLRSendRedPacketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B2F94C2C1B16A200286F0F /* KTVLRSendRedPacketViewController.swift */; };
 		32CEBB332BFC95C20059EEE1 /* KTVHorizontalScrollingBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CEBB322BFC95C20059EEE1 /* KTVHorizontalScrollingBanner.swift */; };
 		32CEBB352BFCA6090059EEE1 /* KTVBannerItemViewA.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32CEBB342BFCA6090059EEE1 /* KTVBannerItemViewA.xib */; };
 		32CEBB372BFCA67A0059EEE1 /* KTVBannerItemViewB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32CEBB362BFCA67A0059EEE1 /* KTVBannerItemViewB.xib */; };
+		32EA10D72C1BEB1400BDEBD0 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EA10D62C1BEB1400BDEBD0 /* UIColor+Hex.m */; };
+		32EA10DC2C1C159200BDEBD0 /* KTVLRSendRedPacketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EA10DB2C1C159200BDEBD0 /* KTVLRSendRedPacketViewModel.swift */; };
+		32EA10E12C1C202C00BDEBD0 /* KTVLRSendRedPacketTextItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32EA10E02C1C202C00BDEBD0 /* KTVLRSendRedPacketTextItemCell.xib */; };
+		32EA10E22C1C202C00BDEBD0 /* KTVLRSendRedPacketTextItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EA10DF2C1C202C00BDEBD0 /* KTVLRSendRedPacketTextItemCell.swift */; };
 		32EC65592BC3D8B800D388DB /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EC65582BC3D8B800D388DB /* BannerView.swift */; };
 		32EC655F2BC4020D00D388DB /* KTVSingHeaderBannerScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EC655E2BC4020D00D388DB /* KTVSingHeaderBannerScrollView.swift */; };
 		32EC65612BC4063F00D388DB /* CustomAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EC65602BC4063F00D388DB /* CustomAvatarView.swift */; };
@@ -123,10 +130,18 @@
 		326089552BC51DCC00442446 /* KTVSingBannerItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVSingBannerItemView.xib; sourceTree = "<group>"; };
 		3282E3A82B6236140062E4C6 /* KTVGradientProgessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTVGradientProgessView.swift; sourceTree = "<group>"; };
 		3282E3AA2B623A210062E4C6 /* StackViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewTest.swift; sourceTree = "<group>"; };
+		32B2F94A2C1B16A200286F0F /* KTVLRSendRedPacketViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KTVLRSendRedPacketViewController.xib; sourceTree = "<group>"; };
+		32B2F94B2C1B16A200286F0F /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		32B2F94C2C1B16A200286F0F /* KTVLRSendRedPacketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTVLRSendRedPacketViewController.swift; sourceTree = "<group>"; };
 		32CEBB322BFC95C20059EEE1 /* KTVHorizontalScrollingBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVHorizontalScrollingBanner.swift; sourceTree = "<group>"; };
 		32CEBB342BFCA6090059EEE1 /* KTVBannerItemViewA.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVBannerItemViewA.xib; sourceTree = "<group>"; };
 		32CEBB362BFCA67A0059EEE1 /* KTVBannerItemViewB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVBannerItemViewB.xib; sourceTree = "<group>"; };
 		32D9D5652BB57BE60077370B /* TestXcodePreview-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestXcodePreview-Bridging-Header.h"; sourceTree = "<group>"; };
+		32EA10D52C1BEB1400BDEBD0 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		32EA10D62C1BEB1400BDEBD0 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		32EA10DB2C1C159200BDEBD0 /* KTVLRSendRedPacketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRSendRedPacketViewModel.swift; sourceTree = "<group>"; };
+		32EA10DF2C1C202C00BDEBD0 /* KTVLRSendRedPacketTextItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRSendRedPacketTextItemCell.swift; sourceTree = "<group>"; };
+		32EA10E02C1C202C00BDEBD0 /* KTVLRSendRedPacketTextItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVLRSendRedPacketTextItemCell.xib; sourceTree = "<group>"; };
 		32EC65582BC3D8B800D388DB /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		32EC655E2BC4020D00D388DB /* KTVSingHeaderBannerScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVSingHeaderBannerScrollView.swift; sourceTree = "<group>"; };
 		32EC65602BC4063F00D388DB /* CustomAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAvatarView.swift; sourceTree = "<group>"; };
@@ -223,6 +238,14 @@
 				323BA6AF2BFDD6AF007890C9 /* TestCollectionViewController.swift */,
 				323BA6B12BFDD997007890C9 /* TestCollectionViewCell.swift */,
 				323BA6B22BFDD997007890C9 /* TestCollectionViewCell.xib */,
+				32B2F94C2C1B16A200286F0F /* KTVLRSendRedPacketViewController.swift */,
+				32B2F94A2C1B16A200286F0F /* KTVLRSendRedPacketViewController.xib */,
+				32EA10DB2C1C159200BDEBD0 /* KTVLRSendRedPacketViewModel.swift */,
+				32EA10DF2C1C202C00BDEBD0 /* KTVLRSendRedPacketTextItemCell.swift */,
+				32EA10E02C1C202C00BDEBD0 /* KTVLRSendRedPacketTextItemCell.xib */,
+				32B2F94B2C1B16A200286F0F /* Observable.swift */,
+				32EA10D52C1BEB1400BDEBD0 /* UIColor+Hex.h */,
+				32EA10D62C1BEB1400BDEBD0 /* UIColor+Hex.m */,
 				32038AD72B47F262000FE88B /* Main.storyboard */,
 				32038ADA2B47F264000FE88B /* Assets.xcassets */,
 				32038ADC2B47F264000FE88B /* LaunchScreen.storyboard */,
@@ -360,6 +383,7 @@
 				32038ADE2B47F264000FE88B /* LaunchScreen.storyboard in Resources */,
 				321B0A2A2C05D17700DFBCFF /* KTVADScrollingBubblesViewController.xib in Resources */,
 				323B2FBE2BD7AF6E0018E190 /* KTVEntranceItemView.xib in Resources */,
+				32EA10E12C1C202C00BDEBD0 /* KTVLRSendRedPacketTextItemCell.xib in Resources */,
 				323BA6B32BFDD997007890C9 /* TestCollectionViewCell.xib in Resources */,
 				326089562BC51DCC00442446 /* KTVSingBannerItemView.xib in Resources */,
 				323B2FC42BD8A9660018E190 /* KTVRankItemViewController.xib in Resources */,
@@ -367,6 +391,7 @@
 				32CEBB372BFCA67A0059EEE1 /* KTVBannerItemViewB.xib in Resources */,
 				32CEBB352BFCA6090059EEE1 /* KTVBannerItemViewA.xib in Resources */,
 				321B0A272C05B8A600DFBCFF /* KTVBannerItemView.xib in Resources */,
+				32B2F94D2C1B16A200286F0F /* KTVLRSendRedPacketViewController.xib in Resources */,
 				32038ADB2B47F264000FE88B /* Assets.xcassets in Resources */,
 				32038AD92B47F262000FE88B /* Main.storyboard in Resources */,
 				323B2FCF2BD8F46E0018E190 /* KTVPluginItemsViewController.xib in Resources */,
@@ -396,7 +421,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				321D8C532B917E960029F8D9 /* TestGradientViewController.swift in Sources */,
+				32EA10D72C1BEB1400BDEBD0 /* UIColor+Hex.m in Sources */,
 				32EC655F2BC4020D00D388DB /* KTVSingHeaderBannerScrollView.swift in Sources */,
+				32EA10E22C1C202C00BDEBD0 /* KTVLRSendRedPacketTextItemCell.swift in Sources */,
 				323B2FC02BD7BCA20018E190 /* KTVHEqualSpacingContainer.swift in Sources */,
 				321290D52BA83E36006AEFA9 /* KTVRankTop3Cell.swift in Sources */,
 				323B2FD22BD918430018E190 /* UnitTestClass.swift in Sources */,
@@ -404,6 +431,7 @@
 				323B2FD02BD8F46E0018E190 /* KTVPluginItemsViewController.swift in Sources */,
 				32038AD62B47F262000FE88B /* ViewController.swift in Sources */,
 				32EC65612BC4063F00D388DB /* CustomAvatarView.swift in Sources */,
+				32B2F94F2C1B16A200286F0F /* KTVLRSendRedPacketViewController.swift in Sources */,
 				3282E3AB2B623A210062E4C6 /* StackViewTest.swift in Sources */,
 				3202D4662BB66D76005C1FE3 /* GradientText.swift in Sources */,
 				323BA6AE2BFDCBB0007890C9 /* KTVBannerItemViewB.swift in Sources */,
@@ -411,10 +439,12 @@
 				323B2FC82BD8DC260018E190 /* KTVPluginItemView.swift in Sources */,
 				321290D82BA83E96006AEFA9 /* Top3TableViewController.swift in Sources */,
 				321D8C512B9173C40029F8D9 /* KTVColorsGradientView.swift in Sources */,
+				32B2F94E2C1B16A200286F0F /* Observable.swift in Sources */,
 				323B2FBC2BD7AF0B0018E190 /* KTVEntranceItemView.swift in Sources */,
 				323B2FCA2BD8E3430018E190 /* UIKit+Nib.swift in Sources */,
 				321290D02BA82D8D006AEFA9 /* KTVSegmentedControl.swift in Sources */,
 				321B0A2B2C05D17700DFBCFF /* KTVADScrollingBubblesViewController.swift in Sources */,
+				32EA10DC2C1C159200BDEBD0 /* KTVLRSendRedPacketViewModel.swift in Sources */,
 				323B2FC32BD8A9660018E190 /* KTVRankItemViewController.swift in Sources */,
 				323BA6B02BFDD6AF007890C9 /* TestCollectionViewController.swift in Sources */,
 				32038B022B47F27E000FE88B /* KTVPartialRoundedView.swift in Sources */,

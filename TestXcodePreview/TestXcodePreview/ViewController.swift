@@ -125,6 +125,21 @@ class ViewController: UIViewController {
 //            layout.estimatedItemSize = CGSizeMake(44, 44)
 //        let controller = TestCollectionViewController(collectionViewLayout: layout)
 //        self.present(controller, animated: true)
+        
+        
+        let parentController = UIViewController()
+        
+        let controller = KTVLRSendRedPacketViewController.controller()
+        parentController.addChild(controller)
+        parentController.view.addSubview(controller.view)
+        controller.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            controller.view.centerYAnchor.constraint(equalTo: parentController.view.centerYAnchor),
+            controller.view.leadingAnchor.constraint(equalTo: parentController.view.leadingAnchor),
+            controller.view.trailingAnchor.constraint(equalTo: parentController.view.trailingAnchor),
+            controller.view.heightAnchor.constraint(equalToConstant: 620),
+        ])
+        self.present(parentController, animated: true)
     }
 
 
