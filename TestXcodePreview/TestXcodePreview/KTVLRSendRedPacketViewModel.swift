@@ -15,15 +15,26 @@ import UIKit
     @objc var time: TimeInterval { get }
 }
 
-class KTVRedPacketTotalAmountItem: KTVRedPacketTotalAmount {
-    var amount: Int {
-        return totalAmount
-    }
-    
-    private var totalAmount: Int = 0
-    
-    init(totalAmount: Int) {
-        self.totalAmount = totalAmount
+enum ParticipationWay: String {
+    case money = "pay_1" /// 金币/钻石
+    case command = "word" /// 口令
+}
+
+struct KTVRedPacketParticipationWay {
+    var name: String
+    var type: ParticipationWay
+}
+
+class KTVRedPacketTotalAmountItem {
+    var name: String
+    var survialTimeItems: [Int]
+    var numRange:ClosedRange<Int>
+    var participationItems: [KTVRedPacketParticipationWay]
+    init(name: String, survialTimeItems: [Int], numRange: ClosedRange<Int>, participationItems: [KTVRedPacketParticipationWay]) {
+        self.name = name
+        self.survialTimeItems = survialTimeItems
+        self.numRange = numRange
+        self.participationItems = participationItems
     }
 }
 
@@ -40,45 +51,43 @@ class KTVRedPacketSurvivalTimeItem: KTVRedPacketSurvivalTime {
 }
 
 class KTVLRSendRedPacketData {
-    var amountList: [KTVRedPacketTotalAmount]
-    var timeList: [KTVRedPacketSurvivalTime]
+    var amountList: [KTVRedPacketTotalAmountItem]
     
-    init(amountList: [KTVRedPacketTotalAmount], timeList: [KTVRedPacketSurvivalTime]) {
+    init(amountList: [KTVRedPacketTotalAmountItem]) {
         self.amountList = amountList
-        self.timeList = timeList
     }
 }
 
 class KTVLRSendRedPacketViewModel: NSObject {
     
-    enum ParticipationWay {
-        case money /// 金币/钻石
-        case command /// 口令
-    }
+
     var isLoading: KTVObservable<Bool> = KTVObservable(false)
-    var amountDataSource: KTVObservable<[KTVRedPacketTotalAmount]> = KTVObservable(nil)
-    var timeDataSource: KTVObservable<[KTVRedPacketSurvivalTime]> = KTVObservable(nil)
-    var participationType: KTVObservable<ParticipationWay> = KTVObservable(.money)
-    private var selectedAmount: KTVRedPacketTotalAmount? = nil
-    private var selectedTime: KTVRedPacketSurvivalTime? = nil
-    private var dataSource: KTVLRSendRedPacketData?
-    private func mapDataSource() {
-        self.amountDataSource.value = self.dataSource?.amountList
-        self.timeDataSource.value = self.dataSource?.timeList
-        self.selectedAmount = self.amountDataSource.value?.first
-        self.selectedTime = self.timeDataSource.value?.first
+    var timeSelectIndex: KTVObservable<Int> = KTVObservable(nil)
+    var amountIndex: KTVObservable<Int> = KTVObservable(nil)
+    var selectedParticipationType: KTVObservable<ParticipationWay> = KTVObservable(nil)
+    var selectedParticipationIndex: KTVObservable<Int> = KTVObservable(nil)
+    var selectedNumRange: ClosedRange<Int>? {
+        self.selectedAmount?.numRange
     }
+    private var selectedAmount: KTVRedPacketTotalAmountItem? = nil
+    private var selectedTime: Int? = nil
+    private var dataSource: KTVLRSendRedPacketData?
     
-    func selectedParticipationWay(_ way: ParticipationWay) {
-        self.participationType.value = way
+    func selectedParticipationWay(at row: Int, in section: Int) {
+        selectedParticipationType.value = self.selectedAmount?.participationItems[row].type
     }
     
     func selectAmount(at row: Int, in section: Int) {
-        self.selectedAmount = self.amountDataSource.value?[row]
+        selectedAmount = dataSource?.amountList[row]
+        selectedTime = selectedAmount?.survialTimeItems.first
+        timeSelectIndex.value = 0
+        selectedParticipationType.value = self.selectedAmount?.participationItems.first?.type
+        selectedParticipationIndex.value = 0
+        
     }
     
     func selectTime(at row: Int, in section: Int) {
-        self.selectedTime = self.timeDataSource.value?[row]
+        self.selectedTime = self.selectedAmount?.survialTimeItems[row]
     }
     
     func numberOfSections() -> Int {
@@ -86,24 +95,33 @@ class KTVLRSendRedPacketViewModel: NSObject {
     }
     
     func numberOfAmountItems(in section: Int) -> Int {
-        self.amountDataSource.value?.count ?? 0
+        self.dataSource?.amountList.count ?? 0
     }
     
     
     func numberOfTimeItems(in section: Int) -> Int {
-        self.timeDataSource.value?.count ?? 0
+        self.selectedAmount?.survialTimeItems.count ?? 0
+    }
+    
+    func numberOfparticipationItems(in section: Int) -> Int {
+        self.selectedAmount?.participationItems.count ?? 0
     }
     
     func amoutString(at row: Int, in section: Int) -> String {
-        guard let amount = self.amountDataSource.value?[row].amount else { fatalError() }
-        return "\(amount) 钻石/金币"
+        guard let name = self.dataSource?.amountList[row].name else { fatalError() }
+        return  name
     }
     
     
     
     func timeString(at row: Int, in section: Int) -> String {
-        guard let time = self.timeDataSource.value?[row].time else { fatalError() }
-        return "\(Int(time / 60)) 分钟"
+        guard let time = self.selectedAmount?.survialTimeItems[row] else { fatalError() }
+        return "\(time) 分钟"
+    }
+    
+    func participationString(at row: Int, in section: Int) -> String {
+        guard let name = self.selectedAmount?.participationItems[row].name else { fatalError() }
+        return  name
     }
     
     
@@ -115,21 +133,30 @@ class KTVLRSendRedPacketViewModel: NSObject {
         isLoading.value = true
         DispatchQueue.global().async { [weak self] in
             Thread.sleep(forTimeInterval: 1)
-            self?.isLoading.value = false
+            
             self?.dataSource = KTVLRSendRedPacketData(amountList: [
-                KTVRedPacketTotalAmountItem(totalAmount: 100),
-                KTVRedPacketTotalAmountItem(totalAmount: 400),
-                KTVRedPacketTotalAmountItem(totalAmount: 500),
-                KTVRedPacketTotalAmountItem(totalAmount: 600),
-                KTVRedPacketTotalAmountItem(totalAmount: 800),
-            ], timeList: [
-                KTVRedPacketSurvivalTimeItem(survivalTime: 60),
-                KTVRedPacketSurvivalTimeItem(survivalTime: 60 * 2),
-                KTVRedPacketSurvivalTimeItem(survivalTime: 60 * 3),
-                KTVRedPacketSurvivalTimeItem(survivalTime: 60 * 4),
-                KTVRedPacketSurvivalTimeItem(survivalTime: 60 * 5),
+                KTVRedPacketTotalAmountItem(name: "500 钻石/金币", survialTimeItems: [1], numRange: 2...30, participationItems: [
+                    KTVRedPacketParticipationWay(name: "口令", type: .command)
+                ]),
+                KTVRedPacketTotalAmountItem(name: "2000 钻石/金币", survialTimeItems: [1, 3], numRange: 2...30, participationItems: [
+                    KTVRedPacketParticipationWay(name: "口令", type: .command)
+                ]),
+                KTVRedPacketTotalAmountItem(name: "5000 钻石金币", survialTimeItems: [1, 3, 5], numRange: 2...30, participationItems: [
+                    KTVRedPacketParticipationWay(name: "口令", type: .command),
+                    KTVRedPacketParticipationWay(name: "1 钻石/金币", type: .money)
+                ]),
+                KTVRedPacketTotalAmountItem(name: "10000 钻石金币", survialTimeItems: [1, 5, 10], numRange: 2...30, participationItems: [
+                    KTVRedPacketParticipationWay(name: "1 钻石/金币", type: .money),
+                    KTVRedPacketParticipationWay(name: "口令", type: .command),
+                ]),
             ])
-            self?.mapDataSource()
+            self?.selectedAmount = self?.dataSource?.amountList.first
+            self?.isLoading.value = false
+            self?.amountIndex.value = 0
+            self?.selectedTime = self?.selectedAmount?.survialTimeItems.first
+            self?.timeSelectIndex.value = self?.selectedTime != nil ? 0 : nil
+            self?.selectedParticipationType.value = self?.selectedAmount?.participationItems.first?.type
+            self?.selectedParticipationIndex.value = 0
         }
         
     }
