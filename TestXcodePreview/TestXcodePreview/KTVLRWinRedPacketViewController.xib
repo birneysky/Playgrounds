@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KTVLRWinRedPacketViewController" customModule="TestXcodePreview" customModuleProvider="target">
+            <connections>
+                <outlet property="contentContainer" destination="0ic-BD-D7Y" id="4CD-vQ-iYc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="243" height="391"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ic-BD-D7Y">
+                    <rect key="frame" x="0.0" y="0.0" width="243" height="327"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="327" id="KAS-4e-NGN"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzq-ex-IEH">
+                    <rect key="frame" x="101.66666666666667" y="351" width="40.000000000000014" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="75H-HJ-lbE"/>
+                        <constraint firstAttribute="width" constant="40" id="sda-KD-3AE"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="ktv_red_packet_close"/>
+                    <connections>
+                        <action selector="closeAction:" destination="-1" eventType="touchUpInside" id="17y-IP-eCX"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="0ic-BD-D7Y" secondAttribute="trailing" id="HqH-xf-Fut"/>
+                <constraint firstItem="0ic-BD-D7Y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Iyw-wI-dXl"/>
+                <constraint firstAttribute="bottom" secondItem="uzq-ex-IEH" secondAttribute="bottom" id="LFW-bM-wJN"/>
+                <constraint firstItem="uzq-ex-IEH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YLz-LC-EPS"/>
+                <constraint firstItem="0ic-BD-D7Y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cwn-TC-Cow"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="138" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ktv_red_packet_close" width="40.333332061767578" height="40"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

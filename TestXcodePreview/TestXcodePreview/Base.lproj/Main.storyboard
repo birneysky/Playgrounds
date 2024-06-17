@@ -179,6 +179,11 @@
             <point key="canvasLocation" x="930.53435114503816" y="4.9295774647887329"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="NZZ-XY-COb">
+            <size key="intrinsicContentSize" width="240" height="37"/>
+        </designable>
+    </designables>
     <resources>
         <image name="RecordCompleteSave" width="24" height="24"/>
         <image name="avatar1" width="31.666666030883789" height="31.666666030883789"/>
@@ -196,7 +201,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
