@@ -18,6 +18,8 @@
 		32038AF32B47F265000FE88B /* TestXcodePreviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32038AF22B47F265000FE88B /* TestXcodePreviewUITests.swift */; };
 		32038AF52B47F265000FE88B /* TestXcodePreviewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32038AF42B47F265000FE88B /* TestXcodePreviewUITestsLaunchTests.swift */; };
 		32038B022B47F27E000FE88B /* KTVPartialRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32038B012B47F27E000FE88B /* KTVPartialRoundedView.swift */; };
+		320DB8D92C21719500410719 /* KTVLRRedPacketRewardsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DB8D82C21719500410719 /* KTVLRRedPacketRewardsTableView.swift */; };
+		320DB8DB2C2171A300410719 /* KTVLRRedPacketRewardsTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 320DB8DA2C2171A300410719 /* KTVLRRedPacketRewardsTableView.xib */; };
 		321290D02BA82D8D006AEFA9 /* KTVSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321290CF2BA82D8D006AEFA9 /* KTVSegmentedControl.swift */; };
 		321290D52BA83E36006AEFA9 /* KTVRankTop3Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321290D32BA83E36006AEFA9 /* KTVRankTop3Cell.swift */; };
 		321290D62BA83E36006AEFA9 /* KTVRankTop3Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 321290D42BA83E36006AEFA9 /* KTVRankTop3Cell.xib */; };
@@ -53,11 +55,16 @@
 		32A9BFE42C20210F00442433 /* KTVLRRedPacketEntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A9BFE12C20210F00442433 /* KTVLRRedPacketEntranceViewController.swift */; };
 		32A9BFE72C20327200442433 /* KTVLRWinRedPacketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A9BFE62C20327200442433 /* KTVLRWinRedPacketViewController.xib */; };
 		32A9BFE82C20327200442433 /* KTVLRWinRedPacketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A9BFE52C20327200442433 /* KTVLRWinRedPacketViewController.swift */; };
+		32ADD1C02C21797800DC4B35 /* KTVLRRedPacketRewardsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32ADD1BF2C21797800DC4B35 /* KTVLRRedPacketRewardsCell.xib */; };
+		32ADD1C12C21797800DC4B35 /* KTVLRRedPacketRewardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD1BE2C21797800DC4B35 /* KTVLRRedPacketRewardsCell.swift */; };
+		32ADD1C32C217E8300DC4B35 /* KTVLRWinRedPacketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD1C22C217E8300DC4B35 /* KTVLRWinRedPacketViewModel.swift */; };
 		32B2F94D2C1B16A200286F0F /* KTVLRSendRedPacketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32B2F94A2C1B16A200286F0F /* KTVLRSendRedPacketViewController.xib */; };
 		32B2F94E2C1B16A200286F0F /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B2F94B2C1B16A200286F0F /* Observable.swift */; };
 		32B2F94F2C1B16A200286F0F /* KTVLRSendRedPacketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B2F94C2C1B16A200286F0F /* KTVLRSendRedPacketViewController.swift */; };
 		32B59AAF2C205AF900AC9FC5 /* KTVLRCompeteRedPacketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B59AAE2C205AF900AC9FC5 /* KTVLRCompeteRedPacketView.swift */; };
 		32B59AB12C205B0700AC9FC5 /* KTVLRCompeteRedPacketView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32B59AB02C205B0700AC9FC5 /* KTVLRCompeteRedPacketView.xib */; };
+		32B59AB52C21306D00AC9FC5 /* KTVLRParticipatedRedPacketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B59AB42C21306D00AC9FC5 /* KTVLRParticipatedRedPacketView.swift */; };
+		32B59AB72C21309300AC9FC5 /* KTVLRParticipatedRedPacketView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32B59AB62C21309300AC9FC5 /* KTVLRParticipatedRedPacketView.xib */; };
 		32CEBB332BFC95C20059EEE1 /* KTVHorizontalScrollingBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CEBB322BFC95C20059EEE1 /* KTVHorizontalScrollingBanner.swift */; };
 		32CEBB352BFCA6090059EEE1 /* KTVBannerItemViewA.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32CEBB342BFCA6090059EEE1 /* KTVBannerItemViewA.xib */; };
 		32CEBB372BFCA67A0059EEE1 /* KTVBannerItemViewB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32CEBB362BFCA67A0059EEE1 /* KTVBannerItemViewB.xib */; };
@@ -69,6 +76,8 @@
 		32EC655F2BC4020D00D388DB /* KTVSingHeaderBannerScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EC655E2BC4020D00D388DB /* KTVSingHeaderBannerScrollView.swift */; };
 		32EC65612BC4063F00D388DB /* CustomAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EC65602BC4063F00D388DB /* CustomAvatarView.swift */; };
 		32EC65632BC4096E00D388DB /* KTVSingHeaderTShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EC65622BC4096E00D388DB /* KTVSingHeaderTShapeView.swift */; };
+		32F5EB772C2136FC005286B0 /* KTVLRRedPacketObtainRewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F5EB762C2136FC005286B0 /* KTVLRRedPacketObtainRewardsView.swift */; };
+		32F5EB792C21370B005286B0 /* KTVLRRedPacketObtainRewardsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32F5EB782C21370B005286B0 /* KTVLRRedPacketObtainRewardsView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +113,8 @@
 		32038AF22B47F265000FE88B /* TestXcodePreviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestXcodePreviewUITests.swift; sourceTree = "<group>"; };
 		32038AF42B47F265000FE88B /* TestXcodePreviewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestXcodePreviewUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		32038B012B47F27E000FE88B /* KTVPartialRoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTVPartialRoundedView.swift; sourceTree = "<group>"; };
+		320DB8D82C21719500410719 /* KTVLRRedPacketRewardsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRRedPacketRewardsTableView.swift; sourceTree = "<group>"; };
+		320DB8DA2C2171A300410719 /* KTVLRRedPacketRewardsTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVLRRedPacketRewardsTableView.xib; sourceTree = "<group>"; };
 		321290CF2BA82D8D006AEFA9 /* KTVSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVSegmentedControl.swift; sourceTree = "<group>"; };
 		321290D32BA83E36006AEFA9 /* KTVRankTop3Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVRankTop3Cell.swift; sourceTree = "<group>"; };
 		321290D42BA83E36006AEFA9 /* KTVRankTop3Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVRankTop3Cell.xib; sourceTree = "<group>"; };
@@ -140,11 +151,16 @@
 		32A9BFE22C20210F00442433 /* KTVLRRedPacketEntranceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVLRRedPacketEntranceViewController.xib; sourceTree = "<group>"; };
 		32A9BFE52C20327200442433 /* KTVLRWinRedPacketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRWinRedPacketViewController.swift; sourceTree = "<group>"; };
 		32A9BFE62C20327200442433 /* KTVLRWinRedPacketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVLRWinRedPacketViewController.xib; sourceTree = "<group>"; };
+		32ADD1BE2C21797800DC4B35 /* KTVLRRedPacketRewardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRRedPacketRewardsCell.swift; sourceTree = "<group>"; };
+		32ADD1BF2C21797800DC4B35 /* KTVLRRedPacketRewardsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVLRRedPacketRewardsCell.xib; sourceTree = "<group>"; };
+		32ADD1C22C217E8300DC4B35 /* KTVLRWinRedPacketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRWinRedPacketViewModel.swift; sourceTree = "<group>"; };
 		32B2F94A2C1B16A200286F0F /* KTVLRSendRedPacketViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KTVLRSendRedPacketViewController.xib; sourceTree = "<group>"; };
 		32B2F94B2C1B16A200286F0F /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		32B2F94C2C1B16A200286F0F /* KTVLRSendRedPacketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTVLRSendRedPacketViewController.swift; sourceTree = "<group>"; };
 		32B59AAE2C205AF900AC9FC5 /* KTVLRCompeteRedPacketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRCompeteRedPacketView.swift; sourceTree = "<group>"; };
 		32B59AB02C205B0700AC9FC5 /* KTVLRCompeteRedPacketView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVLRCompeteRedPacketView.xib; sourceTree = "<group>"; };
+		32B59AB42C21306D00AC9FC5 /* KTVLRParticipatedRedPacketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRParticipatedRedPacketView.swift; sourceTree = "<group>"; };
+		32B59AB62C21309300AC9FC5 /* KTVLRParticipatedRedPacketView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVLRParticipatedRedPacketView.xib; sourceTree = "<group>"; };
 		32CEBB322BFC95C20059EEE1 /* KTVHorizontalScrollingBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVHorizontalScrollingBanner.swift; sourceTree = "<group>"; };
 		32CEBB342BFCA6090059EEE1 /* KTVBannerItemViewA.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVBannerItemViewA.xib; sourceTree = "<group>"; };
 		32CEBB362BFCA67A0059EEE1 /* KTVBannerItemViewB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVBannerItemViewB.xib; sourceTree = "<group>"; };
@@ -158,6 +174,8 @@
 		32EC655E2BC4020D00D388DB /* KTVSingHeaderBannerScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVSingHeaderBannerScrollView.swift; sourceTree = "<group>"; };
 		32EC65602BC4063F00D388DB /* CustomAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAvatarView.swift; sourceTree = "<group>"; };
 		32EC65622BC4096E00D388DB /* KTVSingHeaderTShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVSingHeaderTShapeView.swift; sourceTree = "<group>"; };
+		32F5EB762C2136FC005286B0 /* KTVLRRedPacketObtainRewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRRedPacketObtainRewardsView.swift; sourceTree = "<group>"; };
+		32F5EB782C21370B005286B0 /* KTVLRRedPacketObtainRewardsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVLRRedPacketObtainRewardsView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,10 +275,19 @@
 				32EA10E02C1C202C00BDEBD0 /* KTVLRSendRedPacketTextItemCell.xib */,
 				32A9BFE12C20210F00442433 /* KTVLRRedPacketEntranceViewController.swift */,
 				32A9BFE22C20210F00442433 /* KTVLRRedPacketEntranceViewController.xib */,
+				32ADD1C22C217E8300DC4B35 /* KTVLRWinRedPacketViewModel.swift */,
 				32A9BFE52C20327200442433 /* KTVLRWinRedPacketViewController.swift */,
 				32A9BFE62C20327200442433 /* KTVLRWinRedPacketViewController.xib */,
 				32B59AAE2C205AF900AC9FC5 /* KTVLRCompeteRedPacketView.swift */,
 				32B59AB02C205B0700AC9FC5 /* KTVLRCompeteRedPacketView.xib */,
+				32B59AB42C21306D00AC9FC5 /* KTVLRParticipatedRedPacketView.swift */,
+				32B59AB62C21309300AC9FC5 /* KTVLRParticipatedRedPacketView.xib */,
+				32F5EB762C2136FC005286B0 /* KTVLRRedPacketObtainRewardsView.swift */,
+				32F5EB782C21370B005286B0 /* KTVLRRedPacketObtainRewardsView.xib */,
+				320DB8D82C21719500410719 /* KTVLRRedPacketRewardsTableView.swift */,
+				320DB8DA2C2171A300410719 /* KTVLRRedPacketRewardsTableView.xib */,
+				32ADD1BE2C21797800DC4B35 /* KTVLRRedPacketRewardsCell.swift */,
+				32ADD1BF2C21797800DC4B35 /* KTVLRRedPacketRewardsCell.xib */,
 				32B2F94B2C1B16A200286F0F /* Observable.swift */,
 				32EA10D52C1BEB1400BDEBD0 /* UIColor+Hex.h */,
 				32EA10D62C1BEB1400BDEBD0 /* UIColor+Hex.m */,
@@ -410,13 +437,17 @@
 				323B2FCC2BD8E9DB0018E190 /* KTVPluginItemView.xib in Resources */,
 				32CEBB372BFCA67A0059EEE1 /* KTVBannerItemViewB.xib in Resources */,
 				32CEBB352BFCA6090059EEE1 /* KTVBannerItemViewA.xib in Resources */,
+				320DB8DB2C2171A300410719 /* KTVLRRedPacketRewardsTableView.xib in Resources */,
 				321B0A272C05B8A600DFBCFF /* KTVBannerItemView.xib in Resources */,
 				32B2F94D2C1B16A200286F0F /* KTVLRSendRedPacketViewController.xib in Resources */,
+				32B59AB72C21309300AC9FC5 /* KTVLRParticipatedRedPacketView.xib in Resources */,
+				32ADD1C02C21797800DC4B35 /* KTVLRRedPacketRewardsCell.xib in Resources */,
 				32038ADB2B47F264000FE88B /* Assets.xcassets in Resources */,
 				32038AD92B47F262000FE88B /* Main.storyboard in Resources */,
 				32A9BFE32C20210F00442433 /* KTVLRRedPacketEntranceViewController.xib in Resources */,
 				323B2FCF2BD8F46E0018E190 /* KTVPluginItemsViewController.xib in Resources */,
 				321290D62BA83E36006AEFA9 /* KTVRankTop3Cell.xib in Resources */,
+				32F5EB792C21370B005286B0 /* KTVLRRedPacketObtainRewardsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +485,7 @@
 				323B2FD02BD8F46E0018E190 /* KTVPluginItemsViewController.swift in Sources */,
 				32038AD62B47F262000FE88B /* ViewController.swift in Sources */,
 				32EC65612BC4063F00D388DB /* CustomAvatarView.swift in Sources */,
+				32ADD1C12C21797800DC4B35 /* KTVLRRedPacketRewardsCell.swift in Sources */,
 				32B2F94F2C1B16A200286F0F /* KTVLRSendRedPacketViewController.swift in Sources */,
 				3282E3AB2B623A210062E4C6 /* StackViewTest.swift in Sources */,
 				3202D4662BB66D76005C1FE3 /* GradientText.swift in Sources */,
@@ -465,8 +497,10 @@
 				321D8C512B9173C40029F8D9 /* KTVColorsGradientView.swift in Sources */,
 				32B2F94E2C1B16A200286F0F /* Observable.swift in Sources */,
 				323B2FBC2BD7AF0B0018E190 /* KTVEntranceItemView.swift in Sources */,
+				32F5EB772C2136FC005286B0 /* KTVLRRedPacketObtainRewardsView.swift in Sources */,
 				323B2FCA2BD8E3430018E190 /* UIKit+Nib.swift in Sources */,
 				321290D02BA82D8D006AEFA9 /* KTVSegmentedControl.swift in Sources */,
+				32B59AB52C21306D00AC9FC5 /* KTVLRParticipatedRedPacketView.swift in Sources */,
 				321B0A2B2C05D17700DFBCFF /* KTVADScrollingBubblesViewController.swift in Sources */,
 				32EA10DC2C1C159200BDEBD0 /* KTVLRSendRedPacketViewModel.swift in Sources */,
 				323B2FC32BD8A9660018E190 /* KTVRankItemViewController.swift in Sources */,
@@ -476,9 +510,11 @@
 				32CEBB332BFC95C20059EEE1 /* KTVHorizontalScrollingBanner.swift in Sources */,
 				32EC65592BC3D8B800D388DB /* BannerView.swift in Sources */,
 				321B0A252C05858600DFBCFF /* KTVBannerItemView.swift in Sources */,
+				32ADD1C32C217E8300DC4B35 /* KTVLRWinRedPacketViewModel.swift in Sources */,
 				323BA6B42BFDD997007890C9 /* TestCollectionViewCell.swift in Sources */,
 				323BA6AC2BFDCB68007890C9 /* KTVBannerItemViewA.swift in Sources */,
 				32EC65632BC4096E00D388DB /* KTVSingHeaderTShapeView.swift in Sources */,
+				320DB8D92C21719500410719 /* KTVLRRedPacketRewardsTableView.swift in Sources */,
 				32038AD42B47F262000FE88B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

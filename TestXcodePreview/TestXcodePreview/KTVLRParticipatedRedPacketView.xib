@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KTVLRParticipatedRedPacketView" customModule="TestXcodePreview" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="KTVLRParticipatedRedPacketView" customModule="TestXcodePreview" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="243" height="327"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ktv_participated_red_packet_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Gmr-Pq-3J2">
+                    <rect key="frame" x="0.0" y="0.0" width="243" height="327"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总200钻石/红包" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdg-X6-rnD">
+                    <rect key="frame" x="28.333333333333329" y="35" width="186.33333333333337" height="28.666666666666671"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                    <color key="textColor" red="0.90980392156862744" green="0.58431372549019611" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="M2w-E1-B0c">
+                    <rect key="frame" x="79.333333333333314" y="67.666666666666671" width="84.666666666666686" height="14.333333333333329"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="n人参与" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9X0-9V-1jS">
+                            <rect key="frame" x="0.0" y="0.0" width="45.666666666666664" height="14.333333333333334"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                            <color key="textColor" red="0.90980392156862744" green="0.58431372549019611" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ktv_compete_red_packet_vertical_line" translatesAutoresizingMaskIntoConstraints="NO" id="8tF-Zq-quB">
+                            <rect key="frame" x="47.666666666666671" y="2.3333333333333286" width="0.6666666666666643" height="10"/>
+                            <color key="backgroundColor" red="0.90980392156862744" green="0.58431372549019611" blue="0.10196078431372549" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="10" id="swg-3z-xuY"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="共x份" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Um-Wj-O7f">
+                            <rect key="frame" x="50.333333333333329" y="0.0" width="34.333333333333329" height="14.333333333333334"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                            <color key="textColor" red="0.90980392156862744" green="0.58431372549019611" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03:29" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5K-aN-gwx">
+                    <rect key="frame" x="71.666666666666657" y="126" width="99.666666666666657" height="43"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                    <color key="textColor" red="0.90980392160000001" green="0.58431372550000005" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已参与" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PF8-iS-UfF">
+                    <rect key="frame" x="70" y="252.33333333333334" width="103" height="40.666666666666657"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                    <color key="textColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Gmr-Pq-3J2" secondAttribute="bottom" id="1Ro-1l-Hvr"/>
+                <constraint firstItem="M2w-E1-B0c" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3Cr-nA-mM0"/>
+                <constraint firstItem="Gmr-Pq-3J2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3cX-IV-ZTg"/>
+                <constraint firstAttribute="trailing" secondItem="Gmr-Pq-3J2" secondAttribute="trailing" id="88S-aD-rkV"/>
+                <constraint firstAttribute="bottom" secondItem="PF8-iS-UfF" secondAttribute="bottom" constant="34" id="98o-yA-G2X"/>
+                <constraint firstItem="hdg-X6-rnD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="HiQ-2J-dKi"/>
+                <constraint firstItem="Y5K-aN-gwx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="J7Q-2G-ew3"/>
+                <constraint firstItem="hdg-X6-rnD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="35" id="Pve-Bk-FvX"/>
+                <constraint firstItem="Y5K-aN-gwx" firstAttribute="top" secondItem="M2w-E1-B0c" secondAttribute="bottom" constant="44" id="fBm-C2-NbA"/>
+                <constraint firstItem="PF8-iS-UfF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="r14-SA-Oxy"/>
+                <constraint firstItem="M2w-E1-B0c" firstAttribute="top" secondItem="hdg-X6-rnD" secondAttribute="bottom" constant="4" id="rXd-a8-9K5"/>
+                <constraint firstItem="Gmr-Pq-3J2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="x6T-GV-ceu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="amountLabel" destination="hdg-X6-rnD" id="m2S-B3-xmz"/>
+                <outlet property="countdownLabel" destination="Y5K-aN-gwx" id="NFk-25-uzP"/>
+                <outlet property="numPersonLabel" destination="9X0-9V-1jS" id="Z2Y-GF-hxr"/>
+                <outlet property="numRedPacketLabel" destination="3Um-Wj-O7f" id="AGe-NS-6pe"/>
+            </connections>
+            <point key="canvasLocation" x="-36" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ktv_compete_red_packet_vertical_line" width="0.66666668653488159" height="10.333333015441895"/>
+        <image name="ktv_participated_red_packet_bg" width="243" height="327"/>
+    </resources>
+</document>

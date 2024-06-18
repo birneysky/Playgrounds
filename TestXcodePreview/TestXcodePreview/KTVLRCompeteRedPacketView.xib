@@ -115,6 +115,29 @@ Cg
                         </label>
                     </subviews>
                 </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="dPo-wi-iPb">
+                    <rect key="frame" x="53" y="277" width="137.33333333333334" height="14.333333333333314"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="参与条件:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEk-GJ-AVA">
+                            <rect key="frame" x="0.0" y="0.0" width="52.666666666666664" height="14.333333333333334"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="1" green="0.96862745098039216" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发布评论 2222" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVC-7A-xpG">
+                            <rect key="frame" x="55.666666666666664" y="0.0" width="81.666666666666686" height="14.333333333333334"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="1" green="0.96862745100000003" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开奖时需留在本房间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lA5-xy-pWC">
+                    <rect key="frame" x="66.333333333333343" y="293.33333333333331" width="110.33333333333334" height="14.333333333333314"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="1" green="0.96862745098039216" blue="0.86274509803921573" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -129,21 +152,31 @@ Cg
                 <constraint firstItem="xLi-4K-vzn" firstAttribute="top" secondItem="zAy-8R-qUe" secondAttribute="bottom" constant="6.3333333333333286" id="NGj-3p-P25"/>
                 <constraint firstItem="nYD-Q6-43a" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PVr-wv-iqu"/>
                 <constraint firstAttribute="trailing" secondItem="nYD-Q6-43a" secondAttribute="trailing" id="QzI-bQ-7hS"/>
+                <constraint firstItem="lA5-xy-pWC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="RGQ-me-dIw"/>
                 <constraint firstItem="zAy-8R-qUe" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TZ1-le-9ro"/>
                 <constraint firstAttribute="bottom" secondItem="nYD-Q6-43a" secondAttribute="bottom" id="Ucx-3S-2zc"/>
                 <constraint firstItem="0uq-zi-h13" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="9" id="Uiw-Iv-8k7"/>
+                <constraint firstItem="dPo-wi-iPb" firstAttribute="top" secondItem="vih-VA-EnZ" secondAttribute="bottom" constant="12" id="Wcr-dD-lge"/>
+                <constraint firstItem="dPo-wi-iPb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Xlw-Ct-92D"/>
                 <constraint firstItem="vih-VA-EnZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Xzg-0P-LsA"/>
                 <constraint firstItem="cle-i9-beJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bPH-v2-8HU"/>
                 <constraint firstItem="k03-im-aoU" firstAttribute="top" secondItem="0uq-zi-h13" secondAttribute="bottom" constant="4" id="cfz-rM-7S2"/>
                 <constraint firstItem="Rlv-l1-kRS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="eZv-L9-4jX"/>
                 <constraint firstAttribute="trailing" secondItem="cle-i9-beJ" secondAttribute="trailing" id="uBq-8T-nf1"/>
+                <constraint firstItem="lA5-xy-pWC" firstAttribute="top" secondItem="dPo-wi-iPb" secondAttribute="bottom" constant="2" id="v5A-JC-0OK"/>
                 <constraint firstItem="0uq-zi-h13" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xme-LV-fXC"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="amountLabel" destination="zAy-8R-qUe" id="MTB-my-oHM"/>
                 <outlet property="button" destination="vih-VA-EnZ" id="D5d-nc-Qqp"/>
+                <outlet property="conditionTipLabel" destination="iVC-7A-xpG" id="WBe-CW-Rqw"/>
+                <outlet property="countdownLabel" destination="Rlv-l1-kRS" id="cqM-ke-7nJ"/>
+                <outlet property="nickNameLabel" destination="k03-im-aoU" id="f3O-QR-KWD"/>
+                <outlet property="numPersonLabel" destination="R7a-Tz-xER" id="Khv-rI-4Ml"/>
+                <outlet property="numRedPacketLabel" destination="1iv-6m-sA5" id="A1D-bz-upA"/>
             </connections>
-            <point key="canvasLocation" x="-4" y="21"/>
+            <point key="canvasLocation" x="-5.343511450381679" y="20.774647887323944"/>
         </view>
     </objects>
     <resources>
