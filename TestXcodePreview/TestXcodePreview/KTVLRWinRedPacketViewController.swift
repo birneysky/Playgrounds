@@ -65,6 +65,7 @@ class KTVLRWinRedPacketViewController: UIViewController {
 
     @IBOutlet weak var contentContainer: UIView!
     var viewModel = KTVLRWinRedPacketViewModel()
+    var redPacketInfo = KTVRoomRedPacketInfo(identify: "xxx", name: "200 钻石红包", participants: ["382109392183", "4382104"], countDown: 100, num: 20, participantsType: "word", participantsText1: "去评论", participantsText2: "抢红包", participantsText3: "发布评论 222", userName: "王大爷", userAvatar: "my_group")
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .clear
@@ -72,16 +73,37 @@ class KTVLRWinRedPacketViewController: UIViewController {
         
         bindViewModel()
         
-        viewModel.setModel(KTVRoomRedPacketInfo(identify: "xxx", name: "200 钻石红包", participants: ["382109392183", "4382104"], countDown: 100, num: 20, participantsType: "word", participantsText1: "去评论", participantsText2: "抢红包", participantsText3: "发布评论 222", userName: "王大爷", userAvatar: "my_group"))
+        viewModel.setModel(redPacketInfo)
         
     }
     
     var competeRedPacketView: KTVLRCompeteRedPacketView {
         let view = KTVLRCompeteRedPacketView.view()
+        view.participationWay = ParticipationWay(rawValue: redPacketInfo.participantsType)
         view.tap = {[weak self] type in
-            print("xxxx")
-            self?.viewModel.xxx()
+            if type == .command {
+                self?.redPacketInfo.participants.append("x")
+                self?.viewModel.claimRedPacket()
+            } else if type == .money {
+                let alertController = UIAlertController(title: nil, message: "确认支付1钻石/金币参与抢红包吗？", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "确定", style: .destructive) { _ in
+                    self?.viewModel.claimRedPacket()
+                    self?.redPacketInfo.participants.append("x")
+                }
+                let cancel = UIAlertAction(title: "取消", style: .default)
+                alertController.addAction(cancel)
+                alertController.addAction(ok)
+                self?.present(alertController, animated: true)
+            }
+            
         }
+        return view
+    }
+    
+    var obtainRewordView: KTVLRRedPacketObtainRewardsView {
+        let view = KTVLRRedPacketObtainRewardsView.view()
+        view.tableView.dataSource = self
+        view.tableView.reloadData()
         return view
     }
 
@@ -96,6 +118,11 @@ class KTVLRWinRedPacketViewController: UIViewController {
             } else if state == .claiming {
                 let view = KTVLRParticipatedRedPacketView.view()
                 self.contentContainer.addSubview(view)
+            } else if state == .won {
+                self.contentContainer.addSubview(self.obtainRewordView)
+            } else if state == .exhausted {
+                let view = KTVLRRedPacketRewardsTableView.view()
+                self.contentContainer.addSubview(view)
             }
         }
     }
@@ -103,6 +130,18 @@ class KTVLRWinRedPacketViewController: UIViewController {
     // MARK: - Action Selector
     @IBAction func closeAction(_ sender: Any) {
         self.view.isHidden  = true
+    }
+}
+
+extension KTVLRWinRedPacketViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.numRedPackeGift()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "KTVLRRedPacketRewardsCell", for: indexPath) as! KTVLRRedPacketRewardsCell
+        cell.setRedPacketGift(viewModel.redPacketGift(in: indexPath.row))
+        return cell
     }
 }
 

@@ -16,8 +16,11 @@ class KTVLRRedPacketObtainRewardsView: UIView {
         // Drawing code
     }
     */
+    @IBOutlet weak var tableView: UITableView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        let nib = UINib(nibName: "KTVLRRedPacketRewardsCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "KTVLRRedPacketRewardsCell")
     }
 }
 

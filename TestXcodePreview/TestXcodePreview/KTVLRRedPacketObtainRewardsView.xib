@@ -62,7 +62,7 @@
                         <constraint firstAttribute="height" constant="0.40000000000000002" id="fE3-5W-wnj"/>
                     </constraints>
                 </imageView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kgd-Y4-MHf">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="36" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kgd-Y4-MHf">
                     <rect key="frame" x="0.0" y="223" width="243" height="96"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -96,6 +96,9 @@
                 <constraint firstItem="pdy-pe-Eu9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="yoB-zV-Oyu"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="tableView" destination="kgd-Y4-MHf" id="arC-kV-I46"/>
+            </connections>
             <point key="canvasLocation" x="-34" y="21"/>
         </view>
     </objects>

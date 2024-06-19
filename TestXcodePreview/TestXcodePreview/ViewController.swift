@@ -128,16 +128,16 @@ class ViewController: UIViewController {
         
         
         let parentController = UIViewController()
-        
-        let controller = KTVLRSendRedPacketViewController.controller()
+        parentController.view.backgroundColor = .black
+        let controller = KTVLRWinRedPacketViewController.controller()
         parentController.addChild(controller)
         parentController.view.addSubview(controller.view)
         controller.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
+            controller.view.centerXAnchor.constraint(equalTo: parentController.view.centerXAnchor),
             controller.view.centerYAnchor.constraint(equalTo: parentController.view.centerYAnchor),
-            controller.view.leadingAnchor.constraint(equalTo: parentController.view.leadingAnchor),
-            controller.view.trailingAnchor.constraint(equalTo: parentController.view.trailingAnchor),
-            controller.view.heightAnchor.constraint(equalToConstant: 620),
+            controller.view.widthAnchor.constraint(equalToConstant: 243),
+            controller.view.heightAnchor.constraint(equalToConstant: 391),
         ])
         self.present(parentController, animated: true)
     }

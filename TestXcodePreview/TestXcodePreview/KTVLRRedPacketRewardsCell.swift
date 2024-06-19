@@ -24,4 +24,11 @@ class KTVLRRedPacketRewardsCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setRedPacketGift(_ gift: KTVRedPacketGift) {
+        self.rewardImageView.image = UIImage(named: gift.imgURL)
+        self.nameLabel.text = "\(gift.userName) 获得"
+        self.avatarImageView.image = UIImage(named: gift.userAvatar)
+        self.numRewardLabel.text = "\(gift.coins) 价值的 \(gift.giftName)"
+    }
+    
 }

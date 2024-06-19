@@ -16,14 +16,13 @@ class KTVLRCompeteRedPacketView: UIView {
     @IBOutlet weak var conditionTipLabel: UILabel!
     @IBOutlet weak var numPersonLabel: UILabel!
     @IBOutlet weak var numRedPacketLabel: UILabel!
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+
+    var participationWay: ParticipationWay?
+    @IBAction func click(_ sender: UIButton) {
+        print("heheheh")
+        tap?(participationWay)
     }
-    */
-    var tap: ((String)->Void)?
+    var tap: ((ParticipationWay?)->Void)?
     override var intrinsicContentSize: CGSize {
         return CGSize(width: 243, height: 327)
     }
