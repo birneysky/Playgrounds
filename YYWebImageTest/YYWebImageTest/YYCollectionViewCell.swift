@@ -10,12 +10,14 @@ import YYWebImage
 
 class YYCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: YYAnimatedImageView!
-    override class func awakeFromNib() {
+    override  func awakeFromNib() {
         super.awakeFromNib()
+        //self.imageView.autoPlayAnimatedImage = false
     }
     override func prepareForReuse() {
         super.prepareForReuse()
         self.imageView.image = nil
+        
     }
     func setURL(_ url: String) {
 //        imageView.sd_setImage(with: URL(string: url))
@@ -44,13 +46,28 @@ class YYCollectionViewCell: UICollectionViewCell {
 //            NSLog("#################### \(String(describing: url)), \(e - b)")
 //        }
 
-        let b = CFAbsoluteTimeGetCurrent()
-        // .avoidSetImage
-        imageView.yy_setImage(with: URL(string: url), placeholder: nil, options: [.showNetworkActivity, .setImageWithFadeAnimation, .progressiveBlur,]) { image, url, type, stage, err in
-            let e = CFAbsoluteTimeGetCurrent()
-            NSLog("################# \(e-b) \(url) ");
-        }
+//        let b = CFAbsoluteTimeGetCurrent()
+//        // .avoidSetImage
+//        imageView.yy_setImage(with: URL(string: url), placeholder: nil, options: [.showNetworkActivity, .setImageWithFadeAnimation]) { image, url, type, stage, err in
+//            let e = CFAbsoluteTimeGetCurrent()
+//            NSLog("################# \(e-b) \(url) ");
+//        }
         
-        
+
+        imageView.yy_setImage(with: URL(string: url), placeholder: nil, progress: nil, transform: { img, url in
+            return img;// return img.yy_image(byRoundCornerRadius: 40)
+        }, completion: { img, url, type, stage, err in
+            
+        })
     }
+   
+//    override func didMoveToWindow() {
+//        super.didMoveToWindow()
+//        if window == nil {
+//           NSLog("###############")
+//        } else {
+//            NSLog("**********************")
+//            imageView.startAnimating()
+//        }
+//    }
 }
