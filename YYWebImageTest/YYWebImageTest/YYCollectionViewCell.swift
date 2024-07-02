@@ -16,7 +16,7 @@ class YYCollectionViewCell: UICollectionViewCell {
     }
     override func prepareForReuse() {
         super.prepareForReuse()
-        self.imageView.image = nil
+        self.imageView.yy_setImage(with: nil)
         
     }
     func setURL(_ url: String) {
