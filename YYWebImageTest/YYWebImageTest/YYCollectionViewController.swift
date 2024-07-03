@@ -1591,6 +1591,30 @@ class SDCollectionViewController: UICollectionViewController {
 
         // Do any additional setup after loading the view.
         NSLog("xxxxxxxxx:\(dataSource.count)")
+       
+        let b = CFAbsoluteTimeGetCurrent()
+        guard let path = Bundle.main.path(forResource: "test", ofType: "webp"),
+              let data =  NSData(contentsOfFile: path) else { return }
+        
+        if let imageSource = CGImageSourceCreateWithData(data as CFData, nil) {
+            let options: [NSString: Any] = [
+                kCGImageSourceShouldCache: false // 根据需要设置缓存选项
+            ]
+            var images = [CGImage]()
+            let frameCount = CGImageSourceGetCount(imageSource)
+            for i in 0 ..< frameCount {
+                if let cgImage = CGImageSourceCreateImageAtIndex(imageSource, i, options as CFDictionary) {
+                    //let uiImage = UIImage(cgImage: cgImage)
+                    images.append(cgImage)
+                }
+            }
+            
+            //let resultImage = UIImage.animatedImage(with: images, duration: 0)
+            let e = CFAbsoluteTimeGetCurrent()
+            NSLog("################# \(e-b)");
+            //NSLog("xxxx \(resultImage)")
+            
+        }
     }
 
     /*
