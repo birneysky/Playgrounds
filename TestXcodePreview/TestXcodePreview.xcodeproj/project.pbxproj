@@ -53,6 +53,8 @@
 		3282E3AB2B623A210062E4C6 /* StackViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3282E3AA2B623A210062E4C6 /* StackViewTest.swift */; };
 		329718B22C41906900450668 /* KTVImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 329718B12C41906900450668 /* KTVImageView.m */; };
 		329718B62C4194A300450668 /* KTVImageViewPreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329718B52C4194A300450668 /* KTVImageViewPreView.swift */; };
+		3295FB8E2C4655F8009C6F22 /* WKWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3295FB8D2C4655F8009C6F22 /* WKWebViewController.xib */; };
+		3295FB8F2C4655F8009C6F22 /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3295FB8C2C4655F8009C6F22 /* WKWebViewController.swift */; };
 		32A9BFE32C20210F00442433 /* KTVLRRedPacketEntranceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A9BFE22C20210F00442433 /* KTVLRRedPacketEntranceViewController.xib */; };
 		32A9BFE42C20210F00442433 /* KTVLRRedPacketEntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A9BFE12C20210F00442433 /* KTVLRRedPacketEntranceViewController.swift */; };
 		32A9BFE72C20327200442433 /* KTVLRWinRedPacketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A9BFE62C20327200442433 /* KTVLRWinRedPacketViewController.xib */; };
@@ -152,6 +154,8 @@
 		329718B02C41906900450668 /* KTVImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVImageView.h; sourceTree = "<group>"; };
 		329718B12C41906900450668 /* KTVImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTVImageView.m; sourceTree = "<group>"; };
 		329718B52C4194A300450668 /* KTVImageViewPreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVImageViewPreView.swift; sourceTree = "<group>"; };
+		3295FB8C2C4655F8009C6F22 /* WKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
+		3295FB8D2C4655F8009C6F22 /* WKWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WKWebViewController.xib; sourceTree = "<group>"; };
 		32A9BFE12C20210F00442433 /* KTVLRRedPacketEntranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRRedPacketEntranceViewController.swift; sourceTree = "<group>"; };
 		32A9BFE22C20210F00442433 /* KTVLRRedPacketEntranceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVLRRedPacketEntranceViewController.xib; sourceTree = "<group>"; };
 		32A9BFE52C20327200442433 /* KTVLRWinRedPacketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRWinRedPacketViewController.swift; sourceTree = "<group>"; };
@@ -292,6 +296,8 @@
 				320DB8D82C21719500410719 /* KTVLRRedPacketRewardsTableView.swift */,
 				320DB8DA2C2171A300410719 /* KTVLRRedPacketRewardsTableView.xib */,
 				32ADD1BE2C21797800DC4B35 /* KTVLRRedPacketRewardsCell.swift */,
+				3295FB8C2C4655F8009C6F22 /* WKWebViewController.swift */,
+				3295FB8D2C4655F8009C6F22 /* WKWebViewController.xib */,
 				32ADD1BF2C21797800DC4B35 /* KTVLRRedPacketRewardsCell.xib */,
 				32B2F94B2C1B16A200286F0F /* Observable.swift */,
 				329718B02C41906900450668 /* KTVImageView.h */,
@@ -448,6 +454,7 @@
 				320DB8DB2C2171A300410719 /* KTVLRRedPacketRewardsTableView.xib in Resources */,
 				321B0A272C05B8A600DFBCFF /* KTVBannerItemView.xib in Resources */,
 				32B2F94D2C1B16A200286F0F /* KTVLRSendRedPacketViewController.xib in Resources */,
+				3295FB8E2C4655F8009C6F22 /* WKWebViewController.xib in Resources */,
 				32B59AB72C21309300AC9FC5 /* KTVLRParticipatedRedPacketView.xib in Resources */,
 				32ADD1C02C21797800DC4B35 /* KTVLRRedPacketRewardsCell.xib in Resources */,
 				32038ADB2B47F264000FE88B /* Assets.xcassets in Resources */,
@@ -512,6 +519,7 @@
 				321290D02BA82D8D006AEFA9 /* KTVSegmentedControl.swift in Sources */,
 				32B59AB52C21306D00AC9FC5 /* KTVLRParticipatedRedPacketView.swift in Sources */,
 				321B0A2B2C05D17700DFBCFF /* KTVADScrollingBubblesViewController.swift in Sources */,
+				3295FB8F2C4655F8009C6F22 /* WKWebViewController.swift in Sources */,
 				32EA10DC2C1C159200BDEBD0 /* KTVLRSendRedPacketViewModel.swift in Sources */,
 				323B2FC32BD8A9660018E190 /* KTVRankItemViewController.swift in Sources */,
 				323BA6B02BFDD6AF007890C9 /* TestCollectionViewController.swift in Sources */,
