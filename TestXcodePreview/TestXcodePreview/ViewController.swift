@@ -142,8 +142,12 @@ class ViewController: UIViewController {
 //        self.present(parentController, animated: true)
         
         
-        let webcv = WKWebViewController.controller()
-        self.present(webcv, animated: true)
+//        let webcv = WKWebViewController.controller()
+//        self.present(webcv, animated: true)
+        
+        
+        let controller = TestImageViewController.controller()
+        self.present(controller, animated: true)
     }
 
 
