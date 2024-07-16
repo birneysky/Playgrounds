@@ -1629,7 +1629,10 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
 
 - (YYImageFrame *)_frameAtIndex:(NSUInteger)index decodeForDisplay:(BOOL)decodeForDisplay {
     if (index >= _frames.count) return 0;
-    _YYImageDecoderFrame *frame = [(_YYImageDecoderFrame *)_frames[index] copy];
+    if (((_YYImageDecoderFrame *)_frames[index]).image) {
+        return _frames[index];
+    }
+    _YYImageDecoderFrame *frame = (_YYImageDecoderFrame *)_frames[index];
     BOOL decoded = NO;
     BOOL extendToCanvas = NO;
     if (_type != YYImageTypeICO && decodeForDisplay) { // ICO contains multi-size frame and should not extend to canvas.
@@ -1727,6 +1730,8 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
 - (void)_updateSource {
     switch (_type) {
         case YYImageTypeWebP: {
+            //_needBlend = YES;
+            //[self _updateSourceImageIO];
             [self _updateSourceWebP];
         } break;
             
@@ -1984,6 +1989,18 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
                 CFRelease(properties);
             }
         }
+        
+        if (_type == YYImageTypeWebP) { // get gif loop count
+            CFDictionaryRef properties = CGImageSourceCopyProperties(_source, NULL);
+            if (properties) {
+                CFDictionaryRef webp = CFDictionaryGetValue(properties, kCGImagePropertyWebPDictionary);
+                if (webp) {
+                    CFTypeRef loop = CFDictionaryGetValue(webp, kCGImagePropertyWebPLoopCount);
+                    if (loop) CFNumberGetValue(loop, kCFNumberNSIntegerType, &_loopCount);
+                }
+                CFRelease(properties);
+            }
+        }
     }
 
     /*
@@ -2021,6 +2038,22 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
                 }
             }
             
+            if (_type == YYImageTypeWebP) {
+                CFDictionaryRef webp = CFDictionaryGetValue(properties, kCGImagePropertyWebPDictionary);
+                if (webp) {
+                    value = CFDictionaryGetValue(webp, kCGImagePropertyWebPUnclampedDelayTime);
+                    if (!value) {
+                        value = CFDictionaryGetValue(webp, kCGImagePropertyWebPDelayTime);
+                    }
+                    if (value) {
+                        CFNumberGetValue(value, kCFNumberDoubleType, &duration);
+                    }
+                    duration = duration / 1000.0f;
+                }
+                _needBlend = YES;
+            }
+            
+            
             frame.width = width;
             frame.height = height;
             frame.duration = duration;
@@ -2051,7 +2084,7 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
     _YYImageDecoderFrame *frame = _frames[index];
     
     if (_source) {
-        CGImageRef imageRef = CGImageSourceCreateImageAtIndex(_source, index, (CFDictionaryRef)@{(id)kCGImageSourceShouldCache:@(YES)});
+        CGImageRef imageRef = CGImageSourceCreateImageAtIndex(_source, index, (CFDictionaryRef)@{(id)kCGImageSourceShouldCache:@(NO)});
         if (imageRef && extendToCanvas) {
             size_t width = CGImageGetWidth(imageRef);
             size_t height = CGImageGetHeight(imageRef);

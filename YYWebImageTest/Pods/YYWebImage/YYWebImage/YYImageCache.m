@@ -49,7 +49,18 @@ static inline dispatch_queue_t YYImageCacheDecodeQueue() {
     if (!cgImage) return 1;
     CGFloat height = CGImageGetHeight(cgImage);
     size_t bytesPerRow = CGImageGetBytesPerRow(cgImage);
-    NSUInteger cost = bytesPerRow * height;
+    NSUInteger cost = 0;
+    if ([image isKindOfClass:YYImage.class]) {
+        if (((YYImage*)image).animatedImageFrameCount > 1) {
+            cost = ((YYImage*)image).animatedImageMemorySize;
+        } else {
+            cost = bytesPerRow * height;
+        }
+        
+    } else {
+        cost = bytesPerRow * height;
+    }
+    
     if (cost == 0) cost = 1;
     return cost;
 }

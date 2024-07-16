@@ -12,7 +12,41 @@ private let reuseIdentifier = "Cell"
 class SDCollectionViewController: UICollectionViewController {
     let dataSource = [
             "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
-            "https://aliimg.changba.com/import/2927bf7c73cf9a933075607c3f970979.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+            "https://aliimg.changba.com/promote/8ce940dab1e7389bcbf96cd7f485e5b4.webp",
+                           "https://aliimg.changba.com/import/2927bf7c73cf9a933075607c3f970979.webp",
             "https://aliimg.changba.com/promote/d762dc57de625ad2861dfc69b355e8c0.webp",
             "https://aliimg.changba.com/promote/02b004f00b7e494cec8887cf02557581.webp",
             "https://aliimg.changba.com/promote/2895bdfd4b2d0679ae8ee764fb81cf5f.webp",
@@ -40,7 +74,7 @@ class SDCollectionViewController: UICollectionViewController {
             "https://aliimg.changba.com/import/b14c097dee92b74774fd72cac78b8c60.webp",
             "https://aliimg.changba.com/import/0030409c5084e25af1e8a2230af04d0a.webp",
             "https://aliimg.changba.com/promote/28eb2d315bd9f1eab5fd3e65dfe9eb8e.webp",
-            "https://aliimg.changba.com/import/ca36b2ebacdebcf63ad8f8a8192d0da1.webp",
+"https://aliimg.changba.com/import/ca36b2ebacdebcf63ad8f8a8192d0da1.webp",
             "https://aliimg.changba.com/promote/b0557fe1398ce5eeec6c4f312eb3901d.webp",
             "https://aliimg.changba.com/promote/abc78f73bbd49f6a176a7d5a1b173645.webp",
             "https://aliimg.changba.com/import/ed79e8c8ed03123630743356d1743b6a.webp",
@@ -318,8 +352,8 @@ class SDCollectionViewController: UICollectionViewController {
             "https://aliimg.changba.com/promote/28eb2d315bd9f1eab5fd3e65dfe9eb8e.webp",
             "https://aliimg.changba.com/import/ed79e8c8ed03123630743356d1743b6a.webp",
             "https://aliimg.changba.com/promote/61882e6e2f33f230859f84aaa2e18e42.webp",
-            "https://aliimg.changba.com/import/81b26db84b10abc96a4bf5c1127b7368.webp",
-       /* "https://aliimg.changba.com/cache/photo/dressup/3d77ce2210da33b4754e2da945cede9b.png",
+                  "https://aliimg.changba.com/import/81b26db84b10abc96a4bf5c1127b7368.webp",
+        "https://aliimg.changba.com/cache/photo/dressup/3d77ce2210da33b4754e2da945cede9b.png",
     
         "https://aliimg.changba.com/cache/photo/default_dynamic_photo/10001.webp",
             "https://aliimg.changba.com/cache/photo/default_dynamic_photo/10002.webp",
@@ -1575,7 +1609,7 @@ class SDCollectionViewController: UICollectionViewController {
         "https://aliimg.changba.com/promote/aef7b546b9340f00957b6fcc4d41ecce.webp",
         "https://aliimg.changba.com/import/85eca4c19344ccef6e603f8db61dd266.webp",
         "https://aliimg.changba.com/promote/b5effda5e4d6d6ef7d92b5d55d56389e.webp",
-        "https://aliimg.changba.com/import/f148cc904d58ad8bfa27d8c8c2421f91.webp",*/
+        "https://aliimg.changba.com/import/f148cc904d58ad8bfa27d8c8c2421f91.webp",
     ]
     
 
@@ -1593,23 +1627,23 @@ class SDCollectionViewController: UICollectionViewController {
         NSLog("xxxxxxxxx:\(dataSource.count)")
        
         let b = CFAbsoluteTimeGetCurrent()
-        guard let path = Bundle.main.path(forResource: "test", ofType: "webp"),
+        guard let path = Bundle.main.path(forResource: "xxx", ofType: "webp"),
               let data =  NSData(contentsOfFile: path) else { return }
         
         if let imageSource = CGImageSourceCreateWithData(data as CFData, nil) {
             let options: [NSString: Any] = [
                 kCGImageSourceShouldCache: false // 根据需要设置缓存选项
             ]
-            var images = [CGImage]()
+            var images = [UIImage]()
             let frameCount = CGImageSourceGetCount(imageSource)
             for i in 0 ..< frameCount {
                 if let cgImage = CGImageSourceCreateImageAtIndex(imageSource, i, options as CFDictionary) {
-                    //let uiImage = UIImage(cgImage: cgImage)
-                    images.append(cgImage)
+                    let uiImage = UIImage(cgImage: cgImage)
+                    images.append(uiImage)
                 }
             }
             
-            //let resultImage = UIImage.animatedImage(with: images, duration: 0)
+            let resultImage = UIImage.animatedImage(with: images, duration: 0)
             let e = CFAbsoluteTimeGetCurrent()
             NSLog("################# \(e-b)");
             //NSLog("xxxx \(resultImage)")
