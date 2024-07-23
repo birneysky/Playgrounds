@@ -115,6 +115,11 @@ class ViewController: UIViewController {
             KTVBannerItem(KTVBannerModel(imageURL: "", time: 8999, redirectURL: "xxx"))
         ]
         self.view.addSubview(bannerx)
+        
+        
+        self.view.backgroundColor = .white
+        let viewx = KTVScaleLineView(frame: CGRect(x: 0, y: 500, width: 397, height: 104))
+        self.view.addSubview(viewx)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -146,8 +151,9 @@ class ViewController: UIViewController {
 //        self.present(webcv, animated: true)
         
         
-        let controller = TestImageViewController.controller()
-        self.present(controller, animated: true)
+//        let controller = TestImageViewController.controller()
+//        self.present(controller, animated: true)
+
     }
 
 

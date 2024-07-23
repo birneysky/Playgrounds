@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KTVTimeFineTuningViewController" customModule="TestXcodePreview" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="420"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLm-TF-YcN" customClass="KTVPartialRoundedView" customModule="TestXcodePreview" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="326"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5c-xR-kvg">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="48"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手动对其" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BT-mx-jKD">
+                                    <rect key="frame" x="16" y="14.333333333333334" width="65.333333333333329" height="19.333333333333329"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2Z-gS-XJO">
+                                    <rect key="frame" x="349" y="2" width="44" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="EJi-Ur-RBC"/>
+                                        <constraint firstAttribute="width" constant="44" id="J1f-M5-U8K"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="ktv_time_fine_tuning_close"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="9BT-mx-jKD" firstAttribute="leading" secondItem="Z5c-xR-kvg" secondAttribute="leading" constant="16" id="GEk-ta-tqr"/>
+                                <constraint firstAttribute="trailing" secondItem="d2Z-gS-XJO" secondAttribute="trailing" id="OCk-l9-3Eg"/>
+                                <constraint firstAttribute="height" constant="48" id="P0P-m9-77Q"/>
+                                <constraint firstItem="9BT-mx-jKD" firstAttribute="centerY" secondItem="Z5c-xR-kvg" secondAttribute="centerY" id="cZs-ra-P64"/>
+                                <constraint firstItem="d2Z-gS-XJO" firstAttribute="centerY" secondItem="Z5c-xR-kvg" secondAttribute="centerY" id="wX6-nj-5sU"/>
+                            </constraints>
+                        </view>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAS-0X-dUA">
+                            <rect key="frame" x="0.0" y="48" width="393" height="278"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZL-sL-CEr" userLabel="Content View">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="278"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="hZL-sL-CEr" secondAttribute="bottom" id="2Cu-cS-bVv"/>
+                                <constraint firstAttribute="trailing" secondItem="hZL-sL-CEr" secondAttribute="trailing" id="H2x-nk-Dky"/>
+                                <constraint firstItem="hZL-sL-CEr" firstAttribute="width" secondItem="rAS-0X-dUA" secondAttribute="width" id="ICi-ju-Hr8"/>
+                                <constraint firstItem="hZL-sL-CEr" firstAttribute="height" secondItem="rAS-0X-dUA" secondAttribute="height" id="VUT-20-ZTa"/>
+                                <constraint firstItem="hZL-sL-CEr" firstAttribute="top" secondItem="rAS-0X-dUA" secondAttribute="top" id="Yw0-W9-wfM"/>
+                                <constraint firstItem="hZL-sL-CEr" firstAttribute="leading" secondItem="rAS-0X-dUA" secondAttribute="leading" id="uQS-v3-Fi8"/>
+                            </constraints>
+                            <viewLayoutGuide key="contentLayoutGuide" id="r3I-MZ-jUi"/>
+                            <viewLayoutGuide key="frameLayoutGuide" id="i4N-cX-UyU"/>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="rAS-0X-dUA" secondAttribute="bottom" id="5jb-gN-Tb1"/>
+                        <constraint firstItem="rAS-0X-dUA" firstAttribute="leading" secondItem="ZLm-TF-YcN" secondAttribute="leading" id="9OW-BP-1ao"/>
+                        <constraint firstItem="rAS-0X-dUA" firstAttribute="top" secondItem="Z5c-xR-kvg" secondAttribute="bottom" id="Q4z-55-a31"/>
+                        <constraint firstItem="Z5c-xR-kvg" firstAttribute="top" secondItem="ZLm-TF-YcN" secondAttribute="top" id="STG-me-wX6"/>
+                        <constraint firstAttribute="trailing" secondItem="Z5c-xR-kvg" secondAttribute="trailing" id="bd5-YC-jZE"/>
+                        <constraint firstItem="Z5c-xR-kvg" firstAttribute="leading" secondItem="ZLm-TF-YcN" secondAttribute="leading" id="vGS-ai-IGb"/>
+                        <constraint firstAttribute="trailing" secondItem="rAS-0X-dUA" secondAttribute="trailing" id="y9o-uf-WG9"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerSize">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QfK-Ml-l8j">
+                    <rect key="frame" x="0.0" y="326" width="393" height="94"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcK-cB-0Rj">
+                            <rect key="frame" x="120.33333333333333" y="12" width="152.33333333333337" height="40"/>
+                            <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="e8F-zG-zdX"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="确定(00:00:00s)">
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="94" id="0TH-cl-3By"/>
+                        <constraint firstItem="gcK-cB-0Rj" firstAttribute="top" secondItem="QfK-Ml-l8j" secondAttribute="top" constant="12" id="GS2-NE-b5D"/>
+                        <constraint firstItem="gcK-cB-0Rj" firstAttribute="centerX" secondItem="QfK-Ml-l8j" secondAttribute="centerX" id="eLG-9X-e9O"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ZLm-TF-YcN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="10o-7X-8aI"/>
+                <constraint firstItem="QfK-Ml-l8j" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="9Ex-nt-Nrp"/>
+                <constraint firstItem="QfK-Ml-l8j" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Cy3-8Q-xTa"/>
+                <constraint firstAttribute="trailing" secondItem="ZLm-TF-YcN" secondAttribute="trailing" id="O0r-fg-soc"/>
+                <constraint firstItem="ZLm-TF-YcN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RXf-8a-0xc"/>
+                <constraint firstItem="QfK-Ml-l8j" firstAttribute="top" secondItem="ZLm-TF-YcN" secondAttribute="bottom" id="eOU-cB-cFy"/>
+                <constraint firstAttribute="bottom" secondItem="QfK-Ml-l8j" secondAttribute="bottom" id="g13-UN-NC6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="140" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ktv_time_fine_tuning_close" width="24" height="24"/>
+    </resources>
+</document>

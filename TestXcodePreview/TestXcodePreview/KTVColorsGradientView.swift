@@ -7,7 +7,6 @@
 
 import UIKit
 
-@IBDesignable
 class KTVColorsGradientView: UIControl {
 
     // 定义渐变层的属性
@@ -81,9 +80,9 @@ class KTVColorsGradientView: UIControl {
         gradientLayer.locations = locations // 设置渐变层的颜色位置
     }
 
-    override var intrinsicContentSize: CGSize {
-        return self.bounds.size
-    }
+//    override var intrinsicContentSize: CGSize {
+//        return self.bounds.size
+//    }
 
 }
 

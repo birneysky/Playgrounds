@@ -2,13 +2,12 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KTVLRSendRedPacketViewController" customModule="唱吧" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KTVLRSendRedPacketViewController" customModule="TestXcodePreview" customModuleProvider="target">
             <connections>
                 <outlet property="amountCollectionHeightConstraint" destination="iGI-gD-5lc" id="apo-wb-web"/>
                 <outlet property="amoutCollectionView" destination="tFf-VS-elX" id="CGu-7I-V4E"/>
@@ -29,7 +28,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="538"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTr-bG-pCO" customClass="KTVPartialRoundedView" customModule="唱吧" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTr-bG-pCO" customClass="KTVPartialRoundedView" customModule="TestXcodePreview" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="538"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ktv_room_send_red_packet_top_image" translatesAutoresizingMaskIntoConstraints="NO" id="nnm-qg-LTL">
@@ -181,7 +180,7 @@
                                                         <constraint firstAttribute="height" constant="28" id="KTF-Gj-pS2"/>
                                                     </constraints>
                                                 </stackView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x80-JJ-Lcn" customClass="KTVColorsGradientView" customModule="唱吧" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x80-JJ-Lcn" customClass="KTVColorsGradientView" customModule="TestXcodePreview" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="444" width="361" height="48"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ne-Xk-9PL">
@@ -315,6 +314,11 @@
             <point key="canvasLocation" x="136.64122137404578" y="0.0"/>
         </view>
     </objects>
+    <designables>
+        <designable name="x80-JJ-Lcn">
+            <size key="intrinsicContentSize" width="361" height="48"/>
+        </designable>
+    </designables>
     <resources>
         <image name="img_dating_effect_help" width="20" height="20"/>
         <image name="ktv_room_send_red_packet_top_image" width="375" height="134"/>
