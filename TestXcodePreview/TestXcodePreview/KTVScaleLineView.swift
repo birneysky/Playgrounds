@@ -7,92 +7,203 @@
 
 import UIKit
 
+enum KTVFineTuningLineViewStyle {
+    case begin
+    case end
+}
+
 class KTVScaleLineView: UIView {
     // 基准线的位置
-        var baselineY: CGFloat = 0 {
-            didSet {
-                setNeedsDisplay()
-            }
+    var baselineY: CGFloat = 0 {
+        didSet {
+            setNeedsDisplay()
         }
+    }
 
-        var duration: TimeInterval = 3
-        // 初始化方法
-        override init(frame: CGRect) {
-            super.init(frame: frame)
-            setup()
+    var duration: TimeInterval = 10
+    private var style: KTVFineTuningLineViewStyle
+    // 初始化方法
+    init(frame: CGRect, style: KTVFineTuningLineViewStyle, duration: TimeInterval) {
+        self.style = style
+        self.duration = duration
+        super.init(frame: frame)
+        setup()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        self.style = .begin
+        self.duration = 3
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+//    init(style: KTVFineTuningLineViewStyle) {
+//        self.style = style
+//        
+//    }
+
+
+    private lazy var tuningLine:KTVFineTuningLineView = {
+        let view  = KTVFineTuningLineView.view()
+        view.style = self.style
+        view.backgroundColor = .yellow.withAlphaComponent(0.2)
+        view.increase = {[weak self] in
+            guard let self = self else { return }
+            self.increaseTime()
         }
-
-        required init?(coder aDecoder: NSCoder) {
-            super.init(coder: aDecoder)
-            setup()
-        }
-    
-    
-        private lazy var tuningLine:KTVFineTuningLineView = {
-            let view  = KTVFineTuningLineView.view()
-            view.style = .begin
-            view.backgroundColor = .yellow.withAlphaComponent(0.2)
-            return view
-        }()
-    
-
-
-        let lineHeight: CGFloat = 5 // 每条线之间的距离
-        let topOffset: CGFloat = 31
-        private func setup() {
-            // 设置初始基准线位置为视图的中心
-            baselineY = bounds.midY
-            self.addSubview(tuningLine)
-            // 添加拖动手势
-            let slidingPanGesture = UIPanGestureRecognizer(target: self, action: #selector(handleSlidingPan(_:)))
-            tuningLine.addGestureRecognizer(slidingPanGesture)
-            
-            var lineNum = 3
-            if duration > 0 , duration <= 3 {
-                lineNum = 3
-            } else if duration > 3, duration <= 30 {
-                lineNum = 13
-            } else {
-                lineNum = 21
-            }
-            
-            let lineTotalHeight:CGFloat =  CGFloat(lineNum - 1) * CGFloat(lineHeight) + CGFloat(lineNum) * CGFloat(2)
-            let selfHeight = lineTotalHeight + CGFloat(31 * 2) + 10
-            var frame = self.frame
-            frame.size.height = Double(selfHeight)
-            self.bounds = frame
-            
         
-            
-            tuningLine.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                tuningLine.heightAnchor.constraint(equalToConstant: 62),
-                tuningLine.widthAnchor.constraint(equalTo: self.widthAnchor)
-            ])
-            invalidateIntrinsicContentSize()
+        view.decrease = {[weak self] in
+            guard let self = self else { return }
+            self.decreaseTime()
         }
+        return view
+    }()
+    
+    
+    private lazy var firstLyricsLabel = {
+        let label = UILabel()
+        label.textColor = style == .begin ? rgba("##FFFFFF4D") :rgba("#FF3348FF")
+        label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        return label
+    }()
+    
+    
+    private lazy var lastLyricsLabel = {
+        let label = UILabel()
+        label.textColor = style == .begin ? rgba("#FF3348FF") :rgba("##FFFFFF4D")
+        label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        return label
+    }()
+
+    func increaseTime() {
+        let offset = 0.01 / secondPerPoint
+        if tuningLine.style == .begin {
+            self.baselineY -= offset
+        } else {
+            self.baselineY += offset
+        }
+        if self.baselineY <= topOffset {
+            self.baselineY = topOffset
+        }
+        
+        if self.baselineY >= topOffset + scaleLineHeight {
+            self.baselineY = topOffset + scaleLineHeight
+        }
+        tuningLine.center = CGPoint(x: bounds.midX, y: self.baselineY)
+        print("+++ offset\(offset) time\(time)")
+    }
+    
+    func decreaseTime() {
+        let offset = 0.01 / secondPerPoint
+        if tuningLine.style == .begin {
+            self.baselineY += offset
+        } else {
+            self.baselineY -= offset
+        }
+        
+        if self.baselineY <= topOffset {
+            self.baselineY = topOffset
+        }
+        
+        if self.baselineY >= topOffset + scaleLineHeight {
+            self.baselineY = topOffset + scaleLineHeight
+        }
+        tuningLine.center = CGPoint(x: bounds.midX, y: self.baselineY)
+        print("+++ offset\(offset) time\(time)")
+    }
+    
+
+    let lineHeight: CGFloat = 5 // 每条线之间的距离
+    let topOffset: CGFloat = 31
+    var centerY: CGFloat = 0
+    var lineNum: Int {
+        var num = 3
+        if duration > 0 , duration <= 3 {
+            num = 3
+        } else if duration > 3, duration <= 30 {
+            num = 13
+        } else {
+            num = 21
+        }
+        return num
+    }
+    
+    var scaleLineHeight: CGFloat {
+        let lineTotalHeight: CGFloat = CGFloat(lineNum) * CGFloat(2) + CGFloat(lineNum - 1) * CGFloat(lineHeight)
+        return lineTotalHeight + 2
+    }
+    
+    var secondPerPoint: TimeInterval {
+        return duration / scaleLineHeight;
+    }
+    
+    var time: TimeInterval {
+        if tuningLine.style == .end {
+            return (baselineY - topOffset) * secondPerPoint
+        } else {
+            print("tttttz \(scaleLineHeight-(baselineY - topOffset))")
+            if scaleLineHeight-(baselineY - topOffset) <= 0.01 {
+                return 0
+            }
+            return (scaleLineHeight-(baselineY - topOffset)) * secondPerPoint
+        }
+        
+    }
+    
+    private func setup() {
+        // 设置初始基准线位置为视图的中心
+        baselineY = bounds.midY
+        self.addSubview(tuningLine)
+        // 添加拖动手势
+        let slidingPanGesture = UIPanGestureRecognizer(target: self, action: #selector(handleSlidingPan(_:)))
+        tuningLine.addGestureRecognizer(slidingPanGesture)
+        
+        
+        let lineTotalHeight:CGFloat =  CGFloat(lineNum - 1) * CGFloat(lineHeight) + CGFloat(lineNum) * CGFloat(2)
+        let selfHeight = lineTotalHeight + CGFloat(31 * 2) + 10
+        var frame = self.frame
+        frame.size.height = Double(selfHeight)
+        self.bounds = frame
+        
+        tuningLine.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tuningLine.heightAnchor.constraint(equalToConstant: 62),
+            tuningLine.widthAnchor.constraint(equalTo: self.widthAnchor)
+        ])
+        
+        
+        firstLyricsLabel.text = "尽管讲出不快吧"
+        addSubview(firstLyricsLabel)
+        
+        firstLyricsLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            firstLyricsLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            firstLyricsLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 0)
+        ])
+        
+        lastLyricsLabel.text = "仍然紧守于身边"
+        addSubview(lastLyricsLabel)
+        lastLyricsLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            lastLyricsLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            lastLyricsLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)
+        ])
+        
+        invalidateIntrinsicContentSize()
+        
+        
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        
-        var lineNum = 3
-        if duration > 0 , duration <= 3 {
-            lineNum = 3
-        } else if duration > 3, duration <= 30 {
-            lineNum = 13
-        } else {
-            lineNum = 21
-        }
-        
-        let lineTotalHeight:CGFloat = CGFloat(lineNum) * CGFloat(2) + CGFloat(lineNum - 1) * CGFloat(lineHeight)
-        let selfHeight = lineTotalHeight + CGFloat(31 * 2) + 4
+        let selfHeight = scaleLineHeight + CGFloat(31 * 2)
         var frame = self.frame
         frame.size.height = Double(selfHeight)
         self.bounds = CGRect(x: 0, y: 0, width: self.bounds.size.width, height: selfHeight)
         baselineY = self.bounds.maxY / 2
+        centerY = baselineY
         tuningLine.center = CGPoint(x: self.bounds.maxX / 2, y: baselineY)
-        NSLog("base y\(baselineY) bounds:\(self.bounds), center:\(self.center)")
+        print("base y\(baselineY) bounds:\(self.bounds), center:\(self.center) time:\(time)")
     }
 
         @objc private func handleSlidingPan(_ gesture: UIPanGestureRecognizer) {
@@ -102,36 +213,47 @@ class KTVScaleLineView: UIView {
             // 限制基准线在视图范围内
             var newY = baselineY + translation.y
             newY = min(max(newY, 0), bounds.height)
-            if newY + tuningLine.bounds.size.height  / 2 <= bounds.maxY &&
-                newY - tuningLine.bounds.height / 2 >= 0 {
+            if newY + topOffset <= bounds.maxY &&
+                newY - topOffset >= 0 {
+                
+                
+                if abs(newY + topOffset - bounds.maxY) <= 0.5 {
+                    newY = bounds.maxY - topOffset;
+                }
+                
+                if abs(newY  - topOffset) <= 0.5 {
+                    newY = topOffset;
+                    print("---------\(newY)")
+                }
                 tuningLine.center = CGPoint(x: bounds.midX, y: newY)
                 baselineY = newY
-                print("---------\(newY)")
+                
+                
+                print("-------- hhh \(baselineY - topOffset) scaleLineHeight:\(scaleLineHeight), time:\(time)")
             }
             
         }
 
         override func draw(_ rect: CGRect) {
             guard let context = UIGraphicsGetCurrentContext() else { return }
-
-            
-            var lineNum = 3
-            if duration > 0 , duration <= 3 {
-                lineNum = 3
-            } else if duration > 3, duration <= 30 {
-                lineNum = 13
-            } else {
-                lineNum = 21
-            }
-            let numberOfLines = lineNum//Int((bounds.height - topOffset * 2) / lineHeight)
+            let numberOfLines = lineNum
             let width: [CGFloat] = [16, 50, 90, 50, 16]
             var yPosition: CGFloat = topOffset + 2
             for i in 0 ..< numberOfLines {
                 context.setLineWidth(2.0)
                 if yPosition < baselineY {
-                    context.setStrokeColor(UIColor.gray.cgColor)
+                    if self.style == .begin {
+                        context.setStrokeColor(UIColor.gray.cgColor)
+                    } else {
+                        context.setStrokeColor(UIColor.red.cgColor)
+                    }
                 } else {
-                    context.setStrokeColor(UIColor.red.cgColor)
+                    if self.style == .begin {
+                        context.setStrokeColor(UIColor.red.cgColor)
+                    } else {
+                        context.setStrokeColor(UIColor.gray.cgColor)
+                    }
+                    
                 }
                 let lineW = width[i % 5]
                 let x =  (bounds.width - lineW) / 2
@@ -141,37 +263,23 @@ class KTVScaleLineView: UIView {
                 context.strokePath()
                 yPosition +=  lineHeight + 2
             }
-
-//            // 绘制基准线
-//            context.setStrokeColor(UIColor.black.cgColor)
-//            context.setLineWidth(2.0)
-//            context.move(to: CGPoint(x: 0, y: baselineY))
-//            context.addLine(to: CGPoint(x: bounds.width, y: baselineY))
-//            context.strokePath()
         }
     
     override var intrinsicContentSize: CGSize {
-        var lineNum = 3
-        if duration > 0 , duration <= 3 {
-            lineNum = 3
-        } else if duration > 3, duration <= 30 {
-            lineNum = 13
-        } else {
-            lineNum = 21
-        }
-        
-        let lineTotalHeight:CGFloat = CGFloat(lineNum) * CGFloat(2) + CGFloat(lineNum - 1) * CGFloat(lineHeight)
-        let selfHeight = lineTotalHeight + CGFloat(31 * 2) + 4
-        var frame = self.frame
-        frame.size.height = Double(selfHeight)
-        self.bounds = frame
-        return self.bounds.size
+        let selfHeight = scaleLineHeight + CGFloat(31 * 2)
+        return CGSize(width: self.bounds.size.width, height: selfHeight)
         
     }
 }
 
 
-#Preview("KTVLRRedPacketObtainRewardsView", traits: .portrait) {
-    let view = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 84))
+#Preview("KTVScaleLineViewBegin", traits: .portrait) {
+    let view = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .begin, duration: 15)
+    return view
+}
+
+
+#Preview("KTVScaleLineViewEnd", traits: .portrait) {
+    let view = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .end, duration: 10)
     return view
 }

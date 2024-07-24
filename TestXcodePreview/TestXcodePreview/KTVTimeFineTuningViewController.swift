@@ -9,9 +9,27 @@ import UIKit
 
 class KTVTimeFineTuningViewController: UIViewController {
 
+    @IBOutlet weak var container: UIStackView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let beginView = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .begin, duration: 10)
+        self.container.addArrangedSubview(beginView)
 
+        let label = UILabel()
+        label.textColor = rgba("#FF3348FF")
+        label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        label.text = "•••    中间歌词已省略    •••"
+        self.container.addArrangedSubview(label)
+        
+//        let label2 = UILabel()
+//        label2.textColor = rgba("#FF3348FF")
+//        label2.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+//        label2.text = "请不必惊怕"
+//        self.container.addArrangedSubview(label2)
+        
+        let endView = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .end, duration: 30)
+        self.container.addArrangedSubview(endView)
         // Do any additional setup after loading the view.
     }
 

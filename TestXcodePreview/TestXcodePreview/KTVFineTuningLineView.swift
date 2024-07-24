@@ -7,10 +7,6 @@
 
 import UIKit
 
-enum KTVFineTuningLineViewStyle {
-    case begin
-    case end
-}
 
 class KTVFineTuningLineView: UIView {
 
@@ -29,6 +25,9 @@ class KTVFineTuningLineView: UIView {
 
     @IBOutlet weak var endView: UIStackView!
     @IBOutlet weak var beginView: UIStackView!
+    
+    var increase: (()->Void)?
+    var decrease: (()->Void)?
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -43,9 +42,11 @@ class KTVFineTuningLineView: UIView {
     }
     @IBAction func increaseAction(_ sender: UIButton) {
         print("-------- +++++")
+        increase?()
     }
     
     @IBAction func decreaseAction(_ sender: UIButton) {
         print("-------- jianjian")
+        decrease?()
     }
 }

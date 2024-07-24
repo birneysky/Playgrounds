@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KTVTimeFineTuningViewController" customModule="TestXcodePreview" customModuleProvider="target">
             <connections>
+                <outlet property="container" destination="Osf-WF-vz1" id="Lp1-MZ-4tL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,7 +21,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLm-TF-YcN" customClass="KTVPartialRoundedView" customModule="TestXcodePreview" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="326"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5c-xR-kvg">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5c-xR-kvg" userLabel="topView">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="48"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手动对其" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BT-mx-jKD">
@@ -48,19 +49,28 @@
                                 <constraint firstItem="d2Z-gS-XJO" firstAttribute="centerY" secondItem="Z5c-xR-kvg" secondAttribute="centerY" id="wX6-nj-5sU"/>
                             </constraints>
                         </view>
-                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAS-0X-dUA">
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rAS-0X-dUA">
                             <rect key="frame" x="0.0" y="48" width="393" height="278"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZL-sL-CEr" userLabel="Content View">
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hZL-sL-CEr" userLabel="Content View">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="278"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Osf-WF-vz1">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="278"/>
+                                        </stackView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="Osf-WF-vz1" firstAttribute="centerX" secondItem="hZL-sL-CEr" secondAttribute="centerX" id="4ft-Dr-cL2"/>
+                                        <constraint firstItem="Osf-WF-vz1" firstAttribute="centerY" secondItem="hZL-sL-CEr" secondAttribute="centerY" id="BLd-jE-LRK"/>
+                                        <constraint firstItem="Osf-WF-vz1" firstAttribute="height" secondItem="hZL-sL-CEr" secondAttribute="height" id="EdN-yC-x8K"/>
+                                    </constraints>
                                 </view>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="hZL-sL-CEr" secondAttribute="bottom" id="2Cu-cS-bVv"/>
                                 <constraint firstAttribute="trailing" secondItem="hZL-sL-CEr" secondAttribute="trailing" id="H2x-nk-Dky"/>
-                                <constraint firstItem="hZL-sL-CEr" firstAttribute="width" secondItem="rAS-0X-dUA" secondAttribute="width" id="ICi-ju-Hr8"/>
-                                <constraint firstItem="hZL-sL-CEr" firstAttribute="height" secondItem="rAS-0X-dUA" secondAttribute="height" id="VUT-20-ZTa"/>
+                                <constraint firstItem="hZL-sL-CEr" firstAttribute="width" secondItem="rAS-0X-dUA" secondAttribute="width" id="SaB-o2-kEs"/>
                                 <constraint firstItem="hZL-sL-CEr" firstAttribute="top" secondItem="rAS-0X-dUA" secondAttribute="top" id="Yw0-W9-wfM"/>
                                 <constraint firstItem="hZL-sL-CEr" firstAttribute="leading" secondItem="rAS-0X-dUA" secondAttribute="leading" id="uQS-v3-Fi8"/>
                             </constraints>
