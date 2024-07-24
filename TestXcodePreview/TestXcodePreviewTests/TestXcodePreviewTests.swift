@@ -43,7 +43,74 @@ final class TestXcodePreviewTests: XCTestCase {
         // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
     }
+   
     
+    func testFetchSubString1() throws {
+        let text = "#somestring0##somestring#somestring1"
+        guard let a = text.subString(pattern: "#[^#]*#+([^#]*)#*", in: 15) else { fatalError() }
+        XCTAssert(a == "somestring")
+        
+        guard let a1 = text.subString(pattern: "#[^#]*#+([^#]*)#*", in: 14) else { fatalError() }
+        XCTAssert(a1 == "somestring")
+        
+        
+        XCTAssert(text.subString(pattern: "#[^#]*#+([^#]*)#*", in: 13) == nil)
+        
+        guard let a3 = text.subString(pattern: "#[^#]*#+([^#]*)#*", in: 23) else { fatalError() }
+        XCTAssert(a3 == "somestring")
+        
+        XCTAssert(text.subString(pattern: "#[^#]*#+([^#]*)#*", in: 24) == nil)
+        XCTAssert(text.subString(pattern: "#[^#]*#+([^#]*)#*", in: 25) == nil)
+    }
+    
+    /**
+     •  [^#]*：匹配零个或多个非 # 字符。
+
+     •  #+：匹配一个或多个 # 字符。
+
+     •  ([^#]*)：捕获零个或多个非 # 字符。
+
+     •  #*：匹配零个或多个 # 字符。
+     
+     */
+    func testFetchSubString2() throws {
+        var text = "#ab##def#cdg"
+        guard let a = text.subString(pattern: "#[^#]*#+([^#]*)#*", in: 5) else { fatalError() }
+        XCTAssert(a == "def")
+        
+        guard let a1 = text.subString(pattern: "#[^#]*#+([^#]*)#*", in: 6) else { fatalError() }
+        XCTAssert(a1 == "def")
+        
+        
+        XCTAssert(text.subString(pattern: "#[^#]*#+([^#]*)#*", in: 8) == nil)
+        
+        
+        text = "#ab###def#cdg"
+        guard let a2 = text.subString(pattern: "#[^#]*#+([^#]*)#*", in: 6) else { fatalError() }
+        XCTAssert(a2 == "def")
+        
+        text = "#ab#def#cdg"
+        guard let a3 = text.subString(pattern: "#[^#]*#+([^#]*)#*", in: 4) else { fatalError() }
+        XCTAssert(a3 == "def")
+        
+        /// #{2,}表示至少有2个 #
+        XCTAssert(text.subString(pattern: "#[^#]*#{2,}([^#]*)#*", in: 4) == nil)
+        
+        
+        text = "#ab##def#cdg"
+        guard let a4 = text.subString(pattern: "#[^#]*#{2,}([^#]*)#*", in: 5) else { fatalError() }
+        XCTAssert(a4 == "def")
+        
+        
+        text = "#ab###def#cdg"
+        guard let a5 = text.subString(pattern: "#[^#]*#{2,}([^#]*)#*", in: 6) else { fatalError() }
+        XCTAssert(a5 == "def")
+        
+        
+        text = "#ab###我知道你是谁#cdg"
+        guard let a6 = text.subString(pattern: "#[^#]*#{2,}([^#]*)#*", in: 6) else { fatalError() }
+        XCTAssert(a6 == "我知道你是谁")
+    }
     
     
     func testMirror() {
