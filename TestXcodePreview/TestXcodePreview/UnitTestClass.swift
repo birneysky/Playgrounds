@@ -15,11 +15,14 @@ import UIKit
 
 /**
  
- 1:#somestring0##somestring#somestring1
- 2:#somestring0#somestring1#somestring
- 3:#somestring0##somestring
- 4:#somestring
- 5:somestring0#somestring
+ 1: #somestring0##somestring#somestring1
+ 2: #somestring0#somestring1#somestring
+ 3: #somestring0##somestring
+ 4: #somestring
+ 4: #####somestring
+ 5: somestring0#somestring
+ 5: somestring0######somestring
+ 7 #somestring0#somestring1#somestring
 
  以上五种字符串形式，匹配获取somestring 串所在范围的字符串内容 ,somestring 表示任意不包含#的字符串 . 请根据的这些字符串形式，请写出正则表达式，并解释为什么这么写
 
@@ -68,24 +71,18 @@ extension String {
 
         return nil
     }
-}
-func fetchSubstring(text:String, pattern: String ,in cursorPosition: Int) -> String? {
-    do {
-        let regex = try NSRegularExpression(pattern: pattern, options: [])
-        let matches = regex.matches(in: text, options: [], range: NSRange(location: 0, length: text.utf16.count))
-
-        for match in matches {
-            let matchRange = match.range(at: 1)
-            if matchRange.location != NSNotFound, let range = Range(matchRange, in: text) {
-                if range.contains(text.index(text.startIndex, offsetBy: cursorPosition)) {
-                    return String(text[range])
-                }
+    
+    func allmatchs(pattern: String) -> [NSTextCheckingResult]? {
+            do {
+                let regex = try NSRegularExpression(pattern: pattern, options: [])
+                return regex.matches(in: self, options: [], range: NSRange(location: 0, length: self.utf16.count))
+            } catch {
+                print("Invalid regex: \(error.localizedDescription)")
+                return nil
             }
         }
-    } catch {
-        print("Invalid regex: \(error.localizedDescription)")
-        return nil
-    }
-
-    return nil
 }
+
+
+
+

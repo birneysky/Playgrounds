@@ -110,6 +110,7 @@ final class TestXcodePreviewTests: XCTestCase {
         text = "#ab###我知道你是谁#cdg"
         guard let a6 = text.subString(pattern: "#[^#]*#{2,}([^#]*)#*", in: 6) else { fatalError() }
         XCTAssert(a6 == "我知道你是谁")
+
     }
     
     
