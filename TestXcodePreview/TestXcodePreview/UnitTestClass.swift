@@ -72,6 +72,19 @@ extension String {
         return nil
     }
     
+    func isMatch(pattern: String) -> Bool {
+        do {
+            let regex = try NSRegularExpression(pattern: pattern, options: [])
+            let matches = regex.matches(in: self, options: [], range: NSRange(location: 0, length: self.utf16.count))
+            if matches.count > 0 { return true }
+            return false
+        } catch {
+            print("Invalid regex: \(error.localizedDescription)")
+            return false
+        }
+
+    }
+    
     func allmatchs(pattern: String) -> [NSTextCheckingResult]? {
             do {
                 let regex = try NSRegularExpression(pattern: pattern, options: [])

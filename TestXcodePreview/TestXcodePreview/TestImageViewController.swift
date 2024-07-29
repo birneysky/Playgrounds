@@ -195,7 +195,7 @@ class TestImageViewController: UIViewController, UITextViewDelegate {
                 cursorIndex = updatedText.index(updatedText.startIndex, offsetBy: cursorPosition)
                 print("----- \(cursorPosition), \(updatedText[cursorIndex])")
                 if updatedText[cursorIndex] == "#" {
-                    cursorPosition += 1
+                    //cursorPosition += 1
                 }
             } else {
             
@@ -216,7 +216,30 @@ class TestImageViewController: UIViewController, UITextViewDelegate {
                 }
                     
             }
+            if let lastRange = macthes.last?.range, let firstRange = macthes.first?.range, cursorPosition < lastRange.location + lastRange.length && cursorPosition > firstRange.location {
+                print("#################### return")
+                return
+            }
+            var  tailText = updatedText
+            if let range = macthes.last?.range,
+                cursorPosition >= range.location + range.length,
+               let textRange = Range(range, in: updatedText) {
+                
+                print("---\(textRange)")
+                tailText = String(updatedText[textRange.upperBound...])
+                cursorPosition -= range.location + range.length
+                
+            }
             
+            
+            print("---------- tailText:\(tailText)")
+            if tailText == "#" {
+                print("-----1 DidChange \"\"")
+            } else if tailText.isMatch(pattern: "[^#]#$|#{2,}$") {
+                print("-----2 DidChange \"\"")
+            } else if let tt = tailText.subString(pattern: "#([^#]*)", in: cursorPosition) {
+                print("-----3 DidChange \(cursorPosition) \(tt)")
+            }
             /*
             if let tt = textView.text.subString(pattern: "#[^#]*#{2,}([^#]*)#*", in: cursorPosition - 1) {
                 print("-----1 DidChange \(cursorPosition) \(tt)")
