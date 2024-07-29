@@ -118,7 +118,7 @@ class ViewController: UIViewController {
         
         
         self.view.backgroundColor = .white
-        let viewx = KTVScaleLineView(frame: CGRect(x: 0, y: 500, width: 397, height: 104), style: .begin, duration: 5)
+        let viewx = KTVScaleLineView(frame: CGRect(x: 0, y: 500, width: 397, height: 104), style: .begin, startTime: 0, endTime: 10000)
         self.view.addSubview(viewx)
     }
     
