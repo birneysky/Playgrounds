@@ -150,12 +150,28 @@
                         <constraint firstAttribute="width" constant="50" id="hQU-V8-lfz"/>
                     </constraints>
                 </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ji1-Lo-O6P">
+                    <rect key="frame" x="328.33333333333331" y="13.333333333333332" width="48.666666666666686" height="13.333333333333332"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uks-dB-wuI">
+                    <rect key="frame" x="16" y="13.333333333333332" width="48.666666666666657" height="13.333333333333332"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="CTS-wf-k84" firstAttribute="top" secondItem="uks-dB-wuI" secondAttribute="bottom" constant="4" id="0k0-UM-SrI"/>
                 <constraint firstItem="kbT-ND-Yz6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="4yu-7k-Vul"/>
+                <constraint firstItem="CTS-wf-k84" firstAttribute="top" secondItem="ji1-Lo-O6P" secondAttribute="bottom" constant="4" id="U8o-Cm-FKz"/>
+                <constraint firstItem="uks-dB-wuI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="UO5-rq-iKu"/>
                 <constraint firstItem="0Tx-4H-CkV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bjf-7I-psD"/>
+                <constraint firstAttribute="trailing" secondItem="ji1-Lo-O6P" secondAttribute="trailing" constant="16" id="dHM-55-e3s"/>
                 <constraint firstItem="CTS-wf-k84" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="egt-bx-CE0"/>
                 <constraint firstItem="CTS-wf-k84" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ewu-G1-hd8"/>
                 <constraint firstAttribute="trailing" secondItem="CTS-wf-k84" secondAttribute="trailing" constant="16" id="plW-bv-NcS"/>
@@ -165,7 +181,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="beginView" destination="kbT-ND-Yz6" id="xDY-OU-1wP"/>
+                <outlet property="endTimeLabel" destination="uks-dB-wuI" id="Hey-z5-e96"/>
                 <outlet property="endView" destination="0Tx-4H-CkV" id="rKv-7R-O7g"/>
+                <outlet property="startTimeLabel" destination="ji1-Lo-O6P" id="5v1-xU-Lnz"/>
             </connections>
             <point key="canvasLocation" x="138" y="21"/>
         </view>

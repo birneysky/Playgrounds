@@ -13,7 +13,7 @@ class KTVTimeFineTuningViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let beginView = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .begin, duration: 10)
+        let beginView = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .begin, startTime: 0, endTime: 10)
         self.container.addArrangedSubview(beginView)
 
         let label = UILabel()
@@ -28,7 +28,7 @@ class KTVTimeFineTuningViewController: UIViewController {
 //        label2.text = "请不必惊怕"
 //        self.container.addArrangedSubview(label2)
         
-        let endView = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .end, duration: 30)
+        let endView = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .end, startTime: 20, endTime: 50)
         self.container.addArrangedSubview(endView)
         // Do any additional setup after loading the view.
     }

@@ -20,21 +20,24 @@ class KTVScaleLineView: UIView {
         }
     }
 
-    var duration: TimeInterval = 10
+    var duration: TimeInterval {
+        return endTime - startTime
+    }
+    var startTime: TimeInterval
+    var endTime: TimeInterval
+    var currTime: TimeInterval = 0
     private var style: KTVFineTuningLineViewStyle
     // 初始化方法
-    init(frame: CGRect, style: KTVFineTuningLineViewStyle, duration: TimeInterval) {
+    init(frame: CGRect, style: KTVFineTuningLineViewStyle, startTime: TimeInterval, endTime: TimeInterval) {
         self.style = style
-        self.duration = duration
+        self.startTime =  startTime
+        self.endTime = endTime
         super.init(frame: frame)
         setup()
     }
 
     required init?(coder aDecoder: NSCoder) {
-        self.style = .begin
-        self.duration = 3
-        super.init(coder: aDecoder)
-        setup()
+        fatalError("unsupport nib")
     }
     
 //    init(style: KTVFineTuningLineViewStyle) {
@@ -76,11 +79,13 @@ class KTVScaleLineView: UIView {
     }()
 
     func increaseTime() {
-        let offset = 0.01 / secondPerPoint
+        let offset = 10.0 / secondPerPoint
         if tuningLine.style == .begin {
             self.baselineY -= offset
+            currTime += 10
         } else {
             self.baselineY += offset
+            currTime -= 10
         }
         if self.baselineY <= topOffset {
             self.baselineY = topOffset
@@ -89,16 +94,26 @@ class KTVScaleLineView: UIView {
         if self.baselineY >= topOffset + scaleLineHeight {
             self.baselineY = topOffset + scaleLineHeight
         }
+        
         tuningLine.center = CGPoint(x: bounds.midX, y: self.baselineY)
-        print("+++ offset\(offset) time\(time)")
+        if currTime > self.endTime {
+            currTime = self.endTime
+        }
+        if currTime < self.startTime {
+            currTime = self.startTime
+        }
+        print("+++ offset\(offset) time\(offSetTime)")
+        updatetTimeLabel()
     }
     
     func decreaseTime() {
-        let offset = 0.01 / secondPerPoint
+        let offset = 10.0 / secondPerPoint
         if tuningLine.style == .begin {
             self.baselineY += offset
+            currTime -= 10
         } else {
             self.baselineY -= offset
+            currTime += 10
         }
         
         if self.baselineY <= topOffset {
@@ -108,8 +123,16 @@ class KTVScaleLineView: UIView {
         if self.baselineY >= topOffset + scaleLineHeight {
             self.baselineY = topOffset + scaleLineHeight
         }
+        
+        if currTime > self.endTime {
+            currTime = self.endTime
+        }
+        if currTime < self.startTime {
+            currTime = self.startTime
+        }
         tuningLine.center = CGPoint(x: bounds.midX, y: self.baselineY)
-        print("+++ offset\(offset) time\(time)")
+        print("+++ offset\(offset) time\(offSetTime)")
+        updatetTimeLabel()
     }
     
 
@@ -117,15 +140,24 @@ class KTVScaleLineView: UIView {
     let topOffset: CGFloat = 31
     var centerY: CGFloat = 0
     var lineNum: Int {
-        var num = 3
-        if duration > 0 , duration <= 3 {
+        var num = 3000
+        if duration > 0 , duration <= 3000 {
             num = 3
-        } else if duration > 3, duration <= 30 {
+        } else if duration > 3000, duration <= 30000 {
             num = 13
         } else {
             num = 21
         }
         return num
+    }
+    
+    func updatetTimeLabel() {
+        switch style {
+        case .begin:
+            tuningLine.setTime(endTime - currTime)
+        case .end:
+            tuningLine.setTime(startTime - currTime)
+        }
     }
     
     var scaleLineHeight: CGFloat {
@@ -137,7 +169,7 @@ class KTVScaleLineView: UIView {
         return duration / scaleLineHeight;
     }
     
-    var time: TimeInterval {
+    var offSetTime: TimeInterval {
         if tuningLine.style == .end {
             return (baselineY - topOffset) * secondPerPoint
         } else {
@@ -203,7 +235,9 @@ class KTVScaleLineView: UIView {
         baselineY = self.bounds.maxY / 2
         centerY = baselineY
         tuningLine.center = CGPoint(x: self.bounds.maxX / 2, y: baselineY)
-        print("base y\(baselineY) bounds:\(self.bounds), center:\(self.center) time:\(time)")
+        print("base y\(baselineY) bounds:\(self.bounds), center:\(self.center) time:\(offSetTime)")
+        currTime = offSetTime
+        updatetTimeLabel()
     }
 
         @objc private func handleSlidingPan(_ gesture: UIPanGestureRecognizer) {
@@ -228,8 +262,9 @@ class KTVScaleLineView: UIView {
                 tuningLine.center = CGPoint(x: bounds.midX, y: newY)
                 baselineY = newY
                 
-                
-                print("-------- hhh \(baselineY - topOffset) scaleLineHeight:\(scaleLineHeight), time:\(time)")
+                print("-------- hhh \(baselineY - topOffset) scaleLineHeight:\(scaleLineHeight), time:\(offSetTime)")
+                currTime = offSetTime
+                updatetTimeLabel()
             }
             
         }
@@ -274,12 +309,12 @@ class KTVScaleLineView: UIView {
 
 
 #Preview("KTVScaleLineViewBegin", traits: .portrait) {
-    let view = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .begin, duration: 15)
+    let view = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .begin, startTime: 10000, endTime: 15000)
     return view
 }
 
 
 #Preview("KTVScaleLineViewEnd", traits: .portrait) {
-    let view = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .end, duration: 10)
+    let view = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .end, startTime: 20000, endTime: 35000)
     return view
 }
