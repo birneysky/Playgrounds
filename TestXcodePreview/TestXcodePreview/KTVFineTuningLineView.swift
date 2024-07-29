@@ -55,7 +55,7 @@ class KTVFineTuningLineView: UIView {
         let formattedSeconds = String(format: "%02d", seconds)
         let formattedTenths = String(format: "%02d", tenths)
         
-        return "\(formattedMinutes):\(formattedSeconds):\(formattedTenths)0"
+        return "\(formattedMinutes):\(formattedSeconds):\(formattedTenths)"
     }
     
     func setTime(_ time: TimeInterval) {

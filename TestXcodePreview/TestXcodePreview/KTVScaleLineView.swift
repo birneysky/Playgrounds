@@ -82,11 +82,10 @@ class KTVScaleLineView: UIView {
         let offset = 10.0 / secondPerPoint
         if tuningLine.style == .begin {
             self.baselineY -= offset
-            currTime += 10
         } else {
             self.baselineY += offset
-            currTime -= 10
         }
+        currTime += 10
         if self.baselineY <= topOffset {
             self.baselineY = topOffset
         }
@@ -96,13 +95,11 @@ class KTVScaleLineView: UIView {
         }
         
         tuningLine.center = CGPoint(x: bounds.midX, y: self.baselineY)
-        if currTime > self.endTime {
-            currTime = self.endTime
+        
+        if currTime > duration {
+            currTime = duration
         }
-        if currTime < self.startTime {
-            currTime = self.startTime
-        }
-        print("+++ offset\(offset) time\(offSetTime)")
+        print("+++ offset\(offset) time\(offSetTime),curtime\(currTime) duration\(duration)")
         updatetTimeLabel()
     }
     
@@ -110,11 +107,11 @@ class KTVScaleLineView: UIView {
         let offset = 10.0 / secondPerPoint
         if tuningLine.style == .begin {
             self.baselineY += offset
-            currTime -= 10
         } else {
             self.baselineY -= offset
-            currTime += 10
+            
         }
+        currTime -= 10
         
         if self.baselineY <= topOffset {
             self.baselineY = topOffset
@@ -123,15 +120,11 @@ class KTVScaleLineView: UIView {
         if self.baselineY >= topOffset + scaleLineHeight {
             self.baselineY = topOffset + scaleLineHeight
         }
-        
-        if currTime > self.endTime {
-            currTime = self.endTime
-        }
-        if currTime < self.startTime {
-            currTime = self.startTime
+        if currTime < 0 {
+            currTime = 0
         }
         tuningLine.center = CGPoint(x: bounds.midX, y: self.baselineY)
-        print("+++ offset\(offset) time\(offSetTime)")
+        print("+++ offset\(offset) time\(offSetTime),curtime\(currTime) duration\(duration)")
         updatetTimeLabel()
     }
     
@@ -156,7 +149,7 @@ class KTVScaleLineView: UIView {
         case .begin:
             tuningLine.setTime(endTime - currTime)
         case .end:
-            tuningLine.setTime(startTime - currTime)
+            tuningLine.setTime(startTime + currTime)
         }
     }
     
