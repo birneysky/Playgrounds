@@ -1,21 +1,24 @@
 //
-//  KTVTimeFineTuningViewController.swift
+//  KTVFineTuningTimeViewController.swift
 //  TestXcodePreview
 //
-//  Created by Bruce on 2024/7/23.
+//  Created by Bruce on 2024/7/30.
 //
 
 import UIKit
 
-class KTVTimeFineTuningViewController: UIViewController {
+class KTVFineTuningTimeViewController: UIViewController {
 
     @IBOutlet weak var container: UIStackView!
     override func viewDidLoad() {
+        super.viewDidLoad()
         super.viewDidLoad()
         for view in container.subviews {
             view.removeFromSuperview()
         }
         let beginView = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .begin, startTime: 0, endTime: 10000, firstLyric: "尽管讲出不快吧", secondLyric: "仍然紧守于身边")
+        beginView.backgroundColor = rgba("#333333ff")
+        
         self.container.addArrangedSubview(beginView)
 
         let label = UILabel()
@@ -31,12 +34,11 @@ class KTVTimeFineTuningViewController: UIViewController {
 //        self.container.addArrangedSubview(label2)
         
         let endView = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .end, startTime: 20, endTime: 50, firstLyric: "尽管讲出不快吧", secondLyric: "仍然紧守于身边")
+        endView.backgroundColor = rgba("#333333ff")
         self.container.addArrangedSubview(endView)
         // Do any additional setup after loading the view.
     }
     
-    
-
 
     /*
     // MARK: - Navigation
@@ -55,7 +57,7 @@ class KTVTimeFineTuningViewController: UIViewController {
     
     let parentController = UIViewController()
     parentController.view.backgroundColor = .white
-    let controller = KTVTimeFineTuningViewController.controller()
+    let controller = KTVFineTuningTimeViewController.controller()
     parentController.addChild(controller)
     parentController.view.addSubview(controller.view)
     controller.view.translatesAutoresizingMaskIntoConstraints = false

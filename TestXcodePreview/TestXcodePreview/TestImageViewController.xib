@@ -36,10 +36,17 @@
                         <outlet property="delegate" destination="-1" id="nC9-c0-0U0"/>
                     </connections>
                 </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoR-rN-j4f">
+                    <rect key="frame" x="16" y="618" width="54" height="34"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="eoR-rN-j4f" secondAttribute="bottom" constant="200" id="2eB-BP-yBX"/>
+                <constraint firstItem="eoR-rN-j4f" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="2hH-eX-Kq7"/>
                 <constraint firstItem="VSD-Qf-8B5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7eI-A4-VuV"/>
                 <constraint firstItem="VSD-Qf-8B5" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Kvn-8g-y2f"/>
             </constraints>
