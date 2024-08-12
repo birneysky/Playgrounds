@@ -20,6 +20,10 @@
 		32038B022B47F27E000FE88B /* KTVPartialRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32038B012B47F27E000FE88B /* KTVPartialRoundedView.swift */; };
 		320DB8D92C21719500410719 /* KTVLRRedPacketRewardsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DB8D82C21719500410719 /* KTVLRRedPacketRewardsTableView.swift */; };
 		320DB8DB2C2171A300410719 /* KTVLRRedPacketRewardsTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 320DB8DA2C2171A300410719 /* KTVLRRedPacketRewardsTableView.xib */; };
+		3212380B2C58CC2300BFF154 /* TestVerticalScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321238092C58CC2300BFF154 /* TestVerticalScrollViewController.swift */; };
+		3212380C2C58CC2300BFF154 /* TestVerticalScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3212380A2C58CC2300BFF154 /* TestVerticalScrollViewController.xib */; };
+		321238102C58D69600BFF154 /* KTVFineTuningTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3212380F2C58D69600BFF154 /* KTVFineTuningTimeViewController.swift */; };
+		321238122C58D6E500BFF154 /* KTVFineTuningTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 321238112C58D6E400BFF154 /* KTVFineTuningTimeViewController.xib */; };
 		321290D02BA82D8D006AEFA9 /* KTVSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321290CF2BA82D8D006AEFA9 /* KTVSegmentedControl.swift */; };
 		321290D52BA83E36006AEFA9 /* KTVRankTop3Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321290D32BA83E36006AEFA9 /* KTVRankTop3Cell.swift */; };
 		321290D62BA83E36006AEFA9 /* KTVRankTop3Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 321290D42BA83E36006AEFA9 /* KTVRankTop3Cell.xib */; };
@@ -127,6 +131,10 @@
 		32038B012B47F27E000FE88B /* KTVPartialRoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTVPartialRoundedView.swift; sourceTree = "<group>"; };
 		320DB8D82C21719500410719 /* KTVLRRedPacketRewardsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRRedPacketRewardsTableView.swift; sourceTree = "<group>"; };
 		320DB8DA2C2171A300410719 /* KTVLRRedPacketRewardsTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVLRRedPacketRewardsTableView.xib; sourceTree = "<group>"; };
+		321238092C58CC2300BFF154 /* TestVerticalScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVerticalScrollViewController.swift; sourceTree = "<group>"; };
+		3212380A2C58CC2300BFF154 /* TestVerticalScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestVerticalScrollViewController.xib; sourceTree = "<group>"; };
+		3212380F2C58D69600BFF154 /* KTVFineTuningTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVFineTuningTimeViewController.swift; sourceTree = "<group>"; };
+		321238112C58D6E400BFF154 /* KTVFineTuningTimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KTVFineTuningTimeViewController.xib; sourceTree = "<group>"; };
 		321290CF2BA82D8D006AEFA9 /* KTVSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVSegmentedControl.swift; sourceTree = "<group>"; };
 		321290D32BA83E36006AEFA9 /* KTVRankTop3Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVRankTop3Cell.swift; sourceTree = "<group>"; };
 		321290D42BA83E36006AEFA9 /* KTVRankTop3Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVRankTop3Cell.xib; sourceTree = "<group>"; };
@@ -318,12 +326,16 @@
 				3295FB8D2C4655F8009C6F22 /* WKWebViewController.xib */,
 				3299E0062C4681FB008899D6 /* TestImageViewController.swift */,
 				3299E0072C4681FB008899D6 /* TestImageViewController.xib */,
+				321238092C58CC2300BFF154 /* TestVerticalScrollViewController.swift */,
+				3212380A2C58CC2300BFF154 /* TestVerticalScrollViewController.xib */,
 				32B2F94B2C1B16A200286F0F /* Observable.swift */,
 				329718B02C41906900450668 /* KTVImageView.h */,
 				329718B12C41906900450668 /* KTVImageView.m */,
 				329718B52C4194A300450668 /* KTVImageViewPreView.swift */,
 				32EA10D52C1BEB1400BDEBD0 /* UIColor+Hex.h */,
 				32EA10D62C1BEB1400BDEBD0 /* UIColor+Hex.m */,
+				3212380F2C58D69600BFF154 /* KTVFineTuningTimeViewController.swift */,
+				321238112C58D6E400BFF154 /* KTVFineTuningTimeViewController.xib */,
 				32A6DFD02C4F492C00186562 /* KTVTimeFineTuningViewController.swift */,
 				32A6DFD12C4F492C00186562 /* KTVTimeFineTuningViewController.xib */,
 				32F7DF042C4F5CE500681943 /* KTVScaleLineView.swift */,
@@ -472,6 +484,8 @@
 				32EA10E12C1C202C00BDEBD0 /* KTVLRSendRedPacketTextItemCell.xib in Resources */,
 				323BA6B32BFDD997007890C9 /* TestCollectionViewCell.xib in Resources */,
 				326089562BC51DCC00442446 /* KTVSingBannerItemView.xib in Resources */,
+				3212380C2C58CC2300BFF154 /* TestVerticalScrollViewController.xib in Resources */,
+				321238122C58D6E500BFF154 /* KTVFineTuningTimeViewController.xib in Resources */,
 				32F7DF092C4F630900681943 /* KTVFineTuningLineView.xib in Resources */,
 				323B2FC42BD8A9660018E190 /* KTVRankItemViewController.xib in Resources */,
 				323B2FCC2BD8E9DB0018E190 /* KTVPluginItemView.xib in Resources */,
@@ -547,6 +561,7 @@
 				323B2FCA2BD8E3430018E190 /* UIKit+Nib.swift in Sources */,
 				321290D02BA82D8D006AEFA9 /* KTVSegmentedControl.swift in Sources */,
 				32B59AB52C21306D00AC9FC5 /* KTVLRParticipatedRedPacketView.swift in Sources */,
+				3212380B2C58CC2300BFF154 /* TestVerticalScrollViewController.swift in Sources */,
 				321B0A2B2C05D17700DFBCFF /* KTVADScrollingBubblesViewController.swift in Sources */,
 				3295FB8F2C4655F8009C6F22 /* WKWebViewController.swift in Sources */,
 				32EA10DC2C1C159200BDEBD0 /* KTVLRSendRedPacketViewModel.swift in Sources */,
@@ -564,6 +579,7 @@
 				323BA6AC2BFDCB68007890C9 /* KTVBannerItemViewA.swift in Sources */,
 				32EC65632BC4096E00D388DB /* KTVSingHeaderTShapeView.swift in Sources */,
 				320DB8D92C21719500410719 /* KTVLRRedPacketRewardsTableView.swift in Sources */,
+				321238102C58D69600BFF154 /* KTVFineTuningTimeViewController.swift in Sources */,
 				32038AD42B47F262000FE88B /* SceneDelegate.swift in Sources */,
 				3292A7022C6AD38C00A95354 /* GradientLabel2.swift in Sources */,
 			);

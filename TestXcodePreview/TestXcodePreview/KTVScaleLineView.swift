@@ -26,12 +26,16 @@ class KTVScaleLineView: UIView {
     var startTime: TimeInterval
     var endTime: TimeInterval
     var currTime: TimeInterval = 0
+    var firstLyric: String? = nil
+    var secondLyric: String? = nil
     private var style: KTVFineTuningLineViewStyle
     // 初始化方法
-    init(frame: CGRect, style: KTVFineTuningLineViewStyle, startTime: TimeInterval, endTime: TimeInterval) {
+    init(frame: CGRect, style: KTVFineTuningLineViewStyle, startTime: TimeInterval, endTime: TimeInterval, firstLyric: String? = nil, secondLyric: String? = nil) {
         self.style = style
         self.startTime =  startTime
         self.endTime = endTime
+        self.firstLyric = firstLyric
+        self.secondLyric = secondLyric
         super.init(frame: frame)
         setup()
     }
@@ -71,7 +75,7 @@ class KTVScaleLineView: UIView {
     }()
     
     
-    private lazy var lastLyricsLabel = {
+    private lazy var secondLyricsLabel = {
         let label = UILabel()
         label.textColor = style == .begin ? rgba("#FF3348FF") :rgba("##FFFFFF4D")
         label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
@@ -197,7 +201,7 @@ class KTVScaleLineView: UIView {
         ])
         
         
-        firstLyricsLabel.text = "尽管讲出不快吧"
+        firstLyricsLabel.text = self.firstLyric
         addSubview(firstLyricsLabel)
         
         firstLyricsLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -206,12 +210,12 @@ class KTVScaleLineView: UIView {
             firstLyricsLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 0)
         ])
         
-        lastLyricsLabel.text = "仍然紧守于身边"
-        addSubview(lastLyricsLabel)
-        lastLyricsLabel.translatesAutoresizingMaskIntoConstraints = false
+        secondLyricsLabel.text = self.secondLyric
+        addSubview(secondLyricsLabel)
+        secondLyricsLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            lastLyricsLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            lastLyricsLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)
+            secondLyricsLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            secondLyricsLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)
         ])
         
         invalidateIntrinsicContentSize()
@@ -265,6 +269,8 @@ class KTVScaleLineView: UIView {
         override func draw(_ rect: CGRect) {
             guard let context = UIGraphicsGetCurrentContext() else { return }
             let numberOfLines = lineNum
+            context.setFillColor(UIColor.clear.cgColor)
+            context.fill(rect)
             let width: [CGFloat] = [16, 50, 90, 50, 16]
             var yPosition: CGFloat = topOffset + 2
             for i in 0 ..< numberOfLines {
@@ -291,6 +297,7 @@ class KTVScaleLineView: UIView {
                 context.strokePath()
                 yPosition +=  lineHeight + 2
             }
+            
         }
     
     override var intrinsicContentSize: CGSize {
@@ -302,12 +309,13 @@ class KTVScaleLineView: UIView {
 
 
 #Preview("KTVScaleLineViewBegin", traits: .portrait) {
-    let view = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .begin, startTime: 10000, endTime: 15000)
+    let view = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .begin, startTime: 10000, endTime: 15000, firstLyric: "尽管讲出不快吧", secondLyric: "仍然紧守于身边")
+    view.backgroundColor = .purple
     return view
 }
 
 
 #Preview("KTVScaleLineViewEnd", traits: .portrait) {
-    let view = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .end, startTime: 20000, endTime: 35000)
+    let view = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .end, startTime: 20000, endTime: 35000, firstLyric: "尽管讲出不快吧", secondLyric: "仍然紧守于身边")
     return view
 }
