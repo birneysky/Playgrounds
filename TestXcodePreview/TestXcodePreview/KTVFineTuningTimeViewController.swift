@@ -16,16 +16,52 @@ class KTVFineTuningTimeViewController: UIViewController {
         for view in container.subviews {
             view.removeFromSuperview()
         }
-        let beginView = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .begin, startTime: 0, endTime: 10000, firstLyric: "尽管讲出不快吧", secondLyric: "仍然紧守于身边")
+        let beginView = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .begin, startTime: 0, endTime: 10000, firstLyric: "尽管讲出不快吧", secondLyric:nil)
         beginView.backgroundColor = rgba("#333333ff")
         
         self.container.addArrangedSubview(beginView)
-
-        let label = UILabel()
-        label.textColor = rgba("#FF3348FF")
-        label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
-        label.text = "•••    中间歌词已省略    •••"
-        self.container.addArrangedSubview(label)
+        //self.container.spacing = -20
+//        let label = UILabel()
+//        label.textColor = rgba("#FF3348FF")
+//        label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+//        label.text = "•••    中间歌词已省略    •••"
+//        self.container.addArrangedSubview(label)
+        
+        let statckView = UIStackView()
+        statckView.axis = .horizontal
+        statckView.alignment = .center
+        statckView.distribution = .equalSpacing;
+        statckView.spacing = 0;
+        
+        let leftlabel = UILabel()
+        leftlabel.textColor = rgba("#FF3348FF")
+        leftlabel.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        leftlabel.text = "•••    "
+        statckView.addArrangedSubview(leftlabel)
+        
+        let middlelabel = UILabel()
+        middlelabel.textAlignment = .center
+        middlelabel.textColor = rgba("#FF3348FF")
+        middlelabel.font = UIFont.systemFont(ofSize: 11, weight: .medium)
+        middlelabel.text = "中间歌词已省略"
+        middlelabel.backgroundColor = UIColor(_colorLiteralRed: 255.0/255.0, green: 51/255.0, blue: 72/255.0, alpha: 0.08)
+        middlelabel.layer.cornerRadius = 4
+        middlelabel.layer.masksToBounds = true
+        NSLayoutConstraint.activate([
+            middlelabel.widthAnchor.constraint(equalToConstant: 93),
+            middlelabel.heightAnchor.constraint(equalToConstant: 24)
+        ])
+        statckView.addArrangedSubview(middlelabel)
+        
+        let rightlabel = UILabel()
+        rightlabel.textColor = rgba("#FF3348FF")
+        rightlabel.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        rightlabel.text = "    •••"
+        statckView.addArrangedSubview(rightlabel)
+        self.container.addArrangedSubview(statckView)
+        //middlelabel.height = statckView.height
+        
+        
         
 //        let label2 = UILabel()
 //        label2.textColor = rgba("#FF3348FF")
@@ -33,8 +69,9 @@ class KTVFineTuningTimeViewController: UIViewController {
 //        label2.text = "请不必惊怕"
 //        self.container.addArrangedSubview(label2)
         
-        let endView = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .end, startTime: 20, endTime: 50, firstLyric: "尽管讲出不快吧", secondLyric: "仍然紧守于身边")
-        endView.backgroundColor = rgba("#333333ff")
+        let endView = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .end, startTime: 20, endTime: 50, firstLyric: nil, secondLyric: "仍然紧守于身边")
+        endView.backgroundColor = .clear
+        //endView.backgroundColor = rgba("#333333ff")
         self.container.addArrangedSubview(endView)
         // Do any additional setup after loading the view.
     }

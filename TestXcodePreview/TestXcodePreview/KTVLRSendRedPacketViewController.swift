@@ -70,7 +70,7 @@ class KTVLRSendRedPacketViewController: UIViewController {
         rightView.backgroundColor = .clear
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 30, height: 28))
         label.text = "个"
-        label.textColor = rgba("##FF334899")
+        label.textColor = rgba("#FF334899")
         label.textAlignment = .center
         rightView.addSubview(label)
         numTextField.rightViewMode = .always

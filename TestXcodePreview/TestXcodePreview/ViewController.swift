@@ -125,6 +125,22 @@ class ViewController: UIViewController {
                                      firstLyric: "尽管讲出不快吧",
                                      secondLyric: "仍然紧守于身边")
         self.view.addSubview(viewx)
+        
+        let views  = ShiningLabel(gradientColors: [
+            rgba("#CA7D00FF"),
+            rgba("#CA7D00FF"),
+            rgba("#FFEB01FF"),
+            rgba("#FFEB01FF"),
+            rgba("#CA7D00FF"),
+            rgba("#CA7D00FF"),
+        ], locations: [
+            0, 0.34, 0.37, 0.48, 0.5, 1
+        ], startPoint: CGPoint(x: 0, y: 0.5),
+         endPoint: CGPoint(x: 1, y: 0.5))
+        views.text = "💦💦川仔端茶又倒水川仔端茶又倒水"
+        views.font = UIFont.systemFont(ofSize: 17)
+        view.frame = CGRect(x: 0, y: 100, width: 397, height: 104)
+        self.view.addSubview(views)
     }
     
     override func viewDidAppear(_ animated: Bool) {
