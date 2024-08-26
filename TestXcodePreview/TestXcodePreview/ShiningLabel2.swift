@@ -13,6 +13,8 @@ import UIKit
 
 class ShiningLabel2: UILabel {
 
+    private let textLayer = CATextLayer()
+    private let textLayer1 = CATextLayer()
     private let gradientLayer = CAGradientLayer()
     private var colors: [UIColor]
     private var locations: [NSNumber]
@@ -31,6 +33,10 @@ class ShiningLabel2: UILabel {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func drawText(in rect: CGRect) {
+        
     }
     
     private func setup() {
@@ -55,7 +61,6 @@ class ShiningLabel2: UILabel {
         gradientLayer.frame = bounds
         textLayer.frame = bounds
         textLayer1.frame = bounds
-        textLabel.frame = bounds
         updateTextLayer()
         
     }
@@ -66,12 +71,14 @@ class ShiningLabel2: UILabel {
         textLayer.fontSize = font.pointSize
         textLayer.alignmentMode = alignmentMode(from: textAlignment)
         textLayer.contentsScale = UIScreen.main.scale
+        textLayer.truncationMode = .end
         
         textLayer1.string = createAttributedString(from: text ?? "")
         textLayer1.font = font
         textLayer1.fontSize = font.pointSize
         textLayer1.alignmentMode = alignmentMode(from: textAlignment)
         textLayer1.contentsScale = UIScreen.main.scale
+        textLayer1.truncationMode = .end
     }
     
     private func alignmentMode(from textAlignment: NSTextAlignment) -> CATextLayerAlignmentMode {
@@ -114,12 +121,11 @@ class ShiningLabel2: UILabel {
         
         return CGSize(width: ceil(size.width), height: ceil(size.height))
     }
-    private let textLayer = CATextLayer()
-    private let textLayer1 = CATextLayer()
-    private let textLabel = UILabel()
+
     override var intrinsicContentSize: CGSize {
         //self.bounds.size
-        return calculateTextLayerSize()
+        //return calculateTextLayerSize()
+        super.intrinsicContentSize
     }
     
     func createAttributedString(from text: String) -> NSAttributedString {
@@ -164,7 +170,7 @@ class ShiningLabel2: UILabel {
         0, 0.34, 0.37, 0.48, 0.5, 1
     ], startPoint: CGPoint(x: 0, y: 0.5),
      endPoint: CGPoint(x: 1, y: 0.5))
-    view.text = "💦川🌤️端😇茶又💦水川😜仔💔端💓茶💟又"
-    view.font = UIFont.systemFont(ofSize: 17)
+    view.text = "💦川🌤️💓端💔😇a茶又💦水川💟😜仔端茶"
+    view.font = UIFont.systemFont(ofSize: 14)
     return view
 }

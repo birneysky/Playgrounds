@@ -26,8 +26,9 @@ class GradientLabel: UIView {
     
     var text: String? {
         didSet {
-            let attributeText = extractAndReplaceEmojis(in: text ?? "", with: 20)
-            self.label.attributedText = attributeText
+            //let attributeText = extractAndReplaceEmojis(in: text ?? "", with: 20)
+            //self.label.attributedText = attributeText
+            self.label.text = text
             self.label.sizeToFit()
         }
     }
