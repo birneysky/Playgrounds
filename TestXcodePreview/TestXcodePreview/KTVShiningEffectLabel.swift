@@ -11,7 +11,7 @@ import UIKit
 
 
 
-class ShiningLabel2: UILabel {
+class KTVShiningEffectLabel: UILabel {
 
     private let textLayer = CATextLayer()
     private let textLayer1 = CATextLayer()
@@ -123,8 +123,6 @@ class ShiningLabel2: UILabel {
     }
 
     override var intrinsicContentSize: CGSize {
-        //self.bounds.size
-        //return calculateTextLayerSize()
         super.intrinsicContentSize
     }
     
@@ -132,7 +130,7 @@ class ShiningLabel2: UILabel {
         let attributedString = NSMutableAttributedString(string: text)
 
         // Emoji Regular Expression Pattern
-        let emojiPattern = "[\\p{Emoji}\\p{Emoji_Presentation}\\p{Emoji_Modifier}\\p{Emoji_Modifier_Base}\\p{Emoji_Component}]"
+        let emojiPattern =  "[\\p{Emoji}\\p{Emoji_Presentation}\\p{Emoji_Modifier}\\p{Emoji_Modifier_Base}\\p{Emoji_Component}&&[^0-9]]"
         
         do {
             // Create a regex object for matching emojis
@@ -147,7 +145,8 @@ class ShiningLabel2: UILabel {
             
             // Loop through all the matches and reset their color to default (black or system)
             for match in matches {
-                attributedString.addAttribute(.foregroundColor, value: UIColor.label, range: match.range)
+                print("######\(match.range)")
+                attributedString.addAttribute(.foregroundColor, value: textColor as Any, range: match.range)
             }
             
         } catch {
@@ -159,7 +158,7 @@ class ShiningLabel2: UILabel {
 }
 
 #Preview {
-    let view  = ShiningLabel2(gradientColors: [
+    let view  = KTVShiningEffectLabel(gradientColors: [
         rgba("#CA7D00FF"),
         rgba("#CA7D00FF"),
         rgba("#FFEB01FF"),
@@ -170,7 +169,8 @@ class ShiningLabel2: UILabel {
         0, 0.34, 0.37, 0.48, 0.5, 1
     ], startPoint: CGPoint(x: 0, y: 0.5),
      endPoint: CGPoint(x: 1, y: 0.5))
-    view.text = "💦川🌤️💓端💔😇a茶又💦水川💟😜仔端茶"
+    view.text = "W😇a😜L💔DE💓FF💟HIJKLM🌤️OPQ🌤️24329💦"
     view.font = UIFont.systemFont(ofSize: 14)
+    view.textColor = .red
     return view
 }
