@@ -185,7 +185,7 @@ class KTVShiningEffectLabel: UILabel {
     ], locations: [
         0, 0.34, 0.37, 0.48, 0.5, 1
     ], startPoint: CGPoint(x: 0, y: 0.5),
-     endPoint: CGPoint(x: 1, y: 0.5))
+       endPoint: CGPoint(x: 1, y: 0.5))
     view.text = "W😇a😜L💔DE💓FF💟HIJKLM🌤️OPQ🌤️24329💦"
     view.font = UIFont.systemFont(ofSize: 14)
     view.textColor = .red

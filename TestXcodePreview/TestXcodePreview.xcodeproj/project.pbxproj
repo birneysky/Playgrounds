@@ -59,6 +59,8 @@
 		328741C92C6DD734002BB949 /* KTVWebContainerLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328741C82C6DD734002BB949 /* KTVWebContainerLoadingView.swift */; };
 		328741CB2C6DD744002BB949 /* KTVWebContainerLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 328741CA2C6DD744002BB949 /* KTVWebContainerLoadingView.xib */; };
 		3292A7022C6AD38C00A95354 /* GradientLabel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3292A7012C6AD38C00A95354 /* GradientLabel2.swift */; };
+		3295A20A2C77228600491717 /* KTVSoundEditingCouponPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3295A2082C77228600491717 /* KTVSoundEditingCouponPromptViewController.swift */; };
+		3295A20B2C77228600491717 /* KTVSoundEditingCouponPromptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3295A2092C77228600491717 /* KTVSoundEditingCouponPromptViewController.xib */; };
 		3295FB8E2C4655F8009C6F22 /* WKWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3295FB8D2C4655F8009C6F22 /* WKWebViewController.xib */; };
 		3295FB8F2C4655F8009C6F22 /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3295FB8C2C4655F8009C6F22 /* WKWebViewController.swift */; };
 		329718B22C41906900450668 /* KTVImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 329718B12C41906900450668 /* KTVImageView.m */; };
@@ -175,6 +177,8 @@
 		328741C82C6DD734002BB949 /* KTVWebContainerLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVWebContainerLoadingView.swift; sourceTree = "<group>"; };
 		328741CA2C6DD744002BB949 /* KTVWebContainerLoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVWebContainerLoadingView.xib; sourceTree = "<group>"; };
 		3292A7012C6AD38C00A95354 /* GradientLabel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel2.swift; sourceTree = "<group>"; };
+		3295A2082C77228600491717 /* KTVSoundEditingCouponPromptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVSoundEditingCouponPromptViewController.swift; sourceTree = "<group>"; };
+		3295A2092C77228600491717 /* KTVSoundEditingCouponPromptViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVSoundEditingCouponPromptViewController.xib; sourceTree = "<group>"; };
 		3295FB8C2C4655F8009C6F22 /* WKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
 		3295FB8D2C4655F8009C6F22 /* WKWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WKWebViewController.xib; sourceTree = "<group>"; };
 		329718B02C41906900450668 /* KTVImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVImageView.h; sourceTree = "<group>"; };
@@ -322,6 +326,8 @@
 				32ADD1C22C217E8300DC4B35 /* KTVLRWinRedPacketViewModel.swift */,
 				32A9BFE52C20327200442433 /* KTVLRWinRedPacketViewController.swift */,
 				32A9BFE62C20327200442433 /* KTVLRWinRedPacketViewController.xib */,
+				3295A2082C77228600491717 /* KTVSoundEditingCouponPromptViewController.swift */,
+				3295A2092C77228600491717 /* KTVSoundEditingCouponPromptViewController.xib */,
 				32B59AAE2C205AF900AC9FC5 /* KTVLRCompeteRedPacketView.swift */,
 				32B59AB02C205B0700AC9FC5 /* KTVLRCompeteRedPacketView.xib */,
 				32B59AB42C21306D00AC9FC5 /* KTVLRParticipatedRedPacketView.swift */,
@@ -512,6 +518,7 @@
 				32B59AB72C21309300AC9FC5 /* KTVLRParticipatedRedPacketView.xib in Resources */,
 				32ADD1C02C21797800DC4B35 /* KTVLRRedPacketRewardsCell.xib in Resources */,
 				32038ADB2B47F264000FE88B /* Assets.xcassets in Resources */,
+				3295A20B2C77228600491717 /* KTVSoundEditingCouponPromptViewController.xib in Resources */,
 				32038AD92B47F262000FE88B /* Main.storyboard in Resources */,
 				32A9BFE32C20210F00442433 /* KTVLRRedPacketEntranceViewController.xib in Resources */,
 				323B2FCF2BD8F46E0018E190 /* KTVPluginItemsViewController.xib in Resources */,
@@ -574,6 +581,7 @@
 				323B2FCA2BD8E3430018E190 /* UIKit+Nib.swift in Sources */,
 				321290D02BA82D8D006AEFA9 /* KTVSegmentedControl.swift in Sources */,
 				32B59AB52C21306D00AC9FC5 /* KTVLRParticipatedRedPacketView.swift in Sources */,
+				3295A20A2C77228600491717 /* KTVSoundEditingCouponPromptViewController.swift in Sources */,
 				3212380B2C58CC2300BFF154 /* TestVerticalScrollViewController.swift in Sources */,
 				321B0A2B2C05D17700DFBCFF /* KTVADScrollingBubblesViewController.swift in Sources */,
 				3295FB8F2C4655F8009C6F22 /* WKWebViewController.swift in Sources */,
