@@ -26,6 +26,26 @@ class TestImageViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let view  = KTVShiningEffectLabel(gradientColors: [
+            rgba("#CA7D00FF"),
+            rgba("#CA7D00FF"),
+            rgba("#FFEB01FF"),
+            rgba("#FFEB01FF"),
+            rgba("#CA7D00FF"),
+            rgba("#CA7D00FF"),
+        ], locations: [
+            0, 0.34, 0.37, 0.48, 0.5, 1
+        ], startPoint: CGPoint(x: 0, y: 0.5),
+         endPoint: CGPoint(x: 1, y: 0.5))
+        view.text = "wa123456💦"
+        view.font = UIFont.systemFont(ofSize: 17)
+        self.view.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints  = false
+        NSLayoutConstraint.activate([
+            view.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            view.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: -300)
+
+        ])
         
     }
 

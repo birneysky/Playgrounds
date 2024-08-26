@@ -34,7 +34,7 @@
 		321B0A2B2C05D17700DFBCFF /* KTVADScrollingBubblesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B0A282C05D17700DFBCFF /* KTVADScrollingBubblesViewController.swift */; };
 		321D8C512B9173C40029F8D9 /* KTVColorsGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D8C502B9173C40029F8D9 /* KTVColorsGradientView.swift */; };
 		321D8C532B917E960029F8D9 /* TestGradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D8C522B917E960029F8D9 /* TestGradientViewController.swift */; };
-		322D58622C6A375F00B22E7E /* ShiningLabel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D58612C6A375F00B22E7E /* ShiningLabel2.swift */; };
+		322D58622C6A375F00B22E7E /* KTVShiningEffectLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D58612C6A375F00B22E7E /* KTVShiningEffectLabel.swift */; };
 		323B2FBC2BD7AF0B0018E190 /* KTVEntranceItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323B2FBB2BD7AF0B0018E190 /* KTVEntranceItemView.swift */; };
 		323B2FBE2BD7AF6E0018E190 /* KTVEntranceItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323B2FBD2BD7AF6E0018E190 /* KTVEntranceItemView.xib */; };
 		323B2FC02BD7BCA20018E190 /* KTVHEqualSpacingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323B2FBF2BD7BCA20018E190 /* KTVHEqualSpacingContainer.swift */; };
@@ -149,7 +149,7 @@
 		321B0A292C05D17700DFBCFF /* KTVADScrollingBubblesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVADScrollingBubblesViewController.xib; sourceTree = "<group>"; };
 		321D8C502B9173C40029F8D9 /* KTVColorsGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTVColorsGradientView.swift; sourceTree = "<group>"; };
 		321D8C522B917E960029F8D9 /* TestGradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGradientViewController.swift; sourceTree = "<group>"; };
-		322D58612C6A375F00B22E7E /* ShiningLabel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiningLabel2.swift; sourceTree = "<group>"; };
+		322D58612C6A375F00B22E7E /* KTVShiningEffectLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVShiningEffectLabel.swift; sourceTree = "<group>"; };
 		323B2FBB2BD7AF0B0018E190 /* KTVEntranceItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVEntranceItemView.swift; sourceTree = "<group>"; };
 		323B2FBD2BD7AF6E0018E190 /* KTVEntranceItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVEntranceItemView.xib; sourceTree = "<group>"; };
 		323B2FBF2BD7BCA20018E190 /* KTVHEqualSpacingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVHEqualSpacingContainer.swift; sourceTree = "<group>"; };
@@ -283,7 +283,7 @@
 				3202D4652BB66D76005C1FE3 /* GradientText.swift */,
 				3292A7012C6AD38C00A95354 /* GradientLabel2.swift */,
 				32E3848F2C62111B0048A7EA /* ShiningLabel.swift */,
-				322D58612C6A375F00B22E7E /* ShiningLabel2.swift */,
+				322D58612C6A375F00B22E7E /* KTVShiningEffectLabel.swift */,
 				32EC65582BC3D8B800D388DB /* BannerView.swift */,
 				321B0A282C05D17700DFBCFF /* KTVADScrollingBubblesViewController.swift */,
 				321B0A292C05D17700DFBCFF /* KTVADScrollingBubblesViewController.xib */,
@@ -541,7 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				322D58622C6A375F00B22E7E /* ShiningLabel2.swift in Sources */,
+				322D58622C6A375F00B22E7E /* KTVShiningEffectLabel.swift in Sources */,
 				321D8C532B917E960029F8D9 /* TestGradientViewController.swift in Sources */,
 				329718B22C41906900450668 /* KTVImageView.m in Sources */,
 				32EA10D72C1BEB1400BDEBD0 /* UIColor+Hex.m in Sources */,

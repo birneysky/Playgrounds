@@ -20,7 +20,11 @@ class KTVShiningEffectLabel: UILabel {
     private var locations: [NSNumber]
     private var startPoint: CGPoint
     private var endPoint: CGPoint
- 
+    private lazy var frontImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
     init(gradientColors:[UIColor], locations:[NSNumber], startPoint: CGPoint, endPoint: CGPoint) {
         self.startPoint = startPoint
         self.endPoint = endPoint
@@ -54,6 +58,17 @@ class KTVShiningEffectLabel: UILabel {
         // 开始动画
         startAnimation()
         layer.addSublayer(textLayer1)
+        
+        var frontimages = [UIImage]()
+        for i in 0 ..< 95 {
+            let name = String(format: "motion_frame_%02d", i)
+            if let iimage  = UIImage(named: name) {
+                frontimages.append(iimage)
+            }
+        }
+        
+        frontImageView.image = UIImage.animatedImage(with: frontimages, duration: 2.5)
+        addSubview(frontImageView)
     }
     
     override func layoutSubviews() {
@@ -61,6 +76,7 @@ class KTVShiningEffectLabel: UILabel {
         gradientLayer.frame = bounds
         textLayer.frame = bounds
         textLayer1.frame = bounds
+        frontImageView.frame = bounds
         updateTextLayer()
         
     }
@@ -123,7 +139,8 @@ class KTVShiningEffectLabel: UILabel {
     }
 
     override var intrinsicContentSize: CGSize {
-        super.intrinsicContentSize
+        //return calculateTextLayerSize()
+        return super.intrinsicContentSize
     }
     
     func createAttributedString(from text: String) -> NSAttributedString {
