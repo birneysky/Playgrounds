@@ -23,9 +23,10 @@ class KTVShiningEffectLabel: UILabel {
     private lazy var frontImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         return imageView
     }()
-    init(gradientColors:[UIColor], locations:[NSNumber], startPoint: CGPoint, endPoint: CGPoint) {
+    @objc init(gradientColors:[UIColor], locations:[NSNumber], startPoint: CGPoint, endPoint: CGPoint) {
         self.startPoint = startPoint
         self.endPoint = endPoint
         self.colors = gradientColors
@@ -68,7 +69,14 @@ class KTVShiningEffectLabel: UILabel {
         }
         
         frontImageView.image = UIImage.animatedImage(with: frontimages, duration: 2.5)
-        addSubview(frontImageView)
+        //addSubview(frontImageView)
+//        frontImageView.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            frontImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+//            frontImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
+//            frontImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0),
+//            frontImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+//        ])
     }
     
     override func layoutSubviews() {
@@ -77,7 +85,10 @@ class KTVShiningEffectLabel: UILabel {
         textLayer.frame = bounds
         textLayer1.frame = bounds
         frontImageView.frame = bounds
+//        frontImageView.frame = CGRect(x: bounds.origin.x, y: bounds.origin.y + 8, width: bounds.size.width, height: bounds.size.height - 16)
         updateTextLayer()
+        
+     
         
     }
     
@@ -174,7 +185,30 @@ class KTVShiningEffectLabel: UILabel {
     }
 }
 
+func calculateIntersectionPoint(angleInDegrees: Double) -> CGPoint {
+    var degress = angleInDegrees
+    var startPoint = CGPointMake(0, 1);
+    if angleInDegrees > 45, angleInDegrees <= 90 {
+        degress = 90 - angleInDegrees
+    }
+    if angleInDegrees > 90 {
+        return startPoint;
+    }
+    let angleInRadians = degress * .pi / 180
+    let tanValue = tan(angleInRadians)
+    if angleInDegrees <= 45 {
+        startPoint =  CGPointMake(0, 1 - tanValue) ///(0, 1 - tanValue)
+    } else {
+        startPoint  = CGPointMake(1-tanValue, 0)
+    }
+    return startPoint;
+}
+
+
 #Preview {
+ 
+    let startPoint = calculateIntersectionPoint(angleInDegrees: 20);
+    print("----------startPoint: \(startPoint)")
     let view  = KTVShiningEffectLabel(gradientColors: [
         rgba("#CA7D00FF"),
         rgba("#CA7D00FF"),
@@ -184,9 +218,9 @@ class KTVShiningEffectLabel: UILabel {
         rgba("#CA7D00FF"),
     ], locations: [
         0, 0.34, 0.37, 0.48, 0.5, 1
-    ], startPoint: CGPoint(x: 0, y: 0.5),
-       endPoint: CGPoint(x: 1, y: 0.5))
-    view.text = "W😇a😜L💔DE💓FF💟HIJKLM🌤️OPQ🌤️24329💦"
+    ], startPoint: startPoint,
+       endPoint: CGPoint(x: 1, y: 1))
+    view.text = "WaLDEFFHIJKLMOPQ24329"
     view.font = UIFont.systemFont(ofSize: 14)
     view.textColor = .red
     return view

@@ -112,7 +112,7 @@
     [super setImage:image];
 //    _aimg = image;
 //    self.subImageView.image = image;
-    
+
 }
 
 //- (CGSize)intrinsicContentSize {

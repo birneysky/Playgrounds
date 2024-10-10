@@ -67,6 +67,8 @@
 		329718B62C4194A300450668 /* KTVImageViewPreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329718B52C4194A300450668 /* KTVImageViewPreView.swift */; };
 		3299E0082C4681FB008899D6 /* TestImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3299E0062C4681FB008899D6 /* TestImageViewController.swift */; };
 		3299E0092C4681FB008899D6 /* TestImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3299E0072C4681FB008899D6 /* TestImageViewController.xib */; };
+		32A776D42CB7BD1900A5EBC8 /* KTVPurchaseSvipTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A776D22CB7BD1900A5EBC8 /* KTVPurchaseSvipTipsViewController.swift */; };
+		32A776D52CB7BD1900A5EBC8 /* KTVPurchaseSvipTipsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A776D32CB7BD1900A5EBC8 /* KTVPurchaseSvipTipsViewController.xib */; };
 		32A9BFE32C20210F00442433 /* KTVLRRedPacketEntranceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A9BFE22C20210F00442433 /* KTVLRRedPacketEntranceViewController.xib */; };
 		32A9BFE42C20210F00442433 /* KTVLRRedPacketEntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A9BFE12C20210F00442433 /* KTVLRRedPacketEntranceViewController.swift */; };
 		32A9BFE72C20327200442433 /* KTVLRWinRedPacketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A9BFE62C20327200442433 /* KTVLRWinRedPacketViewController.xib */; };
@@ -186,6 +188,8 @@
 		329718B52C4194A300450668 /* KTVImageViewPreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVImageViewPreView.swift; sourceTree = "<group>"; };
 		3299E0062C4681FB008899D6 /* TestImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestImageViewController.swift; sourceTree = "<group>"; };
 		3299E0072C4681FB008899D6 /* TestImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestImageViewController.xib; sourceTree = "<group>"; };
+		32A776D22CB7BD1900A5EBC8 /* KTVPurchaseSvipTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVPurchaseSvipTipsViewController.swift; sourceTree = "<group>"; };
+		32A776D32CB7BD1900A5EBC8 /* KTVPurchaseSvipTipsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVPurchaseSvipTipsViewController.xib; sourceTree = "<group>"; };
 		32A9BFE12C20210F00442433 /* KTVLRRedPacketEntranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRRedPacketEntranceViewController.swift; sourceTree = "<group>"; };
 		32A9BFE22C20210F00442433 /* KTVLRRedPacketEntranceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVLRRedPacketEntranceViewController.xib; sourceTree = "<group>"; };
 		32A9BFE52C20327200442433 /* KTVLRWinRedPacketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRWinRedPacketViewController.swift; sourceTree = "<group>"; };
@@ -356,6 +360,8 @@
 				32EA10D62C1BEB1400BDEBD0 /* UIColor+Hex.m */,
 				3212380F2C58D69600BFF154 /* KTVFineTuningTimeViewController.swift */,
 				321238112C58D6E400BFF154 /* KTVFineTuningTimeViewController.xib */,
+				32A776D22CB7BD1900A5EBC8 /* KTVPurchaseSvipTipsViewController.swift */,
+				32A776D32CB7BD1900A5EBC8 /* KTVPurchaseSvipTipsViewController.xib */,
 				32F7DF042C4F5CE500681943 /* KTVScaleLineView.swift */,
 				32F7DF062C4F62F200681943 /* KTVFineTuningLineView.swift */,
 				32F7DF082C4F630900681943 /* KTVFineTuningLineView.xib */,
@@ -496,6 +502,7 @@
 				32DB6AD92C6DEB76000DA3C8 /* KTVWebContainerRetryView.xib in Resources */,
 				32B59AB12C205B0700AC9FC5 /* KTVLRCompeteRedPacketView.xib in Resources */,
 				3299E0092C4681FB008899D6 /* TestImageViewController.xib in Resources */,
+				32A776D52CB7BD1900A5EBC8 /* KTVPurchaseSvipTipsViewController.xib in Resources */,
 				32038ADE2B47F264000FE88B /* LaunchScreen.storyboard in Resources */,
 				321B0A2A2C05D17700DFBCFF /* KTVADScrollingBubblesViewController.xib in Resources */,
 				323B2FBE2BD7AF6E0018E190 /* KTVEntranceItemView.xib in Resources */,
@@ -560,6 +567,7 @@
 				32B59AAF2C205AF900AC9FC5 /* KTVLRCompeteRedPacketView.swift in Sources */,
 				321290D52BA83E36006AEFA9 /* KTVRankTop3Cell.swift in Sources */,
 				329718B62C4194A300450668 /* KTVImageViewPreView.swift in Sources */,
+				32A776D42CB7BD1900A5EBC8 /* KTVPurchaseSvipTipsViewController.swift in Sources */,
 				323B2FD22BD918430018E190 /* UnitTestClass.swift in Sources */,
 				326089542BC51DB600442446 /* KTVSingBannerItemView.swift in Sources */,
 				323B2FD02BD8F46E0018E190 /* KTVPluginItemsViewController.swift in Sources */,
