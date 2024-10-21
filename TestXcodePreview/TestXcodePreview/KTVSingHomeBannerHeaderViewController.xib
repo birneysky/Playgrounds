@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KTVSingHomeBannerHeaderViewController" customModule="TestXcodePreview" customModuleProvider="target">
+            <connections>
+                <outlet property="pagerView" destination="920-h0-cyb" id="4rj-In-cxz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="920-h0-cyb" customClass="FSPagerView" customModule="TestXcodePreview" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Oaj-T4-uV9"/>
+                        <outlet property="delegate" destination="-1" id="SmH-UP-rFm"/>
+                    </connections>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="920-h0-cyb" secondAttribute="bottom" id="Di3-oz-EJo"/>
+                <constraint firstItem="920-h0-cyb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OOn-oK-6sh"/>
+                <constraint firstAttribute="trailing" secondItem="920-h0-cyb" secondAttribute="trailing" id="ey7-rY-vZb"/>
+                <constraint firstItem="920-h0-cyb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lzS-Fu-E76"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="6" y="21"/>
+        </view>
+    </objects>
+</document>

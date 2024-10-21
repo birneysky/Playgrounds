@@ -15,6 +15,7 @@ import UIKit
 
 class KTVPurchaseSvipTipsViewController: UIViewController {
     @objc var tipStyle: KTVPurchaseSvipTipsStyle = .buy
+    @objc var buttonHanderl: (() -> Void)?
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var tipsLabel: UILabel!
     //@IBOutlet weak var button: UIButton!
@@ -44,19 +45,6 @@ class KTVPurchaseSvipTipsViewController: UIViewController {
         }
     }
     
-
-
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     @IBAction func buttonAction(_ sender: UIControl) {
         print("hahahhahahah489490284902")
     }
@@ -74,7 +62,7 @@ class KTVPurchaseSvipTipsViewController: UIViewController {
 //    controller.buttonText = "已设置"
     
     controller.tipStyle = .buy
-    controller.tipText = "开通SVIP，背景图上限可提升至30张ii"
+    controller.tipText = "开通SVIP，背景图上限可提升至30张"
     controller.buttonText = "开通SVIP"
     parentController.addChild(controller)
     parentController.view.addSubview(controller.view)
