@@ -60,6 +60,7 @@ open class FSPagerViewCell: UICollectionViewCell {
         }
         let view = UIView(frame: imageView.bounds)
         imageView.addSubview(view)
+        imageView.contentMode = .scaleAspectFill
         _selectedForegroundView = view
         return view
     }
