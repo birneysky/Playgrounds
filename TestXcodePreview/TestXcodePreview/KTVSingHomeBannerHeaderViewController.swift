@@ -57,6 +57,10 @@ class KTVSingHomeBannerHeaderViewController: UIViewController, FSPagerViewDataSo
     func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
         pagerView.deselectItem(at: index, animated: true)
         pagerView.scrollToItem(at: index, animated: true)
+        print("----------------\(index)")
+        if index >= 1 {
+            print("----------------\(self.imageNames[index-1])")
+        }
     }
     
 

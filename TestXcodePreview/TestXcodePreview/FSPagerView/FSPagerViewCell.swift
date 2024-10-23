@@ -59,8 +59,11 @@ open class FSPagerViewCell: UICollectionViewCell {
             return nil
         }
         let view = UIView(frame: imageView.bounds)
-        imageView.addSubview(view)
-        imageView.contentMode = .scaleAspectFill
+//        imageView.addSubview(view)
+//        //imageView.contentMode = .scaleAspectFill
+//        NSLayoutConstraint.activate([
+//            
+//        ])
         _selectedForegroundView = view
         return view
     }

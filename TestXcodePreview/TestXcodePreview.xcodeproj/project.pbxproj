@@ -75,6 +75,7 @@
 		329718B62C4194A300450668 /* KTVImageViewPreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329718B52C4194A300450668 /* KTVImageViewPreView.swift */; };
 		3299E0082C4681FB008899D6 /* TestImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3299E0062C4681FB008899D6 /* TestImageViewController.swift */; };
 		3299E0092C4681FB008899D6 /* TestImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3299E0072C4681FB008899D6 /* TestImageViewController.xib */; };
+		32A2CA792CC8E11200130BC3 /* KTVHeartBeatSingPortraitBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A2CA782CC8E11200130BC3 /* KTVHeartBeatSingPortraitBanner.swift */; };
 		32A776D42CB7BD1900A5EBC8 /* KTVPurchaseSvipTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A776D22CB7BD1900A5EBC8 /* KTVPurchaseSvipTipsViewController.swift */; };
 		32A776D52CB7BD1900A5EBC8 /* KTVPurchaseSvipTipsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A776D32CB7BD1900A5EBC8 /* KTVPurchaseSvipTipsViewController.xib */; };
 		32A9BFE32C20210F00442433 /* KTVLRRedPacketEntranceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A9BFE22C20210F00442433 /* KTVLRRedPacketEntranceViewController.xib */; };
@@ -220,6 +221,7 @@
 		329718B52C4194A300450668 /* KTVImageViewPreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVImageViewPreView.swift; sourceTree = "<group>"; };
 		3299E0062C4681FB008899D6 /* TestImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestImageViewController.swift; sourceTree = "<group>"; };
 		3299E0072C4681FB008899D6 /* TestImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestImageViewController.xib; sourceTree = "<group>"; };
+		32A2CA782CC8E11200130BC3 /* KTVHeartBeatSingPortraitBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVHeartBeatSingPortraitBanner.swift; sourceTree = "<group>"; };
 		32A776D22CB7BD1900A5EBC8 /* KTVPurchaseSvipTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVPurchaseSvipTipsViewController.swift; sourceTree = "<group>"; };
 		32A776D32CB7BD1900A5EBC8 /* KTVPurchaseSvipTipsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVPurchaseSvipTipsViewController.xib; sourceTree = "<group>"; };
 		32A9BFE12C20210F00442433 /* KTVLRRedPacketEntranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRRedPacketEntranceViewController.swift; sourceTree = "<group>"; };
@@ -414,6 +416,7 @@
 				32CF7AB02CC65F2E003218FD /* KTVSingHomeBannerHeaderViewController.xib */,
 				32CF7ACA2CC7927C003218FD /* KTVSingHomeInteractionBannerCell.swift */,
 				32CF7ACB2CC7927C003218FD /* KTVSingHomeInteractionBannerCell.xib */,
+				32A2CA782CC8E11200130BC3 /* KTVHeartBeatSingPortraitBanner.swift */,
 				32F7DF042C4F5CE500681943 /* KTVScaleLineView.swift */,
 				32F7DF062C4F62F200681943 /* KTVFineTuningLineView.swift */,
 				32F7DF082C4F630900681943 /* KTVFineTuningLineView.xib */,
@@ -657,6 +660,7 @@
 			files = (
 				322962A12CC64E6200C6E47F /* FSPageViewTransformer.swift in Sources */,
 				322D58622C6A375F00B22E7E /* KTVShiningEffectLabel.swift in Sources */,
+				32A2CA792CC8E11200130BC3 /* KTVHeartBeatSingPortraitBanner.swift in Sources */,
 				321D8C532B917E960029F8D9 /* TestGradientViewController.swift in Sources */,
 				32CF7ACD2CC7927C003218FD /* KTVSingHomeInteractionBannerCell.swift in Sources */,
 				329718B22C41906900450668 /* KTVImageView.m in Sources */,

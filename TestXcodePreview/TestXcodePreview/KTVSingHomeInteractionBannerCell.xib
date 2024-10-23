@@ -47,11 +47,12 @@
                                             <constraint firstAttribute="width" constant="77" id="sZ9-ga-mXT"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JJ6-ho-SHB">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JJ6-ho-SHB" userLabel="FristView">
                                         <rect key="frame" x="83" y="0.0" width="133" height="104"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ktv_sing_home_header_heart_beat" translatesAutoresizingMaskIntoConstraints="NO" id="6RV-xh-9cF">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ktv_sing_home_header_first" translatesAutoresizingMaskIntoConstraints="NO" id="6RV-xh-9cF">
                                                 <rect key="frame" x="0.0" y="0.0" width="133" height="104"/>
+                                                <gestureRecognizers/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="心动合唱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ao-bL-Mwu">
                                                 <rect key="frame" x="12.000000000000004" y="7" width="57.333333333333343" height="17"/>
@@ -59,14 +60,41 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPH-Lo-DYe">
+                                                <rect key="frame" x="14" y="82" width="96" height="12"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ktv_sing_home_header_first_music" translatesAutoresizingMaskIntoConstraints="NO" id="Ctd-HP-qmA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="12"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="12" id="AfX-vr-TRZ"/>
+                                                            <constraint firstAttribute="height" constant="12" id="Ugz-vI-zCD"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="半岛铁盒-周杰伦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEV-7L-8G9">
+                                                        <rect key="frame" x="12" y="0.0" width="84" height="12"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="32" translatesAutoresizingMaskIntoConstraints="NO" id="siE-Xp-aC0" customClass="KTVHeartBeatSingPortraitBanner" customModule="TestXcodePreview" customModuleProvider="target">
+                                                <rect key="frame" x="26.666666666666671" y="36" width="80" height="32"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
                                         </subviews>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="133" id="0ZD-9F-9aZ"/>
+                                            <constraint firstItem="IPH-Lo-DYe" firstAttribute="centerX" secondItem="JJ6-ho-SHB" secondAttribute="centerX" constant="-4.5" id="2pf-hJ-9Mm"/>
+                                            <constraint firstItem="siE-Xp-aC0" firstAttribute="centerY" secondItem="JJ6-ho-SHB" secondAttribute="centerY" id="8sL-c0-zg7"/>
+                                            <constraint firstAttribute="bottom" secondItem="IPH-Lo-DYe" secondAttribute="bottom" constant="10" id="EJN-Pa-ZRg"/>
                                             <constraint firstItem="9Ao-bL-Mwu" firstAttribute="leading" secondItem="JJ6-ho-SHB" secondAttribute="leading" constant="12" id="F9q-kT-bnA"/>
                                             <constraint firstAttribute="trailing" secondItem="6RV-xh-9cF" secondAttribute="trailing" id="Jeu-FE-Ccu"/>
                                             <constraint firstAttribute="height" constant="104" id="SGo-Ic-7dD"/>
                                             <constraint firstItem="6RV-xh-9cF" firstAttribute="leading" secondItem="JJ6-ho-SHB" secondAttribute="leading" id="TO6-fR-K3q"/>
                                             <constraint firstItem="9Ao-bL-Mwu" firstAttribute="top" secondItem="JJ6-ho-SHB" secondAttribute="top" constant="7" id="Wkp-jg-ssj"/>
+                                            <constraint firstItem="siE-Xp-aC0" firstAttribute="centerX" secondItem="JJ6-ho-SHB" secondAttribute="centerX" id="gCK-cv-90h"/>
                                             <constraint firstItem="6RV-xh-9cF" firstAttribute="top" secondItem="JJ6-ho-SHB" secondAttribute="top" id="h61-c6-AsD"/>
                                             <constraint firstAttribute="bottom" secondItem="6RV-xh-9cF" secondAttribute="bottom" id="pMy-dJ-dWq"/>
                                         </constraints>
@@ -76,35 +104,78 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vr5-Nt-bvY">
                                 <rect key="frame" x="221" y="2.6666666666666643" width="127" height="104"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8d-NJ-PX1">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8d-NJ-PX1" userLabel="secondView">
                                         <rect key="frame" x="0.0" y="0.0" width="127" height="48"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ktv_sing_home_header_second" translatesAutoresizingMaskIntoConstraints="NO" id="PUM-I7-oTY">
                                                 <rect key="frame" x="6" y="0.0" width="121" height="48"/>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="劲爆抢唱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vk3-hk-8ER">
+                                                <rect key="frame" x="50" y="15.333333333333336" width="57.333333333333343" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ktv_sing_home_header_grab_sing" translatesAutoresizingMaskIntoConstraints="NO" id="qc5-Iy-TlT">
+                                                <rect key="frame" x="10" y="3" width="42" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="42" id="5H3-ug-SmK"/>
+                                                    <constraint firstAttribute="width" constant="42" id="qRI-j5-dIw"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="PUM-I7-oTY" firstAttribute="top" secondItem="T8d-NJ-PX1" secondAttribute="top" id="0V8-nP-ONW"/>
+                                            <constraint firstItem="PUM-I7-oTY" firstAttribute="top" secondItem="qc5-Iy-TlT" secondAttribute="top" constant="-3" id="3Ci-Le-q2C"/>
                                             <constraint firstItem="PUM-I7-oTY" firstAttribute="leading" secondItem="T8d-NJ-PX1" secondAttribute="leading" constant="6" id="6Xl-Tp-8dh"/>
                                             <constraint firstAttribute="width" constant="127" id="7GS-Oz-U3Z"/>
                                             <constraint firstAttribute="trailing" secondItem="PUM-I7-oTY" secondAttribute="trailing" id="7Ju-23-4sX"/>
                                             <constraint firstAttribute="bottom" secondItem="PUM-I7-oTY" secondAttribute="bottom" id="8IW-0G-Aog"/>
+                                            <constraint firstItem="Vk3-hk-8ER" firstAttribute="centerY" secondItem="PUM-I7-oTY" secondAttribute="centerY" id="X9S-o8-Khg"/>
                                             <constraint firstAttribute="height" constant="48" id="a2t-Pr-Gkg"/>
+                                            <constraint firstItem="Vk3-hk-8ER" firstAttribute="leading" secondItem="qc5-Iy-TlT" secondAttribute="trailing" constant="-2" id="iln-X4-EHe"/>
+                                            <constraint firstItem="Vk3-hk-8ER" firstAttribute="centerX" secondItem="PUM-I7-oTY" secondAttribute="centerX" constant="12" id="nD3-8x-rGS"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNX-KO-1Lq">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNX-KO-1Lq" userLabel="thirdView">
                                         <rect key="frame" x="0.0" y="56" width="127" height="48"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ktv_sing_home_header_third" translatesAutoresizingMaskIntoConstraints="NO" id="INt-0y-Qms">
                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="48"/>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="唱歌得礼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7r-FF-hgb">
+                                                <rect key="frame" x="51" y="7.0000000000000071" width="57.333333333333343" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ktv_sing_home_header_recv_gift" translatesAutoresizingMaskIntoConstraints="NO" id="Cod-a2-VSe">
+                                                <rect key="frame" x="11" y="8.0000000000000071" width="32" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="PFC-1Z-Pr5"/>
+                                                    <constraint firstAttribute="width" constant="32" id="yJV-g5-Od1"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ktv_sing_home_header_recv_gift_music" translatesAutoresizingMaskIntoConstraints="NO" id="ZuC-mJ-Q17">
+                                                <rect key="frame" x="51" y="27.000000000000007" width="9" height="9"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="9" id="XUW-ld-N1n"/>
+                                                    <constraint firstAttribute="height" constant="9" id="Z6o-Vk-DBO"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="Z7r-FF-hgb" firstAttribute="leading" secondItem="ZuC-mJ-Q17" secondAttribute="leading" id="Eze-O4-sLR"/>
+                                            <constraint firstItem="Cod-a2-VSe" firstAttribute="centerY" secondItem="CNX-KO-1Lq" secondAttribute="centerY" id="LKK-0p-w3s"/>
+                                            <constraint firstItem="Z7r-FF-hgb" firstAttribute="centerX" secondItem="INt-0y-Qms" secondAttribute="centerX" constant="16" id="N8J-hb-eqH"/>
                                             <constraint firstAttribute="bottom" secondItem="INt-0y-Qms" secondAttribute="bottom" id="OXF-ax-Zfp"/>
                                             <constraint firstAttribute="height" constant="48" id="TKB-2G-4bP"/>
                                             <constraint firstItem="INt-0y-Qms" firstAttribute="leading" secondItem="CNX-KO-1Lq" secondAttribute="leading" id="VdZ-Gw-q5f"/>
                                             <constraint firstAttribute="trailing" secondItem="INt-0y-Qms" secondAttribute="trailing" id="XRS-Ub-L8X"/>
                                             <constraint firstItem="INt-0y-Qms" firstAttribute="top" secondItem="CNX-KO-1Lq" secondAttribute="top" id="ohH-Ts-pSE"/>
+                                            <constraint firstItem="Z7r-FF-hgb" firstAttribute="leading" secondItem="Cod-a2-VSe" secondAttribute="trailing" constant="8" id="pFq-GU-RUF"/>
+                                            <constraint firstItem="Z7r-FF-hgb" firstAttribute="top" secondItem="INt-0y-Qms" secondAttribute="top" constant="7" id="ppo-on-L6B"/>
+                                            <constraint firstItem="ZuC-mJ-Q17" firstAttribute="top" secondItem="Z7r-FF-hgb" secondAttribute="bottom" constant="3" id="rgN-nF-Xv7"/>
                                             <constraint firstAttribute="width" constant="127" id="ta7-xJ-IYG"/>
                                         </constraints>
                                     </view>
@@ -123,20 +194,28 @@
             </constraints>
             <connections>
                 <outlet property="firstBackgroundImageView" destination="6RV-xh-9cF" id="dz1-Vk-uXL"/>
+                <outlet property="firstView" destination="JJ6-ho-SHB" id="V8X-wN-eWU"/>
                 <outlet property="firstViewWidthConstraint" destination="0ZD-9F-9aZ" id="nJu-de-S7m"/>
+                <outlet property="portraitBanner" destination="siE-Xp-aC0" id="VLa-lM-esf"/>
                 <outlet property="secondBackgroudImageView" destination="PUM-I7-oTY" id="xZv-bw-Gtm"/>
                 <outlet property="secondBackgroundImageViewLeadingConstraint" destination="6Xl-Tp-8dh" id="oJB-J2-olm"/>
+                <outlet property="secondView" destination="T8d-NJ-PX1" id="TnV-A7-JI2"/>
                 <outlet property="secondViewWidthConstraint" destination="7GS-Oz-U3Z" id="Qhb-DG-EHi"/>
                 <outlet property="speakerSettingContainer" destination="f7G-rT-60J" id="EL4-uF-WQH"/>
-                <outlet property="speakerSettingView" destination="kXl-b8-wZx" id="vIt-P4-ixi"/>
+                <outlet property="speakerSettingView" destination="kXl-b8-wZx" id="FNt-ml-9YY"/>
                 <outlet property="thirdBackgroundImageView" destination="INt-0y-Qms" id="80q-7k-09u"/>
+                <outlet property="thirdView" destination="CNX-KO-1Lq" id="A9b-9a-O06"/>
                 <outlet property="thirdViewWidthConstraint" destination="ta7-xJ-IYG" id="xzb-ee-Xzt"/>
             </connections>
             <point key="canvasLocation" x="-52" y="21"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="ktv_sing_home_header_heart_beat" width="133" height="104"/>
+        <image name="ktv_sing_home_header_first" width="133" height="104"/>
+        <image name="ktv_sing_home_header_first_music" width="12" height="12.333333015441895"/>
+        <image name="ktv_sing_home_header_grab_sing" width="42" height="42"/>
+        <image name="ktv_sing_home_header_recv_gift" width="32" height="32"/>
+        <image name="ktv_sing_home_header_recv_gift_music" width="10" height="9.3333330154418945"/>
         <image name="ktv_sing_home_header_second" width="125.66666412353516" height="48"/>
         <image name="ktv_sing_home_header_speaker" width="77" height="104"/>
         <image name="ktv_sing_home_header_third" width="131" height="48"/>
