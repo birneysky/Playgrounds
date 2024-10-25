@@ -172,8 +172,16 @@ class ViewController: UIViewController {
 //        self.present(webcv, animated: true)
         
         
-        let controller = KTVSingHomeBannerHeaderViewController.controller()
+        let controller = KTVSingHomeHeaderBannerViewController.controller()
         self.present(controller, animated: true)
+        
+        
+//        let view = KTVHeartBeatSingPortraitBanner(frame: CGRect(x: 100, y: 100, width: 80, height: 32))
+//        view.avatars = ["avatar1", "avatar2",]
+//        //view.icons = ["avatar1", "avatar2", "avatar3"]
+//        //view.icons = ["avatar1", "avatar2", "avatar3","child"]
+//        view.backgroundColor = .red
+//        self.view.addSubview(view)
 
     }
 

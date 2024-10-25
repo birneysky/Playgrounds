@@ -45,7 +45,7 @@ class KTVSingHomeInteractionBannerCell: FSPagerViewCell, UIGestureRecognizerDele
         //tapGesture.delegate = self
         self.speakerSettingView.addGestureRecognizer(tapGesture)
         
-        self.portraitBanner.icons = ["avatar1", "avatar2", "avatar3","child", "cup", "member", "like_test"]
+        self.portraitBanner.avatars = ["avatar1", "avatar2", "avatar3","child", "cup", "member", "like_test"]
     }
     
     /// 允许多个手势同时识别

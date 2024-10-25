@@ -7,7 +7,7 @@
 
 import UIKit
 
-class KTVSingHomeBannerHeaderViewController: UIViewController, FSPagerViewDataSource,FSPagerViewDelegate {
+class KTVSingHomeHeaderBannerViewController: UIViewController, FSPagerViewDataSource,FSPagerViewDelegate {
 
 //    fileprivate let imageNames = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg"]
     fileprivate let imageNames = ["12.png"]
@@ -71,7 +71,7 @@ class KTVSingHomeBannerHeaderViewController: UIViewController, FSPagerViewDataSo
     
     let parentController = UIViewController()
     parentController.view.backgroundColor = .white
-    let controller = KTVSingHomeBannerHeaderViewController.controller()
+    let controller = KTVSingHomeHeaderBannerViewController.controller()
 
     parentController.addChild(controller)
     parentController.view.addSubview(controller.view)
