@@ -82,6 +82,7 @@
 		32A9BFE42C20210F00442433 /* KTVLRRedPacketEntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A9BFE12C20210F00442433 /* KTVLRRedPacketEntranceViewController.swift */; };
 		32A9BFE72C20327200442433 /* KTVLRWinRedPacketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A9BFE62C20327200442433 /* KTVLRWinRedPacketViewController.xib */; };
 		32A9BFE82C20327200442433 /* KTVLRWinRedPacketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A9BFE52C20327200442433 /* KTVLRWinRedPacketViewController.swift */; };
+		32AC66572CD3E4F6002C196F /* KTVHeartBeatSingPortraitBanner3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC66562CD3E4F6002C196F /* KTVHeartBeatSingPortraitBanner3.swift */; };
 		32ADD1C02C21797800DC4B35 /* KTVLRRedPacketRewardsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32ADD1BF2C21797800DC4B35 /* KTVLRRedPacketRewardsCell.xib */; };
 		32ADD1C12C21797800DC4B35 /* KTVLRRedPacketRewardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD1BE2C21797800DC4B35 /* KTVLRRedPacketRewardsCell.swift */; };
 		32ADD1C32C217E8300DC4B35 /* KTVLRWinRedPacketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD1C22C217E8300DC4B35 /* KTVLRWinRedPacketViewModel.swift */; };
@@ -229,6 +230,7 @@
 		32A9BFE22C20210F00442433 /* KTVLRRedPacketEntranceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVLRRedPacketEntranceViewController.xib; sourceTree = "<group>"; };
 		32A9BFE52C20327200442433 /* KTVLRWinRedPacketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRWinRedPacketViewController.swift; sourceTree = "<group>"; };
 		32A9BFE62C20327200442433 /* KTVLRWinRedPacketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVLRWinRedPacketViewController.xib; sourceTree = "<group>"; };
+		32AC66562CD3E4F6002C196F /* KTVHeartBeatSingPortraitBanner3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVHeartBeatSingPortraitBanner3.swift; sourceTree = "<group>"; };
 		32ADD1BE2C21797800DC4B35 /* KTVLRRedPacketRewardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRRedPacketRewardsCell.swift; sourceTree = "<group>"; };
 		32ADD1BF2C21797800DC4B35 /* KTVLRRedPacketRewardsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVLRRedPacketRewardsCell.xib; sourceTree = "<group>"; };
 		32ADD1C22C217E8300DC4B35 /* KTVLRWinRedPacketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRWinRedPacketViewModel.swift; sourceTree = "<group>"; };
@@ -420,6 +422,7 @@
 				32CF7ACB2CC7927C003218FD /* KTVSingHomeInteractionBannerCell.xib */,
 				32A2CA782CC8E11200130BC3 /* KTVHeartBeatSingPortraitBanner2.swift */,
 				32DBEE192CC9EE07005926F4 /* KTVHeartBeatSingPortraitBanner.swift */,
+				32AC66562CD3E4F6002C196F /* KTVHeartBeatSingPortraitBanner3.swift */,
 				32F7DF042C4F5CE500681943 /* KTVScaleLineView.swift */,
 				32F7DF062C4F62F200681943 /* KTVFineTuningLineView.swift */,
 				32F7DF082C4F630900681943 /* KTVFineTuningLineView.xib */,
@@ -721,6 +724,7 @@
 				321B0A252C05858600DFBCFF /* KTVBannerItemView.swift in Sources */,
 				32ADD1C32C217E8300DC4B35 /* KTVLRWinRedPacketViewModel.swift in Sources */,
 				322962A32CC64E6200C6E47F /* FSPagerCollectionView.swift in Sources */,
+				32AC66572CD3E4F6002C196F /* KTVHeartBeatSingPortraitBanner3.swift in Sources */,
 				3299E0082C4681FB008899D6 /* TestImageViewController.swift in Sources */,
 				323BA6B42BFDD997007890C9 /* TestCollectionViewCell.swift in Sources */,
 				328741C92C6DD734002BB949 /* KTVWebContainerLoadingView.swift in Sources */,

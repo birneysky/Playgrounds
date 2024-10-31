@@ -172,8 +172,8 @@ class ViewController: UIViewController {
 //        self.present(webcv, animated: true)
         
         
-        let controller = KTVSingHomeHeaderBannerViewController.controller()
-        self.present(controller, animated: true)
+//        let controller = KTVSingHomeHeaderBannerViewController.controller()
+//        self.present(controller, animated: true)
         
         
 //        let view = KTVHeartBeatSingPortraitBanner(frame: CGRect(x: 100, y: 100, width: 80, height: 32))
@@ -182,6 +182,15 @@ class ViewController: UIViewController {
 //        //view.icons = ["avatar1", "avatar2", "avatar3","child"]
 //        view.backgroundColor = .red
 //        self.view.addSubview(view)
+        
+        
+        let view = KTVHeartBeatSingPortraitBanner3()
+        view.avatars = ["avatar1", "avatar2", "avatar3","child", "cup", "member", "like_test"]
+        view.backgroundColor = .red
+        view.clipsToBounds = false
+        view.frame = CGRect(x: 100, y: 200, width: 90, height: 32)
+        self.view.addSubview(view)
+        view.center = self.view.center
 
     }
 
