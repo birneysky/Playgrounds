@@ -120,7 +120,8 @@ class KTVSegmentedControl: UIControl {
 }
 
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview{
     let view  = KTVSegmentedControl(frame: CGRect(x: 0, y: 0, width: 300, height: 44))
     view.items = [
         KTVSegmentItem(title: "周榜", size: CGSizeMake(88, 24)),

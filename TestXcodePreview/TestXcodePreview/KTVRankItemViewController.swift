@@ -65,7 +65,8 @@ import UIKit
 }
 
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview{
     let parentController = UIViewController()
     let controller = KTVRankItemViewController.controller()
     parentController.addChild(controller)

@@ -26,6 +26,7 @@ class KTVLRRedPacketObtainRewardsView: UIView {
 
 
 
+@available(iOS 17.0, *)
 #Preview("KTVLRRedPacketObtainRewardsView", traits: .portrait) {
     let view = KTVLRRedPacketObtainRewardsView.view()
     return view

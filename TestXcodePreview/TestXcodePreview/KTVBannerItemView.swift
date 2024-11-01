@@ -92,6 +92,7 @@ class KTVBannerModel: KTVADBubbleItem {
 }
 
 
+@available(iOS 17.0, *)
 #Preview("KTVHorizontalScrollingBannerA", traits: .portrait) {
     let frame = CGRect(x: 0, y: 0, width: 60, height: 76)
     let banner = KTVHorizontalScrollingBanner<KTVBannerItem, KTVBannerItemView>(frame: frame)

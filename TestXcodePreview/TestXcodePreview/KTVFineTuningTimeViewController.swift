@@ -90,7 +90,8 @@ class KTVFineTuningTimeViewController: UIViewController {
 }
 
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview{
     
     let parentController = UIViewController()
     parentController.view.backgroundColor = .white

@@ -28,7 +28,8 @@ class KTVWebContainerRetryView: UIView {
 }
 
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview{
     let view = KTVWebContainerRetryView.view()
     //view.backgroundColor = .red
     return view

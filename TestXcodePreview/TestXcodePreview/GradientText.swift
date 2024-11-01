@@ -167,7 +167,8 @@ class GradientLabel: UIView {
     }
 }
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview{
     let view  = GradientLabel()
     view.text = "川仔端茶又🩷倒水川仔端茶又倒水"
     view.font = UIFont.systemFont(ofSize: 17)

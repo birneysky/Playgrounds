@@ -130,7 +130,8 @@ class TestCollectionViewController: UICollectionViewController {
 
 }
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview{
     let layout = UICollectionViewFlowLayout()
     layout.sectionInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
     layout.estimatedItemSize = CGSizeMake(44, 44)

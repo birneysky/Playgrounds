@@ -49,7 +49,8 @@ import UIKit
 }
 
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview{
     let parentController = UIViewController()
     let controller = KTVPluginItemsViewController.controller()
     parentController.addChild(controller)

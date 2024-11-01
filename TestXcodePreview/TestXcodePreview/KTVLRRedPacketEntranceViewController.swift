@@ -71,7 +71,8 @@ class KTVLRRedPacketEntranceViewController: UIViewController {
 }
 
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview{
     let parentController = UIViewController()
     let controller = KTVLRRedPacketEntranceViewController.controller()
     parentController.addChild(controller)

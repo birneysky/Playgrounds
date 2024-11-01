@@ -39,6 +39,7 @@ class KTVPartialRoundedView: UIView {
 
 
 
+@available(iOS 17.0, *)
 #Preview("MLTopLRRoundedView1", traits: .landscapeRight) {
     var view = KTVPartialRoundedView(frame: .init(x: 0, y: 0, width: 300, height: 100))
     view.cornerSize = 32
@@ -46,6 +47,7 @@ class KTVPartialRoundedView: UIView {
     return view
 }
 
+@available(iOS 17.0, *)
 #Preview("MLTopLRRoundedView2", traits: .portrait) {
     var view = KTVPartialRoundedView(frame: .init(x: 0, y: 0, width: 83, height: 24))
     view.clipsToBounds = true
@@ -67,6 +69,7 @@ class KTVPartialRoundedView: UIView {
 
 
 
+@available(iOS 17.0, *)
 #Preview("MLTopLRRoundedView3", traits: .portrait) {
     let frame1 = CGRect(x: 0, y: 0, width: 83, height: 24)
     var view1 = KTVPartialRoundedView(frame: frame1)

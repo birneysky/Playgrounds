@@ -203,7 +203,7 @@ class KTVHeartBeatSingPortraitBanner: UIView ,  UICollectionViewDataSource, UICo
 
 }
 
-
+@available(iOS 17.0, *)
 #Preview("PortraitBanner", traits: .portrait) {
     let view = KTVHeartBeatSingPortraitBanner()
     view.avatars = ["avatar1", "avatar2", "avatar3","child", "cup", "member", "like_test"]
@@ -212,6 +212,6 @@ class KTVHeartBeatSingPortraitBanner: UIView ,  UICollectionViewDataSource, UICo
     //view.avatars = ["avatar1", "avatar2", "avatar3","child"]
     view.itemSize = CGSize(width: 50, height: 50)
     view.itemSpaceing = -8
-    //view.backgroundColor = .green
+    view.backgroundColor = .green
     return view
 }

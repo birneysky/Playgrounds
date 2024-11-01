@@ -58,6 +58,7 @@ class KTVSingHeaderTShapeView: UIView {
 }
 
 
+@available(iOS 17.0, *)
 #Preview("MCInfiniteScrollView", traits: .portrait) {
     let shapeView = KTVSingHeaderTShapeView(frame: CGRect(x: 0, y: 0, width: 193, height: 54))
     var frame = shapeView.bounds

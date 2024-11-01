@@ -60,6 +60,7 @@ class KTVLRCompeteRedPacketView: UIView {
 }
 
 
+@available(iOS 17.0, *)
 #Preview("KTVLRCompeteRedPacketView", traits: .portrait) {
     let view = KTVLRCompeteRedPacketView.view()
     return view

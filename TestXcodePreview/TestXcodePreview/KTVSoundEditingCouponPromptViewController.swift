@@ -38,7 +38,8 @@ class KTVSoundEditingCouponPromptViewController: UIViewController {
 }
 
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview{
     let parentController = UIViewController()
     parentController.view.backgroundColor = .black
     let controller = KTVSoundEditingCouponPromptViewController.controller()

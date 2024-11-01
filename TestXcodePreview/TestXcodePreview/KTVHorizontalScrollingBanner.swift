@@ -178,6 +178,7 @@ class KTVHorizontalScrollingBanner <Item: KTVBannerItemData, ItemView: KTVBanner
     }
 }
 
+@available(iOS 17.0, *)
 #Preview("KTVHorizontalScrollingBannerA", traits: .portrait) {
     let frame = CGRect(x: 0, y: 0, width: 193, height: 54)
     let banner = KTVHorizontalScrollingBanner<ItemA, KTVBannerItemViewA>(frame: frame)
@@ -193,6 +194,7 @@ class KTVHorizontalScrollingBanner <Item: KTVBannerItemData, ItemView: KTVBanner
     return banner
 }
 
+@available(iOS 17.0, *)
 #Preview("KTVHorizontalScrollingBannerB", traits: .portrait) {
     let frame = CGRect(x: 0, y: 0, width: 193, height: 54)
     let banner = KTVHorizontalScrollingBanner<ItemB, KTVBannerItemViewB>(frame: frame)

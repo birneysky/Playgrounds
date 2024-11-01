@@ -23,7 +23,8 @@ class TestGradientViewController: UIViewController {
 }
 
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview{
     let sb = UIStoryboard(name: "Main", bundle: nil)
     let controller = sb.instantiateViewController(withIdentifier: "TestGradientViewController")
     return controller;

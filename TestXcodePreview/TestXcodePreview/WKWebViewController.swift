@@ -44,7 +44,8 @@ class WKWebViewController: UIViewController {
 }
 
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview{
     let controller = WKWebViewController.controller()
     return controller;
 }

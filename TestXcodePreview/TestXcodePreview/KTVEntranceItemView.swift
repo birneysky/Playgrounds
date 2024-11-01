@@ -82,6 +82,7 @@ class KTVEntranceItemView: UIView {
 
 }
 
+@available(iOS 17.0, *)
 #Preview("KTVEntranceItemView1", traits: .portrait) {
     let view = KTVEntranceItemView.view()
     view.frame = CGRect(x: 0, y: 0, width: 90, height: 40)
@@ -90,6 +91,7 @@ class KTVEntranceItemView: UIView {
     return view
 }
 
+@available(iOS 17.0, *)
 #Preview("KTVEntranceItemView2", traits: .portrait) {
     let view = KTVEntranceItemView.view()
     let item = KTVAEntranceItem(title: "礼物墙", subTitle: "9999 个", icons: ["like_test", "cup"], URL: "", type: 1)
@@ -97,6 +99,7 @@ class KTVEntranceItemView: UIView {
     return view
 }
 
+@available(iOS 17.0, *)
 #Preview("KTVEntranceItemView3", traits: .portrait) {
     let view = KTVEntranceItemView.view()
     let item = KTVAEntranceItem(title: "超级粉丝", subTitle: "9999.99 w 位", icons: ["avatar1", "avatar2", "avatar3"], URL: "", type: 2)

@@ -48,7 +48,8 @@ class KTVWebContainerLoadingView: UIView {
 }
 
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview{
     let view = KTVWebContainerLoadingView.view()
     view.backgroundColor = .red
     return view

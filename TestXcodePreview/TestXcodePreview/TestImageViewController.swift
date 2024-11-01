@@ -282,7 +282,8 @@ class TestImageViewController: UIViewController, UITextViewDelegate {
     }
 }
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview{
     let controller = TestImageViewController.controller()
     return controller;
 }

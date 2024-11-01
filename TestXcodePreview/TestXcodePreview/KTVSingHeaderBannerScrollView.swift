@@ -182,6 +182,7 @@ class KTVSingHeaderBannerScrollView: UIView, UIScrollViewDelegate {
 
 }
 
+@available(iOS 17.0, *)
 #Preview("MCInfiniteScrollView", traits: .portrait) {
     let scrollView = KTVSingHeaderBannerScrollView(frame: CGRect(x: 0, y: 0, width: 178, height: 48))
     scrollView.items = [

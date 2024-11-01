@@ -111,6 +111,7 @@ class KTVHeartBeatSingPortraitBanner2: UIView {
 }
 
 
+@available(iOS 17.0, *)
 #Preview("PortraitBanner", traits: .portrait) {
     let view = KTVHeartBeatSingPortraitBanner2()
 //    view.icons = ["avatar1", "avatar2", "avatar3","child", "cup", "member", "like_test"]

@@ -113,6 +113,7 @@ class BannerView: UIView, UIScrollViewDelegate {
 //}
 
 
+@available(iOS 17.0, *)
 #Preview("BannerView", traits: .portrait) {
     var view = BannerView(frame: .init(x: 0, y: 0, width: 300, height: 100))
     //view.cornerSize = 32

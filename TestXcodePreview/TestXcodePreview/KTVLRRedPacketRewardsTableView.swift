@@ -20,6 +20,7 @@ class KTVLRRedPacketRewardsTableView: UIView {
 
 
 
+@available(iOS 17.0, *)
 #Preview("KTVLRRedPacketRewardsTableView", traits: .portrait) {
     let view = KTVLRRedPacketRewardsTableView.view()
     return view

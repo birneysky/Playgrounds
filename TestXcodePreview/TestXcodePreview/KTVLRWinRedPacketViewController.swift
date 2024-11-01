@@ -146,7 +146,8 @@ extension KTVLRWinRedPacketViewController: UITableViewDataSource {
 }
 
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview{
     let parentController = UIViewController()
     parentController.view.backgroundColor = .black
     let controller = KTVLRWinRedPacketViewController.controller()

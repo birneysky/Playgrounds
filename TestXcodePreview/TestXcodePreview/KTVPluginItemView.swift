@@ -70,6 +70,7 @@ class KTVPluginItemView: UIView {
 }
 
 
+@available(iOS 17.0, *)
 #Preview("KTVPluginItemView", traits: .portrait) {
     let view = KTVPluginItemView.view()
     view.setData(KTVAPluginItem(title: "我的大爷", icon: "cup", redirectURL: "changba://你/我/啊", type: 1, bageText: "哈哈哈"))

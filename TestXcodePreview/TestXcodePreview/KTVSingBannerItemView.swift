@@ -47,6 +47,7 @@ class KTVSingBannerItemView: UIView {
 }
 
 
+@available(iOS 17.0, *)
 #Preview("KTVSingBannerItemView", traits: .portrait) {
     let view = KTVSingBannerItemView.view()
     return view

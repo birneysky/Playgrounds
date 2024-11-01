@@ -308,6 +308,7 @@ class KTVScaleLineView: UIView {
 }
 
 
+@available(iOS 17.0, *)
 #Preview("KTVScaleLineViewBegin", traits: .portrait) {
     let view = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .begin, startTime: 10000, endTime: 15000, firstLyric: "尽管讲出不快吧", secondLyric: "仍然紧守于身边")
     view.backgroundColor = .purple
@@ -315,6 +316,7 @@ class KTVScaleLineView: UIView {
 }
 
 
+@available(iOS 17.0, *)
 #Preview("KTVScaleLineViewEnd", traits: .portrait) {
     let view = KTVScaleLineView(frame: CGRect(x: 0, y: 0, width: 397, height: 0), style: .end, startTime: 20000, endTime: 35000, firstLyric: "尽管讲出不快吧", secondLyric: "仍然紧守于身边")
     return view

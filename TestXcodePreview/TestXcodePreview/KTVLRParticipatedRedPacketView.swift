@@ -28,6 +28,7 @@ class KTVLRParticipatedRedPacketView: UIView {
 }
 
 
+@available(iOS 17.0, *)
 #Preview("KTVLRParticipatedRedPacketView", traits: .portrait) {
     let view = KTVLRParticipatedRedPacketView.view()
     return view

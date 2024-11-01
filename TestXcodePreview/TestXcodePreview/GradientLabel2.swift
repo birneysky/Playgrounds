@@ -99,7 +99,8 @@ class GradientLabel2: UIView {
 }
 
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview{
     let view  = GradientLabel2()
     //let view  = StackViewTest()
     view.text = "Hello 🌎♻️🛜🚼🟡🌤️🌞 world"

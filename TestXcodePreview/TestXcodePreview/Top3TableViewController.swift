@@ -92,7 +92,8 @@ class Top3TableViewController: UITableViewController {
 }
 
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview{
     let controller = Top3TableViewController()
     return controller;
 }

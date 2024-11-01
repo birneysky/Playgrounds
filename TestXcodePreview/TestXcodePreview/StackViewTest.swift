@@ -74,7 +74,8 @@ class StackViewTest: UIView {
 
 
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview{
     let view  = StackViewTest(frame: CGRect(x: 0, y: 0, width: 60, height: 110))
     //let view  = StackViewTest()
     view.backgroundColor = .blue
@@ -82,7 +83,8 @@ class StackViewTest: UIView {
 }
 
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview{
     let view  = StackViewTest(frame: CGRect(x: 0, y: 0, width: 60, height: 110))
     view.imageView1.isHidden = true
     view.backgroundColor = .blue

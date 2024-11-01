@@ -292,7 +292,8 @@ extension KTVLRSendRedPacketViewController: UITextFieldDelegate {
 }
 
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview{
     let parentController = UIViewController()
     let controller = KTVLRSendRedPacketViewController.controller()
     parentController.addChild(controller)

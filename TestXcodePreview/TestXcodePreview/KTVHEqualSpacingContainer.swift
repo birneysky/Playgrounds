@@ -65,6 +65,7 @@ class KTVHEqualSpacingContainer: UIView {
 
 
 
+@available(iOS 17.0, *)
 #Preview("KTVHEqualSpacingContainer", traits: .portrait) {
     let view = KTVHEqualSpacingContainer()
     let icons = ["avatar1", "avatar2", "avatar3"]
@@ -84,6 +85,7 @@ class KTVHEqualSpacingContainer: UIView {
 }
 
 
+@available(iOS 17.0, *)
 #Preview("KTVHEqualSpacingContainer2", traits: .portrait) {
     let view = KTVHEqualSpacingContainer()
     let icons = ["cup","like_test", "cup"]

@@ -113,6 +113,7 @@ class ShiningLabel: UILabel {
 }
 
 
+@available(iOS 17.0, *)
 #Preview("ShiningLabel1") {
     let view  = ShiningLabel(gradientColors: [
         rgba("#CA7D00FF"),
@@ -130,6 +131,7 @@ class ShiningLabel: UILabel {
     return view
 }
 
+@available(iOS 17.0, *)
 #Preview("ShiningLabel2") {
     let view  = ShiningLabel(gradientColors: [
         rgba("#CA7D00FF"),
@@ -147,6 +149,7 @@ class ShiningLabel: UILabel {
     return view
 }
 
+@available(iOS 17.0, *)
 #Preview("ShiningLabel3") {
     let view  = ShiningLabel(gradientColors: [
         rgba("#DA9F06FF"),
@@ -164,6 +167,7 @@ class ShiningLabel: UILabel {
 }
 
 
+@available(iOS 17.0, *)
 #Preview("ShiningLabel5") {
     let startPoint = CGPoint(x: 0, y: 0)
     let endPoint = CGPoint(x: startPoint.x + cos(80 * .pi / 180), y: startPoint.y + sin(80   * .pi / 180))

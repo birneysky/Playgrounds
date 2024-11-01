@@ -30,6 +30,7 @@ class KTVADScrollingBubblesViewController: UIViewController {
 }
 
 
+@available(iOS 17.0, *)
 #Preview("KTVHorizontalScrollingBannerA", traits: .portrait) {
     let parentController = UIViewController()
     parentController.view.backgroundColor = .red

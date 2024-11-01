@@ -205,7 +205,8 @@ func calculateIntersectionPoint(angleInDegrees: Double) -> CGPoint {
 }
 
 
-#Preview {
+@available(iOS 17.0, *)
+#Preview{
  
     let startPoint = calculateIntersectionPoint(angleInDegrees: 20);
     print("----------startPoint: \(startPoint)")
