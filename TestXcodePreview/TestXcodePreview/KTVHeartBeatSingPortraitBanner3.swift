@@ -21,6 +21,11 @@ class KTVHeartBeatSingPortraitBanner3: UIView {
     private var startIndex = 0
     private var container = UIView()
     var spacing: CGFloat = -8.0 // 控制头像之间的重叠量
+    var itemSize: CGSize = CGSize(width: 32, height: 32) {
+        didSet {
+            setupViews()
+        }
+    }
     @objc var avatars: [String] = []  {
            didSet {
                setupViews()
@@ -63,8 +68,8 @@ class KTVHeartBeatSingPortraitBanner3: UIView {
             imageView.image = UIImage(named: self.avatars[i])
             imageViews.append(imageView)
             self.container.addSubview(imageView)
-            let x: CGFloat  = CGFloat(i * 32) + CGFloat(i) * spacing
-            imageView.frame = CGRect(x: x , y: 0, width: 32, height: 32)
+            let x: CGFloat  = CGFloat(i) * itemSize.width + CGFloat(i) * spacing
+            imageView.frame = CGRect(x: x , y: 0, width: itemSize.width, height: itemSize.height)
         }
         
         self.addSubview(self.container)
@@ -72,7 +77,7 @@ class KTVHeartBeatSingPortraitBanner3: UIView {
         let lastView = aImageView;
         lastView.image = UIImage(named: "cup")
         imageViews.append(lastView)
-        lastView.frame = CGRect(x: contentSize.width , y: 0, width: 32, height: 32)
+        lastView.frame = CGRect(x: contentSize.width , y: 0, width: itemSize.width, height: itemSize.height)
         self.container.addSubview(lastView)
         
         self.container.clipsToBounds = true
@@ -96,38 +101,40 @@ class KTVHeartBeatSingPortraitBanner3: UIView {
         //firstView.removeFromSuperview()
         let lastView = self.imageViews.last
         lastView?.image =  UIImage(named: self.avatars[self.startIndex % self.avatars.count])
-        lastView?.frame = CGRect(x: 80 , y: 0, width: 32, height: 32)
+        lastView?.frame = CGRect(x: contentSize.width , y: 0, width: contentSize.width, height: itemSize.height)
         UIView.animate(withDuration: 0.35) {
-            firstView.frame = CGRect(x: -32 , y: 0, width: 32, height: 32)
+            firstView.frame = CGRect(x: -self.itemSize.width , y: 0, width: self.itemSize.width, height: self.itemSize.height)
             firstView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
             firstView.alpha = 0
             for i in 0 ..<  self.imageViews.count {
-                let x: CGFloat  = CGFloat(i * 32) + CGFloat(i) * self.spacing
-                self.imageViews[i].frame = CGRect(x: x , y: 0, width: 32, height: 32)
+                let x: CGFloat  = CGFloat(i) * self.itemSize.width + CGFloat(i) * self.spacing
+                self.imageViews[i].frame = CGRect(x: x , y: 0, width: self.itemSize.width, height: self.itemSize.height)
             }
 
         } completion: { _ in
-                firstView.image = nil
-                firstView.alpha = 1
-                firstView.transform = CGAffineTransform.identity
-                self.imageViews.append(firstView)
+            firstView.image = nil
+            firstView.alpha = 1
+            firstView.transform = CGAffineTransform.identity
+            self.imageViews.append(firstView)
             
-                firstView.frame = CGRect(x: 100 , y: 0, width: 32, height: 32)
-                self.container.bringSubviewToFront(firstView)
+            firstView.frame = CGRect(x: self.contentSize.width ,
+                                     y: 0,
+                                     width: self.contentSize.width,
+                                     height: self.contentSize.height)
+            self.container.bringSubviewToFront(firstView)
             
         }
 
         self.startIndex = self.startIndex + 1
-     
     }
     
     
     var contentSize: CGSize {
         
-        let itemHeight:CGFloat = 32
+        let itemHeight:CGFloat = itemSize.height
         
         // 计算 contentSize 的宽度
-        let totalWidth = 3 * 32 + CGFloat(3-1) * spacing
+        let totalWidth = 3 * itemSize.width + CGFloat(3-1) * spacing
         
         return CGSizeMake(totalWidth, itemHeight)
     }
