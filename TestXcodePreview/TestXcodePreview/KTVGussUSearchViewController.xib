@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="collectionView" destination="Vwi-0i-mnS" id="6zx-mU-KnZ"/>
                 <outlet property="collectionViewLayout" destination="Meb-ch-DGc" id="dKR-zf-wwc"/>
+                <outlet property="connectionViewHeightConstrait" destination="TvM-QH-xsx" id="VMC-aV-qIb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -45,6 +46,9 @@
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Vwi-0i-mnS">
                     <rect key="frame" x="15" y="57.666666666666664" width="363" height="114.33333333333334"/>
                     <color key="backgroundColor" name="AccentColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="114.33" id="TvM-QH-xsx"/>
+                    </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="5" id="Meb-ch-DGc" customClass="KTVLeftAlignedFlowLayout" customModule="TestXcodePreview" customModuleProvider="target">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -70,7 +74,6 @@
                 <constraint firstAttribute="trailing" secondItem="ljY-cn-2RR" secondAttribute="trailing" constant="14" id="kIA-O1-NyH"/>
                 <constraint firstItem="NaT-gz-XKe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="mk2-yK-PzR"/>
                 <constraint firstItem="ljY-cn-2RR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="17" id="pvm-se-QmU"/>
-                <constraint firstAttribute="bottom" secondItem="Vwi-0i-mnS" secondAttribute="bottom" constant="8" id="tdr-PE-wLT"/>
                 <constraint firstAttribute="trailing" secondItem="Vwi-0i-mnS" secondAttribute="trailing" constant="15" id="zzr-ce-lsL"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

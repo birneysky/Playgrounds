@@ -44,9 +44,7 @@ class KeywordCell: UICollectionViewCell {
     
     let container: UIStackView = {
        let view = UIStackView()
-//        view.alignment = .center
-//        view.distribution = .equalSpacing
-        view.alignment = .fill
+        view.alignment = .center
         view.distribution = .fillProportionally
         view.axis = .horizontal
         view.spacing = 5
@@ -57,9 +55,9 @@ class KeywordCell: UICollectionViewCell {
         super.init(frame: frame)
         
         contentView.addSubview(self.container)
-        //container.addArrangedSubview(leftImageview)
+        container.addArrangedSubview(leftImageview)
         container.addArrangedSubview(keywordLabel)
-        //container.addArrangedSubview(rightImageview)
+        container.addArrangedSubview(rightImageview)
         //contentView.addSubview(keywordLabel)
         
         // 设置 Auto Layout 约束
@@ -78,15 +76,18 @@ class KeywordCell: UICollectionViewCell {
     
     func configure(with keyword: String) {
         keywordLabel.text = keyword
+//        leftImageview.isHidden = true
+//        rightImageview.isHidden = true
     }
     
 }
 
 class KTVGussUSearchViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    @IBOutlet weak var connectionViewHeightConstrait: NSLayoutConstraint!
     @IBOutlet weak var collectionViewLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var collectionView: UICollectionView!
-    private var searchHistory: [String] = ["你好","哈喽","哇哈哈","一二三","四五六","789","8909"]
+    private var searchHistory: [String] = ["你好","哈喽","哇哈哈","一二三","四五六","789","8909","哇哈哈","一二三","四五六","789","8909"]
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionViewLayout.minimumLineSpacing = 5
@@ -95,10 +96,6 @@ class KTVGussUSearchViewController: UIViewController, UICollectionViewDataSource
         collectionView.reloadData()
         
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
         
         self.view.layoutIfNeeded()
         let collectionViewHeight = self.collectionView.contentSize.height
@@ -107,6 +104,11 @@ class KTVGussUSearchViewController: UIViewController, UICollectionViewDataSource
         
         
         print("################12345 \(self.collectionView.contentSize.height) ,height:\(height) :hahah:\(collectionViewHeight)")
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
         
         
     }
@@ -121,9 +123,33 @@ class KTVGussUSearchViewController: UIViewController, UICollectionViewDataSource
         // Pass the selected object to the new view controller.
     }
     */
+    
+    private var a = true
 
     @IBAction func refreshAction(_ sender: UIButton) {
         print("hahhaha")
+        
+        if a {
+            searchHistory = ["你好","哈喽","哇哈哈","一二三","四五六","789","8909","哇哈哈49320489032180493184301","一二三","四五六","789","8909"]
+        } else {
+            searchHistory = ["你好","哈喽","哇哈哈","一二三",]
+        }
+        self.collectionView.reloadData()
+        
+        a = !a
+        self.view.layoutIfNeeded()
+        let collectionViewHeight = self.collectionView.contentSize.height
+        print("hahahha height\(collectionViewHeight), \(self.collectionView.collectionViewLayout.collectionViewContentSize.height)")
+        self.connectionViewHeightConstrait.constant = collectionViewHeight;
+        let height: CGFloat = collectionViewHeight + 20 + 18 + 16 + 8
+//        guard let superView = self.view.superview else { return }
+//        NSLayoutConstraint.activate([
+//            self.view.leadingAnchor.constraint(equalTo: superView.leadingAnchor),
+//            self.view.trailingAnchor.constraint(equalTo: superView.trailingAnchor),
+//            self.view.centerYAnchor.constraint(equalTo: superView.centerYAnchor),
+//            self.view.heightAnchor.constraint(equalToConstant: height),
+//        ])
+        self.view.layoutIfNeeded()
     }
     
     // MARK: - UICollectionViewDataSource

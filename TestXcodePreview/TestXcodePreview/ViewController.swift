@@ -172,8 +172,8 @@ class ViewController: UIViewController {
 //        self.present(webcv, animated: true)
         
         
-        let controller = KTVGussUSearchViewController.controller()
-        self.present(controller, animated: true)
+//        let controller = KTVGussUSearchViewController.controller()
+//        self.present(controller, animated: true)
         
         
 //        let view = KTVHeartBeatSingPortraitBanner(frame: CGRect(x: 100, y: 100, width: 80, height: 32))
@@ -191,6 +191,22 @@ class ViewController: UIViewController {
 //        view.frame = CGRect(x: 100, y: 200, width: 90, height: 32)
 //        self.view.addSubview(view)
 //        view.center = self.view.center
+        
+        
+        let parentController = UIViewController()
+        parentController.view.backgroundColor = .white
+        let controller = KTVGussUSearchViewController.controller()
+        controller.view.backgroundColor = .blue
+        parentController.addChild(controller)
+        parentController.view.addSubview(controller.view)
+        controller.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            controller.view.leadingAnchor.constraint(equalTo: parentController.view.leadingAnchor),
+            controller.view.trailingAnchor.constraint(equalTo: parentController.view.trailingAnchor),
+            controller.view.centerYAnchor.constraint(equalTo: parentController.view.centerYAnchor),
+            controller.view.heightAnchor.constraint(equalToConstant: 500),
+        ])
+        self.present(parentController, animated: true)
 
     }
 
