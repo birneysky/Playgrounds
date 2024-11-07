@@ -22,9 +22,7 @@ class KTVColorsGradientView: UIControl {
         [CGColor]()
     }()
     
-    private lazy var locations: [NSNumber] = {
-        [0.0, 1]
-    }()
+    var locations: [NSNumber] = [0.0, 1]
     override class var layerClass: AnyClass {
         return CAGradientLayer.self
     }

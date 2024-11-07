@@ -9,6 +9,8 @@ import UIKit
 
 class KTVSingHomeInteractionBannerCell: FSPagerViewCell, UIGestureRecognizerDelegate {
 
+    @IBOutlet weak var audioSettingLabel: UILabel!
+    @IBOutlet weak var gradientView: KTVColorsGradientView!
     @IBOutlet weak var portraitBanner: KTVHeartBeatSingPortraitBanner!
     @IBOutlet weak var thirdView: UIView!
     @IBOutlet weak var secondView: UIView!
@@ -46,7 +48,12 @@ class KTVSingHomeInteractionBannerCell: FSPagerViewCell, UIGestureRecognizerDele
         self.speakerSettingView.addGestureRecognizer(tapGesture)
         
         self.portraitBanner.avatars = ["avatar1", "avatar2", "avatar3","child", "cup", "member", "like_test"]
+        self.gradientView.locations = [0.0, 0.5, 1.0]
         self.portraitBanner.itemSize = CGSize(width: 32, height: 32)
+        audioSettingLabel.layer.shadowColor = UIColor.white.withAlphaComponent(0.4).cgColor
+        audioSettingLabel.layer.shadowOpacity = 0 // 阴影透明度 (0.0 - 1.0)
+        audioSettingLabel.layer.shadowOffset = CGSize(width: 2, height: 2) // 阴影偏移
+        audioSettingLabel.layer.shadowRadius = 1 // 阴影模糊半径
         
     }
     

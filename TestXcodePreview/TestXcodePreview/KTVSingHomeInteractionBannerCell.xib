@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -187,17 +188,44 @@
                             </stackView>
                         </subviews>
                     </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uV0-N4-YDm" customClass="KTVColorsGradientView" customModule="TestXcodePreview" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="348" height="109"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" white="0.0" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="thirdColor">
+                                <color key="value" white="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="startPoint">
+                                <point key="value" x="0.0" y="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="endPoint">
+                                <point key="value" x="0.0" y="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstItem="uV0-N4-YDm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4pG-og-cU6"/>
+                <constraint firstAttribute="trailing" secondItem="uV0-N4-YDm" secondAttribute="trailing" id="FNn-vD-msF"/>
+                <constraint firstAttribute="bottom" secondItem="uV0-N4-YDm" secondAttribute="bottom" id="Fhr-Xj-fL7"/>
                 <constraint firstItem="EdV-i9-dFE" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="MFb-44-ImT"/>
                 <constraint firstItem="EdV-i9-dFE" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="n6S-fJ-5Q2"/>
+                <constraint firstItem="uV0-N4-YDm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pzF-eY-wsP"/>
             </constraints>
             <connections>
+                <outlet property="audioSettingLabel" destination="uUM-Jn-bT9" id="8Kv-GQ-Lb2"/>
                 <outlet property="firstBackgroundImageView" destination="6RV-xh-9cF" id="dz1-Vk-uXL"/>
                 <outlet property="firstView" destination="JJ6-ho-SHB" id="V8X-wN-eWU"/>
                 <outlet property="firstViewWidthConstraint" destination="0ZD-9F-9aZ" id="nJu-de-S7m"/>
+                <outlet property="gradientView" destination="uV0-N4-YDm" id="Lwa-Xt-gby"/>
                 <outlet property="portraitBanner" destination="siE-Xp-aC0" id="VLa-lM-esf"/>
                 <outlet property="secondBackgroudImageView" destination="PUM-I7-oTY" id="xZv-bw-Gtm"/>
                 <outlet property="secondBackgroundImageViewLeadingConstraint" destination="6Xl-Tp-8dh" id="oJB-J2-olm"/>
