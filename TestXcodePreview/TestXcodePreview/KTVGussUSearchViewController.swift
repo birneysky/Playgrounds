@@ -44,8 +44,8 @@ class KeywordCell: UICollectionViewCell {
     
     let container: UIStackView = {
        let view = UIStackView()
-        view.alignment = .center
-        view.distribution = .fillProportionally
+        view.alignment = .fill
+        view.distribution = .fill
         view.axis = .horizontal
         view.spacing = 5
         return view
@@ -76,13 +76,13 @@ class KeywordCell: UICollectionViewCell {
     
     func configure(with keyword: String) {
         keywordLabel.text = keyword
-//        leftImageview.isHidden = true
-//        rightImageview.isHidden = true
+        leftImageview.isHidden = true
+        rightImageview.isHidden = true
     }
     
 }
 
-class KTVGussUSearchViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class KTVGussUSearchViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var connectionViewHeightConstrait: NSLayoutConstraint!
     @IBOutlet weak var collectionViewLayout: UICollectionViewFlowLayout!
@@ -92,7 +92,9 @@ class KTVGussUSearchViewController: UIViewController, UICollectionViewDataSource
         super.viewDidLoad()
         self.collectionViewLayout.minimumLineSpacing = 5
         self.collectionViewLayout.minimumInteritemSpacing = 5
-        collectionView.register(KeywordCell.self, forCellWithReuseIdentifier: "KeywordCell")
+        let nib = UINib(nibName: "KTVGuessUSearchCell", bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: "KeywordCell")
+        //collectionView.register(KeywordCell.self, forCellWithReuseIdentifier: "KeywordCell")
         collectionView.reloadData()
         
         // Do any additional setup after loading the view.
@@ -100,7 +102,7 @@ class KTVGussUSearchViewController: UIViewController, UICollectionViewDataSource
         self.view.layoutIfNeeded()
         let collectionViewHeight = self.collectionView.contentSize.height
         let height: CGFloat = collectionViewHeight + 20 + 18 + 16 + 8
-        self.view.heightAnchor.constraint(equalToConstant: height).isActive = true
+        //self.view.heightAnchor.constraint(equalToConstant: height).isActive = true
         
         
         print("################12345 \(self.collectionView.contentSize.height) ,height:\(height) :hahah:\(collectionViewHeight)")
@@ -109,8 +111,16 @@ class KTVGussUSearchViewController: UIViewController, UICollectionViewDataSource
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
-        
-        
+        self.view.layoutIfNeeded()
+        let collectionViewHeight = self.collectionView.contentSize.height
+        print("hahahha height\(collectionViewHeight), \(self.collectionView.collectionViewLayout.collectionViewContentSize.height)")
+//        self.connectionViewHeightConstrait.constant = collectionViewHeight;
+        let height: CGFloat = collectionViewHeight + 20 + 18 + 16 + 8 + 8
+        //preferredContentSize = CGSize(width: self.view.frame.size.width, height: height)
+        var frame =  self.view.frame
+        frame.size.height = height
+        self.view.frame = frame
+        self.view.layoutIfNeeded()
     }
 
 
@@ -140,8 +150,8 @@ class KTVGussUSearchViewController: UIViewController, UICollectionViewDataSource
         self.view.layoutIfNeeded()
         let collectionViewHeight = self.collectionView.contentSize.height
         print("hahahha height\(collectionViewHeight), \(self.collectionView.collectionViewLayout.collectionViewContentSize.height)")
-        self.connectionViewHeightConstrait.constant = collectionViewHeight;
-        let height: CGFloat = collectionViewHeight + 20 + 18 + 16 + 8
+//        self.connectionViewHeightConstrait.constant = collectionViewHeight;
+        let height: CGFloat = collectionViewHeight + 20 + 18 + 16 + 8 + 8 
 //        guard let superView = self.view.superview else { return }
 //        NSLayoutConstraint.activate([
 //            self.view.leadingAnchor.constraint(equalTo: superView.leadingAnchor),
@@ -149,9 +159,23 @@ class KTVGussUSearchViewController: UIViewController, UICollectionViewDataSource
 //            self.view.centerYAnchor.constraint(equalTo: superView.centerYAnchor),
 //            self.view.heightAnchor.constraint(equalToConstant: height),
 //        ])
+        var frame =  self.view.frame
+        frame.size.height = height
+        self.view.frame = frame
         self.view.layoutIfNeeded()
+        //preferredContentSize = CGSize(width: self.view.frame.size.width, height: height)
+        
     }
     
+     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewFlowLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let keyword = self.searchHistory[indexPath.row]
+        
+        // 计算关键字的宽度
+        let textSize = (keyword as NSString).size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)])
+        let width = 8 + 24 + 8 + textSize.width + 8 + 12 + 8// 加上左右边距
+        
+        return CGSize(width: width, height: 30) // 固定高度
+    }
     // MARK: - UICollectionViewDataSource
         
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -159,8 +183,9 @@ class KTVGussUSearchViewController: UIViewController, UICollectionViewDataSource
         }
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "KeywordCell", for: indexPath) as! KeywordCell
-            cell.configure(with: searchHistory[indexPath.item])
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "KeywordCell", for: indexPath) as! KTVGuessUSearchCell
+            cell.textLabel.text = searchHistory[indexPath.item]
+            //cell.configure(with: searchHistory[indexPath.item])
             cell.backgroundColor = .red
             return cell
         }
@@ -174,21 +199,14 @@ class KTVGussUSearchViewController: UIViewController, UICollectionViewDataSource
 }
 
 
-@available(iOS 17.0, *)
-#Preview{
-    
-    let parentController = UIViewController()
-    parentController.view.backgroundColor = .white
-    let controller = KTVGussUSearchViewController.controller()
-    controller.view.backgroundColor = .blue
-    parentController.addChild(controller)
-    parentController.view.addSubview(controller.view)
-    controller.view.translatesAutoresizingMaskIntoConstraints = false
-    NSLayoutConstraint.activate([
-        controller.view.leadingAnchor.constraint(equalTo: parentController.view.leadingAnchor),
-        controller.view.trailingAnchor.constraint(equalTo: parentController.view.trailingAnchor),
-        controller.view.centerYAnchor.constraint(equalTo: parentController.view.centerYAnchor),
-        //controller.view.heightAnchor.constraint(equalToConstant: 176),
-    ])
-    return parentController;
-}
+//@available(iOS 17.0, *)
+//#Preview{
+//    let parentController = UIViewController()
+//    parentController.view.backgroundColor = .white
+//    let controller = KTVGussUSearchViewController.controller()
+//    controller.view.backgroundColor = .blue
+//    parentController.addChild(controller)
+//    
+//    parentController.view.addSubview(controller.view)
+//    return parentController;
+//}

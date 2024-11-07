@@ -199,13 +199,6 @@ class ViewController: UIViewController {
         controller.view.backgroundColor = .blue
         parentController.addChild(controller)
         parentController.view.addSubview(controller.view)
-        controller.view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            controller.view.leadingAnchor.constraint(equalTo: parentController.view.leadingAnchor),
-            controller.view.trailingAnchor.constraint(equalTo: parentController.view.trailingAnchor),
-            controller.view.centerYAnchor.constraint(equalTo: parentController.view.centerYAnchor),
-            controller.view.heightAnchor.constraint(equalToConstant: 500),
-        ])
         self.present(parentController, animated: true)
 
     }

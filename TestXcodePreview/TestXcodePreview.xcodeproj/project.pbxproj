@@ -122,6 +122,8 @@
 		32EA10DC2C1C159200BDEBD0 /* KTVLRSendRedPacketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EA10DB2C1C159200BDEBD0 /* KTVLRSendRedPacketViewModel.swift */; };
 		32EA10E12C1C202C00BDEBD0 /* KTVLRSendRedPacketTextItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32EA10E02C1C202C00BDEBD0 /* KTVLRSendRedPacketTextItemCell.xib */; };
 		32EA10E22C1C202C00BDEBD0 /* KTVLRSendRedPacketTextItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EA10DF2C1C202C00BDEBD0 /* KTVLRSendRedPacketTextItemCell.swift */; };
+		32EB797E2CD7D24D0015D1E8 /* KTVGuessUSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32EB797D2CD7D24D0015D1E8 /* KTVGuessUSearchCell.xib */; };
+		32EB797F2CD7D24D0015D1E8 /* KTVGuessUSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EB797C2CD7D24D0015D1E8 /* KTVGuessUSearchCell.swift */; };
 		32EC65592BC3D8B800D388DB /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EC65582BC3D8B800D388DB /* BannerView.swift */; };
 		32EC655F2BC4020D00D388DB /* KTVSingHeaderBannerScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EC655E2BC4020D00D388DB /* KTVSingHeaderBannerScrollView.swift */; };
 		32EC65612BC4063F00D388DB /* CustomAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EC65602BC4063F00D388DB /* CustomAvatarView.swift */; };
@@ -275,6 +277,8 @@
 		32EA10DB2C1C159200BDEBD0 /* KTVLRSendRedPacketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRSendRedPacketViewModel.swift; sourceTree = "<group>"; };
 		32EA10DF2C1C202C00BDEBD0 /* KTVLRSendRedPacketTextItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRSendRedPacketTextItemCell.swift; sourceTree = "<group>"; };
 		32EA10E02C1C202C00BDEBD0 /* KTVLRSendRedPacketTextItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVLRSendRedPacketTextItemCell.xib; sourceTree = "<group>"; };
+		32EB797C2CD7D24D0015D1E8 /* KTVGuessUSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVGuessUSearchCell.swift; sourceTree = "<group>"; };
+		32EB797D2CD7D24D0015D1E8 /* KTVGuessUSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVGuessUSearchCell.xib; sourceTree = "<group>"; };
 		32EC65582BC3D8B800D388DB /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		32EC655E2BC4020D00D388DB /* KTVSingHeaderBannerScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVSingHeaderBannerScrollView.swift; sourceTree = "<group>"; };
 		32EC65602BC4063F00D388DB /* CustomAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAvatarView.swift; sourceTree = "<group>"; };
@@ -430,6 +434,8 @@
 				32DBEE192CC9EE07005926F4 /* KTVHeartBeatSingPortraitBanner.swift */,
 				32AC66562CD3E4F6002C196F /* KTVHeartBeatSingPortraitBanner3.swift */,
 				32F7DF042C4F5CE500681943 /* KTVScaleLineView.swift */,
+				32EB797C2CD7D24D0015D1E8 /* KTVGuessUSearchCell.swift */,
+				32EB797D2CD7D24D0015D1E8 /* KTVGuessUSearchCell.xib */,
 				327E34F72CD4B7BD00F0AC42 /* KTVGussUSearchViewController.swift */,
 				327E34FB2CD4C69400F0AC42 /* KTVLeftAlignedFlowLayout.swift */,
 				327E34F82CD4B7BD00F0AC42 /* KTVGussUSearchViewController.xib */,
@@ -605,6 +611,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32DB6AD92C6DEB76000DA3C8 /* KTVWebContainerRetryView.xib in Resources */,
+				32EB797E2CD7D24D0015D1E8 /* KTVGuessUSearchCell.xib in Resources */,
 				32CF7ABF2CC662F7003218FD /* 1.jpg in Resources */,
 				32B59AB12C205B0700AC9FC5 /* KTVLRCompeteRedPacketView.xib in Resources */,
 				3299E0092C4681FB008899D6 /* TestImageViewController.xib in Resources */,
@@ -736,6 +743,7 @@
 				32ADD1C32C217E8300DC4B35 /* KTVLRWinRedPacketViewModel.swift in Sources */,
 				322962A32CC64E6200C6E47F /* FSPagerCollectionView.swift in Sources */,
 				32AC66572CD3E4F6002C196F /* KTVHeartBeatSingPortraitBanner3.swift in Sources */,
+				32EB797F2CD7D24D0015D1E8 /* KTVGuessUSearchCell.swift in Sources */,
 				3299E0082C4681FB008899D6 /* TestImageViewController.swift in Sources */,
 				323BA6B42BFDD997007890C9 /* TestCollectionViewCell.swift in Sources */,
 				328741C92C6DD734002BB949 /* KTVWebContainerLoadingView.swift in Sources */,
@@ -932,7 +940,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = Y4E69MK58Q;
+				DEVELOPMENT_TEAM = 52L4X5R86L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestXcodePreview/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -965,7 +973,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = Y4E69MK58Q;
+				DEVELOPMENT_TEAM = 52L4X5R86L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestXcodePreview/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

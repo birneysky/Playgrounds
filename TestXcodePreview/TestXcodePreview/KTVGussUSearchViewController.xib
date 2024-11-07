@@ -13,7 +13,6 @@
             <connections>
                 <outlet property="collectionView" destination="Vwi-0i-mnS" id="6zx-mU-KnZ"/>
                 <outlet property="collectionViewLayout" destination="Meb-ch-DGc" id="dKR-zf-wwc"/>
-                <outlet property="connectionViewHeightConstrait" destination="TvM-QH-xsx" id="VMC-aV-qIb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -44,11 +43,8 @@
                     </connections>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Vwi-0i-mnS">
-                    <rect key="frame" x="15" y="57.666666666666664" width="363" height="114.33333333333334"/>
+                    <rect key="frame" x="15" y="57.666666666666664" width="363" height="118.33333333333334"/>
                     <color key="backgroundColor" name="AccentColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="114.33" id="TvM-QH-xsx"/>
-                    </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="5" id="Meb-ch-DGc" customClass="KTVLeftAlignedFlowLayout" customModule="TestXcodePreview" customModuleProvider="target">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -64,6 +60,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="Vwi-0i-mnS" secondAttribute="bottom" constant="4" id="0wv-2N-8GT"/>
                 <constraint firstItem="Vwi-0i-mnS" firstAttribute="top" secondItem="NaT-gz-XKe" secondAttribute="bottom" constant="20" id="4Be-6Y-rDQ"/>
                 <constraint firstItem="ljY-cn-2RR" firstAttribute="bottom" secondItem="WmA-2z-cdS" secondAttribute="bottom" constant="-8" id="9RK-6m-izc"/>
                 <constraint firstItem="Vwi-0i-mnS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="SxA-YT-wee"/>
