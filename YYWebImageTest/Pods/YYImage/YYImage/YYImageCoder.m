@@ -2874,22 +2874,12 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
                 alphaInfo == kCGImageAlphaFirst) {
                 hasAlpha = YES;
             }
-            if (self.imageOrientation != UIImageOrientationUp) {
-                CGImageRef rotated = YYCGImageCreateCopyWithOrientation(imageRef, self.imageOrientation, bitmapInfo | alphaInfo);
-                if (rotated) {
-                    CFRelease(imageRef);
-                    imageRef = rotated;
-                }
-            }
             @autoreleasepool {
-                UIImage *newImage = [UIImage imageWithCGImage:imageRef];
-                if (newImage) {
                     if (hasAlpha) {
-                        data = UIImagePNGRepresentation([UIImage imageWithCGImage:imageRef]);
+                        data = UIImagePNGRepresentation(self);
                     } else {
-                        data = UIImageJPEGRepresentation([UIImage imageWithCGImage:imageRef], 0.9); // same as Apple's example
+                        data = UIImageJPEGRepresentation(self, 0.9); // same as Apple's example
                     }
-                }
             }
             CFRelease(imageRef);
         }
