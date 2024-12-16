@@ -1,0 +1,608 @@
+{
+    "result": {
+        "productlist": [
+            {
+                "origin_productid": "1100002076",
+                "productid": "1100002083",
+                "detail": [
+                    {
+                        "id": "1100002076",
+                        "product": "com.changba.svip_single_membership_upgrade1month",
+                        "duration": "升级3个月",
+                        "description": "",
+                        "price": "10",
+                        "money": "10",
+                        "coins": "1000",
+                        "points2": "100",
+                        "renew": 0,
+                        "renew_type": 0,
+                        "duration_day": 31,
+                        "renew_text": "可获得100成长点; ",
+                        "average_money_text": "每天不到0.33元",
+                        "left_label": "",
+                        "count": 1
+                    },
+                    {
+                        "id": "1100002083",
+                        "product": "com.changba.svip_single_membership_upgrade1month_discount_5",
+                        "duration": "升级5个月",
+                        "price": "10",
+                        "money": "5",
+                        "coins": "500",
+                        "points2": "100",
+                        "renew": 0,
+                        "renew_type": 0,
+                        "duration_day": 31,
+                        "renew_text": "可获得100成长点; ",
+                        "average_money_text": "每天不到0.17元",
+                        "left_label": "",
+                        "count": 1,
+                        "couponDetail": {
+                            "coupon_id": 36117995,
+                            "base_id": "48",
+                            "origin_productid": "1100002076",
+                            "coupon_name": "1个月SVIP升级首月5元优惠券",
+                            "discount_money": "5",
+                            "source": "",
+                            "condition": "",
+                            "redirect_url": ""
+                        }
+                    }
+                ],
+                "selected": 1,
+                "discount_countdown": true
+            },
+            {
+                "origin_productid": "1100002069",
+                "productid": "1100002092",
+                "detail": [
+                    {
+                        "id": "1100002069",
+                        "product": "com.changba.svip_membershipauto1month",
+                        "duration": "连续包月",
+                        "description": "",
+                        "price": "25",
+                        "money": "25",
+                        "coins": "2500",
+                        "points2": "250",
+                        "renew": 1,
+                        "renew_type": 1,
+                        "duration_day": 31,
+                        "renew_text": "可获得250成长点; 之后25元/月续费，续期前提醒，可关闭",
+                        "average_money_text": "每天不到0.81元",
+                        "left_label": "",
+                        "count": 1,
+                        "giftDetail": {
+                            "type": 0,
+                            "giftlist": [
+                                {
+                                    "id": 101523,
+                                    "count": 1,
+                                    "icon": "http://aliimg.changba.com//promote/5d43cec56b7ae6c96ca98e0314afcf68.png",
+                                    "name": "白桃乌龙",
+                                    "price": 666,
+                                    "expire": 3
+                                },
+                                {
+                                    "id": 101469,
+                                    "count": 1,
+                                    "icon": "http://aliimg.changba.com//promote/20ad3a34d7ce598342a1df7b23c3d413.png",
+                                    "name": "棉花糖星球",
+                                    "price": 100,
+                                    "expire": 3
+                                }
+                            ],
+                            "android_normaltext": [
+                                "·到期按25元/月自动续费",
+                                "·次月起，连续三个月"
+                            ],
+                            "ios_normaltext": [
+                                "·次月按25元/月自动续费",
+                                "·次月起，连续三个月"
+                            ],
+                            "highlighttext": "再送价值766钻石/金币礼包",
+                            "android_noaward_text": "",
+                            "ios_noaward_text": "",
+                            "max_send_times": 3,
+                            "gift_coin": 766
+                        }
+                    },
+                    {
+                        "id": "1100002092",
+                        "product": "com.changba.svip_membershipauto1month_discount_6",
+                        "duration": "连续包月",
+                        "price": "25",
+                        "money": "6",
+                        "coins": "600",
+                        "points2": "250",
+                        "renew": 1,
+                        "renew_type": 1,
+                        "duration_day": 31,
+                        "renew_text": "可获得250成长点; 之后25元/月续费，续期前提醒，可关闭",
+                        "average_money_text": "每天不到0.2元",
+                        "left_label": "",
+                        "count": 1,
+                        "couponDetail": {
+                            "coupon_id": 36117992,
+                            "base_id": "45",
+                            "origin_productid": "1100002069",
+                            "coupon_name": "SVIP连续包月首月19元优惠券",
+                            "discount_money": "19",
+                            "source": "",
+                            "condition": "",
+                            "redirect_url": ""
+                        },
+                        "giftDetail": {
+                            "type": 0,
+                            "giftlist": [
+                                {
+                                    "id": 101523,
+                                    "count": 1,
+                                    "icon": "http://aliimg.changba.com//promote/5d43cec56b7ae6c96ca98e0314afcf68.png",
+                                    "name": "白桃乌龙",
+                                    "price": 666,
+                                    "expire": 3
+                                },
+                                {
+                                    "id": 101469,
+                                    "count": 1,
+                                    "icon": "http://aliimg.changba.com//promote/20ad3a34d7ce598342a1df7b23c3d413.png",
+                                    "name": "棉花糖星球",
+                                    "price": 100,
+                                    "expire": 3
+                                }
+                            ],
+                            "android_normaltext": [
+                                "·到期按25元/月自动续费",
+                                "·次月起，连续三个月"
+                            ],
+                            "ios_normaltext": [
+                                "·次月按25元/月自动续费",
+                                "·次月起，连续三个月"
+                            ],
+                            "highlighttext": "再送价值766钻石/金币礼包",
+                            "android_noaward_text": "",
+                            "ios_noaward_text": "",
+                            "max_send_times": 3,
+                            "gift_coin": 766
+                        }
+                    }
+                ],
+                "selected": 0
+            },
+            {
+                "origin_productid": "1100002072",
+                "productid": "1100002094",
+                "detail": [
+                    {
+                        "id": "1100002072",
+                        "product": "com.changba.svip_membershipauto3month",
+                        "duration": "连续包季",
+                        "description": "",
+                        "price": "60",
+                        "money": "60",
+                        "coins": "6000",
+                        "points2": "750",
+                        "renew": 1,
+                        "renew_type": 2,
+                        "duration_day": 92,
+                        "renew_text": "可获得750成长点; 之后60元/季续费，续期前提醒，可关闭",
+                        "average_money_text": "每天不到0.66元",
+                        "left_label": "",
+                        "count": 1,
+                        "giftDetail": {
+                            "type": 0,
+                            "giftlist": [
+                                {
+                                    "id": 105232,
+                                    "count": 1,
+                                    "icon": "http://aliimg.changba.com//promote/ee9e578798605b316b42bd7f8020a1cb.png",
+                                    "name": "桃花风铃",
+                                    "price": 288,
+                                    "expire": 3
+                                },
+                                {
+                                    "id": 103824,
+                                    "count": 1,
+                                    "icon": "http://aliimg.changba.com//promote/a00c509ed4a09b7b0b434e4a941b405b.png",
+                                    "name": "珍珠奶茶",
+                                    "price": 100,
+                                    "expire": 3
+                                },
+                                {
+                                    "id": 105257,
+                                    "count": 2,
+                                    "icon": "http://aliimg.changba.com//promote/db6a098f77826c92ff327f74866f45a0.png",
+                                    "name": "缠花篪",
+                                    "price": 600,
+                                    "expire": 3
+                                }
+                            ],
+                            "android_normaltext": [
+                                "·到期按60元/季自动续费",
+                                "·次季起，购会员连续三季"
+                            ],
+                            "ios_normaltext": [
+                                "·次季按60元/季自动续费",
+                                "·次季起，购会员连续三季"
+                            ],
+                            "highlighttext": "再送价值1588钻石/金币礼包",
+                            "android_noaward_text": "",
+                            "ios_noaward_text": "",
+                            "max_send_times": 3,
+                            "gift_coin": 1588
+                        }
+                    },
+                    {
+                        "id": "1100002094",
+                        "product": "com.changba.svip_membershipauto3month_discount_40",
+                        "duration": "连续包季",
+                        "price": "60",
+                        "money": "40",
+                        "coins": "4000",
+                        "points2": "750",
+                        "renew": 1,
+                        "renew_type": 2,
+                        "duration_day": 92,
+                        "renew_text": "可获得750成长点; 之后60元/季续费，续期前提醒，可关闭",
+                        "average_money_text": "每天不到0.44元",
+                        "left_label": "",
+                        "count": 1,
+                        "couponDetail": {
+                            "coupon_id": 36117993,
+                            "base_id": "46",
+                            "origin_productid": "1100002072",
+                            "coupon_name": "SVIP连续包季首季20元优惠券",
+                            "discount_money": "20",
+                            "source": "",
+                            "condition": "",
+                            "redirect_url": ""
+                        },
+                        "giftDetail": {
+                            "type": 0,
+                            "giftlist": [
+                                {
+                                    "id": 105232,
+                                    "count": 1,
+                                    "icon": "http://aliimg.changba.com//promote/ee9e578798605b316b42bd7f8020a1cb.png",
+                                    "name": "桃花风铃",
+                                    "price": 288,
+                                    "expire": 3
+                                },
+                                {
+                                    "id": 103824,
+                                    "count": 1,
+                                    "icon": "http://aliimg.changba.com//promote/a00c509ed4a09b7b0b434e4a941b405b.png",
+                                    "name": "珍珠奶茶",
+                                    "price": 100,
+                                    "expire": 3
+                                },
+                                {
+                                    "id": 105257,
+                                    "count": 2,
+                                    "icon": "http://aliimg.changba.com//promote/db6a098f77826c92ff327f74866f45a0.png",
+                                    "name": "缠花篪",
+                                    "price": 600,
+                                    "expire": 3
+                                }
+                            ],
+                            "android_normaltext": [
+                                "·到期按60元/季自动续费",
+                                "·次季起，购会员连续三季"
+                            ],
+                            "ios_normaltext": [
+                                "·次季按60元/季自动续费",
+                                "·次季起，购会员连续三季"
+                            ],
+                            "highlighttext": "再送价值1588钻石/金币礼包",
+                            "android_noaward_text": "",
+                            "ios_noaward_text": "",
+                            "max_send_times": 3,
+                            "gift_coin": 1588
+                        }
+                    }
+                ],
+                "selected": 0
+            },
+            {
+                "origin_productid": "1100002074",
+                "productid": "1100002096",
+                "detail": [
+                    {
+                        "id": "1100002074",
+                        "product": "com.changba.svip_membershipauto12month",
+                        "duration": "连续包年",
+                        "description": "",
+                        "price": "228",
+                        "money": "228",
+                        "coins": "22800",
+                        "points2": "2650",
+                        "renew": 1,
+                        "renew_type": 3,
+                        "duration_day": 366,
+                        "renew_text": "可获得2650成长点; 之后228元/年续费，续期前提醒，可关闭",
+                        "average_money_text": "每天不到0.63元",
+                        "left_label": "",
+                        "count": 1,
+                        "giftDetail": {
+                            "type": 0,
+                            "giftlist": [
+                                {
+                                    "id": 104823,
+                                    "count": 1,
+                                    "icon": "http://aliimg.changba.com//promote/924292c0d989c1d0811c23e11d202a0f.png",
+                                    "name": "玫瑰花盒",
+                                    "price": 2000,
+                                    "expire": 3
+                                },
+                                {
+                                    "id": 104724,
+                                    "count": 2,
+                                    "icon": "http://aliimg.changba.com//promote/28be0614a243cb0d846aa9ec4cbb3fb6.png",
+                                    "name": "礼悦木马",
+                                    "price": 1000,
+                                    "expire": 3
+                                },
+                                {
+                                    "id": 105180,
+                                    "count": 3,
+                                    "icon": "http://aliimg.changba.com//promote/6ba0f5f92f995036b5332e48f31d11bd.png",
+                                    "name": "可爱烛台",
+                                    "price": 400,
+                                    "expire": 3
+                                }
+                            ],
+                            "android_normaltext": [
+                                "·到期按228元/年自动续费",
+                                "·次年起，购会员前2年每年"
+                            ],
+                            "ios_normaltext": [
+                                "·次年按228元/年自动续费",
+                                "·次年起，购会员前2年每年"
+                            ],
+                            "highlighttext": "再送5200钻石/金币礼包",
+                            "android_noaward_text": "",
+                            "ios_noaward_text": "",
+                            "max_send_times": 2,
+                            "gift_coin": 5200
+                        }
+                    },
+                    {
+                        "id": "1100002096",
+                        "product": "com.changba.svip_membershipauto12month_discount_158",
+                        "duration": "连续包年",
+                        "price": "228",
+                        "money": "158",
+                        "coins": "15800",
+                        "points2": "2650",
+                        "renew": 1,
+                        "renew_type": 3,
+                        "duration_day": 366,
+                        "renew_text": "可获得2650成长点; 之后228元/年续费，续期前提醒，可关闭",
+                        "average_money_text": "每天不到0.44元",
+                        "left_label": "",
+                        "count": 1,
+                        "couponDetail": {
+                            "coupon_id": 36117994,
+                            "base_id": "47",
+                            "origin_productid": "1100002074",
+                            "coupon_name": "SVIP连续包年首年70元优惠券",
+                            "discount_money": "70",
+                            "source": "",
+                            "condition": "",
+                            "redirect_url": ""
+                        },
+                        "giftDetail": {
+                            "type": 0,
+                            "giftlist": [
+                                {
+                                    "id": 104823,
+                                    "count": 1,
+                                    "icon": "http://aliimg.changba.com//promote/924292c0d989c1d0811c23e11d202a0f.png",
+                                    "name": "玫瑰花盒",
+                                    "price": 2000,
+                                    "expire": 3
+                                },
+                                {
+                                    "id": 104724,
+                                    "count": 2,
+                                    "icon": "http://aliimg.changba.com//promote/28be0614a243cb0d846aa9ec4cbb3fb6.png",
+                                    "name": "礼悦木马",
+                                    "price": 1000,
+                                    "expire": 3
+                                },
+                                {
+                                    "id": 105180,
+                                    "count": 3,
+                                    "icon": "http://aliimg.changba.com//promote/6ba0f5f92f995036b5332e48f31d11bd.png",
+                                    "name": "可爱烛台",
+                                    "price": 400,
+                                    "expire": 3
+                                }
+                            ],
+                            "android_normaltext": [
+                                "·到期按228元/年自动续费",
+                                "·次年起，购会员前2年每年"
+                            ],
+                            "ios_normaltext": [
+                                "·次年按228元/年自动续费",
+                                "·次年起，购会员前2年每年"
+                            ],
+                            "highlighttext": "再送5200钻石/金币礼包",
+                            "android_noaward_text": "",
+                            "ios_noaward_text": "",
+                            "max_send_times": 2,
+                            "gift_coin": 5200
+                        }
+                    }
+                ],
+                "selected": 0
+            },
+            {
+                "origin_productid": "1100002063",
+                "productid": "1100002063",
+                "detail": [
+                    {
+                        "id": "1100002063",
+                        "product": "com.changba.svip_single_membership1month",
+                        "duration": "月卡",
+                        "description": "",
+                        "price": "35",
+                        "money": "35",
+                        "coins": "3500",
+                        "points2": "200",
+                        "renew": 0,
+                        "renew_type": 0,
+                        "duration_day": 31,
+                        "renew_text": "可获得200成长点; ",
+                        "average_money_text": "每天不到1.13元",
+                        "left_label": "",
+                        "count": 1
+                    }
+                ],
+                "selected": 0
+            },
+            {
+                "origin_productid": "1100002065",
+                "productid": "1100002065",
+                "detail": [
+                    {
+                        "id": "1100002065",
+                        "product": "com.changba.svip_single_membership3month",
+                        "duration": "季卡",
+                        "description": "",
+                        "price": "88",
+                        "money": "88",
+                        "coins": "8800",
+                        "points2": "700",
+                        "renew": 0,
+                        "renew_type": 0,
+                        "duration_day": 92,
+                        "renew_text": "可获得700成长点; ",
+                        "average_money_text": "每天不到0.96元",
+                        "left_label": "",
+                        "count": 1
+                    }
+                ],
+                "selected": 0
+            },
+            {
+                "origin_productid": "1100002067",
+                "productid": "1100002067",
+                "detail": [
+                    {
+                        "id": "1100002067",
+                        "product": "com.changba.svip_single_membership12month",
+                        "duration": "年卡",
+                        "description": "",
+                        "price": "288",
+                        "money": "288",
+                        "coins": "28800",
+                        "points2": "2600",
+                        "renew": 0,
+                        "renew_type": 0,
+                        "duration_day": 366,
+                        "renew_text": "可获得2600成长点; ",
+                        "average_money_text": "每天不到0.79元",
+                        "left_label": "",
+                        "count": 1
+                    }
+                ],
+                "selected": 0
+            }
+        ],
+        "memberactivity": {
+            "userActivityType": 1,
+            "rightslist": [
+                {
+                    "id": 11,
+                    "name": "导出歌曲",
+                    "icon": "https://aliimg.changba.com/promote/d97390157ba0e558678874afe31131fc.png",
+                    "description": "随时导出喜欢的作品，分享给ta一起欣赏！"
+                }
+            ],
+            "ad": "",
+            "left_time": 0,
+            "welfarelist": [
+                {
+                    "name": "动态头像",
+                    "icon": "https://aliimg.changba.com/promote/25b1d277bd07ce48df870b8fb6c7516e.png",
+                    "url": "https://changba.com/h5/ka/activity2024/svip-privilege/index.html?type=402"
+                },
+                {
+                    "name": "畅享VIP权益",
+                    "icon": "https://aliimg.changba.com/promote/b0c3eab69b4a474a506bae5fcfe56a83.png",
+                    "url": "https://changba.com/h5/ka/activity2024/svip-privilege/index.html?type=101"
+                },
+                {
+                    "name": "SVIP音效",
+                    "icon": "https://aliimg.changba.com/promote/14916ecbd2a5786989cb176eea8457b4.png",
+                    "url": "https://changba.com/h5/ka/activity2024/svip-privilege/index.html?type=201"
+                },
+                {
+                    "name": "礼物背包扩容",
+                    "icon": "https://aliimg.changba.com/promote/d888dcb7c19a49e8b85c4555bd0051e2.png",
+                    "url": "https://changba.com/h5/ka/activity2024/svip-privilege/index.html?type=301"
+                },
+                {
+                    "name": "自动签到",
+                    "icon": "https://aliimg.changba.com/promote/12061cb90d21043f052fd68d73c6b7d5.png",
+                    "url": "https://changba.com/h5/ka/activity2024/svip-privilege/index.html?type=302"
+                },
+                {
+                    "name": "昵称变色",
+                    "icon": "https://aliimg.changba.com/promote/650311c4034f607dde3afd6baffd85e6.png",
+                    "url": "https://changba.com/h5/ka/activity2024/svip-privilege/index.html?type=401"
+                },
+                {
+                    "name": "隐私设置",
+                    "icon": "https://aliimg.changba.com/promote/09981142d978ea186c17b6cc1efb5c77.png",
+                    "url": "https://changba.com/h5/ka/activity2024/svip-privilege/index.html?type=303"
+                },
+                {
+                    "name": "轮播图扩容",
+                    "icon": "https://aliimg.changba.com/promote/92b6b57a10b5b6bde148fbf4b3c2ac16.png",
+                    "url": "https://changba.com/h5/ka/activity2024/svip-privilege/index.html?type=304"
+                },
+                {
+                    "name": "导出作品",
+                    "icon": "https://aliimg.changba.com/promote/bb3c2853805f8c8e22b4f7f993ea6460.png",
+                    "url": "https://changba.com/h5/ka/activity2024/svip-privilege/index.html?type=305"
+                },
+                {
+                    "name": "相册扩容",
+                    "icon": "https://aliimg.changba.com/promote/2f9868b07763158b6a6c70d272d34da4.png",
+                    "url": "https://changba.com/h5/ka/activity2024/svip-privilege/index.html?type=306"
+                },
+                {
+                    "name": "作品置顶",
+                    "icon": "https://aliimg.changba.com/promote/5de044e268208afcfd73bcda495e0e23.png",
+                    "url": "https://changba.com/h5/ka/activity2024/svip-privilege/index.html?type=307"
+                },
+                {
+                    "name": "免费鲜花",
+                    "icon": "https://aliimg.changba.com/promote/e0c8c68783f1ca2c5f750f012bc8e2ff.png",
+                    "url": "https://changba.com/h5/ka/activity2024/svip-privilege/index.html?type=308"
+                },
+                {
+                    "name": "专属铭牌",
+                    "icon": "https://aliimg.changba.com/promote/ea16baf47518122d302921e246871459.png",
+                    "url": "https://changba.com/h5/ka/activity2024/svip-privilege/index.html?type=403"
+                },
+                {
+                    "name": "主页动效背景",
+                    "icon": "https://aliimg.changba.com/promote/780c0df18bc7a9397dc2f69f54647090.png",
+                    "url": "https://changba.com/h5/ka/activity2024/svip-privilege/index.html?type=404"
+                },
+                {
+                    "name": "动效歌词效果",
+                    "icon": "https://aliimg.changba.com/promote/433429b918ff700858364abdf2e36314.png",
+                    "url": "https://changba.com/h5/ka/activity2024/svip-privilege/index.html?type=405"
+                }
+            ],
+            "reviewMode": 0
+        }
+    },
+    "errorcode": "ok",
+    "ip": "nginx: 10.100.10.233 php: 143 env:aliyun"
+}
