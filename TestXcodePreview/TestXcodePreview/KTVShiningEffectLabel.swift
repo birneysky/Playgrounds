@@ -106,6 +106,7 @@ class KTVShiningEffectLabel: UILabel {
         textLayer1.alignmentMode = alignmentMode(from: textAlignment)
         textLayer1.contentsScale = UIScreen.main.scale
         textLayer1.truncationMode = .end
+        textLayer1.foregroundColor = self.textColor.cgColor
     }
     
     private func alignmentMode(from textAlignment: NSTextAlignment) -> CATextLayerAlignmentMode {
@@ -208,7 +209,7 @@ func calculateIntersectionPoint(angleInDegrees: Double) -> CGPoint {
 @available(iOS 17.0, *)
 #Preview{
  
-    let startPoint = calculateIntersectionPoint(angleInDegrees: 20);
+    let startPoint = calculateIntersectionPoint(angleInDegrees: 10);
     print("----------startPoint: \(startPoint)")
     let view  = KTVShiningEffectLabel(gradientColors: [
         rgba("#CA7D00FF"),
@@ -221,8 +222,14 @@ func calculateIntersectionPoint(angleInDegrees: Double) -> CGPoint {
         0, 0.34, 0.37, 0.48, 0.5, 1
     ], startPoint: startPoint,
        endPoint: CGPoint(x: 1, y: 1))
-    view.text = "WaLDEFFHIJKLMOPQ24329"
-    view.font = UIFont.systemFont(ofSize: 14)
-    view.textColor = .red
+    view.text = "我1🇨🇳2🥱3😂4🍑5🍟"
+    view.font = UIFont.systemFont(ofSize: 30)
+    view.textColor = .orange
+    view.textAlignment = .center
+    NSLayoutConstraint.activate([
+        view.widthAnchor.constraint(equalToConstant: 375),
+        view.heightAnchor.constraint(equalToConstant: 100),
+    ])
+    //view.backgroundColor = .blue
     return view
 }

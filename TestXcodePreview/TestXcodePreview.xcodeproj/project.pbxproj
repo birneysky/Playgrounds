@@ -114,6 +114,8 @@
 		32CF7AC92CC790CC003218FD /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CF7AC82CC790CC003218FD /* 12.png */; };
 		32CF7ACC2CC7927C003218FD /* KTVSingHomeInteractionBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32CF7ACB2CC7927C003218FD /* KTVSingHomeInteractionBannerCell.xib */; };
 		32CF7ACD2CC7927C003218FD /* KTVSingHomeInteractionBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7ACA2CC7927C003218FD /* KTVSingHomeInteractionBannerCell.swift */; };
+		32D4BC112CE9D54A008C9397 /* KTVShiningEffectLabelC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D4BC0F2CE9D54A008C9397 /* KTVShiningEffectLabelC.m */; };
+		32D4BC142CE9D5A0008C9397 /* KTVNickNameEffectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D4BC132CE9D5A0008C9397 /* KTVNickNameEffectModel.m */; };
 		32DB6AD72C6DEB5B000DA3C8 /* KTVWebContainerRetryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DB6AD62C6DEB5B000DA3C8 /* KTVWebContainerRetryView.swift */; };
 		32DB6AD92C6DEB76000DA3C8 /* KTVWebContainerRetryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32DB6AD82C6DEB76000DA3C8 /* KTVWebContainerRetryView.xib */; };
 		32DBEE1A2CC9EE07005926F4 /* KTVHeartBeatSingPortraitBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DBEE192CC9EE07005926F4 /* KTVHeartBeatSingPortraitBanner.swift */; };
@@ -267,6 +269,10 @@
 		32CF7AC82CC790CC003218FD /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
 		32CF7ACA2CC7927C003218FD /* KTVSingHomeInteractionBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVSingHomeInteractionBannerCell.swift; sourceTree = "<group>"; };
 		32CF7ACB2CC7927C003218FD /* KTVSingHomeInteractionBannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVSingHomeInteractionBannerCell.xib; sourceTree = "<group>"; };
+		32D4BC0F2CE9D54A008C9397 /* KTVShiningEffectLabelC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTVShiningEffectLabelC.m; sourceTree = "<group>"; };
+		32D4BC102CE9D54A008C9397 /* KTVShiningEffectLabelC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVShiningEffectLabelC.h; sourceTree = "<group>"; };
+		32D4BC122CE9D5A0008C9397 /* KTVNickNameEffectModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVNickNameEffectModel.h; sourceTree = "<group>"; };
+		32D4BC132CE9D5A0008C9397 /* KTVNickNameEffectModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTVNickNameEffectModel.m; sourceTree = "<group>"; };
 		32D9D5652BB57BE60077370B /* TestXcodePreview-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestXcodePreview-Bridging-Header.h"; sourceTree = "<group>"; };
 		32DB6AD62C6DEB5B000DA3C8 /* KTVWebContainerRetryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVWebContainerRetryView.swift; sourceTree = "<group>"; };
 		32DB6AD82C6DEB76000DA3C8 /* KTVWebContainerRetryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVWebContainerRetryView.xib; sourceTree = "<group>"; };
@@ -356,6 +362,10 @@
 				3292A7012C6AD38C00A95354 /* GradientLabel2.swift */,
 				32E3848F2C62111B0048A7EA /* ShiningLabel.swift */,
 				322D58612C6A375F00B22E7E /* KTVShiningEffectLabel.swift */,
+				32D4BC102CE9D54A008C9397 /* KTVShiningEffectLabelC.h */,
+				32D4BC0F2CE9D54A008C9397 /* KTVShiningEffectLabelC.m */,
+				32D4BC122CE9D5A0008C9397 /* KTVNickNameEffectModel.h */,
+				32D4BC132CE9D5A0008C9397 /* KTVNickNameEffectModel.m */,
 				32EC65582BC3D8B800D388DB /* BannerView.swift */,
 				321B0A282C05D17700DFBCFF /* KTVADScrollingBubblesViewController.swift */,
 				321B0A292C05D17700DFBCFF /* KTVADScrollingBubblesViewController.xib */,
@@ -713,6 +723,7 @@
 				32DBEE1A2CC9EE07005926F4 /* KTVHeartBeatSingPortraitBanner.swift in Sources */,
 				323BA6AE2BFDCBB0007890C9 /* KTVBannerItemViewB.swift in Sources */,
 				322962A22CC64E6200C6E47F /* FSPagerViewObjcCompat.m in Sources */,
+				32D4BC112CE9D54A008C9397 /* KTVShiningEffectLabelC.m in Sources */,
 				3282E3A92B6236140062E4C6 /* KTVGradientProgessView.swift in Sources */,
 				32A9BFE42C20210F00442433 /* KTVLRRedPacketEntranceViewController.swift in Sources */,
 				323B2FC82BD8DC260018E190 /* KTVPluginItemView.swift in Sources */,
@@ -724,6 +735,7 @@
 				32F5EB772C2136FC005286B0 /* KTVLRRedPacketObtainRewardsView.swift in Sources */,
 				323B2FCA2BD8E3430018E190 /* UIKit+Nib.swift in Sources */,
 				321290D02BA82D8D006AEFA9 /* KTVSegmentedControl.swift in Sources */,
+				32D4BC142CE9D5A0008C9397 /* KTVNickNameEffectModel.m in Sources */,
 				322962A52CC64E6200C6E47F /* FSPagerViewLayoutAttributes.swift in Sources */,
 				32B59AB52C21306D00AC9FC5 /* KTVLRParticipatedRedPacketView.swift in Sources */,
 				3295A20A2C77228600491717 /* KTVSoundEditingCouponPromptViewController.swift in Sources */,
