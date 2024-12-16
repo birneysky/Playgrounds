@@ -126,21 +126,21 @@ class ViewController: UIViewController {
                                      secondLyric: "仍然紧守于身边")
         self.view.addSubview(viewx)
         
-        let views  = ShiningLabel(gradientColors: [
-            rgba("#CA7D00FF"),
-            rgba("#CA7D00FF"),
-            rgba("#FFEB01FF"),
-            rgba("#FFEB01FF"),
-            rgba("#CA7D00FF"),
-            rgba("#CA7D00FF"),
-        ], locations: [
-            0, 0.34, 0.37, 0.48, 0.5, 1
-        ], startPoint: CGPoint(x: 0, y: 0.5),
-         endPoint: CGPoint(x: 1, y: 0.5))
-        views.text = "💦💦川仔端茶又倒水川仔端茶又倒水"
-        views.font = UIFont.systemFont(ofSize: 17)
-        view.frame = CGRect(x: 0, y: 100, width: 397, height: 104)
-        self.view.addSubview(views)
+//        let views  = ShiningLabel(gradientColors: [
+//            rgba("#CA7D00FF"),
+//            rgba("#CA7D00FF"),
+//            rgba("#FFEB01FF"),
+//            rgba("#FFEB01FF"),
+//            rgba("#CA7D00FF"),
+//            rgba("#CA7D00FF"),
+//        ], locations: [
+//            0, 0.34, 0.37, 0.48, 0.5, 1
+//        ], startPoint: CGPoint(x: 0, y: 0.5),
+//         endPoint: CGPoint(x: 1, y: 0.5))
+//        views.text = "💦💦川仔端茶又倒水川仔端茶又倒水"
+//        views.font = UIFont.systemFont(ofSize: 17)
+//        view.frame = CGRect(x: 0, y: 100, width: 397, height: 104)
+//        self.view.addSubview(views)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -193,16 +193,54 @@ class ViewController: UIViewController {
 //        view.center = self.view.center
         
         
-        let parentController = UIViewController()
-        parentController.view.backgroundColor = .white
-        let controller = KTVGussUSearchViewController.controller()
-        controller.view.backgroundColor = .blue
-        parentController.addChild(controller)
-        parentController.view.addSubview(controller.view)
-        self.present(parentController, animated: true)
+//        let parentController = UIViewController()
+//        parentController.view.backgroundColor = .white
+//        let controller = KTVGussUSearchViewController.controller()
+//        controller.view.backgroundColor = .blue
+//        parentController.addChild(controller)
+//        parentController.view.addSubview(controller.view)
+//        self.present(parentController, animated: true)
+        
+        
+        let shiningLabel  = KTVShiningEffectLabel1()
+        let effect = KTVNickNameEffectModel()
+         effect.darkColors = ["#CA7D00FF", "#CA7D00FF", "#FFEB01FF",
+                              "#FFEB01FF", "#CA7D00FF","#CA7D00FF"]
+         effect.lightColors = ["#CA7D00FF", "#CA7D00FF", "#FFEB01FF",
+                               "#FFEB01FF", "#CA7D00FF","#CA7D00FF"]
+         effect.positions = [0, 0.34, 0.37, 0.48, 0.5, 1]
+         effect.duration = 2.5
+         effect.degree = 10
+        shiningLabel.setEffect(effect)
+        shiningLabel.text = "𒈔wh3🙈🐸名词😅哦👿👿公民-------------------"
+        shiningLabel.font = UIFont.systemFont(ofSize: 16)
+        shiningLabel.textColor = .black
+        shiningLabel.backgroundColor = .blue
+         
+         let  imageView = UIImageView()
+         imageView.image = UIImage(named: "ktv_svip_tips_icon")
+         NSLayoutConstraint.activate([
+             imageView.widthAnchor.constraint(equalToConstant: 28),
+             view.heightAnchor.constraint(equalToConstant: 16),
+         ])
+         let stackView1 = UIStackView()
+        stackView1.axis  = .horizontal
+        stackView1.alignment = .center
+        stackView1.distribution = .fill
+        stackView1.spacing = 4
+        stackView1.addArrangedSubview(shiningLabel)
+        stackView1.addArrangedSubview(imageView)
+        self.view.addSubview(stackView1);
+        //stackView1.frame = CGRect(x: 0, y: 200, width: 220, height: 30)
+        stackView1.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            stackView1.trailingAnchor.constraint(lessThanOrEqualTo: self.view.trailingAnchor, constant: -16),
+            stackView1.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            stackView1.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 350),
+            //stackView1.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 800)
+        ])
+        self.view.layoutIfNeeded()
 
     }
-
-
 }
 

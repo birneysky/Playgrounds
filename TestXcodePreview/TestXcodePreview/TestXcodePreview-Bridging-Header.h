@@ -4,3 +4,5 @@
 
 #import "UIColor+Hex.h"
 #import "KTVImageView.h"
+#import "KTVShiningEffectLabel1.h"
+#import "KTVNickNameEffectModel.h"

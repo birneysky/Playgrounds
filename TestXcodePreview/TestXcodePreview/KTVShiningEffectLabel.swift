@@ -146,13 +146,33 @@ class KTVShiningEffectLabel: UILabel {
         let attributes: [NSAttributedString.Key: Any] = [.font: font]
         let attributedString = NSAttributedString(string: text, attributes: attributes)
         let size = attributedString.boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, context: nil).size
+        print("***********\(size)")
+        return sizeForAttributedString(attributedString, maxWidth: CGFLOAT_MAX)
+    }
+    
+    func sizeForAttributedString(_ attributedString: NSAttributedString, maxWidth: CGFloat) -> CGSize {
+        // 创建 CTFramesetter
+        let framesetter = CTFramesetterCreateWithAttributedString(attributedString)
         
-        return CGSize(width: ceil(size.width), height: ceil(size.height))
+        // 设置最大尺寸
+        let maxSize = CGSize(width: maxWidth, height: .greatestFiniteMagnitude)
+        
+        // 计算建议的尺寸
+        let suggestedSize = CTFramesetterSuggestFrameSizeWithConstraints(
+            framesetter,
+            CFRange(location: 0, length: attributedString.length),
+            nil,
+            maxSize,
+            nil
+        )
+        
+        // 返回取整后的尺寸
+        return CGSize(width: ceil(suggestedSize.width), height: ceil(suggestedSize.height))
     }
 
     override var intrinsicContentSize: CGSize {
-        //return calculateTextLayerSize()
-        return super.intrinsicContentSize
+        return calculateTextLayerSize()
+        //return super.intrinsicContentSize
     }
     
     func createAttributedString(from text: String) -> NSAttributedString {
@@ -207,7 +227,7 @@ func calculateIntersectionPoint(angleInDegrees: Double) -> CGPoint {
 
 
 @available(iOS 17.0, *)
-#Preview{
+#Preview("KTVShiningEffectLabel", traits: .portrait) {
  
     let startPoint = calculateIntersectionPoint(angleInDegrees: 10);
     print("----------startPoint: \(startPoint)")
@@ -222,14 +242,79 @@ func calculateIntersectionPoint(angleInDegrees: Double) -> CGPoint {
         0, 0.34, 0.37, 0.48, 0.5, 1
     ], startPoint: startPoint,
        endPoint: CGPoint(x: 1, y: 1))
-    view.text = "我1🇨🇳2🥱3😂4🍑5🍟"
-    view.font = UIFont.systemFont(ofSize: 30)
-    view.textColor = .orange
-    view.textAlignment = .center
+    view.text = "𒈔wh3🙈🐸名词😅哦公民呢红金非农哦小七👿👿"
+    view.font = UIFont.systemFont(ofSize: 14)
+    view.textColor = .red
+    view.backgroundColor = .blue
     NSLayoutConstraint.activate([
-        view.widthAnchor.constraint(equalToConstant: 375),
-        view.heightAnchor.constraint(equalToConstant: 100),
+        view.widthAnchor.constraint(equalToConstant: 200),
+        view.heightAnchor.constraint(equalToConstant: 28),
     ])
-    //view.backgroundColor = .blue
     return view
+}
+
+@available(iOS 17.0, *)
+#Preview("KTVShiningEffectLabel1", traits: .portrait) {
+   let startPoint = calculateIntersectionPoint(angleInDegrees: 20);
+   print("----------startPoint: \(startPoint)")
+   let view  = KTVShiningEffectLabel1()
+   let effect = KTVNickNameEffectModel()
+    effect.darkColors = ["#CA7D00FF", "#CA7D00FF", "#FFEB01FF",
+                         "#FFEB01FF", "#CA7D00FF","#CA7D00FF"]
+    effect.lightColors = ["#CA7D00FF", "#CA7D00FF", "#FFEB01FF",
+                          "#FFEB01FF", "#CA7D00FF","#CA7D00FF"]
+    effect.positions = [0, 0.34, 0.37, 0.48, 0.5, 1]
+    effect.duration = 2.5
+    effect.degree = 10
+    view.setEffect(effect)
+   view.text = "𒈔wh3🙈🐸名词😅哦👿👿公民呢红金非农哦小七"
+   view.font = UIFont.systemFont(ofSize: 14)
+   view.textColor = .white
+   view.backgroundColor = .blue
+   NSLayoutConstraint.activate([
+       view.widthAnchor.constraint(equalToConstant: 220),
+       //view.heightAnchor.constraint(equalToConstant: 16),
+   ])
+   return view
+}
+
+
+
+@available(iOS 17.0, *)
+#Preview("KTVShiningEffectLabel&Stack", traits: .portrait) {
+   let startPoint = calculateIntersectionPoint(angleInDegrees: 20);
+   print("----------startPoint: \(startPoint)")
+   let view  = KTVShiningEffectLabel1()
+   let effect = KTVNickNameEffectModel()
+    effect.darkColors = ["#CA7D00FF", "#CA7D00FF", "#FFEB01FF",
+                         "#FFEB01FF", "#CA7D00FF","#CA7D00FF"]
+    effect.lightColors = ["#CA7D00FF", "#CA7D00FF", "#FFEB01FF",
+                          "#FFEB01FF", "#CA7D00FF","#CA7D00FF"]
+    effect.positions = [0, 0.34, 0.37, 0.48, 0.5, 1]
+    effect.duration = 2.5
+    effect.degree = 10
+    view.setEffect(effect)
+   view.text = "𒈔wh3🙈🐸名词😅哦👿👿公民"
+   view.font = UIFont.systemFont(ofSize: 16)
+   view.textColor = .black
+   view.backgroundColor = .blue
+    
+    let  imageView = UIImageView()
+    imageView.image = UIImage(named: "ktv_svip_tips_icon")
+    NSLayoutConstraint.activate([
+        imageView.widthAnchor.constraint(equalToConstant: 28),
+        view.heightAnchor.constraint(equalToConstant: 16),
+    ])
+    let stackView = UIStackView()
+    stackView.axis  = .horizontal
+    stackView.alignment = .center
+    stackView.distribution = .fill
+    stackView.spacing = 4
+    stackView.addArrangedSubview(view)
+    stackView.addArrangedSubview(imageView)
+   NSLayoutConstraint.activate([
+        stackView.widthAnchor.constraint(equalToConstant: 220),
+        stackView.heightAnchor.constraint(equalToConstant: 30),
+   ])
+   return stackView
 }
