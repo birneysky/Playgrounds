@@ -26,3 +26,23 @@ UIColor* rgba(NSString* hexString) {
 
     return [UIColor colorWithRed:red green:green blue:blue alpha:alphaValue];
 }
+
+
+
+NSInteger getCountdownCountDeadline(NSString* productId) {
+    NSString* key = [NSString stringWithFormat:@"%@_Countdown_Deadline", productId];
+    NSNumber* value = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+    if (value) {
+        return [value integerValue];
+    } else {
+        return 0;
+    }
+}
+
+
+void setCountdownDeadline(NSString* productId, NSInteger millisecondsDeadline) {
+    NSString* key = [NSString stringWithFormat:@"%@_Countdown_Deadline", productId];
+    [[NSUserDefaults standardUserDefaults] setValue:@(millisecondsDeadline) forKey:key];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+}

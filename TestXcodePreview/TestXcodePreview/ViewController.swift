@@ -240,7 +240,11 @@ class ViewController: UIViewController {
             //stackView1.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 800)
         ])
         self.view.layoutIfNeeded()
-
+        
+        
+        
+        let pcd = WatchViewController()
+        self.present(pcd, animated: true)
     }
 }
 

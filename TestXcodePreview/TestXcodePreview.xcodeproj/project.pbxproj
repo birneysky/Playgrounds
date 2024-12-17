@@ -134,6 +134,9 @@
 		32EC65632BC4096E00D388DB /* KTVSingHeaderTShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EC65622BC4096E00D388DB /* KTVSingHeaderTShapeView.swift */; };
 		32F5EB772C2136FC005286B0 /* KTVLRRedPacketObtainRewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F5EB762C2136FC005286B0 /* KTVLRRedPacketObtainRewardsView.swift */; };
 		32F5EB792C21370B005286B0 /* KTVLRRedPacketObtainRewardsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32F5EB782C21370B005286B0 /* KTVLRRedPacketObtainRewardsView.xib */; };
+		32F6A7462D1146900009DBE1 /* WatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6A7452D1146900009DBE1 /* WatchViewController.swift */; };
+		32F6A7482D115AEA0009DBE1 /* WatchCountDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6A7472D115AEA0009DBE1 /* WatchCountDownCell.swift */; };
+		32F6A74A2D115B440009DBE1 /* WatchCountDownModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6A7492D115B440009DBE1 /* WatchCountDownModel.swift */; };
 		32F7DF052C4F5CE500681943 /* KTVScaleLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F7DF042C4F5CE500681943 /* KTVScaleLineView.swift */; };
 		32F7DF072C4F62F200681943 /* KTVFineTuningLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F7DF062C4F62F200681943 /* KTVFineTuningLineView.swift */; };
 		32F7DF092C4F630900681943 /* KTVFineTuningLineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32F7DF082C4F630900681943 /* KTVFineTuningLineView.xib */; };
@@ -297,6 +300,9 @@
 		32EC65622BC4096E00D388DB /* KTVSingHeaderTShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVSingHeaderTShapeView.swift; sourceTree = "<group>"; };
 		32F5EB762C2136FC005286B0 /* KTVLRRedPacketObtainRewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRRedPacketObtainRewardsView.swift; sourceTree = "<group>"; };
 		32F5EB782C21370B005286B0 /* KTVLRRedPacketObtainRewardsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVLRRedPacketObtainRewardsView.xib; sourceTree = "<group>"; };
+		32F6A7452D1146900009DBE1 /* WatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchViewController.swift; sourceTree = "<group>"; };
+		32F6A7472D115AEA0009DBE1 /* WatchCountDownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCountDownCell.swift; sourceTree = "<group>"; };
+		32F6A7492D115B440009DBE1 /* WatchCountDownModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCountDownModel.swift; sourceTree = "<group>"; };
 		32F7DF042C4F5CE500681943 /* KTVScaleLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVScaleLineView.swift; sourceTree = "<group>"; };
 		32F7DF062C4F62F200681943 /* KTVFineTuningLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVFineTuningLineView.swift; sourceTree = "<group>"; };
 		32F7DF082C4F630900681943 /* KTVFineTuningLineView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVFineTuningLineView.xib; sourceTree = "<group>"; };
@@ -354,6 +360,9 @@
 				32038AD12B47F262000FE88B /* AppDelegate.swift */,
 				32038AD32B47F262000FE88B /* SceneDelegate.swift */,
 				32038AD52B47F262000FE88B /* ViewController.swift */,
+				32F6A7452D1146900009DBE1 /* WatchViewController.swift */,
+				32F6A7492D115B440009DBE1 /* WatchCountDownModel.swift */,
+				32F6A7472D115AEA0009DBE1 /* WatchCountDownCell.swift */,
 				323B2FD12BD918430018E190 /* UnitTestClass.swift */,
 				32038B012B47F27E000FE88B /* KTVPartialRoundedView.swift */,
 				3282E3A82B6236140062E4C6 /* KTVGradientProgessView.swift */,
@@ -739,6 +748,7 @@
 				32A9BFE42C20210F00442433 /* KTVLRRedPacketEntranceViewController.swift in Sources */,
 				323B2FC82BD8DC260018E190 /* KTVPluginItemView.swift in Sources */,
 				322962A72CC64E6200C6E47F /* FSPageControl.swift in Sources */,
+				32F6A7482D115AEA0009DBE1 /* WatchCountDownCell.swift in Sources */,
 				321290D82BA83E96006AEFA9 /* Top3TableViewController.swift in Sources */,
 				321D8C512B9173C40029F8D9 /* KTVColorsGradientView.swift in Sources */,
 				32B2F94E2C1B16A200286F0F /* Observable.swift in Sources */,
@@ -749,6 +759,7 @@
 				32D4BC142CE9D5A0008C9397 /* KTVNickNameEffectModel.m in Sources */,
 				32E481C22D0AE19F00C4544E /* KTVNickNameEffectModel.m in Sources */,
 				322962A52CC64E6200C6E47F /* FSPagerViewLayoutAttributes.swift in Sources */,
+				32F6A7462D1146900009DBE1 /* WatchViewController.swift in Sources */,
 				32B59AB52C21306D00AC9FC5 /* KTVLRParticipatedRedPacketView.swift in Sources */,
 				3295A20A2C77228600491717 /* KTVSoundEditingCouponPromptViewController.swift in Sources */,
 				3212380B2C58CC2300BFF154 /* TestVerticalScrollViewController.swift in Sources */,
@@ -778,6 +789,7 @@
 				32DB6AD72C6DEB5B000DA3C8 /* KTVWebContainerRetryView.swift in Sources */,
 				321238102C58D69600BFF154 /* KTVFineTuningTimeViewController.swift in Sources */,
 				32038AD42B47F262000FE88B /* SceneDelegate.swift in Sources */,
+				32F6A74A2D115B440009DBE1 /* WatchCountDownModel.swift in Sources */,
 				3292A7022C6AD38C00A95354 /* GradientLabel2.swift in Sources */,
 				322962A62CC64E6200C6E47F /* FSPagerViewCell.swift in Sources */,
 			);
