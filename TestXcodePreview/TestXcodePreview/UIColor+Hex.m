@@ -44,5 +44,4 @@ void setCountdownDeadline(NSString* productId, NSInteger millisecondsDeadline) {
     NSString* key = [NSString stringWithFormat:@"%@_Countdown_Deadline", productId];
     [[NSUserDefaults standardUserDefaults] setValue:@(millisecondsDeadline) forKey:key];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    
 }

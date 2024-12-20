@@ -49,8 +49,8 @@
                         }
                     }
                 ],
-                "selected": 1,
-                "discount_countdown": true
+                "selected": 0,
+                "discount_countdown": false
             },
             {
                 "origin_productid": "1100002069",
@@ -168,7 +168,8 @@
                         }
                     }
                 ],
-                "selected": 0
+                "selected": 1,
+                "discount_countdown": true
             },
             {
                 "origin_productid": "1100002072",
@@ -302,7 +303,8 @@
                         }
                     }
                 ],
-                "selected": 0
+                "selected": 0,
+                "discount_countdown": true
             },
             {
                 "origin_productid": "1100002074",
@@ -436,7 +438,8 @@
                         }
                     }
                 ],
-                "selected": 0
+                "selected": 0,
+                "discount_countdown": true
             },
             {
                 "origin_productid": "1100002063",
@@ -460,7 +463,8 @@
                         "count": 1
                     }
                 ],
-                "selected": 0
+                "selected": 0,
+                "discount_countdown": true
             },
             {
                 "origin_productid": "1100002065",
@@ -484,7 +488,8 @@
                         "count": 1
                     }
                 ],
-                "selected": 0
+                "selected": 0,
+                "discount_countdown": true
             },
             {
                 "origin_productid": "1100002067",
@@ -508,7 +513,8 @@
                         "count": 1
                     }
                 ],
-                "selected": 0
+                "selected": 0,
+                "discount_countdown": true
             }
         ],
         "memberactivity": {

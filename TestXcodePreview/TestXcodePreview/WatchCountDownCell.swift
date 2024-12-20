@@ -8,7 +8,7 @@
 import UIKit
 
 class WatchCountDownCell: UICollectionViewCell {
-    var countDownView: PurchaseCountDownView?
+    var countDownView: KTVPurchaseCountDownView?
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -17,7 +17,7 @@ class WatchCountDownCell: UICollectionViewCell {
     
     func setCoundownViewStartTime(startTime: TimeInterval) {
         countDownView?.removeFromSuperview()            
-        let cdView = PurchaseCountDownView(startTime: startTime)
+        let cdView = KTVPurchaseCountDownView(startTime: startTime)
         contentView.addSubview(cdView)
         cdView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

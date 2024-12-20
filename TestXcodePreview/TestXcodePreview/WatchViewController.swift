@@ -7,95 +7,6 @@
 
 import UIKit
 
-class PurchaseCountDownView: UIView {
-    private var timerLabel: UILabel!        // 显示计时的标签
-    private var startTime: TimeInterval
-    private var elapsedTime: TimeInterval = 0 // 累计时间
-    private var displayLink: CADisplayLink? // 用于高精度计时的定时器
-    
-    ///startTime 单位 ms
-    init(startTime: TimeInterval) {
-        self.startTime = startTime / 1000.0
-        super.init(frame: .zero)
-        setup()
-    }
-    required init?(coder: NSCoder) {
-        fatalError("unsupport xib")
-    }
-    
-    private func setup() {
-        // 创建计时标签
-        timerLabel = UILabel()
-        timerLabel.font = UIFont.monospacedDigitSystemFont(ofSize: 12, weight: .regular) // 使用等宽字体
-        timerLabel.textAlignment = .center
-        timerLabel.text = "00:10.00折扣结束" // 初始时间
-        addSubview(timerLabel)
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        self.timerLabel.frame = self.bounds
-    }
-    
-    @objc func toggleTimer() {
-        if displayLink == nil {
-            // 开始计时
-            //startTime = CACurrentMediaTime() + 10
-            displayLink = CADisplayLink(target: self, selector: #selector(updateTimer))
-            displayLink?.add(to: .main, forMode: .common)
-        } else {
-            elapsedTime += CACurrentMediaTime() - startTime
-            displayLink?.invalidate()
-            displayLink = nil
-        }
-    }
-    // MARK: - 更新计时
-    @objc private func updateTimer() {
-        let currentTime = CACurrentMediaTime()
-        let totalElapsedTime = elapsedTime + (startTime - currentTime)
-
-        // 格式化时间
-        let minutes = Int(totalElapsedTime) / 60
-        let seconds = Int(totalElapsedTime) % 60
-        let milliseconds = Int((totalElapsedTime - floor(totalElapsedTime)) * 1000)
-        
-        if (seconds < 0) {
-            displayLink?.invalidate()
-            displayLink = nil
-            timerLabel.text = "00:00.00折扣结束" // 初始时间
-            self.removeFromSuperview()
-        } else {
-            timerLabel.text = String(format: "%02d:%02d.%02d折扣结束", minutes, seconds, getFirstTwoDigits(of: milliseconds))
-        }
-        
-        
-    }
-    
-    
-    private func getFirstTwoDigits(of number: Int) -> Int {
-        let absNumber = abs(number) // 取绝对值
-        
-        // 如果数字小于 10，直接返回
-        guard absNumber >= 10 else {
-            return absNumber
-        }
-        
-        // 计算整数的位数
-        let digitCount = Int(log10(Double(absNumber))) + 1
-        
-        // 计算去掉多余位数的因子
-        let factor = Int(pow(10.0, Double(digitCount - 2)))
-        
-        // 取前两位
-        return absNumber / factor
-    }
-    
-    override var intrinsicContentSize: CGSize {
-        return timerLabel.intrinsicContentSize
-    }
-}
-
-
 class WatchViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     private var timerLabel: UILabel!        // 显示计时的标签
     private var startPauseButton: UIButton! // 开始/暂停按钮
@@ -105,7 +16,7 @@ class WatchViewController: UIViewController, UICollectionViewDataSource, UIColle
     private var startTime: TimeInterval?    // 记录开始时间
     private var elapsedTime: TimeInterval = 0 // 累计时间
     
-    private var countDownView: PurchaseCountDownView!
+    private var countDownView: KTVPurchaseCountDownView!
     private var collectionView: UICollectionView!
     private var dataSource: [WatchCountDownModel] = [
         WatchCountDownModel(discountCountDown: true,  idx: "0"),
@@ -206,7 +117,7 @@ class WatchViewController: UIViewController, UICollectionViewDataSource, UIColle
         let model = self.dataSource[indexPath.item]
         if model.discountCountDown && indexPath.item == 0, let isRuning = model.countdownRuning {
             var startTime: Double = Double(getCountdownCountDeadline(model.idx))
-            let duration:Double = 120 * 1000
+            let duration: Double = 60 * 1000
             let current = CACurrentMediaTime() * 1000
             if startTime == 0 || current > startTime  {
                 startTime = current + duration
@@ -230,7 +141,7 @@ class WatchViewController: UIViewController, UICollectionViewDataSource, UIColle
         if model.discountCountDown && indexPath.item == 0 {
             model.countdownRuning = true
             var startTime: Double = Double(getCountdownCountDeadline(model.idx))
-            let duration:Double = 120 * 1000
+            let duration:Double = 60 * 1000
             let current = CACurrentMediaTime() * 1000
             if startTime == 0 || current > startTime  {
                 startTime = current + duration

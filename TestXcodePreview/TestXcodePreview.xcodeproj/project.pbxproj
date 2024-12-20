@@ -18,6 +18,7 @@
 		32038AF32B47F265000FE88B /* TestXcodePreviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32038AF22B47F265000FE88B /* TestXcodePreviewUITests.swift */; };
 		32038AF52B47F265000FE88B /* TestXcodePreviewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32038AF42B47F265000FE88B /* TestXcodePreviewUITestsLaunchTests.swift */; };
 		32038B022B47F27E000FE88B /* KTVPartialRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32038B012B47F27E000FE88B /* KTVPartialRoundedView.swift */; };
+		320B18982D12A75F007DBE72 /* KTVPurchaseCountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320B18972D12A75F007DBE72 /* KTVPurchaseCountDownView.swift */; };
 		320DB8D92C21719500410719 /* KTVLRRedPacketRewardsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320DB8D82C21719500410719 /* KTVLRRedPacketRewardsTableView.swift */; };
 		320DB8DB2C2171A300410719 /* KTVLRRedPacketRewardsTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 320DB8DA2C2171A300410719 /* KTVLRRedPacketRewardsTableView.xib */; };
 		3212380B2C58CC2300BFF154 /* TestVerticalScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321238092C58CC2300BFF154 /* TestVerticalScrollViewController.swift */; };
@@ -59,6 +60,7 @@
 		323BA6B02BFDD6AF007890C9 /* TestCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BA6AF2BFDD6AF007890C9 /* TestCollectionViewController.swift */; };
 		323BA6B32BFDD997007890C9 /* TestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323BA6B22BFDD997007890C9 /* TestCollectionViewCell.xib */; };
 		323BA6B42BFDD997007890C9 /* TestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BA6B12BFDD997007890C9 /* TestCollectionViewCell.swift */; };
+		3254EC082D1426290041FC55 /* KTVRedPacketRainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3254EC072D1426290041FC55 /* KTVRedPacketRainViewController.swift */; };
 		326089522BC517B100442446 /* ColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 326089512BC517B100442446 /* ColorTests.m */; };
 		326089542BC51DB600442446 /* KTVSingBannerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326089532BC51DB600442446 /* KTVSingBannerItemView.swift */; };
 		326089562BC51DCC00442446 /* KTVSingBannerItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 326089552BC51DCC00442446 /* KTVSingBannerItemView.xib */; };
@@ -114,7 +116,6 @@
 		32CF7AC92CC790CC003218FD /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CF7AC82CC790CC003218FD /* 12.png */; };
 		32CF7ACC2CC7927C003218FD /* KTVSingHomeInteractionBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32CF7ACB2CC7927C003218FD /* KTVSingHomeInteractionBannerCell.xib */; };
 		32CF7ACD2CC7927C003218FD /* KTVSingHomeInteractionBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF7ACA2CC7927C003218FD /* KTVSingHomeInteractionBannerCell.swift */; };
-		32D4BC112CE9D54A008C9397 /* KTVShiningEffectLabelC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D4BC0F2CE9D54A008C9397 /* KTVShiningEffectLabelC.m */; };
 		32D4BC142CE9D5A0008C9397 /* KTVNickNameEffectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D4BC132CE9D5A0008C9397 /* KTVNickNameEffectModel.m */; };
 		32DB6AD72C6DEB5B000DA3C8 /* KTVWebContainerRetryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DB6AD62C6DEB5B000DA3C8 /* KTVWebContainerRetryView.swift */; };
 		32DB6AD92C6DEB76000DA3C8 /* KTVWebContainerRetryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32DB6AD82C6DEB76000DA3C8 /* KTVWebContainerRetryView.xib */; };
@@ -175,6 +176,7 @@
 		32038AF22B47F265000FE88B /* TestXcodePreviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestXcodePreviewUITests.swift; sourceTree = "<group>"; };
 		32038AF42B47F265000FE88B /* TestXcodePreviewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestXcodePreviewUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		32038B012B47F27E000FE88B /* KTVPartialRoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTVPartialRoundedView.swift; sourceTree = "<group>"; };
+		320B18972D12A75F007DBE72 /* KTVPurchaseCountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVPurchaseCountDownView.swift; sourceTree = "<group>"; };
 		320DB8D82C21719500410719 /* KTVLRRedPacketRewardsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVLRRedPacketRewardsTableView.swift; sourceTree = "<group>"; };
 		320DB8DA2C2171A300410719 /* KTVLRRedPacketRewardsTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVLRRedPacketRewardsTableView.xib; sourceTree = "<group>"; };
 		321238092C58CC2300BFF154 /* TestVerticalScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVerticalScrollViewController.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 		323BA6AF2BFDD6AF007890C9 /* TestCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewController.swift; sourceTree = "<group>"; };
 		323BA6B12BFDD997007890C9 /* TestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewCell.swift; sourceTree = "<group>"; };
 		323BA6B22BFDD997007890C9 /* TestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCollectionViewCell.xib; sourceTree = "<group>"; };
+		3254EC072D1426290041FC55 /* KTVRedPacketRainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVRedPacketRainViewController.swift; sourceTree = "<group>"; };
 		326089502BC517B000442446 /* TestXcodePreviewTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestXcodePreviewTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		326089512BC517B100442446 /* ColorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorTests.m; sourceTree = "<group>"; };
 		326089532BC51DB600442446 /* KTVSingBannerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVSingBannerItemView.swift; sourceTree = "<group>"; };
@@ -274,8 +277,6 @@
 		32CF7AC82CC790CC003218FD /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
 		32CF7ACA2CC7927C003218FD /* KTVSingHomeInteractionBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVSingHomeInteractionBannerCell.swift; sourceTree = "<group>"; };
 		32CF7ACB2CC7927C003218FD /* KTVSingHomeInteractionBannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVSingHomeInteractionBannerCell.xib; sourceTree = "<group>"; };
-		32D4BC0F2CE9D54A008C9397 /* KTVShiningEffectLabelC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTVShiningEffectLabelC.m; sourceTree = "<group>"; };
-		32D4BC102CE9D54A008C9397 /* KTVShiningEffectLabelC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVShiningEffectLabelC.h; sourceTree = "<group>"; };
 		32D4BC122CE9D5A0008C9397 /* KTVNickNameEffectModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVNickNameEffectModel.h; sourceTree = "<group>"; };
 		32D4BC132CE9D5A0008C9397 /* KTVNickNameEffectModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTVNickNameEffectModel.m; sourceTree = "<group>"; };
 		32D9D5652BB57BE60077370B /* TestXcodePreview-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestXcodePreview-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -361,8 +362,10 @@
 				32038AD32B47F262000FE88B /* SceneDelegate.swift */,
 				32038AD52B47F262000FE88B /* ViewController.swift */,
 				32F6A7452D1146900009DBE1 /* WatchViewController.swift */,
+				320B18972D12A75F007DBE72 /* KTVPurchaseCountDownView.swift */,
 				32F6A7492D115B440009DBE1 /* WatchCountDownModel.swift */,
 				32F6A7472D115AEA0009DBE1 /* WatchCountDownCell.swift */,
+				3254EC072D1426290041FC55 /* KTVRedPacketRainViewController.swift */,
 				323B2FD12BD918430018E190 /* UnitTestClass.swift */,
 				32038B012B47F27E000FE88B /* KTVPartialRoundedView.swift */,
 				3282E3A82B6236140062E4C6 /* KTVGradientProgessView.swift */,
@@ -377,8 +380,6 @@
 				3292A7012C6AD38C00A95354 /* GradientLabel2.swift */,
 				32E3848F2C62111B0048A7EA /* ShiningLabel.swift */,
 				322D58612C6A375F00B22E7E /* KTVShiningEffectLabel.swift */,
-				32D4BC102CE9D54A008C9397 /* KTVShiningEffectLabelC.h */,
-				32D4BC0F2CE9D54A008C9397 /* KTVShiningEffectLabelC.m */,
 				32D4BC122CE9D5A0008C9397 /* KTVNickNameEffectModel.h */,
 				32D4BC132CE9D5A0008C9397 /* KTVNickNameEffectModel.m */,
 				32E481BE2D0AE15A00C4544E /* KTVShiningEffectLabel1.h */,
@@ -742,10 +743,10 @@
 				32DBEE1A2CC9EE07005926F4 /* KTVHeartBeatSingPortraitBanner.swift in Sources */,
 				323BA6AE2BFDCBB0007890C9 /* KTVBannerItemViewB.swift in Sources */,
 				322962A22CC64E6200C6E47F /* FSPagerViewObjcCompat.m in Sources */,
-				32D4BC112CE9D54A008C9397 /* KTVShiningEffectLabelC.m in Sources */,
 				32E481BF2D0AE15A00C4544E /* KTVShiningEffectLabel1.m in Sources */,
 				3282E3A92B6236140062E4C6 /* KTVGradientProgessView.swift in Sources */,
 				32A9BFE42C20210F00442433 /* KTVLRRedPacketEntranceViewController.swift in Sources */,
+				3254EC082D1426290041FC55 /* KTVRedPacketRainViewController.swift in Sources */,
 				323B2FC82BD8DC260018E190 /* KTVPluginItemView.swift in Sources */,
 				322962A72CC64E6200C6E47F /* FSPageControl.swift in Sources */,
 				32F6A7482D115AEA0009DBE1 /* WatchCountDownCell.swift in Sources */,
@@ -766,6 +767,7 @@
 				321B0A2B2C05D17700DFBCFF /* KTVADScrollingBubblesViewController.swift in Sources */,
 				3295FB8F2C4655F8009C6F22 /* WKWebViewController.swift in Sources */,
 				32E384902C62111B0048A7EA /* ShiningLabel.swift in Sources */,
+				320B18982D12A75F007DBE72 /* KTVPurchaseCountDownView.swift in Sources */,
 				32EA10DC2C1C159200BDEBD0 /* KTVLRSendRedPacketViewModel.swift in Sources */,
 				323B2FC32BD8A9660018E190 /* KTVRankItemViewController.swift in Sources */,
 				323BA6B02BFDD6AF007890C9 /* TestCollectionViewController.swift in Sources */,
