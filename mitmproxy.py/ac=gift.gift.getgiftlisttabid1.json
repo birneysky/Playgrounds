@@ -1,0 +1,1559 @@
+{
+    "result": {
+        "giftlist": [
+            {
+                "id": "10001",
+                "name": "红包",
+                "original_coins": 520,
+                "pop": 0,
+                "coins": 520,
+                "original_pop": 0,
+                "desc": "红包",
+                "maxCnt": 100000,
+                "quanlifier": "个",
+                "valid": true,
+                "imgurl": "http://aliimg.changba.com/cbicons/gift/10001_1542359437.png",
+                "type": 4,
+                "exhibitposition": 11,
+                "nodiscount": 1,
+                "activity_direction": 0,
+                "isSms": false,
+                "tag": 0,
+                "min_richlevel": 0,
+                "need_star_level": 0,
+                "money_type": 3,
+                "richlabel": "",
+                "richlevel_name": "",
+                "ishot": 0,
+                "attrdesc": "",
+                "luxuryTime": 0,
+                "android_rgb_alpha_url": "",
+                "ios_rgb_url": "",
+                "ios_alpha_url": "",
+                "specialdesc": "进入红包购买页面",
+                "label_style": 0,
+                "hotValue": 0,
+                "hotTime": 0,
+                "topscore": 0,
+                "noexchange": 0,
+                "retag": "",
+                "rank_factor": 0,
+                "labels": [],
+                "price": 0,
+                "intervalTime": 0,
+                "requireone": false,
+                "checkcode": false,
+                "combo": 0,
+                "doraemon": 1,
+                "memberlevel": "0",
+                "discountprice": -1,
+                "not_affect_ranks": null,
+                "ulbar_subtext": "该礼物财富+520，人气+0，热度+0，保持0小时",
+                "naming_info": {
+                    "naming_type": 0,
+                    "naming_user": null
+                }
+            },
+            {
+                "id": "10002",
+                "name": "拜年红包",
+                "original_coins": 520,
+                "pop": 187,
+                "coins": 520,
+                "original_pop": 187,
+                "desc": "使该作品热度增加4，并保持6小时",
+                "maxCnt": 100000,
+                "quanlifier": "个",
+                "valid": true,
+                "imgurl": "http://aliimg.changba.com/cbicons/gift/10001_1542359437.png",
+                "type": 4,
+                "exhibitposition": 11,
+                "nodiscount": 1,
+                "activity_direction": 0,
+                "isSms": false,
+                "tag": 0,
+                "min_richlevel": 0,
+                "need_star_level": 0,
+                "money_type": 3,
+                "richlabel": "",
+                "richlevel_name": "",
+                "ishot": 0,
+                "attrdesc": "*人气值+187\n*热度+4,保持6小时",
+                "luxuryTime": 0,
+                "android_rgb_alpha_url": "",
+                "ios_rgb_url": "",
+                "ios_alpha_url": "",
+                "specialdesc": "进入红包购买页面",
+                "label_style": 0,
+                "hotValue": 4,
+                "hotTime": 360,
+                "topscore": 26,
+                "noexchange": 0,
+                "retag": "",
+                "rank_factor": 0,
+                "labels": [],
+                "price": 0,
+                "intervalTime": 0,
+                "requireone": false,
+                "checkcode": false,
+                "combo": 0,
+                "doraemon": 1,
+                "memberlevel": "0",
+                "discountprice": -1,
+                "not_affect_ranks": 0,
+                "ulbar_subtext": "该礼物财富+520，人气+187，热度+4，保持6小时",
+                "naming_info": {
+                    "naming_type": 0,
+                    "naming_user": null
+                },
+                "active_info": {
+                    "active_url": "https://changba.com/h5/lubo/activity2024/week-star/index.html?refsrc=lwxbn",
+                    "active_time": "2024-12-13 15:00:00,2025-06-30 00:00:00",
+                    "active_desc": "",
+                    "active_banner": "https://aliimg.changba.com/promote/57fbb61af6d592fc29d5dc8e31f8829c.png"
+                }
+            },
+            {
+                "id": "106350",
+                "name": "金曲流芳",
+                "original_coins": 9999,
+                "pop": 3599,
+                "coins": 9999,
+                "original_pop": 3599,
+                "desc": "使该作品热度增加67，并保持6小时",
+                "maxCnt": 999999999,
+                "quanlifier": "个",
+                "valid": true,
+                "imgurl": "https://aliimg.changba.com/promote/5738412a57c9d7bdc101607d559fda2b.png",
+                "type": 1,
+                "exhibitposition": 0,
+                "nodiscount": 1,
+                "activity_direction": -1,
+                "isSms": false,
+                "tag": 0,
+                "min_richlevel": 0,
+                "need_star_level": 0,
+                "money_type": 2,
+                "richlabel": "",
+                "richlevel_name": "",
+                "ishot": 0,
+                "attrdesc": "*人气值+3599\n*热度+67,保持6小时",
+                "luxuryTime": 36500,
+                "android_rgb_alpha_url": "",
+                "ios_rgb_url": "",
+                "ios_alpha_url": "",
+                "specialdesc": "【年度歌王争霸赛】活动专属礼物，收礼人可获得金曲流芳礼物，送礼人有机会获得1-10个唱片碎片以及以下礼物：疯狂音符(动效)、紫阳花事(动效)、爱久弥新(动效)、荣耀演唱会(动效)、心韵旋音(动效)、银河星辰(动效,图鉴礼物)、私人海岛(动效)、凛冬闻鹿鸣(动效)、翩孔离翔(动效图鉴礼物,价值900000钻石/金币)。活动截止时间：12月27日23:59:59",
+                "label_style": 6,
+                "hotValue": 67,
+                "hotTime": 360,
+                "topscore": 500,
+                "noexchange": 1,
+                "retag": "年度歌王",
+                "rank_factor": 0,
+                "labels": [
+                    {
+                        "label_style": "6",
+                        "retag": "年度歌王"
+                    }
+                ],
+                "price": 0,
+                "intervalTime": 0,
+                "requireone": false,
+                "checkcode": false,
+                "combo": 0,
+                "doraemon": 1,
+                "memberlevel": "0",
+                "discountprice": -1,
+                "not_affect_ranks": 0,
+                "ulbar_subtext": "该礼物财富+9999，人气+3599，热度+67，保持6小时",
+                "activity_type": "5",
+                "card_info": {
+                    "detail_list": [
+                        {
+                            "id": 106249,
+                            "cnt": 1,
+                            "name": "翩孔离翔",
+                            "money_type": 3,
+                            "coins": 900000,
+                            "imgurl": "https://aliimg.changba.com/promote/919bfbfa3413d7b16767b58aba24f5e9.png",
+                            "labels": [
+                                {
+                                    "type": 300,
+                                    "label": "动效"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 103380,
+                            "cnt": 1,
+                            "name": "凛冬闻鹿鸣",
+                            "money_type": 3,
+                            "coins": 500000,
+                            "imgurl": "https://aliimg.changba.com/promote/2e1547b687dbe70d8cb8bc4b59d64efe.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 105479,
+                            "cnt": 1,
+                            "name": "私人海岛",
+                            "money_type": 3,
+                            "coins": 288888,
+                            "imgurl": "https://aliimg.changba.com/promote/b8388a23aa2e120098c21cf2cb6ae692.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 106250,
+                            "cnt": 1,
+                            "name": "银河星辰",
+                            "money_type": 3,
+                            "coins": 100000,
+                            "imgurl": "https://aliimg.changba.com/promote/fb2e0d2940609e33d4e33e927ece4e5a.png",
+                            "labels": [
+                                {
+                                    "type": 300,
+                                    "label": "动效"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 102567,
+                            "cnt": 1,
+                            "name": "心韵旋音",
+                            "money_type": 3,
+                            "coins": 90000,
+                            "imgurl": "https://aliimg.changba.com/promote/f752a24c2eb3d4d59afcab520b1c18e9.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 105216,
+                            "cnt": 1,
+                            "name": "荣耀演唱会",
+                            "money_type": 3,
+                            "coins": 60000,
+                            "imgurl": "https://aliimg.changba.com/promote/95725b040f2699363ae6a2acfec7a14b.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 106277,
+                            "cnt": 1,
+                            "name": "爱久弥新",
+                            "money_type": 3,
+                            "coins": 50000,
+                            "imgurl": "https://aliimg.changba.com/promote/fc9999d4d563f72f7e370b47b3bbc66c.png",
+                            "labels": [
+                                {
+                                    "type": 300,
+                                    "label": "动效"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 106213,
+                            "cnt": 1,
+                            "name": "紫阳花事",
+                            "money_type": 3,
+                            "coins": 30000,
+                            "imgurl": "https://aliimg.changba.com/promote/25ced237dc8bf3a583f2059e40699fde.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 106349,
+                            "cnt": 1,
+                            "name": "疯狂音符",
+                            "money_type": 3,
+                            "coins": 20000,
+                            "imgurl": "https://aliimg.changba.com/promote/2a4780e02d73ced00ecfbe896517f018.png",
+                            "labels": [
+                                {
+                                    "type": 300,
+                                    "label": "动效"
+                                }
+                            ]
+                        }
+                    ],
+                    "displayEndTime": "12月28日 0:00:00",
+                    "card_type": 3
+                },
+                "naming_info": {
+                    "naming_type": 0,
+                    "naming_user": null
+                }
+            },
+            {
+                "id": "106351",
+                "name": "复古音响",
+                "original_coins": 150,
+                "pop": 54,
+                "coins": 150,
+                "original_pop": 54,
+                "desc": "使该作品热度增加1，并保持6小时",
+                "maxCnt": 999999999,
+                "quanlifier": "个",
+                "valid": true,
+                "imgurl": "https://aliimg.changba.com/promote/8291bd3c4aa0f1e79f770a17cc98a31b.png",
+                "type": 9,
+                "exhibitposition": 0,
+                "nodiscount": 1,
+                "activity_direction": -1,
+                "isSms": false,
+                "tag": 0,
+                "min_richlevel": 0,
+                "need_star_level": 0,
+                "money_type": 2,
+                "richlabel": "",
+                "richlevel_name": "",
+                "ishot": 0,
+                "attrdesc": "*人气值+54\n*热度+1,保持6小时",
+                "luxuryTime": 0,
+                "android_rgb_alpha_url": "https://aliimg.changba.com/promote/048172a08a03ddd4df69bce0c305108e.mp4",
+                "ios_rgb_url": "https://aliimg.changba.com/promote/bbc9dc298e4db9dcb6bca94aec47479f.mp4",
+                "ios_alpha_url": "https://aliimg.changba.com/promote/86c9479a61f698275c1ce846bd4c2880.mp4",
+                "specialdesc": "周星礼物",
+                "label_style": 11,
+                "hotValue": 1,
+                "hotTime": 360,
+                "topscore": 8,
+                "noexchange": 1,
+                "retag": "周星礼物",
+                "rank_factor": 0,
+                "labels": [
+                    {
+                        "label_style": "11",
+                        "retag": "周星礼物"
+                    }
+                ],
+                "price": 0,
+                "intervalTime": 0,
+                "requireone": false,
+                "checkcode": false,
+                "combo": 0,
+                "doraemon": 1,
+                "memberlevel": "0",
+                "discountprice": -1,
+                "not_affect_ranks": 0,
+                "ulbar_subtext": "该礼物财富+150，人气+54，热度+1，保持6小时",
+                "active_info": {
+                    "active_url": "https://changba.com/h5/lubo/activity2024/week-star/index.html?refsrc=lwxbn",
+                    "active_time": "2024-12-13 15:00:00,2025-06-30 00:00:00",
+                    "active_desc": "",
+                    "active_banner": "https://aliimg.changba.com/promote/57fbb61af6d592fc29d5dc8e31f8829c.png"
+                },
+                "activity_type": "9",
+                "naming_info": {
+                    "naming_type": 0,
+                    "naming_user": null
+                }
+            },
+            {
+                "id": "106352",
+                "name": "NICE",
+                "original_coins": 100,
+                "pop": 36,
+                "coins": 100,
+                "original_pop": 36,
+                "desc": "使该作品热度增加1，并保持6小时",
+                "maxCnt": 999999999,
+                "quanlifier": "个",
+                "valid": true,
+                "imgurl": "https://aliimg.changba.com/promote/373339c0978502a0631562382ca75ccc.png",
+                "type": 9,
+                "exhibitposition": 0,
+                "nodiscount": 1,
+                "activity_direction": -1,
+                "isSms": false,
+                "tag": 0,
+                "min_richlevel": 0,
+                "need_star_level": 0,
+                "money_type": 2,
+                "richlabel": "",
+                "richlevel_name": "",
+                "ishot": 0,
+                "attrdesc": "*人气值+36\n*热度+1,保持6小时",
+                "luxuryTime": 0,
+                "android_rgb_alpha_url": "https://aliimg.changba.com/promote/a7b45652dbb47d5ed541174378b236fe.mp4",
+                "ios_rgb_url": "https://aliimg.changba.com/promote/cce17214e86e1fa120ae0d958462b1f0.mp4",
+                "ios_alpha_url": "https://aliimg.changba.com/promote/b541c9615ab3866cb86e9080c48edfe6.mp4",
+                "specialdesc": "周星礼物",
+                "label_style": 11,
+                "hotValue": 1,
+                "hotTime": 360,
+                "topscore": 5,
+                "noexchange": 1,
+                "retag": "周星礼物",
+                "rank_factor": 0,
+                "labels": [
+                    {
+                        "label_style": "11",
+                        "retag": "周星礼物"
+                    }
+                ],
+                "price": 0,
+                "intervalTime": 0,
+                "requireone": false,
+                "checkcode": false,
+                "combo": 0,
+                "doraemon": 1,
+                "memberlevel": "0",
+                "discountprice": -1,
+                "not_affect_ranks": 0,
+                "ulbar_subtext": "该礼物财富+100，人气+36，热度+1，保持6小时",
+                "active_info": {
+                    "active_url": "https://changba.com/h5/lubo/activity2024/week-star/index.html?refsrc=lwxbn",
+                    "active_time": "2024-12-13 15:00:00,2025-06-30 00:00:00",
+                    "active_desc": "",
+                    "active_banner": "https://aliimg.changba.com/promote/37422998f96ce227d039565b213ad01c.png"
+                },
+                "activity_type": "9",
+                "naming_info": {
+                    "naming_type": 0,
+                    "naming_user": null
+                }
+            },
+            {
+                "id": "106353",
+                "name": "送你一束花",
+                "original_coins": 300,
+                "pop": 108,
+                "coins": 300,
+                "original_pop": 108,
+                "desc": "使该作品热度增加2，并保持6小时",
+                "maxCnt": 999999999,
+                "quanlifier": "个",
+                "valid": true,
+                "imgurl": "https://aliimg.changba.com/promote/5b9ba6f73c8325dbef219c6c3feab571.png",
+                "type": 9,
+                "exhibitposition": 0,
+                "nodiscount": 1,
+                "activity_direction": -1,
+                "isSms": false,
+                "tag": 0,
+                "min_richlevel": 0,
+                "need_star_level": 0,
+                "money_type": 2,
+                "richlabel": "",
+                "richlevel_name": "",
+                "ishot": 0,
+                "attrdesc": "*人气值+108\n*热度+2,保持6小时",
+                "luxuryTime": 0,
+                "android_rgb_alpha_url": "https://aliimg.changba.com/promote/99b2222932aba6cab69d0eaf93ad11be.mp4",
+                "ios_rgb_url": "https://aliimg.changba.com/promote/295bd4607d2c9238f8408d92b21c3ca7.mp4",
+                "ios_alpha_url": "https://aliimg.changba.com/promote/d4e2cdfd317e446ced07174a5376d5e1.mp4",
+                "specialdesc": "周星礼物",
+                "label_style": 11,
+                "hotValue": 2,
+                "hotTime": 360,
+                "topscore": 15,
+                "noexchange": 1,
+                "retag": "周星礼物",
+                "rank_factor": 0,
+                "labels": [
+                    {
+                        "label_style": "11",
+                        "retag": "周星礼物"
+                    }
+                ],
+                "price": 0,
+                "intervalTime": 0,
+                "requireone": false,
+                "checkcode": false,
+                "combo": 0,
+                "doraemon": 1,
+                "memberlevel": "0",
+                "discountprice": -1,
+                "not_affect_ranks": 0,
+                "ulbar_subtext": "该礼物财富+300，人气+108，热度+2，保持6小时",
+                "active_info": {
+                    "active_url": "https://changba.com/h5/lubo/activity2024/week-star/index.html?refsrc=lwxbn",
+                    "active_time": "2024-12-13 15:00:00,2025-06-30 00:00:00",
+                    "active_desc": "",
+                    "active_banner": "https://aliimg.changba.com/promote/4122edf3e48bb84eda822521dcac3939.png"
+                },
+                "activity_type": "9",
+                "naming_info": {
+                    "naming_type": 0,
+                    "naming_user": null
+                }
+            },
+            {
+                "id": "106372",
+                "name": "圣诞水晶球",
+                "original_coins": 100,
+                "pop": 36,
+                "coins": 100,
+                "original_pop": 36,
+                "desc": "使该作品热度增加1，并保持6小时",
+                "maxCnt": 999999999,
+                "quanlifier": "个",
+                "valid": true,
+                "imgurl": "https://aliimg.changba.com/promote/b6276e9b8cb702760b021a2a11e5c10a.png",
+                "type": 1,
+                "exhibitposition": 0,
+                "nodiscount": 1,
+                "activity_direction": -1,
+                "isSms": false,
+                "tag": 0,
+                "min_richlevel": 0,
+                "need_star_level": 0,
+                "money_type": 2,
+                "richlabel": "",
+                "richlevel_name": "",
+                "ishot": 0,
+                "attrdesc": "*人气值+36\n*热度+1,保持6小时",
+                "luxuryTime": 0,
+                "android_rgb_alpha_url": "",
+                "ios_rgb_url": "",
+                "ios_alpha_url": "",
+                "specialdesc": "【圣诞水晶球】收礼人可收到圣诞水晶球礼物，送礼人有机会获得礼物：玫瑰权杖、书间花意、一汪锦鲤、一盏明灯、击中心巴、平安果、琼浆玉液、围炉煮茶、幸运圣诞铃(动效,价值30000钻石/金币)。",
+                "label_style": 6,
+                "hotValue": 1,
+                "hotTime": 360,
+                "topscore": 5,
+                "noexchange": 1,
+                "retag": "圣诞限定",
+                "rank_factor": 0,
+                "labels": [
+                    {
+                        "label_style": "6",
+                        "retag": "圣诞限定"
+                    }
+                ],
+                "price": 0,
+                "intervalTime": 0,
+                "requireone": false,
+                "checkcode": false,
+                "combo": 0,
+                "doraemon": 1,
+                "memberlevel": "0",
+                "discountprice": -1,
+                "not_affect_ranks": 0,
+                "ulbar_subtext": "该礼物财富+100，人气+36，热度+1，保持6小时",
+                "activity_type": "5",
+                "card_info": {
+                    "detail_list": [
+                        {
+                            "id": 103657,
+                            "cnt": 1,
+                            "name": "幸运圣诞铃",
+                            "money_type": 3,
+                            "coins": 30000,
+                            "imgurl": "https://aliimg.changba.com/promote/844dfa9dde0168cea783c1da04b98ccf.png",
+                            "labels": [
+                                {
+                                    "type": 300,
+                                    "label": "动效"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 104247,
+                            "cnt": 1,
+                            "name": "围炉煮茶",
+                            "money_type": 3,
+                            "coins": 20000,
+                            "imgurl": "https://aliimg.changba.com/promote/dcac8ec5148d658806123019f4375a73.png",
+                            "labels": [
+                                {
+                                    "type": 300,
+                                    "label": "动效"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 104057,
+                            "cnt": 1,
+                            "name": "琼浆玉液",
+                            "money_type": 3,
+                            "coins": 5200,
+                            "imgurl": "https://aliimg.changba.com/promote/cbf4174d18d2c405d31ea151a6cfecfd.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 106313,
+                            "cnt": 1,
+                            "name": "平安果",
+                            "money_type": 3,
+                            "coins": 2000,
+                            "imgurl": "https://aliimg.changba.com/promote/2735230684b0c6af921fcf5ab1edd953.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 104542,
+                            "cnt": 1,
+                            "name": "击中心巴",
+                            "money_type": 3,
+                            "coins": 1000,
+                            "imgurl": "https://aliimg.changba.com/promote/22af8400354323c3015ac5d61aaec0a1.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 105559,
+                            "cnt": 1,
+                            "name": "一盏明灯",
+                            "money_type": 3,
+                            "coins": 700,
+                            "imgurl": "https://aliimg.changba.com/promote/b68c28ea0f0d3103e724e4060c9b4292.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 106227,
+                            "cnt": 1,
+                            "name": "一汪锦鲤",
+                            "money_type": 3,
+                            "coins": 520,
+                            "imgurl": "https://aliimg.changba.com/promote/2cdea566e047c87e0a6d9350ca5e7dea.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 106182,
+                            "cnt": 1,
+                            "name": "书间花意",
+                            "money_type": 3,
+                            "coins": 300,
+                            "imgurl": "https://aliimg.changba.com/promote/107975b25207575e16906e0382436942.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 105283,
+                            "cnt": 1,
+                            "name": "玫瑰权杖",
+                            "money_type": 3,
+                            "coins": 188,
+                            "imgurl": "https://aliimg.changba.com/promote/9a5402e0a51397ccef88aab3bf118dc0.png",
+                            "labels": []
+                        }
+                    ],
+                    "displayEndTime": "12月26日 0:00:00",
+                    "card_type": 3
+                },
+                "naming_info": {
+                    "naming_type": 0,
+                    "naming_user": null
+                }
+            },
+            {
+                "id": "106373",
+                "name": "圣诞送礼",
+                "original_coins": 666,
+                "pop": 239,
+                "coins": 666,
+                "original_pop": 239,
+                "desc": "使该作品热度增加5，并保持6小时",
+                "maxCnt": 999999999,
+                "quanlifier": "个",
+                "valid": true,
+                "imgurl": "https://aliimg.changba.com/promote/9a4f265489d728f639220a95bcc4c1b6.png",
+                "type": 1,
+                "exhibitposition": 0,
+                "nodiscount": 1,
+                "activity_direction": -1,
+                "isSms": false,
+                "tag": 0,
+                "min_richlevel": 0,
+                "need_star_level": 0,
+                "money_type": 2,
+                "richlabel": "",
+                "richlevel_name": "",
+                "ishot": 0,
+                "attrdesc": "*人气值+239\n*热度+5,保持6小时",
+                "luxuryTime": 0,
+                "android_rgb_alpha_url": "",
+                "ios_rgb_url": "",
+                "ios_alpha_url": "",
+                "specialdesc": "【圣诞送礼】收礼人可收到圣诞送礼礼物，送礼人有机会获得礼物：祝你好梦、秋日奶茶、白虎出山、龙翔万里、泡泡泳池、帽子戏法、圣诞袜、纯白花嫁、圣诞夜未眠(动效,价值100000钻石/金币)。",
+                "label_style": 6,
+                "hotValue": 5,
+                "hotTime": 360,
+                "topscore": 33,
+                "noexchange": 1,
+                "retag": "圣诞限定",
+                "rank_factor": 0,
+                "labels": [
+                    {
+                        "label_style": "6",
+                        "retag": "圣诞限定"
+                    }
+                ],
+                "price": 0,
+                "intervalTime": 0,
+                "requireone": false,
+                "checkcode": false,
+                "combo": 0,
+                "doraemon": 1,
+                "memberlevel": "0",
+                "discountprice": -1,
+                "not_affect_ranks": 0,
+                "ulbar_subtext": "该礼物财富+666，人气+239，热度+5，保持6小时",
+                "activity_type": "5",
+                "card_info": {
+                    "detail_list": [
+                        {
+                            "id": 103584,
+                            "cnt": 1,
+                            "name": "圣诞夜未眠",
+                            "money_type": 3,
+                            "coins": 100000,
+                            "imgurl": "https://aliimg.changba.com/promote/b533932d1e1b06acd848a756fe529b95.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 104130,
+                            "cnt": 1,
+                            "name": "纯白花嫁",
+                            "money_type": 3,
+                            "coins": 30000,
+                            "imgurl": "https://aliimg.changba.com/promote/b689f298121df8f52373aa99082cf6c4.png",
+                            "labels": [
+                                {
+                                    "type": 300,
+                                    "label": "动效"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 101199,
+                            "cnt": 1,
+                            "name": "圣诞袜",
+                            "money_type": 3,
+                            "coins": 19999,
+                            "imgurl": "https://aliimg.changba.com/promote/3cf3773b8f15691130508b7b52ce8ab5.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 101995,
+                            "cnt": 1,
+                            "name": "帽子戏法",
+                            "money_type": 3,
+                            "coins": 10000,
+                            "imgurl": "https://aliimg.changba.com/promote/c975d52d536c0946e8eb888b51bb9e06.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 101515,
+                            "cnt": 1,
+                            "name": "泡泡泳池",
+                            "money_type": 3,
+                            "coins": 8000,
+                            "imgurl": "https://aliimg.changba.com/promote/f30cdaf4a7b5c13f3164c31ef46aee30.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 103982,
+                            "cnt": 1,
+                            "name": "龙翔万里",
+                            "money_type": 3,
+                            "coins": 4000,
+                            "imgurl": "https://aliimg.changba.com/promote/5c4a80004a93d0fe04db7cb3faa34249.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 102586,
+                            "cnt": 1,
+                            "name": "白虎出山",
+                            "money_type": 3,
+                            "coins": 3000,
+                            "imgurl": "https://aliimg.changba.com/promote/29de7dcb5eca21e5ef7a1fb733c0a0e9.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 102906,
+                            "cnt": 1,
+                            "name": "秋日奶茶",
+                            "money_type": 3,
+                            "coins": 2000,
+                            "imgurl": "https://aliimg.changba.com/promote/cc89164cbb9f62ab59c0b800041c5ae4.png",
+                            "labels": [
+                                {
+                                    "type": 300,
+                                    "label": "动效"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 102211,
+                            "cnt": 1,
+                            "name": "祝你好梦",
+                            "money_type": 3,
+                            "coins": 1000,
+                            "imgurl": "https://aliimg.changba.com/promote/1af4bf6192614398e273c187282ec8e0.png",
+                            "labels": []
+                        }
+                    ],
+                    "displayEndTime": "12月26日 0:00:00",
+                    "card_type": 3
+                },
+                "naming_info": {
+                    "naming_type": 0,
+                    "naming_user": null
+                }
+            },
+            {
+                "id": "100590",
+                "name": "彩虹桥",
+                "original_coins": 75,
+                "pop": 27,
+                "coins": 75,
+                "original_pop": 27,
+                "desc": "使该作品热度增加1，并保持6小时",
+                "maxCnt": 100000,
+                "quanlifier": "个",
+                "valid": true,
+                "imgurl": "https://aliimg.changba.com/promote/90e73586c49c4eea9450c3b649ce052d.png",
+                "type": 1,
+                "exhibitposition": 0,
+                "nodiscount": 1,
+                "activity_direction": -1,
+                "isSms": false,
+                "tag": 0,
+                "min_richlevel": 0,
+                "need_star_level": 0,
+                "money_type": 3,
+                "richlabel": "",
+                "richlevel_name": "",
+                "ishot": 0,
+                "attrdesc": "*人气值+27\n*热度+1,保持6小时",
+                "luxuryTime": 0,
+                "android_rgb_alpha_url": "",
+                "ios_rgb_url": "",
+                "ios_alpha_url": "",
+                "specialdesc": "",
+                "label_style": 0,
+                "hotValue": 1,
+                "hotTime": 360,
+                "topscore": 4,
+                "noexchange": 1,
+                "retag": "",
+                "rank_factor": 0,
+                "labels": [],
+                "price": 0,
+                "intervalTime": 0,
+                "requireone": false,
+                "checkcode": false,
+                "combo": 0,
+                "doraemon": 1,
+                "memberlevel": "0",
+                "discountprice": -1,
+                "not_affect_ranks": 0,
+                "ulbar_subtext": "该礼物财富+75，人气+27，热度+1，保持6小时",
+                "activity_type": "1",
+                "naming_info": {
+                    "naming_type": 0,
+                    "naming_user": null
+                }
+            },
+            {
+                "id": "105266",
+                "name": "乐动人心",
+                "original_coins": 99,
+                "pop": 35,
+                "coins": 99,
+                "original_pop": 35,
+                "desc": "使该作品热度增加1，并保持6小时",
+                "maxCnt": 99999999,
+                "quanlifier": "个",
+                "valid": true,
+                "imgurl": "https://aliimg.changba.com/promote/b9fdacafc58098e8975afde095529419.png",
+                "type": 5,
+                "exhibitposition": 0,
+                "nodiscount": 1,
+                "activity_direction": -1,
+                "isSms": false,
+                "tag": 0,
+                "min_richlevel": 0,
+                "need_star_level": 0,
+                "money_type": 2,
+                "richlabel": "",
+                "richlevel_name": "",
+                "ishot": 0,
+                "attrdesc": "*根据开出的礼物价值增加人气和热度\n",
+                "luxuryTime": 0,
+                "android_rgb_alpha_url": "",
+                "ios_rgb_url": "",
+                "ios_alpha_url": "",
+                "specialdesc": "【年度歌王争霸赛】活动专属礼物，送礼人有机会获得1-10个唱片碎片，可前往活动页使用。收礼人可有机会获得以下礼物：勇敢兔兔、缠花篪、围脖喵、躺平鸭鸭(动效,图鉴礼物)、荣耀舞台(动效,价值50000钻石/金币)。活动截止时间：12月27日23:59:59",
+                "label_style": 10,
+                "hotValue": 1,
+                "hotTime": 360,
+                "topscore": 5,
+                "noexchange": 1,
+                "retag": "年度歌王",
+                "rank_factor": 0,
+                "labels": [
+                    {
+                        "label_style": "10",
+                        "retag": "年度歌王"
+                    }
+                ],
+                "price": 0,
+                "intervalTime": 0,
+                "requireone": false,
+                "checkcode": false,
+                "combo": 0,
+                "doraemon": 1,
+                "discountprice": -1,
+                "animation_imgurl": "https://aliimg.changba.com/promote/67576e9591bcd20181fd83afb2ba268f.webp",
+                "not_affect_ranks": 0,
+                "ulbar_subtext": "该礼物根据实际开出礼物的价值增加财富、人气和热度",
+                "active_info": {
+                    "active_url": "https://changba.com/h5/lubo/activity2024/top-singer/index.html?refsrc=lwxbn",
+                    "active_time": "2024-12-20 14:15:00,2024-12-29 00:00:00",
+                    "active_desc": "",
+                    "active_banner": "https://aliimg.changba.com/promote/9e8939f0a76292fa088a4e278f204a1a.png"
+                },
+                "activity_type": "9",
+                "card_info": {
+                    "detail_list": [
+                        {
+                            "id": 106273,
+                            "cnt": 1,
+                            "name": "荣耀舞台",
+                            "money_type": 3,
+                            "coins": 50000,
+                            "imgurl": "https://aliimg.changba.com/promote/b8c58bf467efff1b7138f0b40e5b5ea2.png",
+                            "labels": [
+                                {
+                                    "type": 300,
+                                    "label": "动效"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 106251,
+                            "cnt": 1,
+                            "name": "躺平鸭鸭",
+                            "money_type": 3,
+                            "coins": 12000,
+                            "imgurl": "https://aliimg.changba.com/promote/01b644b0ad823d04d3c7fe8ba1126bd4.png",
+                            "labels": [
+                                {
+                                    "type": 300,
+                                    "label": "动效"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 103374,
+                            "cnt": 1,
+                            "name": "围脖喵",
+                            "money_type": 3,
+                            "coins": 5000,
+                            "imgurl": "https://aliimg.changba.com/promote/1491ac226c74a31eac9693b265b954ab.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 105257,
+                            "cnt": 1,
+                            "name": "缠花篪",
+                            "money_type": 3,
+                            "coins": 600,
+                            "imgurl": "https://aliimg.changba.com/promote/db6a098f77826c92ff327f74866f45a0.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 102078,
+                            "cnt": 1,
+                            "name": "勇敢兔兔",
+                            "money_type": 3,
+                            "coins": 200,
+                            "imgurl": "https://aliimg.changba.com/promote/f56c85ea944ee70eb928923050d2834b.png",
+                            "labels": []
+                        }
+                    ],
+                    "displayEndTime": "12月28日 0:00:00",
+                    "card_type": 1
+                },
+                "naming_info": {
+                    "naming_type": 0,
+                    "naming_user": null
+                }
+            },
+            {
+                "id": "105267",
+                "name": "乐章璀璨",
+                "original_coins": 999,
+                "pop": 359,
+                "coins": 999,
+                "original_pop": 359,
+                "desc": "使该作品热度增加7，并保持6小时",
+                "maxCnt": 99999999,
+                "quanlifier": "个",
+                "valid": true,
+                "imgurl": "https://aliimg.changba.com/promote/1bd522ebc6e1589aea786bc20508e6b3.png",
+                "type": 5,
+                "exhibitposition": 0,
+                "nodiscount": 1,
+                "activity_direction": -1,
+                "isSms": false,
+                "tag": 0,
+                "min_richlevel": 0,
+                "need_star_level": 0,
+                "money_type": 2,
+                "richlabel": "",
+                "richlevel_name": "",
+                "ishot": 0,
+                "attrdesc": "*根据开出的礼物价值增加人气和热度\n",
+                "luxuryTime": 0,
+                "android_rgb_alpha_url": "",
+                "ios_rgb_url": "",
+                "ios_alpha_url": "",
+                "specialdesc": "【年度歌王争霸赛】活动专属礼物，送礼人有机会获得1-10个唱片碎片，可前往活动页使用。收礼人可有机会获得以下礼物：花步流香、躺平鸭鸭(动效,图鉴礼物)、海上钢琴(动效)、银河星辰(动效,图鉴礼物)、环球旅行记(动效,价值400000钻石/金币)。活动截止时间：12月27日23:59:59",
+                "label_style": 10,
+                "hotValue": 7,
+                "hotTime": 360,
+                "topscore": 50,
+                "noexchange": 1,
+                "retag": "年度歌王",
+                "rank_factor": 0,
+                "labels": [
+                    {
+                        "label_style": "10",
+                        "retag": "年度歌王"
+                    }
+                ],
+                "price": 0,
+                "intervalTime": 0,
+                "requireone": false,
+                "checkcode": false,
+                "combo": 0,
+                "doraemon": 1,
+                "discountprice": -1,
+                "animation_imgurl": "https://aliimg.changba.com/promote/0a37d0de904d0021b1c3ba51f03bda3d.png",
+                "not_affect_ranks": 0,
+                "ulbar_subtext": "该礼物根据实际开出礼物的价值增加财富、人气和热度",
+                "active_info": {
+                    "active_url": "https://changba.com/h5/lubo/activity2024/top-singer/index.html?refsrc=lwxbn",
+                    "active_time": "2024-12-20 14:15:00,2024-12-29 00:00:00",
+                    "active_desc": "",
+                    "active_banner": "https://aliimg.changba.com/promote/79a50f7d13909db0d5536105f9113fae.png"
+                },
+                "activity_type": "9",
+                "card_info": {
+                    "detail_list": [
+                        {
+                            "id": 102308,
+                            "cnt": 1,
+                            "name": "环球旅行记",
+                            "money_type": 3,
+                            "coins": 400000,
+                            "imgurl": "https://aliimg.changba.com/promote/07d91a98fd6ee60f3dfe69060242fdc8.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 106250,
+                            "cnt": 1,
+                            "name": "银河星辰",
+                            "money_type": 3,
+                            "coins": 100000,
+                            "imgurl": "https://aliimg.changba.com/promote/fb2e0d2940609e33d4e33e927ece4e5a.png",
+                            "labels": [
+                                {
+                                    "type": 300,
+                                    "label": "动效"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 102447,
+                            "cnt": 1,
+                            "name": "海上钢琴",
+                            "money_type": 3,
+                            "coins": 40000,
+                            "imgurl": "https://aliimg.changba.com/promote/ffce9bcef525c7d0be94b089e87b7413.png",
+                            "labels": [
+                                {
+                                    "type": 300,
+                                    "label": "动效"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 106251,
+                            "cnt": 1,
+                            "name": "躺平鸭鸭",
+                            "money_type": 3,
+                            "coins": 12000,
+                            "imgurl": "https://aliimg.changba.com/promote/01b644b0ad823d04d3c7fe8ba1126bd4.png",
+                            "labels": [
+                                {
+                                    "type": 300,
+                                    "label": "动效"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 106177,
+                            "cnt": 1,
+                            "name": "花步流香",
+                            "money_type": 3,
+                            "coins": 4000,
+                            "imgurl": "https://aliimg.changba.com/promote/a054718fc28df22fe79c9c84ae51545e.png",
+                            "labels": []
+                        }
+                    ],
+                    "displayEndTime": "12月28日 0:00:00",
+                    "card_type": 1
+                },
+                "naming_info": {
+                    "naming_type": 0,
+                    "naming_user": null
+                }
+            },
+            {
+                "id": "106347",
+                "name": "雪之恋",
+                "original_coins": 150,
+                "pop": 54,
+                "coins": 150,
+                "original_pop": 54,
+                "desc": "使该作品热度增加1，并保持6小时",
+                "maxCnt": 100000,
+                "quanlifier": "个",
+                "valid": true,
+                "imgurl": "https://aliimg.changba.com/promote/e5ac376bedec1ebdbf5707511d8b7c23.png",
+                "type": 1,
+                "exhibitposition": 0,
+                "nodiscount": 1,
+                "activity_direction": -1,
+                "isSms": false,
+                "tag": 0,
+                "min_richlevel": 0,
+                "need_star_level": 0,
+                "money_type": 2,
+                "richlabel": "",
+                "richlevel_name": "",
+                "ishot": 0,
+                "attrdesc": "*人气值+54\n*热度+1,保持6小时",
+                "luxuryTime": 0,
+                "android_rgb_alpha_url": "",
+                "ios_rgb_url": "",
+                "ios_alpha_url": "",
+                "specialdesc": "【限时冰雪节专属礼物】",
+                "label_style": 0,
+                "hotValue": 1,
+                "hotTime": 360,
+                "topscore": 8,
+                "noexchange": 1,
+                "retag": "",
+                "rank_factor": 0,
+                "labels": [],
+                "price": 0,
+                "intervalTime": 0,
+                "requireone": false,
+                "checkcode": false,
+                "combo": 0,
+                "doraemon": 1,
+                "memberlevel": "0",
+                "discountprice": -1,
+                "not_affect_ranks": 0,
+                "ulbar_subtext": "该礼物财富+150，人气+54，热度+1，保持6小时",
+                "activity_type": "5",
+                "card_info": {
+                    "detail_list": [
+                        {
+                            "id": 104041,
+                            "cnt": 1,
+                            "name": "宙夜星辰",
+                            "money_type": 3,
+                            "coins": 66000,
+                            "imgurl": "https://aliimg.changba.com/promote/b62be4f0a08de803177cf4dc8232363f.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 106349,
+                            "cnt": 1,
+                            "name": "疯狂音符",
+                            "money_type": 3,
+                            "coins": 20000,
+                            "imgurl": "https://aliimg.changba.com/promote/2a4780e02d73ced00ecfbe896517f018.png",
+                            "labels": [
+                                {
+                                    "type": 300,
+                                    "label": "动效"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 106229,
+                            "cnt": 1,
+                            "name": "静谧之隅",
+                            "money_type": 3,
+                            "coins": 8888,
+                            "imgurl": "https://aliimg.changba.com/promote/252edc5d36ccea10aee418219532a0c3.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 104072,
+                            "cnt": 1,
+                            "name": "鸟语花香",
+                            "money_type": 3,
+                            "coins": 2400,
+                            "imgurl": "https://aliimg.changba.com/promote/e7174ba68ccbd670dc949ef15b50b716.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 102549,
+                            "cnt": 1,
+                            "name": "鸭鸭游泳圈",
+                            "money_type": 3,
+                            "coins": 1000,
+                            "imgurl": "https://aliimg.changba.com/promote/c0996c814a7e2af557bb7707f8b6654e.png",
+                            "labels": [
+                                {
+                                    "type": 300,
+                                    "label": "动效"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 102891,
+                            "cnt": 1,
+                            "name": "对镜化妆",
+                            "money_type": 3,
+                            "coins": 520,
+                            "imgurl": "https://aliimg.changba.com/promote/1e2d985b1385d9d1c6f82c7911fe4cd6.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 103819,
+                            "cnt": 1,
+                            "name": "香满锅",
+                            "money_type": 3,
+                            "coins": 500,
+                            "imgurl": "https://aliimg.changba.com/promote/ff4317807d1bcf747dc3d58ec0095375.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 105543,
+                            "cnt": 1,
+                            "name": "好事花生",
+                            "money_type": 3,
+                            "coins": 300,
+                            "imgurl": "https://aliimg.changba.com/promote/6e8644e909869163d990c4920ec741d0.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 104795,
+                            "cnt": 1,
+                            "name": "金粉蝶扇",
+                            "money_type": 3,
+                            "coins": 300,
+                            "imgurl": "https://aliimg.changba.com/promote/8693be654994f32fdbd0a4af68e1818e.png",
+                            "labels": []
+                        }
+                    ],
+                    "displayEndTime": "12月25日 0:00:00",
+                    "card_type": 3
+                },
+                "naming_info": {
+                    "naming_type": 0,
+                    "naming_user": null
+                }
+            },
+            {
+                "id": "105464",
+                "name": "魔法袋",
+                "original_coins": 500,
+                "pop": 36,
+                "coins": 500,
+                "original_pop": 36,
+                "desc": "使该作品热度增加1，并保持6小时",
+                "maxCnt": 999999999,
+                "quanlifier": "个",
+                "valid": true,
+                "imgurl": "https://aliimg.changba.com/promote/49570ab95c2312c2c31e96548ddc80fe.png",
+                "type": 1,
+                "exhibitposition": 0,
+                "nodiscount": 1,
+                "activity_direction": -1,
+                "isSms": false,
+                "tag": 0,
+                "min_richlevel": 0,
+                "need_star_level": 0,
+                "money_type": 3,
+                "richlabel": "",
+                "richlevel_name": "",
+                "ishot": 0,
+                "attrdesc": "*人气值+36\n*热度+1,保持6小时",
+                "luxuryTime": 0,
+                "android_rgb_alpha_url": "",
+                "ios_rgb_url": "",
+                "ios_alpha_url": "",
+                "specialdesc": "收礼人可获得魔法袋礼物，送礼人可有机会获得金扫帚、兔兔信使、音符星球(动效)、大富翁(动效)、魔法典籍(动效)、、吉光凤羽(动效)、光影都市(动效，价值138888钻石/金币)、四叶草。其中四叶草可在【魔法许愿池】活动中使用(四叶草每日不清空，活动结束后不可再使用)",
+                "label_style": 6,
+                "hotValue": 1,
+                "hotTime": 360,
+                "topscore": 5,
+                "noexchange": 1,
+                "retag": "魔法许愿池",
+                "rank_factor": 0,
+                "labels": [
+                    {
+                        "label_style": "6",
+                        "retag": "魔法许愿池"
+                    }
+                ],
+                "price": 0,
+                "intervalTime": 0,
+                "requireone": false,
+                "checkcode": false,
+                "combo": 0,
+                "doraemon": 1,
+                "memberlevel": "0",
+                "discountprice": -1,
+                "not_affect_ranks": 0,
+                "ulbar_subtext": "该礼物财富+500，人气+36，热度+1，保持6小时",
+                "activity_type": "5",
+                "card_info": {
+                    "detail_list": [
+                        {
+                            "id": 104735,
+                            "cnt": 1,
+                            "name": "光影都市",
+                            "money_type": 3,
+                            "coins": 138888,
+                            "imgurl": "https://aliimg.changba.com/promote/3f2394f6eafe555fe777b524cef4a33a.png",
+                            "labels": [
+                                {
+                                    "type": 300,
+                                    "label": "动效"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 103986,
+                            "cnt": 1,
+                            "name": "吉光凤羽",
+                            "money_type": 3,
+                            "coins": 88888,
+                            "imgurl": "https://aliimg.changba.com/promote/f012488e591d5d749e6e70082b4aafae.png",
+                            "labels": [
+                                {
+                                    "type": 300,
+                                    "label": "动效"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 103433,
+                            "cnt": 1,
+                            "name": "魔法典籍",
+                            "money_type": 3,
+                            "coins": 30000,
+                            "imgurl": "https://aliimg.changba.com/promote/ccddfd81df6ed991fe5bd92de5b49dba.png",
+                            "labels": [
+                                {
+                                    "type": 300,
+                                    "label": "动效"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 103993,
+                            "cnt": 1,
+                            "name": "大富翁",
+                            "money_type": 3,
+                            "coins": 18888,
+                            "imgurl": "https://aliimg.changba.com/promote/b37ca77921329c1571282a6d6470a2bc.png",
+                            "labels": [
+                                {
+                                    "type": 300,
+                                    "label": "动效"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 101891,
+                            "cnt": 1,
+                            "name": "音符星球",
+                            "money_type": 3,
+                            "coins": 6500,
+                            "imgurl": "https://aliimg.changba.com/promote/c4a323f73b090aa2b4c66d6f470d76a2.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 105532,
+                            "cnt": 1,
+                            "name": "兔兔信使",
+                            "money_type": 3,
+                            "coins": 3000,
+                            "imgurl": "https://aliimg.changba.com/promote/43d3b6e38095d1444b342d7bb5d789fb.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 105466,
+                            "cnt": 1,
+                            "name": "金扫帚",
+                            "money_type": 3,
+                            "coins": 1200,
+                            "imgurl": "https://aliimg.changba.com/promote/2614211560b6cc28f98c5402d2e2451c.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 105472,
+                            "cnt": 1,
+                            "name": "四叶草",
+                            "money_type": 3,
+                            "coins": 1,
+                            "imgurl": "https://aliimg.changba.com/promote/ec4b5b959c407a074abe5f239ad0b0b0.png",
+                            "labels": [
+                                {
+                                    "type": 100,
+                                    "label": "专属"
+                                }
+                            ]
+                        }
+                    ],
+                    "displayEndTime": "2月28日 0:00:00",
+                    "card_type": 3
+                },
+                "naming_info": {
+                    "naming_type": 0,
+                    "naming_user": null
+                }
+            },
+            {
+                "id": "105465",
+                "name": "魔法帽",
+                "original_coins": 100,
+                "pop": 36,
+                "coins": 100,
+                "original_pop": 36,
+                "desc": "使该作品热度增加1，并保持6小时",
+                "maxCnt": 999999999,
+                "quanlifier": "个",
+                "valid": true,
+                "imgurl": "https://aliimg.changba.com/promote/9a72cfbb4ebb190f430f2b264332b45e.png",
+                "type": 1,
+                "exhibitposition": 0,
+                "nodiscount": 1,
+                "activity_direction": -1,
+                "isSms": false,
+                "tag": 0,
+                "min_richlevel": 0,
+                "need_star_level": 0,
+                "money_type": 3,
+                "richlabel": "",
+                "richlevel_name": "",
+                "ishot": 0,
+                "attrdesc": "*人气值+36\n*热度+1,保持6小时",
+                "luxuryTime": 0,
+                "android_rgb_alpha_url": "",
+                "ios_rgb_url": "",
+                "ios_alpha_url": "",
+                "specialdesc": "收礼人可获得魔法帽礼物，送礼人可有机会获得华丽花束、轮滑鞋、铃兰花开、华彩项链、芒芒慕斯、鲤鱼花灯(动效)、猫猫乐队(动效，价值30000钻石/金币)、四叶草。其中四叶草可在【魔法许愿池】活动中使用(四叶草每日不清空，活动结束后不可再使用)",
+                "label_style": 6,
+                "hotValue": 1,
+                "hotTime": 360,
+                "topscore": 5,
+                "noexchange": 1,
+                "retag": "魔法许愿池",
+                "rank_factor": 0,
+                "labels": [
+                    {
+                        "label_style": "6",
+                        "retag": "魔法许愿池"
+                    }
+                ],
+                "price": 0,
+                "intervalTime": 0,
+                "requireone": false,
+                "checkcode": false,
+                "combo": 0,
+                "doraemon": 1,
+                "memberlevel": "0",
+                "discountprice": -1,
+                "not_affect_ranks": 0,
+                "ulbar_subtext": "该礼物财富+100，人气+36，热度+1，保持6小时",
+                "activity_type": "5",
+                "card_info": {
+                    "detail_list": [
+                        {
+                            "id": 105462,
+                            "cnt": 1,
+                            "name": "猫猫乐队",
+                            "money_type": 3,
+                            "coins": 30000,
+                            "imgurl": "https://aliimg.changba.com/promote/dac86ad33749027c51b528502702b56d.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 102206,
+                            "cnt": 1,
+                            "name": "鲤鱼花灯",
+                            "money_type": 3,
+                            "coins": 20000,
+                            "imgurl": "https://aliimg.changba.com/promote/1701cca73cf906a5c4a26a496488c674.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 105105,
+                            "cnt": 1,
+                            "name": "芒芒慕斯",
+                            "money_type": 3,
+                            "coins": 5000,
+                            "imgurl": "https://aliimg.changba.com/promote/ec21c84a5d76dc5cc5c3160590a2717c.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 105035,
+                            "cnt": 1,
+                            "name": "华彩项链",
+                            "money_type": 3,
+                            "coins": 2200,
+                            "imgurl": "https://aliimg.changba.com/promote/05551cb94edcf773f19dceceeff0114c.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 105545,
+                            "cnt": 1,
+                            "name": "铃兰花开",
+                            "money_type": 3,
+                            "coins": 1000,
+                            "imgurl": "https://aliimg.changba.com/promote/b59bc7eea550311740799aea97f793fc.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 105555,
+                            "cnt": 1,
+                            "name": "轮滑鞋",
+                            "money_type": 3,
+                            "coins": 600,
+                            "imgurl": "https://aliimg.changba.com/promote/67822e1ec4244cd48474986674b2b592.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 105720,
+                            "cnt": 1,
+                            "name": "华丽花束",
+                            "money_type": 3,
+                            "coins": 150,
+                            "imgurl": "https://aliimg.changba.com/promote/f6ba0167bf92a4258d0a7bbd7815611e.png",
+                            "labels": []
+                        },
+                        {
+                            "id": 105472,
+                            "cnt": 1,
+                            "name": "四叶草",
+                            "money_type": 3,
+                            "coins": 1,
+                            "imgurl": "https://aliimg.changba.com/promote/ec4b5b959c407a074abe5f239ad0b0b0.png",
+                            "labels": [
+                                {
+                                    "type": 100,
+                                    "label": "专属"
+                                }
+                            ]
+                        }
+                    ],
+                    "displayEndTime": "2月28日 0:00:00",
+                    "card_type": 3
+                },
+                "naming_info": {
+                    "naming_type": 0,
+                    "naming_user": null
+                }
+            }
+        ]
+    },
+    "errorcode": "ok",
+    "ip": "nginx: 10.100.10.233 php: 143 env:aliyun"
+}
