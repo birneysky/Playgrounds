@@ -1,8 +1,9 @@
 from mitmproxy import ctx, http
+import json5
 import json
 import os
 
-class Modify:
+class ModifyHTTP:
     def __init__(self, api: str,  param_list: dict = None, json_file: str = None):
         self.api = api
         self.param_list = param_list
@@ -20,13 +21,13 @@ class Modify:
             if self.param_list is None or all(self._compare_params(params.get(k), v) for k, v in self.param_list.items()):
                 ctx.log.info("\033[34m" + f"Matching API: {self.api}" + "\033[0m")
                 # 确定使用的 JSON 文件名
-                json_file = self.json_file if self.json_file else f"{self.api}.json"
+                json_file = self.json_file if self.json_file else f"{self.api}.json5"
 
                 current_dir = os.path.dirname(os.path.abspath(__file__))
                 config_path = os.path.join(current_dir, json_file)
                 if os.path.exists(config_path):
                     with open(config_path, "r") as f:
-                        config = json.load(f)
+                        config = json5.load(f)
                         #ctx.log.info(config)
                         flow.response.set_text(json.dumps(config))
                 else:
@@ -49,6 +50,9 @@ class Modify:
             return False 
 
 addons = [
-	Modify(api="ac=membershipintro"),
-    Modify(api="gift.gift.getgiftlist", param_list={'tabid': 1, 'for_moment': 0}, json_file="ac=gift.gift.getgiftlisttabid1.json")
+	ModifyHTTP(api="ac=membershipintro", param_list={"tab_type" : "vip"}),
+    ModifyHTTP(api="gift.gift.getgiftlist", param_list={'tabid': 1, 'for_moment': 0}, json_file="ac=gift.gift.getgiftlisttabid1.json5"),
+    ModifyHTTP(api="gift.giftpackage.getgiftpackageinfo"),
+    ModifyHTTP(api="getgiftpackagehistory"),
+    ModifyHTTP(api="pickgiftpackage"),
 ]

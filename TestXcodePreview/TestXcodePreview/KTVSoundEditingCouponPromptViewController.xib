@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -40,12 +41,12 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVe-fI-MXH">
-                    <rect key="frame" x="24" y="181.66666666666666" width="243" height="31.333333333333343"/>
+                    <rect key="frame" x="24" y="181.66666666666666" width="243" height="33.666666666666657"/>
                     <attributedString key="attributedText">
                         <fragment content="还差一步，点击">
                             <attributes>
                                 <color key="NSColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <font key="NSFont" size="14" name=".PingFangSC-Regular"/>
+                                <font key="NSFont" metaFont="system" size="14"/>
                                 <font key="NSOriginalFont" metaFont="system" size="17"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
@@ -53,7 +54,7 @@
                         <fragment content="【生成作品】">
                             <attributes>
                                 <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <font key="NSFont" size="14" name=".PingFangSC-Regular"/>
+                                <font key="NSFont" metaFont="system" size="14"/>
                                 <font key="NSOriginalFont" metaFont="system" size="17"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
@@ -61,14 +62,14 @@
                         <fragment content=" ">
                             <attributes>
                                 <color key="NSColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <font key="NSFont" size="14" name=".PingFangSC-Regular"/>
+                                <font key="NSFont" metaFont="system" size="14"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>
                         <fragment content="并发布就能获得新手福利">
                             <attributes>
                                 <color key="NSColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <font key="NSFont" size="14" name=".PingFangSC-Regular"/>
+                                <font key="NSFont" metaFont="system" size="14"/>
                                 <font key="NSOriginalFont" metaFont="system" size="17"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
@@ -77,14 +78,14 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ktv_sound_editing_coupon" translatesAutoresizingMaskIntoConstraints="NO" id="rW6-pn-Nob">
-                    <rect key="frame" x="69" y="221" width="153" height="64"/>
+                    <rect key="frame" x="69" y="223.33333333333334" width="153" height="64.000000000000028"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="153" id="Fa1-xO-3AU"/>
                         <constraint firstAttribute="height" constant="64" id="VHV-B4-SDx"/>
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IVG-f1-YhG">
-                    <rect key="frame" x="24.666666666666657" y="309" width="241.99999999999997" height="40"/>
+                    <rect key="frame" x="24.666666666666657" y="311.33333333333331" width="241.99999999999997" height="40"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLh-JB-jd8">
                             <rect key="frame" x="0.0" y="0.0" width="117" height="40"/>

@@ -120,6 +120,7 @@
 		32DB6AD72C6DEB5B000DA3C8 /* KTVWebContainerRetryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DB6AD62C6DEB5B000DA3C8 /* KTVWebContainerRetryView.swift */; };
 		32DB6AD92C6DEB76000DA3C8 /* KTVWebContainerRetryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32DB6AD82C6DEB76000DA3C8 /* KTVWebContainerRetryView.xib */; };
 		32DBEE1A2CC9EE07005926F4 /* KTVHeartBeatSingPortraitBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DBEE192CC9EE07005926F4 /* KTVHeartBeatSingPortraitBanner.swift */; };
+		32E2868D2D193689008AE24B /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 32E2868C2D193689008AE24B /* Documentation.docc */; };
 		32E384902C62111B0048A7EA /* ShiningLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E3848F2C62111B0048A7EA /* ShiningLabel.swift */; };
 		32E481BF2D0AE15A00C4544E /* KTVShiningEffectLabel1.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E481BD2D0AE15A00C4544E /* KTVShiningEffectLabel1.m */; };
 		32E481C22D0AE19F00C4544E /* KTVNickNameEffectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E481C02D0AE19F00C4544E /* KTVNickNameEffectModel.m */; };
@@ -283,6 +284,7 @@
 		32DB6AD62C6DEB5B000DA3C8 /* KTVWebContainerRetryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVWebContainerRetryView.swift; sourceTree = "<group>"; };
 		32DB6AD82C6DEB76000DA3C8 /* KTVWebContainerRetryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KTVWebContainerRetryView.xib; sourceTree = "<group>"; };
 		32DBEE192CC9EE07005926F4 /* KTVHeartBeatSingPortraitBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVHeartBeatSingPortraitBanner.swift; sourceTree = "<group>"; };
+		32E2868C2D193689008AE24B /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 		32E3848F2C62111B0048A7EA /* ShiningLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiningLabel.swift; sourceTree = "<group>"; };
 		32E481BD2D0AE15A00C4544E /* KTVShiningEffectLabel1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTVShiningEffectLabel1.m; sourceTree = "<group>"; };
 		32E481BE2D0AE15A00C4544E /* KTVShiningEffectLabel1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVShiningEffectLabel1.h; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 		32038AD02B47F262000FE88B /* TestXcodePreview */ = {
 			isa = PBXGroup;
 			children = (
+				32E2868B2D19366F008AE24B /* Doc */,
 				322962962CC64DEF00C6E47F /* FSPagerView */,
 				32038AD12B47F262000FE88B /* AppDelegate.swift */,
 				32038AD32B47F262000FE88B /* SceneDelegate.swift */,
@@ -532,6 +535,14 @@
 				32038ADA2B47F264000FE88B /* Assets.xcassets */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		32E2868B2D19366F008AE24B /* Doc */ = {
+			isa = PBXGroup;
+			children = (
+				32E2868C2D193689008AE24B /* Documentation.docc */,
+			);
+			path = Doc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -790,6 +801,7 @@
 				320DB8D92C21719500410719 /* KTVLRRedPacketRewardsTableView.swift in Sources */,
 				32DB6AD72C6DEB5B000DA3C8 /* KTVWebContainerRetryView.swift in Sources */,
 				321238102C58D69600BFF154 /* KTVFineTuningTimeViewController.swift in Sources */,
+				32E2868D2D193689008AE24B /* Documentation.docc in Sources */,
 				32038AD42B47F262000FE88B /* SceneDelegate.swift in Sources */,
 				32F6A74A2D115B440009DBE1 /* WatchCountDownModel.swift in Sources */,
 				3292A7022C6AD38C00A95354 /* GradientLabel2.swift in Sources */,

@@ -1,0 +1,126 @@
+{
+    "result": {
+        "activityLabel": {
+            "title": "参加春节活动可获得更多红包哦",
+            "redirectUrl": "changba://?ac=member&rightSource=banner&sensorSource=作品轮播图上限提升",
+            "bgPic":""
+        },
+        "mygift": "http://aliimg.changba.com/cbicons/gift/1380_1542339227.png",
+        "mygiftnum": 1,
+        "giftpackage": {
+            "giftpackageid": 79703943856,
+            "stat": 2,
+            "tycoon_userid": "298992318",
+            "tycoon_photo": "https://aliimg.changba.com/cache/photo/976778506.jpg",
+            "tycoon_name": "𒈔𒈔👿👿",
+            "shouldshare": 1,
+            "unopened_cover": "https://aliimg.changba.com//promote/82c3deae7a16e291628fec46c7c48c9f.png",
+            "opened_cover": "https://aliimg.changba.com//promote/446f98f75b333b47801124b584f35ef5.png",
+            "new_year_pack" : true
+        },
+        "allnum": "52",
+        "haspickednum": 1,
+        "receiver": [
+            {
+                "photo": "https://aliimg.changba.com/cache/photo/976778506.jpg",
+                "name": "𒈔𒈔👿👿1",
+                "reward_pic": "http://aliimg.changba.com/cbicons/gift/1380_1542339227.png",
+                "reward_num": 1,
+                "timestr": "12-23 18:27:01"
+            },
+            {
+                "photo": "https://aliimg.changba.com/cache/photo/976778506.jpg",
+                "name": "𒈔𒈔👿👿2",
+                "reward_pic": "http://aliimg.changba.com/cbicons/gift/1380_1542339227.png",
+                "reward_num": 1,
+                "timestr": "12-23 18:27:01"
+            },
+            {
+                "photo": "https://aliimg.changba.com/cache/photo/976778506.jpg",
+                "name": "𒈔𒈔👿👿3",
+                "reward_pic": "http://aliimg.changba.com/cbicons/gift/1380_1542339227.png",
+                "reward_num": 1,
+                "timestr": "12-23 18:27:01"
+            },
+            {
+                "photo": "https://aliimg.changba.com/cache/photo/976778506.jpg",
+                "name": "𒈔𒈔👿👿4",
+                "reward_pic": "http://aliimg.changba.com/cbicons/gift/1380_1542339227.png",
+                "reward_num": 1,
+                "timestr": "12-23 18:27:01"
+            },
+            {
+                "photo": "https://aliimg.changba.com/cache/photo/976778506.jpg",
+                "name": "𒈔𒈔👿👿5",
+                "reward_pic": "http://aliimg.changba.com/cbicons/gift/1380_1542339227.png",
+                "reward_num": 1,
+                "timestr": "12-23 18:27:01"
+            },
+            {
+                "photo": "https://aliimg.changba.com/cache/photo/976778506.jpg",
+                "name": "𒈔𒈔👿👿6",
+                "reward_pic": "http://aliimg.changba.com/cbicons/gift/1380_1542339227.png",
+                "reward_num": 1,
+                "timestr": "12-23 18:27:01"
+            },
+            {
+                "photo": "https://aliimg.changba.com/cache/photo/976778506.jpg",
+                "name": "𒈔𒈔👿👿7",
+                "reward_pic": "http://aliimg.changba.com/cbicons/gift/1380_1542339227.png",
+                "reward_num": 1,
+                "timestr": "12-23 18:27:01"
+            },
+            {
+                "photo": "https://aliimg.changba.com/cache/photo/976778506.jpg",
+                "name": "𒈔𒈔👿👿8",
+                "reward_pic": "http://aliimg.changba.com/cbicons/gift/1380_1542339227.png",
+                "reward_num": 1,
+                "timestr": "12-23 18:27:01"
+            },
+            {
+                "photo": "https://aliimg.changba.com/cache/photo/976778506.jpg",
+                "name": "𒈔𒈔👿👿9",
+                "reward_pic": "http://aliimg.changba.com/cbicons/gift/1380_1542339227.png",
+                "reward_num": 1,
+                "timestr": "12-23 18:27:01"
+            },
+            {
+                "photo": "https://aliimg.changba.com/cache/photo/976778506.jpg",
+                "name": "𒈔𒈔👿👿10",
+                "reward_pic": "http://aliimg.changba.com/cbicons/gift/1380_1542339227.png",
+                "reward_num": 1,
+                "timestr": "12-23 18:27:01"
+            },
+            {
+                "photo": "https://aliimg.changba.com/cache/photo/976778506.jpg",
+                "name": "𒈔𒈔👿👿11",
+                "reward_pic": "http://aliimg.changba.com/cbicons/gift/1380_1542339227.png",
+                "reward_num": 1,
+                "timestr": "12-23 18:27:01"
+            },
+            {
+                "photo": "https://aliimg.changba.com/cache/photo/976778506.jpg",
+                "name": "𒈔𒈔👿👿12",
+                "reward_pic": "http://aliimg.changba.com/cbicons/gift/1380_1542339227.png",
+                "reward_num": 1,
+                "timestr": "12-23 18:27:01"
+            },
+            {
+                "photo": "https://aliimg.changba.com/cache/photo/976778506.jpg",
+                "name": "𒈔𒈔👿👿13",
+                "reward_pic": "http://aliimg.changba.com/cbicons/gift/1380_1542339227.png",
+                "reward_num": 1,
+                "timestr": "12-23 18:27:01"
+            },
+            {
+                "photo": "https://aliimg.changba.com/cache/photo/976778506.jpg",
+                "name": "𒈔𒈔👿👿14",
+                "reward_pic": "http://aliimg.changba.com/cbicons/gift/1380_1542339227.png",
+                "reward_num": 1,
+                "timestr": "12-23 18:27:01"
+            }
+        ]
+    },
+    "errorcode": "ok",
+    "ip": "nginx: 10.100.10.233 php: 143 env:aliyun"
+}

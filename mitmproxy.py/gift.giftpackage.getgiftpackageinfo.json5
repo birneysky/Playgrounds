@@ -1,0 +1,15 @@
+{
+    "result": {
+        "giftpackageid": 79703943856,
+        "stat": 1,
+        "tycoon_userid": "298992318",
+        "tycoon_photo": "https://aliimg.changba.com/cache/photo/976778506.jpg",
+        "tycoon_name": "𒈔𒈔👿👿we  𒈔𒈔👿我知道你哟都没我想",
+        "shouldshare": 1,
+        "unopened_cover": "https://aliimg.changba.com//promote/82c3deae7a16e291628fec46c7c48c9f.png",
+        "opened_cover": "https://aliimg.changba.com//promote/446f98f75b333b47801124b584f35ef5.png",
+		"new_year_pack" : true
+    },
+    "errorcode": "ok",
+    "ip": "nginx: 10.100.10.233 php: 143 env:aliyun"
+}
