@@ -55,4 +55,7 @@ addons = [
     ModifyHTTP(api="gift.giftpackage.getgiftpackageinfo"),
     ModifyHTTP(api="getgiftpackagehistory"),
     ModifyHTTP(api="pickgiftpackage"),
+    ModifyHTTP(api="feed.feed.getusertimeline10"),
+    ModifyHTTP(api="serverconfigs2"),
+    ModifyHTTP(api="recommend.listen.getrecommendlist1002"),
 ]

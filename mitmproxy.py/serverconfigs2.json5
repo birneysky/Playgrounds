@@ -1,0 +1,396 @@
+{
+    "errorcode": "ok",
+    "ip": "nginx: 172.18.10.175 php: 143 env:test",
+    "result": {
+        "OpenGamePage": "true",
+        "OpenQQVip": "false",
+        "accessWebPageUrl": "",
+        "alt_banzou_cdn": "https://alimp3.changba.com/",
+        "area": "成都",
+        "barber_shop_add_icon": "https://aliimg.changba.com/promote/7434cd36655862d99a6c332174f5ba81.webp",
+        "barber_shop_avatar": true,
+        "barber_shop_avatar_action_time": 10,
+        "barber_shop_avatar_max_id": 0,
+        "barber_shop_avatar_msg": "新商品上新啦～",
+        "barber_shop_dress_up": true,
+        "barber_shop_max_id": 20254,
+        "blue_tooth_valid_toast": "应版权方要求，当前歌曲不支持蓝牙设备连接演唱～",
+        "bounty_switch": 1,
+        "bubblelistcdn": "http://aliimg.changba.com/cache/photo/chatbubble/",
+        "canReportError": "true",
+        "canReportStats": "true",
+        "canSendMember": 1,
+        "changba_report_reasons": [
+            {
+                "display": "侮辱谩骂",
+                "name": "insult"
+            },
+            {
+                "display": "传播色情资源",
+                "name": "porn"
+            },
+            {
+                "display": "违法犯罪",
+                "name": "criminal"
+            },
+            {
+                "display": "不实信息",
+                "name": "fake_info"
+            },
+            {
+                "display": "政治敏感",
+                "name": "political"
+            },
+            {
+                "display": "未成年人相关",
+                "name": "minors"
+            },
+            {
+                "display": "涉嫌欺诈",
+                "name": "fraud"
+            },
+            {
+                "display": "其他",
+                "name": "other"
+            }
+        ],
+        "chatuserinfocache": 1,
+        "claw_download_url": "https://maozhua.xiaochang.com/mobile",
+        "clearlocalsongtime": 0,
+        "clientip": "117.176.203.187",
+        "competition_switch": 0,
+        "couldPingBeforeUpload": 0,
+        "displayoriginalsong": true,
+        "displaysearchmyworkvalue": 0,
+        "emopa_url_prefix": "http://aliimg.changba.com/cache/photo/",
+        "explosive_config": {
+            "explosive_text": "感谢友友！",
+            "switch": false,
+            "time_intervals": [
+                10,
+                30
+            ]
+        },
+        "gift_combo_rate": 10,
+        "groupGuestMaxSilenceTime": 3,
+        "groupRecruitTime": 6,
+        "grouphttpshost": null,
+        "groupmthost": "172.18.10.174",
+        "groupmtkplive": 60,
+        "groupzmqhost": "182.92.166.206",
+        "intimacyConfig": [
+            {
+                "colorConfig": {
+                    "nameBg": [
+                        "#FF749E",
+                        "#FF4790"
+                    ],
+                    "nameColor": "#FFFFFF",
+                    "scoreColor": "#FFFFFF",
+                    "waveBorder": "#F6CDDE",
+                    "waves": [
+                        "#FFB5D8",
+                        "#FF7575",
+                        "#FF4E83",
+                        "#FFFFFF"
+                    ]
+                },
+                "commentBgImg": "https://aliimg.changba.com/promote/intimacy/7700acfce80cb472811be6ef70ac5441.png",
+                "dynamicImg": "https://aliimg.changba.com/promote/9c4c98dcf4f0b50127fa35d511e8545b.webp",
+                "name": "CP",
+                "type": 1
+            },
+            {
+                "colorConfig": {
+                    "nameBg": [
+                        "#9584FF",
+                        "#3E88F5"
+                    ],
+                    "nameColor": "#FFFFFF",
+                    "scoreColor": "#5778ED",
+                    "waveBorder": "#BCC7FE",
+                    "waves": [
+                        "#C0D6FF",
+                        "#E8F0FF",
+                        "#B5B8FF",
+                        "#84E1FF"
+                    ]
+                },
+                "commentBgImg": "https://aliimg.changba.com/promote/intimacy/93ff910f03a6b8adeb9d2c60c49d323d.png",
+                "dynamicImg": "https://aliimg.changba.com/promote/65f22f01104dee0628579fea0e495678.webp",
+                "name": "挚友",
+                "type": 2
+            },
+            {
+                "colorConfig": {
+                    "nameBg": [
+                        "#FFF599",
+                        "#FE395D"
+                    ],
+                    "nameColor": "#FFFFFF",
+                    "scoreColor": "#FA6652",
+                    "waveBorder": "#FEC8BC",
+                    "waves": [
+                        "#FFCCCC",
+                        "#FFFFFF",
+                        "#FFB1B1",
+                        "#FDFF8B"
+                    ]
+                },
+                "commentBgImg": "https://aliimg.changba.com/promote/intimacy/59b570a744487b31cab1f07079c19965.png",
+                "dynamicImg": "https://aliimg.changba.com/promote/24bd018a1c41110f37cdea88ec6b261f.webp",
+                "name": "闺蜜",
+                "type": 3
+            },
+            {
+                "colorConfig": {
+                    "nameBg": [
+                        "#42DF9D",
+                        "#0FC3CE"
+                    ],
+                    "nameColor": "#FFFFFF",
+                    "scoreColor": "#30C8AC",
+                    "waveBorder": "#B4ECE2",
+                    "waves": [
+                        "#8DF3D5",
+                        "#98F3E8",
+                        "#63E2CB",
+                        "#FFF6A9"
+                    ]
+                },
+                "commentBgImg": "https://aliimg.changba.com/promote/intimacy/e56c8d79511d423d217480e8ff3d972f.png",
+                "dynamicImg": "https://aliimg.changba.com/promote/6470849460ba8194afdc8e3df906ac59.webp",
+                "name": "知音",
+                "type": 4
+            },
+            {
+                "colorConfig": {
+                    "nameBg": [
+                        "#FF9921",
+                        "#FFEB37"
+                    ],
+                    "nameColor": "#FFFFFF",
+                    "scoreColor": "#FFAB26",
+                    "waveBorder": "#FFEE87",
+                    "waves": [
+                        "#FFBD8D",
+                        "#FFE3F9",
+                        "#FFD4C2",
+                        "#F8FFA9"
+                    ]
+                },
+                "commentBgImg": "https://aliimg.changba.com/promote/intimacy/b9ac66042b61a6bfb4c2501184a9e71e.png",
+                "dynamicImg": "https://aliimg.changba.com/promote/6841e8a806899b12e2efd90b93619448.webp",
+                "name": "家人",
+                "type": 5
+            },
+            {
+                "colorConfig": {
+                    "nameBg": [
+                        "#26D0FF",
+                        "#388BFF"
+                    ],
+                    "nameColor": "#FFFFFF",
+                    "scoreColor": "#2BBFFF",
+                    "waveBorder": "#BBE1FF",
+                    "waves": [
+                        "#8DADFF",
+                        "#FFE3F9",
+                        "#C2D7FF",
+                        "#A9E0FF"
+                    ]
+                },
+                "commentBgImg": "https://aliimg.changba.com/promote/intimacy/96a5aa770372305b0282afaa4f9c3e9c.png",
+                "dynamicImg": "https://aliimg.changba.com/promote/45463e2d6abc805be746744b92784324.webp",
+                "name": "师徒",
+                "type": 6
+            }
+        ],
+        "isOpenHummingSearchString": "true",
+        "isOpenWoChangba": "true",
+        "isShowMallcenter": 1,
+        "is_fit_white_bottom": 0,
+        "is_force_update": 0,
+        "is_show_ad_corner_mark": 0,
+        "is_skip_button_fit_white_bottom": 0,
+        "iscustomercanconnect": "1",
+        "isnodirecttoupload": "1",
+        "ktvroomAbTest": 1,
+        "live_switch": false,
+        "localStoreSongThreshold": 200,
+        "market": {
+            "market_cancel_tip": "下次再说",
+            "market_carrier": "联通",
+            "market_content": "你当前使用联通网络，推荐订购沃唱吧9元流量包服务，即刻流量畅享，唱歌、听歌全免费！",
+            "market_freq_days": "3",
+            "market_ok_tip": "现在订购",
+            "market_ok_url": "changba://?customurl=aHR0cHM6Ly9jaGFuZ2JhLmNvbS93b2NoYW5nYmFfb3Blbi5waHA=",
+            "market_show": "1"
+        },
+        "maxloadingms": 2000,
+        "messageswitch": true,
+        "morecoinbuttontitle": "",
+        "mvswitch": true,
+        "mysongbranchserverip": "192.168.10.250",
+        "mysongktvswitch": "1",
+        "mysongssid": "Ktv,Ktv_5G,kulv",
+        "new_year_red_package_config": {
+            "sing_text": "好运驾到！发布作品后至少可被3人收听～",
+            "switch": true
+        },
+        "newest_version_num": "10.5.6",
+        "newestversion": 100,
+        "noble_page": "changba://?ac=webview&customurl=aHR0cHM6Ly93d3cuY2hhbmdiYS5jb20vbmp3YXAveXVueWluZy92aXAtcHJpdmlsZWdlLXIvaW5kZXgvbWFpbj9zaG93X21vZGU9cHVzaCZjb250YWluZXJfYmFja2dyb3VuZF9jb2xvcj0wMDAwMDAwMCZidXNpbmVzc3R5cGU9MCZsZXZlbElkPTQmcHJpdmlsZWdlSW5kZXg9Ng==",
+        "playbackReverbEffect": "52",
+        "popgame_action": "jump",
+        "popgame_action_param": "-1",
+        "popgame_daycount": "0",
+        "popgame_id": "9",
+        "popgame_pic": "",
+        "recordReverbEffect": "1",
+        "redirect_button_color": "#999999",
+        "redirect_button_text": "点击跳转至详情页或第三方应用",
+        "saveRecordRetryMaxCount": 2,
+        "settingRedDot": 0,
+        "shouldOpenGameCenter": true,
+        "shouldRedownloadZrces": 0,
+        "shouldSaveMusicInCacheFolder": 0,
+        "shouldSaveRecordUseOfflineRender": 0,
+        "shouldShowMemberSecretary": 1,
+        "shouldShowOtherPayUrl": 0,
+        "showEmotionStore": 1,
+        "showOtherGames": 0,
+        "showQQLoginButton": 1,
+        "showStatusBarNotifaction": 1,
+        "showktvnearby": 0,
+        "skinId": 5,
+        "skin_detail": {
+            "bottom_navigation_background": "https://aliimg.changba.com/promote/668883c258239c28e030d581cd06c421.png",
+            "bottom_navigation_home": "https://aliimg.changba.com/promote/2a8c29ded2c3a5e0e6999455fd0a375f.png",
+            "bottom_navigation_icons": [
+                {
+                    "icon_default": "https://aliimg.changba.com/promote/8f38e7bb698bd484633b78cce0216cff.png",
+                    "icon_select": "https://aliimg.changba.com/promote/c5949af682f7557e45c671be5ab14e4b.png",
+                    "id": 0
+                },
+                {
+                    "icon_default": "https://aliimg.changba.com/promote/cfb181a4a2923c038d9ab40f183ff3e1.png",
+                    "icon_select": "https://aliimg.changba.com/promote/e1c04c659fdaeaa7ba5720d05417f375.png",
+                    "id": 1
+                },
+                {
+                    "icon_default": "https://aliimg.changba.com/promote/55fea4496164bfb3a073febd40b3bb75.png",
+                    "icon_select": "https://aliimg.changba.com/promote/0e07f72752f14d629754a7abe9070515.png",
+                    "id": 2
+                },
+                {
+                    "icon_default": "https://aliimg.changba.com/promote/eee3ad27242ce2fbd9a873c20bb2203e.png",
+                    "icon_select": "https://aliimg.changba.com/promote/66918ced5df606c23b89479809cfff97.png",
+                    "id": 3
+                },
+                {
+                    "icon_default": "https://aliimg.changba.com/promote/3dadfe792e06b6ffcdf94c2e59e0c74d.png",
+                    "icon_select": "https://aliimg.changba.com/promote/c2a4ef28c0b2b8100584b9d1dab8f557.png",
+                    "id": 4
+                }
+            ],
+            "default_text_color": "#999999",
+            "highlighted_text_color": "#FF3348",
+            "navigation_bar_color": "#FEFAFA",
+            "top_background": "https://aliimg.changba.com/promote/0100039ae9c8c2e25e5bbb1a3b2ba1ad.png"
+        },
+        "songdbversion": "1373277972",
+        "songlistdburl": "http://alibanzou.changba.com/songdb/songlist",
+        "soxParamsFor22050": [
+            {
+                "damping": "30",
+                "humanVoiceRatio": "81",
+                "preDelay": "43",
+                "reverberance": "70",
+                "roomScale": "62",
+                "stereoDepth": "70",
+                "wetGain": "8"
+            },
+            {
+                "damping": "10",
+                "humanVoiceRatio": "80",
+                "preDelay": "60",
+                "reverberance": "90",
+                "roomScale": "71",
+                "stereoDepth": "80",
+                "wetGain": "8"
+            },
+            {
+                "damping": "0",
+                "humanVoiceRatio": "70",
+                "preDelay": "80",
+                "reverberance": "92",
+                "roomScale": "80",
+                "stereoDepth": "88",
+                "wetGain": "8"
+            }
+        ],
+        "soxParamsFor44100": [
+            {
+                "damping": "50",
+                "humanVoiceRatio": "81",
+                "preDelay": "43",
+                "reverberance": "70",
+                "roomScale": "62",
+                "stereoDepth": "70",
+                "wetGain": "6"
+            },
+            {
+                "damping": "20",
+                "humanVoiceRatio": "80",
+                "preDelay": "60",
+                "reverberance": "90",
+                "roomScale": "71",
+                "stereoDepth": "80",
+                "wetGain": "6"
+            },
+            {
+                "damping": "10",
+                "humanVoiceRatio": "70",
+                "preDelay": "80",
+                "reverberance": "92",
+                "roomScale": "80",
+                "stereoDepth": "88",
+                "wetGain": "6"
+            }
+        ],
+        "splashId": null,
+        "splashPriority": 0,
+        "splashSreenDeeplink": null,
+        "splashSreenDisplayTime": -1,
+        "splashSreenEndTime": null,
+        "splashSreenPic": "",
+        "splashSreenPic_cb": null,
+        "splashSreenRedirecturl": "",
+        "splashSreenRedirecturlSub": "",
+        "splashSreenReport": null,
+        "splashSreenShowtime": null,
+        "splashSreenTimeid": 0,
+        "splashVideo": 0,
+        "sscl": 1,
+        "startTab": "my_changba",
+        "svip_config_msg": {
+            "bag_gift": "背包不够？购买SVIP后容量可提升至50",
+            "gift_box": "背包不够用？去扩容"
+        },
+        "themecdn": "http://aliimg.changba.com/cache/photo/themetest2/",
+        "token_valid": true,
+        "update_content": "1、新增了播放器功能。\n2、可查看附近的人",
+        "useCompressor": true,
+        "useSOX": false,
+        "userremind_interval": 60,
+        "userworkuploadinnewway": true,
+        "userworkuploadtarget": 3,
+        "videoUploadtarget": 1,
+        "wochangbacost": 9,
+        "work_id_card": {
+            "max": 30,
+            "min": 5
+        }
+    }
+}
