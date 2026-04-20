@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32F7CC352F9602FF00F73681 /* Mediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F7CC342F9602FF00F73681 /* Mediator.m */; };
+		32F7CC382F96037700F73681 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F7CC372F96037700F73681 /* DetailViewController.m */; };
+		32F7CC3A2F96044100F73681 /* ProtocolClassTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F7CC392F96044100F73681 /* ProtocolClassTest.m */; };
+		32F7CC3F2F96257B00F73681 /* TestMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F7CC3E2F96257B00F73681 /* TestMediator.m */; };
+		32F7CC432F962A2200F73681 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F7CC422F962A2200F73681 /* TestViewController.m */; };
 		74AE10DA24F1643D004BCBEC /* CPlusPlusSmartPointerTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 74AE10D924F1643D004BCBEC /* CPlusPlusSmartPointerTest.mm */; };
 		74AE10DD24F164AE004BCBEC /* Empty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74AE10DB24F164AE004BCBEC /* Empty.cpp */; };
 		B20796C823D44A8F00557A9A /* BlockCaptureVarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B20796C723D44A8F00557A9A /* BlockCaptureVarTests.m */; };
@@ -22,6 +27,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32F7CC2E2F92374F00F73681 /* Base.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Base.hpp; sourceTree = "<group>"; };
+		32F7CC322F96028900F73681 /* DetailViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewControllerProtocol.h; sourceTree = "<group>"; };
+		32F7CC332F9602FF00F73681 /* Mediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mediator.h; sourceTree = "<group>"; };
+		32F7CC342F9602FF00F73681 /* Mediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mediator.m; sourceTree = "<group>"; };
+		32F7CC362F96037700F73681 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		32F7CC372F96037700F73681 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		32F7CC392F96044100F73681 /* ProtocolClassTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProtocolClassTest.m; sourceTree = "<group>"; };
+		32F7CC3C2F9624C900F73681 /* TestViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewControllerProtocol.h; sourceTree = "<group>"; };
+		32F7CC3D2F96257B00F73681 /* TestMediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMediator.h; sourceTree = "<group>"; };
+		32F7CC3E2F96257B00F73681 /* TestMediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMediator.m; sourceTree = "<group>"; };
+		32F7CC402F96278700F73681 /* ComponentRegister.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComponentRegister.h; sourceTree = "<group>"; };
+		32F7CC412F962A2200F73681 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		32F7CC422F962A2200F73681 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		74AE10D924F1643D004BCBEC /* CPlusPlusSmartPointerTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CPlusPlusSmartPointerTest.mm; path = "../../kata/c++/KataTest/CPlusPlusSmartPointerTest.mm"; sourceTree = "<group>"; };
 		74AE10DB24F164AE004BCBEC /* Empty.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Empty.cpp; sourceTree = "<group>"; };
 		74AE10DC24F164AE004BCBEC /* Empty.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Empty.hpp; sourceTree = "<group>"; };
@@ -54,6 +72,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32F7CC312F96018200F73681 /* protocol-class */ = {
+			isa = PBXGroup;
+			children = (
+				32F7CC322F96028900F73681 /* DetailViewControllerProtocol.h */,
+				32F7CC332F9602FF00F73681 /* Mediator.h */,
+				32F7CC342F9602FF00F73681 /* Mediator.m */,
+				32F7CC362F96037700F73681 /* DetailViewController.h */,
+				32F7CC372F96037700F73681 /* DetailViewController.m */,
+			);
+			path = "protocol-class";
+			sourceTree = "<group>";
+		};
+		32F7CC3B2F96248F00F73681 /* protocol-class-load-opt */ = {
+			isa = PBXGroup;
+			children = (
+				32F7CC3C2F9624C900F73681 /* TestViewControllerProtocol.h */,
+				32F7CC3D2F96257B00F73681 /* TestMediator.h */,
+				32F7CC3E2F96257B00F73681 /* TestMediator.m */,
+				32F7CC402F96278700F73681 /* ComponentRegister.h */,
+				32F7CC412F962A2200F73681 /* TestViewController.h */,
+				32F7CC422F962A2200F73681 /* TestViewController.m */,
+			);
+			path = "protocol-class-load-opt";
+			sourceTree = "<group>";
+		};
 		B2557E7A240E1F68000F8DC3 /* classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +106,7 @@
 				B2557E7B240E1F68000F8DC3 /* Object.m */,
 				B2557E7E240E1F92000F8DC3 /* ObjectA.h */,
 				B2557E7F240E1F92000F8DC3 /* ObjectA.m */,
+				32F7CC2E2F92374F00F73681 /* Base.hpp */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -86,6 +130,8 @@
 		B2694DC12314DF7000A944E5 /* FoundationTest */ = {
 			isa = PBXGroup;
 			children = (
+				32F7CC3B2F96248F00F73681 /* protocol-class-load-opt */,
+				32F7CC312F96018200F73681 /* protocol-class */,
 				B2557E7A240E1F68000F8DC3 /* classes */,
 				B2694DC22314DF7000A944E5 /* FoundationTest.swift */,
 				B235BD3423C5B9FC00302672 /* AVFoundationTests.swift */,
@@ -95,6 +141,7 @@
 				B20796C723D44A8F00557A9A /* BlockCaptureVarTests.m */,
 				B2557E74240E1EBC000F8DC3 /* OCInstanceVarAccessControlTest.m */,
 				74AE10D924F1643D004BCBEC /* CPlusPlusSmartPointerTest.mm */,
+				32F7CC392F96044100F73681 /* ProtocolClassTest.m */,
 				B2B0ED662362D79C00EF1117 /* TestObject.h */,
 				B2B0ED672362D79C00EF1117 /* TestObject.m */,
 				B2694DC42314DF7000A944E5 /* Info.plist */,
@@ -129,8 +176,9 @@
 		B2694DB52314DEB300A944E5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 2630;
 				TargetAttributes = {
 					B2694DBE2314DF6F00A944E5 = {
 						CreatedOnToolsVersion = 11.0;
@@ -173,16 +221,21 @@
 			files = (
 				B2B0ED652362D3F100EF1117 /* EliminateWarningTest.m in Sources */,
 				B2694DC92314E09600A944E5 /* CMTimeTest.swift in Sources */,
+				32F7CC352F9602FF00F73681 /* Mediator.m in Sources */,
 				B29E225223A0CF5600076D92 /* NSArrayTest.m in Sources */,
 				B20796C823D44A8F00557A9A /* BlockCaptureVarTests.m in Sources */,
 				B2557E75240E1EBC000F8DC3 /* OCInstanceVarAccessControlTest.m in Sources */,
+				32F7CC3A2F96044100F73681 /* ProtocolClassTest.m in Sources */,
 				B235BD3523C5B9FC00302672 /* AVFoundationTests.swift in Sources */,
 				B2557E80240E1F92000F8DC3 /* ObjectA.m in Sources */,
 				74AE10DA24F1643D004BCBEC /* CPlusPlusSmartPointerTest.mm in Sources */,
 				B2557E7D240E1F68000F8DC3 /* Object.m in Sources */,
 				74AE10DD24F164AE004BCBEC /* Empty.cpp in Sources */,
+				32F7CC432F962A2200F73681 /* TestViewController.m in Sources */,
 				B2B0ED682362D79D00EF1117 /* TestObject.m in Sources */,
 				B2694DC32314DF7000A944E5 /* FoundationTest.swift in Sources */,
+				32F7CC3F2F96257B00F73681 /* TestMediator.m in Sources */,
+				32F7CC382F96037700F73681 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,12 +245,74 @@
 		B2694DB92314DEB300A944E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 9CVMN4UZK4;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 			};
 			name = Debug;
 		};
 		B2694DBA2314DEB300A944E5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 9CVMN4UZK4;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 			};
 			name = Release;
 		};
@@ -236,7 +351,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 9CVMN4UZK4;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -309,7 +423,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 9CVMN4UZK4;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
