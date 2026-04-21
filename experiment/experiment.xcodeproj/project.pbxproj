@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		320DDA082F9738BE00A83BB3 /* protocol.md in Resources */ = {isa = PBXBuildFile; fileRef = 320DDA072F9738BE00A83BB3 /* protocol.md */; };
 		32F7CC352F9602FF00F73681 /* Mediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F7CC342F9602FF00F73681 /* Mediator.m */; };
 		32F7CC382F96037700F73681 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F7CC372F96037700F73681 /* DetailViewController.m */; };
 		32F7CC3A2F96044100F73681 /* ProtocolClassTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F7CC392F96044100F73681 /* ProtocolClassTest.m */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		320DDA072F9738BE00A83BB3 /* protocol.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = protocol.md; sourceTree = "<group>"; };
 		32F7CC2E2F92374F00F73681 /* Base.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Base.hpp; sourceTree = "<group>"; };
 		32F7CC322F96028900F73681 /* DetailViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewControllerProtocol.h; sourceTree = "<group>"; };
 		32F7CC332F9602FF00F73681 /* Mediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mediator.h; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				32F7CC342F9602FF00F73681 /* Mediator.m */,
 				32F7CC362F96037700F73681 /* DetailViewController.h */,
 				32F7CC372F96037700F73681 /* DetailViewController.m */,
+				320DDA072F9738BE00A83BB3 /* protocol.md */,
 			);
 			path = "protocol-class";
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				320DDA082F9738BE00A83BB3 /* protocol.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
