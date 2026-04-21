@@ -15,6 +15,7 @@
 		3223A46B2AEC1A2000FC1BA8 /* ScrollView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3223A46A2AEC1A2000FC1BA8 /* ScrollView1.swift */; };
 		3223A46D2AEC1D2A00FC1BA8 /* ScrollView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3223A46C2AEC1D2A00FC1BA8 /* ScrollView2.swift */; };
 		3223A46F2AEC1EEC00FC1BA8 /* ScrollView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3223A46E2AEC1EEC00FC1BA8 /* ScrollView3.swift */; };
+		32587E5C2D47896700950507 /* ScrollView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32587E5B2D47896700950507 /* ScrollView4.swift */; };
 		32791A212AC5CAB000066FCB /* SwiftUIBootCampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32791A202AC5CAB000066FCB /* SwiftUIBootCampApp.swift */; };
 		32791A232AC5CAB000066FCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32791A222AC5CAB000066FCB /* ContentView.swift */; };
 		32791A252AC5CAB300066FCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32791A242AC5CAB300066FCB /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		3223A46A2AEC1A2000FC1BA8 /* ScrollView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView1.swift; sourceTree = "<group>"; };
 		3223A46C2AEC1D2A00FC1BA8 /* ScrollView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView2.swift; sourceTree = "<group>"; };
 		3223A46E2AEC1EEC00FC1BA8 /* ScrollView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView3.swift; sourceTree = "<group>"; };
+		32587E5B2D47896700950507 /* ScrollView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView4.swift; sourceTree = "<group>"; };
 		32791A1D2AC5CAB000066FCB /* SwiftUIBootCamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIBootCamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32791A202AC5CAB000066FCB /* SwiftUIBootCampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIBootCampApp.swift; sourceTree = "<group>"; };
 		32791A222AC5CAB000066FCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				3223A46A2AEC1A2000FC1BA8 /* ScrollView1.swift */,
 				3223A46C2AEC1D2A00FC1BA8 /* ScrollView2.swift */,
 				3223A46E2AEC1EEC00FC1BA8 /* ScrollView3.swift */,
+				32587E5B2D47896700950507 /* ScrollView4.swift */,
 				32791A242AC5CAB300066FCB /* Assets.xcassets */,
 				32791A262AC5CAB300066FCB /* Preview Content */,
 			);
@@ -208,6 +211,7 @@
 				3223A4612AE96B9A00FC1BA8 /* Initializers.swift in Sources */,
 				3223A46D2AEC1D2A00FC1BA8 /* ScrollView2.swift in Sources */,
 				3223A4672AEC15FC00FC1BA8 /* Foreach2.swift in Sources */,
+				32587E5C2D47896700950507 /* ScrollView4.swift in Sources */,
 				32791A232AC5CAB000066FCB /* ContentView.swift in Sources */,
 				32791A3F2AD008C000066FCB /* Stacks.swift in Sources */,
 				3223A45F2AE81A6100FC1BA8 /* Spacer2.swift in Sources */,
