@@ -48,6 +48,47 @@ class ModifyHTTP:
                 return param_value == str(expected_value)
         except ValueError:
             return False 
+        
+
+IGNORE_DOMAINS = [
+    "prod-mediate-events.applovin.com",
+    "*.applovin.com",
+    "*.applovin.com",
+    "*.applvn.com",
+    "*.applovin.com",
+    "ogs.ads.vungle.com",
+    "rt.applvn.com",
+    "rt.applovin.com",
+]
+
+class IgnoreDomain:
+    def __init__(self):
+        pass
+
+    def should_ignore(self, host: str) -> bool:
+        """检查域名是否在忽略列表中（支持通配符）"""
+        for domain in IGNORE_DOMAINS:
+            if domain.startswith('*.'):
+                # 处理通配符：如 *.api.com 匹配 xxx.api.com
+                if host.endswith(domain[2:]) or host == domain[2:]:
+                    return True
+            else:
+                if host == domain:
+                    return True
+        return False
+
+    def request(self, flow: http.HTTPFlow):
+        """HTTP/HTTPS 请求处理"""
+        host = flow.request.host  # 获取请求域名
+        if self.should_ignore(host):
+            ctx.log.info(f"Ignoring request to: {host}")
+            flow.kill() # 关键：标记为忽略
+
+    def http_connect(self, flow: http.HTTPFlow):
+        """HTTPS CONNECT 请求处理（TLS 握手）"""
+        if self.should_ignore(flow.request.host):
+            ctx.log.info(f"Ignoring HTTPS CONNECT to: {flow.request.host}")
+            flow.kill() # 关键：标记为忽略
 
 addons = [
 	ModifyHTTP(api="ac=membershipintro", param_list={"tab_type" : "vip"}),
